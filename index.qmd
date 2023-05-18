@@ -36,12 +36,12 @@ and [subscribing](support.qmd) to my mailing list.
   and harmful test cases
 
 - [Database Testing](research.qmd#Details#Database Testing): Automatically
-  testing relational database schemas
+  test relational database schemas
 
 - [Web Testing](research.qmd#Details#Web Testing): Detecting and repairing
   responsive web page layout
 
-<em>Explore</em> all of my areas of [research expertise](research.qmd)
+{{< fa rocket >}} <em>Explore</em> all of my areas of [research expertise](research.qmd)
 
 ## Featured Papers
 
@@ -49,4 +49,10 @@ and [subscribing](support.qmd) to my mailing list.
 
 ## Professional Service
 
-## 
+## Useful Software
+
+## Recent Posts
+
+## Highlighted Courses
+
+## Status Updates
