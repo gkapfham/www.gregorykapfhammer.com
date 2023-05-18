@@ -1,0 +1,24 @@
+/* css styles */
+
+main, p {
+  font-weight: 400;
+}
+
+sidebar .quarto-alternate-notebooks h2, .sidebar .quarto-alternate-notebooks .h2, .sidebar .quarto-alternate-formats h2, .sidebar .quarto-alternate-formats .h2, .sidebar nav[role=doc-toc]>h2, .sidebar nav[role=doc-toc]>.h2 {
+    font-size: .875rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    margin-top: 0.3rem;
+    font-family: inherit;
+    border-bottom: 0;
+    padding-bottom: 0;
+    padding-top: 0px;
+}
+
+sidebar .quarto-alternate-notebooks ul li a, .sidebar .quarto-alternate-formats ul li a, .sidebar nav[role=doc-toc]>ul li a {
+    line-height: 1.1rem;
+    font-weight: 400;
+    padding-bottom: 0.2rem;
+    padding-top: 0.2rem;
+    color: inherit;
+}
