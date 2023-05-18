@@ -1,5 +1,7 @@
 /* css styles */
 
+/*  Basic Components {{{ */
+
 main, p {
   font-weight: 400;
 }
@@ -30,6 +32,10 @@ li, .li {
     margin-bottom: -.25rem !important;
 }
 
+/*  }}} */
+
+/*  Table of Contents {{{ */
+
 .toc-actions a {
     text-decoration: none;
     font-size: 0.75em;
@@ -37,6 +43,10 @@ li, .li {
     font-weight: 400;
     line-height: 0.5rem;
 }
+
+/*  }}} */
+
+/*  Sidebar {{{ */
 
 .sidebar nav[role=doc-toc] ul>li>a.active, .sidebar nav[role=doc-toc] ul>li>ul>li>a.active {
     border-left: 1px solid #e95420;
@@ -68,3 +78,5 @@ sidebar .quarto-alternate-notebooks ul li a, .sidebar .quarto-alternate-formats 
     padding-top: 0.2rem;
     color: inherit;
 }
+
+/*  }}} */
