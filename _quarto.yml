@@ -1,21 +1,45 @@
 project:
   type: website
+  preview:
+    port: 5555
+    browser: true
+    watch-inputs: true
+    navigate: true
 
 website:
   title: "Gregory M. Kapfhammer"
+  page-navigation: true
+  favicon: "favicon.png"
+  open-graph: true
+  twitter-card: true
+  site-url: https://www.gregorykapfhammer.com
+  repo-url: https://github.com/gkapfham/www.gregorykapfhammer.com
+  issue-url: https://github.com/gkapfham/www.gregorykapfhammer.com/issues/new
+  repo-actions: [edit, issue]
   navbar:
     left:
       - href: index.qmd
         text: Home
-      - about.qmd
+      - text: "Teaching"
+        menu:
+          - text: "Overview"
+            href: teaching.md
+          - text: "Data Abstraction"
+            href: "https://www.proactiveprogrammers.com"
+          - text: "Discrete Structures"
+            href: "https://www.proactiveprogrammers.com"
       - research.qmd
+      - about.qmd
 
 format:
   html:
     mainfont: IBM Plex Mono
-    fontsize: 1.25em
+    fontsize: 1.3em
     theme:
       light: united
-      dark: theme-dark.scss
+      dark: united-dark.scss
     css: styles.css
+    code-copy: hover
+    code-overflow: scroll
     toc: true
+    toc-title: "Contents"
