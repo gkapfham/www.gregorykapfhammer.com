@@ -33,8 +33,8 @@ website:
 
 format:
   html:
-    mainfont: IBM Plex Mono
-    fontsize: 1.3em
+    mainfont: IBM Plex Sans
+    fontsize: 1.4em
     theme:
       light: united
       dark: united-dark.scss
