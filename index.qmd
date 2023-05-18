@@ -1,10 +1,23 @@
 ---
 title: ""
-page-layout: full
-title-block-banner: true
+echo: true
+jupyter: python3
+section-divs: true
+keep-md: true
 comments: false
 toc: true
+page-layout: full
+title-block-style: default
+title-block-banner: false
 ---
+
+```{python}
+from rich.console import Console
+console = Console()
+console.print(
+    f":rocket: Researcher, Teacher, and Software Developer!"
+)
+```
 
 # Gregory M. Kapfhammer
 
@@ -56,3 +69,13 @@ and [subscribing](support.qmd) to my mailing list.
 ## Highlighted Courses
 
 ## Status Updates
+
+```{=html}
+<div class="dummy-container">
+	<div class="mt-timeline">
+		<div id="mt-body" class="mt-body" role="feed">
+		  <div class="loading-spinner"></div>
+		</div>
+  </div>
+</div>
+```
