@@ -29,7 +29,7 @@ website:
           - text: "Discrete Structures"
             href: "https://www.proactiveprogrammers.com"
       - research.qmd
-      - about.qmd
+      - biography.qmd
 
 format:
   html:
