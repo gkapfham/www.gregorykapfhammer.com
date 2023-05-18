@@ -16,6 +16,9 @@ website:
   repo-url: https://github.com/gkapfham/www.gregorykapfhammer.com
   issue-url: https://github.com/gkapfham/www.gregorykapfhammer.com/issues/new
   repo-actions: [edit, issue]
+  search:
+    location: navbar
+    type: textbox
   navbar:
     left:
       - href: index.qmd
@@ -34,12 +37,23 @@ website:
 format:
   html:
     mainfont: IBM Plex Sans
-    fontsize: 1.4em
+    monofont: IBM Plex Mono
+    fontsize: 1.375em
     theme:
       light: united
       dark: united-dark.scss
     css: styles.css
     code-copy: hover
-    code-overflow: scroll
+    code-overflow: wrap
+    code-fold: false
+    code-tools: true
+    highlight-style: gruvbox
     toc: true
     toc-title: "Contents"
+    smooth-scroll: true
+    include-in-header:
+      file: js/mastodon-timeline.js
+    link-external-icon: true
+    link-external-newwindow: true
+    citations-hover: true
+    footnotes-hover: true
