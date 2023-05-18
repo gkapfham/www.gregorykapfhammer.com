@@ -4,9 +4,30 @@ main, p {
   font-weight: 400;
 }
 
-.navbar .quarto-navbar-tools .quarto-navigation-tool {
-    color: rgba(255,255,255,.8);
-    /* font-size: .875rem; */
+h1, .h1, h2, .h2 {
+    opacity: .9;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+h2, .h2 {
+    border-bottom: none;
+    margin-bottom: 0.25rem !important;
+}
+
+a {
+    color: #EF6C00;
+    text-decoration: none;
+    -webkit-text-decoration: underline;
+    -moz-text-decoration: underline;
+    -ms-text-decoration: underline;
+    -o-text-decoration: underline;
+}
+
+li, .li {
+    margin-top: 0;
+    margin-bottom: -.25rem !important;
 }
 
 .toc-actions a {
@@ -15,6 +36,11 @@ main, p {
     color: inherit;
     font-weight: 400;
     line-height: 0.5rem;
+}
+
+.sidebar nav[role=doc-toc] ul>li>a.active, .sidebar nav[role=doc-toc] ul>li>ul>li>a.active {
+    border-left: 1px solid #e95420;
+    color: #EF6C00 !important;
 }
 
 #quarto-margin-sidebar .toc-actions .bi:before {
