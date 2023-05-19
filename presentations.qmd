@@ -11,6 +11,3 @@ listing:
   filter-ui: true
   fields: [title, author, date, description]
 ---
-
-
-
