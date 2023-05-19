@@ -49,6 +49,12 @@ li, .li {
 
 /* Navbar {{{ */
 
+.nav-footer {
+    min-height: 1em;
+    padding-bottom: 0em;
+    color: #757575;
+}
+
 .navbar a:hover {
     color: #FFF !important;
     text-decoration: none
