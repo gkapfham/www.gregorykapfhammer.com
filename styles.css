@@ -43,10 +43,14 @@ li, .li {
 
 /* }}} */
 
+/* Navbar {{{ */
+
 .navbar a:hover {
     color: #FFF !important;
     text-decoration: none
 }
+
+/* }}} */
 
 /* Table of Contents {{{ */
 
@@ -59,8 +63,6 @@ li, .li {
 }
 
 /* }}} */
-
-
 
 /* Sidebar {{{ */
 
