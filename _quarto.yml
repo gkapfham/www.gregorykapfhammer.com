@@ -19,7 +19,7 @@ website:
     location: navbar
     type: textbox
   reader-mode: false
-  back-to-top-navigation: true
+  back-to-top-navigation: false
   navbar:
     left:
       - href: index.qmd
@@ -42,20 +42,22 @@ website:
             href: presentations.qmd
       - research.qmd
   page-footer:
-    left: "Gregory M. Kapfhammer, License: [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/)."
+    left: "Gregory M. Kapfhammer, License: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)."
     right:
       - icon: mastodon
-        href: https://twitter.com/BeaMilz
+        href: https://fosstodon.org/@gkapfham
       - icon: github
-        href: https://github.com/beatrizmilz/
+        href: https://github.com/gkapfham
       - icon: linkedin
         href: http://www.linkedin.com/in/GregKapfhammer
+      - icon: google
+        href: http://scholar.google.com/citations?user=g0eDPjYAAAAJ
       - icon: twitter
-        href: https://twitter.com/BeaMilz
+        href: https://twitter.com/GregKapfhammer
       - icon: envelope
-        href: mailto:milz.bea@gmail.com
+        href: gkapfham@allegheny.edu
   twitter-card:
-    creator: "@beamilz"
+    creator: "@GregKapfhammer"
     card-style: summary_large_image
 
 format:
@@ -69,16 +71,17 @@ format:
         - united-light.scss
       dark: united-dark.scss
     css: styles.css
+    include-in-header:
+      file: js/mastodon-timeline.js
+    toc: true
+    toc-title: "Contents"
     code-copy: hover
     code-overflow: wrap
     code-fold: false
     code-tools: true
     highlight-style: gruvbox
-    toc: true
-    toc-title: "Contents"
+    email-obfuscation: javascript
     smooth-scroll: false
-    include-in-header:
-      file: js/mastodon-timeline.js
     link-external-icon: true
     link-external-newwindow: true
     citations-hover: true
