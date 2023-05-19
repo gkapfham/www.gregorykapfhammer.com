@@ -2,8 +2,9 @@
 title: "Papers"
 echo: false
 jupyter: python3
+page-layout: full
 section-divs: false
-keep-md: true
+keep-md: false
 ---
 
 ```{python}
