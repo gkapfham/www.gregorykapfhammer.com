@@ -4,7 +4,6 @@ echo: true
 jupyter: python3
 section-divs: true
 keep-md: true
-comments: false
 toc: true
 page-layout: full
 title-block-style: default
@@ -15,7 +14,7 @@ title-block-banner: false
 from rich.console import Console
 console = Console()
 console.print(
-    f":rocket: Researcher, Teacher, and Software Developer!"
+    f":rocket: Hi! I'm a researcher, Teacher, and Software Developer!"
 )
 ```
 
