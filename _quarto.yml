@@ -14,7 +14,7 @@ website:
   site-url: https://www.gregorykapfhammer.com
   repo-url: https://github.com/gkapfham/www.gregorykapfhammer.com
   issue-url: https://github.com/gkapfham/www.gregorykapfhammer.com/issues/new
-  repo-actions: [edit, issue]
+  repo-actions: [source, edit, issue]
   search:
     location: navbar
     type: textbox
@@ -54,8 +54,6 @@ website:
         href: http://scholar.google.com/citations?user=g0eDPjYAAAAJ
       - icon: twitter
         href: https://twitter.com/GregKapfhammer
-      - icon: envelope
-        href: gkapfham@allegheny.edu
   twitter-card:
     creator: "@GregKapfhammer"
     card-style: summary_large_image
