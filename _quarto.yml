@@ -7,7 +7,7 @@ project:
     navigate: true
 
 website:
-  title: "Gregory M. Kapfhammer"
+  title: ""
   page-navigation: true
   favicon: "favicon.png"
   open-graph: true
