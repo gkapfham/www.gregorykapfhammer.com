@@ -103,10 +103,10 @@ sidebar .quarto-alternate-notebooks ul li a, .sidebar .quarto-alternate-formats 
 
 .nav-link {
     display: block;
+    font-size: 0.75rem;
     padding: .5rem 1rem;
     color: #EF6C00;
     text-decoration: none;
-    -webkit-text-decoration: none;
     -moz-text-decoration: none;
     -ms-text-decoration: none;
     -o-text-decoration: none;
