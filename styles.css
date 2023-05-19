@@ -136,6 +136,10 @@ sidebar .quarto-alternate-notebooks ul li a, .sidebar .quarto-alternate-formats 
 
 /* Footer {{{ */
 
+.nav-footer {
+    margin-top: -75px;
+}
+
 .nav-footer a {
     color: #757575;
 }
