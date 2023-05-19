@@ -3,7 +3,7 @@ title: ""
 echo: true
 jupyter: python3
 section-divs: true
-keep-md: true
+keep-md: false
 toc: true
 page-layout: full
 title-block-style: default
