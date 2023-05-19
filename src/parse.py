@@ -28,12 +28,17 @@ if __name__ == "__main__":
         console.print(publication)
         publication_id = publication["ID"]
         publication_year = publication["year"]
+        publication_abstract = publication["abstract"]
+        publication_booktitle = publication["booktitle"]
+        publication["description"] = f"<em>{publication_booktitle}</em>"
+        publication_abstract = publication_abstract.replace("\n", " ")
+        publication["abstract"] = publication_abstract
         console.print(publication_id)
         papers_directory = Path(f"papers/{publication_year}-{publication_id}/")
         papers_directory.mkdir(parents=True, exist_ok=True)
-        publication_file_name = Path(papers_directory / "index.qmd")
-        publication_file_name.touch()
-        publication_file_name.write_text(
-            yaml.dump(publication, allow_unicode=True, default_flow_style=False),
+        publication_file = Path(papers_directory / "index.qmd")
+        publication_file.touch()
+        publication_file.write_text(
+            f"---\n{yaml.dump(publication, allow_unicode=True, default_flow_style=False)}\n---",
             encoding="utf-8",
         )
