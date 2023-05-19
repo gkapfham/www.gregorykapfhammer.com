@@ -18,7 +18,7 @@ website:
   search:
     location: navbar
     type: textbox
-  reader-mode: true
+  reader-mode: false
   back-to-top-navigation: true
   navbar:
     left:
