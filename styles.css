@@ -1,6 +1,6 @@
 /* css styles */
 
-/*  Basic Components {{{ */
+/* Basic Components {{{ */
 
 main, p {
   font-weight: 400;
@@ -31,14 +31,19 @@ a {
     -o-text-decoration: underline;
 }
 
+a:hover {
+    color: #EF6C00 !important;
+    text-decoration: underline
+}
+
 li, .li {
     margin-top: 0;
     margin-bottom: -.25rem !important;
 }
 
-/*  }}} */
+/* }}} */
 
-/*  Table of Contents {{{ */
+/* Table of Contents {{{ */
 
 .toc-actions a {
     text-decoration: none;
@@ -48,9 +53,9 @@ li, .li {
     line-height: 0.5rem;
 }
 
-/*  }}} */
+/* }}} */
 
-/*  Sidebar {{{ */
+/* Sidebar {{{ */
 
 .sidebar nav[role=doc-toc] ul>li>a.active, .sidebar nav[role=doc-toc] ul>li>ul>li>a.active {
     border-left: 1px solid #e95420;
@@ -83,7 +88,41 @@ sidebar .quarto-alternate-notebooks ul li a, .sidebar .quarto-alternate-formats 
     color: inherit;
 }
 
-/*  }}} */
+.toc-actions a:hover {
+    color: #EF6C00;
+}
+
+.nav-link {
+    display: block;
+    padding: .5rem 1rem;
+    /* color: #e95420; */
+    color: #EF6C00;
+    text-decoration: none;
+    -webkit-text-decoration: none;
+    -moz-text-decoration: none;
+    -ms-text-decoration: none;
+    -o-text-decoration: none;
+    transition: none !important;
+}
+
+.nav-link a:hover {
+    color: #EF6C00 !important;
+    transition: none !important;
+}
+
+/* }}} */
+
+/* Footer {{{ */
+
+.nav-footer a {
+    color: #757575;
+}
+
+.nav-footer a:hover {
+    color: #EF6C00;
+}
+
+/* }}} */
 
 /* Custom Mastodon Timeline {{{ */
 
