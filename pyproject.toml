@@ -11,7 +11,7 @@ jupyter = "^1.0.0"
 matplotlib = "^3.7.1"
 pyyaml = "^6.0"
 rich = "^13.3.5"
-
+bibtexparser = "^1.4.0"
 
 [build-system]
 requires = ["poetry-core"]
