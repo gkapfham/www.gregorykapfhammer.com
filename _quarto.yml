@@ -42,7 +42,7 @@ website:
             href: presentations.qmd
       - research.qmd
   page-footer:
-    left: "Gregory M. Kapfhammer, License: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)."
+    left: "Gregory M. Kapfhammer, License: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)"
     right:
       - icon: mastodon
         href: https://fosstodon.org/@gkapfham
