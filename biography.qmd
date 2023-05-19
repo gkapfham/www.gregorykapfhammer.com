@@ -1,5 +1,5 @@
 ---
-title: "matplotlib demo"
+title: "Biography"
 format:
   html:
     code-fold: true
