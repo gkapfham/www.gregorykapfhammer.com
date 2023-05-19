@@ -43,6 +43,11 @@ li, .li {
 
 /* }}} */
 
+.navbar a:hover {
+    color: #FFF !important;
+    text-decoration: none
+}
+
 /* Table of Contents {{{ */
 
 .toc-actions a {
@@ -54,6 +59,8 @@ li, .li {
 }
 
 /* }}} */
+
+
 
 /* Sidebar {{{ */
 
