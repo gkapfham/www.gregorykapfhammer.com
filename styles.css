@@ -2,6 +2,10 @@
 
 /* Basic Components {{{ */
 
+.page-rows-contents {
+    grid-template-rows: [content-top] minmax(max-content, 0fr) [content-bottom] minmax(0px, max-content) [page-bottom];
+}
+
 main, p {
   font-weight: 400;
 }
@@ -136,8 +140,23 @@ sidebar .quarto-alternate-notebooks ul li a, .sidebar .quarto-alternate-formats 
 
 /* Footer {{{ */
 
-.nav-footer {
-    margin-top: -75px;
+/* .nav-footer { */
+/*     margin-top: -75px; */
+/* } */
+
+/* .nav-footer .nav-footer-left { */
+/*     font-size: 0; */
+/* } */
+
+.nav-footer .nav-footer-right {
+    font-size: 0;
+}
+
+.nav-footer .toc-actions {
+    font-size: 0;
+    color: #ecf2ff;
+    padding-bottom: 0;
+    padding-top: 0;
 }
 
 .nav-footer a {
@@ -162,6 +181,7 @@ sidebar .quarto-alternate-notebooks ul li a, .sidebar .quarto-alternate-formats 
   width: 90%;
   overflow-y: auto;
   position: relative;
+  margin-bottom: -30px;
   background: var(--bg-color);
   scrollbar-color: var(--bg-hover-color) rgba(0, 0, 0, 0.1);
 }
