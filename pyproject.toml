@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "gregorykapfhammer"
+version = "0.1.0"
+description = ""
+authors = ["Gregory M. Kapfhammer <gkapfham@allegheny.edu>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+jupyter = "^1.0.0"
+matplotlib = "^3.7.1"
+pyyaml = "^6.0"
+rich = "^13.3.5"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
