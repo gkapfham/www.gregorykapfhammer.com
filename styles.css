@@ -140,14 +140,6 @@ sidebar .quarto-alternate-notebooks ul li a, .sidebar .quarto-alternate-formats 
 
 /* Footer {{{ */
 
-/* .nav-footer { */
-/*     margin-top: -75px; */
-/* } */
-
-/* .nav-footer .nav-footer-left { */
-/*     font-size: 0; */
-/* } */
-
 .nav-footer .nav-footer-right {
     font-size: 0;
 }
