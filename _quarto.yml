@@ -18,6 +18,8 @@ website:
   search:
     location: navbar
     type: textbox
+  reader-mode: true
+  back-to-top-navigation: true
   navbar:
     left:
       - href: index.qmd
@@ -25,24 +27,22 @@ website:
       - text: "Teaching"
         menu:
           - text: "Overview"
-            href: teaching.md
+            href: teaching.qmd
           - text: "Data Abstraction"
             href: "https://www.proactiveprogrammers.com"
           - text: "Discrete Structures"
             href: "https://www.proactiveprogrammers.com"
+      - text: "Reseach"
+        menu:
+          - text: "Overview"
+            href: research.qmd
+          - text: "Papers"
+            href: papers.qmd
+          - text: "Talks"
+            href: presentations.qmd
       - research.qmd
-      - biography.qmd
   page-footer:
     left: "Gregory M. Kapfhammer, License: [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/)."
-    center:
-      - text: "About"
-        href: about.qmd
-      - text: "FAQ"
-        href: docs/faq/index.qmd
-      - text: "License"
-        href: license.qmd
-      - text: "Trademark"
-        href: trademark.qmd
     right:
       - icon: mastodon
         href: https://twitter.com/BeaMilz
