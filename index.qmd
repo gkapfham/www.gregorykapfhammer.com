@@ -8,6 +8,10 @@ toc: true
 page-layout: full
 title-block-style: default
 title-block-banner: false
+format:
+  html:
+    include-in-header:
+      file: js/mastodon-timeline.js
 ---
 
 ```{python}
