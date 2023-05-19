@@ -11,7 +11,6 @@ website:
   page-navigation: true
   favicon: "favicon.png"
   open-graph: true
-  twitter-card: true
   site-url: https://www.gregorykapfhammer.com
   repo-url: https://github.com/gkapfham/www.gregorykapfhammer.com
   issue-url: https://github.com/gkapfham/www.gregorykapfhammer.com/issues/new
@@ -33,6 +32,31 @@ website:
             href: "https://www.proactiveprogrammers.com"
       - research.qmd
       - biography.qmd
+  page-footer:
+    left: "Gregory M. Kapfhammer, License: [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/)."
+    center:
+      - text: "About"
+        href: about.qmd
+      - text: "FAQ"
+        href: docs/faq/index.qmd
+      - text: "License"
+        href: license.qmd
+      - text: "Trademark"
+        href: trademark.qmd
+    right:
+      - icon: mastodon
+        href: https://twitter.com/BeaMilz
+      - icon: github
+        href: https://github.com/beatrizmilz/
+      - icon: linkedin
+        href: http://www.linkedin.com/in/GregKapfhammer
+      - icon: twitter
+        href: https://twitter.com/BeaMilz
+      - icon: envelope
+        href: mailto:milz.bea@gmail.com
+  twitter-card:
+    creator: "@beamilz"
+    card-style: summary_large_image
 
 format:
   html:
@@ -40,7 +64,9 @@ format:
     monofont: IBM Plex Mono
     fontsize: 1.375em
     theme:
-      light: united
+      light:
+        - united
+        - united-light.scss
       dark: united-dark.scss
     css: styles.css
     code-copy: hover
@@ -50,7 +76,7 @@ format:
     highlight-style: gruvbox
     toc: true
     toc-title: "Contents"
-    smooth-scroll: true
+    smooth-scroll: false
     include-in-header:
       file: js/mastodon-timeline.js
     link-external-icon: true
