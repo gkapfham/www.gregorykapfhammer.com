@@ -67,6 +67,18 @@ and [subscribing](support.qmd) to my mailing list.
 
 ## Highlighted Courses
 
+- [Data
+  Abstraction](https://proactiveprogrammers.com/data-abstraction/introduction-data-abstraction/):
+  Build and manipulate correct and efficient data structures
+
+- [Discrete
+  Structures](https://proactiveprogrammers.com/discrete-structures/introduction-discrete-structures/):
+  Clearly connect mathematics to Python programming
+
+- [Operating Systems](https://www.os-sketch.com/): Build and understand operating system components
+
+{{< fa rocket >}} <em>Explore</em> all of my areas of [teaching materials](teaching.qmd)
+
 ## Status Updates
 
 ```{=html}
