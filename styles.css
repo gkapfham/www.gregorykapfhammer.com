@@ -165,7 +165,7 @@ sidebar .quarto-alternate-notebooks ul li a, .sidebar .quarto-alternate-formats 
     color: #EF6C00;
 }
 
-a.external:after {
+.nav-footer a.external:after {
     display: none;
 }
 
