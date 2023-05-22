@@ -70,8 +70,6 @@ format:
         - united-light.scss
       dark: united-dark.scss
     css: styles.css
-    # include-in-header:
-      # file: js/mastodon-timeline.js
     toc: true
     toc-title: "Contents"
     code-copy: hover
