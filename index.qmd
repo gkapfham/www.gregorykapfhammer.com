@@ -18,7 +18,7 @@ format:
 from rich.console import Console
 console = Console()
 console.print(
-    f":rocket: Hi! I'm a researcher, Teacher, and Software Developer!"
+    f":rocket: Hi! I'm a researcher, teacher, and software developer!"
 )
 ```
 
@@ -94,3 +94,5 @@ and [subscribing](support.qmd) to my mailing list.
   </div>
 </div>
 ```
+
+
