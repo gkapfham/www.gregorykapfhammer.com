@@ -94,5 +94,3 @@ and [subscribing](support.qmd) to my mailing list.
   </div>
 </div>
 ```
-
-
