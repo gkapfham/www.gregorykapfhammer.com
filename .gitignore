@@ -131,8 +131,9 @@ build-iPhoneSimulator/
 ### Download directory ###
 download
 
+### Quarto ###
 .quarto
-
 /.quarto/
-
 site_libs/
+papers
+presentations
