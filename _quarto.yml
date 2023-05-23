@@ -68,7 +68,9 @@ format:
       light:
         - united
         - united-light.scss
-      dark: united-dark.scss
+      dark:
+        - united
+        - united-dark.scss
     css: styles.css
     toc: true
     toc-title: "Contents"
