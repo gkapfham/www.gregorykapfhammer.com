@@ -4,9 +4,12 @@ toc: true
 page-layout: full
 listing:
   contents: papers
-  sort: "date title"
+  sort:
+    - "date desc"
+    - "author title"
   type: default
   categories: false
+  date-format: "YYYY"
   sort-ui: true
   filter-ui: true
   fields: [title, author, date, description]
