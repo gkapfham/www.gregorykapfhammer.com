@@ -14,7 +14,7 @@ if __name__ == "__main__":
 
     bibliography = None
     if len(sys.argv) == 1:
-        bib_database_file_name = "bibliography.bib"
+        bib_database_file_name = "bibliography/bibtex/bibliography_kapfhammer.bib"
     else:
         bib_database_file_name = sys.argv[1]
 
@@ -29,6 +29,7 @@ if __name__ == "__main__":
 
     for publication in bibliography.entries:
         console.print(publication)
+        console.print(".")
         publication_id = publication["ID"]
         publication_year = publication["year"]
         publication_abstract = publication["abstract"]
