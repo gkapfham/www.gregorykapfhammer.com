@@ -1,18 +1,22 @@
 """Parse the bibtex file."""
 
-import sys
 import shutil
+import sys
 from pathlib import Path
+from typing import Dict
 
 import bibtexparser
 import yaml
 from rich.console import Console
 
-from typing import Dict
-
 console = Console()
 
-KEYWORDS = {"database": "database testing", "experiment": "empirical study", "flaky": "flaky tests", "prioritization": "test prioritization"}
+KEYWORDS = {
+    "database": "database testing",
+    "experiment": "empirical study",
+    "flaky": "flaky tests",
+    "prioritization": "test prioritization",
+}
 
 
 def create_categories(publication: Dict[str, str]) -> None:
@@ -23,10 +27,18 @@ def create_categories(publication: Dict[str, str]) -> None:
     # designate whether or not anything has been found
     found_keyword = False
     found_keyword_list = []
+    # look to see if each of the specified keywords exists
+    # inside of either the title or the abstract; if it
+    # does exist, then add it to the list of found keywords
     for current_keyword in KEYWORDS.keys():
-        if current_keyword in publication_title or current_keyword in publication_abstract:
+        if (
+            current_keyword in publication_title
+            or current_keyword in publication_abstract
+        ):
             found_keyword = True
             found_keyword_list.append(KEYWORDS[current_keyword])
+    # at least one keyword was found, so create a new key value
+    # pair entry inside of the publication provided as the input
     if found_keyword:
         publication["categories"] = f"[{', '.join(found_keyword_list)}]"
 
@@ -62,8 +74,16 @@ def parse_conference_paper(publication: Dict[str, str]) -> None:
         papers_directory.mkdir(parents=True, exist_ok=True)
         publication_file = Path(papers_directory / "index.qmd")
         publication_file.touch()
+        # dump the publication dictionary to a string and then patch up
+        # the string so that the categories are formatted correctly
+        publication_dump_string = yaml.dump(
+            publication, allow_unicode=True, default_flow_style=False
+        )
+        publication_dump_string = publication_dump_string.replace("'[", "[")
+        publication_dump_string = publication_dump_string.replace("]'", "]")
+        # write the complete contents of the string to the designated file
         publication_file.write_text(
-            f"---\n{yaml.dump(publication, allow_unicode=True, default_flow_style=False)}---",
+            f"---\n{publication_dump_string}---",
             encoding="utf-8",
         )
 
