@@ -25,7 +25,7 @@ if __name__ == "__main__":
     console.print(
         f":rocket: Always run from root to parsing the {bib_database_file_name}"
     )
-    # console.print(bibliography.entries)
+    console.print(len(bibliography.entries))
 
     for publication in bibliography.entries:
         console.print(publication)
