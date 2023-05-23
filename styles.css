@@ -262,6 +262,16 @@ sidebar .quarto-alternate-notebooks ul li a,
   color: #fff !important;
 }
 
+thead,
+tbody,
+tfoot,
+tr,
+td,
+th {
+  border-style: none !important;
+  border-width: 0;
+}
+
 /* }}} */
 
 /* Custom Mastodon Timeline {{{ */
