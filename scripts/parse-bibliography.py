@@ -1,6 +1,7 @@
 """Parse the bibtex file."""
 
 import argparse
+import hashlib
 import re
 import shutil
 from pathlib import Path
@@ -12,28 +13,63 @@ from rich.console import Console
 
 console = Console()
 
+MAX_KEYWORD_SIZE = 4
+
 KEYWORDS = {
     "relational database": "database testing",
-    "developer survey": "developer survey",
+    "developer survey": "human study",
     "empirical": "empirical study",
+    "Encyclopedia": "literature review",
     "experiment": "empirical study",
     "flaky": "flaky tests",
-    "generate": "test-data generation",
+    "generation": "test-data generation",
     "genetic": "search-based methods",
+    "human study": "human study",
     "invariant": "invariant detection",
+    "JavaSpace": "program performance",
     "localiz": "fault localization",
     "mutation": "mutation testing",
     "prioritization": "test-suite prioritization",
-    "reduction": "test-suite reduction",
+    "repair": "program repair",
+    "test reduction": "test-suite reduction",
+    "tool": "software tool",
     "schema": "database testing",
     "SchemaAnalyst": "database testing",
     "search": "search-based methods",
     "SBST": "search-based methods",
     "survey": "literature review",
+    "test coverage": "test coverage",
     "time overhead": "program performance",
     "web": "web testing",
     "unstructured": "program performance",
 }
+
+
+def write_file_if_changed(file_path: str, content: str) -> None:
+    # Create a Path object from the file path
+    path = Path(file_path)
+    # Calculate the hash of the new content
+    new_content_hash = hashlib.md5(content.encode()).hexdigest()
+    # Check if the file exists and calculate the hash of its current content
+    if path.exists():
+        with path.open(mode="r") as file:
+            current_content = file.read()
+            current_content_hash = hashlib.md5(current_content.encode()).hexdigest()
+            # If the content hashes match, no need to write the file again
+            if new_content_hash == current_content_hash:
+                # console.print(f"Did not need to write for {file_path}")
+                return
+    # Write the new content to the file
+    with path.open(mode="w") as file:
+        console.print(f"Needed to write for {file_path}")
+        file.write(content)
+
+
+def delete_elements_beyond_max_size(provided_list: list, max_size: int) -> None:
+    """Delete elements from a list beyond a maximum size."""
+    length_provided_list = len(provided_list)
+    if length_provided_list > max_size:
+        del provided_list[max_size:]
 
 
 def string_found(search_string: str, containing_string: str) -> bool:
@@ -48,6 +84,7 @@ def create_categories(publication: Dict[str, str]) -> None:
     # extract the title and the abstract
     publication_title = publication["title"]
     publication_abstract = publication["abstract"]
+    publication_booktitle = publication["booktitle"]
     # designate whether or not anything has been found
     found_keyword = False
     found_keyword_list = []
@@ -55,15 +92,22 @@ def create_categories(publication: Dict[str, str]) -> None:
     # inside of either the title or the abstract; if it
     # does exist, then add it to the list of found keywords
     for current_keyword in KEYWORDS.keys():
-        if (
-            string_found(current_keyword, publication_title)
-            or string_found(current_keyword, publication_abstract)
-        ):
+        if string_found(current_keyword, publication_title) or string_found(
+            current_keyword, publication_abstract) or string_found(current_keyword, publication_booktitle):
             found_keyword = True
             found_keyword_list.append(KEYWORDS[current_keyword])
     # at least one keyword was found, so create a new key value
     # pair entry inside of the publication provided as the input
     if found_keyword:
+        # remove any of the duplicates inside of the list of keywords
+        found_keyword_set = set(found_keyword_list)
+        found_keyword_list = list(found_keyword_set)
+        # sort the list alphabetically
+        found_keyword_list.sort()
+        # do not allow more than four entries for keywords
+        delete_elements_beyond_max_size(found_keyword_list, MAX_KEYWORD_SIZE)
+        console.print(publication_title)
+        console.print(found_keyword_list)
         publication["categories"] = f"[{', '.join(found_keyword_list)}]"
 
 
@@ -106,10 +150,13 @@ def parse_conference_paper(publication: Dict[str, str]) -> None:
         publication_dump_string = publication_dump_string.replace("'[", "[")
         publication_dump_string = publication_dump_string.replace("]'", "]")
         # write the complete contents of the string to the designated file
-        publication_file.write_text(
-            f"---\n{publication_dump_string}---",
-            encoding="utf-8",
+        write_file_if_changed(
+            str(publication_file), f"---\n{publication_dump_string}---"
         )
+        # publication_file.write_text(
+        #     f"---\n{publication_dump_string}---",
+        #     encoding="utf-8",
+        # )
 
 
 if __name__ == "__main__":
@@ -129,7 +176,9 @@ if __name__ == "__main__":
     # print(args)
     console.print()
     if args.bibfile == None:
-        console.print(":clap: Using the default bibliography file of bibliography/bibtex/bibliography_kapfhammer.bib\n")
+        console.print(
+            ":clap: Using the default bibliography file of bibliography/bibtex/bibliography_kapfhammer.bib\n"
+        )
         bib_database_file_name = "bibliography/bibtex/bibliography_kapfhammer.bib"
     else:
         console.print(":clap: Using {args.bibfile} as specified by --bibfile")
@@ -145,7 +194,9 @@ if __name__ == "__main__":
         shutil.rmtree(papers_directory)
 
     papers_directory.mkdir(exist_ok=True)
-    console.print(f":abacus: Found a total of {len(bibliography.entries)} bibliography entries")
+    console.print(
+        f":abacus: Found a total of {len(bibliography.entries)} bibliography entries"
+    )
     # process all of the entries by create the directories and files for the conference papers
     for publication in bibliography.entries:
         parse_conference_paper(publication)
