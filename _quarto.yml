@@ -1,9 +1,9 @@
 project:
   type: website
-  pre-render: scripts/parse-bibliography.py
+  # pre-render: scripts/parse-bibliography.py
   preview:
     port: 5555
-    browser: true
+    browser: false
     watch-inputs: true
     navigate: true
 
