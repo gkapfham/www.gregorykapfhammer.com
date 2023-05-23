@@ -2,49 +2,58 @@
 
 // Base document colors
 $body-bg: #212121;
-$body-color: #BDBDBD;
-$link-color: #EF6C00;
+
+$body-color: #bdbdbd;
+$link-color: #ef6c00;
 
 // Code blocks
-$code-block-bg-alpha: -.8;
+$code-block-bg-alpha: -0.8;
 
 #quarto-search input {
-  font-size: .925rem;
-  background-color: #FDFEFF;
+  font-size: 0.925rem;
+  background-color: #fdfeff;
 }
 
-.aa-Autocomplete .aa-Form, .aa-DetachedFormContainer .aa-Form {
-    align-items: center;
-    background-color: #FDFEFF !important;
-    border: 1px solid #ced4da;
-    border-radius: .25rem;
-    color: #bdbdbd;
-    display: flex;
-    line-height: 1em;
-    margin: 0;
-    position: relative;
-    width: 100%;
+.aa-Autocomplete .aa-Form,
+.aa-DetachedFormContainer .aa-Form {
+  align-items: center;
+  background-color: #fdfeff !important;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  color: #bdbdbd;
+  display: flex;
+  line-height: 1em;
+  margin: 0;
+  position: relative;
+  width: 100%;
 }
 
-.aa-Autocomplete .aa-Form .aa-InputWrapperPrefix .aa-Label svg, .aa-Autocomplete .aa-Form .aa-InputWrapperPrefix .aa-LoadingIndicator svg, .aa-DetachedFormContainer .aa-Form .aa-InputWrapperPrefix .aa-Label svg, .aa-DetachedFormContainer .aa-Form .aa-InputWrapperPrefix .aa-LoadingIndicator svg {
-    color: #333 !important;
-    opacity: .5;
+.aa-Autocomplete .aa-Form .aa-InputWrapperPrefix .aa-Label svg,
+.aa-Autocomplete .aa-Form .aa-InputWrapperPrefix .aa-LoadingIndicator svg,
+.aa-DetachedFormContainer .aa-Form .aa-InputWrapperPrefix .aa-Label svg,
+.aa-DetachedFormContainer
+  .aa-Form
+  .aa-InputWrapperPrefix
+  .aa-LoadingIndicator
+  svg {
+  color: #333 !important;
+  opacity: 0.5;
 }
 
 pre {
-    display: block;
-    margin-top: 0;
-    margin-bottom: 1rem;
-    overflow: auto;
-    font-size: 0.875em;
-    color: #BDBDBD !important;
-    background-color: #272727;
-    padding: .5rem;
-    border: 1px solid #dee2e6;
-    border-radius: .25rem;
+  display: block;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  overflow: auto;
+  font-size: 0.875em;
+  color: #bdbdbd !important;
+  background-color: #272727;
+  padding: 0.5rem;
+  border: 1px solid #dee2e6;
+  border-radius: 0.25rem;
 }
 
 // Preserve the color of the navbar
 .navbar-dark {
-  background-color: #E95420 !important;
+  background-color: #e95420 !important;
 }
