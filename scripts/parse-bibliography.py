@@ -10,19 +10,34 @@ from rich.console import Console
 
 from typing import Dict
 
-def parse_conference_paper(current_publication: Dict[str, str]):
+console = Console()
+
+
+def parse_conference_paper(publication: Dict[str, str]):
     """Parse a conference paper, noted because it uses a booktitle."""
-    if current_publication.get("booktitle"):
+    if publication.get("booktitle"):
+        print("Found something!")
+        # extract values from the current publication
         publication_id = publication["ID"]
         publication_year = publication["year"]
         publication_abstract = publication["abstract"]
         publication_booktitle = publication["booktitle"]
+        console.print(publication_id)
+        # define the description using the booktitle
         publication["description"] = f"<em>{publication_booktitle}</em>"
+        # redefine the abstract so that there are no newlines in it
         publication_abstract = publication_abstract.replace("\n", " ")
         publication["abstract"] = publication_abstract
+        # define the date so that it is a string in YYYY-MM-DD format;
+        # note that this sets up the date so that the MM and the DD
+        # will be ignored later as conference papers do not need MM or DD
         publication_year = publication["year"]
-        publication["date"] = publication_year
-        console.print(publication_id)
+        del publication["year"]
+        publication["date"] = f"{publication_year}-01-01"
+        # define the date-format to only display the year
+        only_year = "YYYY"
+        publication["date-format"] = f"{only_year}"
+        # create the file in the papers directory
         papers_directory = Path(f"papers/{publication_year}-{publication_id}/")
         papers_directory.mkdir(parents=True, exist_ok=True)
         publication_file = Path(papers_directory / "index.qmd")
@@ -47,15 +62,18 @@ if __name__ == "__main__":
     with open(bib_database_file_name, encoding="utf-8") as bibtex_file:
         bibliography = bibtexparser.load(bibtex_file)
 
-    console = Console()
+    # console = Console()
     console.print(
-        f":rocket: Always run from root to parsing the {bib_database_file_name}"
+        f":rocket: Always run from root to parse the {bib_database_file_name}"
     )
     console.print(len(bibliography.entries))
 
     papers_directory = Path("papers/")
-    shutil.rmtree(papers_directory)
+    if papers_directory.exists():
+        shutil.rmtree(papers_directory)
+    else:
+        papers_directory.mkdir()
 
     for publication in bibliography.entries:
-        console.print(".", end=" ")
         parse_conference_paper(publication)
+    console.print()
