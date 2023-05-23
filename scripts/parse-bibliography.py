@@ -49,31 +49,34 @@ def parse_conference_paper(publication: Dict[str, str]):
 
 
 if __name__ == "__main__":
+    # display the command-line arguments
     print(f"Arguments count: {len(sys.argv)}")
     for i, argument in enumerate(sys.argv):
         print(f"Argument {i:>6}: {argument}")
-
+    # determine whether to use the default bibliography
+    # (if one is not specified) or to use a specified
+    # one, normally provided for testing purposes
     bibliography = None
     if len(sys.argv) == 1:
         bib_database_file_name = "bibliography/bibtex/bibliography_kapfhammer.bib"
     else:
         bib_database_file_name = sys.argv[1]
-
+    # open up the BiBTeX file and parse it
     with open(bib_database_file_name, encoding="utf-8") as bibtex_file:
         bibliography = bibtexparser.load(bibtex_file)
-
-    # console = Console()
+    # display details about the name of the file
     console.print(
         f":rocket: Always run from root to parse the {bib_database_file_name}"
     )
     console.print(len(bibliography.entries))
-
+    # delete the papers directory if exists;
+    # if it does not exist, then create it
     papers_directory = Path("papers/")
     if papers_directory.exists():
         shutil.rmtree(papers_directory)
     else:
         papers_directory.mkdir()
-
+    # create the directories and files for the conference papers
     for publication in bibliography.entries:
         parse_conference_paper(publication)
     console.print()
