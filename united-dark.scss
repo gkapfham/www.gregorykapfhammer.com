@@ -1,13 +1,14 @@
 /*-- scss:defaults --*/
 
-// Base document colors
-$body-bg: #212121;
+// Defaults {{{
 
+$body-bg: #212121;
 $body-color: #bdbdbd;
 $link-color: #ef6c00;
 
-// Code blocks
-$code-block-bg-alpha: -0.8;
+// }}}
+
+// Search Box {{{
 
 #quarto-search input {
   font-size: 0.925rem;
@@ -40,6 +41,13 @@ $code-block-bg-alpha: -0.8;
   opacity: 0.5;
 }
 
+// }}}
+
+// Source Code {{{
+
+// Code blocks
+$code-block-bg-alpha: -0.8;
+
 pre {
   display: block;
   margin-top: 0;
@@ -53,7 +61,18 @@ pre {
   border-radius: 0.25rem;
 }
 
-// Define the color of the navbar
+// }}}
+
+// Navbar {{{
+
 .navbar-dark {
   background-color: #e65100 !important;
 }
+
+.navbar-dark .dropdown-text {
+    color: #333333;
+    text-align: inherit;
+    text-decoration: none;
+}
+
+// }}}
