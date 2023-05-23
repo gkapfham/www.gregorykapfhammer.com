@@ -233,6 +233,25 @@ sidebar .quarto-alternate-notebooks ul li a,
   font-size: 0.75rem;
 }
 
+#featured-papers-pagination .listing-pagination {
+  display: none;
+}
+
+#featured-papers-pagination ul.pagination {
+    display: none;
+    float: right;
+    padding-left: 8px;
+    padding-top: .5em;
+}
+
+#listing-featured-papers {
+    margin-bottom: -2rem !important;
+}
+
+#featured-papers-pagination .quarto-listing {
+    padding-bottom: 0em;
+}
+
 /* }}} */
 
 /* Custom Mastodon Timeline {{{ */
