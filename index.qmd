@@ -12,6 +12,19 @@ format:
   html:
     include-in-header:
       file: js/mastodon-timeline.js
+listing:
+  - id: featured-papers
+    contents: papers
+    sort:
+      - "date desc"
+      - "author title"
+    type: table
+    date-format: "YYYY"
+    sort-ui: false
+    filter-ui: false
+    fields: [title, description]
+    max-items: 4
+    page-size: 3
 ---
 
 ```{python}
@@ -60,6 +73,9 @@ and [subscribing](support.qmd) to my mailing list.
 {{< fa rocket >}} <em>Explore</em> all of my areas of [research expertise](research.qmd)
 
 ## Featured Papers
+
+:::{#featured-papers}
+:::
 
 ## Recent Talks
 
