@@ -16,7 +16,8 @@ listing:
 from rich.console import Console
 import bibtexparser
 console = Console()
-with open("bibliography.bib", encoding="utf-8") as bibtex_file:
+bibliography_file = "bibliography/bibtex/bibliography_kapfhammer.bib"
+with open(bibliography_file, encoding="utf-8") as bibtex_file:
   bibliography = bibtexparser.load(bibtex_file)
   papers_count = len(bibliography.entries)
   console.print(
