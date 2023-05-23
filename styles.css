@@ -238,18 +238,24 @@ sidebar .quarto-alternate-notebooks ul li a,
 }
 
 #featured-papers-pagination ul.pagination {
-    display: none;
-    float: right;
-    padding-left: 8px;
-    padding-top: .5em;
+  display: none;
+  float: right;
+  padding-left: 8px;
+  padding-top: 0.5em;
 }
 
 #listing-featured-papers {
-    margin-bottom: -2rem !important;
+  margin-bottom: -2rem !important;
 }
 
 #featured-papers-pagination .quarto-listing {
-    padding-bottom: 0em;
+  padding-bottom: 0em;
+}
+
+#title-block-header.quarto-title-block.default .quarto-title-meta {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-right: 1rem;
 }
 
 /* }}} */
