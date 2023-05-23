@@ -12,8 +12,26 @@ from typing import Dict
 
 console = Console()
 
+KEYWORDS = {"database": "database testing", "experiment": "empirical study", "flaky": "flaky tests", "prioritization": "test prioritization"}
 
-def parse_conference_paper(publication: Dict[str, str]):
+
+def create_categories(publication: Dict[str, str]) -> None:
+    """Add categories for a publication since none exist by default in the BiBTeX file."""
+    # extract the title and the abstract
+    publication_title = publication["title"]
+    publication_abstract = publication["abstract"]
+    # designate whether or not anything has been found
+    found_keyword = False
+    found_keyword_list = []
+    for current_keyword in KEYWORDS.keys():
+        if current_keyword in publication_title or current_keyword in publication_abstract:
+            found_keyword = True
+            found_keyword_list.append(KEYWORDS[current_keyword])
+    if found_keyword:
+        publication["categories"] = f"[{', '.join(found_keyword_list)}]"
+
+
+def parse_conference_paper(publication: Dict[str, str]) -> None:
     """Parse a conference paper, noted because it uses a booktitle."""
     if publication.get("booktitle"):
         print("Found something!")
@@ -37,13 +55,15 @@ def parse_conference_paper(publication: Dict[str, str]):
         # define the date-format to only display the year
         only_year = "YYYY"
         publication["date-format"] = f"{only_year}"
-        # create the file in the papers directory
+        # create the categories
+        create_categories(publication)
+        # create the file for this paper in the papers directory
         papers_directory = Path(f"papers/{publication_year}-{publication_id}/")
         papers_directory.mkdir(parents=True, exist_ok=True)
         publication_file = Path(papers_directory / "index.qmd")
         publication_file.touch()
         publication_file.write_text(
-            f"---\n{yaml.dump(publication, allow_unicode=True, default_flow_style=False)}\n---",
+            f"---\n{yaml.dump(publication, allow_unicode=True, default_flow_style=False)}---",
             encoding="utf-8",
         )
 
