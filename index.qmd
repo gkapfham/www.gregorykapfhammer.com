@@ -23,8 +23,10 @@ listing:
     sort-ui: false
     filter-ui: false
     fields: [title, description]
-    max-items: 4
+    max-items: 3
     page-size: 3
+execute:
+  freeze: auto
 ---
 
 ```{python}
