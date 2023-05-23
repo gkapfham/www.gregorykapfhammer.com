@@ -26,7 +26,7 @@ with open(bibliography_file, encoding="utf-8") as bibtex_file:
   bibliography = bibtexparser.load(bibtex_file)
   papers_count = len(bibliography.entries)
   console.print(
-      f":rocket: I had fun writing these {papers_count} papers. " +
-      "I hope you enjoy reading them!"
+      f":rocket: I enjoyed writing each of these {papers_count} papers. " +
+      "I hope you relish reading them!"
   )
 ```
