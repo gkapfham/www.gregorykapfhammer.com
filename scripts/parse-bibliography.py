@@ -1,7 +1,8 @@
 """Parse the bibtex file."""
 
+import argparse
+import re
 import shutil
-import sys
 from pathlib import Path
 from typing import Dict
 
@@ -12,11 +13,34 @@ from rich.console import Console
 console = Console()
 
 KEYWORDS = {
-    "database": "database testing",
+    "relational database": "database testing",
+    "developer survey": "developer survey",
+    "empirical": "empirical study",
     "experiment": "empirical study",
     "flaky": "flaky tests",
-    "prioritization": "test prioritization",
+    "generate": "test-data generation",
+    "genetic": "search-based methods",
+    "invariant": "invariant detection",
+    "localiz": "fault localization",
+    "mutation": "mutation testing",
+    "prioritization": "test-suite prioritization",
+    "reduction": "test-suite reduction",
+    "schema": "database testing",
+    "SchemaAnalyst": "database testing",
+    "search": "search-based methods",
+    "SBST": "search-based methods",
+    "survey": "literature review",
+    "time overhead": "program performance",
+    "web": "web testing",
+    "unstructured": "program performance",
 }
+
+
+def string_found(search_string: str, containing_string: str) -> bool:
+    """Determine if the first string is inside of the major string."""
+    if re.search(r"\b" + re.escape(search_string) + r"\b", containing_string):
+        return True
+    return False
 
 
 def create_categories(publication: Dict[str, str]) -> None:
@@ -32,8 +56,8 @@ def create_categories(publication: Dict[str, str]) -> None:
     # does exist, then add it to the list of found keywords
     for current_keyword in KEYWORDS.keys():
         if (
-            current_keyword in publication_title
-            or current_keyword in publication_abstract
+            string_found(current_keyword, publication_title)
+            or string_found(current_keyword, publication_abstract)
         ):
             found_keyword = True
             found_keyword_list.append(KEYWORDS[current_keyword])
@@ -46,13 +70,13 @@ def create_categories(publication: Dict[str, str]) -> None:
 def parse_conference_paper(publication: Dict[str, str]) -> None:
     """Parse a conference paper, noted because it uses a booktitle."""
     if publication.get("booktitle"):
-        print("Found something!")
+        # print("Found something!")
         # extract values from the current publication
         publication_id = publication["ID"]
         publication_year = publication["year"]
         publication_abstract = publication["abstract"]
         publication_booktitle = publication["booktitle"]
-        console.print(publication_id)
+        # console.print(publication_id)
         # define the description using the booktitle
         publication["description"] = f"<em>{publication_booktitle}</em>"
         # redefine the abstract so that there are no newlines in it
@@ -90,33 +114,39 @@ def parse_conference_paper(publication: Dict[str, str]) -> None:
 
 if __name__ == "__main__":
     # display the command-line arguments
-    print(f"Arguments count: {len(sys.argv)}")
-    for i, argument in enumerate(sys.argv):
-        print(f"Argument {i:>6}: {argument}")
+    # print(f"Arguments count: {len(sys.argv)}")
+    # for i, argument in enumerate(sys.argv):
+    # print(f"Argument {i:>6}: {argument}")
+    # parse the arguments using argparse
+    parser = argparse.ArgumentParser()
+    parser.add_argument("-b", "--bibfile")
+    parser.add_argument("-d", "--delete", action="store_true")
+    args = parser.parse_args()
     # determine whether to use the default bibliography
     # (if one is not specified) or to use a specified
     # one, normally provided for testing purposes
     bibliography = None
-    if len(sys.argv) == 1:
+    # print(args)
+    console.print()
+    if args.bibfile == None:
+        console.print(":clap: Using the default bibliography file of bibliography/bibtex/bibliography_kapfhammer.bib\n")
         bib_database_file_name = "bibliography/bibtex/bibliography_kapfhammer.bib"
     else:
-        bib_database_file_name = sys.argv[1]
+        console.print(":clap: Using {args.bibfile} as specified by --bibfile")
+        bib_database_file_name = args.bibfile
     # open up the BiBTeX file and parse it
     with open(bib_database_file_name, encoding="utf-8") as bibtex_file:
         bibliography = bibtexparser.load(bibtex_file)
-    # display details about the name of the file
-    console.print(
-        f":rocket: Always run from root to parse the {bib_database_file_name}"
-    )
-    console.print(len(bibliography.entries))
     # delete the papers directory if exists;
     # if it does not exist, then create it
     papers_directory = Path("papers/")
-    if papers_directory.exists():
+    if papers_directory.exists() and args.delete:
+        console.print(":boom: Deleting the papers directory due to --delete\n")
         shutil.rmtree(papers_directory)
-    else:
-        papers_directory.mkdir()
-    # create the directories and files for the conference papers
+
+    papers_directory.mkdir(exist_ok=True)
+    console.print(f":abacus: Found a total of {len(bibliography.entries)} bibliography entries")
+    # process all of the entries by create the directories and files for the conference papers
     for publication in bibliography.entries:
         parse_conference_paper(publication)
     console.print()
