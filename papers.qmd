@@ -8,7 +8,7 @@ listing:
     - "date desc"
     - "author title"
   type: default
-  categories: false
+  categories: true
   date-format: "YYYY"
   sort-ui: true
   filter-ui: true
@@ -26,7 +26,7 @@ with open(bibliography_file, encoding="utf-8") as bibtex_file:
   bibliography = bibtexparser.load(bibtex_file)
   papers_count = len(bibliography.entries)
   console.print(
-      f":rocket: I had so much fun writing these {papers_count} papers. " +
+      f":rocket: I had fun writing these {papers_count} papers. " +
       "I hope you enjoy reading them!"
   )
 ```
