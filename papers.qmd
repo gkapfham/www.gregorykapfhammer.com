@@ -13,6 +13,8 @@ listing:
   sort-ui: true
   filter-ui: true
   fields: [title, author, date, description]
+execute:
+  freeze: auto
 ---
 
 ```{python}
