@@ -193,6 +193,27 @@ sidebar .quarto-alternate-notebooks ul li a,
 
 /* }}} */
 
+/* Papers and Presentations {{{ */
+
+#title-block-header.quarto-title-block.default .quarto-title-meta-heading {
+  text-transform: uppercase;
+  margin-top: 1em;
+  font-size: 1em;
+  opacity: 1;
+  font-weight: 500;
+}
+
+#title-block-header.quarto-title-block.default .description .abstract-title,
+#title-block-header.quarto-title-block.default .abstract .abstract-title {
+  text-transform: uppercase;
+  margin-top: 1em;
+  font-size: 1em;
+  opacity: 1;
+  font-weight: 500;
+}
+
+/* }}} */
+
 /* Custom Mastodon Timeline {{{ */
 
 /* Mastodon embed feed timeline v3.5.1 */
