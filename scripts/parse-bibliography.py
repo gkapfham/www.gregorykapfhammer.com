@@ -31,9 +31,9 @@ KEYWORDS = {
     "genetic": "search-based methods",
     "human study": "human study",
     "invariant": "invariant detection",
-    "JavaSpace": "technique performance",
+    "JavaSpace": "performance analysis",
     "localiz": "fault localization",
-    "memory overhead": "technique performance",
+    "memory overhead": "performance analysis",
     "mutation": "mutation testing",
     "prioritizing test suites": "test-suite prioritization",
     "prioritizing tests": "test-suite prioritization",
@@ -43,7 +43,7 @@ KEYWORDS = {
     "reduced test suite": "test-suite reduction",
     "test reduction": "test-suite reduction",
     "test suite reduction": "test-suite reduction",
-    "time complexity": "technique performance",
+    "time complexity": "performance analysis",
     "tool": "software tool",
     "schema": "database testing",
     "SchemaAnalyst": "database testing",
@@ -51,10 +51,10 @@ KEYWORDS = {
     "SBST": "search-based methods",
     "survey": "literature review",
     "test coverage": "test coverage",
-    "time overhead": "technique performance",
+    "time overhead": "performance analysis",
     "web page": "web testing",
     "web site": "web testing",
-    "unstructured": "technique performance",
+    "unstructured": "performance analysis",
 }
 
 
