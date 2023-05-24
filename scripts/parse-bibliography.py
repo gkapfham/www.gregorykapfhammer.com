@@ -158,7 +158,10 @@ def parse_conference_paper(publication: Dict[str, str]) -> None:
         papers_directory.mkdir(parents=True, exist_ok=True)
         publication_file = Path(papers_directory / "index.qmd")
         publication_file.touch()
-        # handle author
+        # create a list of the authors instead of using a string
+        # of author names joined by the word "and"; this will then
+        # cause the quarto system to use the label "authors" instead
+        # of the singular label "author"
         publication_author = publication["author"]
         publication_author = f"[{publication_author.replace('and', ',')}]"
         publication["author"] = publication_author
