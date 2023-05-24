@@ -177,10 +177,6 @@ def parse_conference_paper(publication: Dict[str, str]) -> None:
         write_file_if_changed(
             str(publication_file), f"---\n{publication_dump_string}---"
         )
-        # publication_file.write_text(
-        #     f"---\n{publication_dump_string}---",
-        #     encoding="utf-8",
-        # )
 
 
 if __name__ == "__main__":
