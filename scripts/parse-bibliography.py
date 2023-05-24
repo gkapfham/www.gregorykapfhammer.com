@@ -71,11 +71,10 @@ def write_file_if_changed(file_path: str, content: str) -> None:
             current_content_hash = hashlib.md5(current_content.encode()).hexdigest()
             # If the content hashes match, no need to write the file again
             if new_content_hash == current_content_hash:
-                # console.print(f"Did not need to write for {file_path}")
                 return
     # Write the new content to the file
     with path.open(mode="w") as file:
-        console.print(f"Needed to write for {file_path}")
+        # console.print(f"Needed to write for {file_path}")
         file.write(content)
 
 
@@ -123,8 +122,8 @@ def create_categories(publication: Dict[str, str]) -> None:
         found_keyword_list.sort()
         # do not allow more than four entries for keywords
         delete_elements_beyond_max_size(found_keyword_list, MAX_KEYWORD_SIZE)
-        console.print(publication_title)
-        console.print(found_keyword_list)
+        # console.print(publication_title)
+        # console.print(found_keyword_list)
         publication["categories"] = f"[{', '.join(found_keyword_list)}]"
 
 
@@ -165,7 +164,7 @@ def parse_conference_paper(publication: Dict[str, str]) -> None:
         publication_author = publication["author"]
         publication_author = f"[{publication_author.replace('and', ',')}]"
         publication["author"] = publication_author
-        console.print(publication_author)
+        # console.print(publication_author)
         # dump the publication dictionary to a string and then patch up
         # the string so that the categories are formatted correctly
         publication_dump_string = yaml.dump(
@@ -185,12 +184,12 @@ if __name__ == "__main__":
     parser.add_argument("-b", "--bibfile")
     parser.add_argument("-d", "--delete", action="store_true")
     args = parser.parse_args()
+    # display a blank line to ensure better formatting
+    console.print()
     # determine whether to use the default bibliography
     # (if one is not specified) or to use a specified
     # one, normally provided for testing purposes
     bibliography = None
-    # print(args)
-    console.print()
     if args.bibfile == None:
         console.print(
             ":clap: Using the default bibliography file of bibliography/bibtex/bibliography_kapfhammer.bib\n"
