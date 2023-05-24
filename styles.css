@@ -254,8 +254,7 @@ sidebar .quarto-alternate-notebooks ul li a,
 
 #title-block-header.quarto-title-block.default .quarto-title-meta {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  margin-right: 1rem;
+  grid-template-columns: repeat(1, 1fr);
 }
 
 .page-item.active .page-link:hover {
