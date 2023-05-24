@@ -180,11 +180,7 @@ def parse_conference_paper(publication: Dict[str, str]) -> None:
 
 
 if __name__ == "__main__":
-    # display the command-line arguments
-    # print(f"Arguments count: {len(sys.argv)}")
-    # for i, argument in enumerate(sys.argv):
-    # print(f"Argument {i:>6}: {argument}")
-    # parse the arguments using argparse
+    # parse the command-line arguments using argparse
     parser = argparse.ArgumentParser()
     parser.add_argument("-b", "--bibfile")
     parser.add_argument("-d", "--delete", action="store_true")
