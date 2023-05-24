@@ -24,7 +24,9 @@ console = Console()
 bibliography_file = "bibliography/bibtex/bibliography_kapfhammer.bib"
 with open(bibliography_file, encoding="utf-8") as bibtex_file:
   bibliography = bibtexparser.load(bibtex_file)
-  papers_count = len(bibliography.entries)
+  research_papers = [d for d in bibliography.entries if 'booktitle' in d]
+  papers_count = len(research_papers)
   console.print(
-      f":rocket: Wow, it was so much fun to write each of these {papers_count} research papers!")
+      ":rocket: Wow, collaboratively publishing each of " +
+      f"these {papers_count} papers was really fun!")
 ```
