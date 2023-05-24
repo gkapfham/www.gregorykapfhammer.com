@@ -16,22 +16,34 @@ console = Console()
 MAX_KEYWORD_SIZE = 4
 
 KEYWORDS = {
-    "relational database": "database testing",
+    "adequacy criteria": "test coverage",
+    "defect prediction": "defect prediction",
     "developer survey": "human study",
     "empirical": "empirical study",
+    "empirically": "empirical study",
     "Encyclopedia": "literature review",
     "experiment": "empirical study",
+    "execution of regression": "test execution",
+    "executing test": "test execution",
+    "executing tests": "test execution",
     "flaky": "flaky tests",
     "generation": "test-data generation",
     "genetic": "search-based methods",
     "human study": "human study",
     "invariant": "invariant detection",
-    "JavaSpace": "program performance",
+    "JavaSpace": "technique performance",
     "localiz": "fault localization",
+    "memory overhead": "technique performance",
     "mutation": "mutation testing",
+    "prioritizing test suites": "test-suite prioritization",
+    "prioritizing tests": "test-suite prioritization",
     "prioritization": "test-suite prioritization",
+    "relational database": "database testing",
     "repair": "program repair",
+    "reduced test suite": "test-suite reduction",
     "test reduction": "test-suite reduction",
+    "test suite reduction": "test-suite reduction",
+    "time complexity": "technique performance",
     "tool": "software tool",
     "schema": "database testing",
     "SchemaAnalyst": "database testing",
@@ -39,13 +51,15 @@ KEYWORDS = {
     "SBST": "search-based methods",
     "survey": "literature review",
     "test coverage": "test coverage",
-    "time overhead": "program performance",
-    "web": "web testing",
-    "unstructured": "program performance",
+    "time overhead": "technique performance",
+    "web page": "web testing",
+    "web site": "web testing",
+    "unstructured": "technique performance",
 }
 
 
 def write_file_if_changed(file_path: str, content: str) -> None:
+    """Write the file to the filesystem only when it contents differ from current file."""
     # Create a Path object from the file path
     path = Path(file_path)
     # Calculate the hash of the new content
@@ -74,7 +88,7 @@ def delete_elements_beyond_max_size(provided_list: list, max_size: int) -> None:
 
 def string_found(search_string: str, containing_string: str) -> bool:
     """Determine if the first string is inside of the major string."""
-    if re.search(r"\b" + re.escape(search_string) + r"\b", containing_string):
+    if re.search(r"\b" + re.escape(search_string.lower()) + r"\b", containing_string.lower()):
         return True
     return False
 
@@ -92,8 +106,11 @@ def create_categories(publication: Dict[str, str]) -> None:
     # inside of either the title or the abstract; if it
     # does exist, then add it to the list of found keywords
     for current_keyword in KEYWORDS.keys():
-        if string_found(current_keyword, publication_title) or string_found(
-            current_keyword, publication_abstract) or string_found(current_keyword, publication_booktitle):
+        if (
+            string_found(current_keyword, publication_title)
+            or string_found(current_keyword, publication_abstract)
+            or string_found(current_keyword, publication_booktitle)
+        ):
             found_keyword = True
             found_keyword_list.append(KEYWORDS[current_keyword])
     # at least one keyword was found, so create a new key value
@@ -114,7 +131,6 @@ def create_categories(publication: Dict[str, str]) -> None:
 def parse_conference_paper(publication: Dict[str, str]) -> None:
     """Parse a conference paper, noted because it uses a booktitle."""
     if publication.get("booktitle"):
-        # print("Found something!")
         # extract values from the current publication
         publication_id = publication["ID"]
         publication_year = publication["year"]
@@ -142,6 +158,11 @@ def parse_conference_paper(publication: Dict[str, str]) -> None:
         papers_directory.mkdir(parents=True, exist_ok=True)
         publication_file = Path(papers_directory / "index.qmd")
         publication_file.touch()
+        # handle author
+        publication_author = publication["author"]
+        publication_author = f"[{publication_author.replace('and', ',')}]"
+        publication["author"] = publication_author
+        console.print(publication_author)
         # dump the publication dictionary to a string and then patch up
         # the string so that the categories are formatted correctly
         publication_dump_string = yaml.dump(
