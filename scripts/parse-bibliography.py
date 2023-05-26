@@ -132,8 +132,6 @@ def create_categories(publication: Dict[str, str]) -> None:
         found_keyword_list.sort()
         # do not allow more than four entries for keywords
         delete_elements_beyond_max_size(found_keyword_list, MAX_KEYWORD_SIZE)
-        # console.print(publication_title)
-        # console.print(found_keyword_list)
         publication["categories"] = f"[{', '.join(found_keyword_list)}]"
 
 
