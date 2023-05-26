@@ -79,6 +79,14 @@ def write_file_if_changed(file_path: str, content: str) -> None:
 
 def delete_elements_beyond_max_size(provided_list: list, max_size: int) -> None:
     """Delete elements from a list beyond a maximum size."""
+    # extract the length of the list and then remove
+    # all of the elements in the list beyond the maximum size;
+    # note that, for now, this function is useful to ensure that
+    # none of the publications etc. have more than a max_size number
+    # of categories associated with them. It is also important to
+    # note that, for now, the assumption is that this function will
+    # always accept elements that are ordered according to some
+    # priority where the most "important" elements are earlier in the list 
     length_provided_list = len(provided_list)
     if length_provided_list > max_size:
         del provided_list[max_size:]
@@ -86,6 +94,9 @@ def delete_elements_beyond_max_size(provided_list: list, max_size: int) -> None:
 
 def string_found(search_string: str, containing_string: str) -> bool:
     """Determine if the first string is inside of the major string."""
+    # determine whether or not the containing_string contains the search_string,
+    # factoring in the fact that this will ignore spacing and other issues and
+    # ultimately be, most likely, more robust that using the "in" keyword
     if re.search(r"\b" + re.escape(search_string.lower()) + r"\b", containing_string.lower()):
         return True
     return False
