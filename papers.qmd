@@ -27,6 +27,6 @@ with open(bibliography_file, encoding="utf-8") as bibtex_file:
   research_papers = [d for d in bibliography.entries if 'booktitle' in d]
   papers_count = len(research_papers)
   console.print(
-      ":rocket: Wow, collaboratively publishing each of " +
+      ":rocket: Wow, collaboratively creating each of " +
       f"these {papers_count} papers was really fun!")
 ```
