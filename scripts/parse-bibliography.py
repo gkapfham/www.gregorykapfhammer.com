@@ -74,7 +74,6 @@ def write_file_if_changed(file_path: str, content: str) -> None:
                 return
     # Write the new content to the file
     with path.open(mode="w") as file:
-        # console.print(f"Needed to write for {file_path}")
         file.write(content)
 
 
