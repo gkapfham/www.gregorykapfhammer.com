@@ -137,7 +137,7 @@ def create_categories(publication: Dict[str, str]) -> None:
 
 def parse_journal_paper(publication: Dict[str, str]) -> None:
     """Parse a journal paper, noted because it features an attribut called a journal."""
-    console.print(publication)
+    # console.print(publication)
     if publication.get("journal") and not publication.get("keywords") == "edit":
         # extract values from the current publication
         publication_id = publication["ID"]
@@ -177,7 +177,9 @@ def parse_journal_paper(publication: Dict[str, str]) -> None:
         # cause the quarto system to use the label "authors" instead
         # of the singular label "author"
         publication_author = publication["author"]
-        publication_author = f"[{publication_author.replace('and', ',')}]"
+        # publication_author = f"[{publication_author.replace('and', ',')}]"
+        publication_author_no_and = re.sub('\band\b', ',', publication_author)
+        publication_author = f"[{publication_author_no_and}]"
         publication["author"] = publication_author
         # console.print(publication_author)
         # dump the publication dictionary to a string and then patch up
@@ -227,9 +229,13 @@ def parse_conference_paper(publication: Dict[str, str]) -> None:
         # of author names joined by the word "and"; this will then
         # cause the quarto system to use the label "authors" instead
         # of the singular label "author"
+        # publication_author = publication["author"]
+        # publication_author = f"[{publication_author.replace('and', ',')}]"
+        # publication["author"] = publication_author
         publication_author = publication["author"]
-        publication_author = f"[{publication_author.replace('and', ',')}]"
-        publication["author"] = publication_author
+        # publication_author = f"[{publication_author.replace('and', ',')}]"
+        publication_author_no_and = re.sub('\band\b', ',', publication_author)
+        publication_author = f"[{publication_author_no_and}]"
         # console.print(publication_author)
         # dump the publication dictionary to a string and then patch up
         # the string so that the categories are formatted correctly
