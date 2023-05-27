@@ -222,6 +222,11 @@ sidebar .quarto-alternate-notebooks ul li a,
   opacity: 1;
 }
 
+.quarto-title .quarto-categories .quarto-category:hover {
+  color: #ef6c00 !important;
+  text-decoration: none;
+}
+
 div.quarto-post .listing-categories .listing-category {
   padding: 0.25em 0.75em;
   font-size: 0.55em;
@@ -233,6 +238,11 @@ div.quarto-post .listing-categories .listing-category {
   cursor: pointer;
   margin-right: 4px;
   margin-bottom: 4px;
+}
+
+div.quarto-post .listing-categories .listing-category:hover {
+  color: #ef6c00 !important;
+  text-decoration: none;
 }
 
 #quarto-margin-sidebar .quarto-listing-category-title {
