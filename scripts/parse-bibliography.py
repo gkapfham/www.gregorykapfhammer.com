@@ -13,26 +13,31 @@ from rich.console import Console
 
 console = Console()
 
-MAX_KEYWORD_SIZE = 4
+MAX_KEYWORD_SIZE = 3
 
 KEYWORDS = {
     "adequacy criteria": "test coverage",
+    "database-aware": "database testing",
     "defect prediction": "defect prediction",
     "developer survey": "human study",
     "empirical": "empirical study",
     "empirically": "empirical study",
-    "Encyclopedia": "literature review",
+    "encyclopedia": "literature review",
     "experiment": "empirical study",
+    "execution cost": "performance analysis",
     "execution of regression": "test execution",
     "executing test": "test execution",
     "executing tests": "test execution",
+    "experimental study": "empirical study",
     "flaky": "flaky tests",
-    "generation": "test-data generation",
+    "handbook": "literature review",
     "genetic": "search-based methods",
     "human study": "human study",
     "invariant": "invariant detection",
     "JavaSpace": "performance analysis",
+    "kernel performance": "performance analysis",
     "localiz": "fault localization",
+    "machine learning": "machine learning",
     "memory overhead": "performance analysis",
     "mutation": "mutation testing",
     "prioritizing test suites": "test-suite prioritization",
@@ -40,7 +45,9 @@ KEYWORDS = {
     "prioritization": "test-suite prioritization",
     "relational database": "database testing",
     "repair": "program repair",
+    "response time": "performance analysis",
     "reduced test suite": "test-suite reduction",
+    "test generation": "test-data generation",
     "test reduction": "test-suite reduction",
     "test suite reduction": "test-suite reduction",
     "time complexity": "performance analysis",
@@ -48,11 +55,12 @@ KEYWORDS = {
     "schema": "database testing",
     "SchemaAnalyst": "database testing",
     "search": "search-based methods",
+    "survey of": "literature review",
     "SBST": "search-based methods",
-    "survey": "literature review",
     "test coverage": "test coverage",
     "time overhead": "performance analysis",
     "web page": "web testing",
+    "web pages": "web testing",
     "web site": "web testing",
     "unstructured": "performance analysis",
 }
@@ -86,7 +94,7 @@ def delete_elements_beyond_max_size(provided_list: list, max_size: int) -> None:
     # of categories associated with them. It is also important to
     # note that, for now, the assumption is that this function will
     # always accept elements that are ordered according to some
-    # priority where the most "important" elements are earlier in the list 
+    # priority where the most "important" elements are earlier in the list
     length_provided_list = len(provided_list)
     if length_provided_list > max_size:
         del provided_list[max_size:]
@@ -97,7 +105,9 @@ def string_found(search_string: str, containing_string: str) -> bool:
     # determine whether or not the containing_string contains the search_string,
     # factoring in the fact that this will ignore spacing and other issues and
     # ultimately be, most likely, more robust that using the "in" keyword
-    if re.search(r"\b" + re.escape(search_string.lower()) + r"\b", containing_string.lower()):
+    if re.search(
+        r"\b" + re.escape(search_string.lower()) + r"\b", containing_string.lower()
+    ):
         return True
     return False
 
@@ -114,7 +124,7 @@ def create_categories(publication: Dict[str, str]) -> None:
     # extract the title and the abstract
     publication_title = publication["title"]
     publication_abstract = publication["abstract"]
-    # publication_booktitle = publication["booktitle"]
+    publication_description = publication["description"]
     # designate whether or not anything has been found
     found_keyword = False
     found_keyword_list = []
@@ -125,7 +135,7 @@ def create_categories(publication: Dict[str, str]) -> None:
         if (
             string_found(current_keyword, publication_title)
             or string_found(current_keyword, publication_abstract)
-            # or string_found(current_keyword, publication_booktitle)
+            or string_found(current_keyword, publication_description)
         ):
             found_keyword = True
             found_keyword_list.append(KEYWORDS[current_keyword])
@@ -140,9 +150,14 @@ def create_categories(publication: Dict[str, str]) -> None:
         # do not allow more than four entries for keywords
         delete_elements_beyond_max_size(found_keyword_list, MAX_KEYWORD_SIZE)
         publication["categories"] = f"[{', '.join(found_keyword_list)}]"
+        console.print(publication_title)
+        console.print(found_keyword_list)
+        console.print()
 
 
-def write_publication_to_file(publication: Dict[str, str], publication_abstract, publication_id, publication_year):
+def write_publication_to_file(
+    publication: Dict[str, str], publication_abstract, publication_id, publication_year
+):
     """Write the details about a publication to the specified file."""
     # redefine the abstract so that there are no newlines in it
     publication_abstract = publication_abstract.replace("\n", " ")
@@ -179,9 +194,7 @@ def write_publication_to_file(publication: Dict[str, str], publication_abstract,
     publication_dump_string = publication_dump_string.replace("'[", "[")
     publication_dump_string = publication_dump_string.replace("]'", "]")
     # write the complete contents of the string to the designated file
-    write_file_if_changed(
-        str(publication_file), f"---\n{publication_dump_string}---"
-    )
+    write_file_if_changed(str(publication_file), f"---\n{publication_dump_string}---")
 
 
 def parse_journal_paper(publication: Dict[str, str]) -> None:
@@ -200,13 +213,17 @@ def parse_journal_paper(publication: Dict[str, str]) -> None:
             publication_volume = publication["volume"]
             publication_number = publication["number"]
             # define the description using the booktitle
-            publication["description"] = f"<em>{publication_journal}, {publication_volume}:{publication_number}</em>"
+            publication[
+                "description"
+            ] = f"<em>{publication_journal}, {publication_volume}:{publication_number}</em>"
         # there is no volume and/or number and thus the description
         # of this publication should only be the name of the journal
         else:
             publication["description"] = f"<em>{publication_journal}</em>"
         # write the publication to the file system
-        write_publication_to_file(publication, publication_abstract, publication_id, publication_year)
+        write_publication_to_file(
+            publication, publication_abstract, publication_id, publication_year
+        )
 
 
 def parse_conference_paper(publication: Dict[str, str]) -> None:
@@ -220,7 +237,9 @@ def parse_conference_paper(publication: Dict[str, str]) -> None:
         # define the description using the booktitle
         publication["description"] = f"<em>{publication_booktitle}</em>"
         # write the publication to the file systems
-        write_publication_to_file(publication, publication_abstract, publication_id, publication_year)
+        write_publication_to_file(
+            publication, publication_abstract, publication_id, publication_year
+        )
 
 
 if __name__ == "__main__":
