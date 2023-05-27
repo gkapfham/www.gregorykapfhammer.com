@@ -74,14 +74,14 @@ and [subscribing](support.qmd) to my mailing list.
 - [Web Testing](research.qmd#Details#Web Testing): Detecting and repairing
   responsive web page layout
 
-{{< fa rocket >}} <em>Explore</em> all of my areas of [research expertise](research.qmd)
+{{< fa rocket >}} <em>Explore</em> all of my areas of [research expertise](research/index.qmd)
 
 ## Featured Papers
 
 :::{#featured-papers}
 :::
 
-{{< fa rocket >}} <em>Read</em> all of my  [research papers](papers.qmd)
+{{< fa rocket >}} <em>Read</em> all of my  [research papers](research/papers/index.qmd)
 
 ## Recent Talks
 
