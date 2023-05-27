@@ -102,6 +102,13 @@ def string_found(search_string: str, containing_string: str) -> bool:
     return False
 
 
+def replace_word_in_string(string, old_word, new_word):
+    """Replace a word in a string while respecting string boundaries."""
+    pattern = r"\b" + re.escape(old_word) + r"\b"
+    replaced_string = re.sub(pattern, new_word, string)
+    return replaced_string
+
+
 def create_categories(publication: Dict[str, str]) -> None:
     """Add categories for a publication since none exist by default in the BiBTeX file."""
     # extract the title and the abstract
@@ -178,7 +185,8 @@ def parse_journal_paper(publication: Dict[str, str]) -> None:
         # of the singular label "author"
         publication_author = publication["author"]
         # publication_author = f"[{publication_author.replace('and', ',')}]"
-        publication_author_no_and = re.sub('\band\b', ',', publication_author)
+        # publication_author_no_and = re.sub('\band\b', ',', publication_author)
+        publication_author_no_and = replace_word_in_string(publication_author, "and", ",")
         publication_author = f"[{publication_author_no_and}]"
         publication["author"] = publication_author
         # console.print(publication_author)
@@ -234,8 +242,11 @@ def parse_conference_paper(publication: Dict[str, str]) -> None:
         # publication["author"] = publication_author
         publication_author = publication["author"]
         # publication_author = f"[{publication_author.replace('and', ',')}]"
-        publication_author_no_and = re.sub('\band\b', ',', publication_author)
+        # publication_author_no_and = replace_word_in_string(publication_author, "and", ",")
+        publication_author_no_and = replace_word_in_string(publication_author, "and", ",")
         publication_author = f"[{publication_author_no_and}]"
+        publication["author"] = publication_author
+        console.print(publication_author)
         # console.print(publication_author)
         # dump the publication dictionary to a string and then patch up
         # the string so that the categories are formatted correctly
