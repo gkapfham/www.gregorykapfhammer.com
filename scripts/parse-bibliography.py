@@ -20,6 +20,7 @@ KEYWORDS = {
     "database-aware": "database testing",
     "defect prediction": "defect prediction",
     "developer survey": "human study",
+    "demonstrations track": "software tool",
     "empirical": "empirical study",
     "empirically": "empirical study",
     "encyclopedia": "literature review",
