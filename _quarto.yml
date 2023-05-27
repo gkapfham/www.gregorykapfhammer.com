@@ -36,12 +36,11 @@ website:
       - text: "Reseach"
         menu:
           - text: "Overview"
-            href: research.qmd
+            href: research/index.qmd
           - text: "Papers"
-            href: papers.qmd
+            href: research/papers/index.qmd
           - text: "Talks"
             href: presentations.qmd
-      - research.qmd
   page-footer:
     left: "Gregory M. Kapfhammer, [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)"
     center: '<a href="#">Top {{< fa circle-up >}}</a>'
