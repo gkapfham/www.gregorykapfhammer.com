@@ -137,3 +137,8 @@ download
 site_libs/
 presentations
 _freeze
+
+### Quarto: ignore generated files in research/papers/  ###
+### created by a Python script; keep the index.qmd file ###
+research/papers/*/
+!research/papers/index.qmd
