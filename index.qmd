@@ -42,10 +42,10 @@ console.print(
 # Gregory M. Kapfhammer
 
 Innovating in technical areas such as software engineering and software testing,
-I teach [courses](teaching.qmd), conduct [research](research.qmd), write
-[papers](papers.qmd) and a [blog](blog.qmd), give
-[presentations](presentations.qmd), create [software](software.qmd), and
-[serve](service.qmd) organizations. Working as an Associate Professor in the
+I teach [courses](teaching/index.qmd), conduct [research](research/index.qmd), write
+[papers](research/papers/index.qmd) and a [blog](blog/index.qmd), give
+[presentations](research/presentations/index.qmd), create [software](software/index.qmd), and
+[serve](service/index.qmd) organizations. Working as an Associate Professor in the
 [Department of Computer Science](http://www.cs.allegheny.edu) at [Allegheny
 College](http://www.allegheny.edu), I am an associate editor for the [Journal of
 Software: Evolution and
@@ -58,20 +58,20 @@ Conference on Automated Software
 Engineering](https://conf.researchr.org/series/ase), and a reviewer for journals
 like [Transactions on Software
 Engineering](https://www.computer.org/csdl/journal/ts). You can learn more about
-me and my work by reading my [biography](biography.qmd), downloading my
+me and my work by reading my [biography](biography/index.qmd), downloading my
 [curriculum
 vitae](https://github.com/gkapfham/curriculum-vitae/releases/download/v1.3.2/curriculum_vitae_kapfhammer.pdf),
-and [subscribing](support.qmd) to my mailing list.
+and [subscribing](support/index.qmd) to my mailing list.
 
 ## Research Expertise
 
-- [Flaky Tests](research.qmd#Details#Flaky Tests): Find and fix unpredictable
+- [Flaky Tests](research/index.qmd#Details#Flaky Tests): Find and fix unpredictable
   and harmful test cases
 
-- [Database Testing](research.qmd#Details#Database Testing): Automatically
+- [Database Testing](research/index.qmd#Details#Database Testing): Automatically
   test relational database schemas
 
-- [Web Testing](research.qmd#Details#Web Testing): Detecting and repairing
+- [Web Testing](research/index.qmd#Details#Web Testing): Detecting and repairing
   responsive web page layout
 
 {{< fa rocket >}} <em>Explore</em> all of my areas of [research expertise](research/index.qmd)
@@ -103,7 +103,7 @@ and [subscribing](support.qmd) to my mailing list.
 
 - [Operating Systems](https://www.os-sketch.com/): Build and understand operating system components
 
-{{< fa rocket >}} <em>Explore</em> all of my areas of [teaching materials](teaching.qmd)
+{{< fa rocket >}} <em>Explore</em> all of my areas of [teaching materials](teaching/index.qmd)
 
 ## Status Updates
 

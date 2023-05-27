@@ -14,7 +14,7 @@ from rich.console import Console
 
 console = Console()
 
-RETURN_TO_PAPER_LISTING = "<a href='research/papers/'> {{< fa circle-left >}} Return to Paper Listing</a>"
+RETURN_TO_PAPER_LISTING = "{{< fa circle-left >}} <a href='/research/papers/'>Return to Paper Listing</a>"
 
 MAX_KEYWORD_SIZE = 3
 
