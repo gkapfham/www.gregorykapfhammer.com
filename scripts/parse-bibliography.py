@@ -184,12 +184,9 @@ def parse_journal_paper(publication: Dict[str, str]) -> None:
         # cause the quarto system to use the label "authors" instead
         # of the singular label "author"
         publication_author = publication["author"]
-        # publication_author = f"[{publication_author.replace('and', ',')}]"
-        # publication_author_no_and = re.sub('\band\b', ',', publication_author)
         publication_author_no_and = replace_word_in_string(publication_author, "and", ",")
         publication_author = f"[{publication_author_no_and}]"
         publication["author"] = publication_author
-        # console.print(publication_author)
         # dump the publication dictionary to a string and then patch up
         # the string so that the categories are formatted correctly
         publication_dump_string = yaml.dump(
@@ -237,12 +234,7 @@ def parse_conference_paper(publication: Dict[str, str]) -> None:
         # of author names joined by the word "and"; this will then
         # cause the quarto system to use the label "authors" instead
         # of the singular label "author"
-        # publication_author = publication["author"]
-        # publication_author = f"[{publication_author.replace('and', ',')}]"
-        # publication["author"] = publication_author
         publication_author = publication["author"]
-        # publication_author = f"[{publication_author.replace('and', ',')}]"
-        # publication_author_no_and = replace_word_in_string(publication_author, "and", ",")
         publication_author_no_and = replace_word_in_string(publication_author, "and", ",")
         publication_author = f"[{publication_author_no_and}]"
         publication["author"] = publication_author
