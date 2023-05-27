@@ -12,7 +12,7 @@ listing:
   date-format: "YYYY"
   sort-ui: true
   filter-ui: true
-  fields: [title, author, date, description]
+  fields: [title, author, date, description, categories]
 execute:
   freeze: auto
 ---
