@@ -107,7 +107,7 @@ def create_categories(publication: Dict[str, str]) -> None:
     # extract the title and the abstract
     publication_title = publication["title"]
     publication_abstract = publication["abstract"]
-    publication_booktitle = publication["booktitle"]
+    # publication_booktitle = publication["booktitle"]
     # designate whether or not anything has been found
     found_keyword = False
     found_keyword_list = []
@@ -118,7 +118,7 @@ def create_categories(publication: Dict[str, str]) -> None:
         if (
             string_found(current_keyword, publication_title)
             or string_found(current_keyword, publication_abstract)
-            or string_found(current_keyword, publication_booktitle)
+            # or string_found(current_keyword, publication_booktitle)
         ):
             found_keyword = True
             found_keyword_list.append(KEYWORDS[current_keyword])
@@ -133,6 +133,64 @@ def create_categories(publication: Dict[str, str]) -> None:
         # do not allow more than four entries for keywords
         delete_elements_beyond_max_size(found_keyword_list, MAX_KEYWORD_SIZE)
         publication["categories"] = f"[{', '.join(found_keyword_list)}]"
+
+
+def parse_journal_paper(publication: Dict[str, str]) -> None:
+    """Parse a journal paper, noted because it features an attribut called a journal."""
+    console.print(publication)
+    if publication.get("journal") and not publication.get("keywords") == "edit":
+        # extract values from the current publication
+        publication_id = publication["ID"]
+        publication_year = publication["year"]
+        publication_abstract = publication["abstract"]
+        publication_journal = publication["journal"]
+        del publication["journal"]
+        if publication.get("volume") and publication.get("number"):
+            publication_volume = publication["volume"]
+            publication_number = publication["number"]
+            # define the description using the booktitle
+            publication["description"] = f"<em>{publication_journal}, {publication_volume}:{publication_number}</em>"
+        else:
+            # define the description using the booktitle
+            publication["description"] = f"<em>{publication_journal}</em>"
+        # redefine the abstract so that there are no newlines in it
+        publication_abstract = publication_abstract.replace("\n", " ")
+        publication["abstract"] = publication_abstract
+        # define the date so that it is a string in YYYY-MM-DD format;
+        # note that this sets up the date so that the MM and the DD
+        # will be ignored later as conference papers do not need MM or DD
+        publication_year = publication["year"]
+        del publication["year"]
+        publication["date"] = f"{publication_year}-01-01"
+        # define the date-format to only display the year
+        only_year = "YYYY"
+        publication["date-format"] = f"{only_year}"
+        # create the categories
+        create_categories(publication)
+        # create the file for this paper in the papers directory
+        papers_directory = Path(f"papers/{publication_year}-{publication_id}/")
+        papers_directory.mkdir(parents=True, exist_ok=True)
+        publication_file = Path(papers_directory / "index.qmd")
+        publication_file.touch()
+        # create a list of the authors instead of using a string
+        # of author names joined by the word "and"; this will then
+        # cause the quarto system to use the label "authors" instead
+        # of the singular label "author"
+        publication_author = publication["author"]
+        publication_author = f"[{publication_author.replace('and', ',')}]"
+        publication["author"] = publication_author
+        # console.print(publication_author)
+        # dump the publication dictionary to a string and then patch up
+        # the string so that the categories are formatted correctly
+        publication_dump_string = yaml.dump(
+            publication, allow_unicode=True, default_flow_style=False
+        )
+        publication_dump_string = publication_dump_string.replace("'[", "[")
+        publication_dump_string = publication_dump_string.replace("]'", "]")
+        # write the complete contents of the string to the designated file
+        write_file_if_changed(
+            str(publication_file), f"---\n{publication_dump_string}---"
+        )
 
 
 def parse_conference_paper(publication: Dict[str, str]) -> None:
@@ -223,4 +281,5 @@ if __name__ == "__main__":
     # process all of the entries by create the directories and files for the conference papers
     for publication in bibliography.entries:
         parse_conference_paper(publication)
+        parse_journal_paper(publication)
     console.print()
