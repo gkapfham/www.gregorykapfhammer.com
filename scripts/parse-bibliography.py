@@ -142,6 +142,48 @@ def create_categories(publication: Dict[str, str]) -> None:
         publication["categories"] = f"[{', '.join(found_keyword_list)}]"
 
 
+def write_publication_to_file(publication: Dict[str, str], publication_abstract, publication_id, publication_year):
+    """Write the details about a publication to the specified file."""
+    # redefine the abstract so that there are no newlines in it
+    publication_abstract = publication_abstract.replace("\n", " ")
+    publication["abstract"] = publication_abstract
+    # define the date so that it is a string in YYYY-MM-DD format;
+    # note that this sets up the date so that the MM and the DD
+    # will be ignored later as conference papers do not need MM or DD
+    publication_year = publication["year"]
+    del publication["year"]
+    publication["date"] = f"{publication_year}-01-01"
+    # define the date-format to only display the year
+    only_year = "YYYY"
+    publication["date-format"] = f"{only_year}"
+    # create the categories
+    create_categories(publication)
+    # create the file for this paper in the papers directory
+    papers_directory = Path(f"papers/{publication_year}-{publication_id}/")
+    papers_directory.mkdir(parents=True, exist_ok=True)
+    publication_file = Path(papers_directory / "index.qmd")
+    publication_file.touch()
+    # create a list of the authors instead of using a string
+    # of author names joined by the word "and"; this will then
+    # cause the quarto system to use the label "authors" instead
+    # of the singular label "author"
+    publication_author = publication["author"]
+    publication_author_no_and = replace_word_in_string(publication_author, "and", ",")
+    publication_author = f"[{publication_author_no_and}]"
+    publication["author"] = publication_author
+    # dump the publication dictionary to a string and then patch up
+    # the string so that the categories are formatted correctly
+    publication_dump_string = yaml.dump(
+        publication, allow_unicode=True, default_flow_style=False
+    )
+    publication_dump_string = publication_dump_string.replace("'[", "[")
+    publication_dump_string = publication_dump_string.replace("]'", "]")
+    # write the complete contents of the string to the designated file
+    write_file_if_changed(
+        str(publication_file), f"---\n{publication_dump_string}---"
+    )
+
+
 def parse_journal_paper(publication: Dict[str, str]) -> None:
     """Parse a journal paper, noted because it features an attribut called a journal."""
     # dealing with a journal publication that is not one of the edited volumes
@@ -163,44 +205,7 @@ def parse_journal_paper(publication: Dict[str, str]) -> None:
         # of this publication should only be the name of the journal
         else:
             publication["description"] = f"<em>{publication_journal}</em>"
-        # redefine the abstract so that there are no newlines in it
-        publication_abstract = publication_abstract.replace("\n", " ")
-        publication["abstract"] = publication_abstract
-        # define the date so that it is a string in YYYY-MM-DD format;
-        # note that this sets up the date so that the MM and the DD
-        # will be ignored later as conference papers do not need MM or DD
-        publication_year = publication["year"]
-        del publication["year"]
-        publication["date"] = f"{publication_year}-01-01"
-        # define the date-format to only display the year
-        only_year = "YYYY"
-        publication["date-format"] = f"{only_year}"
-        # create the categories
-        create_categories(publication)
-        # create the file for this paper in the papers directory
-        papers_directory = Path(f"papers/{publication_year}-{publication_id}/")
-        papers_directory.mkdir(parents=True, exist_ok=True)
-        publication_file = Path(papers_directory / "index.qmd")
-        publication_file.touch()
-        # create a list of the authors instead of using a string
-        # of author names joined by the word "and"; this will then
-        # cause the quarto system to use the label "authors" instead
-        # of the singular label "author"
-        publication_author = publication["author"]
-        publication_author_no_and = replace_word_in_string(publication_author, "and", ",")
-        publication_author = f"[{publication_author_no_and}]"
-        publication["author"] = publication_author
-        # dump the publication dictionary to a string and then patch up
-        # the string so that the categories are formatted correctly
-        publication_dump_string = yaml.dump(
-            publication, allow_unicode=True, default_flow_style=False
-        )
-        publication_dump_string = publication_dump_string.replace("'[", "[")
-        publication_dump_string = publication_dump_string.replace("]'", "]")
-        # write the complete contents of the string to the designated file
-        write_file_if_changed(
-            str(publication_file), f"---\n{publication_dump_string}---"
-        )
+        write_publication_to_file(publication, publication_abstract, publication_id, publication_year)
 
 
 def parse_conference_paper(publication: Dict[str, str]) -> None:
@@ -214,46 +219,48 @@ def parse_conference_paper(publication: Dict[str, str]) -> None:
         # console.print(publication_id)
         # define the description using the booktitle
         publication["description"] = f"<em>{publication_booktitle}</em>"
-        # redefine the abstract so that there are no newlines in it
-        publication_abstract = publication_abstract.replace("\n", " ")
-        publication["abstract"] = publication_abstract
-        # define the date so that it is a string in YYYY-MM-DD format;
-        # note that this sets up the date so that the MM and the DD
-        # will be ignored later as conference papers do not need MM or DD
-        publication_year = publication["year"]
-        del publication["year"]
-        publication["date"] = f"{publication_year}-01-01"
-        # define the date-format to only display the year
-        only_year = "YYYY"
-        publication["date-format"] = f"{only_year}"
-        # create the categories
-        create_categories(publication)
-        # create the file for this paper in the papers directory
-        papers_directory = Path(f"papers/{publication_year}-{publication_id}/")
-        papers_directory.mkdir(parents=True, exist_ok=True)
-        publication_file = Path(papers_directory / "index.qmd")
-        publication_file.touch()
-        # create a list of the authors instead of using a string
-        # of author names joined by the word "and"; this will then
-        # cause the quarto system to use the label "authors" instead
-        # of the singular label "author"
-        publication_author = publication["author"]
-        publication_author_no_and = replace_word_in_string(publication_author, "and", ",")
-        publication_author = f"[{publication_author_no_and}]"
-        publication["author"] = publication_author
-        console.print(publication_author)
+        write_publication_to_file(publication, publication_abstract, publication_id, publication_year)
+
+        # # redefine the abstract so that there are no newlines in it
+        # publication_abstract = publication_abstract.replace("\n", " ")
+        # publication["abstract"] = publication_abstract
+        # # define the date so that it is a string in YYYY-MM-DD format;
+        # # note that this sets up the date so that the MM and the DD
+        # # will be ignored later as conference papers do not need MM or DD
+        # publication_year = publication["year"]
+        # del publication["year"]
+        # publication["date"] = f"{publication_year}-01-01"
+        # # define the date-format to only display the year
+        # only_year = "YYYY"
+        # publication["date-format"] = f"{only_year}"
+        # # create the categories
+        # create_categories(publication)
+        # # create the file for this paper in the papers directory
+        # papers_directory = Path(f"papers/{publication_year}-{publication_id}/")
+        # papers_directory.mkdir(parents=True, exist_ok=True)
+        # publication_file = Path(papers_directory / "index.qmd")
+        # publication_file.touch()
+        # # create a list of the authors instead of using a string
+        # # of author names joined by the word "and"; this will then
+        # # cause the quarto system to use the label "authors" instead
+        # # of the singular label "author"
+        # publication_author = publication["author"]
+        # publication_author_no_and = replace_word_in_string(publication_author, "and", ",")
+        # publication_author = f"[{publication_author_no_and}]"
+        # publication["author"] = publication_author
         # console.print(publication_author)
-        # dump the publication dictionary to a string and then patch up
-        # the string so that the categories are formatted correctly
-        publication_dump_string = yaml.dump(
-            publication, allow_unicode=True, default_flow_style=False
-        )
-        publication_dump_string = publication_dump_string.replace("'[", "[")
-        publication_dump_string = publication_dump_string.replace("]'", "]")
-        # write the complete contents of the string to the designated file
-        write_file_if_changed(
-            str(publication_file), f"---\n{publication_dump_string}---"
-        )
+        # # console.print(publication_author)
+        # # dump the publication dictionary to a string and then patch up
+        # # the string so that the categories are formatted correctly
+        # publication_dump_string = yaml.dump(
+        #     publication, allow_unicode=True, default_flow_style=False
+        # )
+        # publication_dump_string = publication_dump_string.replace("'[", "[")
+        # publication_dump_string = publication_dump_string.replace("]'", "]")
+        # # write the complete contents of the string to the designated file
+        # write_file_if_changed(
+        #     str(publication_file), f"---\n{publication_dump_string}---"
+        # )
 
 
 if __name__ == "__main__":
