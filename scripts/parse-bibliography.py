@@ -205,6 +205,7 @@ def parse_journal_paper(publication: Dict[str, str]) -> None:
         # of this publication should only be the name of the journal
         else:
             publication["description"] = f"<em>{publication_journal}</em>"
+        # write the publication to the file system
         write_publication_to_file(publication, publication_abstract, publication_id, publication_year)
 
 
@@ -216,9 +217,9 @@ def parse_conference_paper(publication: Dict[str, str]) -> None:
         publication_year = publication["year"]
         publication_abstract = publication["abstract"]
         publication_booktitle = publication["booktitle"]
-        # console.print(publication_id)
         # define the description using the booktitle
         publication["description"] = f"<em>{publication_booktitle}</em>"
+        # write the publication to the file systems
         write_publication_to_file(publication, publication_abstract, publication_id, publication_year)
 
 
