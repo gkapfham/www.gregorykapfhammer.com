@@ -2,6 +2,7 @@
 
 import argparse
 import hashlib
+import os
 import re
 import shutil
 from pathlib import Path
@@ -12,6 +13,8 @@ import yaml
 from rich.console import Console
 
 console = Console()
+
+RETURN_TO_PAPER_LISTING = "<a href='research/papers/'> {{< fa circle-left >}} Return to Paper Listing</a>"
 
 MAX_KEYWORD_SIZE = 3
 
@@ -156,6 +159,11 @@ def create_categories(publication: Dict[str, str]) -> None:
         console.print()
 
 
+def create_publication_footer(publication: Dict[str, str]) -> str:
+    """Create a footer for the publications that includes all of the remaining links."""
+    return RETURN_TO_PAPER_LISTING
+
+
 def write_publication_to_file(
     publication: Dict[str, str], publication_abstract, publication_id, publication_year
 ):
@@ -175,7 +183,7 @@ def write_publication_to_file(
     # create the categories
     create_categories(publication)
     # create the file for this paper in the papers directory
-    papers_directory = Path(f"papers/{publication_year}-{publication_id}/")
+    papers_directory = Path(f"research/papers/{publication_id}/")
     papers_directory.mkdir(parents=True, exist_ok=True)
     publication_file = Path(papers_directory / "index.qmd")
     publication_file.touch()
@@ -195,7 +203,19 @@ def write_publication_to_file(
     publication_dump_string = publication_dump_string.replace("'[", "[")
     publication_dump_string = publication_dump_string.replace("]'", "]")
     # write the complete contents of the string to the designated file
-    write_file_if_changed(str(publication_file), f"---\n{publication_dump_string}---")
+    write_file_if_changed(
+        str(publication_file),
+        f"---\n{publication_dump_string}---\n\n{create_publication_footer(publication)}",
+    )
+
+
+def delete_subdirectories_preserve_files(directory:str) -> None:
+    """Delete all sub-directories below the specified directory."""
+    for root, dirs, _ in os.walk(directory, topdown=False):
+        for name in dirs:
+            path = os.path.join(root, name)
+            if os.path.isdir(path):
+                shutil.rmtree(path)
 
 
 def parse_journal_paper(publication: Dict[str, str]) -> None:
@@ -268,11 +288,11 @@ if __name__ == "__main__":
         bibliography = bibtexparser.load(bibtex_file)
     # delete the papers directory if exists;
     # if it does not exist, then create it
-    papers_directory = Path("papers/")
+    papers_directory = Path("research/papers/")
     if papers_directory.exists() and args.delete:
-        console.print(":boom: Deleting the papers directory due to --delete\n")
-        shutil.rmtree(papers_directory)
-
+        console.print(":boom: Deleting the subdirectories in the research/papers/ directory due to --delete\n")
+        # shutil.rmtree(papers_directory)
+        delete_subdirectories_preserve_files(str(papers_directory))
     papers_directory.mkdir(exist_ok=True)
     console.print(
         f":abacus: Found a total of {len(bibliography.entries)} bibliography entries"
