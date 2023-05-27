@@ -135,6 +135,5 @@ download
 .quarto
 /.quarto/
 site_libs/
-papers
 presentations
 _freeze
