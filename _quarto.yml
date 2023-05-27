@@ -28,7 +28,7 @@ website:
       - text: "Teaching"
         menu:
           - text: "Overview"
-            href: teaching.qmd
+            href: "teaching/index.qmd"
           - text: "Data Abstraction"
             href: "https://www.proactiveprogrammers.com"
           - text: "Discrete Structures"
