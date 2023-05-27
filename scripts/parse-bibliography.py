@@ -144,7 +144,7 @@ def create_categories(publication: Dict[str, str]) -> None:
 
 def parse_journal_paper(publication: Dict[str, str]) -> None:
     """Parse a journal paper, noted because it features an attribut called a journal."""
-    # console.print(publication)
+    # dealing with a journal publication that is not one of the edited volumes
     if publication.get("journal") and not publication.get("keywords") == "edit":
         # extract values from the current publication
         publication_id = publication["ID"]
