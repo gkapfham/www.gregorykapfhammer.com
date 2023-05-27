@@ -291,7 +291,6 @@ if __name__ == "__main__":
     papers_directory = Path("research/papers/")
     if papers_directory.exists() and args.delete:
         console.print(":boom: Deleting the subdirectories in the research/papers/ directory due to --delete\n")
-        # shutil.rmtree(papers_directory)
         delete_subdirectories_preserve_files(str(papers_directory))
     papers_directory.mkdir(exist_ok=True)
     console.print(
