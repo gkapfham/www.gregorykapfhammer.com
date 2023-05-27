@@ -14,15 +14,17 @@ format:
       file: js/mastodon-timeline.js
 listing:
   - id: featured-papers
-    contents: papers
+    contents:
+      - "research/papers/**"
+      - "!research/papers/index.qmd"
     sort:
       - "date desc"
-      - "author title"
-    type: table
+      - "author title categories"
+    type: default
     date-format: "YYYY"
     sort-ui: false
     filter-ui: false
-    fields: [title, description]
+    fields: [author, title, description, categories]
     max-items: 3
     page-size: 3
 execute:
