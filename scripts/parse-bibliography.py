@@ -286,18 +286,23 @@ if __name__ == "__main__":
     # open up the BiBTeX file and parse it
     with open(bib_database_file_name, encoding="utf-8") as bibtex_file:
         bibliography = bibtexparser.load(bibtex_file)
-    # delete the papers directory if exists;
-    # if it does not exist, then create it
+    # delete the research/papers directory if exists;
+    # make sure not to delete any of the files inside of this
+    # directory as those could be an index.qmd file with content
     papers_directory = Path("research/papers/")
     if papers_directory.exists() and args.delete:
         console.print(":boom: Deleting the subdirectories in the research/papers/ directory due to --delete\n")
         delete_subdirectories_preserve_files(str(papers_directory))
+    # if the directory does not exist, then create it;
+    # this will not fail even if the directory exists, which it should
     papers_directory.mkdir(exist_ok=True)
     console.print(
         f":abacus: Found a total of {len(bibliography.entries)} bibliography entries"
     )
-    # process all of the entries by create the directories and files for the conference papers
+    # process all of the entries by create the directories and files
     for publication in bibliography.entries:
+        # --> for the conference papers
         parse_conference_paper(publication)
+        # --> for the journal papers
         parse_journal_paper(publication)
     console.print()
