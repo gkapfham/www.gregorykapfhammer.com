@@ -14,7 +14,18 @@ from rich.console import Console
 
 console = Console()
 
-RETURN_TO_PAPER_LISTING = "{{< fa circle-left >}} <a href='/research/papers/'>Return to Paper Listing</a>"
+DASH = "-"
+NEWLINE = "\n"
+BREAK = "<br>"
+
+RETURN_TO_PAPER_LISTING = (
+    "{{< fa circle-left >}} <a href='/research/papers/'>Return to Paper Listing</a>"
+)
+DOWNLOAD_PUBLICATION_STARTER = "{{< fa file-pdf >}}"
+
+
+PAPER_PDF = "paper.pdf"
+PRESENTATION_PDF = "presentation.pdf"
 
 MAX_KEYWORD_SIZE = 3
 
@@ -161,7 +172,21 @@ def create_categories(publication: Dict[str, str]) -> None:
 
 def create_publication_footer(publication: Dict[str, str]) -> str:
     """Create a footer for the publications that includes all of the remaining links."""
-    return RETURN_TO_PAPER_LISTING
+    # extract the identifier for this paper as this is
+    # what connects to the name of the files for this paper
+    publication_id = publication["ID"]
+    download_paper = f"{DOWNLOAD_PUBLICATION_STARTER} <a href='/research/papers/key/{publication_id}{DASH}{PAPER_PDF}'>Paper</a>"
+    download_presentation = f"{DOWNLOAD_PUBLICATION_STARTER} <a href='/research/presentations/key/{publication_id}{DASH}{PRESENTATION_PDF}'>Presentation</a>"
+    return (
+        download_paper
+        + NEWLINE
+        + BREAK
+        + download_presentation
+        + NEWLINE
+        + BREAK
+        + BREAK
+        + RETURN_TO_PAPER_LISTING
+    )
 
 
 def write_publication_to_file(
@@ -209,7 +234,7 @@ def write_publication_to_file(
     )
 
 
-def delete_subdirectories_preserve_files(directory:str) -> None:
+def delete_subdirectories_preserve_files(directory: str) -> None:
     """Delete all sub-directories below the specified directory."""
     for root, dirs, _ in os.walk(directory, topdown=False):
         for name in dirs:
@@ -291,7 +316,9 @@ if __name__ == "__main__":
     # directory as those could be an index.qmd file with content
     papers_directory = Path("research/papers/")
     if papers_directory.exists() and args.delete:
-        console.print(":boom: Deleting the subdirectories in the research/papers/ directory due to --delete\n")
+        console.print(
+            ":boom: Deleting the subdirectories in the research/papers/ directory due to --delete\n"
+        )
         delete_subdirectories_preserve_files(str(papers_directory))
     # if the directory does not exist, then create it;
     # this will not fail even if the directory exists, which it should
