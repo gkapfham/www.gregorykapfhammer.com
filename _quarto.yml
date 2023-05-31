@@ -80,7 +80,7 @@ format:
     code-tools: true
     highlight-style: gruvbox
     email-obfuscation: javascript
-    smooth-scroll: false
+    smooth-scroll: true
     link-external-icon: true
     link-external-newwindow: true
     citations-hover: true
