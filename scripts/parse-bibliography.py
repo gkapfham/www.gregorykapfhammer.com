@@ -14,14 +14,17 @@ from rich.console import Console
 
 console = Console()
 
-DASH = "-"
-NEWLINE = "\n"
 BREAK = "<br>"
+DASH = "-"
+EMPTY = ""
+NEWLINE = "\n"
 
 RETURN_TO_PAPER_LISTING = (
     "{{< fa circle-left >}} <a href='/research/papers/'>Return to Paper Listing</a>"
 )
+
 DOWNLOAD_PUBLICATION_STARTER = "{{< fa file-pdf >}}"
+DOWNLOAD_SPEAKERDECK_STARTER = "{{< fa speaker-deck >}}"
 
 
 PAPER_PDF = "paper.pdf"
@@ -172,21 +175,27 @@ def create_categories(publication: Dict[str, str]) -> None:
 
 def create_publication_footer(publication: Dict[str, str]) -> str:
     """Create a footer for the publications that includes all of the remaining links."""
-    # extract the identifier for this paper as this is
-    # what connects to the name of the files for this paper
-    publication_id = publication["ID"]
-    download_paper = f"{DOWNLOAD_PUBLICATION_STARTER} <a href='/research/papers/key/{publication_id}{DASH}{PAPER_PDF}'>Paper</a>"
-    download_presentation = f"{DOWNLOAD_PUBLICATION_STARTER} <a href='/research/presentations/key/{publication_id}{DASH}{PRESENTATION_PDF}'>Presentation</a>"
-    return (
-        download_paper
-        + NEWLINE
-        + BREAK
-        + download_presentation
-        + NEWLINE
-        + BREAK
-        + BREAK
-        + RETURN_TO_PAPER_LISTING
-    )
+    # only display download details about the paper
+    # if they are available for this specific publication
+    if "nodownload" not in publication.keys():
+        # extract the identifier for this paper as this is
+        # what connects to the name of the files for this paper
+        publication_id = publication["ID"]
+        download_paper = f"{DOWNLOAD_PUBLICATION_STARTER} <a href='/research/papers/key/{publication_id}{DASH}{PAPER_PDF}'>Paper</a>"
+        download_presentation = f"{DOWNLOAD_PUBLICATION_STARTER} <a href='/research/presentations/key/{publication_id}{DASH}{PRESENTATION_PDF}'>Presentation</a>"
+        return (
+            download_paper
+            + NEWLINE
+            + BREAK
+            + download_presentation
+            + NEWLINE
+            + BREAK
+            + BREAK
+            + RETURN_TO_PAPER_LISTING
+        )
+    # return an empty string for the download information
+    # because none is provided for this publication
+    return EMPTY
 
 
 def write_publication_to_file(
