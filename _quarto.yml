@@ -80,7 +80,10 @@ format:
     code-tools: true
     highlight-style: gruvbox
     email-obfuscation: javascript
-    smooth-scroll: true
+    # note: needs to be false so as to
+    # ensure that the back to top button
+    # in the footer of the page works correctly
+    smooth-scroll: false
     link-external-icon: true
     link-external-newwindow: true
     citations-hover: true
