@@ -36,6 +36,8 @@ DOWNLOAD_GITHUB_STARTER = "{{< fa brands github >}}"
 PAPER_PDF = "paper.pdf"
 PRESENTATION_PDF = "presentation.pdf"
 
+PAGE_FULL_ATTRIBUTE = "page-layout: full"
+
 MAX_KEYWORD_SIZE = 3
 
 KEYWORDS = {
@@ -184,7 +186,8 @@ def create_publication_footer(publication: Dict[str, str]) -> str:
     # only display download details about the paper
     # if they are available for this specific publication
     if "nodownload" not in publication.keys():
-        # create the details header
+        # create the details header that will contain
+        # the links to different resources for this publication
         details_header = "<div class='quarto-title-details-heading'>Details</div>"
         # extract the identifier for this paper as this is
         # what connects to the name of the files for this paper
@@ -308,7 +311,7 @@ def write_publication_to_file(
     # write the complete contents of the string to the designated file
     write_file_if_changed(
         str(publication_file),
-        f"---\n{publication_dump_string}---\n\n{create_publication_footer(publication)}",
+        f"---\n{PAGE_FULL_ATTRIBUTE}\n{publication_dump_string}---\n\n{create_publication_footer(publication)}",
     )
 
 
