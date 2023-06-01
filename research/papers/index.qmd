@@ -22,14 +22,8 @@ execute:
 
 ```{python}
 from rich.console import Console
-import bibtexparser
 console = Console()
-bibliography_file = "../../bibliography/bibtex/bibliography_kapfhammer.bib"
-with open(bibliography_file, encoding="utf-8") as bibtex_file:
-  bibliography = bibtexparser.load(bibtex_file)
-  research_papers = [d for d in bibliography.entries if 'booktitle' in d]
-  papers_count = len(research_papers)
-  console.print(
-      ":rocket: Wow, collaboratively creating each of " +
-      f"these {papers_count} papers was really fun!")
+console.print(
+    f":rocket: Collaboratively crafting these papers was so much fun!"
+)
 ```
