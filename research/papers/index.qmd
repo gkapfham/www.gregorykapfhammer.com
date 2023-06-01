@@ -4,7 +4,7 @@ toc: true
 page-layout: full
 listing:
   contents:
-    - "../../research/papers/**"
+    - "../../research/papers/**/*.qmd"
     - "!../../research/papers/index.qmd"
     - "!../../research/presentations/index.qmd"
   sort:
