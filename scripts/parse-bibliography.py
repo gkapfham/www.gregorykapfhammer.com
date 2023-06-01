@@ -176,9 +176,9 @@ def create_categories(publication: Dict[str, str]) -> None:
         # do not allow more than four entries for keywords
         delete_elements_beyond_max_size(found_keyword_list, MAX_KEYWORD_SIZE)
         publication["categories"] = f"[{', '.join(found_keyword_list)}]"
-        console.print(publication_title)
-        console.print(found_keyword_list)
-        console.print()
+        # console.print(publication_title)
+        # console.print(found_keyword_list)
+        # console.print()
 
 
 def create_publication_footer(publication: Dict[str, str]) -> str:
@@ -327,7 +327,7 @@ def delete_subdirectories_preserve_files(directory: str) -> None:
                 shutil.rmtree(path)
 
 
-def parse_journal_paper(publication: Dict[str, str]) -> None:
+def parse_journal_paper(publication: Dict[str, str]) -> bool:
     """Parse a journal paper, noted because it features an attribut called a journal."""
     # dealing with a journal publication that is not one of the edited volumes
     if publication.get("journal") and not publication.get("keywords") == "edit":
@@ -354,9 +354,11 @@ def parse_journal_paper(publication: Dict[str, str]) -> None:
         write_publication_to_file(
             publication, publication_abstract, publication_id, publication_year
         )
+        return True
+    return False
 
 
-def parse_conference_paper(publication: Dict[str, str]) -> None:
+def parse_conference_paper(publication: Dict[str, str]) -> bool:
     """Parse a conference paper, noted because it uses a booktitle."""
     if publication.get("booktitle"):
         # extract values from the current publication
@@ -370,19 +372,25 @@ def parse_conference_paper(publication: Dict[str, str]) -> None:
         write_publication_to_file(
             publication, publication_abstract, publication_id, publication_year
         )
+        return True
+    return False
 
 
 def main() -> None:
     """Perform the operations of the main function."""
-    if not os.getenv("QUARTO_PROJECT_RENDER_ALL"):
-        sys.exit()
+    global original_publication
     # parse the command-line arguments using argparse
     parser = argparse.ArgumentParser()
     parser.add_argument("-b", "--bibfile")
     parser.add_argument("-d", "--delete", action="store_true")
+    parser.add_argument("-f", "--force", action="store_true")
     args = parser.parse_args()
     # display a blank line to ensure better formatting
     console.print()
+    # do not run the script unless quarto is rendering
+    # all of the files (i.e., do not run during preview)
+    if not os.getenv("QUARTO_PROJECT_RENDER_ALL") and not args.force:
+        sys.exit()
     # determine whether to use the default bibliography
     # (if one is not specified) or to use a specified
     # one, normally provided for testing purposes
@@ -413,16 +421,24 @@ def main() -> None:
     console.print(
         f":abacus: Found a total of {len(bibliography.entries)} bibliography entries"
     )
+    # keep track of the number of conference and journal papers
+    conference_papers_count = 0
+    journal_papers_count = 0
     # process all of the entries by create the directories and files
     for publication in bibliography.entries:
         original_publication = copy.deepcopy(publication)
         if "abstract" in original_publication.keys():
             del original_publication["abstract"]
         # --> for the conference papers
-        parse_conference_paper(publication)
+        if parse_conference_paper(publication):
+            conference_papers_count = conference_papers_count + 1
         # --> for the journal papers
-        parse_journal_paper(publication)
+        if parse_journal_paper(publication):
+            journal_papers_count = journal_papers_count + 1
     console.print()
+    console.print(
+        f":tada: Parsed {conference_papers_count} conference and {journal_papers_count} journal papers"
+    )
 
 
 if __name__ == "__main__":
