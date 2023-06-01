@@ -33,8 +33,6 @@ DOWNLOAD_PUBLICATION_STARTER = "{{< fa file-pdf >}}"
 DOWNLOAD_SPEAKERDECK_STARTER = "{{< fa brands speaker-deck >}}"
 DOWNLOAD_GITHUB_STARTER = "{{< fa brands github >}}"
 
-REFERENCE_REMINDER = "<p>Cite this paper by looking in <a href = 'https://github.com/gkapfham/research-bibliography'>gkapfham/research-bibliography</a> for the BiBTeX file containing the key"
-
 PAPER_PDF = "paper.pdf"
 PRESENTATION_PDF = "presentation.pdf"
 
