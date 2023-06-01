@@ -1,6 +1,7 @@
 """Parse the bibtex file."""
 
 import argparse
+import copy
 import hashlib
 import os
 import re
@@ -10,22 +11,28 @@ from typing import Dict
 
 import bibtexparser
 import yaml
+from bibtexparser.bibdatabase import BibDatabase
 from rich.console import Console
 
 console = Console()
+
+original_publication = {}
 
 BREAK = "<br>"
 DASH = "-"
 EMPTY = ""
 NEWLINE = "\n"
+SPACE = " "
 
 RETURN_TO_PAPER_LISTING = (
     "{{< fa circle-left >}} <a href='/research/papers/'>Return to Paper Listing</a>"
 )
 
 DOWNLOAD_PUBLICATION_STARTER = "{{< fa file-pdf >}}"
-DOWNLOAD_SPEAKERDECK_STARTER = "{{< fa speaker-deck >}}"
+DOWNLOAD_SPEAKERDECK_STARTER = "{{< fa brands speaker-deck >}}"
+DOWNLOAD_GITHUB_STARTER = "{{< fa brands github >}}"
 
+REFERENCE_REMINDER = "<p>Cite this paper by looking in <a href = 'https://github.com/gkapfham/research-bibliography'>gkapfham/research-bibliography</a> for the BiBTeX file containing the key"
 
 PAPER_PDF = "paper.pdf"
 PRESENTATION_PDF = "presentation.pdf"
@@ -175,27 +182,92 @@ def create_categories(publication: Dict[str, str]) -> None:
 
 def create_publication_footer(publication: Dict[str, str]) -> str:
     """Create a footer for the publications that includes all of the remaining links."""
+    global orignal_entry
+    # create a running string for the publication footer
+    publication_footer = EMPTY
     # only display download details about the paper
     # if they are available for this specific publication
     if "nodownload" not in publication.keys():
+        # create the details header
+        details_header = "<div class='quarto-title-details-heading'>Details</div>"
         # extract the identifier for this paper as this is
         # what connects to the name of the files for this paper
         publication_id = publication["ID"]
+        # create the links to the presentation based on the ID
+        # for each paper; operates under the assumption that every
+        # paper will have a link for the paper itself and its slides
         download_paper = f"{DOWNLOAD_PUBLICATION_STARTER} <a href='/research/papers/key/{publication_id}{DASH}{PAPER_PDF}'>Paper</a>"
         download_presentation = f"{DOWNLOAD_PUBLICATION_STARTER} <a href='/research/presentations/key/{publication_id}{DASH}{PRESENTATION_PDF}'>Presentation</a>"
-        return (
-            download_paper
+        # add the paper and presentation download links to the footer
+        publication_footer = (
+            details_header
+            + download_paper
             + NEWLINE
             + BREAK
             + download_presentation
             + NEWLINE
             + BREAK
-            + BREAK
+        )
+        # if the paper has details about the SpeakerDeck link
+        # for its presentation slides, then add them to the footer
+        if "presentation" in publication.keys():
+            publication_footer = (
+                publication_footer
+                + DOWNLOAD_SPEAKERDECK_STARTER
+                + SPACE
+                + f"<a href='{publication['presentation']}'>Presentation</a>"
+                + NEWLINE
+                + BREAK
+            )
+        # if the paper has details about GitHub for a data set,
+        # then add it to the footer; note that it will only add
+        # the "GitHub repo" name for the link content
+        if "data" in publication.keys():
+            repository_name = publication["data"].replace("https://github.com/", "")
+            publication_footer = (
+                publication_footer
+                + DOWNLOAD_GITHUB_STARTER
+                + SPACE
+                + f"<a href='{publication['data']}'> {repository_name}</a>"
+                + NEWLINE
+                + BREAK
+            )
+        # if the paper has details about GitHub for a tool,
+        # then add it to the footer; note that it will only add
+        # the "GitHub repo" name for the link content
+        if "tool" in publication.keys():
+            repository_name = publication["tool"].replace("https://github.com/", "")
+            publication_footer = (
+                publication_footer
+                + DOWNLOAD_GITHUB_STARTER
+                + SPACE
+                + f"<a href='{publication['tool']}'> {repository_name}</a>"
+                + NEWLINE
+            )
+        # add a reference to the GitHub repository that contains the BiBTeX entries
+        # publication_reference_reminder = REFERENCE_REMINDER + f" <tt>{publication_id}</tt>!"
+        # add the final reference to the GitHub reference repository and then a link
+        # that allows for the return to the listing of papers
+        bibtex_reference_header = "<div class='quarto-title-reference-heading'>Reference</div>"
+        db = BibDatabase()
+        db.entries = [original_publication]
+        bibtex_reference = bibtexparser.dumps(db)
+        # console.print(bibtex_reference)
+        bibtex_reference_fenced_code_block = f"```bibtex{NEWLINE}{bibtex_reference}```"
+        publication_footer = (
+            publication_footer
+            + NEWLINE
+            + NEWLINE
+            + NEWLINE
+            + bibtex_reference_header
+            + NEWLINE
+            + bibtex_reference_fenced_code_block
+            + NEWLINE
             + RETURN_TO_PAPER_LISTING
         )
     # return an empty string for the download information
     # because none is provided for this publication
-    return EMPTY
+    return publication_footer
 
 
 def write_publication_to_file(
@@ -337,6 +409,9 @@ if __name__ == "__main__":
     )
     # process all of the entries by create the directories and files
     for publication in bibliography.entries:
+        original_publication = copy.deepcopy(publication)
+        if "abstract" in original_publication.keys():
+            del original_publication["abstract"]
         # --> for the conference papers
         parse_conference_paper(publication)
         # --> for the journal papers
