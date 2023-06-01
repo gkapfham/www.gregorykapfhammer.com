@@ -33,6 +33,7 @@ def copy_files(
         shutil.copy2(file_path, destination_file)
         # increment the file counter
         file_count = file_count + 1
+    # output some debugging information about the completed copy
     console.print(f":tada: Finished copying {file_count} files")
 
 
