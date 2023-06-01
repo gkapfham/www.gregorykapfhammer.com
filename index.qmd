@@ -24,7 +24,7 @@ listing:
     date-format: "YYYY"
     sort-ui: false
     filter-ui: false
-    fields: [author, title, description, categories]
+    fields: [author, title, description]
     max-items: 3
     page-size: 3
 execute:
