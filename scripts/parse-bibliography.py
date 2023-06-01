@@ -6,6 +6,7 @@ import hashlib
 import os
 import re
 import shutil
+import sys
 from pathlib import Path
 from typing import Dict
 
@@ -244,27 +245,29 @@ def create_publication_footer(publication: Dict[str, str]) -> str:
                 + f"<a href='{publication['tool']}'> {repository_name}</a>"
                 + NEWLINE
             )
-        # add a reference to the GitHub repository that contains the BiBTeX entries
-        # publication_reference_reminder = REFERENCE_REMINDER + f" <tt>{publication_id}</tt>!"
-        # add the final reference to the GitHub reference repository and then a link
-        # that allows for the return to the listing of papers
-        bibtex_reference_header = "<div class='quarto-title-reference-heading'>Reference</div>"
-        db = BibDatabase()
-        db.entries = [original_publication]
-        bibtex_reference = bibtexparser.dumps(db)
-        # console.print(bibtex_reference)
-        bibtex_reference_fenced_code_block = f"```bibtex{NEWLINE}{bibtex_reference}```"
-        publication_footer = (
-            publication_footer
-            + NEWLINE
-            + NEWLINE
-            + NEWLINE
-            + bibtex_reference_header
-            + NEWLINE
-            + bibtex_reference_fenced_code_block
-            + NEWLINE
-            + RETURN_TO_PAPER_LISTING
-        )
+    # add a reference to the GitHub repository that contains the BiBTeX entries
+    # publication_reference_reminder = REFERENCE_REMINDER + f" <tt>{publication_id}</tt>!"
+    # add the final reference to the GitHub reference repository and then a link
+    # that allows for the return to the listing of papers
+    bibtex_reference_header = (
+        "<div class='quarto-title-reference-heading'>Reference</div>"
+    )
+    db = BibDatabase()
+    db.entries = [original_publication]
+    bibtex_reference = bibtexparser.dumps(db)
+    # console.print(bibtex_reference)
+    bibtex_reference_fenced_code_block = f"```bibtex{NEWLINE}{bibtex_reference}```"
+    publication_footer = (
+        publication_footer
+        + NEWLINE
+        + NEWLINE
+        + NEWLINE
+        + bibtex_reference_header
+        + NEWLINE
+        + bibtex_reference_fenced_code_block
+        + NEWLINE
+        + RETURN_TO_PAPER_LISTING
+    )
     # return an empty string for the download information
     # because none is provided for this publication
     return publication_footer
@@ -369,7 +372,10 @@ def parse_conference_paper(publication: Dict[str, str]) -> None:
         )
 
 
-if __name__ == "__main__":
+def main() -> None:
+    """Perform the operations of the main function."""
+    if not os.getenv("QUARTO_PROJECT_RENDER_ALL"):
+        sys.exit()
     # parse the command-line arguments using argparse
     parser = argparse.ArgumentParser()
     parser.add_argument("-b", "--bibfile")
@@ -417,3 +423,7 @@ if __name__ == "__main__":
         # --> for the journal papers
         parse_journal_paper(publication)
     console.print()
+
+
+if __name__ == "__main__":
+    main()
