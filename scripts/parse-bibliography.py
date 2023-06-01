@@ -245,18 +245,18 @@ def create_publication_footer(publication: Dict[str, str]) -> str:
                 + f"<a href='{publication['tool']}'> {repository_name}</a>"
                 + NEWLINE
             )
-    # add a reference to the GitHub repository that contains the BiBTeX entries
-    # publication_reference_reminder = REFERENCE_REMINDER + f" <tt>{publication_id}</tt>!"
-    # add the final reference to the GitHub reference repository and then a link
-    # that allows for the return to the listing of papers
+    # create a header for the segment of the page that will display the
+    # bibtex reference for the paper currently being parsed
     bibtex_reference_header = (
         "<div class='quarto-title-reference-heading'>Reference</div>"
     )
+    # re-created the bibtex entry from the dictionary of the entry
     db = BibDatabase()
     db.entries = [original_publication]
     bibtex_reference = bibtexparser.dumps(db)
-    # console.print(bibtex_reference)
+    # create a fenced code block out of the bibtex entry
     bibtex_reference_fenced_code_block = f"```bibtex{NEWLINE}{bibtex_reference}```"
+    # assemble the entire footer for this specific publication
     publication_footer = (
         publication_footer
         + NEWLINE
@@ -268,8 +268,7 @@ def create_publication_footer(publication: Dict[str, str]) -> str:
         + NEWLINE
         + RETURN_TO_PAPER_LISTING
     )
-    # return an empty string for the download information
-    # because none is provided for this publication
+    # return the footer for this publication
     return publication_footer
 
 
