@@ -135,10 +135,15 @@ download
 .quarto
 /.quarto/
 site_libs/
-presentations
 _freeze
+_site
 
 ### Quarto: ignore generated files in research/papers/  ###
 ### created by a Python script; keep the index.qmd file ###
 research/papers/*/
 !research/papers/index.qmd
+
+### Quarto: ignore generated files in research/papers/  ###
+### created by a Python script; keep the index.qmd file ###
+research/presentations/*/
+!research/presentations/index.qmd
