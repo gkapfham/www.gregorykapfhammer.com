@@ -138,19 +138,26 @@ def string_found(search_string: str, containing_string: str) -> bool:
     return False
 
 
-def replace_word_in_string(string, old_word, new_word):
+def replace_word_in_string(search_string: str, old_word: str, new_word: str) -> str:
     """Replace a word in a string while respecting string boundaries."""
     pattern = r"\b" + re.escape(old_word) + r"\b"
-    replaced_string = re.sub(pattern, new_word, string)
+    replaced_string = re.sub(pattern, new_word, search_string)
     return replaced_string
 
 
 def create_categories(publication: Dict[str, str]) -> None:
     """Add categories for a publication since none exist by default in the BiBTeX file."""
-    # extract the title and the abstract
-    publication_title = publication["title"]
-    publication_abstract = publication["abstract"]
-    publication_description = publication["description"]
+    # extract the title and the abstract and the description,
+    # if they are available, and use them for category creation
+    publication_title = ""
+    publication_abstract = ""
+    publication_description = ""
+    if "title" in publication.keys():
+        publication_title = publication["title"]
+    if "abstract" in publication.keys():
+        publication_abstract = publication["abstract"]
+    if "description" in publication.keys():
+        publication_description = publication["description"]
     # designate whether or not anything has been found
     found_keyword = False
     found_keyword_list = []
@@ -271,8 +278,11 @@ def create_publication_footer(publication: Dict[str, str]) -> str:
 
 
 def write_publication_to_file(
-    publication: Dict[str, str], publication_abstract, publication_id, publication_year
-):
+    publication: Dict[str, str],
+    publication_abstract: str,
+    publication_id: str,
+    publication_year: str,
+) -> None:
     """Write the details about a publication to the specified file."""
     # redefine the abstract so that there are no newlines in it
     publication_abstract = publication_abstract.replace("\n", " ")
@@ -312,6 +322,57 @@ def write_publication_to_file(
     write_file_if_changed(
         str(publication_file),
         f"---\n{PAGE_FULL_ATTRIBUTE}\n{publication_dump_string}---\n\n{create_publication_footer(publication)}",
+    )
+
+
+def write_presentation_to_file(
+    presentation: Dict[str, str], presentation_id: str, presentation_year: str
+) -> None:
+    """Write the details about a publication to the specified file."""
+    # define the date so that it is a string in YYYY-MM-DD format;
+    # note that this sets up the date so that the MM and the DD
+    # will be ignored later as conference papers do not need MM or DD
+    presentation_year = presentation["year"]
+    del presentation["year"]
+    presentation["date"] = f"{presentation_year}-01-01"
+    # define the date-format to only display the year
+    only_year = "YYYY"
+    presentation["date-format"] = f"{only_year}"
+    # create the categories
+    create_categories(presentation)
+    # create the file for this paper in the papers directory
+    presentations_directory = Path(f"research/presentations/{presentation_id}/")
+    presentations_directory.mkdir(parents=True, exist_ok=True)
+    presentation_file = Path(presentations_directory / "index.qmd")
+    presentation_file.touch()
+    # extract the addendum details
+    if "addendum" in presentation.keys():
+        presentation_addendum = presentation["addendum"]
+        console.print(presentation_addendum)
+        presentation_addendum = presentation_addendum.replace("Joint work with", "")
+        presentation_addendum = presentation_addendum.replace(", and", ", ")
+        # create a list of the authors instead of using a string
+        # of author names joined by the word "and"; this will then
+        # cause the quarto system to use the label "authors" instead
+        # of the singular label "author"
+        presentation_author = presentation_addendum + " and " + presentation["author"]
+    else:
+        presentation_author = presentation["author"]
+    # create the listing of the authors separated with commas in a list
+    publication_author_no_and = replace_word_in_string(presentation_author, "and", ",")
+    presentation_author = f"[{publication_author_no_and}]"
+    presentation["author"] = presentation_author
+    # dump the publication dictionary to a string and then patch up
+    # the string so that the categories are formatted correctly
+    publication_dump_string = yaml.dump(
+        presentation, allow_unicode=True, default_flow_style=False
+    )
+    publication_dump_string = publication_dump_string.replace("'[", "[")
+    publication_dump_string = publication_dump_string.replace("]'", "]")
+    # write the complete contents of the string to the designated file
+    write_file_if_changed(
+        str(presentation_file),
+        f"---\n{PAGE_FULL_ATTRIBUTE}\n{publication_dump_string}---\n\n{create_publication_footer(presentation)}",
     )
 
 
@@ -373,6 +434,22 @@ def parse_conference_paper(publication: Dict[str, str]) -> bool:
     return False
 
 
+def parse_presentation(publication: Dict[str, str]) -> bool:
+    """Parse a prsentation, noted by the fact that it uses a howpublished."""
+    if publication.get("howpublished"):
+        # extract values from the current presentation
+        publication_id = publication["ID"]
+        publication_year = publication["year"]
+        publication_presentation_venue = publication["howpublished"]
+        # define the description using the howpublished, which is
+        # the venue of the presentation
+        publication["description"] = f"<em>{publication_presentation_venue}</em>"
+        # write the publication to the file systems
+        write_presentation_to_file(publication, publication_id, publication_year)
+        return True
+    return False
+
+
 def main() -> None:
     """Perform the operations of the main function."""
     global original_publication
@@ -421,6 +498,7 @@ def main() -> None:
     # keep track of the number of conference and journal papers
     conference_papers_count = 0
     journal_papers_count = 0
+    presentations_count = 0
     # process all of the entries by create the directories and files
     for publication in bibliography.entries:
         original_publication = copy.deepcopy(publication)
@@ -432,9 +510,12 @@ def main() -> None:
         # --> for the journal papers
         if parse_journal_paper(publication):
             journal_papers_count = journal_papers_count + 1
+        # --> for the presentations
+        if parse_presentation(publication):
+            presentations_count = presentations_count + 1
     console.print()
     console.print(
-        f":tada: Parsed {conference_papers_count} conference and {journal_papers_count} journal papers"
+        f":tada: Parsed {conference_papers_count} conference papers, {journal_papers_count} journal papers, and {presentations_count} presentations"
     )
 
 
