@@ -75,7 +75,8 @@ format:
     toc: true
     toc-title: "Contents"
     code-copy: hover
-    code-overflow: wrap
+    # code-overflow: wrap
+    code-overflow: scroll
     code-fold: false
     code-tools: true
     highlight-style: gruvbox
