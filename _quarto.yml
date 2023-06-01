@@ -42,7 +42,7 @@ website:
           - text: "Papers"
             href: research/papers/index.qmd
           - text: "Talks"
-            href: presentations.qmd
+            href: research/presentations/index.qmd
   page-footer:
     left: "Gregory M. Kapfhammer, [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)"
     center: '<a href="#">Top {{< fa circle-up >}}</a>'
