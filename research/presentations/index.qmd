@@ -1,0 +1,29 @@
+---
+title: "Presentations"
+toc: true
+page-layout: full
+listing:
+  contents:
+    - "../../research/presentations/**/*.qmd"
+    - "!../../research/papers/index.qmd"
+    - "!../../research/presentations/index.qmd"
+  sort:
+    - "date desc"
+    - "author title"
+  type: default
+  categories: true
+  date-format: "YYYY"
+  sort-ui: true
+  filter-ui: true
+  fields: [title, author, date, description, categories]
+execute:
+  freeze: auto
+---
+
+```{python}
+from rich.console import Console
+console = Console()
+console.print(
+    f":rocket: Collaboratively crafting these papers was so much fun!"
+)
+```
