@@ -1,5 +1,6 @@
 ---
 title: "Papers"
+description: "Research papers published by Gregory M. Kapfhammer"
 toc: true
 page-layout: full
 listing:
@@ -24,6 +25,6 @@ execute:
 from rich.console import Console
 console = Console()
 console.print(
-    f":rocket: Collaboratively crafting these papers was so much fun!"
+    ":rocket: Collaboratively crafting these papers was so much fun!"
 )
 ```
