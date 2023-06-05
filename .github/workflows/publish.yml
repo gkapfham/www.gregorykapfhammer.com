@@ -39,7 +39,7 @@ jobs:
           poetry install
           # poetry shell
       - name: Render and Publish
-        uses: gkapfham/quarto-actions/publish@v2
+        uses: gkapfham/quarto-actions/publish
         with:
           target: netlify
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
