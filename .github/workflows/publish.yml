@@ -30,18 +30,16 @@ jobs:
           cache: "pip"
       # Install Poetry
       - name: Install Poetry
-        if: always()
         uses: abatilo/actions-poetry@v2.0.0
         with:
           poetry-version: 1.4.0
       # Setup the Virtual Environment
       - name: Setup Virtual Environment
-        if: always()
         run: |
           poetry install
-          # poetry shell
       - name: Render and Publish
-        uses: gkapfham/quarto-actions/publish@v1.0.0
         with:
-          target: netlify
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+        run: |
+          poetry run quarto render
+          poetry run quarto publish netlify
