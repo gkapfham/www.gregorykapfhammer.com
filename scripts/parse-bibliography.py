@@ -187,7 +187,6 @@ def create_categories(publication: Dict[str, str]) -> None:
 
 def create_publication_footer(publication: Dict[str, str]) -> str:
     """Create a footer for the publications that includes all of the remaining links."""
-    global orignal_entry
     # create a running string for the publication footer
     publication_footer = EMPTY
     # only display download details about the paper
@@ -469,7 +468,7 @@ def main() -> None:
     # (if one is not specified) or to use a specified
     # one, normally provided for testing purposes
     bibliography = None
-    if args.bibfile == None:
+    if args.bibfile is None:
         console.print(
             ":clap: Using the default bibliography file of bibliography/bibtex/bibliography_kapfhammer.bib\n"
         )
