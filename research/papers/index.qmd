@@ -1,6 +1,5 @@
 ---
 title: "Papers"
-description: "Research papers published by Gregory M. Kapfhammer"
 toc: true
 page-layout: full
 listing:
