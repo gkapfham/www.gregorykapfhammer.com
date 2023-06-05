@@ -1,0 +1,45 @@
+# Basic workflow
+name: Publish
+
+# Controls when the action will run
+# Workflow begins with push or PR events
+# Focuses on the master branch only
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      # Repository
+      - name: Check out Repository
+        uses: actions/checkout@v2
+      # Install Quarto
+      - name: Set up Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+      # Install Python
+      - name: Install Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
+          cache: "pip"
+      # Install Poetry
+      - name: Install Poetry
+        if: always()
+        uses: abatilo/actions-poetry@v2.0.0
+        with:
+          poetry-version: 1.4.0
+      # Setup the Virtual Environment
+      - name: Setup Virtual Environment
+        if: always()
+        run: |
+          poetry install
+          poetry shell
+      - name: Render and Publish
+        uses: quarto-dev/quarto-actions/publish@v2
+        with:
+          target: netlify
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
