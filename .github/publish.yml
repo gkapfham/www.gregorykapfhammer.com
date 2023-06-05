@@ -1,9 +1,14 @@
-on:
-  workflow_dispatch:
-  push:
-    branches: main
+# Basic workflow
+name: Publish
 
-name: Quarto Publish
+# Controls when the action will run
+# Workflow begins with push or PR events
+# Focuses on the master branch only
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
 
 jobs:
   build-deploy:
