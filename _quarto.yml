@@ -77,10 +77,10 @@ format:
     toc: true
     toc-title: "Contents"
     code-copy: hover
-    # code-overflow: wrap
-    code-overflow: scroll
+    code-overflow: wrap
+    # code-overflow: scroll
     code-fold: false
-    code-tools: true
+    code-tools: false
     highlight-style: gruvbox
     email-obfuscation: javascript
     # note: needs to be false so as to
