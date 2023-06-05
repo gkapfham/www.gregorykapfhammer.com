@@ -22,9 +22,12 @@ ignore = [
 ]
 select = [
     "E",    # pycodestyle errors
-    "W",    # pycodestyle warnings
+    "I",    # isort
     "F",    # Pyflakes
+    "PL",   # pylint
     "Q",    # flake8-quotes
+    "RUF",  # ruff-specific
+    "W",    # pycodestyle warnings
     "T201"  # flake8-print
 ]
 
