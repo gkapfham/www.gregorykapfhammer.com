@@ -1,6 +1,5 @@
 ---
 title: ""
-description: "Research papers published by Gregory M. Kapfhammer"
 echo: true
 jupyter: python3
 section-divs: true
