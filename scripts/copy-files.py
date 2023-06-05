@@ -53,7 +53,7 @@ def main() -> None:
     args = parser.parse_args()
     # determine the valid directory for the source
     source_directory = DEFAULT_SOURCE_DIRECTORY
-    if args.source == None:
+    if args.source is None:
         console.print(
             f":clap: Using the default source directory of {source_directory}\n",
             style=DEFAULT_CONSOLE_STYLE,
@@ -66,7 +66,7 @@ def main() -> None:
         source_directory = args.source
     # determine the valid directory for the source
     destination_directory = DEFAULT_DESTINATION_DIRECTORY
-    if args.source == None:
+    if args.source is None:
         console.print(
             f":clap: Using the default destination directory of {destination_directory}\n",
             style=DEFAULT_CONSOLE_STYLE,
