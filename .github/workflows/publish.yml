@@ -41,5 +41,5 @@ jobs:
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
         run: |
-          poetry run quarto render
+          poetry run python scripts/parse-bibliography.py --force
           poetry run quarto publish netlify
