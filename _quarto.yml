@@ -12,7 +12,7 @@ project:
 website:
   title: ""
   page-navigation: true
-  favicon: "favicon.png"
+  favicon: "rocket.svg"
   open-graph: true
   site-url: https://www.gregorykapfhammer.com
   repo-url: https://github.com/gkapfham/www.gregorykapfhammer.com
