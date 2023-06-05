@@ -16,6 +16,18 @@ bibtexparser = "^1.4.0"
 [tool.poetry.group.dev.dependencies]
 black = "^23.3.0"
 
+[tool.ruff]
+ignore = [
+    "E501", # do not check line length
+]
+select = [
+    "E",    # pycodestyle errors
+    "W",    # pycodestyle warnings
+    "F",    # Pyflakes
+    "Q",    # flake8-quotes
+    "T201"  # flake8-print
+]
+
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
