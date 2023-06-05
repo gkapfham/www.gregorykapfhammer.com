@@ -451,7 +451,7 @@ def parse_presentation(publication: Dict[str, str]) -> bool:
 
 def main() -> None:
     """Perform the operations of the main function."""
-    global original_publication
+    global original_publication  # noqa: PLW0603
     # parse the command-line arguments using argparse
     parser = argparse.ArgumentParser()
     parser.add_argument("-b", "--bibfile")
