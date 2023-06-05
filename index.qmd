@@ -36,7 +36,7 @@ execute:
 from rich.console import Console
 console = Console()
 console.print(
-    f":rocket: Hi! I'm a researcher, teacher, and software developer!"
+    ":rocket: Hi! I'm a researcher, teacher, and software developer!"
 )
 ```
 
