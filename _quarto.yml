@@ -72,12 +72,11 @@ format:
     monofont: IBM Plex Mono
     fontsize: 1.375em
     theme:
-      light:
         - united
         - united-light.scss
-      dark:
-        - united
-        - united-dark.scss
+      # dark:
+        # - united
+        # - united-dark.scss
     css: styles.css
     toc: true
     toc-title: "Contents"
