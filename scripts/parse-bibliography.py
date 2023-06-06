@@ -347,7 +347,6 @@ def write_presentation_to_file(
     # extract the addendum details
     if "addendum" in presentation.keys():
         presentation_addendum = presentation["addendum"]
-        console.print(presentation_addendum)
         presentation_addendum = presentation_addendum.replace("Joint work with", "")
         presentation_addendum = presentation_addendum.replace(", and", ", ")
         # create a list of the authors instead of using a string
@@ -503,11 +502,20 @@ def main() -> None:
     conference_papers_count = 0
     journal_papers_count = 0
     presentations_count = 0
-    # process all of the entries by create the directories and files
+    # process all of the entries by creating the directories and files
+    # for each one of the relevant bibliography entries
     for publication in bibliography.entries:
+        # create a deep copy of the current publication
+        # so that there is an object in reserver that
+        # was not modified during the parsing process;
+        # this version is used for writing out the
+        # bibtex entry for each research publication
         original_publication = copy.deepcopy(publication)
-        if "abstract" in original_publication.keys():
-            del original_publication["abstract"]
+        # delete not-needed entries from the original_publication
+        not_needed_keys = ["abstract", "data", "presented", "presentation", "tool"]
+        for not_needed_key in not_needed_keys:
+            if not_needed_key in original_publication.keys():
+                del original_publication[not_needed_key]
         # --> for the conference papers
         if parse_conference_paper(publication):
             conference_papers_count = conference_papers_count + 1
@@ -517,6 +525,8 @@ def main() -> None:
         # --> for the presentations
         if parse_presentation(publication):
             presentations_count = presentations_count + 1
+    # display final diagnostic information about the
+    # execution of the script, in terms of counts of entities
     console.print()
     console.print(
         f":tada: Parsed {conference_papers_count} conference papers, {journal_papers_count} journal papers, and {presentations_count} presentations"
