@@ -37,6 +37,13 @@ jobs:
       - name: Setup Virtual Environment
         run: |
           poetry install
+      # Render and Publish the Site
+      # Note that this uses Quarto to
+      # directly publish the site, which
+      # means that you do not use Netlify
+      # build minutes. This is great! Yet,
+      # it also means that you do not get
+      # a Netlify preview build for PRs.
       - name: Render and Publish
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
