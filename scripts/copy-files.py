@@ -53,6 +53,10 @@ def main() -> None:
     args = parser.parse_args()
     # determine the valid directory for the source
     source_directory = DEFAULT_SOURCE_DIRECTORY
+    # do not run the script unless quarto is rendering
+    # all of the files (i.e., do not run during preview)
+    if not os.getenv("QUARTO_PROJECT_RENDER_ALL") and not args.force:
+        sys.exit()
     if args.source is None:
         console.print(
             f":clap: Using the default source directory of {source_directory}\n",
@@ -77,14 +81,6 @@ def main() -> None:
             style=DEFAULT_CONSOLE_STYLE,
         )
         source_directory = args.source
-    # do not run the script unless quarto is rendering
-    # all of the files (i.e., do not run during preview)
-    if not os.getenv("QUARTO_PROJECT_RENDER_ALL") and not args.force:
-        console.print(
-            ":person_shrugging: Exiting since Quarto is not rendering everything or there was no --force",
-            style=DEFAULT_CONSOLE_STYLE,
-        )
-        sys.exit()
     # perform the copy from the source to the desination
     copy_files(source_directory, destination_directory)
 
