@@ -64,7 +64,8 @@ website:
 format:
   html:
     include-in-header:
-      file: js/get-the-gist.js
+      - file: js/get-the-gist.js
+      - file: header-include.html
     mainfont: IBM Plex Sans
     monofont: IBM Plex Mono
     fontsize: 1.375em
