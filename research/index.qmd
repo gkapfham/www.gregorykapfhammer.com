@@ -9,13 +9,23 @@ bibliography: ../bibliography/bibtex/bibliography_kapfhammer.bib
 
 ## Overview
 
-As an experimental computer scientist, the goal of my research is to design,
-implement, and rigorously evaluate techniques and tools that support the
-creation of useful, dependable, and efficient software. My research addresses
-the challenges in fields such as software engineering, software testing, and
-computer systems. I conduct this research with undergraduates
-at [Allegheny College](http://www.allegheny.edu), graduate students and
-professors at several universities, and colleagues in industry.
+<span class="special">As an experimental computer scientist, the goal of my
+research is to design, implement, and rigorously evaluate techniques and tools
+that support the creation of useful, dependable, and efficient software.</span>
+My research addresses the challenges in fields such as software engineering,
+software testing, and computer systems. I conduct this research with
+undergraduates at [Allegheny College](http://www.allegheny.edu), graduate
+students and professors at several universities, and colleagues in industry.
+
+```{=html}
+ <div class="toggle-container">
+  <div class="form-check form-switch">
+    <input class="form-check-input" type="checkbox" id="toggle-button-checkbox">
+    <label class="form-check-label" for="toggle-button-checkbox"></label>
+  </div>
+  <span class="toggle-label"> <i class="fa-solid fa-highlighter"></i> Get the gist! </span>
+</div>
+```
 
 ## Details
 
