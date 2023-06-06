@@ -63,6 +63,10 @@ website:
 
 format:
   html:
+    # do not use embed-resources: true because this
+    # causes build times to take a very long time
+    # and builds will normally crash with an out
+    # of memory error from the JavaScript runtime
     embed-resources: false
     include-in-header:
       - file: js/get-the-gist.js
