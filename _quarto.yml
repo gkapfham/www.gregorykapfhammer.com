@@ -63,7 +63,7 @@ website:
 
 format:
   html:
-    embed-resources: true
+    embed-resources: false
     # self-contained: false
     include-in-header:
       - file: js/get-the-gist.js
@@ -72,6 +72,7 @@ format:
     monofont: IBM Plex Mono
     fontsize: 1.375em
     theme:
+      # light:
         - united
         - united-light.scss
       # dark:
