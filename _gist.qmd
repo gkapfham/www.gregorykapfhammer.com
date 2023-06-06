@@ -1,0 +1,9 @@
+```{=html}
+ <div class="toggle-container">
+  <div class="form-check form-switch">
+    <input class="form-check-input" type="checkbox" id="toggle-button-checkbox">
+    <label class="form-check-label" for="toggle-button-checkbox"></label>
+  </div>
+  <span class="toggle-label"> <i class="fa-solid fa-highlighter"></i> Get the gist! </span>
+</div>
+```
