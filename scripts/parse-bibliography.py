@@ -450,7 +450,7 @@ def parse_presentation(publication: Dict[str, str]) -> bool:
 
 
 def main() -> None:
-    """Perform the operations of the main function."""
+    """Perform all of the parsing steps for each bibliography entry."""
     global original_publication  # noqa: PLW0603
     # parse the command-line arguments using argparse
     parser = argparse.ArgumentParser()
@@ -479,9 +479,11 @@ def main() -> None:
     # open up the BiBTeX file and parse it
     with open(bib_database_file_name, encoding="utf-8") as bibtex_file:
         bibliography = bibtexparser.load(bibtex_file)
-    # delete the research/papers directory if exists;
+    # delete the research/papers directory if it exists;
     # make sure not to delete any of the files inside of this
-    # directory as those could be an index.qmd file with content
+    # directory as those could be an index.qmd file with content.
+    # Note that the web site's directory structure contains a
+    # mixture of generated and manually written content.
     papers_directory = Path("research/papers/")
     if papers_directory.exists() and args.delete:
         console.print(
@@ -489,12 +491,15 @@ def main() -> None:
         )
         delete_subdirectories_preserve_files(str(papers_directory))
     # if the directory does not exist, then create it;
-    # this will not fail even if the directory exists, which it should
+    # this will not fail even if the directory exists. The
+    # directory should normally exist because there is a mixture
+    # of files that are manually written and generated.
     papers_directory.mkdir(exist_ok=True)
     console.print(
         f":abacus: Found a total of {len(bibliography.entries)} bibliography entries"
     )
     # keep track of the number of conference and journal papers
+    # keep track of the number of prsentations
     conference_papers_count = 0
     journal_papers_count = 0
     presentations_count = 0
