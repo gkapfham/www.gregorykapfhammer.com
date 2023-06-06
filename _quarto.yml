@@ -35,7 +35,7 @@ website:
             href: "https://www.proactiveprogrammers.com"
           - text: "Discrete Structures"
             href: "https://www.proactiveprogrammers.com"
-      - text: "Reseach"
+      - text: "Research"
         menu:
           - text: "Overview"
             href: research/index.qmd
@@ -63,9 +63,18 @@ website:
 
 format:
   html:
+    embed-resources: true
+    # self-contained: false
     include-in-header:
       - file: js/get-the-gist.js
       - file: html/header-include.html
+    include-before-body:
+      - text: |
+          <script>
+            <!--- HELLO --->
+            const theme = localStorage.getItem('theme') || 'light';
+            document.documentElement.dataset.theme = theme;
+          </script>
     mainfont: IBM Plex Sans
     monofont: IBM Plex Mono
     fontsize: 1.375em
@@ -81,7 +90,6 @@ format:
     toc-title: "Contents"
     code-copy: hover
     code-overflow: wrap
-    # code-overflow: scroll
     code-fold: false
     code-tools: false
     highlight-style: gruvbox
