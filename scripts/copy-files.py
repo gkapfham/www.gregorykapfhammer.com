@@ -57,24 +57,27 @@ def main() -> None:
     # all of the files (i.e., do not run during preview)
     if not os.getenv("QUARTO_PROJECT_RENDER_ALL") and not args.force:
         sys.exit()
+    # use the default source directory if none was specified
     if args.source is None:
         console.print(
             f":clap: Using the default source directory of {source_directory}\n",
             style=DEFAULT_CONSOLE_STYLE,
         )
+    # use the specified source directory
     else:
         console.print(
             ":clap: Using {args.source} as specified by --source",
             style=DEFAULT_CONSOLE_STYLE,
         )
         source_directory = args.source
-    # determine the valid directory for the source
+    # use the default destination directory
     destination_directory = DEFAULT_DESTINATION_DIRECTORY
     if args.source is None:
         console.print(
             f":clap: Using the default destination directory of {destination_directory}\n",
             style=DEFAULT_CONSOLE_STYLE,
         )
+    # use the specified destination directory
     else:
         console.print(
             ":clap: Using {args.destination} as specified by --destination",
