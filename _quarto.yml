@@ -64,7 +64,6 @@ website:
 format:
   html:
     embed-resources: false
-    # self-contained: false
     include-in-header:
       - file: js/get-the-gist.js
       - file: html/header-include.html
