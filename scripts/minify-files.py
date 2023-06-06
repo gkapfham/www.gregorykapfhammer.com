@@ -14,18 +14,27 @@ console = Console()
 
 def minify_files(directory):
     """Minify all of the files in the project directory."""
+    # recursively iterate through all files and directories
     for filename in os.listdir(directory):
+        # extract the current filename
         filepath = os.path.join(directory, filename)
+        # dealing with a file and thus it is a candidate
+        # for the minification process
         if os.path.isfile(filepath):
+            # extract the extension from this filename so
+            # that the script can check if it is one of
+            # the types of files that can be minified
             extension = os.path.splitext(filename)[1].lower()
+            # minify the CSS file
             if extension == ".css":
                 try:
                     minified_content = csscompressor.compress(open(filepath).read())
                     with open(filepath, "w") as file:
                         file.write(minified_content)
-                    console.print(f"CSS {filepath} minified.")
+                    console.print(f"CSS {filepath} minified")
                 except ValueError:
                     console.print(f"Could not minifiy file {filepath}")
+            # minify the HTML file
             elif extension == ".html":
                 minified_content = htmlmin.minify(
                     open(filepath).read(),
@@ -34,14 +43,19 @@ def minify_files(directory):
                 )
                 with open(filepath, "w") as file:
                     file.write(minified_content)
-                console.print(f"HTML {filename} minified.")
+                console.print(f"HTML {filepath} minified")
+            # minify the JS file
             elif extension == ".js":
-                minified_content = rjsmin.jsmin(open(filepath).read())
+                minified_content = str(rjsmin.jsmin(open(filepath).read()))
                 with open(filepath, "w") as file:
                     file.write(minified_content)
-                console.print(f"JS {filename} minified.")
+                console.print(f"JS {filepath} minified")
+            # do not have a minifier for a specific
+            # file and thus this file should be skipped
             else:
-                console.print(f"{filename} skipped.")
+                console.print(f"{filepath} skipped")
+        # found a directory, so recursively traverse into
+        # so that minification process can continue until done
         elif os.path.isdir(filepath):
             minify_files(filepath)
 
