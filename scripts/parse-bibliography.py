@@ -519,4 +519,7 @@ def main() -> None:
 
 
 if __name__ == "__main__":
+    # run the main function
+    # that controls all of the parsing
+    # of the bibliography entries
     main()
