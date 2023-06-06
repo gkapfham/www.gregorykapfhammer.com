@@ -76,3 +76,50 @@ pre {
 }
 
 // }}}
+
+// What's Cool Toggle Button {{{
+
+.form-switch .form-check-input {
+  width: 2em;
+  margin-left: -2.5em;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba%220, 0, 0, 0%29'/%3e%3c/svg%3e");
+  background-position: left center;
+  border-radius: 2em;
+  transition: background-position 0.15s ease-in-out;
+}
+
+.form-check-input,
+.shiny-input-container .checkbox input,
+.shiny-input-container .checkbox-inline input,
+.shiny-input-container .radio input,
+.shiny-input-container .radio-inline input {
+  width: 1em;
+  height: 1em;
+  margin-top: 0.25em;
+  vertical-align: top;
+  background-color: #ef6c00 !important;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  // border: 1px solid rgba(0,0,0,.25);
+  border: 1px solid #ef6c00 !important;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  color-adjust: exact;
+  -webkit-print-color-adjust: exact;
+}
+
+.toggle-container {
+  width: 220px;
+  display: flex;
+  align-items: center;
+  padding-left: 5px;
+  background-color: rgba(233, 236, 239, 0.1);
+  border: 1px solid rgba(233, 236, 239, 0.1);
+  border-radius: 0.25rem;
+}
+
+// }}}
