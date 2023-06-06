@@ -3,26 +3,33 @@
   import { annotate, annotationGroup } from 'https://unpkg.com/rough-notation?module';
   // define a highlight that will be a mutiple-line underline that appears for all annotated text
   const config = { type: 'underline', multiline: true, iterations: 1, strokeWidth: 4, animationDuration: 200, color: '#EF6C00' };
-  // const n1 = document.querySelectorAll('.abstract .special');
-  const n1 = document.querySelectorAll('.special');
-  // const n1 = document.querySelector('.abstract span');
-  // const a1 = annotate(n1, config);
+  // extract all of the elements that are designated as special
+  // and thus subject to receiving the rough notation underline
+  const nl = document.querySelectorAll('.special');
   var al = []
-  for (let i = 0; i < n1.length; i++) {
-    var newA = annotate(n1[i], config);
+  // create annotation objects for each of the elements
+  // that are subject to rough notation underlining; these
+  // are the elements that will allow the notations to either
+  // appear or disappear depending on the click of the toggle
+  for (let i = 0; i < nl.length; i++) {
+    var newA = annotate(nl[i], config);
     al.push(newA)
   }
   // Get the checkbox element
   var toggleButtonCheckbox = document.getElementById('toggle-button-checkbox');
-  // Function to toggle the rough notation
+  // define the function that toggles the rough notation underlining
   function toggleRoughNotation() {
     if (toggleButtonCheckbox.checked) {
+      // the button was checked so the script
+      // should show the rough notation underlining
       for (let i = 0; i < al.length; i++) {
         var newA = al[i];
         newA.hide();
         newA.show();
       }
     } else {
+      // the button was unchecked so the script
+      // should hide the rough notation underlining
       for (let i = 0; i < al.length; i++) {
         var newA = al[i];
         newA.hide();
@@ -30,5 +37,8 @@
     }
   }
   // Add event listener to the checkbox
-  toggleButtonCheckbox.addEventListener('change', toggleRoughNotation);
+  // as long as it was detected in the document
+  if (toggleButtonCheckbox != null) {
+    toggleButtonCheckbox.addEventListener('change', toggleRoughNotation);
+  }
 </script>
