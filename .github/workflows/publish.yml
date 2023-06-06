@@ -10,6 +10,9 @@ on:
   pull_request:
     branches: [ master ]
 
+# Jobs for setup, rendering, and publishing
+# for the web site, using Python, Poetry,
+# and the Quarto publishing system
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
