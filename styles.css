@@ -217,6 +217,13 @@ sidebar .quarto-alternate-notebooks ul li a,
   display: none;
 }
 
+.nav-footer-left .footer-items .nav-link,
+.nav-footer-center .footer-items .nav-link,
+.nav-footer-right .footer-items .nav-link {
+  padding-left: 0.3em;
+  padding-right: 0.3em;
+}
+
 /* }}} */
 
 /* What's Cool? Toggle Button {{{ */
