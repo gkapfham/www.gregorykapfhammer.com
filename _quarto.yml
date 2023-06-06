@@ -63,6 +63,27 @@ website:
 
 format:
   html:
+    include-in-header:
+          - text: |
+              <script type="module">
+                import { annotate, annotationGroup } from 'https://unpkg.com/rough-notation?module';
+                const config = { type: 'highlight', multiline: true, iterations: 1, color: '#42A5F5' };
+                const n1 = document.querySelector('.abstract .special');
+                const a1 = annotate(n1, config);
+                // Get the checkbox element
+                var toggleButtonCheckbox = document.getElementById('toggle-button-checkbox');
+                // Function to toggle the rough notation
+                function toggleRoughNotation() {
+                  if (toggleButtonCheckbox.checked) {
+                    a1.hide();
+                    a1.show();
+                  } else {
+                    a1.hide();
+                  }
+                }
+                // Add event listener to the checkbox
+                toggleButtonCheckbox.addEventListener('change', toggleRoughNotation);
+              </script>
     mainfont: IBM Plex Sans
     monofont: IBM Plex Mono
     fontsize: 1.375em
