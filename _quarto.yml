@@ -68,13 +68,6 @@ format:
     include-in-header:
       - file: js/get-the-gist.js
       - file: html/header-include.html
-    include-before-body:
-      - text: |
-          <script>
-            <!--- HELLO --->
-            const theme = localStorage.getItem('theme') || 'light';
-            document.documentElement.dataset.theme = theme;
-          </script>
     mainfont: IBM Plex Sans
     monofont: IBM Plex Mono
     fontsize: 1.375em
