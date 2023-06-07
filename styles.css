@@ -114,6 +114,10 @@ pre {
   font-weight: 400;
 }
 
+.navbar .dropdown-item {
+  font-weight: 400 !important;
+}
+
 /* }}} */
 
 /* Table of Contents {{{ */
