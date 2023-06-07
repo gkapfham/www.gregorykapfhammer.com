@@ -3,6 +3,7 @@
 import argparse
 import os
 import sys
+from pathlib import Path
 
 import csscompressor
 import htmlmin
@@ -20,11 +21,18 @@ def minify_files(source_directory: str, destination_directory: str) -> None:
     for current_file_name in os.listdir(source_directory):
         # create the current filename subject to analysis
         analysis_file_path = os.path.join(source_directory, current_file_name)
-        # create the current filename for writing to file system
-        saving_file_path = os.path.join(destination_directory, current_file_name)
+        console.print(f"Analyzing file {analysis_file_path}")
         # dealing with a file and thus it is a candidate
         # for the minification process
         if os.path.isfile(analysis_file_path):
+            # create the current filename for writing to file system
+            saving_file_path_str = analysis_file_path
+            saving_file_path_str.replace(source_directory, destination_directory)
+            # saving_file_path_str = os.path.join(destination_directory, current_file_name)
+            console.print(f"Going to save to: {saving_file_path_str}")
+            destination_path = Path(saving_file_path_str)
+            # create the destination directory if it doesn't exist
+            destination_path.parent.absolute().mkdir(parents=True, exist_ok=True)
             # extract the extension from this filename so
             # that the script can check if it is one of
             # the types of files that can be minified
@@ -35,7 +43,7 @@ def minify_files(source_directory: str, destination_directory: str) -> None:
                     minified_content = csscompressor.compress(
                         open(analysis_file_path).read()
                     )
-                    with open(saving_file_path, "w") as file:
+                    with open(saving_file_path_str, "w") as file:
                         file.write(minified_content)
                     console.print(f"CSS: Minifying {analysis_file_path}")
                 except ValueError:
@@ -47,13 +55,13 @@ def minify_files(source_directory: str, destination_directory: str) -> None:
                     remove_comments=True,
                     remove_empty_space=True,
                 )
-                with open(saving_file_path, "w") as file:
+                with open(saving_file_path_str, "w") as file:
                     file.write(minified_content)
                 console.print(f"HTML: Minifying {analysis_file_path}")
             # minify the JS file
             elif extension == ".js":
                 minified_content = str(rjsmin.jsmin(open(analysis_file_path).read()))
-                with open(saving_file_path, "w") as file:
+                with open(saving_file_path_str, "w") as file:
                     file.write(minified_content)
                 console.print(f"JS: Minifying {analysis_file_path}")
             # do not have a minifier for a specific
