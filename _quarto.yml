@@ -14,9 +14,9 @@ website:
   page-navigation: true
   favicon: "rocket.svg"
   open-graph: true
-  site-url: https://www.gregorykapfhammer.com
-  repo-url: https://github.com/gkapfham/www.gregorykapfhammer.com
-  issue-url: https://github.com/gkapfham/www.gregorykapfhammer.com/issues/new
+  site-url: https://gmk-quarto.netlify.app
+  repo-url: https://github.com/gkapfham/www.gmk.com
+  issue-url: https://github.com/gkapfham/www.gmk.com/issues/new
   repo-actions: [source, edit, issue]
   search:
     location: navbar
