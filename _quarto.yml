@@ -23,6 +23,13 @@ website:
   reader-mode: false
   back-to-top-navigation: false
   navbar:
+    tools:
+      - icon: rss
+        menu:
+          - text: Papers
+            url: research/papers/index.xml
+          - text: Presentations
+            url: research/presentations/index.xml
     left:
       - href: index.qmd
         text: Home
