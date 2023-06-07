@@ -14,22 +14,24 @@ console = Console()
 
 DEFAULT_CONSOLE_STYLE = "bold blue"
 
+source_directory_root = ""
+
 
 def minify_files(source_directory: str, destination_directory: str) -> None:
     """Minify all of the files in the project directory."""
+    global source_directory_root
     # recursively iterate through all files and directories
     for current_file_name in os.listdir(source_directory):
         # create the current filename subject to analysis
         analysis_file_path = os.path.join(source_directory, current_file_name)
-        console.print(f"Analyzing file {analysis_file_path}")
         # dealing with a file and thus it is a candidate
         # for the minification process
         if os.path.isfile(analysis_file_path):
             # create the current filename for writing to file system
             saving_file_path_str = analysis_file_path
-            saving_file_path_str.replace(source_directory, destination_directory)
-            # saving_file_path_str = os.path.join(destination_directory, current_file_name)
-            console.print(f"Going to save to: {saving_file_path_str}")
+            saving_file_path_str = saving_file_path_str.replace(
+                source_directory_root, destination_directory
+            )
             destination_path = Path(saving_file_path_str)
             # create the destination directory if it doesn't exist
             destination_path.parent.absolute().mkdir(parents=True, exist_ok=True)
@@ -64,6 +66,7 @@ def minify_files(source_directory: str, destination_directory: str) -> None:
                 with open(saving_file_path_str, "w") as file:
                     file.write(minified_content)
                 console.print(f"JS: Minifying {analysis_file_path}")
+                console.print(f"JS: Saving to {saving_file_path_str}")
             # do not have a minifier for a specific
             # file and thus this file should be skipped
             else:
@@ -78,6 +81,7 @@ def minify_files(source_directory: str, destination_directory: str) -> None:
 
 def main() -> None:
     """Perform the steps for the main function."""
+    global source_directory_root
     # parse the command-line arguments using argparse
     parser = argparse.ArgumentParser()
     parser.add_argument("-s", "--source")
@@ -114,6 +118,8 @@ def main() -> None:
             f":clap: Using the source directory of {source_directory_path}\n",
             style=DEFAULT_CONSOLE_STYLE,
         )
+    # define the global source directory root
+    source_directory_root = source_directory_path
     # perform the minification of all of the files
     # inside of the directory; note that this is
     # a destructive operation that changes the
