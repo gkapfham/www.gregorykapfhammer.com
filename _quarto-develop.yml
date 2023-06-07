@@ -1,5 +1,12 @@
+project:
+  type: website
+  pre-render:
+    - scripts/parse-bibliography.py --force
+  post-render:
+    - scripts/copy-files.py
+
 format:
   html:
     include-in-header:
-      - file: _include/js/get-the-gist.js
-      - file: _include/html/header-include.html
+      - file: _optimize/js/get-the-gist.js
+      - file: _optimize/html/header-include.html
