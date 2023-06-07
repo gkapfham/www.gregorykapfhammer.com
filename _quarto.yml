@@ -1,7 +1,5 @@
 project:
   type: website
-  pre-render: scripts/parse-bibliography.py
-  post-render: scripts/copy-files.py
   resources: _resources
   preview:
     port: 5555
