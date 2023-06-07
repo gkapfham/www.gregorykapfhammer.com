@@ -137,6 +137,7 @@ download
 site_libs/
 _freeze
 _site
+_optimize
 
 ### Quarto: ignore generated files in research/papers/  ###
 ### created by a Python script; keep the index.qmd file ###
