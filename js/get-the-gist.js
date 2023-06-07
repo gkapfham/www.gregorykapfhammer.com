@@ -1,7 +1,7 @@
 <script type="module">
   // import the rough notation module
   import { annotate, annotationGroup } from 'https://unpkg.com/rough-notation?module';
-  // define a highlight that will be a mutiple-line underline that appears for all annotated text
+  // define a highlight that will be a multiple-line underline that appears for all annotated text
   const config = { type: 'underline', multiline: true, iterations: 1, strokeWidth: 4, animationDuration: 200, color: '#EF6C00' };
   // extract all of the elements that are designated as special
   // and thus subject to receiving the rough notation underline
