@@ -7,6 +7,7 @@ from pathlib import Path
 
 import csscompressor
 import htmlmin
+import minify_html
 import rjsmin
 from rich.console import Console
 
@@ -19,7 +20,7 @@ source_directory_root = ""
 
 def minify_files(source_directory: str, destination_directory: str) -> None:
     """Minify all of the files in the project directory."""
-    global source_directory_root
+    # global source_directory_root
     # recursively iterate through all files and directories
     for current_file_name in os.listdir(source_directory):
         # create the current filename subject to analysis
@@ -48,18 +49,21 @@ def minify_files(source_directory: str, destination_directory: str) -> None:
                     with open(saving_file_path_str, "w") as file:
                         file.write(minified_content)
                     console.print(f"CSS: Minifying {analysis_file_path}")
+                    console.print(f"CSS: Savinmg {saving_file_path_str}")
                 except ValueError:
                     console.print(f"CSS: Could not minifiy file {analysis_file_path}")
             # minify the HTML file
             elif extension == ".html":
-                minified_content = htmlmin.minify(
+                minified_content = minify_html.minify(
                     open(analysis_file_path).read(),
-                    remove_comments=True,
-                    remove_empty_space=True,
+                    minify_js=True,
+                    minify_css=True,
+                    keep_comments=False
                 )
                 with open(saving_file_path_str, "w") as file:
                     file.write(minified_content)
                 console.print(f"HTML: Minifying {analysis_file_path}")
+                console.print(f"HTML: Saving {saving_file_path_str}")
             # minify the JS file
             elif extension == ".js":
                 minified_content = str(rjsmin.jsmin(open(analysis_file_path).read()))
