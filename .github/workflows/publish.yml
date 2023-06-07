@@ -57,7 +57,7 @@ jobs:
           # 1a) conference papers
           # 1b) journal papers
           # 2) research presentations
-          poetry run python scripts/parse-bibliography.py --force
+          # poetry run python scripts/parse-bibliography.py --force
           # directly publish a version of the site to Netlify, using
           # the optimize profile that will perform minification
           poetry run quarto publish netlify --profile optimize
