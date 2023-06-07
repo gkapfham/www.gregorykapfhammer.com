@@ -58,7 +58,6 @@ jobs:
           # 1b) journal papers
           # 2) research presentations
           poetry run python scripts/parse-bibliography.py --force
-          # minify the CSS, JavaScript, and HTML files that are included
-          # poetry run python scripts/minify-files.py --source _include --destination _optimize --force --verbose
-          # directly publish a version of the site to Netlify
+          # directly publish a version of the site to Netlify, using
+          # the optimize profile that will perform minification
           poetry run quarto publish netlify --profile optimize
