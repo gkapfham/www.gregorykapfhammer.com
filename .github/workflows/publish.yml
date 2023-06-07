@@ -52,5 +52,13 @@ jobs:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           PYDEVD_DISABLE_FILE_VALIDATION: 1
         run: |
+          # generate the markdown files from the bibliography for:
+          # 1) research papers
+          # 1a) conference papers
+          # 1b) journal papers
+          # 2) research presentations
           poetry run python scripts/parse-bibliography.py --force
-          poetry run quarto publish netlify
+          # minify the CSS, JavaScript, and HTML files that are included
+          # poetry run python scripts/minify-files.py --source _include --destination _optimize --force --verbose
+          # directly publish a version of the site to Netlify
+          poetry run quarto publish netlify --profile optimize
