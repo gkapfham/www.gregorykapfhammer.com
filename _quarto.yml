@@ -12,7 +12,7 @@ website:
   page-navigation: true
   favicon: "rocket.svg"
   open-graph: true
-  site-url: https://gmk-quarto.netlify.app
+  site-url: https://gmkquarto.netlify.app
   repo-url: https://github.com/gkapfham/www.gmk.com
   issue-url: https://github.com/gkapfham/www.gmk.com/issues/new
   repo-actions: [source, edit, issue]
