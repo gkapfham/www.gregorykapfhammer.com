@@ -91,6 +91,6 @@ format:
     smooth-scroll: false
     link-external-icon: false
     link-external-newwindow: false
-    # link-external-filter: ^(?:http:|https:)\/\/gmk-quarto\.netlify\.app\/custom
+    # link-external-filter: ^(?:http:|https:)\/\/gmkquarto\.netlify\.app\/custom
     citations-hover: true
     footnotes-hover: true
