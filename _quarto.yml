@@ -89,8 +89,8 @@ format:
     # ensure that the back to top button
     # in the footer of the page works correctly
     smooth-scroll: false
-    link-external-icon: true
-    link-external-newwindow: true
-    link-external-filter: ^(?:http:|https:)\/\/gmk-quarto\.netlify\.app\/custom
+    link-external-icon: false
+    link-external-newwindow: false
+    # link-external-filter: ^(?:http:|https:)\/\/gmk-quarto\.netlify\.app\/custom
     citations-hover: true
     footnotes-hover: true
