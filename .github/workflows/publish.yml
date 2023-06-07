@@ -60,5 +60,5 @@ jobs:
           poetry run python scripts/parse-bibliography.py --force
           # directly publish a version of the site to Netlify, using
           # the optimize profile that will perform minification
-          poetry run quarto render --profile optimize
-          poetry run quarto publish netlify --no-render
+          # poetry run quarto render --profile optimize
+          poetry run quarto publish netlify
