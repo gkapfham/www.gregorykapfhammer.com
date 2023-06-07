@@ -8,5 +8,5 @@ project:
 format:
   html:
     include-in-header:
-      - file: _optimize/js/get-the-gist.js
-      - file: _optimize/html/header-include.html
+      - file: _include/js/get-the-gist.js
+      - file: _include/html/header-include.html
