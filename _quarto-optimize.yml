@@ -6,12 +6,6 @@ project:
   post-render:
     - scripts/minify-files.py
     - scripts/copy-files.py
-  resources: _resources
-  preview:
-    port: 5555
-    browser: false
-    watch-inputs: true
-    navigate: false
 
 format:
   html:
