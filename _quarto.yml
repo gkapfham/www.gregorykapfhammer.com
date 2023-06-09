@@ -47,7 +47,7 @@ website:
             href: research/index.qmd
           - text: "Papers"
             href: research/papers/index.qmd
-          - text: "Talks"
+          - text: "Presentations"
             href: research/presentations/index.qmd
   page-footer:
     left: "{{< fa copyright >}} GMK, [CC BY-SA](https://creativecommons.org/licenses/by-sa/4.0/)"
