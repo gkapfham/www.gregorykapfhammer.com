@@ -16,6 +16,8 @@ listing:
   sort-ui: true
   filter-ui: true
   fields: [title, author, date, description, categories]
+  feed:
+    title: "Research Presentations"
 execute:
   freeze: auto
 ---
