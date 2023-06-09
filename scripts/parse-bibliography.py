@@ -30,7 +30,7 @@ RETURN_TO_PAPER_LISTING = (
 )
 
 RETURN_TO_PRESENTATION_LISTING = (
-    "{{< fa circle-left >}} <a href='/research/papers/'>Return to Paper Listing</a>"
+    "{{< fa circle-left >}} <a href='/research/papers/'>Return to Presentation Listing</a>"
 )
 
 DOWNLOAD_RESEARCH_PAPER_STARTER = "{{< iconify fa6-solid file-pdf >}}"
