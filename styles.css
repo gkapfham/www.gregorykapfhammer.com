@@ -329,6 +329,29 @@ div.quarto-post .listing-categories .listing-category:hover {
   font-size: 0.75rem;
 }
 
+#title-block-header.quarto-title-block.default .quarto-title-meta {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.page-item.active .page-link:hover {
+  color: #fff !important;
+}
+
+thead,
+tbody,
+tfoot,
+tr,
+td,
+th {
+  border-style: none !important;
+  border-width: 0;
+}
+
+/* }}} */
+
+/* Featured Papers and Presentations {{{ */
+
 #featured-papers-pagination .listing-pagination {
   display: none;
 }
@@ -348,23 +371,23 @@ div.quarto-post .listing-categories .listing-category:hover {
   padding-bottom: 0em;
 }
 
-#title-block-header.quarto-title-block.default .quarto-title-meta {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
+#featured-presentations-pagination .listing-pagination {
+  display: none;
 }
 
-.page-item.active .page-link:hover {
-  color: #fff !important;
+#featured-presentations-pagination ul.pagination {
+  display: none;
+  float: right;
+  padding-left: 8px;
+  padding-top: 0.5em;
 }
 
-thead,
-tbody,
-tfoot,
-tr,
-td,
-th {
-  border-style: none !important;
-  border-width: 0;
+#listing-featured-presentations {
+  margin-bottom: -3.5rem !important;
+}
+
+#featured-presentations-pagination .quarto-listing {
+  padding-bottom: 0em;
 }
 
 /* }}} */
