@@ -10,7 +10,7 @@ project:
 website:
   title: ""
   page-navigation: true
-  favicon: "rocket.svg"
+  favicon: "icons/fxemoji-rocket.svg"
   open-graph: true
   site-url: https://gmkquarto.netlify.app
   repo-url: https://github.com/gkapfham/www.gmk.com

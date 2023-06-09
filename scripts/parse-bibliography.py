@@ -29,7 +29,12 @@ RETURN_TO_PAPER_LISTING = (
     "{{< fa circle-left >}} <a href='/research/papers/'>Return to Paper Listing</a>"
 )
 
-DOWNLOAD_PUBLICATION_STARTER = "{{< fa file-pdf >}}"
+RETURN_TO_PRESENTATION_LISTING = (
+    "{{< fa circle-left >}} <a href='/research/papers/'>Return to Paper Listing</a>"
+)
+
+DOWNLOAD_RESEARCH_PAPER_STARTER = "{{< iconify fa6-solid file-pdf >}}"
+DOWNLOAD_RESEARCH_PRESENTATION_STARTER = "{{< iconify fa6-solid file-pdf >}}"
 DOWNLOAD_SPEAKERDECK_STARTER = "{{< fa brands speaker-deck >}}"
 DOWNLOAD_GITHUB_STARTER = "{{< fa brands github >}}"
 
@@ -201,8 +206,8 @@ def create_publication_footer(publication: Dict[str, str]) -> str:
         # create the links to the presentation based on the ID
         # for each paper; operates under the assumption that every
         # paper will have a link for the paper itself and its slides
-        download_paper = f"{DOWNLOAD_PUBLICATION_STARTER} <a href='/research/papers/key/{publication_id}{DASH}{PAPER_PDF}'>Paper</a>"
-        download_presentation = f"{DOWNLOAD_PUBLICATION_STARTER} <a href='/research/presentations/key/{publication_id}{DASH}{PRESENTATION_PDF}'>Presentation</a>"
+        download_paper = f"{DOWNLOAD_RESEARCH_PAPER_STARTER} <a href='/research/papers/key/{publication_id}{DASH}{PAPER_PDF}'>Paper</a>"
+        download_presentation = f"{DOWNLOAD_RESEARCH_PRESENTATION_STARTER} <a href='/research/presentations/key/{publication_id}{DASH}{PRESENTATION_PDF}'>Presentation</a>"
         # add the paper and presentation download links to the footer
         publication_footer = (
             details_header
@@ -270,7 +275,7 @@ def create_publication_footer(publication: Dict[str, str]) -> str:
         + NEWLINE
         + bibtex_reference_fenced_code_block
         + NEWLINE
-        + RETURN_TO_PAPER_LISTING
+        + RETURN_TO_PRESENTATION_LISTING
     )
     # return the footer for this publication
     return publication_footer
