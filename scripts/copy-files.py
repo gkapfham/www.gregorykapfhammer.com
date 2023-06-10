@@ -1,6 +1,7 @@
 """Copy files from a source directory to a destination directory."""
 
 import argparse
+import itertools
 import os
 import shutil
 import sys
@@ -9,8 +10,21 @@ from pathlib import Path
 from rich.console import Console
 
 DEFAULT_GLOB = "*.pdf"
-DEFAULT_SOURCE_DIRECTORY = "_resources/research/papers/key"
-DEFAULT_DESTINATION_DIRECTORY = "_site/research/papers/key"
+
+DEFAULT_SOURCE_DIRECTORY_PAPERS = "_resources/download/research/papers/key"
+DEFAULT_DESTINATION_DIRECTORY_PAPERS = "_site/download/research/papers/key"
+
+DEFAULT_SOURCE_DIRECTORY_PRESENTATIONS = "_resources/download/research/presentations/key"
+DEFAULT_DESTINATION_DIRECTORY_PRESENTATIONS = "_site/download/research/presentations/key"
+
+DEFAULT_SOURCE_DIRECTORIES = [
+    DEFAULT_SOURCE_DIRECTORY_PAPERS,
+    DEFAULT_SOURCE_DIRECTORY_PRESENTATIONS,
+]
+DEFAULT_DESTINATION_DIRECTORIES = [
+    DEFAULT_DESTINATION_DIRECTORY_PAPERS,
+    DEFAULT_DESTINATION_DIRECTORY_PRESENTATIONS,
+]
 
 DEFAULT_CONSOLE_STYLE = "bold blue"
 
@@ -51,41 +65,57 @@ def main() -> None:
     parser.add_argument("-d", "--destination")
     parser.add_argument("-f", "--force", action="store_true")
     args = parser.parse_args()
-    # determine the valid directory for the source
-    source_directory = DEFAULT_SOURCE_DIRECTORY
     # do not run the script unless quarto is rendering
     # all of the files (i.e., do not run during preview)
     if not os.getenv("QUARTO_PROJECT_RENDER_ALL") and not args.force:
         sys.exit()
-    # use the default source directory if none was specified
-    if args.source is None:
+    # perform the default copies when there is no source and destination
+    if args.source is None and args.destination is None:
         console.print(
-            f":clap: Using the default source directory of {source_directory}\n",
+            ":tada: Perform default copies since there were no parameters\n",
             style=DEFAULT_CONSOLE_STYLE,
         )
-    # use the specified source directory
+        # iterate through all of the default source and destination
+        # directories in a lockstep fashion and perform copies
+        for source_directory_current, destination_directory_current in zip(
+            DEFAULT_SOURCE_DIRECTORIES, DEFAULT_DESTINATION_DIRECTORIES
+        ):
+            # determine the valid directory for the source
+            source_directory = source_directory_current
+            # use the current source directory
+            console.print(
+                f":clap: Using the source directory of {source_directory}\n",
+                style=DEFAULT_CONSOLE_STYLE,
+            )
+            # use the valid destination directory
+            destination_directory = destination_directory_current
+            console.print(
+                f":clap: Using the destination directory of {destination_directory}\n",
+                style=DEFAULT_CONSOLE_STYLE,
+            )
+            # perform the copy from the source to the desination
+            copy_files(source_directory, destination_directory)
+    elif args.source is not None and args.destination is not None:
+        source_directory = args.source
+        destination_directory = args.destination
+        # use the current source directory
+        console.print(
+            f":clap: Using the source directory of {source_directory}\n",
+            style=DEFAULT_CONSOLE_STYLE,
+        )
+        # use the valid destination directory
+        destination_directory = destination_directory_current
+        console.print(
+            f":clap: Using the destination directory of {destination_directory}\n",
+            style=DEFAULT_CONSOLE_STYLE,
+        )
+        # perform the copy from the source to the desination
+        copy_files(source_directory, destination_directory)
     else:
         console.print(
-            ":clap: Using {args.source} as specified by --source",
+            "\n:wink: Could not perform copy due to invalid arguments\n",
             style=DEFAULT_CONSOLE_STYLE,
         )
-        source_directory = args.source
-    # use the default destination directory
-    destination_directory = DEFAULT_DESTINATION_DIRECTORY
-    if args.source is None:
-        console.print(
-            f":clap: Using the default destination directory of {destination_directory}\n",
-            style=DEFAULT_CONSOLE_STYLE,
-        )
-    # use the specified destination directory
-    else:
-        console.print(
-            ":clap: Using {args.destination} as specified by --destination",
-            style=DEFAULT_CONSOLE_STYLE,
-        )
-        source_directory = args.source
-    # perform the copy from the source to the desination
-    copy_files(source_directory, destination_directory)
 
 
 if __name__ == "__main__":

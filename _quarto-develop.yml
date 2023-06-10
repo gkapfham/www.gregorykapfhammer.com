@@ -1,8 +1,13 @@
 project:
   type: website
   pre-render:
+    # create the .qmd files for the
+    # research papers and presentations
     - scripts/parse-bibliography.py
   post-render:
+    # copy all of the PDF files from
+    # the _resources directory to
+    # the download/ directory
     - scripts/copy-files.py
 
 format:

@@ -1,4 +1,4 @@
-"""Parse the bibtex file."""
+"""Parse the bibtex file and create Markdown-based Quarto files for papers and presentations."""
 
 import argparse
 import copy
@@ -25,11 +25,16 @@ EMPTY = ""
 NEWLINE = "\n"
 SPACE = " "
 
+GIST_TAG = '<span class="gist">'
+
 RETURN_TO_PAPER_LISTING = (
     "{{< fa circle-left >}} <a href='/research/papers/'>Return to Paper Listing</a>"
 )
 
-DOWNLOAD_PUBLICATION_STARTER = "{{< fa file-pdf >}}"
+RETURN_TO_PRESENTATION_LISTING = "{{< fa circle-left >}} <a href='/research/presentations/'>Return to Presentation Listing</a>"
+
+DOWNLOAD_RESEARCH_PAPER_STARTER = "{{< iconify fa6-solid file-pdf >}}"
+DOWNLOAD_RESEARCH_PRESENTATION_STARTER = "{{< iconify fa6-solid file-pdf >}}"
 DOWNLOAD_SPEAKERDECK_STARTER = "{{< fa brands speaker-deck >}}"
 DOWNLOAD_GITHUB_STARTER = "{{< fa brands github >}}"
 
@@ -185,33 +190,61 @@ def create_categories(publication: Dict[str, str]) -> None:
         publication["categories"] = f"[{', '.join(found_keyword_list)}]"
 
 
-def create_publication_footer(publication: Dict[str, str]) -> str:
+def create_publication_footer(publication: Dict[str, str], paper: bool = True) -> str:
     """Create a footer for the publications that includes all of the remaining links."""
     # create a running string for the publication footer
     publication_footer = EMPTY
     # only display download details about the paper
     # if they are available for this specific publication
     if "nodownload" not in publication.keys():
+        # make a reference to the "get the gist!" if there is
+        # markup inside of the abstract to designate that there
+        # is a need for the toggle button in the specific file
+        get_the_gist_toggle = EMPTY
+        if "abstract" in publication.keys():
+            # extract the abstract from this publication
+            publication_abstract = publication["abstract"]
+            # there is a "Get the Gist!" tag inside of the
+            # abstract and this means that there should be
+            # a toggle button for this publication's description
+            if GIST_TAG in publication_abstract:
+                get_the_gist_toggle = "{{< include /_gist.qmd >}}"
         # create the details header that will contain
         # the links to different resources for this publication
         details_header = "<div class='quarto-title-details-heading'>Details</div>"
         # extract the identifier for this paper as this is
         # what connects to the name of the files for this paper
         publication_id = publication["ID"]
-        # create the links to the presentation based on the ID
-        # for each paper; operates under the assumption that every
-        # paper will have a link for the paper itself and its slides
-        download_paper = f"{DOWNLOAD_PUBLICATION_STARTER} <a href='/research/papers/key/{publication_id}{DASH}{PAPER_PDF}'>Paper</a>"
-        download_presentation = f"{DOWNLOAD_PUBLICATION_STARTER} <a href='/research/presentations/key/{publication_id}{DASH}{PRESENTATION_PDF}'>Presentation</a>"
+        # assume that both the paper and the presentation links are
+        # empty and then fill them ass appropriate depending on
+        # the type of publication for which the script writes the footer
+        download_paper = EMPTY
+        download_presentation = EMPTY
+        # create the links for the paper
+        if paper is True:
+            # create the links to the presentation based on the ID
+            # for each paper; operates under the assumption that every
+            # paper will have a link for the paper itself and its slides
+            download_paper = f"{DOWNLOAD_RESEARCH_PAPER_STARTER} <a href='/download/research/papers/key/{publication_id}{DASH}{PAPER_PDF}'>Paper</a>" + NEWLINE + BREAK
+            if "presented" in publication.keys():
+                download_presentation = f"{DOWNLOAD_RESEARCH_PRESENTATION_STARTER} <a href='/download/research/presentations/key/{publication_id}{DASH}{PRESENTATION_PDF}'>Presentation</a>" + NEWLINE + BREAK
+        # create the link for a presentation
+        else:
+            # create the links to the presentation based on the ID
+            # for the presentation; operates under the assumption that every
+            # presentation will have a link for the presentation itself and its slides
+            download_presentation = f"{DOWNLOAD_RESEARCH_PRESENTATION_STARTER} <a href='/download/research/presentations/key/{publication_id}{DASH}{PRESENTATION_PDF}'>Presentation</a>" + NEWLINE + BREAK
         # add the paper and presentation download links to the footer
         publication_footer = (
-            details_header
+            get_the_gist_toggle
+            + NEWLINE
+            + details_header
             + download_paper
-            + NEWLINE
-            + BREAK
+            # + NEWLINE
+            # + BREAK
             + download_presentation
-            + NEWLINE
-            + BREAK
+            # + NEWLINE
+            # + BREAK
         )
         # if the paper has details about the SpeakerDeck link
         # for its presentation slides, then add them to the footer
@@ -260,6 +293,14 @@ def create_publication_footer(publication: Dict[str, str]) -> str:
     bibtex_reference = bibtexparser.dumps(db)
     # create a fenced code block out of the bibtex entry
     bibtex_reference_fenced_code_block = f"```bibtex{NEWLINE}{bibtex_reference}```"
+    # define a link label for the listing that will be returned
+    # to based on whether this publication is a presentation or
+    # a paper; the default parameter's value in a paper
+    return_to_listing = ""
+    if paper:
+        return_to_listing = RETURN_TO_PAPER_LISTING
+    else:
+        return_to_listing = RETURN_TO_PRESENTATION_LISTING
     # assemble the entire footer for this specific publication
     publication_footer = (
         publication_footer
@@ -270,7 +311,7 @@ def create_publication_footer(publication: Dict[str, str]) -> str:
         + NEWLINE
         + bibtex_reference_fenced_code_block
         + NEWLINE
-        + RETURN_TO_PAPER_LISTING
+        + return_to_listing
     )
     # return the footer for this publication
     return publication_footer
@@ -347,7 +388,17 @@ def write_presentation_to_file(
     # extract the addendum details
     if "addendum" in presentation.keys():
         presentation_addendum = presentation["addendum"]
+        # remove newlines inside of the addendum listing as these will lead
+        # to the creation of malformed Markdown meta-data regions when
+        # they are used as the list of the authors
+        presentation_addendum = presentation_addendum.replace("\n", " ")
+        # remove the phrase "Joint work with" as it is not needed for the display
+        # of information for this specific presentation (now standardizing on
+        # the simple listing of authors and not designating the presenter)
         presentation_addendum = presentation_addendum.replace("Joint work with", "")
+        # remove the "and" inside of the joint work listing since we can
+        # place the names of authors inside of a list and then they will be
+        # rendered correctly by Quarto for this specific presentation
         presentation_addendum = presentation_addendum.replace(", and", ", ")
         # create a list of the authors instead of using a string
         # of author names joined by the word "and"; this will then
@@ -355,6 +406,9 @@ def write_presentation_to_file(
         # of the singular label "author"
         presentation_author = presentation_addendum + " and " + presentation["author"]
     else:
+        # if there was no joint work then this means that there is only a single
+        # presenter being listed (i.e., the person who gave the talk which is,
+        # in this case, always going to be me) and thus it is the author
         presentation_author = presentation["author"]
     # create the listing of the authors separated with commas in a list
     publication_author_no_and = replace_word_in_string(presentation_author, "and", ",")
@@ -368,9 +422,11 @@ def write_presentation_to_file(
     publication_dump_string = publication_dump_string.replace("'[", "[")
     publication_dump_string = publication_dump_string.replace("]'", "]")
     # write the complete contents of the string to the designated file
+    # indicate that this is a presentation's footer and not a paper's
+    # footer by passing paper=False as the second parameter
     write_file_if_changed(
         str(presentation_file),
-        f"---\n{PAGE_FULL_ATTRIBUTE}\n{publication_dump_string}---\n\n{create_publication_footer(presentation)}",
+        f"---\n{PAGE_FULL_ATTRIBUTE}\n{publication_dump_string}---\n\n{create_publication_footer(presentation, paper=False)}",
     )
 
 
@@ -511,8 +567,18 @@ def main() -> None:
         # this version is used for writing out the
         # bibtex entry for each research publication
         original_publication = copy.deepcopy(publication)
-        # delete not-needed entries from the original_publication
-        not_needed_keys = ["abstract", "data", "presented", "presentation", "tool"]
+        # delete not-needed entries from the original_publication;
+        # this is the publication that will be displayed inside of
+        # the fenced code block for a specific publication
+        not_needed_keys = [
+            "abstract",
+            "data",
+            "presented",
+            "presentation",
+            "talk",
+            "tool",
+            "video",
+        ]
         for not_needed_key in not_needed_keys:
             if not_needed_key in original_publication.keys():
                 del original_publication[not_needed_key]
