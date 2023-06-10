@@ -190,7 +190,7 @@ def create_categories(publication: Dict[str, str]) -> None:
         publication["categories"] = f"[{', '.join(found_keyword_list)}]"
 
 
-def create_publication_footer(publication: Dict[str, str]) -> str:
+def create_publication_footer(publication: Dict[str, str], paper: bool = True) -> str:
     """Create a footer for the publications that includes all of the remaining links."""
     # create a running string for the publication footer
     publication_footer = EMPTY
@@ -269,6 +269,14 @@ def create_publication_footer(publication: Dict[str, str]) -> str:
     bibtex_reference = bibtexparser.dumps(db)
     # create a fenced code block out of the bibtex entry
     bibtex_reference_fenced_code_block = f"```bibtex{NEWLINE}{bibtex_reference}```"
+    # define a link label for the listing that will be returned
+    # to based on whether this publication is a presentation or
+    # a paper; the default parameter's value in a paper
+    return_to_listing = ""
+    if paper:
+        return_to_listing = RETURN_TO_PAPER_LISTING
+    else:
+        return_to_listing = RETURN_TO_PRESENTATION_LISTING
     # assemble the entire footer for this specific publication
     publication_footer = (
         publication_footer
@@ -279,7 +287,7 @@ def create_publication_footer(publication: Dict[str, str]) -> str:
         + NEWLINE
         + bibtex_reference_fenced_code_block
         + NEWLINE
-        + RETURN_TO_PRESENTATION_LISTING
+        + return_to_listing
     )
     # return the footer for this publication
     return publication_footer
@@ -379,9 +387,11 @@ def write_presentation_to_file(
     publication_dump_string = publication_dump_string.replace("'[", "[")
     publication_dump_string = publication_dump_string.replace("]'", "]")
     # write the complete contents of the string to the designated file
+    # indicate that this is a presentation's footer and not a paper's
+    # footer by passing paper=False as the second parameter
     write_file_if_changed(
         str(presentation_file),
-        f"---\n{PAGE_FULL_ATTRIBUTE}\n{publication_dump_string}---\n\n{create_publication_footer(presentation)}",
+        f"---\n{PAGE_FULL_ATTRIBUTE}\n{publication_dump_string}---\n\n{create_publication_footer(presentation, paper=False)}",
     )
 
 
