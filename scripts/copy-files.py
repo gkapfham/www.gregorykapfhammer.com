@@ -9,8 +9,8 @@ from pathlib import Path
 from rich.console import Console
 
 DEFAULT_GLOB = "*.pdf"
-DEFAULT_SOURCE_DIRECTORY = "_resources/research/papers/key"
-DEFAULT_DESTINATION_DIRECTORY = "_site/research/papers/key"
+DEFAULT_SOURCE_DIRECTORY = "_resources/download/research/papers/key"
+DEFAULT_DESTINATION_DIRECTORY = "_site/download/research/papers/key"
 
 DEFAULT_CONSOLE_STYLE = "bold blue"
 
