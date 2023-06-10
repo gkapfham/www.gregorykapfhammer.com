@@ -362,9 +362,17 @@ def write_presentation_to_file(
     # extract the addendum details
     if "addendum" in presentation.keys():
         presentation_addendum = presentation["addendum"]
-        console.print(presentation_addendum)
+        # remove newlines inside of the addendum listing as these will lead
+        # to the creation of malformed Markdown meta-data regions when
+        # they are used as the list of the authors
         presentation_addendum = presentation_addendum.replace("\n", " ")
+        # remove the phrase "Joint work with" as it is not needed for the display
+        # of information for this specific presentation (now standardizing on
+        # the simple listing of authors and not designating the presenter)
         presentation_addendum = presentation_addendum.replace("Joint work with", "")
+        # remove the "and" inside of the joint work listing since we can
+        # place the names of authors inside of a list and then they will be
+        # rendered correctly by Quarto for this specific presentation
         presentation_addendum = presentation_addendum.replace(", and", ", ")
         # create a list of the authors instead of using a string
         # of author names joined by the word "and"; this will then
@@ -372,6 +380,9 @@ def write_presentation_to_file(
         # of the singular label "author"
         presentation_author = presentation_addendum + " and " + presentation["author"]
     else:
+        # if there was no joint work then this means that there is only a single
+        # presenter being listed (i.e., the person who gave the talk which is,
+        # in this case, always going to be me) and thus it is the author
         presentation_author = presentation["author"]
     # create the listing of the authors separated with commas in a list
     publication_author_no_and = replace_word_in_string(presentation_author, "and", ",")
