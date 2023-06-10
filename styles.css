@@ -177,7 +177,8 @@ sidebar .quarto-alternate-notebooks ul li a,
 }
 
 .toc-actions a:hover {
-  color: #ef6c00;
+  /* color: #ef6c00; */
+  color: #e65100 !important;
 }
 
 .nav-link {
@@ -299,7 +300,8 @@ sidebar .quarto-alternate-notebooks ul li a,
 }
 
 .quarto-title .quarto-categories .quarto-category:hover {
-  color: #ef6c00 !important;
+  /* color: #ef6c00 !important; */
+  color: #e65100 !important;
   text-decoration: none;
 }
 
@@ -317,7 +319,8 @@ div.quarto-post .listing-categories .listing-category {
 }
 
 div.quarto-post .listing-categories .listing-category:hover {
-  color: #ef6c00 !important;
+  /* color: #ef6c00 !important; */
+  color: #e65100 !important;
   text-decoration: none;
 }
 
