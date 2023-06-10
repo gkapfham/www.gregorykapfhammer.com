@@ -200,7 +200,7 @@ def create_publication_footer(publication: Dict[str, str], paper: bool = True) -
         # make a reference to the "get the gist!" if there is
         # markup inside of the abstract to designate that there
         # is a need for the toggle button in the specific file
-        get_the_gist_toggle = ""
+        get_the_gist_toggle = EMPTY
         if "abstract" in publication.keys():
             # extract the abstract from this publication
             publication_abstract = publication["abstract"]
@@ -225,14 +225,15 @@ def create_publication_footer(publication: Dict[str, str], paper: bool = True) -
             # create the links to the presentation based on the ID
             # for each paper; operates under the assumption that every
             # paper will have a link for the paper itself and its slides
-            download_paper = f"{DOWNLOAD_RESEARCH_PAPER_STARTER} <a href='/research/papers/key/{publication_id}{DASH}{PAPER_PDF}'>Paper</a>"
-            download_presentation = f"{DOWNLOAD_RESEARCH_PRESENTATION_STARTER} <a href='/research/presentations/key/{publication_id}{DASH}{PRESENTATION_PDF}'>Presentation</a>"
+            download_paper = f"{DOWNLOAD_RESEARCH_PAPER_STARTER} <a href='/download/research/papers/key/{publication_id}{DASH}{PAPER_PDF}'>Paper</a>"
+            if "presented" in publication.keys():
+                download_presentation = f"{DOWNLOAD_RESEARCH_PRESENTATION_STARTER} <a href='/download/research/presentations/key/{publication_id}{DASH}{PRESENTATION_PDF}'>Presentation</a>"
         # create the link for a presentation
         else:
             # create the links to the presentation based on the ID
             # for the presentation; operates under the assumption that every
             # presentation will have a link for the presentation itself and its slides
-            download_presentation = f"{DOWNLOAD_RESEARCH_PRESENTATION_STARTER} <a href='/research/presentations/key/{publication_id}{DASH}{PRESENTATION_PDF}'>Presentation</a>"
+            download_presentation = f"{DOWNLOAD_RESEARCH_PRESENTATION_STARTER} <a href='/download/research/presentations/key/{publication_id}{DASH}{PRESENTATION_PDF}'>Presentation</a>"
         # add the paper and presentation download links to the footer
         publication_footer = (
             get_the_gist_toggle
