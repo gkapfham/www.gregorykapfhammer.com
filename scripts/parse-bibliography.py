@@ -1,4 +1,4 @@
-"""Parse the bibtex file."""
+"""Parse the bibtex file and create Markdown-based Quarto files for papers and presentations."""
 
 import argparse
 import copy
