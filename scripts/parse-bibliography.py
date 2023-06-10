@@ -25,6 +25,8 @@ EMPTY = ""
 NEWLINE = "\n"
 SPACE = " "
 
+GIST_TAG = '<span class="gist">'
+
 RETURN_TO_PAPER_LISTING = (
     "{{< fa circle-left >}} <a href='/research/papers/'>Return to Paper Listing</a>"
 )
@@ -195,8 +197,18 @@ def create_publication_footer(publication: Dict[str, str], paper: bool = True) -
     # only display download details about the paper
     # if they are available for this specific publication
     if "nodownload" not in publication.keys():
-        # make a reference to the "get the gist!"
-        get_the_gist_toggle = "{{< include /_gist.qmd >}}"
+        # make a reference to the "get the gist!" if there is
+        # markup inside of the abstract to designate that there
+        # is a need for the toggle button in the specific file
+        get_the_gist_toggle = ""
+        if "abstract" in publication.keys():
+            # extract the abstract from this publication
+            publication_abstract = publication["abstract"]
+            # there is a "Get the Gist!" tag inside of the
+            # abstract and this means that there should be
+            # a toggle button for this publication's description
+            if GIST_TAG in publication_abstract:
+                get_the_gist_toggle = "{{< include /_gist.qmd >}}"
         # create the details header that will contain
         # the links to different resources for this publication
         details_header = "<div class='quarto-title-details-heading'>Details</div>"
