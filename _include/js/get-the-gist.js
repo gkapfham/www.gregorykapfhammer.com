@@ -5,7 +5,7 @@
   const config = { type: 'underline', multiline: true, iterations: 1, strokeWidth: 4, animationDuration: 200, color: '#EF6C00' };
   // extract all of the elements that are designated as special
   // and thus subject to receiving the rough notation underline
-  const nl = document.querySelectorAll('.special');
+  const nl = document.querySelectorAll('.gist');
   var al = []
   // create annotation objects for each of the elements
   // that are subject to rough notation underlining; these
