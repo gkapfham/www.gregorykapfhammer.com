@@ -1,6 +1,8 @@
 project:
   type: website
   resources: _resources
+  render:
+    - "!_resources/"
   preview:
     port: 5555
     browser: false
