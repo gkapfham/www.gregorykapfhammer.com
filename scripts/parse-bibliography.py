@@ -197,6 +197,8 @@ def create_publication_footer(publication: Dict[str, str]) -> str:
     # only display download details about the paper
     # if they are available for this specific publication
     if "nodownload" not in publication.keys():
+        # make a reference to the "get the gist!"
+        get_the_gist_toggle = "{{< include /_gist.qmd >}}"
         # create the details header that will contain
         # the links to different resources for this publication
         details_header = "<div class='quarto-title-details-heading'>Details</div>"
@@ -210,7 +212,9 @@ def create_publication_footer(publication: Dict[str, str]) -> str:
         download_presentation = f"{DOWNLOAD_RESEARCH_PRESENTATION_STARTER} <a href='/research/presentations/key/{publication_id}{DASH}{PRESENTATION_PDF}'>Presentation</a>"
         # add the paper and presentation download links to the footer
         publication_footer = (
-            details_header
+            get_the_gist_toggle
+            + NEWLINE
+            + details_header
             + download_paper
             + NEWLINE
             + BREAK
@@ -352,6 +356,8 @@ def write_presentation_to_file(
     # extract the addendum details
     if "addendum" in presentation.keys():
         presentation_addendum = presentation["addendum"]
+        console.print(presentation_addendum)
+        presentation_addendum = presentation_addendum.replace("\n", " ")
         presentation_addendum = presentation_addendum.replace("Joint work with", "")
         presentation_addendum = presentation_addendum.replace(", and", ", ")
         # create a list of the authors instead of using a string
