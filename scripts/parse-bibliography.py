@@ -553,8 +553,10 @@ def main() -> None:
         # this version is used for writing out the
         # bibtex entry for each research publication
         original_publication = copy.deepcopy(publication)
-        # delete not-needed entries from the original_publication
-        not_needed_keys = ["abstract", "data", "presented", "presentation", "tool"]
+        # delete not-needed entries from the original_publication;
+        # this is the publication that will be displayed inside of
+        # the fenced code block for a specific publication
+        not_needed_keys = ["abstract", "data", "presented", "presentation", "talk", "tool", "video"]
         for not_needed_key in not_needed_keys:
             if not_needed_key in original_publication.keys():
                 del original_publication[not_needed_key]
