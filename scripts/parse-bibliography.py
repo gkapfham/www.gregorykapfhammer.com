@@ -215,11 +215,24 @@ def create_publication_footer(publication: Dict[str, str], paper: bool = True) -
         # extract the identifier for this paper as this is
         # what connects to the name of the files for this paper
         publication_id = publication["ID"]
-        # create the links to the presentation based on the ID
-        # for each paper; operates under the assumption that every
-        # paper will have a link for the paper itself and its slides
-        download_paper = f"{DOWNLOAD_RESEARCH_PAPER_STARTER} <a href='/research/papers/key/{publication_id}{DASH}{PAPER_PDF}'>Paper</a>"
-        download_presentation = f"{DOWNLOAD_RESEARCH_PRESENTATION_STARTER} <a href='/research/presentations/key/{publication_id}{DASH}{PRESENTATION_PDF}'>Presentation</a>"
+        # assume that both the paper and the presentation links are
+        # empty and then fill them ass appropriate depending on
+        # the type of publication for which the script writes the footer
+        download_paper = EMPTY
+        download_presentation = EMPTY
+        # create the links for the paper
+        if paper is True:
+            # create the links to the presentation based on the ID
+            # for each paper; operates under the assumption that every
+            # paper will have a link for the paper itself and its slides
+            download_paper = f"{DOWNLOAD_RESEARCH_PAPER_STARTER} <a href='/research/papers/key/{publication_id}{DASH}{PAPER_PDF}'>Paper</a>"
+            download_presentation = f"{DOWNLOAD_RESEARCH_PRESENTATION_STARTER} <a href='/research/presentations/key/{publication_id}{DASH}{PRESENTATION_PDF}'>Presentation</a>"
+        # create the link for a presentation
+        else:
+            # create the links to the presentation based on the ID
+            # for the presentation; operates under the assumption that every
+            # presentation will have a link for the presentation itself and its slides
+            download_presentation = f"{DOWNLOAD_RESEARCH_PRESENTATION_STARTER} <a href='/research/presentations/key/{publication_id}{DASH}{PRESENTATION_PDF}'>Presentation</a>"
         # add the paper and presentation download links to the footer
         publication_footer = (
             get_the_gist_toggle
@@ -556,7 +569,15 @@ def main() -> None:
         # delete not-needed entries from the original_publication;
         # this is the publication that will be displayed inside of
         # the fenced code block for a specific publication
-        not_needed_keys = ["abstract", "data", "presented", "presentation", "talk", "tool", "video"]
+        not_needed_keys = [
+            "abstract",
+            "data",
+            "presented",
+            "presentation",
+            "talk",
+            "tool",
+            "video",
+        ]
         for not_needed_key in not_needed_keys:
             if not_needed_key in original_publication.keys():
                 del original_publication[not_needed_key]
