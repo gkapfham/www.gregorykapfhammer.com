@@ -6,13 +6,14 @@ listing:
   contents:
     - "../blog/**/*.qmd"
     - "!../blog/index.qmd"
+  type: grid
   categories: true
   date-format: "YYYY"
   sort-ui: true
   filter-ui: true
-  fields: [date, title, reading-time, categories]
-#   feed:
-#     title: "Blog"
+  fields: [date, title, categories]
+  feed:
+    title: "Blog"
 # execute:
 #   freeze: auto
 ---
