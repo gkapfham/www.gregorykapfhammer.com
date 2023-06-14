@@ -273,6 +273,10 @@ div.quarto-post .thumbnail {
   font-size: 0.7em;
 }
 
+.description {
+  font-style: italic;
+}
+
 /* }}} */
 
 /* Papers and Presentations {{{ */
