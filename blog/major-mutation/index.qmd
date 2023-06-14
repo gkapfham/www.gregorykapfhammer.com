@@ -56,6 +56,10 @@ are interested in Major, then you may also want to investigate the use of
 [PIT](http://pitest.org/), another mutation testing tool for programs written in
 the Java language.
 
+::: {.callout-note appearance="simple"}
+
+## Further Details
+
 Interested in learning more about this topic? Since this blog post was first
 written, my colleagues and students and I have published additional papers
 about mutation testing, with two of the most noteworthy being [@McCurdy2016]
@@ -63,3 +67,5 @@ about mutation testing, with two of the most noteworthy being [@McCurdy2016]
 >}}](/research/papers/McCurdy2016/index.qmd)
 and [@McMinn2019] [{{< iconify fa6-solid book-open
 >}}](/research/papers/McMinn2019/index.qmd).
+
+:::

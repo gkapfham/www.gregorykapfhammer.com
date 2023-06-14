@@ -8,16 +8,24 @@ description: Data integrity is central to big data initiatives!
 aliases: ["testing/database/idea/2015/07/05/Big-Data-Big-Deal/"]
 ---
 
-This statement was written to support my participation in a panel at the
+::: {.callout-note appearance="simple"}
+
+## Important Context
+
+This post was written to support my participation in a panel at the
 <em>27th International Conference on Software Engineering and Knowledge
 Engineering</em>. To view the accompanying slides for this presentation, please
-refer to {% include_cached _popovers/paper_reference.html
-cite="Kapfhammer2015a" trailing="." %} If you want to learn more about new work
-that my colleagues and students and I are conducting in the area of efficiently
-testing data-centric applications, then please read {% include_cached
-_popovers/paper_reference.html cite="Kinneer2015" %} and {% include
-_popovers/paper_reference.html cite="Kinneer2015a" trailing="," %} two papers
+refer to [@Kapfhammer2015a] [{{< iconify fa6-solid book-open
+>}}](/research/presentations/Kapfhammer2015a/index.qmd).
+If you want to learn more about new work that my colleagues and students and I
+are conducting in the area of efficiently testing data-centric applications,
+then please read [@Kinneer2015] [{{< iconify fa6-solid book-open
+>}}](/research/papers/Kinneer2015/index.qmd) and
+[@Kinneer2015a] [{{< iconify fa6-solid book-open
+>}}](/research/papers/Kinneer2015a/index.qmd), two papers
 that were also presented at the same conference.
+
+:::
 
 Big data analytics software allows researchers and practitioners to create
 descriptive models and make predictions. Often characterized by the "three Vs"
@@ -61,8 +69,19 @@ engineering and big data to ensure that we have a positive influence on society
 &mdash; thus proving to be a "bigger deal" together than we would have been on
 our own.
 
-Interested in learning more about this topic? Since this blog post was first written, my colleagues and students and I
-have published several additional papers about the testing of relational database schemas, with the most noteworthy one
-being {% include_cached _popovers/paper_reference.html cite="McMinn2015" trailing="." %} If you are interested in using
-SchemaAnalyst to test your own database schema, then please download and use the tool, which is now available from the
-GitHub site <a href="https://github.com/schemaanalyst/schemaanalyst">schemaanalyst/schemaanalyst</a>.
+
+::: {.callout-note appearance="simple"}
+
+## Further Details
+
+Interested in learning more about this topic? Since this blog post was first
+written, my colleagues and students and I have published several additional
+papers about the testing of relational database schemas, with the most
+noteworthy one being [@McMinn2015] [{{< iconify fa6-solid book-open
+>}}](/research/papers/McMinn2015/index.qmd).
+If you are interested in using SchemaAnalyst to test your own database schema,
+then please download and use the tool, which is now available from the GitHub
+site <a
+href="https://github.com/schemaanalyst/schemaanalyst">schemaanalyst/schemaanalyst</a>.
+
+:::
