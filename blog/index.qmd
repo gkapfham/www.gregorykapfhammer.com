@@ -11,7 +11,7 @@ listing:
   date-format: "YYYY"
   sort-ui: true
   filter-ui: true
-  fields: [date, title, categories]
+  fields: [date, title, description, categories]
   feed:
     title: "Blog"
 # execute:
