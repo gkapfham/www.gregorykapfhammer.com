@@ -6,13 +6,15 @@ listing:
   contents:
     - "../blog/**/*.qmd"
     - "!../blog/index.qmd"
-  sort: year
-  type: grid
+  sort:
+    - "date desc"
+    - "title desc"
+  type: default
   categories: true
   date-format: "YYYY"
   sort-ui: true
   filter-ui: true
-  fields: [date, title, description, categories]
+  fields: [author, date, title, reading-time, description, categories]
   feed:
     title: "Blog"
 # execute:
