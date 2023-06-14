@@ -6,6 +6,7 @@ listing:
   contents:
     - "../blog/**/*.qmd"
     - "!../blog/index.qmd"
+  sort: year
   type: grid
   categories: true
   date-format: "YYYY"
