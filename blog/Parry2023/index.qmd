@@ -23,7 +23,11 @@ abstract: <span class="gist">A flaky test is a test case whose outcome changes w
   models; and (3) correlations between various test case features and the probability
   of the test case being flaky.
 author: [Owain Parry, Gregory M. Kapfhammer, Michael Hilton, Phil McMinn]
-categories: [empirical study, flaky tests, machine learning]
+# categories: [empirical study, flaky tests, machine learning]
+categories:
+  - "empirical study"
+  - "flaky tests"
+  - "machine learning"
 date: '2023-01-01'
 date-format: YYYY
 description: <em>Empirical Software Engineering Journal, 28:72</em>
