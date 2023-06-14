@@ -41,6 +41,20 @@ listing:
     fields: [author, title, description]
     max-items: 3
     page-size: 3
+  - id: featured-posts
+    contents:
+      - "blog/**"
+      - "!blog/index.qmd"
+    sort:
+      - "date desc"
+      - "author title categories"
+    type: default
+    date-format: "YYYY"
+    sort-ui: false
+    filter-ui: false
+    fields: [author, title, description]
+    max-items: 3
+    page-size: 3
 execute:
   freeze: auto
 ---
@@ -102,13 +116,18 @@ and [subscribing](support/index.qmd) to my mailing list.
 :::{#featured-presentations}
 :::
 
-{{< fa rocket >}} <em>Review</em> all of my  [research presentations](research/presentations/index.qmd)
+{{< fa rocket >}} <em>Review</em> all of my [research presentations](research/presentations/index.qmd)
 
 ## Professional Service
 
 ## Useful Software
 
 ## Recent Posts
+
+:::{#featured-posts}
+:::
+
+{{< fa rocket >}} <em>Read</em> all of my [blog posts](blog/index.qmd)
 
 ## Highlighted Courses
 
