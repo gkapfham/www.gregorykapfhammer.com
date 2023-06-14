@@ -28,6 +28,8 @@ website:
     tools:
       - icon: rss
         menu:
+          - text: Blog
+            url: blog/index.xml
           - text: Papers
             url: research/papers/index.xml
           - text: Presentations
@@ -111,3 +113,6 @@ format:
     # link-external-filter: ^(?:http:|https:)\/\/gmkquarto\.netlify\.app\/custom
     citations-hover: true
     footnotes-hover: true
+    citeproc: true
+    appendix-style: default
+    bibliography: bibliography/bibtex/bibliography_kapfhammer.bib
