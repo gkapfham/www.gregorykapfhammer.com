@@ -1,0 +1,59 @@
+---
+page-layout: full
+ENTRYTYPE: article
+ID: Parry2023
+abstract: <span class="gist">A flaky test is a test case whose outcome changes without
+  modification to the code of the test case or the program under test.</span> These
+  tests disrupt continuous integration, cause a loss of developer productivity, and
+  limit the efficiency of testing. Many flaky test detection techniques are rerunning-based,
+  meaning they require repeated test case executions at a considerable time cost,
+  or are machine learning-based, and thus they are fast but offer only an approximate
+  solution with variable detection performance. These two extremes leave developers
+  with a stark choice. <span class="gist">This paper introduces CANNIER</span>, an
+  approach for reducing the time cost of rerunning-based detection techniques by combining
+  them with machine learning models.<span class="gist">The empirical evaluation involving
+  89,668 test cases from 30 Python projects demonstrates that CANNIER can reduce the
+  time cost of existing rerunning-based techniques by an order of magnitude while
+  maintaining a detection performance that is significantly better than machine learning
+  models alone.</span> Furthermore, the comprehensive study extends existing work
+  on machine learning-based detection and reveals a number of additional findings,
+  including (1) the performance of machine learning models for detecting polluter
+  test cases; (2) using the mean values of dynamic test case features from repeated
+  measurements can slightly improve the detection performance of machine learning
+  models; and (3) correlations between various test case features and the probability
+  of the test case being flaky.
+author: [Owain Parry , Gregory M. Kapfhammer , Michael Hilton , Phil
+
+  McMinn]
+categories: [empirical study, flaky tests, machine learning]
+date: '2023-01-01'
+date-format: YYYY
+description: <em>Empirical Software Engineering Journal, 28:72</em>
+number: '72'
+title: 'Empirically evaluating flaky test detection techniques combining test
+
+  case rerunning and machine learning models'
+tool: https://github.com/flake-it/pytest-cannier
+volume: '28'
+---
+
+{{< include /_gist.qmd >}}
+<div class='quarto-title-details-heading'>Details</div>{{< iconify fa6-solid file-pdf >}} <a href='/download/research/papers/key/Parry2023-paper.pdf'>Paper</a>
+<br>{{< fa brands github >}} <a href='https://github.com/flake-it/pytest-cannier'> flake-it/pytest-cannier</a>
+
+
+
+<div class='quarto-title-reference-heading'>Reference</div>
+```bibtex
+@article{Parry2023,
+ author = {Owain Parry and Gregory M. Kapfhammer and Michael Hilton and Phil
+McMinn},
+ journal = {Empirical Software Engineering Journal},
+ number = {72},
+ title = {Empirically evaluating flaky test detection techniques combining test
+case rerunning and machine learning models},
+ volume = {28},
+ year = {2023}
+}
+```
+{{< fa circle-left >}} <a href='/research/papers/'>Return to Paper Listing</a>
