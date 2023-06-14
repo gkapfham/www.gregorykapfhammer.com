@@ -1,0 +1,28 @@
+---
+title: "Blog"
+toc: true
+page-layout: full
+listing:
+  contents:
+    - "../blog/**/*.qmd"
+    - "!../blog/index.qmd"
+  sort: year
+  type: grid
+  categories: true
+  date-format: "YYYY"
+  sort-ui: true
+  filter-ui: true
+  fields: [date, title, description, categories]
+  feed:
+    title: "Blog"
+# execute:
+#   freeze: auto
+---
+
+```{python}
+from rich.console import Console
+console = Console()
+console.print(
+    ":rocket: Collaboratively crafting these papers was so much fun!"
+)
+```

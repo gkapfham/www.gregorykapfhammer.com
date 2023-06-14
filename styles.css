@@ -252,6 +252,37 @@ sidebar .quarto-alternate-notebooks ul li a,
 
 /* }}} */
 
+/* Blog {{{ */
+
+div.quarto-post .thumbnail {
+  display: none;
+  flex-basis: 0%;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.quarto-grid-item .listing-categories {
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 5px;
+  padding-top: 10px;
+}
+
+.quarto-grid-item .card-text {
+  font-style: italic;
+  font-size: 0.7em;
+}
+
+.description {
+  font-style: italic;
+}
+
+.listing-description {
+  font-style: italic;
+}
+
+/* }}} */
+
 /* Papers and Presentations {{{ */
 
 .quarto-title-reference-heading {
@@ -319,6 +350,25 @@ div.quarto-post .listing-categories .listing-category {
 }
 
 div.quarto-post .listing-categories .listing-category:hover {
+  /* color: #ef6c00 !important; */
+  color: #e65100 !important;
+  text-decoration: none;
+}
+
+div.quarto-grid-item .listing-categories .listing-category {
+  padding: 0.25em 0.75em;
+  font-size: 0.55em;
+  font-weight: 500;
+  text-transform: uppercase;
+  border: solid 1.5px;
+  border-radius: 0.25rem;
+  opacity: 1;
+  cursor: pointer;
+  margin-right: 4px;
+  margin-bottom: 4px;
+}
+
+div.quarto-grid-item .listing-categories .listing-category:hover {
   /* color: #ef6c00 !important; */
   color: #e65100 !important;
   text-decoration: none;
@@ -393,6 +443,25 @@ th {
 }
 
 #featured-presentations-pagination .quarto-listing {
+  padding-bottom: 0em;
+}
+
+#featured-posts-pagination .listing-pagination {
+  display: none;
+}
+
+#featured-posts-pagination ul.pagination {
+  display: none;
+  float: right;
+  padding-left: 8px;
+  padding-top: 0.5em;
+}
+
+#listing-featured-posts {
+  margin-bottom: -3.5rem !important;
+}
+
+#featured-posts-pagination .quarto-listing {
   padding-bottom: 0em;
 }
 
