@@ -1,33 +1,34 @@
 ---
-page-layout: full
 author: Gregory M. Kapfhammer
 categories:
-  - "empirical study"
-  - "flaky tests"
-  - "machine learning"
+  - empirical
+  - flaky
+  - machine
 date: '2023-01-01'
 date-format: "YYYY"
 description: "Empirical Software Engineering Journal, 28:72"
 title: 'blogging Empirically evaluating flaky test detection techniques combining test case rerunning and machine learning models'
 ---
 
-{{< include /_gist.qmd >}}
-<div class='quarto-title-details-heading'>Details</div>{{< iconify fa6-solid file-pdf >}} <a href='/download/research/papers/key/Parry2023-paper.pdf'>Paper</a>
-<br>{{< fa brands github >}} <a href='https://github.com/flake-it/pytest-cannier'> flake-it/pytest-cannier</a>
+test
+
+<!-- {{< include /_gist.qmd >}} -->
+<!-- <div class='quarto-title-details-heading'>Details</div>{{< iconify fa6-solid file-pdf >}} <a href='/download/research/papers/key/Parry2023-paper.pdf'>Paper</a> -->
+<!-- <br>{{< fa brands github >}} <a href='https://github.com/flake-it/pytest-cannier'> flake-it/pytest-cannier</a> -->
 
 
 
-<div class='quarto-title-reference-heading'>Reference</div>
-```bibtex
-@article{Parry2023,
- author = {Owain Parry and Gregory M. Kapfhammer and Michael Hilton and Phil
-McMinn},
- journal = {Empirical Software Engineering Journal},
- number = {72},
- title = {Empirically evaluating flaky test detection techniques combining test
-case rerunning and machine learning models},
- volume = {28},
- year = {2023}
-}
-```
-{{< fa circle-left >}} <a href='/research/papers/'>Return to Paper Listing</a>
+<!-- <div class='quarto-title-reference-heading'>Reference</div> -->
+<!-- ```bibtex -->
+<!-- @article{Parry2023, -->
+<!--  author = {Owain Parry and Gregory M. Kapfhammer and Michael Hilton and Phil -->
+<!-- McMinn}, -->
+<!--  journal = {Empirical Software Engineering Journal}, -->
+<!--  number = {72}, -->
+<!--  title = {Empirically evaluating flaky test detection techniques combining test -->
+<!-- case rerunning and machine learning models}, -->
+<!--  volume = {28}, -->
+<!--  year = {2023} -->
+<!-- } -->
+<!-- ``` -->
+<!-- {{< fa circle-left >}} <a href='/research/papers/'>Return to Paper Listing</a> -->
