@@ -277,6 +277,10 @@ div.quarto-post .thumbnail {
   font-style: italic;
 }
 
+.listing-description {
+  font-style: italic;
+}
+
 /* }}} */
 
 /* Papers and Presentations {{{ */
@@ -439,6 +443,25 @@ th {
 }
 
 #featured-presentations-pagination .quarto-listing {
+  padding-bottom: 0em;
+}
+
+#featured-posts-pagination .listing-pagination {
+  display: none;
+}
+
+#featured-posts-pagination ul.pagination {
+  display: none;
+  float: right;
+  padding-left: 8px;
+  padding-top: 0.5em;
+}
+
+#listing-featured-posts {
+  margin-bottom: -3.5rem !important;
+}
+
+#featured-posts-pagination .quarto-listing {
   padding-bottom: 0em;
 }
 
