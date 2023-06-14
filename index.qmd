@@ -43,7 +43,7 @@ listing:
     page-size: 3
   - id: featured-posts
     contents:
-      - "blog/**"
+      - "blog/**/*.qmd"
       - "!blog/index.qmd"
     sort:
       - "date desc"
