@@ -22,17 +22,13 @@ abstract: <span class="gist">A flaky test is a test case whose outcome changes w
   measurements can slightly improve the detection performance of machine learning
   models; and (3) correlations between various test case features and the probability
   of the test case being flaky.
-author: [Owain Parry , Gregory M. Kapfhammer , Michael Hilton , Phil
-
-  McMinn]
+author: [Owain Parry, Gregory M. Kapfhammer, Michael Hilton, Phil McMinn]
 categories: [empirical study, flaky tests, machine learning]
 date: '2023-01-01'
 date-format: YYYY
 description: <em>Empirical Software Engineering Journal, 28:72</em>
 number: '72'
-title: 'Empirically evaluating flaky test detection techniques combining test
-
-  case rerunning and machine learning models'
+title: 'blogging Empirically evaluating flaky test detection techniques combining test case rerunning and machine learning models'
 tool: https://github.com/flake-it/pytest-cannier
 volume: '28'
 ---
