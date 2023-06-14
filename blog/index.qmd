@@ -8,7 +8,7 @@ listing:
     - "!../blog/index.qmd"
   sort: year
   type: grid
-  categories: false
+  categories: true
   date-format: "YYYY"
   sort-ui: true
   filter-ui: true
