@@ -23,9 +23,15 @@ execute:
 ---
 
 ```{python}
+from pathlib import Path
 from rich.console import Console
+
 console = Console()
+present_dir = Path(".")
+subdirs = [pdir for pdir in present_dir.iterdir() if pdir.is_dir()]
+present_count = len(subdirs)
+
 console.print(
-    f":rocket: Collaboratively crafting these papers was so much fun!"
+    f":rocket: Check out the slides for these {present_count} presentations!"
 )
 ```
