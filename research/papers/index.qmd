@@ -23,9 +23,15 @@ execute:
 ---
 
 ```{python}
+from pathlib import Path
 from rich.console import Console
+
 console = Console()
+paper_dir = Path(".")
+subdirs = [pdir for pdir in paper_dir.iterdir() if pdir.is_dir()]
+paper_count = len(subdirs)
+
 console.print(
-    ":rocket: Collaboratively crafting these papers was so much fun!"
+    f":rocket: It was super-fun to collaboratively create these {paper_count} papers!"
 )
 ```
