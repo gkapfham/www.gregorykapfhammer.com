@@ -10,7 +10,6 @@ def count_software(file_path: str) -> int:
     with open(file_path, "r") as file:
         html_content = file.read()
     pattern = r'<li\s+class="software"\s*>'
-    matching_tags = re.findall(pattern, html_content)
     return len(re.findall(pattern, html_content))
 
 console = Console()
