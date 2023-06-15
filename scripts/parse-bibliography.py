@@ -351,7 +351,8 @@ def write_publication_to_file(
     # create the categories
     create_categories(publication)
     # create the file for this paper in the papers directory
-    papers_directory = Path(f"research/papers/{publication_id}/")
+    publication_id_lowercase = publication_id.lower()
+    papers_directory = Path(f"research/papers/{publication_id_lowercase}/")
     papers_directory.mkdir(parents=True, exist_ok=True)
     publication_file = Path(papers_directory / "index.qmd")
     publication_file.touch()
