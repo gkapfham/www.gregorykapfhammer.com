@@ -55,6 +55,8 @@ website:
             href: research/presentations/index.qmd
       - text: "Outreach"
         menu:
+          - text: "Software"
+            href: software/index.qmd
           - text: "Blog"
             href: blog/index.qmd
   page-footer:
