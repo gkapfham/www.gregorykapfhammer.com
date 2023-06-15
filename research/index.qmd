@@ -7,6 +7,15 @@ title-block-banner: false
 bibliography: ../bibliography/bibtex/bibliography_kapfhammer.bib
 ---
 
+```{python}
+from rich.console import Console
+
+console = Console()
+console.print(
+    f":rocket: Explore my research in fields like testing and debugging!"
+)
+```
+
 ## Overview
 
 <span class="gist">As an experimental computer scientist, the goal of my
