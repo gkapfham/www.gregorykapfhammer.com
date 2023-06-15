@@ -67,6 +67,12 @@ li,
   margin-bottom: -0.25rem !important;
 }
 
+.software {
+  font-size: 20px;
+  margin-top: 0rem;
+  margin-bottom: 0.1rem !important;
+}
+
 pre {
   font-family: "IBM Plex Mono" !important;
   overflow-x: auto !important;
