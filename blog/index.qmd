@@ -17,8 +17,8 @@ listing:
   fields: [author, date, title, reading-time, description, categories]
   feed:
     title: "Blog"
-# execute:
-#   freeze: auto
+execute:
+  freeze: auto
 ---
 
 ```{python}
