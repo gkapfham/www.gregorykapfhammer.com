@@ -22,9 +22,15 @@ execute:
 ---
 
 ```{python}
+from pathlib import Path
 from rich.console import Console
+
 console = Console()
+blog_dir = Path(".")
+subdirs = [bdir for bdir in blog_dir.iterdir() if bdir.is_dir()]
+subdir_count = len(subdirs)
+
 console.print(
-    ":rocket: Collaboratively crafting these papers was so much fun!"
+    f":rocket: Enjoy reading these {subdir_count} blog posts! What else should I write about?"
 )
 ```
