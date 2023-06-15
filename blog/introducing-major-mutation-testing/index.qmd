@@ -1,6 +1,6 @@
 ---
 author: Gregory M. Kapfhammer
-title: Using Major to perform mutation analysis of test suites for Java programs
+title: Introducing major for the mutation analysis of the tests for Java programs
 date: '2014-01-01'
 date-format: YYYY
 categories: [post, mutation testing, software tool]
@@ -31,13 +31,13 @@ expensive. This all changed with the design, implementation, and release of <a
 href="http://www.mutation-testing.org">Major</a>, a compiler-integrated
 mutation testing tool for the Java programming language. You can learn more
 about Major by reading [@Just2011a] [{{< iconify fa6-solid book-open
->}}](/research/papers/Just2011a/index.qmd) and
+>}}](/research/papers/just2011a/index.qmd) and
 [@Just2011b] [{{< iconify fa6-solid book-open
->}}](/research/papers/Just2011b/index.qmd).
+>}}](/research/papers/just2011b/index.qmd).
 More details about how Major makes mutation testing scalable through use of
 non-redundant mutation operators and test suite prioritization is available in
 [@Just2012b] [{{< iconify fa6-solid book-open
->}}](/research/papers/Just2012b/index.qmd).
+>}}](/research/papers/just2012b/index.qmd).
 Starting to use the tool is as easy as changing the Java compiler that you use
 at build time, as demonstrated by the following line from Major's online
 documentation.
@@ -62,10 +62,10 @@ the Java language.
 
 Interested in learning more about this topic? Since this blog post was first
 written, my colleagues and students and I have published additional papers
-about mutation testing, with two of the most noteworthy being [@McCurdy2016]
+about mutation testing, with two noteworthy examples being [@McCurdy2016]
 [{{< iconify fa6-solid book-open
->}}](/research/papers/McCurdy2016/index.qmd)
+>}}](/research/papers/mccurdy2016/index.qmd)
 and [@McMinn2019] [{{< iconify fa6-solid book-open
->}}](/research/papers/McMinn2019/index.qmd).
+>}}](/research/papers/mcminn2019/index.qmd).
 
 :::

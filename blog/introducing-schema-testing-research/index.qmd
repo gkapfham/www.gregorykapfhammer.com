@@ -33,7 +33,7 @@ exercise the constraints in the database schema and assessing the effectiveness
 of the generated data through the use of mutation analysis.
 
 The paper [@Kapfhammer2013] [{{< iconify fa6-solid book-open
->}}](/research/papers/Kapfhammer2013/index.qmd) introduces a search-based
+>}}](/research/papers/kapfhammer2013/index.qmd) introduces a search-based
 technique for generating database table data with the intention of exercising
 the integrity constraints placed on table columns. The testing tool described
 in this paper, <a href="http://schemaanalyst.org/">SchemaAnalyst</a>, can
@@ -43,7 +43,7 @@ in the database schema. </p>
 Of course, the process of automatically generating test data raises the
 question "well, how good is this data?" The paper [@Wright2013] [{{< iconify
 fa6-solid book-open
->}}](/research/papers/Wright2013/index.qmd) introduces efficient
+>}}](/research/papers/wright2013/index.qmd) introduces efficient
 techniques for answering this question. The presented mutation analysis methods
 insert simple faults into the database's schema and check to see whether or not
 the test cases can find them. Intuitively, the tests are not very good if they
@@ -61,7 +61,7 @@ Interested in learning more about this topic? Since this blog post was first
 written, my colleagues and students and I have published several additional
 papers about the testing of relational database schemas, with the most
 noteworthy one being [@McMinn2015] [{{< iconify fa6-solid book-open
->}}](/research/papers/McMinn2015/index.qmd). If you are interested in using
+>}}](/research/papers/mcminn2015/index.qmd). If you are interested in using
 SchemaAnalyst to test your program's relational database schema, then please
 download and use the tool, which is now available from the GitHub site <a
 href="https://github.com/schemaanalyst/schemaanalyst">schemaanalyst/schemaanalyst</a>.

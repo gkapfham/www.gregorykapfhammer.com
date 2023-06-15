@@ -20,9 +20,9 @@ refer to [@Kapfhammer2015a] [{{< iconify fa6-solid book-open
 If you want to learn more about new work that my colleagues and students and I
 are conducting in the area of efficiently testing data-centric applications,
 then please read [@Kinneer2015] [{{< iconify fa6-solid book-open
->}}](/research/papers/Kinneer2015/index.qmd) and
+>}}](/research/papers/kinneer2015/index.qmd) and
 [@Kinneer2015a] [{{< iconify fa6-solid book-open
->}}](/research/papers/Kinneer2015a/index.qmd), two papers
+>}}](/research/papers/kinneer2015a/index.qmd), two papers
 that were also presented at the same conference.
 
 :::
@@ -77,7 +77,7 @@ Interested in learning more about this topic? Since this blog post was first
 written, my colleagues and students and I have published several additional
 papers about the testing of relational database schemas, with the most
 noteworthy one being [@McMinn2015] [{{< iconify fa6-solid book-open
->}}](/research/papers/McMinn2015/index.qmd).
+>}}](/research/papers/mcminn2015/index.qmd).
 If you are interested in using SchemaAnalyst to test your own database schema,
 then please download and use the tool, which is now available from the GitHub
 site <a
