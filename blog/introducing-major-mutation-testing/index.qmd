@@ -1,10 +1,10 @@
 ---
 author: Gregory M. Kapfhammer
-title: Introducing major for the mutation analysis of the tests for Java programs
+title: Introducing Major for the mutation analysis of the tests for Java programs
 date: '2014-01-01'
 date-format: YYYY
 categories: [post, mutation testing, software tool]
-description: Have a JUnit test suite? Use Major to assess its quality!
+description: Have a JUnit tests? Use Major to assess their quality!
 aliases: ["testing/mutation/research/2014/10/25/Major-Mutation/"]
 ---
 
