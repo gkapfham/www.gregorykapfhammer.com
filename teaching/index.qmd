@@ -25,29 +25,17 @@ Learners can access the content from my recent courses through platforms called
 [Proactive Programmers](https://proactiveprogrammers.com/) and [OS
 Sketch](https://www.os-sketch.com/). By clicking on the following links you can
 learn more about data abstraction, discrete structures, and operating systems!
-Of course, previous course materials are available either through the following
-year-by-year list or by [contacting me](/contact/) with your request.
+With that said, previous course materials are available by [contacting
+me](/contact/) with your request.
 
 ## Recent Courses
-
-Overview of recent courses
-
-### Data Abstraction
 
 - [Data
   Abstraction](https://proactiveprogrammers.com/data-abstraction/introduction-data-abstraction/):
   Build and manipulate correct and efficient data structures
 
-### Discrete Structures
-
 - [Discrete
   Structures](https://proactiveprogrammers.com/discrete-structures/introduction-discrete-structures/):
   Clearly connect mathematics to Python programming
 
-### Operating Systems
-
 - [Operating Systems](https://www.os-sketch.com/): Build and understand operating system components
-
-### Research Methods
-
-## Philosophy
