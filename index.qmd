@@ -125,26 +125,13 @@ and [subscribing](support/index.qmd) to my mailing list.
 - [GatorGrader](https://github.com/GatorEducator/gatorgrader): Automated
   assessment for source code and technical writing
 
-- [Database Testing](research/index.qmd#Details#Database Testing): Automatically
-  test relational database schemas
+- [TaDa](https://github.com/Tada-Project/tada): Automated order-of-growth
+  analysis for Python functions
 
-- [Web Testing](research/index.qmd#Details#Web Testing): Detecting and repairing
-  responsive web page layout
+- [CommitCanvas](https://github.com/CommittedTeam/CommitCanvas): Extensible
+  checking of Git commit messages with pre-commit
 
-<ul>
-
-<li><a target="_blank" rel="noopener"
-href="https://github.com/GatorEducator/gatorgrader">GatorGrader</a>: Automated assessment for source code and technical writing</li>
-
-<li><a target="_blank" rel="noopener"
-href="https://github.com/Tada-Project/tada">TaDa</a>: Automated order-of-growth
-analysis for Python functions</li>
-
-<li><a target="_blank" rel="noopener"
-href="https://github.com/CommittedTeam/CommitCanvas">CommitCanvas</a>:
-Extensible checking of Git commit messages with pre-commit</li>
-
-</ul>
+{{< fa rocket >}} <em>Download</em> all of my [software tools](software/index.qmd)
 
 ## Recent Posts
 
