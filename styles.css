@@ -152,7 +152,6 @@ pre {
 .sidebar nav[role="doc-toc"] ul > li > ul > li > a.active {
   border-left: 1px solid #e95420;
   color: #e65100 !important;
-  /* color: #ef6c00 !important; */
 }
 
 #quarto-margin-sidebar .toc-actions .bi:before {
@@ -189,7 +188,6 @@ sidebar .quarto-alternate-notebooks ul li a,
 }
 
 .toc-actions a:hover {
-  /* color: #ef6c00; */
   color: #e65100 !important;
 }
 
@@ -343,7 +341,6 @@ div.quarto-post .thumbnail {
 }
 
 .quarto-title .quarto-categories .quarto-category:hover {
-  /* color: #ef6c00 !important; */
   color: #e65100 !important;
   text-decoration: none;
 }
@@ -363,7 +360,6 @@ div.quarto-post .listing-categories .listing-category {
 }
 
 div.quarto-post .listing-categories .listing-category:hover {
-  /* color: #ef6c00 !important; */
   color: #e65100 !important;
   text-decoration: none;
 }
@@ -383,7 +379,6 @@ div.quarto-grid-item .listing-categories .listing-category {
 }
 
 div.quarto-grid-item .listing-categories .listing-category:hover {
-  /* color: #ef6c00 !important; */
   color: #e65100 !important;
   text-decoration: none;
 }
