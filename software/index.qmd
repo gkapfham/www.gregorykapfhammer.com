@@ -92,8 +92,8 @@ fa6-solid book-open
 >}}](/research/papers/kinneer2015/index.qmd) and
 [@Kinneer2015a] [{{< iconify fa6-solid book-open
 >}}](/research/papers/kinneer2015a/index.qmd) both describe experiments with
-[expose](https://github.com/kinneerc/ExpOse/) tool. As additional examples, the
-[testinspect](https://github.com/flake-it/testinspect) and
+the [expose](https://github.com/kinneerc/ExpOse/) tool. As additional examples,
+the [testinspect](https://github.com/flake-it/testinspect) and
 [showflakes](https://github.com/flake-it/showflakes) tools both supported
 research that resulted in the publication of [@Parry2022a] [{{< iconify
 fa6-solid book-open
@@ -102,9 +102,10 @@ fa6-solid book-open
 enabled the publication of papers like [@Alsharif2020] [{{< iconify fa6-solid
 book-open
 >}}](/research/papers/alsharif2020/index.qmd). It is also important to note
-that, while I played a active role in the conception, documentation, use, and
-evaluation of each of these research prototypes, I normally was not the lead
-developer of the tool. See each projects contributor list for more details!
+that, while I played an active role in the conception, documentation, use, and
+experimental evaluation of each of these research prototypes, I normally was not
+the lead developer of the tool. See the contributor list in each project's
+GitHub repository for contributor details!
 
 :::
 
