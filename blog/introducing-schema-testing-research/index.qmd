@@ -61,7 +61,7 @@ the schema constraint coverage and mutation adequacy scores.</span>
 Interested in learning more about this topic? Since this blog post was first
 written, my colleagues and students and I have published several additional
 papers about the testing of relational database schemas, with noteworthy ones
-being McMinn2015] [{{< iconify fa6-solid book-open
+being [@McMinn2015] [{{< iconify fa6-solid book-open
 >}}](/research/papers/mcminn2015/index.qmd) and [@Alsharif2020] [{{< iconify
 >fa6-solid book-open }}](/research/papers/alsharif2020/index.qmd). If you are
 >interested in using
