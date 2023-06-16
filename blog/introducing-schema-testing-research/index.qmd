@@ -64,7 +64,7 @@ papers about the testing of relational database schemas, with noteworthy ones
 being [@McMinn2015] [{{< iconify fa6-solid book-open
 >}}](/research/papers/mcminn2015/index.qmd) and [@Alsharif2020] [{{< iconify
 >fa6-solid book-open }}](/research/papers/alsharif2020/index.qmd). If you are
->interested in using
+interested in using
 SchemaAnalyst to test your program's relational database schema, then please
 download and use the tool, which is available from the GitHub repository <a
 href="https://github.com/schemaanalyst/schemaanalyst">schemaanalyst/schemaanalyst</a>.
