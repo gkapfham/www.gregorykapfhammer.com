@@ -351,6 +351,9 @@ def write_publication_to_file(
     # create the categories
     create_categories(publication)
     # create the file for this paper in the papers directory
+    # make sure to use a lower-case directory name to be
+    # consistent and to ensure that Quarto correctly
+    # resolves all of the categories links from a paper back
     publication_id_lowercase = publication_id.lower()
     papers_directory = Path(f"research/papers/{publication_id_lowercase}/")
     papers_directory.mkdir(parents=True, exist_ok=True)
@@ -393,8 +396,12 @@ def write_presentation_to_file(
     presentation["date-format"] = f"{only_year}"
     # create the categories
     create_categories(presentation)
-    # create the file for this paper in the papers directory
-    presentations_directory = Path(f"research/presentations/{presentation_id}/")
+    # create the file for this paper in the presentations directory
+    # make sure to use a lower-case directory name to be
+    # consistent and to ensure that Quarto correctly
+    # resolves all of the categories links from a paper back
+    presentation_id_lowercase = presentation_id.lower()
+    presentations_directory = Path(f"research/presentations/{presentation_id_lowercase}/")
     presentations_directory.mkdir(parents=True, exist_ok=True)
     presentation_file = Path(presentations_directory / "index.qmd")
     presentation_file.touch()
@@ -558,6 +565,17 @@ def main() -> None:
             ":boom: Deleting the subdirectories in the research/papers/ directory due to --delete\n"
         )
         delete_subdirectories_preserve_files(str(papers_directory))
+    # delete the research/presentations directory if it exists;
+    # make sure not to delete any of the files inside of this
+    # directory as those could be an index.qmd file with content.
+    # Note that the web site's directory structure contains a
+    # mixture of generated and manually written content.
+    presentations_directory = Path("research/presentations/")
+    if presentations_directory.exists() and args.delete:
+        console.print(
+            ":boom: Deleting the subdirectories in the research/presentations/ directory due to --delete\n"
+        )
+        delete_subdirectories_preserve_files(str(presentations_directory))
     # if the directory does not exist, then create it;
     # this will not fail even if the directory exists. The
     # directory should normally exist because there is a mixture
