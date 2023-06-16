@@ -78,6 +78,22 @@ verification of responsive layout failure reports</li>
 
 </ul>
 
+::: {.callout-note appearance="simple"}
+
+## Research Connection
+
+Many, but not all, of these software tools are connected to the [research
+papers](/research/papers/index.qmd) and [research
+presentations](/research/presentations/index.qmd) published by me and my
+research collaborators. For instance, the papers [@Kinneer2015] [{{< iconify
+fa6-solid book-open
+>}}](/research/papers/kinneer2015/index.qmd) and
+[@Kinneer2015a] [{{< iconify fa6-solid book-open
+>}}](/research/papers/kinneer2015a/index.qmd) both describe experiments with
+[expose](https://github.com/kinneerc/ExpOse/) tool.
+
+:::
+
 ## Research Resources
 
 <ul>
