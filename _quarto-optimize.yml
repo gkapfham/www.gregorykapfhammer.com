@@ -12,3 +12,5 @@ format:
     include-in-header:
       - file: _optimize/js/get-the-gist.js
       - file: _optimize/html/header-include.html
+    include-after-body:
+      - file: _include/js/instant-page.js
