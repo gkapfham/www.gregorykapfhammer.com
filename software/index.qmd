@@ -260,21 +260,37 @@ Slides for the presentation of the QSIC 2014 paper</li>
 
 <ul>
 
-<li class="software"><a target="_blank" rel="noopener" href="https://github.com/schemaanalyst/domino-replicate">domino-replicate</a>: Data and analysis code for the ICST 2018 paper</li>
+<li class="software"><a target="_blank" rel="noopener"
+href="https://github.com/schemaanalyst/domino-replicate">domino-replicate</a>:
+Data and analysis code for the ICST 2018 paper</li>
 
-<li class="software"><a target="_blank" rel="noopener" href="https://github.com/flake-it/flake16-framework">flake16-framework</a>: Data, analysis code, and tools for the ICST 2022 paper</li>
+<li class="software"><a target="_blank" rel="noopener"
+href="https://github.com/flake-it/flake16-framework">flake16-framework</a>:
+Data, analysis code, and tools for the ICST 2022 paper</li>
 
-<li class="software"><a target="_blank" rel="noopener" href="https://github.com/flake-it/flaky-test-survey-replication-package">flaky-test-survey-replication-package</a>: Data and analysis code for the ICSE-SEIP 2022 paper</li>
+<li class="software"><a target="_blank" rel="noopener"
+href="https://github.com/flake-it/flaky-test-survey-replication-package">flaky-test-survey-replication-package</a>:
+Data and analysis code for the ICSE-SEIP 2022 paper</li>
 
-<li class="software"><a target="_blank" rel="noopener" href="https://github.com/schemaanalyst/imdetect-replicate">imdetect-replicate</a>: Data and analysis code for the TSE 2019 paper</li>
+<li class="software"><a target="_blank" rel="noopener"
+href="https://github.com/schemaanalyst/imdetect-replicate">imdetect-replicate</a>:
+Data and analysis code for the TSE 2019 paper</li>
 
-<li class="software"><a target="_blank" rel="noopener" href="https://github.com/redecheck/jstvr-webpages">jstvr-webpages</a>: Experimental subjects used for the JSTVR 2020 paper</li>
+<li class="software"><a target="_blank" rel="noopener"
+href="https://github.com/redecheck/jstvr-webpages">jstvr-webpages</a>:
+Experimental subjects used for the JSTVR 2020 paper</li>
 
-<li class="software"><a target="_blank" rel="noopener" href="https://github.com/flake-it/showflakes-framework">showflakes-framework</a>: Data and analysis code for the AST 2022 paper</li>
+<li class="software"><a target="_blank" rel="noopener"
+href="https://github.com/flake-it/showflakes-framework">showflakes-framework</a>:
+Data and analysis code for the AST 2022 paper</li>
 
-<li class="software"><a target="_blank" rel="noopener" href="https://github.com/schemaanalyst/sticcer-replicate">sticcer-replicate</a>: Data and analysis code for the ICST 2020 paper</li>
+<li class="software"><a target="_blank" rel="noopener"
+href="https://github.com/schemaanalyst/sticcer-replicate">sticcer-replicate</a>:
+Data and analysis code for the ICST 2020 paper</li>
 
-<li class="software"><a target="_blank" rel="noopener" href="https://github.com/gkapfham/vmutation-replicate">vmutation-replicate</a>: Data and analysis code for the AST 2016 paper</li>
+<li class="software"><a target="_blank" rel="noopener"
+href="https://github.com/gkapfham/vmutation-replicate">vmutation-replicate</a>:
+Data and analysis code for the AST 2016 paper</li>
 
 </ul>
 
@@ -284,17 +300,29 @@ Slides for the presentation of the QSIC 2014 paper</li>
 
 <ul>
 
-<li class="software"><a target="_blank" rel="noopener" href="https://github.com/GatorEducator/dockagator">dockagator</a>: Docker container and infrastructure for GatorGrader</li>
+<li class="software"><a target="_blank" rel="noopener"
+href="https://github.com/GatorEducator/dockagator">dockagator</a>: Docker
+container and infrastructure for GatorGrader</li>
 
-<li class="software"><a target="_blank" rel="noopener" href="https://github.com/GatorEducator/gatorgrader">gatorgrader</a>: Automated assessment for source code and writing</li>
+<li class="software"><a target="_blank" rel="noopener"
+href="https://github.com/GatorEducator/gatorgrader">gatorgrader</a>: Automated
+assessment for source code and writing</li>
 
-<li class="software"><a target="_blank" rel="noopener" href="https://github.com/GatorEducator/gatorgradle">gatorgradle</a>: Gradle plugin for efficient use of GatorGrader</li>
+<li class="software"><a target="_blank" rel="noopener"
+href="https://github.com/GatorEducator/gatorgradle">gatorgradle</a>: Gradle
+plugin for efficient use of GatorGrader</li>
 
-<li class="software"><a target="_blank" rel="noopener" href="https://github.com/GatorEducator/gatorgrouper">gatorgrouper</a>: Group formation tool for team-based courses</li>
+<li class="software"><a target="_blank" rel="noopener"
+href="https://github.com/GatorEducator/gatorgrouper">gatorgrouper</a>: Group
+formation tool for team-based courses</li>
 
-<li class="software"><a target="_blank" rel="noopener" href="https://github.com/GatorEducator/SheetShuttle">sheetshuttle</a>: Tool for data transfer between Google Sheets and GitHub</li>
+<li class="software"><a target="_blank" rel="noopener"
+href="https://github.com/GatorEducator/SheetShuttle">sheetshuttle</a>: Tool for
+data transfer between Google Sheets and GitHub</li>
 
-<li class="software"><a target="_blank" rel="noopener" href="https://github.com/gkapfham/seed">seed</a>: Analyzer and displayer of responses to the SEED survey</li>
+<li class="software"><a target="_blank" rel="noopener"
+href="https://github.com/gkapfham/seed">seed</a>: Analyzer and displayer of
+responses to the SEED survey</li>
 
 </ul>
 
@@ -450,7 +478,9 @@ Installation in ubuntu is not working</li>
 href="https://github.com/junegunn/fzf/issues/712">junegunn/fzf Issue #712</a>:
 Setting foreground without background</li>
 
-<li class="software"><a target="_blank" rel="noopener" href="https://github.com/kshenoy/vim-signature/issues/164">kshenoy/vim-signature Issue #164</a>: Special characters for markers?</li>
+<li class="software"><a target="_blank" rel="noopener"
+href="https://github.com/kshenoy/vim-signature/issues/164">kshenoy/vim-signature
+Issue #164</a>: Special characters for markers?</li>
 
 <li class="software"><a target="_blank" rel="noopener"
 href="https://github.com/lervag/vimtex/issues/176">lervag/vimtex Issue #176</a>:
