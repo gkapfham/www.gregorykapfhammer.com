@@ -150,9 +150,13 @@ References on testing database applications</li>
 Interested in conducting research that builds or cites on the [research
 papers](/research/papers/index.qmd) and [research
 presentations](/research/presentations/index.qmd) published by me and my
-research collaborators? Check out these resources for abstracts of conference
-talks, BiBTeX references to papers, and templates for writing a research paper
-or a curriculum vitae.
+research collaborators? You can check out these resources for abstracts of
+conference talks, BiBTeX references to papers, and templates for writing a
+research paper or a curriculum vitae. For instance, the [avm-bibliography]()
+documents the research articles cited in the [@McMinn2016b] [{{< iconify
+fa6-solid book-open
+>}}](/research/papers/mcminn2016b/index.qmd) paper that describes the
+[avmf](https://github.com/AVMf/avmf) tool.
 
 :::
 
@@ -193,6 +197,21 @@ href="https://github.com/gkapfham/per2012-paper">per2012-paper</a>: Source code
 for a research paper in the PER journal</li>
 
 </ul>
+
+::: {.callout-note appearance="simple"}
+
+#### Research Connection
+
+While I don't release the LaTeX source code of most of the [research
+papers](/research/papers/index.qmd) that my research collaborators and I
+publish, I've made the GitHub repository of select papers publicly available.
+For instance, the source code that results in the paper [@McMinn2016a] [{{<
+iconify fa6-solid book-open
+>}}](/research/papers/mcminn2016a/index.qmd) is in the
+[gkapfham/ast2016-paper](https://github.com/gkapfham/ast2016-paper) GitHub
+repository. Check it out to see how we structure papers!
+
+:::
 
 ### Presentations
 
