@@ -145,12 +145,14 @@ References on testing database applications</li>
 
 ::: {.callout-note appearance="simple"}
 
-## Research Connection
+#### Research Connection
 
 Interested in conducting research that builds or cites on the [research
 papers](/research/papers/index.qmd) and [research
 presentations](/research/presentations/index.qmd) published by me and my
-research collaborators?
+research collaborators? Check out these resources for abstracts of conference
+talks, BiBTeX references to papers, and templates for writing a research paper
+or a curriculum vitae.
 
 :::
 
