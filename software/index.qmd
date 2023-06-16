@@ -160,32 +160,37 @@ or a curriculum vitae.
 
 <ul>
 
-<li class="software"><a 
-target="_blank" rel="noopener" href="https://github.com/AVMf/avmframework-paper">avmframework-paper</a>: Source code for a research paper at SSBSE 2016</li>
+<li class="software"><a target="_blank" rel="noopener"
+href="https://github.com/AVMf/avmframework-paper">avmframework-paper</a>: Source
+code for a research paper at SSBSE 2016</li>
 
-<li class="software"><a 
-target="_blank" rel="noopener" href="https://github.com/gkapfham/ast2016-paper">ast2016-paper</a>: Source code for a research paper at AST 2016</li>
+<li class="software"><a target="_blank" rel="noopener"
+href="https://github.com/gkapfham/ast2016-paper">ast2016-paper</a>: Source code
+for a research paper at AST 2016</li>
 
-<li class="software"><a 
-target="_blank" rel="noopener" href="https://github.com/schemaanalyst/icsme2016-mrstudyrtool-paper">icsme2016-mrstudyrtool-paper</a>: Source code for a tool paper
-at ICSME 2016</li>
+<li class="software"><a target="_blank" rel="noopener"
+href="https://github.com/schemaanalyst/icsme2016-mrstudyrtool-paper">icsme2016-mrstudyrtool-paper</a>:
+Source code for a tool paper at ICSME 2016</li>
 
-<li class="software"><a 
-target="_blank" rel="noopener" href="https://github.com/schemaanalyst/icsme2016-satool-paper">icsme2016-satool-paper</a>: Source code for a tool paper
-at ICSME 2016</li>
+<li class="software"><a target="_blank" rel="noopener"
+href="https://github.com/schemaanalyst/icsme2016-satool-paper">icsme2016-satool-paper</a>:
+Source code for a tool paper at ICSME 2016</li>
 
-<li class="software"><a 
-target="_blank" rel="noopener" href="https://github.com/gkapfham/sbst2016-paper">sbst2016-paper</a>: Source code for a research paper at SBST 2016</li>
+<li class="software"><a target="_blank" rel="noopener"
+href="https://github.com/gkapfham/sbst2016-paper">sbst2016-paper</a>: Source
+code for a research paper at SBST 2016</li>
 
-<li class="software"><a 
-target="_blank" rel="noopener" href="https://github.com/gkapfham/seke2015-paper">seke2015-paper</a>: Source code for a research paper at SEKE 2015</li>
+<li class="software"><a target="_blank" rel="noopener"
+href="https://github.com/gkapfham/seke2015-paper">seke2015-paper</a>: Source
+code for a research paper at SEKE 2015</li>
 
-<li class="software"><a 
-target="_blank" rel="noopener" href="https://github.com/gkapfham/seke2015-tool-paper">seke2015-tool-paper</a>: Source code for a tool paper at SEKE
-2015</li>
+<li class="software"><a target="_blank" rel="noopener"
+href="https://github.com/gkapfham/seke2015-tool-paper">seke2015-tool-paper</a>:
+Source code for a tool paper at SEKE 2015</li>
 
-<li class="software"><a 
-target="_blank" rel="noopener" href="https://github.com/gkapfham/per2012-paper">per2012-paper</a>: Source code for a research paper in the PER journal</li>
+<li class="software"><a target="_blank" rel="noopener"
+href="https://github.com/gkapfham/per2012-paper">per2012-paper</a>: Source code
+for a research paper in the PER journal</li>
 
 </ul>
 
@@ -195,11 +200,11 @@ target="_blank" rel="noopener" href="https://github.com/gkapfham/per2012-paper">
 
 <li class="software"><a target="_blank" rel="noopener"
 href="https://github.com/gkapfham/pyohio2021-presentation">pyohio2021-presentation</a>:
-Slides for a presentation at the PyOhio 2021 conference</li>
+Presentation slides the PyOhio 2021 talk</li>
 
 <li class="software"><a target="_blank" rel="noopener"
 href="https://github.com/gkapfham/pycon2019-functionfiasco-poster">pycon2019-functionfiasco-poster</a>:
-Slides for a poster at the PyCon 2019 conference</li>
+Presentation slides for a PyCon 2019</li>
 
 <li class="software"><a target="_blank" rel="noopener"
 href="https://github.com/gkapfham/pycon2019-gatorgrouper-poster">pycon2019-gatorgrouper-poster</a>:
@@ -229,25 +234,25 @@ Slides for the presentation of an ICSME 2016 tool paper</li>
 href="https://github.com/AVMf/ssbse2016-presentation">ssbse2016-presentation</a>:
 Slides for the presentation of an SSBSE 2016 paper</li>
 
-<li class="software"><a 
-target="_blank" rel="noopener" href="https://github.com/gkapfham/sbst2016-presentation">sbst2016-presentation</a>: Slides for the presentation of an
-SBST 2016 paper</li>
+<li class="software"><a target="_blank" rel="noopener"
+href="https://github.com/gkapfham/sbst2016-presentation">sbst2016-presentation</a>:
+Slides for the presentation of an SBST 2016 paper</li>
 
-<li class="software"><a 
-target="_blank" rel="noopener" href="https://github.com/gkapfham/allegheny2015-presentation">allegheny2015-presentation</a>: Slides for a presentation at
-Allegheny College in 2015</li>
+<li class="software"><a target="_blank" rel="noopener"
+href="https://github.com/gkapfham/allegheny2015-presentation">allegheny2015-presentation</a>:
+Slides for a presentation at Allegheny College in 2015</li>
 
-<li class="software"><a 
-target="_blank" rel="noopener" href="https://github.com/gkapfham/seke2015-panel-presentation">seke2015-panel-presentation</a>: Slides for the SEKE 2015
-panel on big data</li>
+<li class="software"><a target="_blank" rel="noopener"
+href="https://github.com/gkapfham/seke2015-panel-presentation">seke2015-panel-presentation</a>:
+Slides for the SEKE 2015 panel on big data</li>
 
-<li class="software"><a 
-target="_blank" rel="noopener" href="https://github.com/gkapfham/seke2015-presentation">seke2015-presentation</a>: Slides for the presentation of
-a SEKE 2015 paper</li>
+<li class="software"><a target="_blank" rel="noopener"
+href="https://github.com/gkapfham/seke2015-presentation">seke2015-presentation</a>:
+Slides for the presentation of a SEKE 2015 paper</li>
 
-<li class="software"><a 
-target="_blank" rel="noopener" href="https://github.com/gkapfham/qsic2014-presentation">qsic2014-presentation</a>: Slides for the presentation of the
-QSIC 2014 paper</li>
+<li class="software"><a target="_blank" rel="noopener"
+href="https://github.com/gkapfham/qsic2014-presentation">qsic2014-presentation</a>:
+Slides for the presentation of the QSIC 2014 paper</li>
 
 </ul>
 
