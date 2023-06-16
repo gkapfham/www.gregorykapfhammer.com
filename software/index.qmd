@@ -275,43 +275,74 @@ Presentation slides a QSIC 2014 talk</li>
 
 </ul>
 
+::: {.callout-note appearance="simple"}
+
+#### Research Connection
+
+Did you know that I use LaTeX, JavaScript, Markdown, and other programming
+languages to create many of  [research
+presentations](/research/presentations/index.qmd)? By studying the source code
+of for presentations like [@Kapfhammer2021] [{{< iconify fa6-solid book-open
+>}}](/research/presentations/kapfhammer2021/index.qmd) and
+[@Kapfhammer2021a] [{{< iconify fa6-solid book-open
+>}}](/research/presentations/kapfhammer2021a/index.qmd) you can see how we
+create and layout the graphical content!
+
+:::
+
 ### Replication
 
 <ul>
 
 <li class="software"><a target="_blank" rel="noopener"
 href="https://github.com/schemaanalyst/domino-replicate">domino-replicate</a>:
-Data and analysis code for the ICST 2018 paper</li>
+Data and analysis code for an ICST 2018 paper</li>
 
 <li class="software"><a target="_blank" rel="noopener"
 href="https://github.com/flake-it/flake16-framework">flake16-framework</a>:
-Data, analysis code, and tools for the ICST 2022 paper</li>
+Data, analysis, and tooling for an ICST 2022 paper</li>
 
 <li class="software"><a target="_blank" rel="noopener"
 href="https://github.com/flake-it/flaky-test-survey-replication-package">flaky-test-survey-replication-package</a>:
-Data and analysis code for the ICSE-SEIP 2022 paper</li>
+Code for an ICSE-SEIP 2022 paper</li>
 
 <li class="software"><a target="_blank" rel="noopener"
 href="https://github.com/schemaanalyst/imdetect-replicate">imdetect-replicate</a>:
-Data and analysis code for the TSE 2019 paper</li>
+Data and analysis code for a TSE 2019 paper</li>
 
 <li class="software"><a target="_blank" rel="noopener"
 href="https://github.com/redecheck/jstvr-webpages">jstvr-webpages</a>:
-Experimental subjects used for the JSTVR 2020 paper</li>
+Experimental subjects for a JSTVR 2020 paper</li>
 
 <li class="software"><a target="_blank" rel="noopener"
 href="https://github.com/flake-it/showflakes-framework">showflakes-framework</a>:
-Data and analysis code for the AST 2022 paper</li>
+Data and analysis code for an AST 2022 paper</li>
 
 <li class="software"><a target="_blank" rel="noopener"
 href="https://github.com/schemaanalyst/sticcer-replicate">sticcer-replicate</a>:
-Data and analysis code for the ICST 2020 paper</li>
+Data and analysis code for an ICST 2020 paper</li>
 
 <li class="software"><a target="_blank" rel="noopener"
 href="https://github.com/gkapfham/vmutation-replicate">vmutation-replicate</a>:
-Data and analysis code for the AST 2016 paper</li>
+Data and analysis code for an AST 2016 paper</li>
 
 </ul>
+
+::: {.callout-note appearance="simple"}
+
+#### Research Connection
+
+Whenever possible, my collaborators and I publish replication packages to
+support our [research papers](/research/papers/index.qmd) and [research
+presentations](/research/papers/index.qmd). For instance, you can review
+all of the survey data from [@Parry2022b] [{{< iconify fa6-solid book-open
+>}}](/research/papers/parry2022b/index.qmd) and use all of the tooling used to
+run the experiments that we report on in [@Alsharif2020] [{{< iconify
+fa6-solid book-open
+>}}](/research/papers/alsharif2020/index.qmd). Check the above GitHub
+repositories for more details!
+
+:::
 
 ## Teaching
 
@@ -346,6 +377,36 @@ responses to the SEED survey</li>
 </ul>
 
 ### Platforms
+
+<ul>
+
+<li class="software"><a target="_blank" rel="noopener"
+href="https://proactiveprogrammers.com/data-abstraction/introduction-data-abstraction/">Data
+Abstraction</a>: Build and manipulate correct and efficient data structures
+</li>
+
+<li class="software"><a target="_blank" rel="noopener"
+href="https://proactiveprogrammers.com/data-abstraction/introduction-discrete-structures/">
+Discrete Structures</a>: Clearly connect mathematics to Python programming
+</li>
+
+<li class="software"><a target="_blank" rel="noopener"
+href="https://www.os-sketch.com/">
+Operating Systems</a>: Build and understand operating system components
+
+</li>
+
+</ul>
+
+::: {.callout-note appearance="simple"}
+
+#### Teaching Connection
+
+Please visit the web site for each of my course platforms to learn more about
+the specific technologies that we use to deploy each site that I use for
+[teaching](/teaching/index.qmd).
+
+:::
 
 ### Courses
 
@@ -448,6 +509,19 @@ href="https://github.com/gkapfham/cs280F2015">cs280F2015</a>: Course content for
 Computer Science 280 Fall 2015</li>
 
 </ul>
+
+::: {.callout-note appearance="simple"}
+
+#### Teaching Connection
+
+Prior to developing course platforms for each of the classes that I teach, I
+created GitHub repositories and/or organizations for every course and linked to
+them from my professional web site's [teaching](/teaching/index.qmd) page. Even
+though I no longer maintain out-of-date course content and instead encourage
+learners to visit my course platforms, you may [contact me](/contact/) with
+your request for old materials.
+
+:::
 
 ## Open-Source
 
