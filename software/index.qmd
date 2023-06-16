@@ -223,55 +223,55 @@ Presentation slides the PyOhio 2021 talk</li>
 
 <li class="software"><a target="_blank" rel="noopener"
 href="https://github.com/gkapfham/pycon2019-functionfiasco-poster">pycon2019-functionfiasco-poster</a>:
-Presentation slides for a PyCon 2019</li>
+Presentation slides for a PyCon 2019 talk</li>
 
 <li class="software"><a target="_blank" rel="noopener"
 href="https://github.com/gkapfham/pycon2019-gatorgrouper-poster">pycon2019-gatorgrouper-poster</a>:
-Slides for a poster at the PyCon 2019 conference</li>
+Poster for PyCon 2019 session</li>
 
 <li class="software"><a target="_blank" rel="noopener"
 href="https://github.com/gkapfham/pyohio2019-presentation">pyohio2019-presentation</a>:
-Slides for a presentation at the PyOhio 2019 conference</li>
+Presentation slides for a PyOhio 2019 talk</li>
 
 <li class="software"><a target="_blank" rel="noopener"
 href="https://github.com/gkapfham/pygotham2018-presentation">pygotham2018-presentation</a>:
-Slides for a presentation at the PyGotham 2018 conference</li>
+Presentation slides for a PyGotham 2018 talk</li>
 
 <li class="software"><a target="_blank" rel="noopener"
 href="https://github.com/gkapfham/pyohio2018-presentation">pyohio2018-presentation</a>:
-Slides for a presentation at the PyOhio 2018 conference</li>
+Presentation slides for a PyOhio 2018 talk</li>
 
 <li class="software"><a target="_blank" rel="noopener"
 href="https://github.com/mccurdyc/icsme2016-presentation">icsme2016-presentation</a>:
-Slides for the presentation of an ICSME 2016 tool paper</li>
+Presentation slides for an ICSME 2016 talk</li>
 
 <li class="software"><a target="_blank" rel="noopener"
 href="https://github.com/schemaanalyst/icsme2016-tool-presentation">icsme2016-tool-presentation</a>:
-Slides for the presentation of an ICSME 2016 tool paper</li>
+Presentation slides for an ICSME 2016 talk</li>
 
 <li class="software"><a target="_blank" rel="noopener"
 href="https://github.com/AVMf/ssbse2016-presentation">ssbse2016-presentation</a>:
-Slides for the presentation of an SSBSE 2016 paper</li>
+Presentation slides an SSBSE 2016 talk</li>
 
 <li class="software"><a target="_blank" rel="noopener"
 href="https://github.com/gkapfham/sbst2016-presentation">sbst2016-presentation</a>:
-Slides for the presentation of an SBST 2016 paper</li>
+Presentation slides an SBST 2016 talk</li>
 
 <li class="software"><a target="_blank" rel="noopener"
 href="https://github.com/gkapfham/allegheny2015-presentation">allegheny2015-presentation</a>:
-Slides for a presentation at Allegheny College in 2015</li>
+Presentation slides an Allegheny College talk</li>
 
 <li class="software"><a target="_blank" rel="noopener"
 href="https://github.com/gkapfham/seke2015-panel-presentation">seke2015-panel-presentation</a>:
-Slides for the SEKE 2015 panel on big data</li>
+Presentation slides a SEKE 2015 panel talk</li>
 
 <li class="software"><a target="_blank" rel="noopener"
 href="https://github.com/gkapfham/seke2015-presentation">seke2015-presentation</a>:
-Slides for the presentation of a SEKE 2015 paper</li>
+Presentation slides a SEKE 2015 talk</li>
 
 <li class="software"><a target="_blank" rel="noopener"
 href="https://github.com/gkapfham/qsic2014-presentation">qsic2014-presentation</a>:
-Slides for the presentation of the QSIC 2014 paper</li>
+Presentation slides a QSIC 2014 talk</li>
 
 </ul>
 
