@@ -567,6 +567,16 @@ color scheme for Vim and Neovim</li>
 
 </ul>
 
+::: {.callout-note appearance="simple"}
+
+#### Software Connection
+
+I aim to have a well-documented set of software tools that I run on the laptop
+that I use for all of my professional activities. I hope that some of these
+configurations can help you to setup your own development workstation!
+
+:::
+
 ### Defects
 
 <ul>
