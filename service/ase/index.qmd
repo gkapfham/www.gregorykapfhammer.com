@@ -1,0 +1,10 @@
+---
+page-layout: full
+categories: [conference, software engineerng]
+date: '2022-01-01'
+date-format: YYYY
+description: <em>Program Committee Member</em>
+title: International Conference on Automated Software Engineering
+---
+
+{{< fa circle-left >}} <a href='/service/index.qmd'>Return to Professional Service Listing</a>
