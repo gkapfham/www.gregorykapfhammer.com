@@ -687,7 +687,17 @@ support</li>
 
 </ul>
 
-## Prior Work
+::: {.callout-note appearance="simple"}
+
+#### Software Connection
+
+I aim to have a well-documented set of software tools that I run on the laptop
+that I use for all of my professional activities. I hope that some of these
+configurations can help you to setup your own development workstation!
+
+:::
+
+### Prior Work
 
 <ul>
 
@@ -708,3 +718,12 @@ href="https://github.com/gkapfham/raise/">raise</a>: Comprehensive test suite
 execution and management</li>
 
 </ul>
+
+::: {.callout-note appearance="simple"}
+
+#### Software Connection
+
+Although I no longer maintain any of these software tools, I'm glad to make them
+available so that others can use them as a source of inspiration.
+
+:::
