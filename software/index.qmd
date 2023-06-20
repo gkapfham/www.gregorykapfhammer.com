@@ -282,11 +282,14 @@ Presentation slides a QSIC 2014 talk</li>
 Did you know that I use LaTeX, JavaScript, Markdown, and other programming
 languages to create many of  [research
 presentations](/research/presentations/index.qmd)? By studying the source code
-of for presentations like [@Kapfhammer2021] [{{< iconify fa6-solid book-open
+for presentations like [@Kapfhammer2021] [{{< iconify fa6-solid book-open
 >}}](/research/presentations/kapfhammer2021/index.qmd) and
 [@Kapfhammer2021a] [{{< iconify fa6-solid book-open
 >}}](/research/presentations/kapfhammer2021a/index.qmd) you can see how we
-create and layout the graphical content!
+create and layout the graphical content! My colleagues and I have also release
+the source code for the presentations that accompany select research papers,
+like [@McCurdy2016] [{{< iconify fa6-solid book-open
+>}}](/research/papers/mccurdy2016/index.qmd).
 
 :::
 
@@ -334,11 +337,11 @@ Data and analysis code for an AST 2016 paper</li>
 
 Whenever possible, my collaborators and I publish replication packages to
 support our [research papers](/research/papers/index.qmd) and [research
-presentations](/research/papers/index.qmd). For instance, you can review
-all of the survey data from [@Parry2022b] [{{< iconify fa6-solid book-open
->}}](/research/papers/parry2022b/index.qmd) and use all of the tooling used to
-run the experiments that we report on in [@Alsharif2020] [{{< iconify
-fa6-solid book-open
+presentations](/research/papers/index.qmd). For instance, you can review all of
+the survey data from [@Parry2022b] [{{< iconify fa6-solid book-open
+>}}](/research/papers/parry2022b/index.qmd) and try out the tooling used to
+run the experiments that we report on in [@Alsharif2020] [{{< iconify fa6-solid
+book-open
 >}}](/research/papers/alsharif2020/index.qmd). Check the above GitHub
 repositories for more details!
 
@@ -353,6 +356,10 @@ repositories for more details!
 <li class="software"><a target="_blank" rel="noopener"
 href="https://github.com/GatorEducator/dockagator">dockagator</a>: Docker
 container and infrastructure for GatorGrader</li>
+
+<li class="software"><a target="_blank" rel="noopener"
+href="https://github.com/GatorEducator/gatorgrade">gatorgrade</a>: Python
+front-end for the GatorGrader assessment tool</li>
 
 <li class="software"><a target="_blank" rel="noopener"
 href="https://github.com/GatorEducator/gatorgrader">gatorgrader</a>: Automated
@@ -375,6 +382,23 @@ href="https://github.com/gkapfham/seed">seed</a>: Analyzer and displayer of
 responses to the SEED survey</li>
 
 </ul>
+
+::: {.callout-note appearance="simple"}
+
+#### Teaching Connection
+
+My students, colleagues, and I create and maintain several tools that support
+the automated assessment of the source code and technical writing that students
+complete as part of a course project. You can learn more about the tools that we
+have implemented and deployed by checking out presentations like
+[@Kapfhammer2018] [{{< iconify fa6-solid book-open
+>}}](/research/presentations/kapfhammer2018/index.qmd) and
+[@Kapfhammer2019] [{{< iconify fa6-solid book-open
+>}}](/research/presentations/kapfhammer2019/index.qmd).
+Check out the above GitHub repositories for details about how to use
+these tools in your teaching!
+
+:::
 
 ### Platforms
 
