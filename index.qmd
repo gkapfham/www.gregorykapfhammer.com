@@ -102,21 +102,21 @@ and [subscribing](support/index.qmd) to my mailing list.
 - [Web Testing](research/index.qmd#Details#Web Testing): Detecting and repairing
   responsive web page layout
 
-{{< fa rocket >}} <em>Explore</em> all of my areas of [research expertise](research/index.qmd)
+> {{< fa rocket >}} <em>Explore</em> all of my areas of [research expertise](research/index.qmd)
 
 ## Featured Papers
 
 :::{#featured-papers}
 :::
 
-{{< fa rocket >}} <em>Read</em> all of my  [research papers](research/papers/index.qmd)
+> {{< fa rocket >}} <em>Read</em> all of my  [research papers](research/papers/index.qmd)
 
 ## Featured Presentations
 
 :::{#featured-presentations}
 :::
 
-{{< fa rocket >}} <em>Review</em> all of my [research presentations](research/presentations/index.qmd)
+> {{< fa rocket >}} <em>Review</em> all of my [research presentations](research/presentations/index.qmd)
 
 ## Professional Service
 
@@ -131,14 +131,14 @@ and [subscribing](support/index.qmd) to my mailing list.
 - [CommitCanvas](https://github.com/CommittedTeam/CommitCanvas): Extensible
   checking of Git commit messages with pre-commit
 
-{{< fa rocket >}} <em>Download</em> all of my [software tools](software/index.qmd)
+> {{< fa rocket >}} <em>Download</em> all of my [software tools](software/index.qmd)
 
 ## Recent Posts
 
 :::{#featured-posts}
 :::
 
-{{< fa rocket >}} <em>Read</em> all of my [blog posts](blog/index.qmd)
+> {{< fa rocket >}} <em>Read</em> all of my [blog posts](blog/index.qmd)
 
 ## Highlighted Courses
 
@@ -152,7 +152,7 @@ and [subscribing](support/index.qmd) to my mailing list.
 
 - [Operating Systems](https://www.os-sketch.com/): Build and understand operating system components
 
-{{< fa rocket >}} <em>Explore</em> all of my areas of [teaching materials](teaching/index.qmd)
+> {{< fa rocket >}} <em>Explore</em> all of my areas of [teaching materials](teaching/index.qmd)
 
 ## Status Updates
 
