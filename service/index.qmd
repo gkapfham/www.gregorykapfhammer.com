@@ -9,12 +9,17 @@ listing:
   sort:
     - "date desc"
     - "title"
-  type: default
+  type: table
   categories: true
   date-format: "YYYY"
   sort-ui: true
   filter-ui: true
-  fields: [title, date, description, categories]
+  fields: [title, year-range, description]
+  field-display-names:
+    description: "Role(s)"
+    title: "Venue"
+    year-range: "Year(s)"
+  field-links: []
   feed:
     title: "Professional Service"
 execute:
@@ -26,11 +31,11 @@ from pathlib import Path
 from rich.console import Console
 
 console = Console()
-paper_dir = Path(".")
-subdirs = [pdir for pdir in paper_dir.iterdir() if pdir.is_dir()]
-paper_count = len(subdirs)
+service_dir = Path(".")
+subdirs = [sdir for sdir in service_dir.iterdir() if sdir.is_dir()]
+service_count = len(subdirs)
 
 console.print(
-    f":rocket: It was super-fun to collaboratively create these {paper_count} papers!"
+    f":rocket: I'm thankful for the opportunity to serve  {service_count} venues!"
 )
 ```
