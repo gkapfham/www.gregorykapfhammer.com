@@ -57,6 +57,8 @@ website:
         menu:
           - text: "Software"
             href: software/index.qmd
+          - text: "Service"
+            href: service/index.qmd
           - text: "Blog"
             href: blog/index.qmd
   page-footer:
@@ -71,8 +73,6 @@ website:
         href: http://www.linkedin.com/in/GregKapfhammer
       - text: "{{< iconify academicons google-scholar size=22px >}}"
         href: http://scholar.google.com/citations?user=g0eDPjYAAAAJ
-      - icon: twitter
-        href: https://twitter.com/GregKapfhammer
   twitter-card:
     creator: "@GregKapfhammer"
     card-style: summary_large_image
