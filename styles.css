@@ -49,7 +49,7 @@ h3,
 .h3,
 h4,
 .h4 {
-  opacity: 1.0;
+  opacity: 1;
   margin-top: 0.5rem;
 }
 
@@ -90,6 +90,13 @@ pre {
   background-color: initial;
   padding: initial;
   border: initial;
+}
+
+.blockquote {
+  font-size: inherit;
+  padding-left: 0.5rem;
+  padding-right: 1.5rem;
+  color: inherit;
 }
 
 /* }}} */
