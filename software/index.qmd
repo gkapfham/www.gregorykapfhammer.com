@@ -583,7 +583,7 @@ configurations can help you to setup your own development workstation!
 
 <li class="software"><a target="_blank" rel="noopener"
 href="https://github.com/artur-shaik/vim-javacomplete2/issues/277">artur-shaik/vim-javacomplete2
-Issue #277</a>: Errors when starting Vim or Neovim ...</li>
+Issue #277</a>: Errors when starting Vim ...</li>
 
 <li class="software"><a target="_blank" rel="noopener"
 href="https://github.com/asdf-vm/asdf-nodejs/issues/277">asdf-vm/asdf-nodejs
@@ -666,6 +666,10 @@ href="https://github.com/pypa/pipenv/issues/3247">pypa/pipenv Issue #3247</a>:
 pipenv --three fails</li>
 
 <li class="software"><a target="_blank" rel="noopener"
+href="https://github.com/quarto-dev/quarto-cli/discussions/5900">quarto-dev/quarto-cli Discussion #5900</a>:
+Is is possible to avoid the flash ...</li>
+
+<li class="software"><a target="_blank" rel="noopener"
 href="https://github.com/Shougo/deoplete.nvim/issues/500">Shougo/deoplete.nvim
 #500</a>: nvim source deoplete/util.vim slow</li>
 
@@ -691,9 +695,9 @@ support</li>
 
 #### Software Connection
 
-I aim to have a well-documented set of software tools that I run on the laptop
-that I use for all of my professional activities. I hope that some of these
-configurations can help you to setup your own development workstation!
+Whenever I can do so, I participate in the maintenance and enhancement of
+open-software software tools by reporting defects and participating in
+discussions. My aim is to help and encourage the maintainers of these tools!
 
 :::
 
