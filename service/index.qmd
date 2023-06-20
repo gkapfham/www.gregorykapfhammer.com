@@ -1,0 +1,36 @@
+---
+title: "Service"
+toc: true
+page-layout: full
+listing:
+  contents:
+    - "../service/**/*.qmd"
+    - "!../index.qmd"
+  sort:
+    - "date desc"
+    - "title"
+  type: default
+  categories: true
+  date-format: "YYYY"
+  sort-ui: true
+  filter-ui: true
+  fields: [title, date, description, categories]
+  feed:
+    title: "Professional Service"
+execute:
+  freeze: auto
+---
+
+```{python}
+from pathlib import Path
+from rich.console import Console
+
+console = Console()
+paper_dir = Path(".")
+subdirs = [pdir for pdir in paper_dir.iterdir() if pdir.is_dir()]
+paper_count = len(subdirs)
+
+console.print(
+    f":rocket: It was super-fun to collaboratively create these {paper_count} papers!"
+)
+```
