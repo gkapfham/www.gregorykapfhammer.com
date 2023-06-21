@@ -429,6 +429,24 @@ th {
   font-style: inherit;
 }
 
+.table {
+  --bs-table-bg: transparent;
+  --bs-table-accent-bg: transparent;
+  --bs-table-striped-color: #333;
+  --bs-table-striped-bg: rgba(0, 0, 0, 0.05);
+  --bs-table-active-color: #333;
+  --bs-table-active-bg: rgba(0, 0, 0, 0.1);
+  --bs-table-hover-color: #333;
+  --bs-table-hover-bg: rgba(0, 0, 0, 0.075);
+  display: block;
+  overflow-y: hidden;
+  overflow-x: auto;
+  width: 100%;
+  margin-bottom: 1rem;
+  color: #333;
+  border-color: #dee2e6;
+}
+
 /* }}} */
 
 /* Featured Papers and Presentations and Posts and Service {{{ */
