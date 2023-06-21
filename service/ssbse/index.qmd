@@ -1,0 +1,10 @@
+---
+page-layout: full
+categories: [conference]
+date: '2023-01-01'
+date-format: YYYY
+description: Doctoral Symposium Chair, Program Committee Member, Publicity Chair
+title: International Symposium on Search-Based Software Engineering
+year-range: "2023 - 2009"
+service-count: 13
+---
