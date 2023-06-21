@@ -55,6 +55,28 @@ listing:
     fields: [author, title, description]
     max-items: 3
     page-size: 3
+  - id: featured-service
+    contents:
+      - "service/**/*.qmd"
+      - "!service/index.qmd"
+    sort:
+      - "date desc"
+      - "year-range desc"
+      - "title"
+    type: table
+    categories: false
+    date-format: "YYYY"
+    sort-ui: false
+    filter-ui: false
+    fields: [title, year-range, description, service-count]
+    field-display-names:
+      description: "Role(s)"
+      title: "Venue"
+      year-range: "Year(s)"
+      service-count: "Count"
+    field-links: []
+    max-items: 3
+    page-size: 3
 execute:
   freeze: auto
 ---
@@ -119,6 +141,11 @@ and [subscribing](support/index.qmd) to my mailing list.
 > {{< fa rocket >}} <em>Review</em> all of my [research presentations](research/presentations/index.qmd)
 
 ## Professional Service
+
+:::{#featured-service}
+:::
+
+> {{< fa rocket >}} <em>Study</em> all of my [professional service](service/index.qmd)
 
 ## Useful Software
 
