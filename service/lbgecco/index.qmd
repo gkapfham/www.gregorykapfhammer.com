@@ -1,0 +1,10 @@
+---
+page-layout: full
+categories: [workshop]
+date: '2010-01-01'
+date-format: YYYY
+description: Session Chair
+title: Late Breaking Abstracts Workshop at the Genetic and Evolutionary Computation Conference
+year-range: "2010"
+service-count: 1
+---
