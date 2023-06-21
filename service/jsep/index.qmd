@@ -3,8 +3,8 @@ page-layout: full
 categories: [journal]
 date: '2023-01-01'
 date-format: YYYY
-description: Associate Editor
+description: Associate Editor, Reviewer
 title: "Journal of Software: Evolution and Process"
-year-range: "2023 - 2020"
-service-count: 3
+year-range: "2023 - 2012"
+service-count: 7
 ---
