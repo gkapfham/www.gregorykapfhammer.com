@@ -5,3 +5,10 @@
   description: "Program Committee Member"
   year-range: "2022 - 2008"
   service-count: 12
+- title: "Testing: Academic and Industrial Conference &mdash; Practice and Research Techniques"
+  categories: [conference]
+  date: '2022-01-01'
+  date-format: YYYY
+  description: "Program Co-Chair, Program Committee Member"
+  year-range: "2015 - 2007"
+  service-count: 7
