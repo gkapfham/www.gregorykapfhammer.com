@@ -73,7 +73,7 @@ website:
         href: https://fosstodon.org/@gkapfham
       - icon: linkedin
         href: http://www.linkedin.com/in/GregKapfhammer
-      - text: "{{< iconify academicons google-scholar size=22px >}}"
+      - text: "{{< iconify academicons google-scholar-square size=18.85px >}}"
         href: http://scholar.google.com/citations?user=g0eDPjYAAAAJ
   twitter-card:
     creator: "@GregKapfhammer"
