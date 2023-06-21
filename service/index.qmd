@@ -25,8 +25,6 @@ listing:
   field-links: []
   feed:
     title: "Professional Service"
-# execute:
-# freeze: auto
 ---
 
 ```{python}
