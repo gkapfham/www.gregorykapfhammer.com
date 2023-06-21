@@ -5,7 +5,7 @@ date: '2023-01-01'
 date-format: YYYY
 description: Associate Editor
 title: "Journal of Software: Evolution and Process"
-year-range: "2020 - 2023"
+year-range: "2023 - 2020"
 service-count: 3
 ---
 
