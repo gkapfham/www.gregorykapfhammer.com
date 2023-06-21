@@ -1,0 +1,10 @@
+---
+page-layout: full
+categories: [conference]
+date: '2011-01-01'
+date-format: YYYY
+description: Program Committee Member
+title: Midstates Conference for Undergraduate Research in Computer Science and Mathematics
+year-range: "2011 - 2010"
+service-count: 2
+---
