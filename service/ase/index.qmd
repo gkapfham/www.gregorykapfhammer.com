@@ -6,6 +6,7 @@ date-format: YYYY
 description: Program Committee Member
 title: International Conference on Automated Software Engineering
 year-range: "2020 - 2021"
+service-count: 2
 ---
 
 {{< fa circle-left >}} <a href='/service/index.qmd'>Return to Professional Service Listing</a>
