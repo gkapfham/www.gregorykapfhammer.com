@@ -145,7 +145,7 @@ and [subscribing](support/index.qmd) to my mailing list.
 :::{#featured-service}
 :::
 
-> {{< fa rocket >}} <em>Study</em> all of my [professional service](service/index.qmd)
+> {{< fa rocket >}} <em>Investigate</em> all of my [professional service](service/index.qmd)
 
 ## Useful Software
 
