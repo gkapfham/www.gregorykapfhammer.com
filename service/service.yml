@@ -26,3 +26,24 @@
   description: "Reviewer"
   year-range: "2005"
   service-count: 1
+- title: "International Symposium on Applied Computing"
+  categories: [conference]
+  date: '2009-01-01'
+  date-format: YYYY
+  description: "Session Chair, Reviewer"
+  year-range: "2009 - 2004"
+  service-count: 2
+- title: "International Conference on Distributed Computing Systems"
+  categories: [conference]
+  date: '2003-01-01'
+  date-format: YYYY
+  description: "Reviewer"
+  year-range: "2003"
+  service-count: 2
+- title: "PeerJ Computer Science Journal"
+  categories: [journal]
+  date: '2023-01-01'
+  date-format: YYYY
+  description: "Academic Editor"
+  year-range: "2023 - 2019"
+  service-count: 3
