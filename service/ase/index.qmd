@@ -8,5 +8,3 @@ title: International Conference on Automated Software Engineering
 year-range: "2021 - 2020"
 service-count: 2
 ---
-
-{{< fa circle-left >}} <a href='/service/index.qmd'>Return to Professional Service Listing</a>

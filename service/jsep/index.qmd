@@ -8,5 +8,3 @@ title: "Journal of Software: Evolution and Process"
 year-range: "2023 - 2020"
 service-count: 3
 ---
-
-{{< fa circle-left >}} <a href='/service/index.qmd'>Return to Professional Service Listing</a>

@@ -8,5 +8,3 @@ title: International Conference on Software Engineering and Knowledge Engineerin
 year-range: "2015"
 service-count: 1
 ---
-
-{{< fa circle-left >}} <a href='/service/index.qmd'>Return to Professional Service Listing</a>

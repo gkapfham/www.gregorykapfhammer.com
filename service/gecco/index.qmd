@@ -8,5 +8,3 @@ title: International Conference on Genetic and Evolutionary Computation
 year-range: "2020"
 service-count: 1
 ---
-
-{{< fa circle-left >}} <a href='/service/index.qmd'>Return to Professional Service Listing</a>

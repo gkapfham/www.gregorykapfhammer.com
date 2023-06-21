@@ -5,8 +5,6 @@ date: '2020-01-01'
 date-format: YYYY
 description: Program Committee Member
 title: International Conference on the Quality of Information and Communications Technology
-year-range: "2019 - 2020"
+year-range: "2020 - 2019"
 service-count: 2
 ---
-
-{{< fa circle-left >}} <a href='/service/index.qmd'>Return to Professional Service Listing</a>
