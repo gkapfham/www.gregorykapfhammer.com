@@ -1,0 +1,12 @@
+---
+page-layout: full
+categories: [journal]
+date: '2023-01-01'
+date-format: YYYY
+description: Associate Editor
+title: "Journal of Software: Evolution and Process"
+year-range: "2020 - 2023"
+service-count: 3
+---
+
+{{< fa circle-left >}} <a href='/service/index.qmd'>Return to Professional Service Listing</a>
