@@ -39,6 +39,6 @@ subdirs = [sdir for sdir in service_dir.iterdir() if sdir.is_dir()]
 service_count = len(subdirs)
 
 console.print(
-    f":rocket: I'm thankful for the opportunity to serve these {service_count} venues!"
+    f":rocket: I'm thankful for the opportunity to serve these {service_count} different venues!"
 )
 ```
