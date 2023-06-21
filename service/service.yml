@@ -47,3 +47,24 @@
   description: "Academic Editor"
   year-range: "2023 - 2019"
   service-count: 3
+- title: "Genetic Programming and Evolvable Machines Journal"
+  categories: [journal]
+  date: '2020-01-01'
+  date-format: YYYY
+  description: "Reviewer"
+  year-range: "2020"
+  service-count: 1
+- title: "Formal Aspects of Computing Journal"
+  categories: [journal]
+  date: '2018-01-01'
+  date-format: YYYY
+  description: "Reviewer"
+  year-range: "2018"
+  service-count: 1
+- title: "IET Software Journal"
+  categories: [journal]
+  date: '2019-01-01'
+  date-format: YYYY
+  description: "Reviewer"
+  year-range: "2019 - 2018"
+  service-count: 4
