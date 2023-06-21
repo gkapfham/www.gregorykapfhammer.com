@@ -6,6 +6,7 @@ listing:
   contents:
     - "../service/**/*.qmd"
     - "!../index.qmd"
+    - service.yml
   sort:
     - "date desc"
     - "year-range desc"
