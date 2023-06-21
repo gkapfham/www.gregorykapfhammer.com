@@ -68,3 +68,38 @@
   description: "Reviewer"
   year-range: "2019 - 2018"
   service-count: 4
+- title: "Transactions on Services Computing"
+  categories: [journal]
+  date: '2018-01-01'
+  date-format: YYYY
+  description: "Reviewer"
+  year-range: "2018 - 2017"
+  service-count: 2
+- title: "Transactions on Industrial Informatics"
+  categories: [journal]
+  date: '2017-01-01'
+  date-format: YYYY
+  description: "Reviewer"
+  year-range: "2017"
+  service-count: 1
+- title: "Software and Systems Modelling Journal"
+  categories: [journal]
+  date: '2016-01-01'
+  date-format: YYYY
+  description: "Reviewer"
+  year-range: "2016"
+  service-count: 1
+- title: "IEEE Software Journal"
+  categories: [journal]
+  date: '2015-01-01'
+  date-format: YYYY
+  description: "Reviewer"
+  year-range: "2015"
+  service-count: 1
+- title: "Empirical Software Engineering Journal"
+  categories: [journal]
+  date: '2020-01-01'
+  date-format: YYYY
+  description: "Reviewer"
+  year-range: "2020 - 2012"
+  service-count: 4
