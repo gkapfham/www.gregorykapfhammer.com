@@ -1,0 +1,10 @@
+---
+page-layout: full
+categories: [workshop]
+date: '2015-01-01'
+date-format: YYYY
+description: "Program Committee Member"
+title: International Workshop on Testing and Proofs
+year-range: "2015 - 2010"
+service-count: 6
+---

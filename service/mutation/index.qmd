@@ -1,0 +1,10 @@
+---
+page-layout: full
+categories: [workshop]
+date: '2019-01-01'
+date-format: YYYY
+description: "Program Committee Member"
+title: International Workshop on Mutation Analysis
+year-range: "2019 - 2010"
+service-count: 5
+---
