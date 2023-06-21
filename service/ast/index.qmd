@@ -1,0 +1,10 @@
+---
+page-layout: full
+categories: [conference]
+date: '2021-01-01'
+date-format: YYYY
+description: Program Committee Member
+title: International Conference on the Automation of Software Test
+year-range: "2020 - 2021"
+service-count: 2
+---
