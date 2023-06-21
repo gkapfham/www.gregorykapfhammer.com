@@ -1,5 +1,6 @@
 ---
 title: "Service"
+render-on-save: true
 toc: true
 page-layout: full
 listing:
