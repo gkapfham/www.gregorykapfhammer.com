@@ -94,6 +94,7 @@ pre {
 
 .blockquote {
   font-size: inherit;
+  margin-top: 0.75rem;
   padding-left: 0.5rem;
   padding-right: 1.5rem;
   color: inherit;
@@ -422,7 +423,7 @@ th {
 
 /* }}} */
 
-/* Featured Papers and Presentations {{{ */
+/* Featured Papers and Presentations and Posts and Service {{{ */
 
 #featured-papers-pagination .listing-pagination {
   display: none;
@@ -478,6 +479,25 @@ th {
 }
 
 #featured-posts-pagination .quarto-listing {
+  padding-bottom: 0em;
+}
+
+#featured-service-pagination .listing-pagination {
+  display: none;
+}
+
+#featured-service-pagination ul.pagination {
+  display: none;
+  float: right;
+  padding-left: 8px;
+  padding-top: 0.5em;
+}
+
+#listing-featured-service {
+  margin-bottom: -3.5rem !important;
+}
+
+#featured-service-pagination .quarto-listing {
   padding-bottom: 0em;
 }
 
