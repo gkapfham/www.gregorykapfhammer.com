@@ -14,7 +14,7 @@ listing:
   categories: true
   date-format: "YYYY"
   sort-ui: true
-  filter-ui: true
+  filter-ui: [title, year-range, description, service-count]
   fields: [title, year-range, description, service-count]
   field-display-names:
     description: "Role(s)"
