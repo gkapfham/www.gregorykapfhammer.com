@@ -56,15 +56,18 @@ h4,
 a {
   color: #e65100;
   text-decoration: none;
-  -webkit-text-decoration: underline;
-  -moz-text-decoration: underline;
-  -ms-text-decoration: underline;
-  -o-text-decoration: underline;
+  -webkit-text-decoration: none;
+  -moz-text-decoration: none;
+  -ms-text-decoration: none;
+  -o-text-decoration: none;
 }
 
 a:hover {
   color: #e65100 !important;
-  text-decoration: underline;
+  transition: text-decoration-color 300ms, text-underline-offset 300ms;
+  text-decoration: underline 0.1em rgba(0, 0, 0, 1);
+  text-decoration-color: #e65100;
+  text-underline-offset: 0.3em;
 }
 
 li,
