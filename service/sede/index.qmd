@@ -1,0 +1,10 @@
+---
+page-layout: full
+categories: [conference]
+date: '2011-01-01'
+date-format: YYYY
+description: "Session Chair"
+title: International Conference on Software Engineering and Data Engineering
+year-range: "2011"
+service-count: 1
+---

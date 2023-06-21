@@ -1,0 +1,10 @@
+---
+page-layout: full
+categories: [workshop]
+date: '2011-01-01'
+date-format: YYYY
+description: Program Committee Member
+title: International Workshop on Testing and Debugging
+year-range: "2011"
+service-count: 1
+---

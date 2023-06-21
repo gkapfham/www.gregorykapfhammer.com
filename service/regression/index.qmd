@@ -1,0 +1,10 @@
+---
+page-layout: full
+categories: [workshop]
+date: '2014-01-01'
+date-format: YYYY
+description: "General Chair, Program Chair, Program Committee Member"
+title: International Workshop on Regression Testing
+year-range: "2014 - 2011"
+service-count: 4
+---
