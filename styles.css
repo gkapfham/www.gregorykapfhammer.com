@@ -423,6 +423,14 @@ th {
 
 /* }}} */
 
+/* Professional Service {{{ */
+
+.listing-description {
+  font-style: inherit;
+}
+
+/* }}} */
+
 /* Featured Papers and Presentations and Posts and Service {{{ */
 
 #featured-papers-pagination .listing-pagination {
