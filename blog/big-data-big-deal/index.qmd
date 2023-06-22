@@ -87,3 +87,5 @@ site <a
 href="https://github.com/schemaanalyst/schemaanalyst">schemaanalyst/schemaanalyst</a>.
 
 :::
+
+{{< include /_back-blog.qmd >}}
