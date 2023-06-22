@@ -1,32 +1,33 @@
 ---
 title: "Service"
 render-on-save: true
-toc: true
+toc: false
 page-layout: full
 listing:
-  contents:
-    - "../service/**/*.qmd"
-    - "!../index.qmd"
-    - service.yml
-  sort:
-    - "date desc"
-    - "year-range desc"
-    - "title"
-  type: table
-  categories: true
-  date-format: "YYYY"
-  sort-ui: true
-  filter-ui: [title, year-range, description, service-count]
-  fields: [title, year-range, description, service-count]
-  field-display-names:
-    description: "Role(s)"
-    title: "Venue"
-    year-range: "Year(s)"
-    service-count: "Count"
-  field-links: []
-  page-size: 25
-  feed:
-    title: "Professional Service"
+  - id: full-service
+    contents:
+      - "../service/**/*.qmd"
+      - "!../index.qmd"
+      - service.yml
+    sort:
+      - "date desc"
+      - "year-range desc"
+      - "title"
+    type: table
+    categories: true
+    date-format: "YYYY"
+    sort-ui: true
+    filter-ui: [title, year-range, description, service-count]
+    fields: [title, year-range, description, service-count]
+    field-display-names:
+      description: "Role(s)"
+      title: "Venue"
+      year-range: "Year(s)"
+      service-count: "Count"
+    field-links: []
+    page-size: 25
+    feed:
+      title: "Professional Service"
 ---
 
 ```{python}
@@ -42,3 +43,27 @@ console.print(
     f":rocket: I'm thankful for the opportunity to serve these {service_count} different venues!"
 )
 ```
+
+## Details
+
+An award-winning [teacher](/teaching/index.qmd),
+[researcher](/research/index.qmd), [writer](research/papers/index.qmd), and
+[presenter](research/presentations/index.qmd), I have expertise in areas such
+as software engineering and software testing. I am an associate editor for the
+[Journal of Software: Evolution and
+Process](https://onlinelibrary.wiley.com/journal/20477481), an academic editor
+for the [PeerJ Computer Science](https://peerj.com/computer-science/) journal,
+a program committee member for conferences like the [International Conference
+on Software Testing, Verification and
+Validation](https://cs.gmu.edu/icst/index.html) and the [International
+Conference on Automated Software
+Engineering](https://conf.researchr.org/series/ase), and a reviewer for
+journals such as [Transactions on Software
+Engineering](https://www.computer.org/csdl/journal/ts) and [Journal of Software
+Testing, Verification and
+Reliability](https://onlinelibrary.wiley.com/journal/10991689). Along with
+contributing to open-source [software](software/), I collaborate with people at
+leading academic institutions, government agencies, and technology companies.
+
+:::{#full-service}
+:::
