@@ -41,7 +41,7 @@ console.print(
 ## Details
 
 An award-winning [teacher](/teaching/index.qmd),
-[researcher](/research/index.qmd), [writer](research/papers/index.qmd), and
+[researcher](/research/index.qmd), [writer](/research/papers/index.qmd), and
 [presenter](/research/presentations/index.qmd), I have expertise in areas such
 as software engineering and software testing. I am an associate editor for the
 [Journal of Software: Evolution and
