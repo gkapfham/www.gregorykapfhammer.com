@@ -50,7 +50,7 @@ $ javac -XMutator:ALL MyFile.java
 
 The creator of Major, [Rene Just](https://homes.cs.washington.edu/~rjust/),
 took great care to ensure that it is fast, allowing mutation testing to be
-applied to large real-world programs. <span class="gist">Major verson 2.0.0,
+applied to large real-world programs. <span class="gist">Major version 2.0.0,
 for a recent version of the Java programming language, is now available for
 download&mdash;check Major's site so that you can download the tool and get
 started with mutation analysis for your JUnit test suites!</span> If you are
