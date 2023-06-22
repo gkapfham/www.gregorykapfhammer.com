@@ -784,6 +784,15 @@ th {
   font-size: 0.75rem;
 }
 
+/* Date */
+.toot-date a:hover {
+  color: #e65100 !important;
+  transition: text-decoration-color 300ms, text-underline-offset 300ms;
+  text-decoration: underline 0.1em rgba(0, 0, 0, 1);
+  text-decoration-color: #e65100;
+  text-underline-offset: 0.3em;
+}
+
 /* Loading-spinner */
 .mt-body > .loading-spinner {
   position: absolute;
