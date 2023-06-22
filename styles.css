@@ -541,6 +541,18 @@ th {
   margin-top: 1rem !important;
 }
 
+#listing-featured-papers .metadata {
+  font-size: 0.9em;
+}
+
+#listing-featured-posts .metadata {
+  font-size: 0.9em;
+}
+
+#listing-featured-presentations .metadata {
+  font-size: 0.9em;
+}
+
 /* }}} */
 
 /* Custom Mastodon Timeline {{{ */
