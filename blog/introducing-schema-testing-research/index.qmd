@@ -70,3 +70,5 @@ download and use the tool, which is available from the GitHub repository <a
 href="https://github.com/schemaanalyst/schemaanalyst">schemaanalyst/schemaanalyst</a>.
 
 :::
+
+{{< include /_back-blog.qmd >}}

@@ -73,3 +73,5 @@ and [@McMinn2019] [{{< iconify fa6-solid book-open
 >}}](/research/papers/mcminn2019/index.qmd).
 
 :::
+
+{{< include /_back-blog.qmd >}}
