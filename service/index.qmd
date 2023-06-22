@@ -16,7 +16,7 @@ listing:
     type: table
     categories: true
     date-format: "YYYY"
-    sort-ui: true
+    sort-ui: [title]
     filter-ui: [title, year-range, description, service-count]
     fields: [title, year-range, description, service-count]
     field-display-names:
@@ -25,7 +25,7 @@ listing:
       year-range: "Year(s)"
       service-count: "Count"
     field-links: []
-    page-size: 25
+    page-size: 30
     feed:
       title: "Professional Service"
 ---
