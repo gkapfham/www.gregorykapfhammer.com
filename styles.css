@@ -62,7 +62,7 @@ a {
   -o-text-decoration: none;
 }
 
-a:hover {
+p a:hover {
   color: #e65100 !important;
   transition: text-decoration-color 300ms, text-underline-offset 300ms;
   text-decoration: underline 0.1em rgba(0, 0, 0, 1);
