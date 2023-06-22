@@ -24,6 +24,7 @@ listing:
     year-range: "Year(s)"
     service-count: "Count"
   field-links: []
+  page-size: 25
   feed:
     title: "Professional Service"
 ---
