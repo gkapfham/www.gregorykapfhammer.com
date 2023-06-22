@@ -530,6 +530,10 @@ th {
   padding-bottom: 0em;
 }
 
+#listing-full-service {
+  margin-top: 1rem !important;
+}
+
 /* }}} */
 
 /* Custom Mastodon Timeline {{{ */
