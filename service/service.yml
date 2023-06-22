@@ -145,3 +145,52 @@
   description: "Reviewer"
   year-range: "2023 - 2009"
   service-count: 13
+- title: "Automated Software Engineering Journal"
+  categories: [journal]
+  date: '2010-01-01'
+  date-format: YYYY
+  description: "Reviewer"
+  year-range: "2010 - 2008"
+  service-count: 2
+- title: "Communications of the ACM"
+  categories: [journal]
+  date: '2008-01-01'
+  date-format: YYYY
+  description: "Reviewer"
+  year-range: "2008"
+  service-count: 1
+- title: "Science of Computer Programming"
+  categories: [journal]
+  date: '2007-01-01'
+  date-format: YYYY
+  description: "Reviewer"
+  year-range: "2017 - 2007"
+  service-count: 3
+- title: "Transactions on Computers"
+  categories: [journal]
+  date: '2007-01-01'
+  date-format: YYYY
+  description: "Reviewer"
+  year-range: "2007"
+  service-count: 1
+- title: "Transactions on Software Engineering"
+  categories: [journal]
+  date: '2021-01-01'
+  date-format: YYYY
+  description: "Reviewer"
+  year-range: "2021 - 2006"
+  service-count: 34
+- title: "Transactions on Software Engineering and Methodology"
+  categories: [journal]
+  date: '2021-01-01'
+  date-format: YYYY
+  description: "Reviewer"
+  year-range: "2021 - 2004"
+  service-count: 7
+- title: "IEE Proceedings &mdash; Software"
+  categories: [journal]
+  date: '2002-01-01'
+  date-format: YYYY
+  description: "Reviewer"
+  year-range: "2002"
+  service-count: 1
