@@ -77,6 +77,10 @@ p a:hover {
   text-underline-offset: 0.3em;
 }
 
+.body a:hover {
+  color: #e65100 !important;
+}
+
 li,
 .li {
   margin-top: 0;
