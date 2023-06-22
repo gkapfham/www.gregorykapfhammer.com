@@ -208,3 +208,45 @@
   description: "Reviewer"
   year-range: "2022 - 2010"
   service-count: 2
+- title: "Addison-Wesley"
+  categories: [publisher]
+  date: '2012-01-01'
+  date-format: YYYY
+  description: "Reviewer"
+  year-range: "2012"
+  service-count: 1
+- title: "Prentice Hall"
+  categories: [publisher]
+  date: '2006-01-01'
+  date-format: YYYY
+  description: "Reviewer"
+  year-range: "2006 - 2005"
+  service-count: 1
+- title: "Encyclopedia of Software Engineering"
+  categories: [publisher]
+  date: '2012-01-01'
+  date-format: YYYY
+  description: "Reviewer"
+  year-range: "2010"
+  service-count: 1
+- title: "Handbook of Technology Management"
+  categories: [publisher]
+  date: '2008-01-01'
+  date-format: YYYY
+  description: "Reviewer"
+  year-range: "2008"
+  service-count: 1
+- title: "Handbook of Technology Management"
+  categories: [publisher]
+  date: '2008-01-01'
+  date-format: YYYY
+  description: "Reviewer"
+  year-range: "2008"
+  service-count: 1
+- title: "Handbook of Computer Networks"
+  categories: [publisher]
+  date: '2006-01-01'
+  date-format: YYYY
+  description: "Reviewer"
+  year-range: "2006"
+  service-count: 1
