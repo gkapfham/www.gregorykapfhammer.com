@@ -194,3 +194,17 @@
   description: "Reviewer"
   year-range: "2002"
   service-count: 1
+- title: "Natural Sciences and Engineering Research Council of Canada"
+  categories: [foundation]
+  date: '2016-01-01'
+  date-format: YYYY
+  description: "Reviewer"
+  year-range: "2006"
+  service-count: 1
+- title: "National Science Foundation of the United States of America"
+  categories: [foundation]
+  date: '2022-01-01'
+  date-format: YYYY
+  description: "Reviewer"
+  year-range: "2022 - 2010"
+  service-count: 2
