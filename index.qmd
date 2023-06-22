@@ -24,7 +24,7 @@ listing:
     date-format: "YYYY"
     sort-ui: false
     filter-ui: false
-    fields: [author, title, description]
+    fields: [author, date, title, description]
     max-items: 3
     page-size: 3
   - id: featured-presentations
@@ -38,7 +38,7 @@ listing:
     date-format: "YYYY"
     sort-ui: false
     filter-ui: false
-    fields: [author, title, description]
+    fields: [author, date, title, description]
     max-items: 3
     page-size: 3
   - id: featured-posts
@@ -52,7 +52,7 @@ listing:
     date-format: "YYYY"
     sort-ui: false
     filter-ui: false
-    fields: [author, title, description]
+    fields: [author, title, date, description, reading-time]
     max-items: 3
     page-size: 3
   - id: featured-service
