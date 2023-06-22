@@ -138,3 +138,10 @@
   description: "Reviewer"
   year-range: "2021 - 2009"
   service-count: 16
+- title: "Information and Software Technology"
+  categories: [journal]
+  date: '2023-01-01'
+  date-format: YYYY
+  description: "Reviewer"
+  year-range: "2023 - 2009"
+  service-count: 13
