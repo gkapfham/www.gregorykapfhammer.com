@@ -56,8 +56,9 @@ journals such as [Transactions on Software
 Engineering](https://www.computer.org/csdl/journal/ts) and [Journal of Software
 Testing, Verification and
 Reliability](https://onlinelibrary.wiley.com/journal/10991689). Along with
-contributing to open-source [software](software/), I collaborate with people at
-leading academic institutions, government agencies, and technology companies.
+contributing to open-source [software](/software/index.qmd), I collaborate with
+people at leading academic institutions, government agencies, and technology
+companies.
 
 :::{#full-service}
 :::
