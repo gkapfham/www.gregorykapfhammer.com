@@ -45,7 +45,36 @@ PAGE_FULL_ATTRIBUTE = "page-layout: full"
 
 MAX_KEYWORD_SIZE = 3
 
-KEYWORDS = {
+KEYWORDS_PRESENTATIONS = {
+    "application development": "software development",
+    "commit messages": "software development",
+    "correct software": "software development",
+    "database application": "database testing",
+    "distributed systems": "distributed systems",
+    "doubling experiments": "program performance",
+    "GitHub": "continuous integration",
+    "JavaSpace": "distributed systems",
+    "Jini": "distributed systems",
+    "program instrumentation": "test coverage",
+    "measured performance": "performance analysis",
+    "measuring the performance": "performance analysis",
+    "psuedo-tested": "mutation testing",
+    "Python": "Python programming",
+    "regression testing": "test-suite prioritization",
+    "software development": "software development",
+    "software testing": "software testing",
+    "synthentic coverage": "test coverage",
+    "test suite execution": "test coverage",
+    "test execution": "test coverage",
+    "test adequacy": "test coverage",
+    "text editor": "software development",
+    "tuple space": "distributed systems",
+    "type annotations": "software development",
+    "undergraduates": "undergraduate education",
+    "wrapping": "software development",
+}
+
+KEYWORDS_ALL = {
     "adequacy criteria": "test coverage",
     "database-aware": "database testing",
     "defect prediction": "defect prediction",
@@ -151,7 +180,7 @@ def replace_word_in_string(search_string: str, old_word: str, new_word: str) -> 
     return replaced_string
 
 
-def create_categories(publication: Dict[str, str]) -> None:
+def create_categories(publication: Dict[str, str], is_presentation: bool = False) -> None:
     """Add categories for a publication since none exist by default in the BiBTeX file."""
     # extract the title and the abstract and the description,
     # if they are available, and use them for category creation
@@ -167,17 +196,26 @@ def create_categories(publication: Dict[str, str]) -> None:
     # designate whether or not anything has been found
     found_keyword = False
     found_keyword_list = []
+    # combine the two dictionaries if dealing with a presentation
+    # since the paper keywords apply and it is possible to also
+    # use any of the keywords for presentations
+    if is_presentation:
+        keywords = KEYWORDS_ALL | KEYWORDS_PRESENTATIONS
+    # not dealing with a presentation so only use the keywords
+    # that are general-purpose and geared for papers
+    else:
+        keywords = KEYWORDS_ALL
     # look to see if each of the specified keywords exists
     # inside of either the title or the abstract; if it
     # does exist, then add it to the list of found keywords
-    for current_keyword in KEYWORDS.keys():
+    for current_keyword in keywords.keys():
         if (
             string_found(current_keyword, publication_title)
             or string_found(current_keyword, publication_abstract)
             or string_found(current_keyword, publication_description)
         ):
             found_keyword = True
-            found_keyword_list.append(KEYWORDS[current_keyword])
+            found_keyword_list.append(keywords[current_keyword])
     # at least one keyword was found, so create a new key value
     # pair entry inside of the publication provided as the input
     if found_keyword:
@@ -395,8 +433,10 @@ def write_presentation_to_file(
     # define the date-format to only display the year
     only_year = "YYYY"
     presentation["date-format"] = f"{only_year}"
-    # create the categories
-    create_categories(presentation)
+    # create the categories for the presentation; signal
+    # that this is a presentation by the second parameter
+    # that is by default going to be false
+    create_categories(presentation, is_presentation=True)
     # create the file for this paper in the presentations directory
     # make sure to use a lower-case directory name to be
     # consistent and to ensure that Quarto correctly
