@@ -35,16 +35,12 @@ href="https://github.com/AVMf/avmf">avmf</a>: Extensible framework for the
 search-based alternating variable method</li>
 
 <li class="software"><a target="_blank" rel="noopener"
-href="https://github.com/CommittedTeam/CommitCanvas">commitcanvas</a>:
-Prediction of commit labels for version control messages</li>
+href="https://github.com/flake-it/cannier-framework">cannier-framework</a>:
+Flaky test detection with re-running and machine learning</li>
 
 <li class="software"><a target="_blank" rel="noopener"
 href="https://github.com/kinneerc/ExpOse/">expose</a>: Doubling experiments to
 infer actual-worst-case time complexity</li>
-
-<li class="software"><a target="_blank" rel="noopener"
-href="https://github.com/flake-it/testinspect">testinspect</a>: Pytest plugin to
-characterize Pytest test suites</li>
 
 <li class="software"><a target="_blank" rel="noopener"
 href="https://github.com/kanonizo/kanonizo">kanonizo</a>: Effective automated
@@ -59,12 +55,20 @@ href="https://github.com/mccurdyc/mrstudyr">mrstudyr</a>: Retrospectively study
 effectiveness of mutation testing techniques</li>
 
 <li class="software"><a target="_blank" rel="noopener"
+href="https://github.com/flake-it/pytest-cannier">pytest-cannier</a>:
+Pytest plugin to characterize Pytest test suites</li>
+
+<li class="software"><a target="_blank" rel="noopener"
 href="https://github.com/redecheck/redecheck-tool">redecheck</a>: Automated
 checking of responsively designed web pages</li>
 
 <li class="software"><a target="_blank" rel="noopener"
 href="https://github.com/schemaanalyst-team/schemaanalyst">schemaanalyst</a>:
 Data generation and mutation analysis for database schemas</li>
+
+<li class="software"><a target="_blank" rel="noopener"
+href="https://github.com/flake-it/testinspect">testinspect</a>: Pytest plugin to
+characterize Pytest test suites</li>
 
 <li class="software"><a target="_blank" rel="noopener"
 href="https://github.com/flake-it/showflakes">showflakes</a>: Pytest plugin for
@@ -296,6 +300,10 @@ like [@McCurdy2016] [{{< iconify fa6-solid book-open
 ### Replication
 
 <ul>
+
+<li class="software"><a target="_blank" rel="noopener"
+href="https://github.com/flake-it/cannier-experiment">cannier-experiment</a>:
+Data and analysis code for an ESE 2023 paper</li>
 
 <li class="software"><a target="_blank" rel="noopener"
 href="https://github.com/schemaanalyst/domino-replicate">domino-replicate</a>:
