@@ -47,26 +47,36 @@ MAX_KEYWORD_SIZE = 3
 
 KEYWORDS_PRESENTATIONS = {
     "application development": "software development",
+    "big data": "database testing",
     "commit messages": "software development",
-    "correct software": "software development",
+    "correct software": "software testing",
+    "communication": "distributed systems",
+    "communication primitive": "distributed systems",
     "database application": "database testing",
+    "database applications": "database testing",
+    "database interaction": "database testing",
     "distributed systems": "distributed systems",
-    "doubling experiments": "program performance",
+    "doubling experiments": "performance analysis",
+    "efficient": "program performance",
+    "efficiency": "program performance",
     "GitHub": "continuous integration",
     "JavaSpace": "distributed systems",
     "Jini": "distributed systems",
     "program instrumentation": "test coverage",
     "measured performance": "performance analysis",
     "measuring the performance": "performance analysis",
-    "psuedo-tested": "mutation testing",
+    "prioritizers": "test-suite prioritization",
+    "pseudo-tested": "mutation testing",
     "Python": "Python programming",
     "regression testing": "test-suite prioritization",
     "software development": "software development",
     "software testing": "software testing",
-    "synthentic coverage": "test coverage",
+    "synthetic coverage": "test coverage",
+    "teaching": "undergraduate education",
     "test suite execution": "test coverage",
     "test execution": "test coverage",
     "test adequacy": "test coverage",
+    "time-aware": "performance analysis",
     "text editor": "software development",
     "tuple space": "distributed systems",
     "type annotations": "software development",
@@ -189,10 +199,13 @@ def create_categories(publication: Dict[str, str], is_presentation: bool = False
     publication_description = ""
     if "title" in publication.keys():
         publication_title = publication["title"]
+        publication_title = publication_title.replace("\n", " ")
     if "abstract" in publication.keys():
         publication_abstract = publication["abstract"]
+        publication_abstract = publication_abstract.replace("\n", " ")
     if "description" in publication.keys():
         publication_description = publication["description"]
+        publication_description = publication_description.replace("\n", " ")
     # designate whether or not anything has been found
     found_keyword = False
     found_keyword_list = []
