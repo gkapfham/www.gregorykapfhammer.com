@@ -1,7 +1,7 @@
 ---
 page-layout: full
 categories: [conference]
-date: '2022-01-01'
+date: '2020-01-01'
 date-format: YYYY
 description: Program Committee Member
 title: International Conference on Genetic and Evolutionary Computation
