@@ -10,10 +10,11 @@ aliases: ["writing/programming/vim/2016/07/12/Technical-Writing/"]
 
 If you are like me, then you may enjoy writing in a notebook with a fountain pen
 &mdash; if you have not tried writing this way, then borrow someone's fountain
-pen and try it! As much as I may like writing with a fountain pen, I still spend
-a substantial amount of time preparing technical papers and presentations in
-[LaTeX](http://www.latex-project.org/) with the [Vim](http://www.vim.org/) text
-editor &mdash; a task I also find to be challenging and rewarding.
+pen and try it. As much as I may like taking notes and brainstorming with a
+fountain pen, I spend a substantial amount of time preparing technical
+papers and presentations in [LaTeX](http://www.latex-project.org/) with the
+[Vim](http://www.vim.org/) text editor &mdash; a task I also find to be
+challenging and rewarding!
 
 If you write with Vim and LaTeX and you would like to improve your writing
 experience, then please consider using the
@@ -26,14 +27,15 @@ the source code of my `.vimrc` that is available in the GitHub repository
 [gkapfham/dotfiles](https://github.com/gkapfham/dotfiles).
 
 Yes, it is possible to use these tools to create nicely formatted and correct
-papers. As an example of a paper, please consider reading {% include_cached
-_popovers/paper_reference.html cite="McMinn2016a" %}, the source code of which
+papers. As an example of a paper, please consider reading [@McMinn2016a] [{{<
+iconify fa6-solid book-open
+>}}](/research/papers/mcminn2016a/index.qmd), the source code of which
 is also available in a GitHub repository at <a
-href="https://github.com/gkapfham/ast2016-paper">gkapfham/ast2016-paper</a> An
+  href="https://github.com/gkapfham/ast2016-paper">gkapfham/ast2016-paper</a> An
 example of a presentation that I prepared in LaTeX is {% include_cached
 _popovers/paper_reference.html cite="Kapfhammer2015" %}, which you can study
 from its GitHub repository at <a
-href="https://github.com/gkapfham/seke2015-presentation">gkapfham/seke2015-presentation</a>
+  href="https://github.com/gkapfham/seke2015-presentation">gkapfham/seke2015-presentation</a>
 There's something else that is really nice about programming your papers and
 presentations in LaTeX &mdash; you can release their source code on GitHub to
 share with others an "instruction manual" that explains, in a step-by-step
