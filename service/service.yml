@@ -12,6 +12,13 @@
   description: "Host"
   year-range: "2023"
   service-count: 1
+- title: "StackOverflow Podcast"
+  categories: [podcast]
+  date: '2023-01-01'
+  date-format: YYYY
+  description: "Guest"
+  year-range: "2023"
+  service-count: 1
 - title: "Teaching Computer Science Workshop at Carnegie Mellon University"
   categories: [workshop]
   date: '2023-01-01'
