@@ -65,6 +65,7 @@ KEYWORDS = {
     "genetic": "search-based methods",
     "human study": "human study",
     "invariant": "invariant detection",
+    "Java framework": "software tool",
     "JavaSpace": "performance analysis",
     "kernel performance": "performance analysis",
     "localiz": "fault localization",
