@@ -26,6 +26,13 @@
   description: "Panelist"
   year-range: "2023"
   service-count: 1
+- title: "International Symposium on Software Testing and Analysis"
+  categories: [conference]
+  date: '2023-01-01'
+  date-format: YYYY
+  description: "Program Committee Member"
+  year-range: "2023"
+  service-count: 1
 - title: "International Workshop on Search-Based and Fuzz Testing"
   categories: [workshop]
   date: '2023-01-01'
