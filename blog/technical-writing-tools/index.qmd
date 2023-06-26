@@ -25,7 +25,6 @@ interested in learning more about how I configured these plugins? Please study
 the source code of my `.vimrc` that is available in the GitHub repository
 [gkapfham/dotfiles](https://github.com/gkapfham/dotfiles).
 
-<p>
 Yes, it is possible to use these tools to create nicely formatted and correct
 papers. As an example of a paper, please consider reading {% include_cached
 _popovers/paper_reference.html cite="McMinn2016a" %}, the source code of which
@@ -39,7 +38,3 @@ There's something else that is really nice about programming your papers and
 presentations in LaTeX &mdash; you can release their source code on GitHub to
 share with others an "instruction manual" that explains, in a step-by-step
 fashion, exactly how to produce a document just like yours!
-</p>
-
-{% include _footers/blog_footer.html %}
-
