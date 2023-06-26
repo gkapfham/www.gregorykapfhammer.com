@@ -59,6 +59,7 @@ listing:
     contents:
       - "service/**/*.qmd"
       - "!service/index.qmd"
+      - service.yml
     sort:
       - "date desc"
       - "year-range desc"
