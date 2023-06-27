@@ -1,6 +1,6 @@
 ---
 author: Gregory M. Kapfhammer
-title: Technical writing with LaTeX, Vim, and Git
+title: Experience joy-filled technical writing with LaTeX, Vim, and Git
 date: '2016-01-01'
 date-format: YYYY
 categories: [post, technical writing, software development]
