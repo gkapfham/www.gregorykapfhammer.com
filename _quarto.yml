@@ -36,16 +36,6 @@ website:
             url: research/papers/index.xml
           - text: Presentations
             url: research/presentations/index.xml
-      - icon: tools
-        menu:
-          - text: Blog
-            url: blog/index.xml
-          - text: Service
-            url: service/index.xml
-          - text: Papers
-            url: research/papers/index.xml
-          - text: Presentations
-            url: research/presentations/index.xml
     left:
       - href: index.qmd
         text: Home
