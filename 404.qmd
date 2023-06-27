@@ -10,7 +10,7 @@ jupyter: python3
 from rich.console import Console
 console = Console()
 console.print(
-    ":man_facepalming: Good grief, this page is no longer available!"
+    ":man_facepalming: Good grief, this page is not available! Try another link?"
 )
 ```
 
