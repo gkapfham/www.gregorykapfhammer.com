@@ -554,7 +554,7 @@ def parse_conference_paper(publication: Dict[str, str]) -> bool:
         publication_booktitle = publication["booktitle"]
         # define the description using the booktitle
         publication["description"] = f"<em>{publication_booktitle}</em>"
-        # write the publication to the file systems
+        # write the publication to the file system
         write_publication_to_file(
             publication, publication_abstract, publication_id, publication_year
         )
