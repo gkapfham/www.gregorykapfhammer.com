@@ -104,7 +104,7 @@ as the best paper in the <a
   href="http://www.sigevo.org/gecco-2010/">ACM SIGEVO Genetic and Evolutionary
   Computation Conference (GECCO 2010)</a>.
 Kapfhammer's presentation for
-[@Kapfhammer2016] [{{< iconify fa6-solid book-open >}}](/research/papers/kapfhammer2016/index.qmd)
+the paper [@Kapfhammer2016] [{{< iconify fa6-solid book-open >}}](/research/papers/kapfhammer2016/index.qmd)
 won the
 best presentation award at the <a href="https://cse.sc.edu/~ggay/sbst2016/">9th
   International Workshop on Search-Based Software Testing (SBST 2016)</a>.
