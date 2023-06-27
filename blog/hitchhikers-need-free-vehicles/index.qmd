@@ -4,7 +4,7 @@ title: Hitchhiker's need free vehicles! A call for open-source statistical analy
 date: '2016-01-01'
 date-format: YYYY
 categories: [post, position statement, software tool]
-description: <em>Researchers should be able to replicate statistical analyses</em>
+description: <em>Let's enable the replication of statistical analyses!</em>
 aliases: ["/research/software/idea/2016/09/25/2016-Statistical-Software/"]
 ---
 
