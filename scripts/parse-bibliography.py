@@ -190,7 +190,9 @@ def replace_word_in_string(search_string: str, old_word: str, new_word: str) -> 
     return replaced_string
 
 
-def create_categories(publication: Dict[str, str], is_presentation: bool = False) -> None:
+def create_categories(
+    publication: Dict[str, str], is_presentation: bool = False
+) -> None:
     """Add categories for a publication since none exist by default in the BiBTeX file."""
     # extract the title and the abstract and the description,
     # if they are available, and use them for category creation
@@ -455,7 +457,9 @@ def write_presentation_to_file(
     # consistent and to ensure that Quarto correctly
     # resolves all of the categories links from a paper back
     presentation_id_lowercase = presentation_id.lower()
-    presentations_directory = Path(f"research/presentations/{presentation_id_lowercase}/")
+    presentations_directory = Path(
+        f"research/presentations/{presentation_id_lowercase}/"
+    )
     presentations_directory.mkdir(parents=True, exist_ok=True)
     presentation_file = Path(presentations_directory / "index.qmd")
     presentation_file.touch()
@@ -578,6 +582,28 @@ def parse_presentation(publication: Dict[str, str]) -> bool:
     return False
 
 
+def parse_thesis_paper(publication: Dict[str, str]) -> bool:
+    """Parse a thesis paper, like a dissertation, noted because it uses a school or institution."""
+    if publication.get("school") or publication.get("institution"):
+        # extract values from the current publication
+        publication_id = publication["ID"]
+        publication_year = publication["year"]
+        publication_abstract = publication["abstract"]
+        publication_booktitle = ""
+        if publication.get("school"):
+            publication_booktitle = publication["school"]
+        elif publication.get("institution"):
+            publication_booktitle = publication["institution"]
+        # define the description using the "booktitle"
+        publication["description"] = f"<em>{publication_booktitle}</em>"
+        # write the publication to the file system
+        write_publication_to_file(
+            publication, publication_abstract, publication_id, publication_year
+        )
+        return True
+    return False
+
+
 def main() -> None:
     """Perform all of the parsing steps for each bibliography entry."""
     global original_publication  # noqa: PLW0603
@@ -642,6 +668,7 @@ def main() -> None:
     # keep track of the number of prsentations
     conference_papers_count = 0
     journal_papers_count = 0
+    thesis_papers_count = 0
     presentations_count = 0
     # process all of the entries by creating the directories and files
     # for each one of the relevant bibliography entries
@@ -673,6 +700,9 @@ def main() -> None:
         # --> for the journal papers
         if parse_journal_paper(publication):
             journal_papers_count = journal_papers_count + 1
+        # --> for the journal papers
+        if parse_thesis_paper(publication):
+            thesis_papers_count = thesis_papers_count + 1
         # --> for the presentations
         if parse_presentation(publication):
             presentations_count = presentations_count + 1
@@ -680,7 +710,7 @@ def main() -> None:
     # execution of the script, in terms of counts of entities
     console.print()
     console.print(
-        f":tada: Parsed {conference_papers_count} conference papers, {journal_papers_count} journal papers, and {presentations_count} presentations"
+        f":tada: Parsed {conference_papers_count} conference papers, {journal_papers_count} journal papers, {thesis_papers_count} theses, and {presentations_count} presentations"
     )
 
 
