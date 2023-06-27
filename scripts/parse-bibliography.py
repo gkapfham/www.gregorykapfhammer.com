@@ -681,10 +681,14 @@ def main() -> None:
         original_publication = copy.deepcopy(publication)
         # delete not-needed entries from the original_publication;
         # this is the publication that will be displayed inside of
-        # the fenced code block for a specific publication
+        # the fenced code block for a specific publication and it
+        # does not influence the creation of the actual index.qmd
+        # file for this specific publication
         not_needed_keys = [
             "abstract",
             "data",
+            "keywords",
+            "nodownload",
             "presented",
             "presentation",
             "talk",
