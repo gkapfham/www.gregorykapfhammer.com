@@ -1,0 +1,36 @@
+---
+title: Principles
+toc: false
+echo: true
+jupyter: python3
+---
+
+```{python}
+from rich.console import Console
+console = Console()
+console.print(
+    ":rocket: By the grace and provision of God I'm enthusiastic about teaching, research, mentoring, and podcasting!"
+)
+```
+
+As an outworking of my Christian faith, I strive to ensure that each of my
+endeavors is guided by the following professional principles:
+
+- <b>Selfless Service</b>: Within reason, focus on the needs of
+your students and colleagues before considering your own. Commit to
+respectfully serving others even when your actions are unlikely to be noticed,
+rewarded, or beneficial to your own professional development.
+
+- <b>Absolute Excellence</b>: Devote yourself and encourage others to commit
+themselves to uncompromising excellence in all activities.
+
+- <b>Relentless Effort</b>: Unless the cost of further effort is prohibitive,
+strive to achieve the goals you set &mdash; and help others to do the same.
+
+- <b>Realistic Expectations</b>: Recognize that all people, including yourself,
+have strengths and weaknesses. Identify the strengths in your own life and the
+lives of others and plan activities so as to maximize the positive impact.
+
+- <b>Contagious Joy</b>: Pursue everything with passion and enthusiasm. Take
+advantage of every opportunity to encourage your students and colleagues.
+Always end a conversation or a meeting with a positive remark.
