@@ -25,13 +25,11 @@ dissertation on database application testing that was supervised by <a
 [@Kapfhammer2007d] [{{< iconify fa6-solid book-open
 >}}](/research/papers/kapfhammer2007d/index.qmd).
 
-Kapfhammer also earned a BSc in Computer Science from Allegheny
-College and a MSc in Computer Science from the University of Pittsburgh. He was
-previously a short-term visitor in the <a
-  href="http://www.cs.virginia.edu">Department of Computer Science</a> at the
-<a href="http://www.virginia.edu">University of Virginia</a>, the <a
-  href="http://iai.mathematik.uni-ulm.de/en/index.html">Institute of Applied
-  Information Processing</a> at the <a
+Kapfhammer earned a BSc in Computer Science from Allegheny College and an MSc
+in Computer Science from the University of Pittsburgh. He was previously a
+short-term visitor in the <a href="http://www.cs.virginia.edu">Department of
+  Computer Science</a> at the <a href="http://www.virginia.edu">University of
+  Virginia</a>, the Institute of Applied Information Processing at the <a
   href="http://www.uni-ulm.de/en">University of Ulm</a>, and the <a
   href="https://www.sheffield.ac.uk/dcs">Department of Computer Science</a> at
 the <a href="http://www.sheffield.ac.uk/">University of Sheffield</a>. In a
@@ -45,16 +43,16 @@ His work is funded by grants from <a href =
 
 ## Teaching
 
-As an educator, Gregory Kapfhammer teaches [courses]({{site.baseurl}}teaching/)
-in the alphabetically ordered areas of algorithm analysis, discrete
-structures, data management, distributed systems, software engineering, software
-testing, operating systems, and web development. He is also a research adviser
-for undergraduate and graduate theses and PhD dissertations. Kapfhammer's
-expertise in teaching was recognized when Allegheny College presented him with
-the [Thoburn Award for Excellence in
+As an educator, Gregory Kapfhammer teaches [courses](/teaching/index.qmd) in
+the alphabetically ordered areas of algorithm analysis, discrete structures,
+data management, distributed systems, software engineering, software testing,
+operating systems, and web development. He is also a research adviser for
+undergraduate and graduate theses and PhD dissertations. Kapfhammer's expertise
+in teaching was recognized when Allegheny College presented him with the
+[Thoburn Award for Excellence in
 Teaching](https://sites.allegheny.edu/alumni/award-recipients/#thoburn). As a
 leader of software engineering teams, Kapfhammer creates useful educational
-[software]({{site.baseurl}}software/) that supports tasks such as project
+[software](/software/index.qmd) that supports automated tasks such as project
 assessment and team formation.
 
 ## Research
@@ -67,15 +65,15 @@ Gregory Kapfhammer conducts [research]({{site.baseurl}}research/) in areas such
 as software engineering and software testing. Collaborating with a diverse and
 skilled group of students and colleagues, Kapfhammer completes research that
 results in award-winning and frequently cited research
-[papers]({{site.baseurl}}research/papers/), oft-complimented
-[presentations]({{site.baseurl}}research/presentations/), useful free and
-open-source [software]({{site.baseurl}}software/), and valued
-[service]({{site.baseurl}}service/) to a variety of organizations. He is an
-associate editor for the [Journal of Software: Evolution and
+[papers](/research/papers/index.qmd), oft-complimented
+[presentations](/research/presentations/index.qmd), useful free and open-source
+[software](/software/index/qmd), and valued [service](/service/index.qmd) to a
+variety of organizations. He is an associate editor for the [Journal of
+Software: Evolution and
 Process](https://onlinelibrary.wiley.com/journal/20477481), an academic editor
-for the [PeerJ Computer Science](https://peerj.com/computer-science/) journal, a
-program committee member for conferences like the [International Conference on
-Software Testing, Verification and
+for the [PeerJ Computer Science](https://peerj.com/computer-science/) journal,
+a program committee member for conferences like the [International Conference
+on Software Testing, Verification and
 Validation](https://cs.gmu.edu/icst/index.html), and a reviewer for journals
 such as [Transactions on Software
 Engineering](https://www.computer.org/csdl/journal/ts). Along with serving as a
@@ -115,8 +113,14 @@ Technical Council on Software Engineering</a>.
 
 </p>
 
-## Invitation
+{{< include /_gist.qmd >}}
+
+::: {.callout-note appearance="simple"}
+
+## Enthusiastic Invitation
 
 Do you work in one of my areas of expertise? Are you interested in collaborating
 with me on a project? If so, then please [contact]({{site.baseurl}}contact/) me
 with your ideas.
+
+:::
