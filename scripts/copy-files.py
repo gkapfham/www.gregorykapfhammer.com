@@ -1,7 +1,6 @@
 """Copy files from a source directory to a destination directory."""
 
 import argparse
-import itertools
 import os
 import shutil
 import sys

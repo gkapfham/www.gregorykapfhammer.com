@@ -6,7 +6,6 @@ import sys
 from pathlib import Path
 
 import csscompressor
-import htmlmin
 import minify_html
 import rjsmin
 from rich.console import Console
