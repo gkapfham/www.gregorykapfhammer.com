@@ -8,9 +8,9 @@ description: <em>Have a database schema? You need to test it!</em>
 aliases: ["/testing/database/tool/2014/06/12/Schema-Testing/"]
 ---
 
-<span class="gist">Database applications are very common and there has been
-much attention to testing them and the individual database management systems
-with which they interact. Yet, there has been very little work devoted to
+Database applications are very common and there has been much attention to
+testing them and the individual database management systems with which they
+interact. <span class="gist">Yet, there has been very little work devoted to
 testing arguably the most important artifact involving an application supported
 by a relational database &mdash; the underlying schema!<span>
 
