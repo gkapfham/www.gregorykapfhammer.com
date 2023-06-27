@@ -22,8 +22,10 @@ the <a href="https://cs.pitt.edu">Department of Computer Science</a> at the <a
   href="http://www.pitt.edu">University of Pittsburgh</a>, writing a PhD
 dissertation on database application testing that was supervised by <a
   href="http://www.cs.virginia.edu/~soffa/">Mary Lou Soffa</a> and published as
-{% include_cached _popovers/paper_reference.html cite="Kapfhammer2007d"
-trailing="." %} Kapfhammer also earned a BSc in Computer Science from Allegheny
+[@Kapfhammer2007d] [{{< iconify fa6-solid book-open
+>}}](/research/papers/kapfhammer2007d/index.qmd).
+
+Kapfhammer also earned a BSc in Computer Science from Allegheny
 College and a MSc in Computer Science from the University of Pittsburgh. He was
 previously a short-term visitor in the <a
   href="http://www.cs.virginia.edu">Department of Computer Science</a> at the
@@ -40,8 +42,6 @@ His work is funded by grants from <a href =
   Research</a> and the <a href =
   "https://foundation.mozilla.org/en/what-we-fund/awards/responsible-computer-science-challenge/winners/">Mozilla
   Foundation</a>.
-
-</p>
 
 ## Teaching
 
