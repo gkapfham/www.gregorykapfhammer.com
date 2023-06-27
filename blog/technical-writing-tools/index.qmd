@@ -5,7 +5,7 @@ date: '2016-01-01'
 date-format: YYYY
 categories: [post, technical writing, software development]
 description: <em>Prepare papers and talks like you create software!</em>
-aliases: ["writing/programming/vim/2016/07/12/Technical-Writing/"]
+aliases: ["/writing/programming/vim/2016/07/12/Technical-Writing/"]
 ---
 
 If you are like me, then you may enjoy writing in a notebook with a fountain pen

@@ -5,7 +5,7 @@ date: '2014-01-01'
 date-format: YYYY
 categories: [post, database testing, software tool]
 description: <em>Have a database schema? You need to test it!</em>
-aliases: ["testing/database/tool/2014/06/12/Schema-Testing/"]
+aliases: ["/testing/database/tool/2014/06/12/Schema-Testing/"]
 ---
 
 <span class="gist">Database applications are very common and there has been

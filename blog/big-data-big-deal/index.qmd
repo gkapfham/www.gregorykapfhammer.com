@@ -5,7 +5,7 @@ date: '2015-01-01'
 date-format: YYYY
 categories: [post, database testing, position statement]
 description: <em>Data integrity is central to big data initiatives!</em>
-aliases: ["testing/database/idea/2015/07/05/Big-Data-Big-Deal/"]
+aliases: ["/testing/database/idea/2015/07/05/Big-Data-Big-Deal/"]
 ---
 
 ::: {.callout-note appearance="simple"}
