@@ -4,7 +4,7 @@ title: Technical writing with LaTeX, Vim, and Git
 date: '2016-01-01'
 date-format: YYYY
 categories: [post, technical writing, software development]
-description: Create papers and presentations like software
+description: <em>Prepare papers and talks like you create software!</em>
 aliases: ["writing/programming/vim/2016/07/12/Technical-Writing/"]
 ---
 
@@ -15,17 +15,19 @@ fountain pen, I spend a substantial amount of time preparing technical
 [papers](/research/papers/index.qmd) and
 [presentations](/research/presentations/index.qmd) in
 [LaTeX](http://www.latex-project.org/) with the [Vim](http://www.vim.org/) text
-editor &mdash; a task I also find to be challenging and rewarding!
+editor &mdash; a task I also find to be challenging and rewarding. Thankfully,
+some tools can aid your writing process!
 
 If you write with Vim and LaTeX and you would like to improve your writing
 experience, then please consider using the
 [vimtex](https://github.com/lervag/vimtex) plugin as it supports wonderful
 features like the completion of BibTeX references, continuous compilation with
 [latexmk](http://users.phys.psu.edu/~collins/software/latexmk-jcc/), and forward
-and reverse searching for [MuPDF](http://mupdf.com/) PDF viewer. Are you
-interested in learning more about how I configured these plugins? Please study
-the source code of my `.vimrc` that is available in the GitHub repository
-[gkapfham/dotfiles](https://github.com/gkapfham/dotfiles).
+and reverse searching for either the
+[Zathura](https://pwmt.org/projects/zathura/) or [MuPDF](http://mupdf.com/) PDF
+viewers. Are you interested in learning more about how I configured these
+plugins? Please study the source code of my `.vimrc` that is available in the
+GitHub repository [gkapfham/dotfiles](https://github.com/gkapfham/dotfiles).
 
 Yes, it is possible to use these tools to create nicely formatted and correct
 papers. As an example of a paper, please consider reading [@McMinn2016a] [{{<
@@ -42,3 +44,18 @@ There's something else that is really nice about programming your papers and
 presentations in LaTeX &mdash; you can release their source code on GitHub to
 share with others an "instruction manual" that explains, in a step-by-step
 fashion, exactly how to produce a document just like yours!
+
+::: {.callout-note appearance="simple"}
+
+## Status Update
+
+Since this blog post was written, I continue to use LaTeX to prepare research
+articles. However, I now use [Neovim](https://neovim.io/) instead of Vim! With
+that said, you can still check out the configuration files in
+[gkapfham/dotfiles](https://github.com/gkapfham/dotfiles) to learn more about my
+current setup. Finally, instead of using LaTeX to create presentations, I now
+normally use Neovim to create Markdown, CSS, HTML, and JavaScript files.
+
+:::
+
+{{< include /_back-blog.qmd >}}

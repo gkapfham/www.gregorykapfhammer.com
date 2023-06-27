@@ -4,7 +4,7 @@ title: Introducing a research foundation for testing relational database schemas
 date: '2014-01-01'
 date-format: YYYY
 categories: [post, database testing, software tool]
-description: Have a database schema? You need to test it!
+description: <em>Have a database schema? You need to test it!</em>
 aliases: ["testing/database/tool/2014/06/12/Schema-Testing/"]
 ---
 

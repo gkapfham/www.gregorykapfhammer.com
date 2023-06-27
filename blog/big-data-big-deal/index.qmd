@@ -4,7 +4,7 @@ title: Is big data a big deal? Not without correct software!
 date: '2015-01-01'
 date-format: YYYY
 categories: [post, database testing, position statement]
-description: Data integrity is central to big data initiatives!
+description: <em>Data integrity is central to big data initiatives!</em>
 aliases: ["testing/database/idea/2015/07/05/Big-Data-Big-Deal/"]
 ---
 
