@@ -23,15 +23,18 @@ in the form of GitHub repositories containing the data sets and statistical
 analysis code used for published papers.
 
 To learn more about the benefits associated with using shared repositories of
-statistical code in SBSE, you can read the suggestions in {% include_cached
+statistical code in SBSE, you can read the suggestions in
+
+{% include_cached
 _popovers/paper_reference.html cite="Kapfhammer2016" %}
+
 for improving the study of data arising from experiments with
 randomized algorithms. If you would like to examine the source code of that
 paper, then you can visit its GitHub repository at <a
 href="https://github.com/gkapfham/sbst2016-paper">gkapfham/sbst2016-paper</a>
 Or, do you have ideas about how the SBSE community should create, share, and
 apply statistical software? If so, then please
-<a href="{{site.baseurl}}contact">contact</a> me to share your thoughts!
+<a href="/contact/index.qmd">contact</a> me to share your thoughts!
 
 {{< include /_gist.qmd >}}
 
@@ -40,14 +43,13 @@ apply statistical software? If so, then please
 ## Further Details
 
 Interested in learning more about this topic? Since this blog post was written,
-my colleagues and students and I have published {% include_cached
-_popovers/paper_reference.html cite="McMinn2016a" %} and released a replication
-package for it as well. If you are interested in replicating the analyses in
-that paper, then I encourage you to visit <a
-href="https://github.com/gkapfham/vmutation-replicate">gkapfham/vmutation-replicate</a>
-on GitHub. I would also appreciate your feedback on the approach that we took
-to create and release this replication package. So, please <a
-href="{{site.baseurl}}contact">contact</a> me to share your insights!
+my colleagues and students and I have published [@McMinn2016a] [{{< iconify
+fa6-solid book-open >}}](/research/papers/mcminn2016a/index.qmd) and released a
+replication package for it as well. If you are interested in replicating the
+analyses in that paper, then I encourage you to visit <a
+  href="https://github.com/gkapfham/vmutation-replicate">gkapfham/vmutation-replicate</a>
+on GitHub. You can learn more about the other replication packages that we've
+published by checking the [software](/software/index.qmd) page!
 
 :::
 
