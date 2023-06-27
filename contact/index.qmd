@@ -1,0 +1,25 @@
+---
+title: Contact Information
+echo: true
+title-block-style: default
+title-block-banner: false
+jupyter: python3
+---
+
+```{python}
+from rich.console import Console
+console = Console()
+console.print(
+    ":e-mail: Please contact me to ask questions or share new ideas!"
+)
+```
+
+Gregory M. Kapfhammer, PhD <br>
+Department of Computer Science <br>
+Allegheny College <br>
+Box Q <br>
+520 North Main Street <br>
+Meadville, Pennsylvania, USA 16335 <br>
+
+**Email**: gkapfham@allegheny.edu <br>
+**Work Phone**: +1 814-332-2880
