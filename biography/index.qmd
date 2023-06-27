@@ -24,7 +24,6 @@ dissertation on database application testing that was supervised by <a
   href="http://www.cs.virginia.edu/~soffa/">Mary Lou Soffa</a> and published as
 [@Kapfhammer2007d] [{{< iconify fa6-solid book-open
 >}}](/research/papers/kapfhammer2007d/index.qmd).
-
 Kapfhammer earned a BSc in Computer Science from Allegheny College and an MSc
 in Computer Science from the University of Pittsburgh. He was previously a
 short-term visitor in the <a href="http://www.cs.virginia.edu">Department of
@@ -61,7 +60,7 @@ Funded by [Facebook
 Research](https://research.fb.com/blog/2019/10/announcing-the-winners-of-the-2019-testing-and-verification-research-awards/)
 and the [Mozilla
 Foundation](https://foundation.mozilla.org/en/what-we-fund/awards/responsible-computer-science-challenge/winners/),
-Gregory Kapfhammer conducts [research]({{site.baseurl}}research/) in areas such
+Gregory Kapfhammer conducts [research](/research/index.qmd) in areas such
 as software engineering and software testing. Collaborating with a diverse and
 skilled group of students and colleagues, Kapfhammer completes research that
 results in award-winning and frequently cited research
