@@ -89,9 +89,8 @@ fa6-solid book-open
   "https://cs.gmu.edu/icst/index.html">International Conference on Software
   Testing, Verification and Validation</a>, and <a href =
   "https://www.computer.org/csdl/journal/ts">Transactions on Software
-  Engineering</a>, respectively.
-
-Kapfhammer's paper [@Kapfhammer2003] [{{< iconify fa6-solid book-open >}}](/research/papers/kapfhammer2003/index.qmd)
+  Engineering</a>.
+His paper [@Kapfhammer2003] [{{< iconify fa6-solid book-open >}}](/research/papers/kapfhammer2003/index.qmd)
 received the ACM
 SIGSOFT Distinguished Paper Award at the <a
   href="http://esecfse.cs.helsinki.fi/">ACM SIGSOFT Foundations of Software
