@@ -1,0 +1,21 @@
+---
+title: Sorry, this Page is Not Available!
+echo: true
+title-block-style: default
+title-block-banner: false
+jupyter: python3
+---
+
+```{python}
+from rich.console import Console
+console = Console()
+console.print(
+    ":man_facepalming: Good grief, this page is no longer available!"
+)
+```
+
+The page that you were looking for is not available on the Web site of [Gregory
+M. Kapfhammer](https://www.gregorykapfhammer.com/). Please use the menu at the
+top of the page to find a resource that is currently available. You can also
+[contact](/contact/index.qmd) me with any questions or comments that you
+have about the contents of my web site.
