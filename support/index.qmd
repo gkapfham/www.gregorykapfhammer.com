@@ -64,28 +64,28 @@ you will my work in one or more of the following ways!
 
 <ul>
 
-<li><p><a class="major" href="/research/papers/">Papers</a>:
+<li><p><a href="/research/papers/">Papers</a>:
 Read a papers, pick your favorite, and share it with a friend</li></p>
 
-<li><p><a class="major" href="/research/presentations/">Talks</a>:
+<li><p><a href="/research/presentations/">Talks</a>:
 View my talks, select one, and reccomend it to someone</li></p>
 
-<li><a class="major" href="/software/">Software</a>:
+<li><a href="/software/">Software</a>:
 Browse my software, find a cool one, try it out, and star it</li>
 
-<li><a class="major" href="/teaching/">Courses</a>:
+<li><a href="/teaching/">Courses</a>:
 Pick a topic, explore it, and share what you learned with others</li>
 
-<li><a class="major" href="/blog/">Blog</a>:
+<li><a href="/blog/">Blog</a>:
 Find an article of interest to you and draw it to the attention of your colleagues.</li>
 
-<li><a class="major" href="/seed/">Survey</a>:
+<li><a href="/seed/">Survey</a>:
 If you are a member of the software industry, please take this survey.</li>
 
-<li><a class="major" href="/service/">Service</a>:
+<li><a href="/service/">Service</a>:
 Learn how I serve the technical community and ask me to help you.</li>
 
-<li><a class="major" href="feed/index.xml">Updates</a>:
+<li><a href="feed/index.xml">Updates</a>:
 Subscribe to my Atom feed to stay updated about my work.</li>
 
 </ul>
