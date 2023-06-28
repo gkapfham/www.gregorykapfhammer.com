@@ -1,0 +1,10 @@
+---
+author: Gregory M. Kapfhammer
+title: "Introducing SEED: Educational discussions with software engineers"
+date: '2017-01-01'
+date-format: YYYY
+categories: [post, seed interviews, industry connections]
+description: <em>Let's have educational discussions with industry!</em>
+aliases: ["/seed/interview/software/2017/07/05/Introducing-SEED/"]
+---
+
