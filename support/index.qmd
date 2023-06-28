@@ -13,10 +13,10 @@ console.print(
 ```
 
 Innovating in technical areas such as software engineering and software testing,
-I teach [courses](teaching/index.qmd), conduct [research](research/index.qmd),
-write [papers](research/papers/index.qmd) and a [blog](blog/index.qmd), give
-[presentations](research/presentations/index.qmd), create
-[software](software/index.qmd), and [serve](service/index.qmd) organizations.
+I teach [courses](/teaching/index.qmd), conduct [research](/research/index.qmd),
+write [papers](/research/papers/index.qmd) and a [blog](/blog/index.qmd), give
+[presentations](/research/presentations/index.qmd), create
+[software](/software/index.qmd), and [serve](/service/index.qmd) organizations. Let's stay connected!
 
 ## Subscription
 
@@ -59,9 +59,9 @@ spam. Instead, I will send you informative and useful updates each year.
 
 ## Connection
 
-I work hard to produce the highest quality content to serve people interested in
-software engineering and software testing. It would be greatly appreciated if
-you will my work in one or more of the following ways!
+I work hard to produce the highest quality content to serve people interested
+in software engineering and software testing. It would be greatly appreciated
+if you will support my work in one or more of the following ways!
 
 <ul>
 
