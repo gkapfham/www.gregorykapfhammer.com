@@ -87,16 +87,17 @@ you will my work in one or more of the following ways!
 
   <li>
     <p><a href="/blog/">Blog</a>: Find an interesting article and share it
-      with attention your friends</p>
+      with your friends</p>
   </li>
 
-  <li><a href="/seed/">Survey</a>:
-    If you are a member of the software industry, please take this survey.</li>
+  <li>
+    <p><a href="/seed/">Survey</a>:
+      Take this survey if you work in the software industry</p>
+  </li>
 
-  <li><a href="/service/">Service</a>:
-    Learn how I serve the technical community and ask me to help you.</li>
-
-  <li><a href="feed/index.xml">Updates</a>:
-    Subscribe to my Atom feed to stay updated about my work.</li>
+  <li>
+    <p><a href="/service/">Service</a>:
+      Learn how I serve the technical community and ask me to help</p>
+  </li>
 
 </ul>
