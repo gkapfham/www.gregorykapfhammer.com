@@ -28,7 +28,7 @@ spam. Instead, I will send you informative and useful updates each year.
 
   <!-- Request the name -->
   <div class="form-group">
-    <label for="name">Name</label >
+    <label for="name">Name</label>
     <div class="row">
       <div class="col">
         <input type="text" class="form-control" name="name" id="name" placeholder="Your name" required>
@@ -41,7 +41,8 @@ spam. Instead, I will send you informative and useful updates each year.
     <label for="reply_to">Email</label>
     <div class="row">
       <div class="col">
-        <input type="email" class="form-control" name="reply_to" id="reply_to" placeholder="user.name@example.com" required>
+        <input type="email" class="form-control" name="reply_to" id="reply_to" placeholder="user.name@example.com"
+          required>
       </div>
     </div>
   </div>
@@ -49,8 +50,8 @@ spam. Instead, I will send you informative and useful updates each year.
   <!-- Display the button -->
   <!-- Transmit a hidden field for spam detection -->
   <div class="form-group">
-  <button type="submit" class="btn btn-info">Submit</button>
-  <input type="hidden" name="bot-field"/>
+    <button type="submit" class="btn btn-info">Submit</button>
+    <input type="hidden" name="bot-field" />
   </div>
 
 </form>
@@ -64,28 +65,38 @@ you will my work in one or more of the following ways!
 
 <ul>
 
-<li><p><a href="/research/papers/">Papers</a>:
-Read a papers, pick your favorite, and share it with a friend</li></p>
+  <li>
+    <p><a href="/research/papers/">Papers</a>: Read a papers, pick your
+      favorite, and share it with a friend</p>
+  </li>
 
-<li><p><a href="/research/presentations/">Talks</a>:
-View my talks, select one, and recommend it to someone</li></p>
+  <li>
+    <p><a href="/research/presentations/">Talks</a>: View my talks, select one,
+      and recommend it to someone</p>
+  </li>
 
-<li><a href="/software/">Software</a>:
-Browse my software, find a cool one, try it out, and star it</li>
+  <li>
+    <p><a href="/software/">Software</a>: Browse my software, find a cool one,
+      try it out, and star it</p>
+  </li>
 
-<li><a href="/teaching/">Courses</a>:
-Pick a topic, explore it, and share what you learned with others</li>
+  <li>
+    <p><a href="/teaching/">Courses</a>: Pick a topic, explore it, and share
+      what you learned with others</p>
+  </li>
 
-<li><a href="/blog/">Blog</a>:
-Find an article of interest to you and draw it to the attention of your colleagues.</li>
+  <li>
+    <p><a href="/blog/">Blog</a>: Find an interesting article and share it
+      with attention your friends</p>
+  </li>
 
-<li><a href="/seed/">Survey</a>:
-If you are a member of the software industry, please take this survey.</li>
+  <li><a href="/seed/">Survey</a>:
+    If you are a member of the software industry, please take this survey.</li>
 
-<li><a href="/service/">Service</a>:
-Learn how I serve the technical community and ask me to help you.</li>
+  <li><a href="/service/">Service</a>:
+    Learn how I serve the technical community and ask me to help you.</li>
 
-<li><a href="feed/index.xml">Updates</a>:
-Subscribe to my Atom feed to stay updated about my work.</li>
+  <li><a href="feed/index.xml">Updates</a>:
+    Subscribe to my Atom feed to stay updated about my work.</li>
 
 </ul>
