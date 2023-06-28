@@ -20,8 +20,8 @@ write [papers](research/papers/index.qmd) and a [blog](blog/index.qmd), give
 
 ## Subscription
 
-Please subscribe to my mailing list! Instead of selling your email or bombarding you with spam, I will send you several
-informative and useful updates each year. <br>
+Please subscribe to my mailing list! I won't sell your email or bombard you with
+spam. Instead, I will send you informative and useful updates each year.
 
 ```{=html}
 <form name="mailinglist" method="POST" action="/emailthanks/" netlify-honeypot="bot-field" netlify>
