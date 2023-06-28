@@ -8,7 +8,7 @@ jupyter: python3
 from rich.console import Console
 console = Console()
 console.print(
-  ":speech_balloon: Work in the software industry? Please complete this survey!"
+    ":speech_balloon: Work in the software industry? Please complete this survey!"
 )
 ```
 
