@@ -68,7 +68,7 @@ you will my work in one or more of the following ways!
 Read a papers, pick your favorite, and share it with a friend</li></p>
 
 <li><p><a href="/research/presentations/">Talks</a>:
-View my talks, select one, and reccomend it to someone</li></p>
+View my talks, select one, and recommend it to someone</li></p>
 
 <li><a href="/software/">Software</a>:
 Browse my software, find a cool one, try it out, and star it</li>
