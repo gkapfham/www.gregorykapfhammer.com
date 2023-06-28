@@ -66,7 +66,7 @@ you will my work in one or more of the following ways!
 <ul>
 
   <li>
-    <p><a href="/research/papers/">Papers</a>: Read a papers, pick your
+    <p><a href="/research/papers/">Papers</a>: Read these papers, pick your
       favorite, and share it with a friend</p>
   </li>
 
@@ -76,7 +76,7 @@ you will my work in one or more of the following ways!
   </li>
 
   <li>
-    <p><a href="/software/">Software</a>: Browse my software, find a cool one,
+    <p><a href="/software/">Software</a>: Browse my software, find a cool project,
       try it out, and star it</p>
   </li>
 
