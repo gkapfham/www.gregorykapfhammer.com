@@ -123,6 +123,39 @@ pre {
 
 /* }}} */
 
+/* Forms {{{ */
+
+.form-control {
+  display: block;
+  width: 100%;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #333;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.btn-info {
+  margin-top: 0.5rem;
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+/* }}} */
+
 /* Navbar {{{ */
 
 .navbar a {
