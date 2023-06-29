@@ -1,0 +1,26 @@
+---
+author: Gregory M. Kapfhammer
+title: How do you consistently leave insert mode in Neovim?
+date: '2017-01-01'
+date-format: YYYY
+categories: [post, software tool, technical writing]
+description: <em>You know that joke about leaving Vim? Still true!</em>
+aliases: ["/writing/tool/vim/2017/06/30/Consistently-Leaving-Neovim/"]
+---
+
+{{< include /_gist.qmd >}}
+
+::: {.callout-note appearance="simple"}
+
+## Stay Connected
+
+Are you interested in learning more about how I configure Vim and Neovim? Please
+study the source code of my `.vimrc` that is available in the GitHub repository
+[gkapfham/dotfiles](https://github.com/gkapfham/dotfiles). With that said, since
+this post was written I've converted my Neovim configuration to use Lua and the
+[lazy.nvim](https://github.com/folke/lazy.nvim) plugin manager. This means that
+you should aim to study my `init.lua` file instead!
+
+:::
+
+{{< include /_back-blog.qmd >}}
