@@ -1,0 +1,20 @@
+---
+title: Submission Completed
+echo: true
+jupyter: python3
+---
+
+```{python}
+from rich.console import Console
+console = Console()
+console.print(
+    ":rocket: Thank you for completing the SEED survey!"
+)
+```
+
+Thank you for completing the [SEED survey](/seed/index.qmd)! You can read the
+[introduction to the SEED project](/blog/introducing-seed-survey) if you would
+like to learn more about this initiative. When your interview is selected for
+inclusion in the SEED series, it will appear on my
+[blog](/blog/index.qmd). Please [contact](/contact/index.qmd) me
+with any suggestions that you have for this initiative.
