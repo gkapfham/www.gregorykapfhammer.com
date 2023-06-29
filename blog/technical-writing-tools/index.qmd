@@ -32,16 +32,16 @@ GitHub repository [gkapfham/dotfiles](https://github.com/gkapfham/dotfiles).
 Yes, it is possible to use these tools to create nicely formatted and correct
 papers. As an example of a paper, please consider reading [@McMinn2016a] [{{<
 iconify fa6-solid book-open >}}](/research/papers/mcminn2016a/index.qmd), the source code of which
-is also available in a GitHub repository at <a
+is also in a GitHub repository at <a
   href="https://github.com/gkapfham/ast2016-paper">gkapfham/ast2016-paper</a>.
-An example of a presentation that I prepared in LaTeX is [@Kapfhammer2015] [{{<
-iconify fa6-solid book-open >}}](/research/papers/kapfhammer2015/index.qmd), which you can study
-from its GitHub repository at <a
+An example of a presentation that my collaborators and I prepared in LaTeX is for the paper [@Kinneer2015] [{{<
+iconify fa6-solid book-open >}}](/research/papers/kinneer2015/index.qmd), which
+is available in the GitHub repository <a
   href="https://github.com/gkapfham/seke2015-presentation">gkapfham/seke2015-presentation</a>.
-<span class="gist">There's something else that is really nice about programming your papers and
+<span class="gist">There's something else that is really nice about making your papers and
 presentations in LaTeX &mdash; you can release their source code on GitHub to
 share with others an "instruction manual" that explains, in a step-by-step
-fashion, exactly how to produce a document just like yours!</span>
+fashion, exactly how to produce a document like yours!</span>
 
 {{< include /_gist.qmd >}}
 
