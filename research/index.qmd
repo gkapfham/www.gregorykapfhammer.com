@@ -29,21 +29,20 @@ Keep reading for more details!
 
 ## Details
 
-My research is empirical in nature because it involves the application of the
-scientific method to formulate problem statements, carry out experiments, take
+My research is empirical because it involves the application of the scientific
+method to formulate problem statements, carry out experiments, take
 observations, statistically analyze and visualize the data sets, and draw
 conclusions based on the results. Each project focuses on the development and
-evaluation of [software](/software/) artifacts that can be used
-in both empirical studies and real-world practice by undergraduate and graduate
+evaluation of [software](/software/) artifacts that can be used in both
+empirical studies and real-world practice by undergraduate and graduate
 students, software engineers, and computer scientists in both academia and
-industry. In addition to supporting my professional
-[service](/service/), my research also results in award-winning
-and frequently cited research [papers](/research/papers/),
-oft-complimented [presentations](/research/presentations/), and
-useful free and open-source [software](/software/). My research
-has concentrated on areas in software engineering and software testing,
-examples of which are summarized in the following list that references key
-papers.
+industry. In addition to supporting my professional [service](/service/), my
+research results in award-winning and frequently cited research
+[papers](/research/papers/), oft-complimented
+[presentations](/research/presentations/), and useful free and open-source
+[software](/software/). <span class="gist">My research focuses on software
+    engineering and software testing, examples of which are summarized in these
+    summaries that reference key papers.</span>
 
 ### Flaky Tests
 
@@ -53,14 +52,25 @@ Since flaky tests can pass or fail without any changes to the test code or the
 code under test, they are an unreliable indicator of software correctness and a
 major problem for software developers. To address this challenge, my research
 has developed an automated method that uses machine learning to predict which
-tests are most likely to be flaky {% include_cached
-_popovers/paper_reference.html cite="Parry2022a" trailing="." %} Along with
+tests are most likely to be flaky
+[@Parry2022a] [{{< iconify fa6-solid book-open >}}](/research/papers/parry2022a/index.qmd).
+Along with
 proposing a methodology for automatically determining which tests have latent
-flakiness {% include _popovers/paper_reference.html cite="Parry2020"
-trailing="," %} my colleagues and I also published a survey of the literature
-relevant to flaky test research {% include_cached _popovers/paper_reference.html
-cite="Parry2022" %} and a multi-source investigation into how developers
-experience the impacts and causes of flaky tests {% include_cached
+flakiness
+
+{% include _popovers/paper_reference.html cite="Parry2020"
+trailing="," %}
+
+my colleagues and I also published a survey of the literature
+relevant to flaky test research 
+
+{% include_cached _popovers/paper_reference.html
+cite="Parry2022" %}
+
+and a multi-source investigation into how developers
+experience the impacts and causes of flaky tests
+
+{% include_cached
 _popovers/paper_reference.html cite="Parry2022b" trailing="." %}
 
 </div>
