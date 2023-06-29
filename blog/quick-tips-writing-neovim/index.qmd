@@ -52,7 +52,7 @@ study the source code of my `.vimrc` that is available in the GitHub repository
 [gkapfham/dotfiles](https://github.com/gkapfham/dotfiles). With that said, since
 this post was written I've converted my Neovim configuration to use Lua and the
 [lazy.nvim](https://github.com/folke/lazy.nvim) plugin manager. This means that
-you should aim to study my `init.lua` file instead!
+you should study my `init.lua` file instead!
 
 :::
 
