@@ -15,13 +15,14 @@ console.print(
 Do you work in the software industry? Are you interested in sharing your
 knowledge and experience with up-and-coming members of your field? Do you want
 to influence the way academics teach and conduct research? If so, then please
-fill out this <a href="#seedsurvey">survey</a>.
+fill out this <a href="#seedsurvey">survey</a> so that we can benefit from your
+expertise!
 
 To learn the details of why I am interviewing you through this survey, I
-encourage you to read the [introduction to the SEED project]({{ site.baseurl |
-slice: 0, size }}{% post_url 2017-07-05-Introducing-SEED %}). In a nutshell, the
-SEED project's aim is to enable both aspiring members of the software industry
-and the academics who teach them to receive advice from those who are already a
+encourage you to read the [introduction to the SEED
+project](/blog/introducing-seed-survey/index.qmd). In a nutshell, the SEED
+project's aim is to enable both aspiring members of the software industry and
+the academics who teach them to receive advice from those who are already a
 part of this exciting field.
 
 In addition to requesting your biographical information, the SEED survey only
