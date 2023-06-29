@@ -1,0 +1,18 @@
+---
+title: Subscription Confirmed
+echo: true
+jupyter: python3
+---
+
+```{python}
+from rich.console import Console
+console = Console()
+console.print(
+    ":rocket: Hooray, I hope to send a mailing list note to you soon!"
+)
+```
+
+Thank you for signing up for my mailing list! Instead of selling your email
+address or bombarding you with spam, I will infrequently send you updates.
+Please [contact](/contact/) me with any questions that you have about my mailing
+list.
