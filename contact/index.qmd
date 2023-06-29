@@ -10,7 +10,7 @@ jupyter: python3
 from rich.console import Console
 console = Console()
 console.print(
-    ":e-mail: Please contact me to ask questions or share new ideas!"
+    ":sparkles: Please contact me to ask questions or share new ideas!"
 )
 ```
 
