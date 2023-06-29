@@ -8,7 +8,7 @@ jupyter: python3
 from rich.console import Console
 console = Console()
 console.print(
-    ":rocket: Hi! I'm a researcher, teacher, and software developer!"
+    ":handshake: Hi, let's collaborate on software engineering projects!"
 )
 ```
 
