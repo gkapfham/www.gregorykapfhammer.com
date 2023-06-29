@@ -41,14 +41,14 @@ endif
 
 ::: {.callout-note appearance="simple"}
 
-## Stay Connected
+## Share Expertise
 
 If you are a longtime Vim user, what are some ways in which you tweaked your
 configuration so that it worked for Neovim? I hope that you will soon
 [contact](/contact/) me with your own tips for using Neovim. I should also note
 that, since this post was written, I've converted my Neovim configuration to use
 Lua and the [lazy.nvim](https://github.com/folke/lazy.nvim) plugin manager. This
-means that you should aim to study my `init.lua` file instead!
+means that you should study my `init.lua` file instead!
 
 :::
 
