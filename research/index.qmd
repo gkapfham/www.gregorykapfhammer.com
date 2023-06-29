@@ -74,7 +74,7 @@ causes of flaky tests
 <span class="gist">Given the importance of verifying that a database application
 operates correctly</span>, my PhD dissertation
 [@Kapfhammer2007d] [{{< iconify fa6-solid book-open >}}](/research/papers/kapfhammer2007d/index.qmd)
-presented an approach for testing this type of
+presented and evaluated an approach for testing this type of
 software; a notable paper derived from my dissertation is
 [@Kapfhammer2003] [{{< iconify fa6-solid book-open >}}](/research/papers/kapfhammer2003/index.qmd).
 Since the relational schema preserves the correctness of the database's state,
@@ -87,8 +87,8 @@ Recent papers such as
 [@Alsharif2020] [{{< iconify fa6-solid book-open >}}](/research/papers/alsharif2020/index.qmd)
 and
 [@Alsharif2020a] [{{< iconify fa6-solid book-open >}}](/research/papers/alsharif2020a/index.qmd)
-present techniques for improving the efficiency and effectiveness of regression testing for
-relational database schemas.
+present and study techniques for improving the efficiency and effectiveness of
+regression testing for relational database schemas.
 
 </div>
 
