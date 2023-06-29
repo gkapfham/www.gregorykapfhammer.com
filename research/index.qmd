@@ -48,11 +48,12 @@ research results in award-winning and frequently cited research
 
 <div id="FlakyTests">
 
-Since flaky tests can pass or fail without any changes to the test code or the
-code under test, they are an unreliable indicator of software correctness and a
-major problem for many software developers. To address this challenge, my
-collaborators and I have developed an automated method that uses machine
-learning to predict which tests are most likely to be flaky
+<span class="gist">Since flaky tests can pass or fail without any changes to the
+    test code or the code under test, they are an unreliable indicator of
+    software correctness and a major problem for many software
+    developers.</span> To address this challenge, my collaborators and I have
+developed an automated method that uses machine learning to predict which tests
+are most likely to be flaky
 [@Parry2022a] [{{< iconify fa6-solid book-open >}}](/research/papers/parry2022a/index.qmd).
 Along with proposing a methodology for automatically determining which tests
 have latent flakiness
