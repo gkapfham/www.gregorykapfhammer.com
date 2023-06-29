@@ -30,7 +30,9 @@ spam. Instead, I will send you informative and useful updates each year.
 
   <!-- Request the name -->
   <div class="form-group">
+    <p>
     <label for="name">Name</label>
+    </p>
     <div class="row">
       <div class="col">
         <input type="text" class="form-control" name="name" id="name" placeholder="Your name" required>
@@ -38,9 +40,13 @@ spam. Instead, I will send you informative and useful updates each year.
     </div>
   </div>
 
+  <p>
+
   <!-- Request the email -->
   <div class="form-group">
+    <p>
     <label for="reply_to">Email</label>
+    </p>
     <div class="row">
       <div class="col">
         <input type="email" class="form-control" name="reply_to" id="reply_to" placeholder="user.name@example.com"
@@ -48,6 +54,8 @@ spam. Instead, I will send you informative and useful updates each year.
       </div>
     </div>
   </div>
+
+  <p>
 
   <!-- Display the button -->
   <!-- Transmit a hidden field for spam detection -->
