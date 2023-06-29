@@ -33,13 +33,12 @@ endif
 Wait! There is one more thing. If you, like me, have been using Vim for many
 years and only recently started to use Neovim, then you will also need to run
 commands like the following so that you can "retrofit" your Vim configuration to
-work correctly with Neovim.
+work correctly with Neovim. Or, you can re-write your Vim configuration in Lua!
 
 ```vim
 ln -s ~/.vim ~/.nvim
 ln -s ~/.vimrc ~/.nvim/init.vim
 ```
-
 
 {{< include /_gist.qmd >}}
 
