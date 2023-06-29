@@ -4,8 +4,8 @@ title: Introducing Major for the mutation analysis of the tests for Java program
 date: '2014-01-01'
 date-format: YYYY
 categories: [post, mutation testing, software tool]
-description: Have JUnit tests? Use Major to assess their quality!
-aliases: ["testing/mutation/research/2014/10/25/Major-Mutation/"]
+description: <em>Have JUnit tests? Use Major to assess their quality!</em>
+aliases: ["/testing/mutation/research/2014/10/25/Major-Mutation/"]
 ---
 
 <span class="gist">If you have a [JUnit](http://www.junit.org) test suite, it is

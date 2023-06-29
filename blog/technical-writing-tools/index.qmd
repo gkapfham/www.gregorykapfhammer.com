@@ -1,0 +1,61 @@
+---
+author: Gregory M. Kapfhammer
+title: Experience joy-filled technical writing with LaTeX, Vim, and Git
+date: '2016-01-01'
+date-format: YYYY
+categories: [post, technical writing, software development]
+description: <em>Prepare papers and talks like you create software!</em>
+aliases: ["/writing/programming/vim/2016/07/12/Technical-Writing/"]
+---
+
+If you are like me, then you may enjoy writing in a notebook with a fountain pen
+&mdash; if you have not tried writing this way, then borrow someone's fountain
+pen and try it. <span class="gist">As much as I may like taking notes and
+brainstorming with a fountain pen, I spend a substantial amount of time
+preparing technical [papers](/research/papers/index.qmd) and
+[presentations](/research/presentations/index.qmd) in
+[LaTeX](http://www.latex-project.org/) with the [Vim](http://www.vim.org/) text
+editor &mdash; a task I also find to be challenging and rewarding.</span> Thankfully,
+some tools can aid your writing process!
+
+If you write with Vim and LaTeX and you would like to improve your writing
+experience, then please consider using the
+[vimtex](https://github.com/lervag/vimtex) plugin as it supports wonderful
+features like the completion of BibTeX references, continuous compilation with
+[latexmk](http://users.phys.psu.edu/~collins/software/latexmk-jcc/), and forward
+and reverse searching for either the
+[Zathura](https://pwmt.org/projects/zathura/) or [MuPDF](http://mupdf.com/) PDF
+viewers. Are you interested in learning more about how I configured these
+plugins? Please study the source code of my `.vimrc` that is available in the
+GitHub repository [gkapfham/dotfiles](https://github.com/gkapfham/dotfiles).
+
+Yes, it is possible to use these tools to create nicely formatted and correct
+papers. As an example of a paper, please consider reading [@McMinn2016a] [{{<
+iconify fa6-solid book-open >}}](/research/papers/mcminn2016a/index.qmd), the source code of which
+is also available in a GitHub repository at <a
+  href="https://github.com/gkapfham/ast2016-paper">gkapfham/ast2016-paper</a>.
+An example of a presentation that I prepared in LaTeX is [@Kapfhammer2015] [{{<
+iconify fa6-solid book-open >}}](/research/papers/kapfhammer2015/index.qmd), which you can study
+from its GitHub repository at <a
+  href="https://github.com/gkapfham/seke2015-presentation">gkapfham/seke2015-presentation</a>.
+<span class="gist">There's something else that is really nice about programming your papers and
+presentations in LaTeX &mdash; you can release their source code on GitHub to
+share with others an "instruction manual" that explains, in a step-by-step
+fashion, exactly how to produce a document just like yours!</span>
+
+{{< include /_gist.qmd >}}
+
+::: {.callout-note appearance="simple"}
+
+## Status Update
+
+Since this blog post was written, I continue to use LaTeX to prepare research
+articles. However, I now use [Neovim](https://neovim.io/) instead of Vim! With
+that said, you can still check out the configuration files in
+[gkapfham/dotfiles](https://github.com/gkapfham/dotfiles) to learn more about my
+current setup. Finally, instead of using LaTeX to create presentations, I now
+normally use Neovim to create Markdown, CSS, HTML, and JavaScript files.
+
+:::
+
+{{< include /_back-blog.qmd >}}

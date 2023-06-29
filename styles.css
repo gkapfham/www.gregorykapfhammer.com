@@ -123,6 +123,17 @@ pre {
 
 /* }}} */
 
+/* Forms {{{ */
+
+.btn-info {
+  margin-top: 0.5rem;
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+/* }}} */
+
 /* Navbar {{{ */
 
 .navbar a {

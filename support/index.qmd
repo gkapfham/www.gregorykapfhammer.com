@@ -1,0 +1,113 @@
+---
+title: Support
+echo: true
+jupyter: python3
+---
+
+```{python}
+from rich.console import Console
+console = Console()
+console.print(
+    ":handshake: Hi, let's collaborate on software engineering projects!"
+)
+```
+
+## Introduction
+
+Innovating in technical areas such as software engineering and software testing,
+I teach [courses](/teaching/index.qmd), conduct [research](/research/index.qmd),
+write [papers](/research/papers/index.qmd) and a [blog](/blog/index.qmd), give
+[presentations](/research/presentations/index.qmd), create
+[software](/software/index.qmd), and [serve](/service/index.qmd) organizations. Let's stay connected!
+
+## Subscription
+
+Please subscribe to my mailing list! I won't sell your email or bombard you with
+spam. Instead, I will send you informative and useful updates each year.
+
+```{=html}
+<form name="mailinglist" method="POST" action="/emailthanks/" netlify-honeypot="bot-field" netlify>
+
+  <!-- Request the name -->
+  <div class="form-group">
+    <p>
+    <label for="name">Name</label>
+    </p>
+    <div class="row">
+      <div class="col">
+        <input type="text" class="form-control" name="name" id="name" placeholder="Your name" required>
+      </div>
+    </div>
+  </div>
+
+  <p>
+
+  <!-- Request the email -->
+  <div class="form-group">
+    <p>
+    <label for="reply_to">Email</label>
+    </p>
+    <div class="row">
+      <div class="col">
+        <input type="email" class="form-control" name="reply_to" id="reply_to" placeholder="user.name@example.com"
+          required>
+      </div>
+    </div>
+  </div>
+
+  <p>
+
+  <!-- Display the button -->
+  <!-- Transmit a hidden field for spam detection -->
+  <div class="form-group">
+    <button type="submit" class="btn btn-info">Submit</button>
+    <input type="hidden" name="bot-field" />
+  </div>
+
+</form>
+```
+
+## Connection
+
+I work hard to produce the highest quality content to serve people interested
+in software engineering and software testing. It would be greatly appreciated
+if you will support my work in one or more of the following ways!
+
+<ul>
+
+  <li>
+    <p><a href="/research/papers/">Papers</a>: Read these papers, pick your
+      favorite, and share it with a friend</p>
+  </li>
+
+  <li>
+    <p><a href="/research/presentations/">Talks</a>: View my talks, select one,
+      and recommend it to someone</p>
+  </li>
+
+  <li>
+    <p><a href="/software/">Software</a>: Browse my software, find a cool project,
+      try it out, and star it</p>
+  </li>
+
+  <li>
+    <p><a href="/teaching/">Courses</a>: Pick a topic, explore it, and share
+      what you learned with others</p>
+  </li>
+
+  <li>
+    <p><a href="/blog/">Blog</a>: Find an interesting article and share it
+      with your friends</p>
+  </li>
+
+  <li>
+    <p><a href="/seed/">Survey</a>:
+      Take this survey if you work in the software industry</p>
+  </li>
+
+  <li>
+    <p><a href="/service/">Service</a>:
+      Learn how I serve the technical community and ask me to help</p>
+  </li>
+
+</ul>

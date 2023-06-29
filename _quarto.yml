@@ -63,6 +63,14 @@ website:
             href: service/index.qmd
           - text: "Blog"
             href: blog/index.qmd
+      - text: "About"
+        menu:
+          - text: "Biography"
+            href: biography/index.qmd
+          - text: "Schedule"
+            href: schedule/index.qmd
+          - text: "Contact"
+            href: contact/index.qmd
   page-footer:
     left: "{{< fa copyright >}} GMK"
     center: '<a href="#" aria-label="Go to the top of the page">Top {{< fa circle-up >}}</a>'
