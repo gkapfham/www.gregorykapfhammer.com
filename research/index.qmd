@@ -71,7 +71,8 @@ causes of flaky tests
 
 <div id="DatabaseTesting">
 
-Given the importance of verifying that a database application operates correctly, my PhD dissertation
+<span class="gist">Given the importance of verifying that a database application
+operates correctly</span>, my PhD dissertation
 [@Kapfhammer2007d] [{{< iconify fa6-solid book-open >}}](/research/papers/kapfhammer2007d/index.qmd)
 presented an approach for testing this type of
 software; a notable paper derived from my dissertation is
@@ -95,20 +96,23 @@ relational database schemas.
 
 <div id="WebTesting">
 
-In response to the prevalence and complexity of mobile-ready web sites, my
-research has developed automated tools for checking the pages in these sites.
-Some examples of papers describing methods for automatically detecting defects
-in web pages include {% include_cached _popovers/paper_reference.html
-cite="Walsh2017" %} and {% include_cached _popovers/paper_reference.html
-cite="Walsh2017a" trailing="." %} The automated approach introduced in {%
-include_cached _popovers/paper_reference.html cite="Althomali2019" %} can
-visually confirm and classify the reported responsive layout failures in a web
-page. The method described in {% include_cached _popovers/paper_reference.html
-cite="Walsh2020" %} can automatically identify potential regressions from the
+<span class="gist">In response to the prevalence and complexity of mobile-ready
+    web sites, my research has developed automated tools for checking the pages
+    in these sites.</span> Some examples of papers describing methods for
+automatically detecting defects in web pages include
+[@Walsh2017] [{{< iconify fa6-solid book-open >}}](/research/papers/walsh2017/index.qmd)
+and
+[@Walsh2017a] [{{< iconify fa6-solid book-open >}}](/research/papers/walsh2017a/index.qmd).
+The automated approach introduced in
+[@Althomali2019] [{{< iconify fa6-solid book-open >}}](/research/papers/althomali2019/index.qmd)
+can visually confirm and classify the reported responsive layout failures in a
+web page.
+The method described in
+[@Walsh2020] [{{< iconify fa6-solid book-open >}}](/research/papers/walsh2020/index.qmd)
+can automatically identify potential regressions from the
 correct responsive layout of a web page. Finally, recent work introduced a
-method to automatically repair a layout failure in a responsive web page {%
-include_cached _popovers/paper_reference.html cite="Althomali2022" trailing="."
-%}
+method to automatically repair a layout failure in a responsive web page
+[@Althomali2022] [{{< iconify fa6-solid book-open >}}](/research/papers/althomali2022/index.qmd).
 
 </div>
 
