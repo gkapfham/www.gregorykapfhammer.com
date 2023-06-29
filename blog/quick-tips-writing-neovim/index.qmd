@@ -11,19 +11,18 @@ aliases: ["/writing/tool/vim/2017/06/26/Neovim-Remote-Latex/"]
 I enjoy using Vim when I am writing LaTeX documents for my
 [teaching]({{site.baseurl}}teaching/) and [research]({{site.baseurl}}research/).
 Since [Neovim](https://neovim.io/) became available I have been using it as a
-(capable and compelling) alternative to Vim. I find that Neovim often works
-really well! But, if you want the [vimtex](https://github.com/lervag/vimtex)
-plugin to work with Neovim, then you need to take two extra steps.
+&mdash; capable and compelling &mdash; alternative to Vim. I find that Neovim
+works really well and that its plugin ecosystem is great! But, if you want the
+[vimtex](https://github.com/lervag/vimtex) plugin to work with Neovim, then you
+need to take two extra steps, as explained in this post.
 
-<p>
 What do you need to do to write LaTeX in Neovim? Well, when I was writing
-{% include_cached _popovers/paper_reference.html cite="Walsh2017a" %} with Neovim, I
-needed to change my `.vimrc` file and install a plugin. After following the
+[@Walsh2017a] [{{< iconify fa6-solid book-open >}}](/research/papers/walsh2017a/index.qmd) with Neovim,
+I needed to change my `.vimrc` file and install a plugin. After following the
 instructions to install the <a
-href="https://github.com/mhinz/neovim-remote">neovim-remote</a> plugin, I added
-this code segment to ensure that `vimtex` can communicate with the `latexmk`
-process that is compiling my paper.
-</p>
+  href="https://github.com/mhinz/neovim-remote">neovim-remote</a> plugin, I
+added this code segment to ensure that `vimtex` can communicate with the
+`latexmk` process that is compiling my paper.
 
 ```vim
 if has("nvim")
@@ -31,19 +30,16 @@ if has("nvim")
 endif
 ```
 
-Wait! There is one more thing. If you, like me, have been using Vim for many years and only recently started to use
-Neovim, then you will also need to run commands like the following so that you can "retrofit" your Vim configuration to
+Wait! There is one more thing. If you, like me, have been using Vim for many
+years and only recently started to use Neovim, then you will also need to run
+commands like the following so that you can "retrofit" your Vim configuration to
 work correctly with Neovim.
 
-```
+```vim
 ln -s ~/.vim ~/.nvim
 ln -s ~/.vimrc ~/.nvim/init.vim
 ```
 
-Are you interested in learning more about how I configure Vim and Neovim? Please study the source code of my `.vimrc`
-that is available in the GitHub repository [gkapfham/dotfiles](https://github.com/gkapfham/dotfiles).
-
-{% include _footers/blog_footer.html %}
 
 {{< include /_gist.qmd >}}
 
@@ -51,10 +47,12 @@ that is available in the GitHub repository [gkapfham/dotfiles](https://github.co
 
 ## Stay Connected
 
-Do you also find that these five words confuse you? What are the words or
-phrases that you find to obscure your technical writing? I hope that you will
-soon [contact](/contact/index.qmd) me with your own tips for clear
-technical writing.
+Are you interested in learning more about how I configure Vim and Neovim? Please
+study the source code of my `.vimrc` that is available in the GitHub repository
+[gkapfham/dotfiles](https://github.com/gkapfham/dotfiles). With that said, since
+this post was written I've converted my Neovim configuration to use Lua and the
+[lazy.nvim](https://github.com/folke/lazy.nvim) plugin manager. This means that
+you should aim to study my `init.lua` file instead!
 
 :::
 
