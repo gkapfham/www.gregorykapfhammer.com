@@ -71,19 +71,23 @@ causes of flaky tests
 
 <div id="DatabaseTesting">
 
-Given the importance of verifying the behavior of a database application, my PhD
-dissertation {% include_cached _popovers/paper_reference.html
-cite="Kapfhammer2007d" %} presented an approach for testing this type of
-software; a notable paper derived from my dissertation is {% include_cached
-_popovers/paper_reference.html cite="Kapfhammer2003" trailing="." %} Since the
-relational schema preserves the correctness of the database's state, my research
-has also focused on testing this complex artifact, with {% include_cached
-_popovers/paper_reference.html cite="McMinn2015" %} and {% include_cached
-_popovers/paper_reference.html cite="McMinn2019" %} being examples of papers.
-Recent papers such as {% include_cached _popovers/paper_reference.html
-cite="Alsharif2020" %} and {% include_cached _popovers/paper_reference.html
-cite="Alsharif2020a" %} present techniques for improving the efficiency of
-regression testing for database schemas.
+Given the importance of verifying that a database application operates correctly, my PhD dissertation
+[@Kapfhammer2007d] [{{< iconify fa6-solid book-open >}}](/research/papers/kapfhammer2007d/index.qmd)
+presented an approach for testing this type of
+software; a notable paper derived from my dissertation is
+[@Kapfhammer2003] [{{< iconify fa6-solid book-open >}}](/research/papers/kapfhammer2003/index.qmd).
+Since the relational schema preserves the correctness of the database's state,
+my research has also focused on testing this complex artifact, with
+[@McMinn2015] [{{< iconify fa6-solid book-open >}}](/research/papers/mcminn2015/index.qmd)
+and
+[@McMinn2019] [{{< iconify fa6-solid book-open >}}](/research/papers/mcminn2019/index.qmd)
+being examples of papers.
+Recent papers such as
+[@Alsharif2020] [{{< iconify fa6-solid book-open >}}](/research/papers/alsharif2020/index.qmd)
+and
+[@Alsharif2020a] [{{< iconify fa6-solid book-open >}}](/research/papers/alsharif2020a/index.qmd)
+present techniques for improving the efficiency and effectiveness of regression testing for
+relational database schemas.
 
 </div>
 
