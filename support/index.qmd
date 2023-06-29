@@ -12,6 +12,8 @@ console.print(
 )
 ```
 
+## Introduction
+
 Innovating in technical areas such as software engineering and software testing,
 I teach [courses](/teaching/index.qmd), conduct [research](/research/index.qmd),
 write [papers](/research/papers/index.qmd) and a [blog](/blog/index.qmd), give
