@@ -1,0 +1,10 @@
+---
+author: Gregory M. Kapfhammer
+title: Five words to (normally) avoid in your technical writing
+date: '2016-01-01'
+date-format: YYYY
+categories: [post, position statement, technical writing]
+description: <em>We should write to aid reader understanding!</em>
+aliases: ["/writing/research/advice/2017/06/24/Avoid-Words/"]
+---
+
