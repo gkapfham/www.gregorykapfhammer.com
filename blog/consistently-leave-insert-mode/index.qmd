@@ -4,7 +4,7 @@ title: How do you consistently leave insert mode in Neovim?
 date: '2017-01-01'
 date-format: YYYY
 categories: [post, software tool, technical writing]
-description: <em>You know that joke about leaving Vim? Still true!</em>
+description: <em>You know that joke about exiting Vim? Still true!</em>
 aliases: ["/writing/tool/vim/2017/06/30/Consistently-Leaving-Neovim/"]
 ---
 
