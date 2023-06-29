@@ -8,7 +8,7 @@ listing:
     - "!../blog/index.qmd"
   sort:
     - "date desc"
-    - "title desc"
+    - "title"
   type: default
   categories: true
   date-format: "YYYY"
