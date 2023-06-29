@@ -25,7 +25,7 @@ My research addresses the challenges in fields such as software engineering,
 software testing, and computer systems. I conduct this research with
 undergraduates at [Allegheny College](http://www.allegheny.edu), graduate
 students and professors at several universities, and colleagues in industry.
-
+Keep reading for more details!
 
 ## Details
 
@@ -40,21 +40,20 @@ industry. In addition to supporting my professional
 [service]({{site.baseurl}}service/), my research also results in award-winning
 and frequently cited research [papers]({{site.baseurl}}research/papers/),
 oft-complimented [presentations]({{site.baseurl}}research/presentations/), and
-useful free and open-source [software]({{site.baseurl}}software/).
-
-My research has concentrated on several areas in software engineering and
-software testing, examples of which are summarized in the following list that
-references key papers.
+useful free and open-source [software]({{site.baseurl}}software/). My research
+has concentrated on areas in software engineering and software testing,
+examples of which are summarized in the following list that references key
+papers.
 
 ### Flaky Tests
 
 <div id="FlakyTests">
 
-<b>Flaky Tests:</b> Since flaky tests can pass or fail without any changes to
-the test code or the code under test, they are an unreliable indicator of
-software correctness and a major problem for software developers. To address
-this challenge, my research has developed an automated method that uses machine
-learning to predict which tests are most likely to be flaky {% include_cached
+Since flaky tests can pass or fail without any changes to the test code or the
+code under test, they are an unreliable indicator of software correctness and a
+major problem for software developers. To address this challenge, my research
+has developed an automated method that uses machine learning to predict which
+tests are most likely to be flaky {% include_cached
 _popovers/paper_reference.html cite="Parry2022a" trailing="." %} Along with
 proposing a methodology for automatically determining which tests have latent
 flakiness {% include _popovers/paper_reference.html cite="Parry2020"
