@@ -14,6 +14,34 @@ console.print(
 )
 ```
 
+## Introduction
+
+<span class="gist">Hi, I'm Gregory M. Kapfhammer. I innovate in technical areas
+    such as software engineering and software testing, I teach
+    [courses](/teaching/index.qmd), conduct [research](/research/index.qmd),
+    write [papers](/research/papers/index.qmd) and a [blog](/blog/index.qmd),
+    give [presentations](/research/presentations/index.qmd), create
+    [software](/software/index.qmd), and [serve](/service/index.qmd)
+    organizations</span>. Working as an Associate Professor in the [Department
+of Computer Science](http://www.cs.allegheny.edu) at [Allegheny
+College](http://www.allegheny.edu), I am an associate editor for the [Journal
+of Software: Evolution and
+Process](https://onlinelibrary.wiley.com/journal/20477481), an academic editor
+for the [PeerJ Computer Science](https://peerj.com/computer-science/) journal,
+a program committee member for conferences like the [International Conference
+on Software Testing, Verification and
+Validation](https://cs.gmu.edu/icst/index.html) and the [International
+Conference on Automated Software
+Engineering](https://conf.researchr.org/series/ase), and a reviewer for
+journals like [Transactions on Software
+Engineering](https://www.computer.org/csdl/journal/ts). You can learn more
+about me and my work by reading my [biography](biography/index.qmd),
+downloading my [curriculum
+vitae](https://github.com/gkapfham/curriculum-vitae/releases/download/v1.3.2/curriculum_vitae_kapfhammer.pdf),
+and [subscribing](/support/index.qmd) to my mailing list.
+
+## Details
+
 Gregory M. Kapfhammer, PhD <br>
 Department of Computer Science <br>
 Allegheny College <br>
