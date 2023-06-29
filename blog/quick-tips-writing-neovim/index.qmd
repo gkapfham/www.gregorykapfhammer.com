@@ -1,0 +1,61 @@
+---
+author: Gregory M. Kapfhammer
+title: Quick tips for technical writing with LaTeX and Neovim
+date: '2017-01-01'
+date-format: YYYY
+categories: [post, software tool, technical writing]
+description: <em>You can tweak Neovim for technical writing!</em>
+aliases: ["/writing/tool/vim/2017/06/26/Neovim-Remote-Latex/"]
+---
+
+I enjoy using Vim when I am writing LaTeX documents for my
+[teaching]({{site.baseurl}}teaching/) and [research]({{site.baseurl}}research/).
+Since [Neovim](https://neovim.io/) became available I have been using it as a
+(capable and compelling) alternative to Vim. I find that Neovim often works
+really well! But, if you want the [vimtex](https://github.com/lervag/vimtex)
+plugin to work with Neovim, then you need to take two extra steps.
+
+<p>
+What do you need to do to write LaTeX in Neovim? Well, when I was writing
+{% include_cached _popovers/paper_reference.html cite="Walsh2017a" %} with Neovim, I
+needed to change my `.vimrc` file and install a plugin. After following the
+instructions to install the <a
+href="https://github.com/mhinz/neovim-remote">neovim-remote</a> plugin, I added
+this code segment to ensure that `vimtex` can communicate with the `latexmk`
+process that is compiling my paper.
+</p>
+
+```vim
+if has("nvim")
+  let g:vimtex_latexmk_progname = 'nvr'
+endif
+```
+
+Wait! There is one more thing. If you, like me, have been using Vim for many years and only recently started to use
+Neovim, then you will also need to run commands like the following so that you can "retrofit" your Vim configuration to
+work correctly with Neovim.
+
+```
+ln -s ~/.vim ~/.nvim
+ln -s ~/.vimrc ~/.nvim/init.vim
+```
+
+Are you interested in learning more about how I configure Vim and Neovim? Please study the source code of my `.vimrc`
+that is available in the GitHub repository [gkapfham/dotfiles](https://github.com/gkapfham/dotfiles).
+
+{% include _footers/blog_footer.html %}
+
+{{< include /_gist.qmd >}}
+
+::: {.callout-note appearance="simple"}
+
+## Stay Connected
+
+Do you also find that these five words confuse you? What are the words or
+phrases that you find to obscure your technical writing? I hope that you will
+soon [contact](/contact/index.qmd) me with your own tips for clear
+technical writing.
+
+:::
+
+{{< include /_back-blog.qmd >}}
