@@ -42,8 +42,8 @@ their interviews on my [blog]({{site.baseurl}}blog/). Of course, you can
 [contact]({{site.baseurl}}contact/) me with any questions or comments that you
 have about this initiative.
 
+```{=html}
 <a name="seedsurvey"></a>
-
 <form name="seedsurvey" method="POST" action="/seedthanks/" netlify-honeypot="bot-field" netlify>
 
   <!-- Request the name -->
@@ -98,7 +98,7 @@ have about this initiative.
 
   <!-- Request the fun fact about the company -->
   <div class="form-group">
-    <label for="question_fact">What is one fun fact that you can share about your company or a current project?</label>
+    <label for="question_fact">What is a fun fact that you can share about your company or a current project?</label>
     <div class="row">
       <div class="col">
         <textarea type="text" class="form-control" name="question_fact" id="question_fact" rows="5" placeholder="Share a fun fact about your company or your current project" required></textarea>
@@ -118,24 +118,10 @@ have about this initiative.
 
   <!-- Request the point of advice -->
   <div class="form-group">
-    <label for="question_advice">What is one point of advice that you can give to people who plan to enter your field?</label>
+    <label for="question_advice">What is a point of advice that you can give to those who plan to enter your field?</label>
     <div class="row">
       <div class="col">
         <textarea type="text" class="form-control" name="question_advice" id="question_advice" rows="5" placeholder="Share a point of advice to someone who intends to enter your field" required></textarea>
-      </div>
-    </div>
-  </div>
-
-  <!-- Ask if copy-editing is acceptable -->
-  <div class="form-group">
-    <div class="row">
-      <div class="col">
-        <div class="checkbox">
-          <input type="checkbox" name="copyedit" id="copyedit">
-        </div>
-      </div>
-      <div class="col-10">
-        <label for="copyedit">Do you allow minimal copy-editing of your responses?</label>
       </div>
     </div>
   </div>
@@ -158,3 +144,4 @@ have about this initiative.
   </div>
 
 </form>
+```
