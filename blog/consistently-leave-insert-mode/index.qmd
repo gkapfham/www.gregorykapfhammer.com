@@ -8,7 +8,7 @@ description: <em>You know that joke about exiting Vim? Still true!</em>
 aliases: ["/writing/tool/vim/2017/06/30/Consistently-Leaving-Neovim/"]
 ---
 
-When I write my own research [papers](/research/papers/) I often create them in
+I write my [research papers](/research/papers/) and [blog posts](/blog/) in
 [Neovim](https://neovim.io/). However, before using Neovim, I have spent years
 writing papers and code in Vim. <span class="gist">Like many others who use Vim
   for programming and writing, I have added the following two commands to my
