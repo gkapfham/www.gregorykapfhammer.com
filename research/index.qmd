@@ -12,7 +12,7 @@ from rich.console import Console
 
 console = Console()
 console.print(
-    f":rocket: Explore my research in fields like testing and debugging!"
+    f":rocket: Have fun exploring my research in fields like testing and debugging!"
 )
 ```
 
