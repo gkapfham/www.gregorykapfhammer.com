@@ -49,7 +49,9 @@ about this initiative.
 
   <!-- Request the name -->
   <div class="form-group">
+    <p>
     <label for="name">Name</label>
+    </p>
     <div class="row">
       <div class="col">
         <input type="text" class="form-control" name="name" id="name" placeholder="Your name" required>
@@ -57,9 +59,13 @@ about this initiative.
     </div>
   </div>
 
+  <p>
+
   <!-- Request the email -->
   <div class="form-group">
+    <p>
     <label for="reply_to">Email</label>
+    </p>
     <div class="row">
       <div class="col">
         <input type="email" class="form-control" name="reply_to" id="reply_to" placeholder="user.name@example.com" required>
@@ -67,9 +73,13 @@ about this initiative.
     </div>
   </div>
 
+  <p>
+
   <!-- Request the company -->
   <div class="form-group">
+    <p>
     <label for="company_name">Company</label>
+    </p>
     <div class="row">
       <div class="col">
         <input type="text" class="form-control" name="company_name" id="company_name" placeholder="Company name" required>
@@ -77,9 +87,13 @@ about this initiative.
     </div>
   </div>
 
+  <p>
+
   <!-- Request the job title -->
   <div class="form-group">
+    <p>
     <label for="title_name">Job Title</label>
+    </p>
     <div class="row">
       <div class="col">
         <input type="text" class="form-control" name="title_name" id="title_name" placeholder="Your job title" required>
@@ -87,9 +101,13 @@ about this initiative.
     </div>
   </div>
 
+  <p>
+
   <!-- Request the web site -->
   <div class="form-group">
+    <p>
     <label for="web_site">Web Site</label>
+    </p>
     <div class="row">
       <div class="col">
         <input type="url" class="form-control" name="web_site" id="web_site" placeholder="Your web site (LinkedIn is fine)" required>
@@ -97,9 +115,13 @@ about this initiative.
     </div>
   </div>
 
+  <p>
+
   <!-- Request the fun fact about the company -->
   <div class="form-group">
+    <p>
     <label for="question_fact">What is a fun fact that you can share about your company or a current project?</label>
+    </p>
     <div class="row">
       <div class="col">
         <textarea type="text" class="form-control" name="question_fact" id="question_fact" rows="5" placeholder="Share a fun fact about your company or your current project" required></textarea>
@@ -107,9 +129,13 @@ about this initiative.
     </div>
   </div>
 
+<p>
+
   <!-- Request the greatest challenge that is faced -->
   <div class="form-group">
+    <p>
     <label for="question_challenge">What is the greatest challenge that you face when working in your field?</label>
+    </p>
     <div class="row">
       <div class="col">
         <textarea type="text" class="form-control" name="question_challenge" id="question_challenge" rows="5" placeholder="Share the greatest challenge that you face in your field" required></textarea>
@@ -117,9 +143,13 @@ about this initiative.
     </div>
   </div>
 
+  <p>
+
   <!-- Request the point of advice -->
   <div class="form-group">
+    <p>
     <label for="question_advice">What is a point of advice that you can give to those who plan to enter your field?</label>
+    </p>
     <div class="row">
       <div class="col">
         <textarea type="text" class="form-control" name="question_advice" id="question_advice" rows="5" placeholder="Share a point of advice to someone who intends to enter your field" required></textarea>
@@ -127,15 +157,21 @@ about this initiative.
     </div>
   </div>
 
+  <p>
+
   <!-- Ask how long it took to complete this survey -->
   <div class="form-group">
+    <p>
     <label for="time">How many minutes did it take you to complete this survey?</label>
+    </p>
     <div class="row">
       <div class="col">
         <input type="number" class="form-control" name="time" id="time" min=1 step=1 placeholder="Time to completion in minutes" required>
       </div>
     </div>
   </div>
+
+  <p>
 
   <!-- Display the button -->
   <!-- Transmit a hidden field for spam detection -->
