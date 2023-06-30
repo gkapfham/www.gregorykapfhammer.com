@@ -120,13 +120,13 @@ and [subscribing](support/index.qmd) to my mailing list.
 
 ## Research Expertise
 
-- [Flaky Tests](research/index.qmd#Details#Flaky Tests): Find and fix unpredictable
+- [Flaky Tests](research/index.qmd#flaky-tests): Find and fix unpredictable
   and harmful test cases
 
-- [Database Testing](research/index.qmd#Details#Database Testing): Automatically
+- [Database Testing](research/index.qmd#database-testing): Automatically
   test relational database schemas
 
-- [Web Testing](research/index.qmd#Details#Web Testing): Detecting and repairing
+- [Web Testing](research/index.qmd#web-testing): Detecting and repairing
   responsive web page layout
 
 > {{< fa rocket >}} <em>Explore</em> all of my areas of [research expertise](research/index.qmd)
