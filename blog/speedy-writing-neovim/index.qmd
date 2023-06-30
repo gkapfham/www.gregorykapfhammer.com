@@ -5,12 +5,12 @@ date: '2017-01-01'
 date-format: YYYY
 categories: [post, software tool, technical writing]
 description: <em>Autocomplete makes technical writing faster!</em>
-aliases: ["writing/research/vim/2017/07/01/Speedy-Writing-Neovim/"]
+aliases: ["/writing/research/vim/2017/07/01/Speedy-Writing-Neovim/"]
 ---
 
-Since, in my experience, writing technical research
-[papers](/research/papers/) is a challenging task, I always try
-to use a writing environment that effectively supports my endeavors. If I am
+<span class="gist">Since, in my experience, writing technical research
+  [papers](/research/papers/) is a challenging task, I always try to use a
+  writing environment that effectively supports my endeavors.</span> If I am
 writing a paper in Neovim, then I now often use
 [deoplete.nvim](https://github.com/Shougo/deoplete.nvim) complete the words that
 I am writing in my paper.
@@ -35,6 +35,8 @@ code in your initialization file.
 let g:SuperTabDefaultCompletionType = "<C-n>"
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 ```
+
+{{< include /_gist.qmd >}}
 
 ::: {.callout-note appearance="simple"}
 
