@@ -9,7 +9,7 @@ aliases: ["writing/research/vim/2017/07/01/Speedy-Writing-Neovim/"]
 ---
 
 Since, in my experience, writing technical research
-[papers]({{site.baseurl}}research/papers/) is a challenging task, I always try
+[papers](/research/papers/) is a challenging task, I always try
 to use a writing environment that effectively supports my endeavors. If I am
 writing a paper in Neovim, then I now often use
 [deoplete.nvim](https://github.com/Shougo/deoplete.nvim) complete the words that
