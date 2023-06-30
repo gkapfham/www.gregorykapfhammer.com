@@ -585,7 +585,7 @@ configurations can help you to setup your own development workstation!
 
 :::
 
-### Defects
+### Defects and Discussions
 
 <ul>
 
@@ -676,6 +676,10 @@ pipenv --three fails</li>
 <li class="software"><a target="_blank" rel="noopener"
 href="https://github.com/quarto-dev/quarto-cli/discussions/5900">quarto-dev/quarto-cli Discussion #5900</a>:
 Is is possible to avoid the flash ...</li>
+
+<li class="software"><a target="_blank" rel="noopener"
+href="https://github.com/spookylukey/pyastgrep/discussions/18">spookylukey/pyastgrep Discussion #18</a>:
+Using pyastgrep as a library</li>
 
 <li class="software"><a target="_blank" rel="noopener"
 href="https://github.com/Shougo/deoplete.nvim/issues/500">Shougo/deoplete.nvim
