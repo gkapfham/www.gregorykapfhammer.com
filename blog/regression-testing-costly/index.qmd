@@ -21,35 +21,26 @@ product](http://dl.acm.org/citation.cfm?id=2119649) required several days. Of
 course, even if a regression test suite only takes minutes to run, developers
 may find its execution distracting.
 
-<p>
 Prior work has developed many techniques to address the substantial
 computational cost associated with regression testing, with test suite reduction
 and prioritization emerging as two of the most promising. Test suite reduction
 aims to find a smaller test suite that covers the same requirements as does the
-full test suite {% include_cached _popovers/paper_reference.html cite="Lin2014"
-trailing="." %} Alternatively, test suite prioritization aims to find a test
+full test suite
+[@Lin2014] [{{< iconify fa6-solid book-open >}}](/research/papers/lin2014/index.qmd).
+Alternatively, test suite prioritization aims to find a test
 ordering such that faults in a program can be detected as early as is possible,
-thus enabling the processes of debugging and program repair to quickly start {%
-include_cached _popovers/paper_reference.html cite="Lin2013" trailing="." %}
-</p>
+thus enabling the processes of debugging and program repair to quickly start
+[@Lin2013] [{{< iconify fa6-solid book-open >}}](/research/papers/lin2013/index.qmd).
 
-<p>
 Another approach to regression testing involves selecting only those test cases
 that exercise the program functionality that was most recently changed. A recent
 paper reports that test selection <a href =
-"https://www.microsoft.com/en-us/research/publication/the-art-of-testing-less-without-sacrificing-quality/">saves
-Microsoft</a> millions of dollars every year &mdash; all without compromising
+  "https://www.microsoft.com/en-us/research/publication/the-art-of-testing-less-without-sacrificing-quality/">saves
+  Microsoft</a> millions of dollars every year &mdash; all without compromising
 the quality of the program under test. So, interested in learning more about
-regression testing? If you are, then please read {% include_cached
-_popovers/paper_reference.html cite="Kapfhammer2010" trailing="." %}
-</p>
-
-Do you perform regression testing of software in industry? Or, do you conduct
-regression testing on an open-source tool? Are you interested in discovering
-ways to transition cutting-edge research into your practice of regressing
-testing? If you answered "yes" to any of these questions, I hope that you will
-soon [contact]({{site.baseurl}}contact/) me with your own ideas and experiences.
-
+regression testing? If you are, then please read [@Kapfhammer2010] [{{< iconify
+fa6-solid book-open >}}](/research/papers/kapfhammer2010/index.qmd) to explore
+the basics of the field.
 
 {{< include /_gist.qmd >}}
 
@@ -57,11 +48,15 @@ soon [contact]({{site.baseurl}}contact/) me with your own ideas and experiences.
 
 ## Further Details
 
-Interested in learning more about this topic? Since this blog post was written,
-my colleagues and students and I have published additional papers about
-mutation testing, with two noteworthy examples being [@McCurdy2016] [{{<
-iconify fa6-solid book-open >}}](/research/papers/mccurdy2016/index.qmd)
-and [@McMinn2019] [{{< iconify fa6-solid book-open >}}](/research/papers/mcminn2019/index.qmd).
+Do you perform regression testing of software in industry? Or, do you conduct
+regression testing on an open-source tool? Are you interested in discovering
+ways to transition cutting-edge research into your practice of regressing
+testing? If you answered "yes" to any of these questions, I hope that you will
+soon [contact](/contact/) me with your own ideas and experiences. Finally, since
+this blog post was written, my colleagues and students and I have published
+additional papers about regression testing, with a focus on re-running tests for database
+schemas, as explained in papers like
+[@Alsharif2020] [{{< iconify fa6-solid book-open >}}](/research/papers/alsharif2020/index.qmd).
 
 :::
 
