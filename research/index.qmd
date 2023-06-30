@@ -190,7 +190,7 @@ databases, relevant papers include
 and
 [@Kinneer2015] [{{< iconify fa6-solid book-open >}}](/research/papers/kinneer2015/index.qmd).
 Papers such as
-[@Kotelyanskii2014a] [{{< iconify fa6-solid book-open >}}](/research/papers/Kotelyanskii2014a/index.qmd)
+[@Kotelyanskii2014a] [{{< iconify fa6-solid book-open >}}](/research/papers/kotelyanskii2014a/index.qmd)
 highlight how my research has investigated the influence that the parameters of a search-based
 algorithm have on efficiency and effectiveness.
 
