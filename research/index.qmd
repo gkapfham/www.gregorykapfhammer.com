@@ -124,11 +124,11 @@ Given the challenges associated with accurately judging the quality of a test
 suite, my research has designed efficient and useful ways to perform test
 assessment through mutation analysis. Presenting and evaluating automated
 techniques that efficiently insert synthetic faults into both real-world Java
-programs and relational database schemas, some examples of papers include {%
-include _popovers/paper_reference.html cite="Just2012b" trailing="," %} {%
-include_cached _popovers/paper_reference.html cite="Wright2014" trailing="," %}
-and {% include_cached _popovers/paper_reference.html cite="McMinn2019"
-trailing="." %}
+programs and relational database schemas, some examples of papers include
+[@Just2012b] [{{< iconify fa6-solid book-open >}}](/research/papers/just2012b/index.qmd),
+[@Wright2014] [{{< iconify fa6-solid book-open >}}](/research/papers/wright2014/index.qmd),
+and
+[@McMinn2019] [{{< iconify fa6-solid book-open >}}](/research/papers/mcminn2019/index.qmd).
 
 </div>
 
@@ -138,15 +138,18 @@ trailing="." %}
 
 Since software is often incrementally developed, my
 research on regression testing has created research automated ways to
-efficiently and effectively run test suites for complex programs. Some examples
-of papers that present and evaluate regression testing techniques include {%
-include _popovers/paper_reference.html cite="Walcott2006" trailing="," %} {%
-include_cached _popovers/paper_reference.html cite="Lin2014" trailing="," %} and
-{% include_cached _popovers/paper_reference.html cite="Lin2017" trailing="." %}
-Leading the way in the realistic assessment of regression testing, papers such
-as {% include _popovers/paper_reference.html cite="Paterson2018" %} and {%
-include _popovers/paper_reference.html cite="Paterson2019" %} show how to
-conduct rigorous experiments with real program faults.
+efficiently and effectively run test suites for complex programs.
+Some examples
+of papers that present and evaluate regression testing techniques include
+[@Walcott2006] [{{< iconify fa6-solid book-open >}}](/research/papers/walcott2006/index.qmd),
+[@Lin2014] [{{< iconify fa6-solid book-open >}}](/research/papers/lin2014/index.qmd),
+and
+[@Lin2017] [{{< iconify fa6-solid book-open >}}](/research/papers/lin2017/index.qmd).
+Leading the way in the realistic assessment of regression testing, papers such as
+[@Paterson2018] [{{< iconify fa6-solid book-open >}}](/research/papers/paterson2018/index.qmd)
+and
+[@Paterson2019] [{{< iconify fa6-solid book-open >}}](/research/papers/paterson2019/index.qmd),
+show how to conduct rigorous regression testing experiments with real program faults.
 
 </div>
 
