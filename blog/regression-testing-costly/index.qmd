@@ -8,11 +8,12 @@ description: <em>Re-running your test suite is often expensive!</em>
 aliases: ["/testing/research/advice/2017/07/03/Regression-Testing-Costs/"]
 ---
 
-To establish a confidence in the correctness of their software, developers will
-often write test suites that they will re-run as the program is modified,
-attempting to ensure that they have not introduced regressions, or faults that
-arise as an unintended side effect of changes. This process, known as regression
-testing, is important and yet expensive.
+<span class="gist">To establish a confidence in the correctness of their
+  software, developers will often write test suites that they will re-run as the
+  program is modified, attempting to ensure that they have not introduced
+  regressions, or faults that arise as an unintended side effect of changes.
+  This process, known as regression testing, is important and yet
+  expensive.</span>
 
 Regression testing is costly because, as software grows in size and complexity,
 a suite accumulate more tests and therefore take longer to run. For instance, a
