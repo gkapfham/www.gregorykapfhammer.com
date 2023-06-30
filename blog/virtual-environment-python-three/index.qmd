@@ -1,0 +1,29 @@
+---
+author: Gregory M. Kapfhammer
+title: Creating and using virtual environments in Python 3
+date: '2017-01-01'
+date-format: YYYY
+categories: [post, developer productivity, software tool]
+description: <em>There are many ways to create a virtual environment!</em>
+aliases: ["programming/research/idea/2017/07/14/Virtual-Environments/"]
+---
+
+{{< include /_gist.qmd >}}
+
+::: {.callout-note appearance="simple"}
+
+## Further Details
+
+Do you perform regression testing of software in industry? Or, do you conduct
+regression testing on an open-source tool? Are you interested in discovering
+ways to transition cutting-edge research into your practice of regressing
+testing? If you answered "yes" to any of these questions, I hope that you will
+soon [contact](/contact/) me with your own ideas and experiences. Finally, since
+this blog post was written, my colleagues and students and I have published
+additional papers about regression testing, with a focus on re-running tests for database
+schemas, as explained in papers like
+[@Alsharif2020] [{{< iconify fa6-solid book-open >}}](/research/papers/alsharif2020/index.qmd).
+
+:::
+
+{{< include /_back-blog.qmd >}}
