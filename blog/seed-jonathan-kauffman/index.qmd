@@ -14,7 +14,7 @@ web_site: "https://www.linkedin.com/in/jonathan-miller-kauffman-608b6318/"
 ## SEED Interview
 
 As part of the [SEED project](/blog/introducing-seed-survey/index.qmd), I
-recently talked with [Jonathan Miller Kauffman]({{< meta web_site >}}), a {{< meta
+recently talked with [Jonathan Miller Kauffman]({{page.web_site}}), a {{< meta
 title_name >}} at {{< meta company_name >}}. In this interview, Jonathan shared
 with me that, while technical skills are necessary, software engineers must be
 effective communicators. Jonathan also stressed both the importance of
