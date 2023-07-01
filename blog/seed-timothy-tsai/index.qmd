@@ -1,0 +1,66 @@
+---
+author: Gregory M. Kapfhammer
+title: SEED Interview with Timothy Tsai
+date: '2018-01-01'
+date-format: YYYY
+categories: [post, developer productivity, seed interview]
+description: <em>Let's learn from Timothy Tsai!</em>
+aliases: ["/seed/interview/software/2017/09/18/SEED-Timothy-Tsai/"]
+interviewee: Timothy Tsai
+company_name: "Nvidia"
+title_name: "Senior Research Scientist"
+web_site: "https://www.linkedin.com/in/timothy-tsai-6501ba2/"
+---
+
+## SEED Interview
+
+As part of the [SEED project](/blog/introducing-seed-survey/index.qmd), I
+recently talked with [{{< meta interviewee >}}]({{< meta web_site >}}), a {{< meta
+title_name >}} at {{< meta company_name >}}. In this interview, Jonathan shared
+with me that, while technical skills are necessary, software engineers must be
+effective communicators. Jonathan also stressed both the importance of
+repeatedly practicing key skills and the need for continuous learning. Read
+Jonathan's responses to the three SEED questions to learn more about his unique
+perspective on the engineering of software.
+
+## What is one fun fact that you can share about your company or a current project?
+
+As with many successful companies, Nvidia has undergone several transformations
+in its focus. Originally it produced chips for graphics processing. It then
+formalized the functionality and interface to the graphics hardware and
+software to invent the GPU. After several years, GPUs started being used for
+efficient parallel processing for supercomputers. In the last few years, the
+world realized that GPUs offered a practical mix of parallel processing units
+and memory bandwidth that enabled efficient deep neural net (DNN)
+implementations. So, in 25 years, Nvidia has transformed from a graphics
+company to also being a company that powers self-driving cars.
+
+## What is the greatest challenge that you face when working in your field?
+
+Finding out how things are implemented. This includes (1) finding the right
+experts who also happen to have spare time and (2) having access to a search
+engine (i.e., both the Internet and your company's or school's intranet) that
+actually finds pertinent resources.
+
+## What is one point of advice that you can give to people who plan to enter your field?
+
+Try to understand the landscape of the projects that you are working on beyond
+just the expertise needed for those specific projects. Try to think about new
+ideas and extensions. This striving for new ideas will make those projects
+better, increase your understanding and experience, garner notice from your
+bosses, and make your career an interesting endeavor instead of merely a way to
+make a living.
+
+::: {.callout-note appearance="simple"}
+
+## Further Details
+
+Do you have any questions about this interview? Or, do you have a response to
+Jonathan's ideas? If you do, then I hope that you will
+[contact](/contact/) me to share some of your thoughts. Or, do
+you want to be updated when I publish new interviews in this series? If you do,
+then please [subscribe](/support/) to my mailing list.
+
+:::
+
+{{< include /_back-blog.qmd >}}
