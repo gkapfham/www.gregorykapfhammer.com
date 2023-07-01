@@ -1,0 +1,79 @@
+---
+author: Gregory M. Kapfhammer
+title: "Software tool redo: Status updates on my software suggestions"
+date: '2018-01-01'
+date-format: YYYY
+categories: [post, developer productivity, software tool]
+description: <em>I've updated some of my software suggestions!</em>
+aliases: ["/writing/software/productivity/2018/11/01/Technique-Retrospective/"]
+---
+
+Many of the articles on my [blog](/blog/) describe the tools that I use when I
+prepare my [courses](/teaching/), conduct [research](/research/), write
+[papers](/research/papers/), and implement [software](/software/). <span
+  class="gist">Given the rapid pace of innovation in the field of software
+  engineering, I thought that it would be a good idea to share a status update
+  on my use of some software that I suggested in previous posts. But, be more
+  software tool changes are likely!</span>
+
+- In the article [Distraction-free writing with a terminal timer and Ubuntu
+notifications](/blog/distraction-tree-terminal-timer/index.qmd), I suggested
+that a distracted writer or programmer could use
+[termdown](https://github.com/trehn/termdown) to set a countdown timer in their
+terminal window. Today I still use the same software tool! If you use a terminal
+window and you are comfortable with installing and using a Python program, then
+I still recommend that you consider this simple approach.
+
+- In the article [Using virtual environments in Python
+3](/blog/virtual-environments-python-three/index.qmd), I suggested the use of
+[venv](https://docs.python.org/3/library/venv.html) to manage the creation of
+virtual environments when implementing a Python 3 program. I no longer adopt
+this approach, instead using [Pipenv](https://github.com/pypa/pipenv) to support
+virtual environment and dependency management for programs like
+[GatorGrader](https://github.com/GatorEducator/gatorgrader).
+
+- In the article [Easy steps towards speedy technical writing with
+Neovim](/blog/speedy-writing-neovim/index.qmd), I suggested the use of
+[deoplete.nvim](https://github.com/Shougo/deoplete.nvim) for text completion in
+Neovim and Vim. Even though I appreciate all of the time effort that developers
+have invested in this tool, I now use [ncm2](https://github.com/ncm2/ncm2) as I
+find it to be the fastest auto-completion engine I have tried so far. You can
+check my `.vimrc` file in my [dotfiles](https://github.com/gkapfham/dotfiles) to
+learn more about how I configured these tools.
+
+- In the article [Three quick tips for writing LaTeX in Neovim]({% post_url
+2017-06-26-Neovim-Remote-Latex %}), I explained how I used
+[neovim-remote](https://github.com/mhinz/neovim-remote) to ensure that I could
+edit LaTeX documents with Neovim. Today, I'm still appreciatively using the
+[vimtex](https://github.com/lervag/vimtex) plugin in Neovim! You can review my
+`.vimrc` and `.zshrc` files in my
+[dotfiles](https://github.com/gkapfham/dotfiles) to learn how I configured these
+tools to support writing.
+
+- In the article [Directory zooming with Fzf and Fasd]({% post_url
+2017-05-08-Directory-Zooming %}), I encouraged the use of
+[fzf](https://github.com/junegunn/fzf) and [fasd](https://github.com/clvv/fasd).
+When I edit source code in Neovim or navigate my terminal running `zsh` I still
+use both of these programs regularly. To date, I have made one major change in
+the way I use programs like Fzf, which performs fuzzy search on the output of an
+affiliated program that produces searchable text. Instead of using the [Silver
+Searcher](http://www.url.com) to find matching files or directories and produce
+a list for Fzf, I now use a drop-in replacement, called
+[Ripgrep](https://github.com/BurntSushi/ripgrep), with better performance.
+Again, you can check my `.vimrc` and `.zshrc` files in my
+[dotfiles](https://github.com/gkapfham/dotfiles) to learn how I configured these
+and other command-line tools.
+
+{{< include /_gist.qmd >}}
+
+::: {.callout-note appearance="simple"}
+
+## Further Details
+
+What software tools do you use when you implement software or write technical
+articles? I invite you to [contact](/contact/) me with your own
+suggestions for software.
+
+:::
+
+{{< include /_back-blog.qmd >}}
