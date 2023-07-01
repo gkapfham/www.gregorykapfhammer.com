@@ -1,7 +1,7 @@
 ---
 author: Gregory M. Kapfhammer
 title: SEED Interview with Brian Blose
-date: '2018-01-01'
+date: '2019-01-01'
 date-format: YYYY
 categories: [post, industry connections, seed interview]
 description: <em>Let's learn from Brian Blose!</em>
