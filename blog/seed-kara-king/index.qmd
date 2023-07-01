@@ -16,12 +16,14 @@ web_site: "https://www.linkedin.com/in/kara-king-b245a259"
 
 As part of the [SEED project](/blog/introducing-seed-survey/index.qmd), I
 recently talked with [{{< meta interviewee >}}]({{< meta web_site >}}), a {{<
-meta title_name >}} at {{< meta company_name >}}. In this interview, Timothy
-shared with me that an engineer in industry must be able to develop new ideas
-and discern the bigger picture of a technical project. Timothy also explained
-that technology companies must pivot to best engage with new markets and
-opportunities. Read Timothy's responses to the three SEED questions to learn
-more about his unique perspective on the engineering of software.
+meta title_name >}} at {{< meta company_name >}}. In this interview, Kara told
+me that students should be open to learning new programming languages. Kara also
+said that software engineers in industry face the challenge of eliciting
+requirements from business stakeholders. Finally, she stressed the importance of
+professional networking, encouraging people to pursue internships throughout
+their undergraduate education. Read Kara's responses to the three SEED questions
+to learn more about her unique perspective on the engineering of software in
+industry.
 
 ### What is one fun fact that you can share about your company or a current project?
 
