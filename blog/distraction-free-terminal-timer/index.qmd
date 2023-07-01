@@ -1,7 +1,7 @@
 ---
 author: Gregory M. Kapfhammer
-title: Creating and using virtual environments in Python 3
-date: '2017-01-01'
+title: Distraction-free writing with a terminal timer and Ubuntu notifications
+date: '2018-01-01'
 date-format: YYYY
 categories: [post, developer productivity, software tool]
 description: <em>Neat, you can create a timer in your terminal window!</em>
