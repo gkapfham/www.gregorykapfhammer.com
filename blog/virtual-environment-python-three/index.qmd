@@ -5,7 +5,7 @@ date: '2017-01-01'
 date-format: YYYY
 categories: [post, developer productivity, software tool]
 description: <em>There are many ways to create a virtual environment!</em>
-aliases: ["programming/research/idea/2017/07/14/Virtual-Environments/"]
+aliases: ["/programming/research/idea/2017/07/14/Virtual-Environments/"]
 ---
 
 The Python programming language supports "virtual environments" that make it
