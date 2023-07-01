@@ -1,7 +1,7 @@
 ---
 author: Gregory M. Kapfhammer
 title: SEED Interview with Jonathan Miller Kauffman
-date: '2017-01-01'
+date: '2018-01-01'
 date-format: YYYY
 categories: [post, seed interview, software tool]
 description: <em>Let's learn from Jonathan Miller Kauffman!</em>
