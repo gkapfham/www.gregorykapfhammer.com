@@ -3,7 +3,7 @@ author: Gregory M. Kapfhammer
 title: SEED Interview with Timothy Tsai
 date: '2018-01-01'
 date-format: YYYY
-categories: [post, developer productivity, seed interview]
+categories: [post, industry connections, seed interview]
 description: <em>Let's learn from Timothy Tsai!</em>
 aliases: ["/seed/interview/software/2017/09/18/SEED-Timothy-Tsai/"]
 interviewee: Timothy Tsai

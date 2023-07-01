@@ -3,7 +3,7 @@ author: Gregory M. Kapfhammer
 title: SEED Interview with Jonathan Miller Kauffman
 date: '2018-01-01'
 date-format: YYYY
-categories: [post, developer productivity, seed interview]
+categories: [post, industry connections, seed interview]
 description: <em>Let's learn from Jonathan Miller Kauffman!</em>
 aliases: ["/seed/interview/software/2017/09/04/SEED-Jonathan-Kauffman/"]
 company_name: "Coveros"
