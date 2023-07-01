@@ -3,7 +3,7 @@ author: Gregory M. Kapfhammer
 title: SEED Interview with Rebecca Dilla
 date: '2018-01-01'
 date-format: YYYY
-categories: [post, seed interview, software tool]
+categories: [post, developer productivity, seed interview]
 description: <em>Let's learn from Rebecca Dilla!</em>
 aliases: ["/seed/interview/software/2017/09/11/SEED-Rebecca-Dilla/"]
 company_name: "Niche.com"
