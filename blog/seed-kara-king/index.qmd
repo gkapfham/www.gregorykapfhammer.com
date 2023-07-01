@@ -1,12 +1,13 @@
 ---
 author: Gregory M. Kapfhammer
 title: SEED Interview with Kara King
-date: '2018-01-01'
+date: '2019-01-01'
 date-format: YYYY
 categories: [post, industry connections, seed interview]
 description: <em>Let's learn from Kara King!</em>
 aliases: ["/seed/interview/software/2017/10/23/SEED-Kara-King/"]
 interviewee: Kara King
+company_name: "FirstEnergy"
 title_name: "SAP developer"
 web_site: "https://www.linkedin.com/in/kara-king-b245a259"
 ---
