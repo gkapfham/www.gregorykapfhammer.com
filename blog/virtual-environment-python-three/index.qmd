@@ -47,7 +47,7 @@ At this point, you can install various libraries using the `pip install`
 command. For instance, if you wanted to install the `requests` library you could
 type the following command in your terminal: `pip install requests`. Notice that
 this command will not install `requests` in a system-wide fashion &mdash;
-instead it will only be available to the `lightning.py` project.
+instead it will only be available to the `pylightning` project.
 
 Okay, that's great! Now, we are ready to design, implement, test, and document
 the `pylightning` project. But, what do we do when we want to stop running this
