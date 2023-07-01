@@ -11,9 +11,10 @@ aliases: ["programming/research/idea/2017/07/14/Virtual-Environments/"]
 The Python programming language supports "virtual environments" that make it
 easy to install libraries for specific projects. For instance, you can employ
 the newest version of a library for one project and an older version for
-another. Since virtual environments ensure that all Python projects are no
-longer forced to depend on a system-wide library, they support program isolation
-and thus enable software engineers to better manage the library dependencies.
+another. <span class="gist">Since virtual environments ensure that all Python
+  projects are no longer forced to depend on a system-wide library, they
+  support program isolation and thus enable software engineers to better manage
+  the library dependencies.</span>
 
 For many years [virtualenv](https://virtualenv.pypa.io/en/latest/) was one of
 the most established and well-known tools for creating a virtual environment.
@@ -23,10 +24,11 @@ projects are exclusively in Python 3, I discovered that there was another tool
 that was part of the Python 3 language and the most appropriate choice for new
 projects.
 
-What is this new approach? It is called `venv`! While there is some great
-documentation on [venv](https://docs.python.org/3/library/venv.html), I decided
-to write this post to share some of the additional details that I learned about
-how to use it on a recent version of the Ubuntu operating system. I hope that
+<span class="gist">What is this new approach? It is called `venv`! While there
+  is some great documentation on
+  [venv](https://docs.python.org/3/library/venv.html), I decided to write this
+  post to share some of the additional details that I learned about how to use
+  it on a recent version of the Ubuntu operating system.</span> I hope that
 this helps you get started!
 
 Even though I had Python 3 installed correctly, I found that I also needed to
