@@ -21,18 +21,18 @@ fixes. One approach to improving regression testing is to prioritize the test
 suite so that the test execution process first runs those tests that are most
 likely to find defects.
 
-In one of my recent research papers, {% include_cached
-_popovers/paper_reference.html cite="Paterson2019" trailing="," %} my co-authors
-and I introduced an automated way to enhance test suite prioritization through
-the use of defect prediction. While many different strategies have been
-developed and evaluated for reordering test suites, prior experiments have shown
-them to not be effective at prioritizing test suites to find real faults. This
-paper presents a test case prioritization strategy based on defect prediction, a
-technique that analyzes code features &mdash; such as the number of revisions
-and authors &mdash; to estimate the likelihood that a software component will
-contain a defect. Intuitively, if defect prediction can accurately predict the
-component that is most likely to be defective, a tool can prioritize tests to
-rapidly detect the defects in that component.
+In one of my recent research papers,
+[@Paterson2019] [{{< iconify fa6-solid book-open >}}](/research/papers/paterson2019/index.qmd)
+my co-authors and I introduced an automated way to enhance test suite
+prioritization through the use of defect prediction. While many different
+strategies have been developed and evaluated for reordering test suites, prior
+experiments have shown them to not be effective at prioritizing test suites to
+find real faults. This paper presents a test case prioritization strategy based
+on defect prediction, a technique that analyzes code features &mdash; such as
+the number of revisions and authors &mdash; to estimate the likelihood that a
+software component will contain a defect. Intuitively, if defect prediction can
+accurately predict the component that is most likely to be defective, a tool can
+prioritize tests to rapidly detect the defects in that component.
 
 Since the goal of our paper was not to implement a new defect prediction
 technique, we investigated how to configure an existing tool, called Schwa, to
