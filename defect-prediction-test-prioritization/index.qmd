@@ -1,0 +1,25 @@
+---
+author: Gregory M. Kapfhammer
+title: "Using real faults to evaluate test suite prioritization techniques"
+date: '2019-01-01'
+date-format: YYYY
+categories: [post, regression testing, research methodology]
+description: <em>Evaluate test prioritization with real faults!</em>
+aliases: ["/research/software/testing/2018/12/07/Real-Faults-Prioritization/"]
+---
+
+{{< include /_gist.qmd >}}
+
+::: {.callout-note appearance="simple"}
+
+## Further Details
+
+If you want to learn more about these new experimental results, please read
+[@Paterson2018] [{{< iconify fa6-solid book-open >}}](/research/papers/paterson2018/index.qmd)!
+Since I would like to learn about and study other approaches, I hope that you
+will [contact](/contact/) me with your suggestions for how to experimentally
+assess a test suite prioritization technique.
+
+:::
+
+{{< include /_back-blog.qmd >}}
