@@ -3,55 +3,55 @@ author: Gregory M. Kapfhammer
 title: "Using real faults to evaluate test suite prioritization techniques"
 date: '2019-01-01'
 date-format: YYYY
-categories: [post, developer productivity, software tool]
+categories: [post, regression testing, research methodology]
 description: <em>Evaluate test prioritization with real faults!</em>
 aliases: ["/research/software/testing/2018/12/07/Real-Faults-Prioritization/"]
 ---
 
 In a previous post, called [Regression testing of software is costly &mdash; but
-you can do something about it!]({% post_url 2017-07-03-Regression-Testing-Costs
-%}), I pointed out that software engineers often write test suites that they
-will re-run as they modify a program. This valuable &mdash; and expensive!
-&mdash; process, called regression testing, helps developers to ensure that
-they have not introduced new defects as they add new features or bug fixes.
+you can do something about it!](/blog/regression-testing-costly/index.qmd), I
+pointed out that software engineers often write test suites that they will
+re-run as they modify a program. <span class="gist">This valuable &mdash; and
+  expensive! &mdash; process, called regression testing, helps developers to
+  ensure that they have not introduced new defects as they add features or bug
+  fixes.</span>
 
-{% comment %} Explain the purpose of the article {% endcomment %}
-
-<p>
 Instead of focuses on the practices of software engineers, this draws attention
 to the common practices that researchers follow when they are assessing the
 effectiveness of prioritization techniques that reorder a test suite. Many
-research papers, including some of my own like {% include_cached
-_popovers/paper_reference.html cite="Lin2017" trailing="," %} seed the program
-under test with synthetic faults called mutants and then see how quickly
-different test orderings detect those faults. Since mutation testing
+research papers, including some of my own like
+[@Lin2017] [{{< iconify fa6-solid book-open >}}](/research/papers/lin2017/index.qmd)
+seed the program under test with synthetic faults called mutants and then see
+how quickly different test orderings detect those faults. Since mutation testing
 tools exist for many programming languages, this approach is appealing to
 researchers who want to evaluate the effectiveness of a new test prioritizer.
-</p>
 
-{% comment %} Explain the problem with seeding mutants {% endcomment %}
-
-<p>
-One of my research collaborations lead to the recent publication of {%
-include_cached _popovers/paper_reference.html cite="Paterson2018" trailing=","
-%} a paper that calls into question the use of mutants during the experimental
-evaluation of test suite prioritization methods. Using <a href =
-"https://github.com/rjust/defects4j">Defects4J</a>, the database of real faults
-for Java programs, this paper reports on experiments that investigate how the
-use of mutants and real faults influence the experimental study of
-coverage-based test prioritizers. The paper shows that real faults, in
+One of my research collaborations lead to the recent publication of
+[@Paterson2018] [{{< iconify fa6-solid book-open >}}](/research/papers/paterson2018/index.qmd),
+a paper that calls into question the use of mutants during the experimental
+evaluation of test suite prioritization methods. <span class="gist">Using <a href =
+  "https://github.com/rjust/defects4j">Defects4J</a>, the database of real
+faults for Java programs, this paper reports on experiments that investigate how
+the use of mutants and real faults influence the experimental study of
+coverage-based test prioritizers.</span> The paper shows that real faults, in
 comparison to synthetic mutants, are harder for a reordered test suite to
-detect. The results also suggest that the use of mutants leads to an
-unpredictable scoring of a test suite's effectiveness. In the context of test
-suite prioritization, this paper's conclusion is that mutants are not a
-surrogate for real faults!
-</p>
+detect. The results also suggest that using mutants leads to an
+unpredictable scoring of a test suite's effectiveness. <span class="gist">In the
+  context of test prioritization, this paper shows that mutants
+  are not a surrogate for real faults!</span>
 
-<p>
-If you want to learn more about these results, please read {% include_cached
-_popovers/paper_reference.html cite="Paterson2018" trailing="." %} Since I would
-like to learn about other approaches, I hope that you will <a
-href="{{site.baseurl}}contact/">contact</a> me with your suggestions for how to
-experimentally assess a test suite prioritization technique.
-</p>
+{{< include /_gist.qmd >}}
 
+::: {.callout-note appearance="simple"}
+
+## Further Details
+
+If you want to learn more about these new experimental results, please read
+[@Paterson2018] [{{< iconify fa6-solid book-open >}}](/research/papers/paterson2018/index.qmd)!
+Since I would like to learn about and study other approaches, I hope that you
+will [contact](/contact/) me with your suggestions for how to experimentally
+assess a test suite prioritization technique.
+
+:::
+
+{{< include /_back-blog.qmd >}}
