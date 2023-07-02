@@ -17,22 +17,23 @@ that software engineers often write test suites that they will re-run as they
 modify a program. I also explained that this this valuable &mdash; and
 expensive! &mdash; process, called regression testing, helps developers to
 ensure that they have not introduced new defects as they add new features or bug
-fixes. One approach to improving regression testing is to prioritize the test
-suite so that the test execution process first runs those tests that are most
-likely to find defects.
+fixes. <span class="gist">One way to perform regression testing is to prioritize
+  the test suite so that test execution first runs those tests that are most
+  likely to find defects.</span>
 
-In one of my recent research papers,
-[@Paterson2019] [{{< iconify fa6-solid book-open >}}](/research/papers/paterson2019/index.qmd)
-my co-authors and I introduced an automated way to enhance test suite
-prioritization through the use of defect prediction. While many different
-strategies have been developed and evaluated for reordering test suites, prior
-experiments have shown them to not be effective at prioritizing test suites to
-find real faults. This paper presents a test case prioritization strategy based
-on defect prediction, a technique that analyzes code features &mdash; such as
-the number of revisions and authors &mdash; to estimate the likelihood that a
-software component will contain a defect. Intuitively, if defect prediction can
-accurately predict the component that is most likely to be defective, a tool can
-prioritize tests for that component so as to rapidly detect the defects in that component.
+In one of my recent research papers, [@Paterson2019] [{{< iconify fa6-solid
+book-open >}}](/research/papers/paterson2019/index.qmd) my co-authors and I
+introduced an automated way to enhance test suite prioritization through the use
+of defect prediction. While many different strategies have been developed and
+evaluated for reordering test suites, prior experiments have shown them to not
+be effective at prioritizing test suites to find real faults. This paper
+presents a test case prioritization strategy based on defect prediction, a
+technique that analyzes code features &mdash; such as the number of revisions
+and authors &mdash; to estimate the likelihood that a software component will
+contain a defect. <span class="gist">Intuitively, if defect prediction can
+  accurately predict the component that is most likely to be defective, a tool
+  can prioritize tests for that component so as to rapidly detect the defects in
+  that component.</span>
 
 Since the goal of our paper was not to implement a new defect prediction
 technique, we investigated how to configure an existing tool, called Schwa, to
@@ -40,10 +41,11 @@ maximize the likelihood of an accurate prediction, surfacing the link between
 perfect defect prediction and test case prioritization effectiveness. Our
 paper's experiments used 6 real-world Java programs containing 395 real faults,
 to compare the presented strategy, called G-clef, against eight existing test
-case prioritization strategies. The experiments reveal that using defect
-prediction to prioritize test cases reduces the number of test cases required to
-find a fault by 9.48% on average when compared with existing coverage-based
-strategies, and 10.5% when compared with existing history-based strategies.
+case prioritization strategies. <span class="gist">The experiments reveal that
+  using defect prediction to prioritize test cases reduces the number of test
+  cases required to find a fault by 9.48% on average when compared with existing
+  coverage-based strategies, and 10.5% when compared with existing history-based
+  strategies.</span>
 
 You may be asking yourself whether or not decreasing by about 10% the number of
 test cases needed to find a fault is a noticeable improvement for the regression
