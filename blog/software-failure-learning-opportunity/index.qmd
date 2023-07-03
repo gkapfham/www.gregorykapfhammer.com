@@ -8,15 +8,16 @@ description: <em>Software failure is a growth opportunity!</em>
 aliases: ["/writing/research/idea/2019/11/15/Breaking-Benefits/"]
 ---
 
-My [research](/research/) in the fields of software engineering
-and software testing focuses on the design, implementation, and experimental
-evaluation of automated techniques for finding and fixing the defects that lead
-to software failure. Even though much of my professional work develops methods
-to avoid software failure, I've also learned that when software fails it is an
+My [research](/research/) in the fields of software engineering and software
+testing focuses on the design, implementation, and experimental evaluation of
+automated techniques for finding and fixing the defects that lead to software
+failure. Even though much of my professional work develops methods to avoid
+software failure, I've also learned that when software fails it is an
 opportunity for me to learn about why it failed and to explore alternatives to,
 for instance, the approach that lead to the failure or the software that itself
-failed. After reflecting on my research and teaching experiences, it is now
-clear that I've greatly benefited from software failures!
+failed. <span class="gist">After reflecting on my research and teaching
+  experiences, it is now clear that I've greatly benefited from software
+  failures!</span>
 
 Here are a few examples that help to illustrate my point:
 
@@ -71,8 +72,8 @@ of lines of code in Matlab and Mathematica in the R language for statistical
 computation. While I always appreciated R through many years of use, it never
 felt to me like a general-purpose programming language and, in recent years, I
 have begun to adopt Python for all my statistical and visualization tasks. More
-importantly, I can no longer imagine using commercial software for any of my
-computational tasks!
+importantly, I can no longer imagine using commercial software for most of my
+tasks!
 
 - **Wishing for a Wonderful Window Manager**: Although I've been using Linux and
 terminal windows for years, I never preferred to interact with the operating
@@ -92,11 +93,10 @@ environments such as Unity or GNOME Shell!
 
 In summary, I might still be using Windows, plotting data with commercial
 software, and managing my own version control server if it were not for all of
-these frustrating experiences with software! Was making a change to the new
-software painful? Was it time consuming to learn the ins-and-outs of a new
-program? Yes and yes. But, was it worth it? Yes, absolutely!
-
-
+these frustrating experiences with software! <span class="gist">Was making a
+  change to the new software painful? Was it time consuming to learn the
+  ins-and-outs of a new program? Yes and yes. But, was it worth it? Yes,
+  absolutely!</span>
 
 {{< include /_gist.qmd >}}
 
