@@ -27,44 +27,46 @@ investigation! I'm pleased to report that our recent paper,
 presents a human study of automated test data generation techniques for
 relational database schemas.
 
-Since relational databases are a key component of software systems ranging
-from small mobile to large enterprise applications, there are well-studied
-methods that automatically generate test cases for database-related
-functionality. As explained in a previous blog post called <a
-href="/testing/database/tool/2014/06/12/Schema-Testing/">How do
-you test a relational database's schema?</a>, a schema testing tool
-automatically generates <code>INSERT</code> statements with data values designed
-to either satisfy (i.e., be accepted into the database) or violate the schema
-(i.e., be rejected from the database). From my own experience, writing schema
-tests is difficult because a human tester has to carefully reason about the,
-sometimes complex, relational schema that protects the database's contents.
-While having tools like SchemaAnalyst {% include_cached
-_popovers/paper_reference.html cite="McMinn2016c" trailing="," %} to
+Since relational databases are a key component of software systems ranging from
+small mobile to large enterprise applications, there are well-studied methods
+that automatically generate test cases for database-related functionality. As
+explained in a previous blog post called <a
+  href="/testing/database/tool/2014/06/12/Schema-Testing/">Introducing a
+  research foundation for testing relational database schemas</a>, a schema
+testing tool automatically generates <code>INSERT</code> statements with data
+values designed to either satisfy (i.e., be accepted into the database) or
+violate the schema (i.e., be rejected from the database). From my own
+experience, writing schema tests is difficult because a human tester has to
+carefully reason about the, sometimes complex, relational schema that protects
+the database's contents. While having tools like SchemaAnalyst [@McMinn2016c]
+[{{< iconify fa6-solid book-open >}}](/research/papers/mcminn2016c/index.qmd) to
 automatically generate tests is useful, as I mentioned previously, there has
 been no research to analyze how well testers both understand tests involving SQL
-and decide if they reveal flaws.
+and decide if they reveal flaws. So, my collaborators and I decided to conduct a
+human study!
 
-The aforementioned paper, {% include_cached _popovers/paper_reference.html
-cite="Alsharif2019" trailing="," %} reports on a human study of test
-comprehension in the context of automatically generated tests, created by
-SchemaAnalyst, that assess the correct specification of the integrity
-constraints in a relational database schema. The study reveals two key findings.
-First, the choice of data values in <code>INSERT</code>s influences human
-understandability: the use of default values for elements not involved in the
-test (but necessary for adhering to SQL’s syntax rules) aided participants,
-allowing them to easily identify and understand the important test values. Yet,
-negative numbers and "garbage" strings hindered this process. The second finding
-is more far reaching: humans found the outcome of test cases very difficult to
-predict when <code>NULL</code> was used in conjunction with foreign keys and
-<code>CHECK</code> constraints. This suggests that, while including
+The aforementioned paper,
+[@Alsharif2019] [{{< iconify fa6-solid book-open >}}](/research/papers/alsharif2019/index.qmd)
+reports on a human study of test comprehension in the context of automatically
+generated tests, created by SchemaAnalyst, that assess the correct specification
+of the integrity constraints in a relational database schema. The study reveals
+two key findings. First, the choice of data values in <code>INSERT</code>s
+influences human understandability: the use of default values for elements not
+involved in the test (but necessary for adhering to SQL’s syntax rules) aided
+participants, allowing them to easily identify and understand the important test
+values. Yet, negative numbers and "garbage" strings hindered this process. The
+second finding is more far reaching: humans found the outcome of test cases very
+difficult to predict when <code>NULL</code> was used in conjunction with foreign
+keys and <code>CHECK</code> constraints. This suggests that, while including
 <code>NULL</code>s can surface the confusing semantics of database schemas,
 their use makes tests less understandable for humans. While these results
-specifically apply to database schema test, we envision that the results largely
-apply to automatically generated tests for programs.
+specifically apply to database schema tests, we anticipate that the results may
+apply to automatically generated tests for general-purpose programs in languages
+like Java.
 
-Ultimately, my co-authors and I make the following suggestions for both the
-software engineers who manually write tests and for developers who create tools
-that automatically generate tests.
+In the context of database schema testing, my co-authors and I make the
+following suggestions for both the software engineers who manually write tests
+and for developers who create tools that automatically generate tests.
 
 - Negative numbers and <code>NULL</code> values are confusing for human testers
 and tests should only include them when they are specifically needed to reveal a
