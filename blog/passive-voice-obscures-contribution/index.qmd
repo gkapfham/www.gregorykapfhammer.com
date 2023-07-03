@@ -5,7 +5,7 @@ date: '2020-01-01'
 date-format: YYYY
 categories: [post, position statement, technical writing]
 description: <em>Unless you strategically need it, don't use passive voice!</em>
-aliases: [""]
+aliases: ["/writing/research/idea/2019/12/05/Passive-Voice-Obscures/"]
 ---
 
 Through my [service](/service/) as an associate editor for the [Journal of
