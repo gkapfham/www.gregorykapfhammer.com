@@ -1,0 +1,27 @@
+---
+author: Gregory M. Kapfhammer
+title: Passive voice obscures the technical contribution of your writing
+date: '2020-01-01'
+date-format: YYYY
+categories: [post, position statement, technical writing]
+description: <em>Unless you strategically need it, don't use passive voice!</em>
+aliases: [""]
+---
+
+
+
+{{< include /_gist.qmd >}}
+
+::: {.callout-note appearance="simple"}
+
+## Experience Sharing
+
+Do you have experiences with software failure? Have you seen the
+benefits of a program no longer meeting your needs? If you have, then I hope
+that you will [contact](/contact/) me to share some of your thoughts. Do you
+want to be updated when I publish new blog posts? If you do, then please
+[subscribe](/support/) to my mailing list.
+
+:::
+
+{{< include /_back-blog.qmd >}}
