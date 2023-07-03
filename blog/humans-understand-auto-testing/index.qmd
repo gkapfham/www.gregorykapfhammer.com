@@ -12,18 +12,20 @@ Throughout my career, my <a href="/research/">research</a>
 has focused on creating and evaluating methods for automatically generating test
 cases and test inputs, thereby supporting programmers with clever tests that may
 find defects in, for instance, their programs or database schemas. As an
-example, {% include_cached _popovers/paper_reference.html cite="Alsharif2018" %}
+example,
+[@Alsharif2018] [{{< iconify fa6-solid book-open >}}](/research/papers/alsharif2018/index.qmd)
 introduces a tool for automatically generating tests for relational database
-schemas and {% include_cached _popovers/paper_reference.html cite="McMinn2016b"
-%} presents a framework that supports the creation of automated test data
+schemas and
+[@McMinn2016b] [{{< iconify fa6-solid book-open >}}](/research/papers/mcminn2016b/index.qmd)
+presents a framework that supports the creation of automated test data
 generation tools for the Java programming language. However, until recently,
-none of my research <a href="/research/papers">papers</a>
+none of my research <a href="/research/papers/">papers</a>
 assessed whether or not these approaches actually help human testers. Of course,
 my colleagues and I recognized that this was an area that warranted further
-investigation! I'm pleased to report that our recent paper, {% include_cached
-_popovers/paper_reference.html cite="Alsharif2019" trailing="," %} presents a
-human study of automated test data generation techniques for relational database
-schemas.
+investigation! I'm pleased to report that our recent paper,
+[@Alsharif2019] [{{< iconify fa6-solid book-open >}}](/research/papers/alsharif2019/index.qmd)
+presents a human study of automated test data generation techniques for
+relational database schemas.
 
 Since relational databases are a key component of software systems ranging
 from small mobile to large enterprise applications, there are well-studied
