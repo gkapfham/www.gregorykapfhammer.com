@@ -1,10 +1,10 @@
 ---
 author: Gregory M. Kapfhammer
-title: Can defect prediction enhance test suite prioritization techniques?
+title: Software failure is an opportunity for learning and exploration
 date: '2019-01-01'
 date-format: YYYY
 categories: [post, position statement, software development]
-description: <em>When software fails is a growth opportunity!</em>
+description: <em>Software failure is a growth opportunity!</em>
 aliases: ["/writing/research/idea/2019/11/15/Breaking-Benefits/"]
 ---
 
