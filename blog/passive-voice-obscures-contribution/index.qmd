@@ -37,9 +37,7 @@ analyzed" makes it less clear if the action was done in an automated or a
 manual fashion, which is also useful for computer science research papers.
 
 It's easy for you to determine if your sentence contains a verb in passive
-voice! Following the
-[strategy](https://twitter.com/johnsonr/status/259012668298506240?lang=en)
-suggested by [Rebecca Johnson](https://twitter.com/johnsonr), you should ask
+voice! Following the strategy suggested by Rebecca Johnson, you should ask
 yourself if you can insert "by zombies" after the verb! If you can, then you
 know that a specific sentence is written in passive voice and should be
 rephrased to be more active. Once you recognize that the sentence is in passive
