@@ -22,10 +22,10 @@ generation tools for the Java programming language. However, until recently,
 none of my research <a href="/research/papers/">papers</a>
 assessed whether or not these approaches actually help human testers. Of course,
 my colleagues and I recognized that this was an area that warranted further
-investigation! I'm pleased to report that our recent paper,
+investigation! <span class="gist">I'm pleased to report that our recent paper,
 [@Alsharif2019] [{{< iconify fa6-solid book-open >}}](/research/papers/alsharif2019/index.qmd)
 presents a human study of automated test data generation techniques for
-relational database schemas.
+relational database schemas.</span>
 
 Since relational databases are a key component of software systems ranging from
 small mobile to large enterprise applications, there are well-studied methods
@@ -64,13 +64,13 @@ specifically apply to database schema tests, we anticipate that the results may
 apply to automatically generated tests for general-purpose programs in languages
 like Java.
 
-In the context of database schema testing, my co-authors and I make the
-following suggestions for both the software engineers who manually write tests
-and for developers who create tools that automatically generate tests.
+<span class="gist">In the context of database schema testing, my co-authors and
+  I make the following suggestions for both the software engineers who manually
+  write tests and for developers who create tools that automatically generate
+  tests.</span>
 
 - Negative numbers and <code>NULL</code> values are confusing for human testers
-and tests should only include them when they are specifically needed to reveal a
-defect.
+and tests should only include them when they are needed to reveal a defect.
 
 - Test should use simple repetitions of numerical, categorical, and textual
 values for unimportant values because they make it easier for human testers to
@@ -92,9 +92,7 @@ and manual testing guidelines that ensure that tests are understandable by human
 testers. Do you have ideas about how to make tests more human readable? Are you
 interested in collaborating with me on research to make the next generation of
 automated test data generation techniques? If so, then I hope that you will
-[contact](/contact/) me to share some of your ideas! Or, do
-you want to be updated when I publish new blog posts like this one? If you do,
-then please [subscribe](/support/) to my mailing list.
+[contact](/contact/) me to share some of your ideas!
 
 :::
 
