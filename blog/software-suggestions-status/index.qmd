@@ -27,9 +27,10 @@ I still recommend that you consider this simple approach.
 - In the article [Using virtual environments in Python
 3](/blog/virtual-environments-python-three/index.qmd), I suggested the use of
 [venv](https://docs.python.org/3/library/venv.html) to manage the creation of
-virtual environments when implementing a Python 3 program. I no longer adopt
-this approach, instead using [Pipenv](https://github.com/pypa/pipenv) to support
-virtual environment and dependency management for programs like
+virtual environments when implementing a Python 3 program. For most of my Python
+programming, I no longer adopt this approach, instead using
+[Pipenv](https://github.com/pypa/pipenv) to support virtual environment and
+dependency management for programs like
 [GatorGrader](https://github.com/GatorEducator/gatorgrader).
 
 - In the article [Easy steps towards speedy technical writing with
@@ -41,8 +42,8 @@ find it to be the fastest auto-completion engine I have tried so far. You can
 check my `.vimrc` file in my [dotfiles](https://github.com/gkapfham/dotfiles) to
 learn more about how I configured these tools.
 
-- In the article [Three quick tips for writing LaTeX in Neovim]({% post_url
-2017-06-26-Neovim-Remote-Latex %}), I explained how I used
+- In the article [Three quick tips for writing LaTeX in
+Neovim](blog/quick-tips-writing-neovim/index.qmd), I explained how I used
 [neovim-remote](https://github.com/mhinz/neovim-remote) to ensure that I could
 edit LaTeX documents with Neovim. Today, I'm still appreciatively using the
 [vimtex](https://github.com/lervag/vimtex) plugin in Neovim! You can review my
