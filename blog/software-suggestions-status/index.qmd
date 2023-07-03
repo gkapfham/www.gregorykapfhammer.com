@@ -42,8 +42,8 @@ find it to be the fastest auto-completion engine I have tried so far. You can
 check my `.vimrc` file in my [dotfiles](https://github.com/gkapfham/dotfiles) to
 learn more about how I configured these tools.
 
-- In the article [Three quick tips for writing LaTeX in
-Neovim](blog/quick-tips-writing-neovim/index.qmd), I explained how I used
+- In the article [Quick tips for technical writing with LaTeX and
+Neovim](/blog/quick-tips-writing-neovim/index.qmd), I explained how I used
 [neovim-remote](https://github.com/mhinz/neovim-remote) to ensure that I could
 edit LaTeX documents with Neovim. Today, I'm still appreciatively using the
 [vimtex](https://github.com/lervag/vimtex) plugin in Neovim! You can review my
@@ -51,19 +51,19 @@ edit LaTeX documents with Neovim. Today, I'm still appreciatively using the
 [dotfiles](https://github.com/gkapfham/dotfiles) to learn how I configured these
 tools to support writing.
 
-- In the article [Directory zooming with Fzf and Fasd]({% post_url
-2017-05-08-Directory-Zooming %}), I encouraged the use of
-[fzf](https://github.com/junegunn/fzf) and [fasd](https://github.com/clvv/fasd).
-When I edit source code in Neovim or navigate my terminal running `zsh` I still
-use both of these programs regularly. To date, I have made one major change in
-the way I use programs like Fzf, which performs fuzzy search on the output of an
-affiliated program that produces searchable text. Instead of using the [Silver
-Searcher](http://www.url.com) to find matching files or directories and produce
-a list for Fzf, I now use a drop-in replacement, called
-[Ripgrep](https://github.com/BurntSushi/ripgrep), with better performance.
-Again, you can check my `.vimrc` and `.zshrc` files in my
-[dotfiles](https://github.com/gkapfham/dotfiles) to learn how I configured these
-and other command-line tools.
+- In the article [Improve your command-line experience through directory zooming
+with fzf and fasd](/blog/directory-zooming-command-line/index.qmd), I encouraged
+the use of [fzf](https://github.com/junegunn/fzf) and
+[fasd](https://github.com/clvv/fasd). When I edit source code in Neovim or
+navigate my terminal running `zsh` I still use both of these programs regularly.
+To date, I have made one major change in the way I use programs like Fzf, which
+performs fuzzy search on the output of an affiliated program that produces
+searchable text. Instead of using the [Silver Searcher](http://www.url.com) to
+find matching files or directories and produce a list for Fzf, I now use a
+drop-in replacement, called [Ripgrep](https://github.com/BurntSushi/ripgrep),
+with better performance. Again, you can check my `.vimrc` and `.zshrc` files in
+my [dotfiles](https://github.com/gkapfham/dotfiles) to learn how I configured
+these and other command-line tools.
 
 {{< include /_gist.qmd >}}
 
