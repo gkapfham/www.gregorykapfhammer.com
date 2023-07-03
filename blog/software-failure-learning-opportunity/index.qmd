@@ -104,12 +104,11 @@ these frustrating experiences with software! <span class="gist">Was making a
 
 ## Experience Sharing
 
-Do you have your own experiences with software failure? Have you seen the
+Do you have experiences with software failure? Have you seen the
 benefits of a program no longer meeting your needs? If you have, then I hope
-that you will [contact](/contact/) me to share some of your
-thoughts. Or, do you want to be updated when I publish new blog posts like this
-one? If you do, then please [subscribe](/support/) to my mailing
-list.
+that you will [contact](/contact/) me to share some of your thoughts. Do you
+want to be updated when I publish new blog posts? If you do, then please
+[subscribe](/support/) to my mailing list.
 
 :::
 
