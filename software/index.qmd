@@ -345,8 +345,8 @@ Data and analysis code for an AST 2016 paper</li>
 
 Whenever possible, my collaborators and I publish replication packages to
 support our [research papers](/research/papers/index.qmd) and [research
-presentations](/research/papers/index.qmd). For instance, you can review all of
-the survey data from [@Parry2022b] [{{< iconify fa6-solid book-open
+presentations](/research/presentations/index.qmd). For instance, you can review
+all of the survey data from [@Parry2022b] [{{< iconify fa6-solid book-open
 >}}](/research/papers/parry2022b/index.qmd) and try out the tooling used to
 run the experiments that we report on in [@Alsharif2020] [{{< iconify fa6-solid
 book-open
