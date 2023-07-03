@@ -1,0 +1,29 @@
+---
+author: Gregory M. Kapfhammer
+title: Can human testers understand automatically generated test cases?
+date: '2020-01-01'
+date-format: YYYY
+categories: [post, database testing, developer producivity]
+description: <em>How well to humans understand automatically generated tests?</em>
+aliases: ["/research/software/testing/2020/03/10/Human-Understandable-Test-Data/"]
+---
+
+
+
+{{< include /_gist.qmd >}}
+
+::: {.callout-note appearance="simple"}
+
+## Experience Sharing
+
+Do you have your own tips about how to effectively write a research paper? Have
+you noticed sentence structures that limit your ability to effectively explain
+your idea? Do you have suggestions for how I can improve the writing in my
+[papers](/research/papers/) or on my [blog](/blog/)? If you do, then I hope
+that you will [contact](/contact/) me to share some of your suggestions. Or, do
+you want to be updated when I publish new blog posts like this one? If you do,
+then please [subscribe](/support/) to my mailing list.
+
+:::
+
+{{< include /_back-blog.qmd >}}
