@@ -45,8 +45,8 @@ website:
             href: "teaching/index.qmd"
           - text: "Data Abstraction"
             href: "https://www.proactiveprogrammers.com"
-          - text: "Discrete Structures"
-            href: "https://www.proactiveprogrammers.com"
+          - text: "Operating Systems"
+            href: "https://www.os-sketch.com/"
       - text: "Research"
         menu:
           - text: "Overview"
