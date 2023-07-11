@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "Gregory M. Kapfhammer"
 echo: true
 jupyter: python3
 section-divs: true
@@ -89,8 +89,6 @@ console.print(
     ":rocket: Hi! I'm a researcher, teacher, and software developer!"
 )
 ```
-
-# Gregory M. Kapfhammer
 
 <span class="gist">Innovating in technical areas such as software engineering
   and software testing, I teach [courses](teaching/index.qmd), conduct
