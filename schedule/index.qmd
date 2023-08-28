@@ -31,6 +31,6 @@ beyond those normally scheduled or agreeing to extra meetings outside of
 existing office hours. As such, I greatly appreciate your understanding of my
 circumstances when I must decline a meeting due to schedule constraints.
 
-You may also use this embedded appointment scheduling system!
+You can also schedule an appointment with me through this widget!
 
 <iframe src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ1JEAQfUpRIlkRnAhIetnHZeUMLKTtD1Ahawn8xsXvKpxY2BntK8RmZUFOfA73-5oiQ-fOZxZP-?gv=true" style="border: 0" width="100%" height="800" frameborder="0"></iframe>
