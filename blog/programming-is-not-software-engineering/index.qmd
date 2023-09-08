@@ -18,11 +18,11 @@ publishing an executive summary about selected articles from the following
 online books:
 
 - [Software Engineering at Google](https://abseil.io/resources/swe-book)
-(abbreviated as **SE**): introduces the processes and tools
-used by software engineers at Google.
-- [Fuzzing Book](https://www.fuzzingbook.org/) (abbreviated as
-**FB**): a savvy, code-focused introduction to the automated tools and
-techniques for generating software tests.
+(abbreviated as **SE**): a compelling introduction to the processes and tools
+used by engineers at Google.
+- [Fuzzing Book](https://www.fuzzingbook.org/) (abbreviated as **FB**): a savvy,
+code-focused introduction to the automated tools and techniques for generating
+software tests.
 - [Debugging Book](https://www.debuggingbook.org/) (abbreviated on this site as
 **DB**): an interactive introduction to automated methods for debugging and
 fixing programs.
@@ -42,6 +42,20 @@ subject of the remainder of this post, is the
 [preface](https://abseil.io/resources/swe-book/html/pr01.html) of **SE**! This
 précis is written from the perspective of an instructor who wants to effectively
 teach undergraduates how to engineer software.
+
+The preface of **SE** makes it clear that *programming* is not the same as
+*software engineering* --- even though software engineering certainly involves
+programming! The authors of **SE** make the compelling point that software is
+different than programming due to the following organizational concerns:
+
+- **Time and Change**: while focused on solving problems with software,
+engineers must maintain software systems over long periods of time.
+
+- **Scale and Growth**: all of the people within an organization who build and
+use software must adapt in both a daily and long-term fashion.
+
+- **Trade-offs and Costs**: bearing in mind that software and people are always
+changing, and organization must make decisions informed by trade-offs.
 
 {{< include /_gist.qmd >}}
 
