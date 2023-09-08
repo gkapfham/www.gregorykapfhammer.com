@@ -57,6 +57,29 @@ use software must adapt in both a daily and long-term fashion.
 - **Trade-offs and Costs**: bearing in mind that software and people are always
 changing, and organization must make decisions informed by trade-offs.
 
+The **SE** book's preface explains that it will introduce how the culture,
+processes, and tools at Google help the organization to effectively create and
+deploy global-scale software. I'm hoping that the students and I can learn
+lessons from the engineers and managers at Google so that we can develop as
+developers! With that said, I see that, as an instructor, I face challenges on
+the time, change, and scale fronts. How can I ensure that students develop as
+software developers during a constrained sixteen-week course?
+
+I plan to introduce a number of my strategies through blog posts that I will
+write until the course concludes at the end of December 2023. With that said,
+here is an insight into one aspect of my current plans, which are documented
+further on the [Developer Development](https://developerdevelopment.com/) web
+site. You will notice that I've integrated team-work into every conceivable
+aspect of the course, ensuring that students learn how to engineer software in
+an organization. Together, the students and I will run class sessions, write and
+publish articles, give presentations, assign software engineering tasks, and
+implement, deploy, and maintain software. We will work in pairs, small teams,
+and large-ish teams!
+
+So, is it possible to effectively teach software engineering, as defined in the
+**SE** book? I'm not yet sure --- let's see! Please follow my blog posts for more
+details!
+
 {{< include /_gist.qmd >}}
 
 ::: {.callout-note appearance="simple"}
