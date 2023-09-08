@@ -23,14 +23,14 @@ used by engineers at Google.
 - [Fuzzing Book](https://www.fuzzingbook.org/) (abbreviated as **FB**): a savvy,
 code-focused introduction to the automated tools and techniques for generating
 software tests.
-- [Debugging Book](https://www.debuggingbook.org/) (abbreviated on this site as
-**DB**): an interactive introduction to automated methods for debugging and
-fixing programs.
+- [Debugging Book](https://www.debuggingbook.org/) (abbreviated as **DB**): an
+interactive introduction to automated methods for debugging and fixing programs.
 
 The idea is that the **SE** book will help the students and I to learn the
-professional skills that we need to develop as developers while the **FB** and
-**DB** books will equip us with the technical knowledge skills necessary for
-to both understand how software engineering tools and to build our own tools.
+*professional knowledge and skills* that we need to develop as developers while
+the **FB** and **DB** books will equip us with the *technical knowledge and
+skills* necessary for us to both understand how software engineering tools are
+built and to build and apply our own software engineering tools.
 
 In accordance with advice from well-known software engineers like [Addy
 Osmani](https://addyosmani.com/), who recently published a blog post entitled
