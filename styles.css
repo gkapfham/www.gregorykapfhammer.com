@@ -590,6 +590,25 @@ th {
   padding-bottom: 0em;
 }
 
+#featured-media-pagination .listing-pagination {
+  display: none;
+}
+
+#featured-media-pagination ul.pagination {
+  display: none;
+  float: right;
+  padding-left: 8px;
+  padding-top: 0.5em;
+}
+
+#listing-featured-media {
+  margin-bottom: -2.5rem !important;
+}
+
+#featured-media-pagination .quarto-listing {
+  padding-bottom: 0em;
+}
+
 #listing-full-service {
   margin-top: 1rem !important;
 }
