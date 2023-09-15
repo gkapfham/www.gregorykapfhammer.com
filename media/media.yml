@@ -1,0 +1,18 @@
+- title: <a href="https://hanselminutes.com/874/dr-gregory-kapfhammer-wants-to-stop-flaky-tests">\"Dr. Gregory Kapfhammer wants to stop flaky tests\"</a>
+  categories: [podcast]
+  date: '2023-01-05'
+  date-format: short
+  description: "Guest"
+  venue: <a href="https://hanselminutes.com/">Hanselminutes Podcast</a>
+- title: "Software Engineering Radio Podcast"
+  categories: [podcast]
+  date: '2023-01-01'
+  date-format: YYYY
+  description: "Host"
+  year-range: "2023"
+- title: "StackOverflow Podcast"
+  categories: [podcast]
+  date: '2023-01-01'
+  date-format: YYYY
+  description: "Guest"
+  year-range: "2023"
