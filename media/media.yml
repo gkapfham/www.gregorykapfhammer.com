@@ -4,15 +4,9 @@
   date-format: short
   description: "Guest"
   venue: <a href="https://hanselminutes.com/">Hanselminutes Podcast</a>
-- title: "Software Engineering Radio Podcast"
+- title: <a href="https://stackoverflow.blog/2023/01/17/flake-it-till-you-make-it-how-to-detect-and-deal-with-flaky-tests-ep-528/">\"Flake it till you make it&#58; How to detect and deal with flaky tests\"</a>
   categories: [podcast]
-  date: '2023-01-01'
-  date-format: YYYY
-  description: "Host"
-  year-range: "2023"
-- title: "StackOverflow Podcast"
-  categories: [podcast]
-  date: '2023-01-01'
-  date-format: YYYY
+  date: '2023-01-15'
+  date-format: short
   description: "Guest"
-  year-range: "2023"
+  venue: <a href="https://stackoverflow.blog/podcast">Stack Overflow Podcast</a>
