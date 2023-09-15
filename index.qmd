@@ -208,7 +208,7 @@ and [subscribing](support/index.qmd) to my mailing list.
 
 ::: {.callout-tip appearance="minimal"}
 
-{{< fa rocket >}} <em>Explore</em> all of my areas of [teaching materials](teaching/index.qmd)
+{{< fa rocket >}} <em>Explore</em> all of my [teaching materials](teaching/index.qmd)
 
 :::
 
