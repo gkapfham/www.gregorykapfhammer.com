@@ -3,7 +3,7 @@ author: Gregory M. Kapfhammer
 title: Can human testers understand automatically generated test cases?
 date: '2020-01-01'
 date-format: YYYY
-categories: [post, database testing, developer producivity]
+categories: [post, database testing, developer productivity]
 description: <em>How well to humans understand automatically generated tests?</em>
 aliases: ["/research/software/testing/2020/03/10/Human-Understandable-Test-Data/"]
 ---

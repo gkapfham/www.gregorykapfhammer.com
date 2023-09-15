@@ -3,7 +3,7 @@ author: Gregory M. Kapfhammer
 title: Responsive web testing helps to create a wow-worthy web
 date: '2020-01-01'
 date-format: YYYY
-categories: [post, developer producivity, web testing]
+categories: [post, developer productivity, web testing]
 description: <em>Do you test the responsive layout of your web pages?</em>
 aliases: ["/research/software/testing/2020/06/12/Responsive-Web-Testing/"]
 ---
