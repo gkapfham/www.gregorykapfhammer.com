@@ -78,6 +78,24 @@ listing:
     field-links: []
     max-items: 3
     page-size: 3
+  - id: featured-media
+    contents:
+      - media.yml
+    sort:
+      - "date desc"
+      - "title"
+    type: table
+    categories: false
+    date-format: medium
+    sort-ui: false
+    filter-ui: false
+    fields: [date, title, venue]
+    field-display-names:
+      title: "Event"
+      venue: "Venue"
+    field-links: []
+    max-items: 3
+    page-size: 3
 execute:
   freeze: auto
 ---
@@ -191,6 +209,17 @@ and [subscribing](support/index.qmd) to my mailing list.
 ::: {.callout-tip appearance="minimal"}
 
 {{< fa rocket >}} <em>Read</em> all of my [blog posts](blog/index.qmd)
+
+:::
+
+## Media Appearances
+
+:::{#featured-media}
+:::
+
+::: {.callout-tip appearance="minimal"}
+
+{{< fa rocket >}} <em>Investigate</em> all of my [professional service](service/index.qmd)
 
 :::
 
