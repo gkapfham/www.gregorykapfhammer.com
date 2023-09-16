@@ -2,6 +2,49 @@
 title: Biography
 echo: true
 jupyter: python3
+listing:
+  - id: featured-service
+    contents:
+      - "../service/**/*.qmd"
+      - "!../service/index.qmd"
+      - ../service/service.yml
+    sort:
+      - "date desc"
+      - "year-range desc"
+      - "title"
+    type: table
+    categories: false
+    date-format: "YYYY"
+    sort-ui: false
+    filter-ui: false
+    fields: [title, year-range, description, service-count]
+    field-display-names:
+      description: "Role(s)"
+      title: "Venue"
+      year-range: "Year(s)"
+      service-count: "Count"
+    field-links: []
+    max-items: 5
+    page-size: 5
+  - id: featured-media
+    contents:
+      - ../media/media.yml
+    sort:
+      - "date desc"
+      - "title"
+    type: table
+    categories: false
+    date-format: medium
+    sort-ui: false
+    filter-ui: false
+    fields: [description, date, title, venue]
+    field-display-names:
+      title: "Event"
+      venue: "Venue"
+      description: "Role"
+    field-links: []
+    max-items: 5
+    page-size: 5
 ---
 
 ```{python}
@@ -114,6 +157,20 @@ published at the <a href =
   Conference on Software Testing, Verification and Validation (ICST 2019)</a>,
 won the distinguished paper award from the <a href =
   "http://www.cs-tcse.org/">IEEE Technical Council on Software Engineering</a>.
+
+I leverage my research expertise in recent professional like the following:
+
+:::{#featured-service}
+:::
+
+<br>
+
+My technical expertise resulted in the following recent media engagements:
+
+:::{#featured-media}
+:::
+
+<br>
 
 {{< include /_gist.qmd >}}
 
