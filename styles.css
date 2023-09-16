@@ -590,6 +590,25 @@ th {
   padding-bottom: 0em;
 }
 
+#featured-service-biography-pagination .listing-pagination {
+  display: none;
+}
+
+#featured-service-biography-pagination ul.pagination {
+  display: none;
+  float: right;
+  padding-left: 8px;
+  padding-top: 0.5em;
+}
+
+#listing-featured-service-biography {
+  margin-bottom: -2rem !important;
+}
+
+#featured-service-biography-pagination .quarto-listing {
+  padding-bottom: 0em;
+}
+
 #featured-media-pagination .listing-pagination {
   display: none;
 }
@@ -606,6 +625,25 @@ th {
 }
 
 #featured-media-pagination .quarto-listing {
+  padding-bottom: 0em;
+}
+
+#featured-media-biography-pagination .listing-pagination {
+  display: none;
+}
+
+#featured-media-biography-pagination ul.pagination {
+  display: none;
+  float: right;
+  padding-left: 8px;
+  padding-top: 0.5em;
+}
+
+#listing-featured-media-biography {
+  margin-bottom: -2rem !important;
+}
+
+#featured-media-biography-pagination .quarto-listing {
   padding-bottom: 0em;
 }
 
