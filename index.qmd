@@ -95,8 +95,8 @@ listing:
       venue: "Venue"
       description: "Role"
     field-links: []
-    max-items: 5
-    page-size: 5
+    max-items: 3
+    page-size: 3
 execute:
   freeze: auto
 ---
@@ -220,7 +220,7 @@ and [subscribing](support/index.qmd) to my mailing list.
 
 ::: {.callout-tip appearance="minimal"}
 
-{{< fa rocket >}} <em>Investigate</em> all of my [professional service](service/index.qmd)
+{{< fa rocket >}} <em>Review</em> all media appearances in my [professional biography](biography/index.qmd)
 
 :::
 
