@@ -609,6 +609,22 @@ th {
   padding-bottom: 0em;
 }
 
+.listing-title a:hover {
+  color: #e65100 !important;
+  transition: text-decoration-color 300ms, text-underline-offset 300ms;
+  text-decoration: underline 0.1em rgba(0, 0, 0, 1);
+  text-decoration-color: #e65100;
+  text-underline-offset: 0.3em;
+}
+
+.listing-venue a:hover {
+  color: #e65100 !important;
+  transition: text-decoration-color 300ms, text-underline-offset 300ms;
+  text-decoration: underline 0.1em rgba(0, 0, 0, 1);
+  text-decoration-color: #e65100;
+  text-underline-offset: 0.3em;
+}
+
 #listing-full-service {
   margin-top: 1rem !important;
 }
