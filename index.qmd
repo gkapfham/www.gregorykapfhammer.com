@@ -89,13 +89,14 @@ listing:
     date-format: medium
     sort-ui: false
     filter-ui: false
-    fields: [date, title, venue]
+    fields: [description, date, title, venue]
     field-display-names:
       title: "Event"
       venue: "Venue"
+      description: "Role"
     field-links: []
-    max-items: 3
-    page-size: 3
+    max-items: 5
+    page-size: 5
 execute:
   freeze: auto
 ---
