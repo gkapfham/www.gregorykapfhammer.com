@@ -37,7 +37,7 @@ listing:
     date-format: medium
     sort-ui: false
     filter-ui: false
-    fields: [description, date, title, venue]
+    fields: [date, description, title, venue]
     field-display-names:
       title: "Event"
       venue: "Venue"
