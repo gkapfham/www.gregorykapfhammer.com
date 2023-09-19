@@ -86,12 +86,12 @@ details!
 
 ## Stay Connected
 
-Are you interested in following along with the experiences that the students and
-I have as we developer as developers in a software engineering course at
+Are you interested in following along with the experiences that the students
+and I have as we developer as developers in a software engineering course at
 Allegheny College? If you are, then I hope that you will check out our
-[Developer Development](https://developerdevelopment.com/) that features our
-writing and offers status updates about our software engineering experiences and
-also join our [Developer Development Discord
+[Developer Development](https://developerdevelopment.com/) web site that
+features our writing and offers status updates about our software engineering
+experiences and also join our [Developer Development Discord
 Server](https://discord.gg/aNfn8DNEMx). Finally, what do you think are the best
 ways to organize effective software engineering education? Please
 [contact](/contact/index.qmd) me with your tips!
