@@ -8,6 +8,7 @@ description: <em>I've updated some of my software suggestions!</em>
 aliases: ["/writing/software/productivity/2018/11/01/Technique-Retrospective/"]
 ---
 
+
 Many of the articles on my [blog](/blog/) describe the tools that I use when I
 prepare my [courses](/teaching/), conduct [research](/research/), write
 [papers](/research/papers/), and implement [software](/software/). <span
@@ -17,7 +18,7 @@ prepare my [courses](/teaching/), conduct [research](/research/), write
   software tool changes are likely!</span>
 
 - In the article [Distraction-free writing with a terminal timer and Ubuntu
-notifications](/blog/distraction-tree-terminal-timer/index.qmd), I suggested
+notifications](/blog/distraction-free-terminal-timer/index.qmd), I suggested
 that a distracted writer or programmer could use
 [termdown](https://github.com/trehn/termdown) to set a countdown timer in their
 terminal window. Today I still use the same software tool! If you use a terminal
@@ -25,7 +26,7 @@ window and you are comfortable with installing and using a Python program, then
 I still recommend that you consider this simple approach.
 
 - In the article [Using virtual environments in Python
-3](/blog/virtual-environments-python-three/index.qmd), I suggested the use of
+3](/blog/virtual-environment-python-three/index.qmd), I suggested the use of
 [venv](https://docs.python.org/3/library/venv.html) to manage the creation of
 virtual environments when implementing a Python 3 program. For most of my Python
 programming, I no longer adopt this approach, instead using
