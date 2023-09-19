@@ -27,7 +27,7 @@ platforms called [Developer Development](https://developerdevelopment.com/),
 Programmers](https://proactiveprogrammers.com/). By clicking on the following
 links you can learn more about data structures, discrete mathematics, operating
 systems, and software engineering! Each course platform features a syllabus and
-course schedule, links to assignments, review materials, and a dedicated
+course schedule, links to assignments, technical content, and a dedicated
 [Discord](https://discord.com/) server. With that said, previous course
 materials are available by [contacting me](/contact/) with your request.
 
