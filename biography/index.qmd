@@ -85,18 +85,17 @@ partially funded by <a href =
 
 ## Teaching
 
-<span class="gist">As an educator, Gregory Kapfhammer teaches
-  [courses](/teaching/index.qmd) in the alphabetically ordered areas of
-  algorithm analysis, discrete structures, data management, distributed
-  systems, software engineering, software testing, operating systems, and web
-  development.</span> He is also a research adviser for undergraduate and
-graduate theses and PhD dissertations. Kapfhammer's expertise in teaching was
-recognized when Allegheny College presented him with the [Thoburn Award for
-Excellence in
+<span class="gist">As an educator, I teach [courses](/teaching/index.qmd) in
+  the alphabetically ordered areas of algorithm analysis, discrete structures,
+  data management, distributed systems, software engineering, software testing,
+  operating systems, and web development.</span> I am also a research adviser
+for undergraduate and graduate theses and PhD dissertations. My expertise in
+teaching was recognized when Allegheny College presented him with the [Thoburn
+Award for Excellence in
 Teaching](https://sites.allegheny.edu/alumni/award-recipients/#thoburn). <span
-  class="gist">As a leader of software engineering teams, Kapfhammer creates
-useful educational [software](/software/index.qmd) that supports automated
-tasks such as project assessment and team formation.</span>
+  class="gist">As a leader of software engineering teams, I create useful
+  educational [software](/software/index.qmd) that supports automated tasks
+  such as project assessment and team formation.</span>
 
 ## Research
 
@@ -104,14 +103,14 @@ Funded by [Facebook
 Research](https://research.fb.com/blog/2019/10/announcing-the-winners-of-the-2019-testing-and-verification-research-awards/)
 and the [Mozilla
 Foundation](https://foundation.mozilla.org/en/what-we-fund/awards/responsible-computer-science-challenge/winners/),
-<span class="gist">Gregory Kapfhammer conducts [research](/research/index.qmd)
-  in areas such as software engineering and software testing.</span>
-Collaborating with a diverse and skilled group of students and colleagues,
-Kapfhammer completes research that results in award-winning and frequently
-cited research [papers](/research/papers/index.qmd), oft-complimented
+<span class="gist">I conduct [research](/research/index.qmd) in areas such as
+  software engineering and software testing.</span> Collaborating with a
+diverse and skilled group of students and colleagues, I complete research that
+results in award-winning and frequently cited research
+[papers](/research/papers/index.qmd), oft-complimented
 [presentations](/research/presentations/index.qmd), useful free and open-source
 [software](/software/index/qmd), and valued [service](/service/index.qmd) to a
-variety of organizations. He is an associate editor for the [Journal of
+variety of organizations. I am an associate editor for the [Journal of
 Software: Evolution and
 Process](https://onlinelibrary.wiley.com/journal/20477481), an academic editor
 for the [PeerJ Computer Science](https://peerj.com/computer-science/) journal,
@@ -120,9 +119,11 @@ on Software Testing, Verification and
 Validation](https://cs.gmu.edu/icst/index.html), and a reviewer for journals
 such as [Transactions on Software
 Engineering](https://www.computer.org/csdl/journal/ts). Along with serving as a
-review panelist at the [U.S. National Science Foundation](https://nsf.gov/),
-Kapfhammer works as a program chair and general chair for workshops and
-conferences.
+review panelist at the [U.S. National Science Foundation](https://nsf.gov/), I
+work as a program chair and general chair for workshops and conferences. <span
+  class="gist">As a member of software engineering teams, I create useful
+  research [software](/software/index.qmd) for the purposes of experimentation,
+  replication, and technology transfer.</span>
 
 <span class="gist">Gregory collaboratively publishes papers</span> like [@Walsh2017] [{{< iconify
 fa6-solid book-open
