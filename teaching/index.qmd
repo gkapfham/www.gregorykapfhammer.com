@@ -21,21 +21,28 @@ console.print(
 
 ## Overview
 
-Learners can access the content from my recent courses through platforms called
-[Proactive Programmers](https://proactiveprogrammers.com/) and [OS
-Sketch](https://www.os-sketch.com/). By clicking on the following links you can
-learn more about data abstraction, discrete structures, and operating systems!
-With that said, previous course materials are available by [contacting
-me](/contact/) with your request.
+Learners can access the content from my recent courses through web-based
+platforms called [Developer Development](https://developerdevelopment.com/),
+[OS Sketch](https://www.os-sketch.com/), and [Proactive
+Programmers](https://proactiveprogrammers.com/). By clicking on the following
+links you can learn more about data structures, discrete mathematics, operating
+systems, and software engineering! Each course platform features a syllabus and
+course schedule, links to assignments, review materials, and a dedicated
+[Discord](https://discord.com/) server. With that said, previous course
+materials are available by [contacting me](/contact/) with your request.
 
 ## Recent Courses
 
 - [Data
-  Abstraction](https://proactiveprogrammers.com/data-abstraction/introduction-data-abstraction/):
-  Build and manipulate correct and efficient data structures
+Abstraction](https://proactiveprogrammers.com/data-abstraction/introduction-data-abstraction/):
+Build and manipulate correct and efficient data structures
 
 - [Discrete
-  Structures](https://proactiveprogrammers.com/discrete-structures/introduction-discrete-structures/):
-  Clearly connect mathematics to Python programming
+Structures](https://proactiveprogrammers.com/discrete-structures/introduction-discrete-structures/):
+Clearly connect mathematics to Python programming
 
-- [Operating Systems](https://www.os-sketch.com/): Build and understand operating system components
+- [Operating Systems](https://www.os-sketch.com/): Build and understand
+operating system components
+
+- [Software Engineering](https://developerdevelopment.com/): Team-based
+introduction to building software systems
