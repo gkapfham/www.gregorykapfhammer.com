@@ -75,8 +75,8 @@ short-term visitor in the <a href="http://www.cs.virginia.edu">Department of
   href="http://www.uni-ulm.de/en">University of Ulm</a>, and the <a
   href="https://www.sheffield.ac.uk/dcs">Department of Computer Science</a> at
 the <a href="http://www.sheffield.ac.uk/">University of Sheffield</a>. In a
-prior position, I was a research associate at Cigital, a software company that
-was acquired by <a href="https://www.synopsys.com/">Synopsys</a>. My work is
+prior position, I was a research associate at Cigital, a software company
+acquired by <a href="https://www.synopsys.com/">Synopsys</a>. My work is
 partially funded by <a href =
   "https://research.fb.com/blog/2019/10/announcing-the-winners-of-the-2019-testing-and-verification-research-awards/">Facebook
   Research</a> and the <a href =
