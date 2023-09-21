@@ -8,7 +8,6 @@ description: <em>I've updated some of my software suggestions!</em>
 aliases: ["/writing/software/productivity/2018/11/01/Technique-Retrospective/"]
 ---
 
-
 Many of the articles on my [blog](/blog/) describe the tools that I use when I
 prepare my [courses](/teaching/), conduct [research](/research/), write
 [papers](/research/papers/), and implement [software](/software/). <span
