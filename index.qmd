@@ -220,7 +220,7 @@ and [subscribing](support/index.qmd) to my mailing list.
 
 ::: {.callout-tip appearance="minimal"}
 
-{{< fa rocket >}} <em>Review</em> all media appearances in my [professional biography](biography/index.qmd)
+{{< fa rocket >}} <em>Learn</em> more by reading my [professional biography](biography/index.qmd)
 
 :::
 
