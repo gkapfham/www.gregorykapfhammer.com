@@ -28,3 +28,8 @@
   date-format: short
   description: "Host"
   venue: <a href="https://www.se-radio.net/">Software Engineering Radio</a>
+- title: <a href="https://newsletter.getdx.com/p/flaky-tests">\"How Flaky Tests Impact Developers\"</a>
+  date: '2022-10-28'
+  date-format: short
+  description: "Cited Author"
+  venue: <a href="https://newsletter.getdx.com/">Engineering Enablement</a>
