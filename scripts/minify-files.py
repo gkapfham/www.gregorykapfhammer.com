@@ -53,7 +53,7 @@ def minify_files(source_directory: str, destination_directory: str) -> None:
                         with open(saving_file_path_str, "w") as file:
                             file.write(minified_content)
                         console.print(f"CSS: Minifying {analysis_file_path}")
-                        console.print(f"CSS: Savinmg {saving_file_path_str}")
+                        console.print(f"CSS: Saving {saving_file_path_str}")
                     except ValueError:
                         console.print(f"CSS: Could not minifiy file {analysis_file_path}")
                 else:
