@@ -21,11 +21,11 @@
   service-count: 1
 - title: "International Workshop on Search-Based and Fuzz Testing"
   categories: [workshop]
-  date: '2023-01-01'
+  date: '2024-01-01'
   date-format: YYYY
   description: "Program Committee Member"
-  year-range: "2023"
-  service-count: 1
+  year-range: "2023 - 2024"
+  service-count: 2
 - title: "International Workshop on Search-Based Software Testing"
   categories: [workshop]
   date: '2022-01-01'
