@@ -8,7 +8,6 @@ in
         bibtexparser
         csscompressor
         htmlmin
-        # minify-html
         pyyaml
         rich
         rjsmin
