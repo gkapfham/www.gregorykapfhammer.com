@@ -24,8 +24,8 @@ listing:
       year-range: "Year(s)"
       service-count: "Count"
     field-links: []
-    max-items: 5
-    page-size: 5
+    max-items: 10
+    page-size: 10
   - id: featured-media-biography
     contents:
       - ../media/media.yml
@@ -43,8 +43,8 @@ listing:
       venue: "Venue"
       description: "Role"
     field-links: []
-    max-items: 5
-    page-size: 5
+    max-items: 10
+    page-size: 10
 ---
 
 ```{python}
@@ -161,12 +161,16 @@ won the distinguished paper award from the <a href =
 
 ## Expertise
 
+### Research Service
+
 I recently leveraged my research expertise to serve the following venues:
 
 :::{#featured-service-biography}
 :::
 
-My technical expertise also led to these recent media engagements:
+### Media Engagements
+
+My technical expertise led to these recent media engagements:
 
 :::{#featured-media-biography}
 :::
