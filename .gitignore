@@ -148,3 +148,6 @@ research/papers/*/
 ### created by a Python script; keep the index.qmd file ###
 research/presentations/*/
 !research/presentations/index.qmd
+
+### NixOS: ignore generated files in nix/ ###
+/env/
