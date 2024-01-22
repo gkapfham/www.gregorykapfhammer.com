@@ -3,10 +3,13 @@
 import argparse
 import os
 import sys
+import stat
 from pathlib import Path
 
 import csscompressor
-import minify_html
+import htmlmin
+
+# import minify_html
 import rjsmin
 from rich.console import Console
 
@@ -41,35 +44,55 @@ def minify_files(source_directory: str, destination_directory: str) -> None:
             extension = os.path.splitext(current_file_name)[1].lower()
             # minify the CSS file
             if extension == ".css":
+                # only minify a file that does not exist inside of the site_libs;
+                # note that there is a font-awesome CSS file inside of the site_libs
+                # that is not already minified and thus some content is bigger than
+                # needed; leave this optimization for later as it is not critical
+                if "site_libs" not in analysis_file_path:
+                    try:
+                        minified_content = csscompressor.compress(
+                            open(analysis_file_path).read()
+                        )
+                        with open(saving_file_path_str, "w") as file:
+                            file.write(minified_content)
+                        console.print(f"CSS: Minifying {analysis_file_path}")
+                        console.print(f"CSS: Saving {saving_file_path_str}")
+                    except ValueError:
+                        console.print(f"CSS: Could not minifiy file {analysis_file_path}")
+                # if the file is in the site_libs directory, then it should
+                # not be minified and should instead be left alone, so skip it
+                else:
+                    console.print(f"CSS: Skipping {analysis_file_path}")
+            # minify the HTML file
+            elif extension == ".html":
+                # minify the HTML file using the htmlmin package
                 try:
-                    minified_content = csscompressor.compress(
-                        open(analysis_file_path).read()
+                    minified_content = htmlmin.minify(
+                        open(analysis_file_path).read(),
+                        # minify_js=True,
+                        # minify_css=True,
+                        remove_comments=True,
+                        remove_empty_space=True,
                     )
                     with open(saving_file_path_str, "w") as file:
                         file.write(minified_content)
-                    console.print(f"CSS: Minifying {analysis_file_path}")
-                    console.print(f"CSS: Savinmg {saving_file_path_str}")
-                except ValueError:
-                    console.print(f"CSS: Could not minifiy file {analysis_file_path}")
-            # minify the HTML file
-            elif extension == ".html":
-                minified_content = minify_html.minify(
-                    open(analysis_file_path).read(),
-                    minify_js=True,
-                    minify_css=True,
-                    keep_comments=False
-                )
-                with open(saving_file_path_str, "w") as file:
-                    file.write(minified_content)
-                console.print(f"HTML: Minifying {analysis_file_path}")
-                console.print(f"HTML: Saving {saving_file_path_str}")
-            # minify the JS file
+                    console.print(f"HTML: Minifying {analysis_file_path}")
+                    console.print(f"HTML: Saving {saving_file_path_str}")
+                except Exception:
+                    console.print(f"HTML: Could not minifiy file {analysis_file_path}")
+                    continue
+            # minify the JS file using the rjsmin package
             elif extension == ".js":
-                minified_content = str(rjsmin.jsmin(open(analysis_file_path).read()))
-                with open(saving_file_path_str, "w") as file:
-                    file.write(minified_content)
-                console.print(f"JS: Minifying {analysis_file_path}")
-                console.print(f"JS: Saving to {saving_file_path_str}")
+                # do not minify a file that exists inside of the site_libs
+                # directory as it is a file that should not be minified
+                if "site_libs" not in analysis_file_path:
+                    minified_content = str(rjsmin.jsmin(open(analysis_file_path).read()))
+                    with open(saving_file_path_str, "w") as file:
+                        file.write(minified_content)
+                    console.print(f"JS: Minifying {analysis_file_path}")
+                    console.print(f"JS: Saving to {saving_file_path_str}")
+                else:
+                    console.print(f"JS: Skipping {analysis_file_path}")
             # do not have a minifier for a specific
             # file and thus this file should be skipped
             else:
