@@ -131,6 +131,9 @@ build-iPhoneSimulator/
 ### Download directory ###
 download
 
+### Poetry ###
+poetry.toml
+
 ### Quarto ###
 .quarto
 /.quarto/
