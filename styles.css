@@ -144,6 +144,11 @@ div.callout-tip.callout {
   border-bottom: 1px solid #dee2e6;
 }
 
+.table {
+  border-bottom: none;
+  border-top: none;
+}
+
 /* }}} */
 
 /* Forms {{{ */
@@ -526,7 +531,8 @@ th {
 }
 
 #listing-featured-papers {
-  margin-bottom: -3.5rem !important;
+  margin-bottom: -1.5rem !important;
+  border-bottom: none;
 }
 
 #featured-papers-pagination .quarto-listing {
@@ -583,7 +589,7 @@ th {
 }
 
 #listing-featured-service {
-  margin-bottom: -3.5rem !important;
+  margin-bottom: -1.5rem !important;
 }
 
 #featured-service-pagination .quarto-listing {
