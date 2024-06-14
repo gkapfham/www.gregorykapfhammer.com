@@ -19,23 +19,24 @@ website:
   issue-url: https://github.com/gkapfham/www.gmk.com/issues/new
   repo-actions: [source, edit, issue]
   repo-branch: "master"
-  search:
-    location: navbar
-    type: textbox
+  search: false
+  # search:
+  #   location: navbar
+  #   type: textbox
   reader-mode: false
   back-to-top-navigation: false
   navbar:
-    tools:
-      - icon: rss
-        menu:
-          - text: Blog
-            url: blog/index.xml
-          - text: Service
-            url: service/index.xml
-          - text: Papers
-            url: research/papers/index.xml
-          - text: Presentations
-            url: research/presentations/index.xml
+    # tools:
+    #   - icon: rss
+    #     menu:
+    #       - text: Blog
+    #         url: blog/index.xml
+    #       - text: Service
+    #         url: service/index.xml
+    #       - text: Papers
+    #         url: research/papers/index.xml
+    #       - text: Presentations
+    #         url: research/presentations/index.xml
     left:
       - href: index.qmd
         text: Home
@@ -71,6 +72,17 @@ website:
             href: schedule/index.qmd
           - text: "Contact"
             href: contact/index.qmd
+      - text: "Feeds"
+        menu:
+          - text: Blog
+            url: blog/index.xml
+          - text: Service
+            url: service/index.xml
+          - text: Papers
+            url: research/papers/index.xml
+          - text: Presentations
+            url: research/presentations/index.xml
+
   page-footer:
     left: "{{< fa copyright >}} GMK"
     center: '<a href="#" aria-label="Go to the top of the page">Top {{< fa circle-up >}}</a>'
