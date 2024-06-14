@@ -69,12 +69,11 @@ listing:
     date-format: "YYYY"
     sort-ui: false
     filter-ui: false
-    fields: [title, year-range, description, service-count]
+    fields: [title, description, year-range]
     field-display-names:
       description: "Role(s)"
       title: "Venue"
       year-range: "Year(s)"
-      service-count: "Count"
     field-links: []
     max-items: 3
     page-size: 3
