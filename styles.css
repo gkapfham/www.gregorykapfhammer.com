@@ -136,7 +136,7 @@ div.callout-tip.callout {
 }
 
 .callout.callout-style-simple {
-  padding: 0.4em 0.7em;
+  padding: 0.35em 0.5em 0.25em 0.5em;
   width: fit-content;
   border-left: 5px solid;
   border-right: 1px solid #dee2e6;
@@ -531,7 +531,7 @@ th {
 }
 
 #listing-featured-papers {
-  margin-bottom: -1.5rem !important;
+  margin-bottom: -2.0rem !important;
   border-bottom: none;
 }
 
@@ -551,7 +551,7 @@ th {
 }
 
 #listing-featured-presentations {
-  margin-bottom: -3.5rem !important;
+  margin-bottom: -2.0rem !important;
 }
 
 #featured-presentations-pagination .quarto-listing {
@@ -570,7 +570,7 @@ th {
 }
 
 #listing-featured-posts {
-  margin-bottom: -3.5rem !important;
+  margin-bottom: -2.0rem !important;
 }
 
 #featured-posts-pagination .quarto-listing {
@@ -627,7 +627,7 @@ th {
 }
 
 #listing-featured-media {
-  margin-bottom: -3.5rem !important;
+  margin-bottom: -2.0rem !important;
 }
 
 #featured-media-pagination .quarto-listing {
