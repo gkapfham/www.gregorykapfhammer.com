@@ -17,16 +17,9 @@ in
         pydocstyle
         quarto
       ]))
-      git
-      pipx
-      poetry
-      prettierd
-      python3
-      quarto
-      zsh
     ];
   shellHook = ''
-    echo "✨ Running Quarto Preview with the 'develop' profile"
-    quarto preview --profile develop
+    echo "󱎯 Quarto and Python Dependencies Now Available"
+    echo " Suggested Commands: 'quarto preview' or 'quarto render'"
   '';
   }
