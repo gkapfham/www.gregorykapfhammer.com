@@ -113,7 +113,7 @@ I teach [courses](teaching/index.qmd), conduct [research](research/index.qmd),
 write [papers](research/papers/index.qmd) and a [blog](blog/index.qmd), give
 [presentations](research/presentations/index.qmd), create
 [software](software/index.qmd), and [serve](service/index.qmd)
-organizations</span>. Working as an Associate Professor in the [Department of
+organizations. Working as an Associate Professor in the [Department of
 Computer Science](http://www.cs.allegheny.edu) at [Allegheny
 College](http://www.allegheny.edu), I am an associate editor for the [Journal of
 Software: Evolution and
