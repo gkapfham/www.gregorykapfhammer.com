@@ -88,7 +88,7 @@ listing:
     date-format: medium
     sort-ui: false
     filter-ui: false
-    fields: [description, title, venue]
+    fields: [title, venue, description]
     field-display-names:
       title: "Event"
       venue: "Venue"
@@ -122,8 +122,8 @@ for the [PeerJ Computer Science](https://peerj.com/computer-science/) journal, a
 program committee member for conferences like the [International Conference on
 Software Testing, Verification and
 Validation](https://cs.gmu.edu/icst/index.html) and the [International
-Conference on Automated Software
-Engineering](https://conf.researchr.org/series/ase), and a reviewer for journals
+Conference on Software
+Engineering](https://conf.researchr.org/series/icse), and a reviewer for journals
 like [Transactions on Software
 Engineering](https://www.computer.org/csdl/journal/ts). You can learn more about
 me and my work by reading my [biography](biography/index.qmd), downloading my
