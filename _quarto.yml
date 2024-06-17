@@ -15,9 +15,9 @@ website:
   favicon: "icons/fxemoji-rocket.svg"
   open-graph: true
   site-url: https://www.gregorykapfhammer.com/
-  repo-url: https://github.com/gkapfham/www.gmk.com
-  issue-url: https://github.com/gkapfham/www.gmk.com/issues/new
-  repo-actions: [source, edit, issue]
+  repo-url: https://github.com/gkapfham/www.gregorykapfhammer.com
+  issue-url: https://github.com/gkapfham/www.gregorykapfhammer.com/issues/new
+  repo-actions: [issue]
   repo-branch: "master"
   search: false
   # search:
