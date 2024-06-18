@@ -18,61 +18,60 @@ console.print(
 
 ## Overview
 
-<span class="gist">As an experimental computer scientist, the goal of my
-research is to design, implement, and rigorously evaluate techniques and tools
-that support the creation of useful, dependable, and efficient software.</span>
-My research addresses the challenges in fields such as software engineering,
-software testing, and computer systems. I conduct this research with
-undergraduates at [Allegheny College](http://www.allegheny.edu), graduate
-students and professors at several universities, and colleagues in industry.
-Keep reading for more details!
+As an experimental computer scientist, the goal of my research is to design,
+implement, and rigorously evaluate techniques and tools that support the
+creation of useful, dependable, and efficient software.</span> My research
+addresses the challenges in fields such as software engineering, software
+testing, and computer systems. I conduct this research with undergraduates at
+[Allegheny College](http://www.allegheny.edu), graduate students and professors
+at several universities, and colleagues in industry. Keep reading for more
+details!
 
 ## Details
 
 My research is empirical because it involves the application of the scientific
 method to formulate problem statements, carry out experiments, take
 observations, statistically analyze and visualize the data sets, and draw
-conclusions based on the results. <span class="gist">Each project focuses on the
-    development and evaluation of [software](/software/) artifacts that can be
-    used in both empirical studies and real-world practice by undergraduate and
-    graduate students, software engineers, and computer scientists in both
-    academia and industry.</span> In addition to supporting my professional
-[service](/service/), my research results in award-winning and frequently cited
-research [papers](/research/papers/), oft-complimented
+conclusions based on the results. Each project focuses on the development and
+evaluation of [software](/software/) artifacts that can be used in both
+empirical studies and real-world practice by undergraduate and graduate
+students, software engineers, and computer scientists in both academia and
+industry. In addition to supporting my professional [service](/service/), my
+research results in award-winning and frequently cited research
+[papers](/research/papers/), oft-complimented
 [presentations](/research/presentations/), and useful free and open-source
-[software](/software/). <span class="gist">My research focuses on software
-    engineering and software testing, examples of which are described in these
-    summaries that reference key papers.</span>
-
-### Flaky Tests
+[software](/software/). My research focuses on software engineering and software
+testing, examples of which are described in these summaries that reference key
+papers.
 
 <div id="FlakyTests">
 
-<span class="gist">Since flaky tests can pass or fail without any changes to the
-    test code or the code under test, they are an unreliable indicator of
-    software correctness and a major problem for many software
-    developers.</span> To address this challenge, my collaborators and I have
-developed an automated method that uses machine learning to predict which tests
-are most likely to be flaky
-[@Parry2022a] [{{< iconify fa6-solid book-open >}}](/research/papers/parry2022a/index.qmd).
-Along with proposing a methodology for automatically determining which tests
-have latent flakiness
-[@Parry2020] [{{< iconify fa6-solid book-open >}}](/research/papers/parry2020/index.qmd),
-my colleagues and I also published a survey of the literature relevant to flaky
-test research
-[@Parry2022] [{{< iconify fa6-solid book-open >}}](/research/papers/parry2022/index.qmd),
-and a multi-source investigation into how developers experience the impacts and
-causes of flaky tests
-[@Parry2022b] [{{< iconify fa6-solid book-open >}}](/research/papers/parry2022b/index.qmd).
+### Flaky Tests
+
+Since flaky tests can pass or fail without any changes to the test code or the
+code under test, they are an unreliable indicator of software correctness and a
+major problem for many software developers. To address this challenge, my
+collaborators and I have developed an automated method that uses machine
+learning to predict which tests are most likely to be flaky [@Parry2022a] [{{<
+iconify fa6-solid book-open >}}](/research/papers/parry2022a/index.qmd). Along
+with proposing a methodology for automatically determining which tests have
+latent flakiness [@Parry2020] [{{< iconify fa6-solid
+book-open>}}](/research/papers/parry2020/index.qmd), my colleagues and I also
+published a survey of the literature relevant to flaky test research
+[@Parry2022] [{{< iconify fa6-solid
+book-open>}}](/research/papers/parry2022/index.qmd), and a multi-source
+investigation into how developers experience the impacts and causes of flaky
+tests [@Parry2022b] [{{< iconify fa6-solid
+book-open>}}](/research/papers/parry2022b/index.qmd).
 
 </div>
 
-### Database Testing
-
 <div id="DatabaseTesting">
 
-<span class="gist">Given the importance of verifying that a database application
-operates correctly</span>, my PhD dissertation
+### Database Testing
+
+Given the importance of verifying that a database application
+operates correctly, my PhD dissertation
 [@Kapfhammer2007d] [{{< iconify fa6-solid book-open >}}](/research/papers/kapfhammer2007d/index.qmd)
 presented and evaluated an approach for testing this type of
 software; a notable paper derived from my dissertation is
@@ -92,54 +91,50 @@ regression testing for relational database schemas.
 
 </div>
 
-### Web Testing
-
 <div id="WebTesting">
 
-<span class="gist">In response to the prevalence and complexity of mobile-ready
-    web sites, my research has developed automated tools for checking the pages
-    in these sites.</span> Some examples of papers describing methods for
-automatically detecting defects in web pages include
-[@Walsh2017] [{{< iconify fa6-solid book-open >}}](/research/papers/walsh2017/index.qmd)
-and
-[@Walsh2017a] [{{< iconify fa6-solid book-open >}}](/research/papers/walsh2017a/index.qmd).
-The automated approach introduced in
-[@Althomali2019] [{{< iconify fa6-solid book-open >}}](/research/papers/althomali2019/index.qmd)
-can visually confirm and classify the reported responsive layout failures in a
-web page.
-The method described in
-[@Walsh2020] [{{< iconify fa6-solid book-open >}}](/research/papers/walsh2020/index.qmd)
-can automatically identify potential regressions from the
-correct responsive layout of a web page. Finally, recent work introduced a
-method to automatically repair a layout failure in a responsive web page
-[@Althomali2022] [{{< iconify fa6-solid book-open >}}](/research/papers/althomali2022/index.qmd).
+### Web Testing
+
+In response to the prevalence and complexity of mobile-ready web sites, my
+research has developed automated tools for checking the pages in these sites.
+Some examples of papers describing methods for automatically detecting defects
+in web pages include [@Walsh2017] [{{< iconify fa6-solid
+book-open>}}](/research/papers/walsh2017/index.qmd) and [@Walsh2017a] [{{<
+iconify fa6-solid book-open>}}](/research/papers/walsh2017a/index.qmd). The
+automated approach introduced in [@Althomali2019] [{{< iconify fa6-solid
+book-open>}}](/research/papers/althomali2019/index.qmd) can visually confirm and
+classify the reported responsive layout failures in a web page. The method
+described in [@Walsh2020] [{{< iconify fa6-solid
+book-open>}}](/research/papers/walsh2020/index.qmd) can automatically identify
+potential regressions from the correct responsive layout of a web page. Finally,
+recent work introduced a method to automatically repair a layout failure in a
+responsive web page [@Althomali2022] [{{< iconify fa6-solid
+book-open>}}](/research/papers/althomali2022/index.qmd).
 
 </div>
 
-### Mutation Testing
-
 <div id="MutationTesting">
 
-<span class="gist">Given the challenges associated with accurately judging the
-    quality of a test suite, my research has designed efficient and useful ways
-    to perform test assessment through mutation analysis.</span>
-Presenting and evaluating automated
+### Mutation Testing
+
+Given the challenges associated with accurately judging the quality of a test
+suite, my research has designed efficient and useful ways to perform test
+assessment through mutation analysis. Presenting and evaluating automated
 techniques that efficiently insert synthetic faults into both real-world Java
 programs and relational database schemas, some examples of papers include
-[@Just2012b] [{{< iconify fa6-solid book-open >}}](/research/papers/just2012b/index.qmd),
-[@Wright2014] [{{< iconify fa6-solid book-open >}}](/research/papers/wright2014/index.qmd),
-and
+[@Just2012b] [{{< iconify fa6-solid book-open >}}](/research/papers/just2012b/index.qmd), [@Wright2014] [{{< iconify
+fa6-solid book-open >}}](/research/papers/wright2014/index.qmd), and
 [@McMinn2019] [{{< iconify fa6-solid book-open >}}](/research/papers/mcminn2019/index.qmd).
 
 </div>
 
-### Regression Testing
-
 <div id="RegressionTesting">
 
-<span class="gist">Since software is often incrementally developed, my
+### Regression Testing
+
+Since software is often incrementally developed, my
 research on regression testing has created research automated ways to
-efficiently and effectively run test suites for complex programs.</span>
+efficiently and effectively run test suites for complex programs.
 Some examples
 of papers that present and evaluate regression testing techniques include
 [@Walcott2006] [{{< iconify fa6-solid book-open >}}](/research/papers/walcott2006/index.qmd),
@@ -154,13 +149,13 @@ show how to conduct rigorous regression testing experiments with real program fa
 
 </div>
 
-### Search-Based Testing
-
 <div id="SearchBasedTesting">
 
-<span class="gist">Using a fitness function as a guide to a solution,
+### Search-Based Testing
+
+Using a fitness function as a guide to a solution,
     search-based methods have shown promise in supporting many software
-    engineering tasks.</span> My work has focused on creating frameworks that
+    engineering tasks. My work has focused on creating frameworks that
 support the development of search-based tools, with
 [@McMinn2016b] [{{< iconify fa6-solid book-open >}}](/research/papers/mcminn2016b/index.qmd)
 being an example.
@@ -176,13 +171,13 @@ generated by search-based techniques.
 
 </div>
 
-### Performance Evaluation
-
 <div id="PerformanceEvaluation">
 
-<span class="gist">Given the importance of equipping software engineers with the
+### Performance Evaluation
+
+Given the importance of equipping software engineers with the
     insights and tools they need to create efficient software, my work has
-    developed tools that automatically assess program performance.</span>
+    developed tools that automatically assess program performance.
 Focusing on the empirical evaluation of real-world software components like
 databases, relevant papers include
 [@Jones2011] [{{< iconify fa6-solid book-open >}}](/research/papers/jones2011/index.qmd),
@@ -196,12 +191,12 @@ algorithm have on efficiency and effectiveness.
 
 </div>
 
-### Research Methods
-
 <div id="ResearchMethods">
 
-<span class="gist">My surveys of software testing techniques provide a starting
-    point for people exploring this field</span>, with
+### Research Methods
+
+My surveys of software testing techniques provide a starting
+    point for people exploring this field, with
 [@Kapfhammer2004] [{{< iconify fa6-solid book-open >}}](/research/papers/kapfhammer2004/index.qmd)
 and
 [@Kapfhammer2010] [{{< iconify fa6-solid book-open >}}](/research/papers/kapfhammer2010/index.qmd)
@@ -220,8 +215,6 @@ that explain
 how to replicate my research.
 
 </div>
-
-{{< include /_gist.qmd >}}
 
 ::: {.callout-note appearance="simple"}
 
