@@ -200,6 +200,10 @@ div.callout-tip.callout {
   font-weight: 400 !important;
 }
 
+.navbar .dropdown-item:hover {
+  color: #ef6c00 !important;
+}
+
 /* }}} */
 
 /* Table of Contents {{{ */
