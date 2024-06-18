@@ -25,8 +25,8 @@ listing:
     sort-ui: false
     filter-ui: false
     fields: [author, date, title, description]
-    max-items: 3
-    page-size: 3
+    max-items: 5
+    page-size: 5
   - id: featured-presentations
     contents:
       - "research/presentations/**"
@@ -75,8 +75,8 @@ listing:
       title: "Venue"
       year-range: "Year(s)"
     field-links: []
-    max-items: 3
-    page-size: 3
+    max-items: 5
+    page-size: 5
   - id: featured-media
     contents:
       - media.yml
@@ -94,8 +94,8 @@ listing:
       venue: "Venue"
       description: "Role"
     field-links: []
-    max-items: 3
-    page-size: 3
+    max-items: 5
+    page-size: 5
 execute:
   freeze: auto
 ---
