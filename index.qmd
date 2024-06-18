@@ -140,11 +140,11 @@ relational database schemas
 - [Flaky Tests](research/index.qmd#flaky-tests): Find and fix unpredictable and
 harmful test cases
 
-- [Mutation Testing](research/index.qmd#mutation-testing): Detecting and
-repairing responsive web page layout
+- [Mutation Testing](research/index.qmd#mutation-testing): Using automatically
+seeded defects to evaluate tests
 
-- [Regression Testing](research/index.qmd#regression-testing): Detecting and
-repairing responsive web page layout
+- [Regression Testing](research/index.qmd#regression-testing): Efficiently and
+effectively rerunning test suites
 
 - [Web Testing](research/index.qmd#web-testing): Detecting and repairing
   responsive web page layout
