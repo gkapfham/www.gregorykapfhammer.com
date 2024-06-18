@@ -134,11 +134,17 @@ and [subscribing](support/index.qmd) to my mailing list.
 
 ## Research Expertise
 
-- [Flaky Tests](research/index.qmd#flaky-tests): Find and fix unpredictable
-  and harmful test cases
+- [Database Testing](research/index.qmd#database-testing): Automatically test
+relational database schemas
 
-- [Database Testing](research/index.qmd#database-testing): Automatically
-  test relational database schemas
+- [Flaky Tests](research/index.qmd#flaky-tests): Find and fix unpredictable and
+harmful test cases
+
+- [Mutation Testing](research/index.qmd#mutation-testing): Detecting and
+repairing responsive web page layout
+
+- [Regression Testing](research/index.qmd#regression-testing): Detecting and
+repairing responsive web page layout
 
 - [Web Testing](research/index.qmd#web-testing): Detecting and repairing
   responsive web page layout
