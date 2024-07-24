@@ -3,13 +3,10 @@
 import argparse
 import os
 import sys
-import stat
 from pathlib import Path
 
 import csscompressor
-import htmlmin
-
-# import minify_html
+import minify_html
 import rjsmin
 from rich.console import Console
 
@@ -20,7 +17,7 @@ DEFAULT_CONSOLE_STYLE = "bold blue"
 source_directory_root = ""
 
 
-def minify_files(source_directory: str, destination_directory: str) -> None:
+def minify_files(source_directory: str, destination_directory: str) -> None:  # noqa: PLR0912
     """Minify all of the files in the project directory."""
     # global source_directory_root
     # recursively iterate through all files and directories
@@ -65,21 +62,27 @@ def minify_files(source_directory: str, destination_directory: str) -> None:
                     console.print(f"CSS: Skipping {analysis_file_path}")
             # minify the HTML file
             elif extension == ".html":
-                # minify the HTML file using the htmlmin package
+                # minify the HTML file using the minify_html package;
+                # note that this package uses other underlying tools
+                # and rust to minify the HTML file
                 try:
-                    minified_content = htmlmin.minify(
+                    minified_content = minify_html.minify(
                         open(analysis_file_path).read(),
-                        # minify_js=True,
-                        # minify_css=True,
-                        remove_comments=True,
-                        remove_empty_space=True,
+                        minify_js=True,
+                        minify_css=True,
+                        keep_comments=False,
+                        keep_closing_tags=True,
+                        keep_spaces_between_attributes=True,
+                        # remove_comments=True,
+                        # remove_empty_space=True,
                     )
                     with open(saving_file_path_str, "w") as file:
                         file.write(minified_content)
                     console.print(f"HTML: Minifying {analysis_file_path}")
                     console.print(f"HTML: Saving {saving_file_path_str}")
-                except Exception:
+                except Exception as e:
                     console.print(f"HTML: Could not minifiy file {analysis_file_path}")
+                    console.print(f"HTML: Exception {e}")
                     continue
             # minify the JS file using the rjsmin package
             elif extension == ".js":
@@ -107,7 +110,7 @@ def minify_files(source_directory: str, destination_directory: str) -> None:
 
 def main() -> None:
     """Perform the steps for the main function."""
-    global source_directory_root
+    global source_directory_root  # noqa: PLW0603
     # parse the command-line arguments using argparse
     parser = argparse.ArgumentParser()
     parser.add_argument("-s", "--source")
@@ -155,6 +158,6 @@ def main() -> None:
 
 if __name__ == "__main__":
     # run the main function
-    # that controls all of the parsing
-    # of the bibliography entries
+    # that controls all of the minification
+    # steps (e.g., minify CSS, HTML, and JS)
     main()
