@@ -17,7 +17,7 @@ listing:
     date-format: "YYYY"
     sort-ui: [title]
     filter-ui: [title, year-range, description, service-count]
-    fields: [title, year-range, description, service-count]
+    fields: [title, description, year-range, service-count]
     field-display-names:
       description: "Role(s)"
       title: "Venue"
@@ -39,27 +39,28 @@ console.print(
 
 ## Details
 
-<span class="gist">An award-winning [teacher](/teaching/index.qmd),
-  [researcher](/research/index.qmd), [writer](/research/papers/index.qmd), and
-  [presenter](/research/presentations/index.qmd), I have expertise in areas
-  such as software engineering and software testing.</span> I am an associate
-editor for the [Journal of Software: Evolution and
+An award-winning [teacher](/teaching/index.qmd),
+[researcher](/research/index.qmd), [writer](/research/papers/index.qmd), and
+[presenter](/research/presentations/index.qmd), I have expertise in areas such
+as software engineering and software testing.</span> I am an associate editor
+for the [Journal of Software: Evolution and
 Process](https://onlinelibrary.wiley.com/journal/20477481), an academic editor
-for the [PeerJ Computer Science](https://peerj.com/computer-science/) journal,
-a program committee member for conferences like the [International Conference
-on Software Testing, Verification and
-Validation](https://cs.gmu.edu/icst/index.html) and the [International
-Conference on Automated Software
-Engineering](https://conf.researchr.org/series/ase), and a reviewer for
-journals such as [Transactions on Software
+for the [PeerJ Computer Science](https://peerj.com/computer-science/) journal, a
+program committee member for conferences like the [International Conference on
+Software Testing, Verification and
+Validation](https://cs.gmu.edu/icst/index.html), the [International Conference
+on Software Engineering](https://conf.researchr.org/series/icse), and the
+[International Conference on Automated Software
+Engineering](https://conf.researchr.org/series/ase), and a reviewer for journals
+such as [Transactions on Software
 Engineering](https://www.computer.org/csdl/journal/ts) and [Journal of Software
 Testing, Verification and
-Reliability](https://onlinelibrary.wiley.com/journal/10991689). <span
-  class="gist">Along with contributing to open-source
-  [software](/software/index.qmd), I collaborate with people at leading
-  academic institutions, government agencies, and technology companies.</span>
+Reliability](https://onlinelibrary.wiley.com/journal/10991689). Along with
+contributing to open-source [software](/software/index.qmd), I collaborate with
+people at leading academic institutions, government agencies, open-source
+projects, and technology companies.
 
-{{< include /_gist.qmd >}}
+The following searchable table gives a list of my professional service!
 
 :::{#full-service}
 :::
