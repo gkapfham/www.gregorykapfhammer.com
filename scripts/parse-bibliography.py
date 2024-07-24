@@ -533,9 +533,9 @@ def parse_journal_paper(publication: Dict[str, str]) -> bool:
             publication_volume = publication["volume"]
             publication_number = publication["number"]
             # define the description using the booktitle
-            publication[
-                "description"
-            ] = f"<em>{publication_journal}, {publication_volume}:{publication_number}</em>"
+            publication["description"] = (
+                f"<em>{publication_journal}, {publication_volume}:{publication_number}</em>"
+            )
         # there is no volume and/or number and thus the description
         # of this publication should only be the name of the journal
         else:
@@ -719,6 +719,7 @@ def main() -> None:
 
 
 if __name__ == "__main__":
+    # display the path of the python executable
     # run the main function
     # that controls all of the parsing
     # of the bibliography entries
