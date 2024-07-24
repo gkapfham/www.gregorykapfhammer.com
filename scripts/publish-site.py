@@ -20,7 +20,7 @@ def display_output(output: List[str]) -> None:
 
 
 def pre_render() -> None:
-    """Perform the pre-render steps."""
+    """Perform the pre-render step(s)."""
     # call the shell script for parsing the bibliography; 
     # capture the output so that it can be displayed
     result = subprocess.run(
