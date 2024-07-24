@@ -73,8 +73,6 @@ def minify_files(source_directory: str, destination_directory: str) -> None:  # 
                         keep_comments=False,
                         keep_closing_tags=True,
                         keep_spaces_between_attributes=True,
-                        # remove_comments=True,
-                        # remove_empty_space=True,
                     )
                     with open(saving_file_path_str, "w") as file:
                         file.write(minified_content)
