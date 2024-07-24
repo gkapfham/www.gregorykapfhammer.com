@@ -1,5 +1,6 @@
 ---
 title: Biography
+page-layout: full
 echo: true
 jupyter: python3
 listing:
