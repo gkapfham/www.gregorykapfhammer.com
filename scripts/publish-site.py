@@ -48,8 +48,6 @@ def render() -> None:
     subprocess.run(["pwd"], check=True)
     subprocess.run(
         ["quarto", "render", "index.qmd"],
-        # stdout=subprocess.PIPE,
-        # stderr=subprocess.PIPE,
         check=True,
     )
 
