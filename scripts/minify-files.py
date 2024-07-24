@@ -136,7 +136,7 @@ def main() -> None:
     # provide the debugging information
     if args.verbose is True:
         console.print(
-            f":clap: Using the source directory of {destination_directory_path}\n",
+            f":clap: Using the destination directory of {destination_directory_path}\n",
             style=DEFAULT_CONSOLE_STYLE,
         )
         console.print(
