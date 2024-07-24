@@ -18,6 +18,8 @@ let
     inherit (pkgs) R glibcLocalesUtf8 quarto python311;
   };
 
+  # Create a shell environment that includes the
+  # Python packages and the standard system packages
   in
   pkgs.mkShell {
     LOCALE_ARCHIVE = if pkgs.system == "x86_64-linux" then  "${pkgs.glibcLocalesUtf8}/lib/locale/locale-archive" else "";
