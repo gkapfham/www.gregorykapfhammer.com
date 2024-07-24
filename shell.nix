@@ -22,8 +22,8 @@ in
     echo "󰁡 Setting JUPYTER_PATH and PYTHONPATH for quarto"
     export JUPYTER_PATH=${pkgs.python311Packages.jupyterlab}/share/jupyter
     export PYTHONPATH=$PYTHONPATH:${pkgs.python311Packages.ipykernel}/${pkgs.python311.sitePackages}
-    echo "󱎯 Quarto and Python Dependencies Now Available"
     echo " Suggested Commands: 'quarto preview' or 'quarto render'"
+    echo "󰢌 Poetry Reminder: Use 'poetry shell' before running Python scripts"
     echo " Example Script: 'python scripts/minify-files.py --verbose --force'"
   '';
   }
