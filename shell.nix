@@ -1,5 +1,4 @@
 let
- # pkgs = import (fetchTarball "https://github.com/rstats-on-nix/nixpkgs/archive/d16116afd7ab80a3eb3311b3bc96fa7bba383638.tar.gz") {};
  pkgs = import (fetchTarball "https://github.com/NixOS/nixpkgs/archive/04220ed6763637e5899980f98d5c8424b1079353.tar.gz") {};
  rpkgs = builtins.attrValues {
   inherit (pkgs.rPackages) quarto ggplot2 knitr reticulate rmarkdown withr;
