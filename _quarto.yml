@@ -64,7 +64,6 @@ website:
             url: research/papers/index.xml
           - text: Presentations
             url: research/presentations/index.xml
-
   page-footer:
     left: "{{< fa copyright >}} GMK"
     center: '<a href="#" aria-label="Go to the top of the page">Top {{< fa circle-up >}}</a>'
@@ -83,6 +82,14 @@ website:
 
 format:
   html:
+    # always load the header-include.html file
+    # that defines the theme-color meta tag
+    include-in-header:
+      - file: _include/html/header-include.html
+    # always load the instant-page.js script
+    # that pre-fetches links person hovers over them
+    include-after-body:
+      - file: _include/js/instant-page.js 
     # do not use embed-resources: true because this
     # causes build times to take a very long time
     # and builds will normally crash with an out
