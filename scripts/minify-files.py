@@ -45,7 +45,6 @@ def minify_files(source_directory: str, destination_directory: str) -> None:  # 
                 # note that there is a font-awesome CSS file inside of the site_libs
                 # that is not already minified and thus some content is bigger than
                 # needed; leave this optimization for later as it is not critical
-                # if "site_libs" not in analysis_file_path:
                 try:
                     minified_content = csscompressor.compress(
                         open(analysis_file_path).read()
@@ -59,10 +58,6 @@ def minify_files(source_directory: str, destination_directory: str) -> None:  # 
                     console.print(f"CSS: Saving {saving_file_path_str}")
                 except ValueError:
                     console.print(f"CSS: Could not minifiy file {analysis_file_path}")
-                # if the file is in the site_libs directory, then it should
-                # not be minified and should instead be left alone, so skip it
-                # else:
-                    # console.print(f"CSS: Skipping {analysis_file_path}")
             # minify the HTML file
             elif extension == ".html":
                 # minify the HTML file using the minify_html package;
@@ -89,7 +84,6 @@ def minify_files(source_directory: str, destination_directory: str) -> None:  # 
             elif extension == ".js":
                 # do not minify a file that exists inside of the site_libs
                 # directory as it is a file that should not be minified
-                # if "site_libs" not in analysis_file_path:
                 minified_content = str(rjsmin.jsmin(open(analysis_file_path).read()))
                 # set the file permissions to be writable (note that the files
                 # that are a part of site_libs are not writable by default)
@@ -98,8 +92,6 @@ def minify_files(source_directory: str, destination_directory: str) -> None:  # 
                     file.write(minified_content)
                 console.print(f"JS: Minifying {analysis_file_path}")
                 console.print(f"JS: Saving to {saving_file_path_str}")
-                # else:
-                #     console.print(f"JS: Skipping {analysis_file_path}")
             # do not have a minifier for a specific
             # file and thus this file should be skipped
             else:
