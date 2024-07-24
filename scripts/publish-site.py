@@ -101,6 +101,7 @@ def main() -> None:
         console.print(f":clap: Starting the '{current_stage}' stage")
         console.print()
         minify()
+        console.print()
         console.print(f":clap: Finishing the '{current_stage}' stage")
         prior_stage_ran = True
 
