@@ -40,7 +40,6 @@ def main() -> None:
     # parse the command-line arguments using argparse
     parser = argparse.ArgumentParser()
     parser.add_argument("-s", "--stage")
-    parser.add_argument("-f", "--force", action="store_true")
     parser.add_argument("-v", "--verbose", action="store_true")
     # create the argument parser
     args = parser.parse_args()
