@@ -2,18 +2,27 @@
 
 import argparse
 import subprocess
+from typing import List
 
 from rich.console import Console
 
 console = Console()
 
 DEFAULT_CONSOLE_STYLE = "bold blue"
+INDENT = "  "
+
+
+def display_output(output: List[str]) -> None:
+    """Display the lines output with indentation."""
+    # print each line with a tab indentation
+    for line in output:
+        console.print(INDENT + line)
 
 
 def pre_render() -> None:
     """Perform the pre-render steps."""
-    # subprocess.run(["python", "scripts/parse-bibliography.py", "--force"], check=True)
-    # call the shell script for parsing the bibliography
+    # call the shell script for parsing the bibliography; 
+    # capture the output so that it can be displayed
     result = subprocess.run(
         ["python", "scripts/parse-bibliography.py", "--force"],
         check=True,
@@ -21,10 +30,9 @@ def pre_render() -> None:
         text=True,
     )
     # split the output into lines
-    lines = result.stdout.splitlines()
-    # print each line with a tab indentation
-    for line in lines:
-        print("  " + line)
+    result_lines = result.stdout.splitlines()
+    # display the output with indentation
+    display_output(result_lines)
 
 
 def main() -> None:
