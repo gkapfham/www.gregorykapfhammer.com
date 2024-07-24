@@ -20,6 +20,8 @@ in
     ];
   shellHook = ''
     echo "󱎯 Quarto and Python Dependencies Now Available"
+    echo "󰢌 Use 'poetry shell' to activate the Python virtual environment"
     echo " Suggested Commands: 'quarto preview' or 'quarto render'"
+    echo " Example Script: 'python scripts/minify-files.py --verbose --force'"
   '';
   }
