@@ -45,9 +45,21 @@ def pre_render() -> None:
 def render() -> None:
     """Perform the render step."""
     # call the quarto render command
-    subprocess.run(["pwd"], check=True)
     subprocess.run(
         ["quarto", "render", "index.qmd"],
+        check=True,
+    )
+
+
+def minify() -> None:
+    """Perform the minify step."""
+    # run the minification script; make
+    # sure to use the poetry environment
+    # as this is the one that contains the
+    # Rust-based minifier that is not available
+    # in nixpkgs and so not in the nix shell
+    subprocess.run(
+        ["poetry", "run", "python", "scripts/minify-files.py", "--verbose", "--force"],
         check=True,
     )
 
@@ -79,6 +91,16 @@ def main() -> None:
         console.print(f":clap: Starting the '{current_stage}' stage")
         console.print()
         render()
+        console.print(f":clap: Finishing the '{current_stage}' stage")
+        prior_stage_ran = True
+    # perform the minify step(s) if the stage is "minify" or "all"
+    if stage in ("minify", "all"):
+        current_stage = "minify"
+        if prior_stage_ran:
+            console.print()
+        console.print(f":clap: Starting the '{current_stage}' stage")
+        console.print()
+        minify()
         console.print(f":clap: Finishing the '{current_stage}' stage")
         prior_stage_ran = True
 
