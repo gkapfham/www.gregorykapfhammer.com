@@ -90,6 +90,11 @@ format:
     # that pre-fetches links person hovers over them
     include-after-body:
       - file: _include/js/instant-page.js 
+    # always display the page in full layout;
+    # this seems to minimize the amount of 
+    # "jumping" that occurs when page loads
+    # and there is a page with a non-full layout
+    page-layout: full
     # do not use embed-resources: true because this
     # causes build times to take a very long time
     # and builds will normally crash with an out
