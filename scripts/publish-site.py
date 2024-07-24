@@ -19,9 +19,16 @@ def display_output(output: List[str]) -> None:
         console.print(INDENT + line)
 
 
+def incremental_display_output(process) -> None:
+    # print each line with an indentation as it appears
+    for line in iter(process.stderr.readline, b""):
+        console.print("  " + line.decode(), end="")
+    # pass
+
+
 def pre_render() -> None:
     """Perform the pre-render step(s)."""
-    # call the shell script for parsing the bibliography; 
+    # call the shell script for parsing the bibliography;
     # capture the output so that it can be displayed
     result = subprocess.run(
         ["python", "scripts/parse-bibliography.py", "--force"],
@@ -35,22 +42,47 @@ def pre_render() -> None:
     display_output(result_lines)
 
 
+def render() -> None:
+    """Perform the render step."""
+    # call the quarto render command
+    subprocess.run(["pwd"], check=True)
+    subprocess.run(
+        ["quarto", "render", "index.qmd"],
+        # stdout=subprocess.PIPE,
+        # stderr=subprocess.PIPE,
+        check=True,
+    )
+
+
 def main() -> None:
     """Perform the steps for the main function."""
     # parse the command-line arguments using argparse
     parser = argparse.ArgumentParser()
     parser.add_argument("-s", "--stage")
-    parser.add_argument("-v", "--verbose", action="store_true")
     # create the argument parser
     args = parser.parse_args()
     # extract the stage from the command-line arguments
     stage = args.stage
-    # perform the pre-render steps if the stage is "pre-render" or "all"
+    # designate whether or not a prior stage was run
+    prior_stage_ran = False
+    # perform the pre-render step(s) if the stage is "pre-render" or "all"
     if stage in ("pre-render", "all"):
-        console.print(f":clap: Starting the '{stage}' stage")
+        current_stage = "pre-render"
+        console.print(f":clap: Starting the '{current_stage}' stage")
         pre_render()
         console.print()
-        console.print(f":clap: Finishing the '{stage}' stage")
+        console.print(f":clap: Finishing the '{current_stage}' stage")
+        prior_stage_ran = True
+    # perform the render step(s) if the stage is "render" or "all"
+    if stage in ("render", "all"):
+        current_stage = "render"
+        if prior_stage_ran:
+            console.print()
+        console.print(f":clap: Starting the '{current_stage}' stage")
+        console.print()
+        render()
+        console.print(f":clap: Finishing the '{current_stage}' stage")
+        prior_stage_ran = True
 
 
 if __name__ == "__main__":
