@@ -1,17 +1,23 @@
 let
- pkgs = import (fetchTarball "https://github.com/NixOS/nixpkgs/archive/04220ed6763637e5899980f98d5c8424b1079353.tar.gz") {};
- rpkgs = builtins.attrValues {
-  inherit (pkgs.rPackages) quarto ggplot2 knitr reticulate rmarkdown withr;
- };
- pypkgs = builtins.attrValues {
-   inherit (pkgs.python311Packages) rich ;
- };
- tex = (pkgs.texlive.combine {
-   inherit (pkgs.texlive) scheme-small amsmath framed fvextra environ fontawesome5 orcidlink pdfcol tcolorbox tikzfill;
-  });
- system_packages = builtins.attrValues {
-  inherit (pkgs) R glibcLocalesUtf8 quarto python311;
-};
+
+  # Load all of the nix packages
+  pkgs = import (fetchTarball "https://github.com/NixOS/nixpkgs/archive/04220ed6763637e5899980f98d5c8424b1079353.tar.gz") {};
+
+  # Specify the Python packages that are available in nixpkgs
+  # and should also be embedded inside of the Python used by
+  # quarto. Note that if this step is not taken then running
+  # the Python that is bound with quarto will not be able
+  # to access additional third-party packages like rich.
+  pypkgs = builtins.attrValues {
+    inherit (pkgs.python311Packages) bibtexparser jupyter matplotlib pyyaml rich ;
+  };
+
+  # Make sure that the chosen version of quarto has
+  # the enhanced version of Python with the packages
+  system_packages = builtins.attrValues {
+    inherit (pkgs) R glibcLocalesUtf8 quarto python311;
+  };
+
   in
   pkgs.mkShell {
     LOCALE_ARCHIVE = if pkgs.system == "x86_64-linux" then  "${pkgs.glibcLocalesUtf8}/lib/locale/locale-archive" else "";
@@ -21,9 +27,7 @@ let
     LC_MONETARY = "en_US.UTF-8";
     LC_PAPER = "en_US.UTF-8";
     LC_MEASUREMENT = "en_US.UTF-8";
-
-    buildInputs = [ pypkgs rpkgs tex system_packages  ];
-      
+    buildInputs = [ pypkgs system_packages  ];
   }
 
 # let
