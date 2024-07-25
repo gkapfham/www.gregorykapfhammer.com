@@ -150,6 +150,7 @@ def main() -> None:
     # a destructive operation that changes the
     # contents of the specified directory
     minify_files(source_directory_path, destination_directory_path)
+    console.print()
 
 
 if __name__ == "__main__":
