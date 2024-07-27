@@ -19,13 +19,6 @@ def display_output(output: List[str]) -> None:
         console.print(INDENT + line)
 
 
-def incremental_display_output(process) -> None:
-    # print each line with an indentation as it appears
-    for line in iter(process.stderr.readline, b""):
-        console.print("  " + line.decode(), end="")
-    # pass
-
-
 def pre_render() -> None:
     """Perform the pre-render step(s)."""
     # call the shell script for parsing the bibliography;
