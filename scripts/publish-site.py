@@ -75,15 +75,17 @@ def main() -> None:
     stage = args.stage
     # designate whether or not a prior stage was run
     prior_stage_ran = False
-    # perform the pre-render step(s) if the stage is "pre-render" or "all"
+    # PRE-RENDER: perform the pre-render step(s) if the stage is "pre-render" or "all"
     if stage in ("pre-render", "all"):
         current_stage = "pre-render"
+        # this code can be refactored!
+        command = pre_render
         console.print(f":clap: Starting the '{current_stage}' stage")
         pre_render()
         console.print()
         console.print(f":clap: Finishing the '{current_stage}' stage")
         prior_stage_ran = True
-    # perform the render step(s) if the stage is "render" or "all"
+    # RENDER: perform the render step(s) if the stage is "render" or "all"
     if stage in ("render", "all"):
         current_stage = "render"
         if prior_stage_ran:
@@ -93,7 +95,7 @@ def main() -> None:
         render()
         console.print(f":clap: Finishing the '{current_stage}' stage")
         prior_stage_ran = True
-    # perform the minify step(s) if the stage is "minify" or "all"
+    # MINIFY: perform the minify step(s) if the stage is "minify" or "all"
     if stage in ("minify", "all"):
         current_stage = "minify"
         if prior_stage_ran:
