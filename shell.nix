@@ -1,3 +1,16 @@
+# Note: Enter this shell before running the following commands
+
+# Command to enter the shell environment: nix-shell shell.nix
+# Command to run Quarto to make web site: quarto render
+# Command to run Quarto to perform a preview: quarto preview
+
+# Note: This shell environment does not contain the minify-html
+# Python package because it is not included in the nixpkgs
+# repository. However, this is available through the Poetry shell
+# when you type the command: poetry shell in the directory that
+# contains the pyproject.toml file. Importantly, note that the
+# quarto commands do not "pick up" the poetry shell's environment.
+
 let
 
   # Load all of the nix packages
