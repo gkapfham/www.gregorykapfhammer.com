@@ -8,7 +8,6 @@ from rich.console import Console
 
 console = Console()
 
-DEFAULT_CONSOLE_STYLE = "bold blue"
 INDENT = "  "
 
 
