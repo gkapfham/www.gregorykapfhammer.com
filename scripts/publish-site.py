@@ -89,10 +89,12 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("-p", "--use-poetry-venv", action="store_true")
     parser.add_argument("-r", "--render-file")
-    parser.add_argument("-s", "--stages", nargs="*")
+    parser.add_argument("-s", "--stages", nargs="+", default=[])
     # create the argument parser
     args = parser.parse_args()
-    # extract the stage from the command-line arguments
+    # extract the values from the command-line arguments;
+    # note that stages is a list of strings that will be
+    # empty if no stages are specified on the command-line
     console.print(args.stages)
     stages = args.stages
     use_poetry_venv = args.use_poetry_venv
