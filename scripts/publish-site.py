@@ -83,7 +83,7 @@ def perform_stage(stage: str, command: Callable) -> bool:
 
 def main() -> None:
     """Perform the steps for the main function."""
-    global use_poetry_venv
+    global use_poetry_venv  # noqa: PLW0603
     # parse the command-line arguments using argparse
     parser = argparse.ArgumentParser()
     parser.add_argument("-s", "--stage")
