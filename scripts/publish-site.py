@@ -109,14 +109,6 @@ def main() -> None:
         current_stage = "render"
         command = render
         prior_stage_ran = perform_stage(current_stage, command)
-        # current_stage = "render"
-        # if prior_stage_ran:
-        #     console.print()
-        # console.print(f":clap: Starting the '{current_stage}' stage")
-        # console.print()
-        # render()
-        # console.print(f":clap: Finishing the '{current_stage}' stage")
-        # prior_stage_ran = True
     # MINIFY: perform the minify step(s) if the stage is "minify" or "all"
     if stage in ("minify", "all"):
         if prior_stage_ran:
@@ -124,14 +116,6 @@ def main() -> None:
         current_stage = "minify"
         command = minify
         prior_stage_ran = perform_stage(current_stage, command)
-        # if prior_stage_ran:
-        #     console.print()
-        # console.print(f":clap: Starting the '{current_stage}' stage")
-        # console.print()
-        # minify()
-        # console.print()
-        # console.print(f":clap: Finishing the '{current_stage}' stage")
-        # prior_stage_ran = True
 
 
 if __name__ == "__main__":
