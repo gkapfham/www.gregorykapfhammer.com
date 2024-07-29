@@ -19,15 +19,15 @@ DEFAULT_CONSOLE_STYLE = "bold blue"
 source_directory_root = ""
 
 
-def display_file_sizes(original_size: int, minified_size: int) -> None:
+def display_file_sizes(original_size: int, minified_size: int, type: str) -> None:
     """Display the file sizes and information about their differences."""
     # calculate the reduction in size and the percentage reduction in size
     reduction = original_size - minified_size
     percentage_reduction = (reduction / original_size) * 100
     # display diagnostic information about the minification process
-    console.print(f"HTML: File Size Savings: {reduction} bytes")
+    console.print(f"{type}: File Size Savings: {reduction} bytes")
     console.print(
-        f"HTML: Percentage Reduction in File Size: {percentage_reduction:.2f}%"
+        f"{type}: Percentage Reduction in File Size: {percentage_reduction:.2f}%"
     )
     console.print()
 
@@ -61,9 +61,10 @@ def minify_files(source_directory: str, destination_directory: str) -> None:
                 # that is not already minified and thus some content is bigger than
                 # needed; leave this optimization for later as it is not critical
                 try:
-                    minified_content = csscompressor.compress(
-                        open(analysis_file_path).read()
-                    )
+                    original_content = open(analysis_file_path).read()
+                    original_size = len(original_content)
+                    minified_content = csscompressor.compress(original_content)
+                    minified_size = len(minified_content)
                     # set the file permissions to be writable (note that the files
                     # that are a part of site_libs are not writable by default)
                     os.chmod(saving_file_path_str, 0o600)
@@ -71,8 +72,10 @@ def minify_files(source_directory: str, destination_directory: str) -> None:
                         file.write(minified_content)
                     console.print(f"CSS: Minifying {analysis_file_path}")
                     console.print(f"CSS: Saving {saving_file_path_str}")
+                    display_file_sizes(original_size, minified_size, "CSS")
                 except ValueError:
-                    console.print(f"CSS: Could not minifiy file {analysis_file_path}")
+                    console.print(f"CSS: Could not minify file {analysis_file_path}")
+                    console.print()
             # minify the HTML file
             elif extension == ".html":
                 # minify the HTML file using the minify_html package;
@@ -96,40 +99,15 @@ def minify_files(source_directory: str, destination_directory: str) -> None:
                     # save the minified content to the destination file
                     with open(saving_file_path_str, "w") as file:
                         file.write(minified_content)
-                    # calculate the reduction in size and the percentage reduction in size
-                    reduction = original_size - minified_size
-                    percentage_reduction = (reduction / original_size) * 100
+                    console.print(f"HTML: Minifying {analysis_file_path}")
+                    console.print(f"HTML: Saving {saving_file_path_str}")
                     # display diagnostic information about the minification process
-                    display_file_sizes(original_size, minified_size)
-                    # console.print(f"HTML: Minifying {analysis_file_path}")
-                    # console.print(f"HTML: Writing {saving_file_path_str}")
-                    # console.print(f"HTML: File Size Savings: {reduction} bytes")
-                    # console.print(
-                    #     f"HTML: Percentage Reduction in File Size: {percentage_reduction:.2f}%"
-                    # )
-                    # console.print()
+                    display_file_sizes(original_size, minified_size, "HTML")
                 except Exception as e:
                     console.print(f"HTML: Could not minify file {analysis_file_path}")
                     console.print(f"HTML: Exception {e}")
                     console.print()
                     continue
-                # try:
-                #     minified_content = minify_html.minify(
-                #         open(analysis_file_path).read(),
-                #         minify_js=True,
-                #         minify_css=True,
-                #         keep_comments=False,
-                #         keep_closing_tags=True,
-                #         keep_spaces_between_attributes=True,
-                #     )
-                #     with open(saving_file_path_str, "w") as file:
-                #         file.write(minified_content)
-                #     console.print(f"HTML: Minifying {analysis_file_path}")
-                #     console.print(f"HTML: Saving {saving_file_path_str}")
-                # except Exception as e:
-                #     console.print(f"HTML: Could not minifiy file {analysis_file_path}")
-                #     console.print(f"HTML: Exception {e}")
-                #     continue
             # minify the JS file using the rjsmin package
             elif extension == ".js":
                 # do not minify a file that exists inside of the site_libs
@@ -145,7 +123,7 @@ def minify_files(source_directory: str, destination_directory: str) -> None:
                     file.write(minified_content)
                 console.print(f"JS: Minifying {analysis_file_path}")
                 console.print(f"JS: Saving to {saving_file_path_str}")
-                display_file_sizes(original_size, minified_size)
+                display_file_sizes(original_size, minified_size, "JS")
             # do not have a minifier for a specific
             # file and thus this file should be skipped
             else:
