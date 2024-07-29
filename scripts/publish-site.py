@@ -2,13 +2,14 @@
 
 import argparse
 import subprocess
-from typing import Callable, List
+from typing import Callable
 
 from rich.console import Console
 
 console = Console()
 
 use_poetry_venv = False
+render_file = None
 
 INDENT = "  "
 
@@ -24,16 +25,30 @@ def pre_render() -> None:
 def render() -> None:
     """Perform the render step."""
     # call the quarto render command
-    subprocess.run(
-        ["quarto", "render", "index.qmd"],
-        check=True,
-    )
+    if render_file is None:
+        subprocess.run(
+            ["quarto", "render"],
+            check=True,
+        )
+    else:
+        subprocess.run(
+            ["quarto", "render", render_file],
+            check=True,
+        )
 
 
 def minify() -> None:
     """Perform the minify step."""
     # call the Python script for minifying the files
     python_script = "python scripts/minify-files.py --verbose --force"
+    run_python_script(python_script, use_poetry_venv)
+
+
+def copy() -> None:
+    """Perform the copy files step."""
+    # call the Python script for copying files;
+    # by default this moves the PDFs to _site/
+    python_script = "python scripts/copy-files.py --force"
     run_python_script(python_script, use_poetry_venv)
 
 
@@ -55,8 +70,9 @@ def run_python_script(script_path: str, use_poetry_venv: bool) -> None:
         )
 
 
-def perform_stage(stage: str, command: Callable) -> bool:
+def perform_stage(command: Callable) -> bool:
     """Perform the stage."""
+    stage = command.__name__
     console.print(f":clap: Starting the '{stage}' stage")
     command()
     console.print()
@@ -68,38 +84,44 @@ def perform_stage(stage: str, command: Callable) -> bool:
 def main() -> None:
     """Perform the steps for the main function."""
     global use_poetry_venv  # noqa: PLW0603
+    global render_file  # noqa: PLW0603
     # parse the command-line arguments using argparse
     parser = argparse.ArgumentParser()
-    parser.add_argument("-s", "--stage")
     parser.add_argument("-p", "--use-poetry-venv", action="store_true")
+    parser.add_argument("-r", "--render-file")
+    parser.add_argument("-s", "--stage")
     # create the argument parser
     args = parser.parse_args()
     # extract the stage from the command-line arguments
     stage = args.stage
     use_poetry_venv = args.use_poetry_venv
+    render_file = args.render_file
     # designate whether or not a prior stage was run
     prior_stage_ran = False
     # PRE-RENDER: perform the pre-render step(s) if the stage is "pre-render" or "all"
     if stage in ("pre-render", "all"):
         if prior_stage_ran:
             console.print()
-        current_stage = "pre-render"
         command = pre_render
-        prior_stage_ran = perform_stage(current_stage, command)
+        prior_stage_ran = perform_stage(command)
     # RENDER: perform the render step(s) if the stage is "render" or "all"
     if stage in ("render", "all"):
         if prior_stage_ran:
             console.print()
-        current_stage = "render"
         command = render
-        prior_stage_ran = perform_stage(current_stage, command)
+        prior_stage_ran = perform_stage(command)
     # MINIFY: perform the minify step(s) if the stage is "minify" or "all"
     if stage in ("minify", "all"):
         if prior_stage_ran:
             console.print()
-        current_stage = "minify"
         command = minify
-        prior_stage_ran = perform_stage(current_stage, command)
+        prior_stage_ran = perform_stage(command)
+    # COPY: perform the copy step(s) if the stage is "copy" or "all"
+    if stage in ("copy", "all"):
+        if prior_stage_ran:
+            console.print()
+        command = copy
+        prior_stage_ran = perform_stage(command)
 
 
 if __name__ == "__main__":
