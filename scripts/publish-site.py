@@ -13,13 +13,6 @@ use_poetry_venv = False
 INDENT = "  "
 
 
-def display_output(output: List[str]) -> None:
-    """Display the lines output with indentation."""
-    # print each line with a tab indentation
-    for line in output:
-        console.print(INDENT + line)
-
-
 def pre_render() -> None:
     """Perform the pre-render step(s)."""
     # call the shell script for parsing the bibliography;
