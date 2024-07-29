@@ -19,16 +19,6 @@ def pre_render() -> None:
     # capture the output so that it can be displayed
     python_script = "python scripts/parse-bibliography.py --force"
     run_python_script(python_script, use_poetry_venv)
-    # result = subprocess.run(
-    #     ["python", "scripts/parse-bibliography.py", "--force"],
-    #     check=True,
-    #     stdout=subprocess.PIPE,
-    #     text=True,
-    # )
-    # # split the output into lines
-    # result_lines = result.stdout.splitlines()
-    # # display the output with indentation
-    # display_output(result_lines)
 
 
 def render() -> None:
@@ -42,12 +32,7 @@ def render() -> None:
 
 def minify() -> None:
     """Perform the minify step."""
-    # run the minification script; make
-    # sure to use the poetry environment
-    # as this is the one that contains the
-    # Rust-based minifier that is not available
-    # in nixpkgs and so not in the nix shell
-    # if use_poetry_venv:
+    # call the Python script for minifying the files
     python_script = "python scripts/minify-files.py --verbose --force"
     run_python_script(python_script, use_poetry_venv)
 
