@@ -115,13 +115,13 @@ def main() -> None:
             command = render
             prior_stage_ran = perform_stage(command)
         # MINIFY: perform the minify step(s) if the stage is "minify" or "all"
-        if stage in ("minify", "all"):
+        if stage in ("minify", "post-render", "all"):
             if prior_stage_ran:
                 console.print()
             command = minify
             prior_stage_ran = perform_stage(command)
         # COPY: perform the copy step(s) if the stage is "copy" or "all"
-        if stage in ("copy", "all"):
+        if stage in ("copy", "post-render", "all"):
             if prior_stage_ran:
                 console.print()
             command = copy
