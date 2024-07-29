@@ -22,13 +22,13 @@ let
   # the Python that is bound with quarto will not be able
   # to access additional third-party packages like rich.
   pypkgs = builtins.attrValues {
-    inherit (pkgs.python311Packages) bibtexparser jupyter matplotlib pyyaml rich ;
+    inherit (pkgs.python312Packages) bibtexparser jupyter matplotlib pyyaml rich ;
   };
 
   # Make sure that the chosen version of quarto has
   # the enhanced version of Python with the packages
   system_packages = builtins.attrValues {
-    inherit (pkgs) R glibcLocalesUtf8 quarto python311;
+    inherit (pkgs) R glibcLocalesUtf8 quarto python312;
   };
 
   # Create a shell environment that includes the
