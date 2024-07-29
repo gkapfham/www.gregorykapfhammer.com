@@ -154,3 +154,6 @@ research/presentations/*/
 
 ### NixOS: ignore generated files in nix/ ###
 /env/
+
+### Minification ###
+_site_backup*
