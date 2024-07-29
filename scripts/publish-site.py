@@ -80,14 +80,8 @@ def main() -> None:
     # PRE-RENDER: perform the pre-render step(s) if the stage is "pre-render" or "all"
     if stage in ("pre-render", "all"):
         current_stage = "pre-render"
-        # this code can be refactored!
         command = pre_render
         prior_stage_ran = perform_stage(current_stage, command)
-        # console.print(f":clap: Starting the '{current_stage}' stage")
-        # pre_render()
-        # console.print()
-        # console.print(f":clap: Finishing the '{current_stage}' stage")
-        # prior_stage_ran = True
     # RENDER: perform the render step(s) if the stage is "render" or "all"
     if stage in ("render", "all"):
         current_stage = "render"
