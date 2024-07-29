@@ -52,21 +52,25 @@ def minify() -> None:
     # as this is the one that contains the
     # Rust-based minifier that is not available
     # in nixpkgs and so not in the nix shell
+    # if use_poetry_venv:
+    python_script = "python scripts/minify-files.py --verbose --force"
+    run_python_script(python_script, use_poetry_venv)
+
+
+def run_python_script(script_path: str, use_poetry_venv: bool) -> None:
+    """Call the Python script with or without the poetry venv."""
+    # break the string into an array of strings
+    script_path_parts = script_path.split()
+    # run the command inside of a poetry venv
     if use_poetry_venv:
         subprocess.run(
-            [
-                "poetry",
-                "run",
-                "python",
-                "scripts/minify-files.py",
-                "--verbose",
-                "--force",
-            ],
+            ["poetry", "run", *script_path_parts],
             check=True,
         )
+    # run the command in the standard environment
     else:
         subprocess.run(
-            ["python", "scripts/minify-files.py", "--verbose", "--force"],
+            script_path_parts,
             check=True,
         )
 
@@ -126,4 +130,6 @@ if __name__ == "__main__":
     # 1. pre-render
     # 2. render
     # 3. post-render
+    # 3a. minify
+    # 3b. copy
     main()
