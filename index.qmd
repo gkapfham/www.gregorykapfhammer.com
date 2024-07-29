@@ -96,8 +96,8 @@ listing:
     field-links: []
     max-items: 5
     page-size: 5
-execute:
-  freeze: auto
+# execute:
+#   freeze: auto
 ---
 
 ```{python}
