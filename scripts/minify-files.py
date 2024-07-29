@@ -19,6 +19,19 @@ DEFAULT_CONSOLE_STYLE = "bold blue"
 source_directory_root = ""
 
 
+def display_file_sizes(original_size: int, minified_size: int) -> None:
+    """Display the file sizes and information about their differences."""
+    # calculate the reduction in size and the percentage reduction in size
+    reduction = original_size - minified_size
+    percentage_reduction = (reduction / original_size) * 100
+    # display diagnostic information about the minification process
+    console.print(f"HTML: File Size Savings: {reduction} bytes")
+    console.print(
+        f"HTML: Percentage Reduction in File Size: {percentage_reduction:.2f}%"
+    )
+    console.print()
+
+
 def minify_files(source_directory: str, destination_directory: str) -> None:
     """Minify all of the files in the project directory."""
     # global source_directory_root
@@ -87,11 +100,14 @@ def minify_files(source_directory: str, destination_directory: str) -> None:
                     reduction = original_size - minified_size
                     percentage_reduction = (reduction / original_size) * 100
                     # display diagnostic information about the minification process
-                    console.print(f"HTML: Minifying {analysis_file_path}")
-                    console.print(f"HTML: Writing {saving_file_path_str}")
-                    console.print(f"HTML: File Size Savings: {reduction} bytes")
-                    console.print(f"HTML: Percentage Reduction in File Size: {percentage_reduction:.2f}%")
-                    console.print()
+                    display_file_sizes(original_size, minified_size)
+                    # console.print(f"HTML: Minifying {analysis_file_path}")
+                    # console.print(f"HTML: Writing {saving_file_path_str}")
+                    # console.print(f"HTML: File Size Savings: {reduction} bytes")
+                    # console.print(
+                    #     f"HTML: Percentage Reduction in File Size: {percentage_reduction:.2f}%"
+                    # )
+                    # console.print()
                 except Exception as e:
                     console.print(f"HTML: Could not minify file {analysis_file_path}")
                     console.print(f"HTML: Exception {e}")
@@ -114,13 +130,14 @@ def minify_files(source_directory: str, destination_directory: str) -> None:
                 #     console.print(f"HTML: Could not minifiy file {analysis_file_path}")
                 #     console.print(f"HTML: Exception {e}")
                 #     continue
-
-
             # minify the JS file using the rjsmin package
             elif extension == ".js":
                 # do not minify a file that exists inside of the site_libs
                 # directory as it is a file that should not be minified
-                minified_content = str(rjsmin.jsmin(open(analysis_file_path).read()))
+                original_content = open(analysis_file_path).read()
+                original_size = len(original_content)
+                minified_content = str(rjsmin.jsmin(original_content))
+                minified_size = len(minified_content)
                 # set the file permissions to be writable (note that the files
                 # that are a part of site_libs are not writable by default)
                 os.chmod(saving_file_path_str, 0o600)
@@ -128,10 +145,12 @@ def minify_files(source_directory: str, destination_directory: str) -> None:
                     file.write(minified_content)
                 console.print(f"JS: Minifying {analysis_file_path}")
                 console.print(f"JS: Saving to {saving_file_path_str}")
+                display_file_sizes(original_size, minified_size)
             # do not have a minifier for a specific
             # file and thus this file should be skipped
             else:
                 console.print(f"Skipping {analysis_file_path}")
+                console.print()
         # found a directory, so recursively traverse into
         # so that minification process can continue until done;
         # keep using the same destination_directory as that will
@@ -185,13 +204,16 @@ def main() -> None:
     timestamp = datetime.datetime.now().strftime("%Y%m%d%H%M%S")
     backup_directory_path = f"{destination_directory_path}_backup_{timestamp}"
     shutil.copytree(destination_directory_path, backup_directory_path)
-    console.print(f"Created a backup of the destination directory at {backup_directory_path}")
+    console.print(
+        f"Created a backup of the destination directory at {backup_directory_path}"
+    )
+    console.print()
     # perform the minification of all of the files
     # inside of the directory; note that this is
     # a destructive operation that changes the
     # contents of the specified directory
     minify_files(source_directory_path, destination_directory_path)
-    console.print()
+    # console.print()
 
 
 if __name__ == "__main__":
