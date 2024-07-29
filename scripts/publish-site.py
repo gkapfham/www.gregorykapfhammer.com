@@ -2,7 +2,7 @@
 
 import argparse
 import subprocess
-from typing import List
+from typing import Callable, List
 
 from rich.console import Console
 
@@ -56,6 +56,16 @@ def minify() -> None:
     )
 
 
+def perform_stage(stage: str, command: Callable) -> bool:
+    """Perform the stage."""
+    console.print(f":clap: Starting the '{stage}' stage")
+    command()
+    console.print()
+    console.print(f":clap: Finishing the '{stage}' stage")
+    prior_stage_ran = True
+    return prior_stage_ran
+
+
 def main() -> None:
     """Perform the steps for the main function."""
     # parse the command-line arguments using argparse
@@ -72,11 +82,12 @@ def main() -> None:
         current_stage = "pre-render"
         # this code can be refactored!
         command = pre_render
-        console.print(f":clap: Starting the '{current_stage}' stage")
-        pre_render()
-        console.print()
-        console.print(f":clap: Finishing the '{current_stage}' stage")
-        prior_stage_ran = True
+        prior_stage_ran = perform_stage(current_stage, command)
+        # console.print(f":clap: Starting the '{current_stage}' stage")
+        # pre_render()
+        # console.print()
+        # console.print(f":clap: Finishing the '{current_stage}' stage")
+        # prior_stage_ran = True
     # RENDER: perform the render step(s) if the stage is "render" or "all"
     if stage in ("render", "all"):
         current_stage = "render"
