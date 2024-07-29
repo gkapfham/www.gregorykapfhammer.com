@@ -170,6 +170,7 @@ def main() -> None:
         destination_directory_path = args.destination
     # provide the debugging information
     if args.verbose is True:
+        console.print()
         console.print(
             f":clap: Using the destination directory of {destination_directory_path}\n",
             style=DEFAULT_CONSOLE_STYLE,
