@@ -89,39 +89,41 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("-p", "--use-poetry-venv", action="store_true")
     parser.add_argument("-r", "--render-file")
-    parser.add_argument("-s", "--stage")
+    parser.add_argument("-s", "--stages", nargs="*")
     # create the argument parser
     args = parser.parse_args()
     # extract the stage from the command-line arguments
-    stage = args.stage
+    console.print(args.stages)
+    stages = args.stages
     use_poetry_venv = args.use_poetry_venv
     render_file = args.render_file
     # designate whether or not a prior stage was run
     prior_stage_ran = False
-    # PRE-RENDER: perform the pre-render step(s) if the stage is "pre-render" or "all"
-    if stage in ("pre-render", "all"):
-        if prior_stage_ran:
-            console.print()
-        command = pre_render
-        prior_stage_ran = perform_stage(command)
-    # RENDER: perform the render step(s) if the stage is "render" or "all"
-    if stage in ("render", "all"):
-        if prior_stage_ran:
-            console.print()
-        command = render
-        prior_stage_ran = perform_stage(command)
-    # MINIFY: perform the minify step(s) if the stage is "minify" or "all"
-    if stage in ("minify", "all"):
-        if prior_stage_ran:
-            console.print()
-        command = minify
-        prior_stage_ran = perform_stage(command)
-    # COPY: perform the copy step(s) if the stage is "copy" or "all"
-    if stage in ("copy", "all"):
-        if prior_stage_ran:
-            console.print()
-        command = copy
-        prior_stage_ran = perform_stage(command)
+    for stage in stages:
+        # PRE-RENDER: perform the pre-render step(s) if the stage is "pre-render" or "all"
+        if stage in ("pre-render", "all"):
+            if prior_stage_ran:
+                console.print()
+            command = pre_render
+            prior_stage_ran = perform_stage(command)
+        # RENDER: perform the render step(s) if the stage is "render" or "all"
+        if stage in ("render", "all"):
+            if prior_stage_ran:
+                console.print()
+            command = render
+            prior_stage_ran = perform_stage(command)
+        # MINIFY: perform the minify step(s) if the stage is "minify" or "all"
+        if stage in ("minify", "all"):
+            if prior_stage_ran:
+                console.print()
+            command = minify
+            prior_stage_ran = perform_stage(command)
+        # COPY: perform the copy step(s) if the stage is "copy" or "all"
+        if stage in ("copy", "all"):
+            if prior_stage_ran:
+                console.print()
+            command = copy
+            prior_stage_ran = perform_stage(command)
 
 
 if __name__ == "__main__":
