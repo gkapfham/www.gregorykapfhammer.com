@@ -70,6 +70,7 @@ def minify_files(source_directory: str, destination_directory: str) -> None:
                     os.chmod(saving_file_path_str, 0o600)
                     with open(saving_file_path_str, "w") as file:
                         file.write(minified_content)
+                    # display diagnostic information about the minification process
                     console.print(f"CSS: Minifying {analysis_file_path}")
                     console.print(f"CSS: Saving {saving_file_path_str}")
                     display_file_sizes(original_size, minified_size, "CSS")
@@ -99,9 +100,9 @@ def minify_files(source_directory: str, destination_directory: str) -> None:
                     # save the minified content to the destination file
                     with open(saving_file_path_str, "w") as file:
                         file.write(minified_content)
+                    # display diagnostic information about the minification process
                     console.print(f"HTML: Minifying {analysis_file_path}")
                     console.print(f"HTML: Saving {saving_file_path_str}")
-                    # display diagnostic information about the minification process
                     display_file_sizes(original_size, minified_size, "HTML")
                 except Exception as e:
                     console.print(f"HTML: Could not minify file {analysis_file_path}")
@@ -121,6 +122,7 @@ def minify_files(source_directory: str, destination_directory: str) -> None:
                 os.chmod(saving_file_path_str, 0o600)
                 with open(saving_file_path_str, "w") as file:
                     file.write(minified_content)
+                # display diagnostic information about the minification process
                 console.print(f"JS: Minifying {analysis_file_path}")
                 console.print(f"JS: Saving to {saving_file_path_str}")
                 display_file_sizes(original_size, minified_size, "JS")
