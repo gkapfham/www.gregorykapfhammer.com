@@ -24,16 +24,18 @@ def pre_render() -> None:
     """Perform the pre-render step(s)."""
     # call the shell script for parsing the bibliography;
     # capture the output so that it can be displayed
-    result = subprocess.run(
-        ["python", "scripts/parse-bibliography.py", "--force"],
-        check=True,
-        stdout=subprocess.PIPE,
-        text=True,
-    )
-    # split the output into lines
-    result_lines = result.stdout.splitlines()
-    # display the output with indentation
-    display_output(result_lines)
+    python_script = "python scripts/parse-bibliography.py --force"
+    run_python_script(python_script, use_poetry_venv)
+    # result = subprocess.run(
+    #     ["python", "scripts/parse-bibliography.py", "--force"],
+    #     check=True,
+    #     stdout=subprocess.PIPE,
+    #     text=True,
+    # )
+    # # split the output into lines
+    # result_lines = result.stdout.splitlines()
+    # # display the output with indentation
+    # display_output(result_lines)
 
 
 def render() -> None:
