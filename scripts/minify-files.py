@@ -1,7 +1,9 @@
 """Minify all of the files in the project."""
 
 import argparse
+import datetime
 import os
+import shutil
 import sys
 from pathlib import Path
 
@@ -17,7 +19,7 @@ DEFAULT_CONSOLE_STYLE = "bold blue"
 source_directory_root = ""
 
 
-def minify_files(source_directory: str, destination_directory: str) -> None:  # noqa: PLR0912
+def minify_files(source_directory: str, destination_directory: str) -> None:
     """Minify all of the files in the project directory."""
     # global source_directory_root
     # recursively iterate through all files and directories
@@ -64,22 +66,56 @@ def minify_files(source_directory: str, destination_directory: str) -> None:  # 
                 # note that this package uses other underlying tools
                 # and rust to minify the HTML file
                 try:
+                    # read the original content of the file and
+                    # calculate the size of the original content
+                    original_content = open(analysis_file_path).read()
+                    original_size = len(original_content)
                     minified_content = minify_html.minify(
-                        open(analysis_file_path).read(),
+                        original_content,
                         minify_js=True,
                         minify_css=True,
                         keep_comments=False,
                         keep_closing_tags=True,
                         keep_spaces_between_attributes=True,
                     )
+                    # calculate the size of the minified content
+                    minified_size = len(minified_content)
+                    # save the minified content to the destination file
                     with open(saving_file_path_str, "w") as file:
                         file.write(minified_content)
+                    # calculate the reduction in size and the percentage reduction in size
+                    reduction = original_size - minified_size
+                    percentage_reduction = (reduction / original_size) * 100
+                    # display diagnostic information about the minification process
                     console.print(f"HTML: Minifying {analysis_file_path}")
-                    console.print(f"HTML: Saving {saving_file_path_str}")
+                    console.print(f"HTML: Writing {saving_file_path_str}")
+                    console.print(f"HTML: File Size Savings: {reduction} bytes")
+                    console.print(f"HTML: Percentage Reduction in File Size: {percentage_reduction:.2f}%")
+                    console.print()
                 except Exception as e:
-                    console.print(f"HTML: Could not minifiy file {analysis_file_path}")
+                    console.print(f"HTML: Could not minify file {analysis_file_path}")
                     console.print(f"HTML: Exception {e}")
+                    console.print()
                     continue
+                # try:
+                #     minified_content = minify_html.minify(
+                #         open(analysis_file_path).read(),
+                #         minify_js=True,
+                #         minify_css=True,
+                #         keep_comments=False,
+                #         keep_closing_tags=True,
+                #         keep_spaces_between_attributes=True,
+                #     )
+                #     with open(saving_file_path_str, "w") as file:
+                #         file.write(minified_content)
+                #     console.print(f"HTML: Minifying {analysis_file_path}")
+                #     console.print(f"HTML: Saving {saving_file_path_str}")
+                # except Exception as e:
+                #     console.print(f"HTML: Could not minifiy file {analysis_file_path}")
+                #     console.print(f"HTML: Exception {e}")
+                #     continue
+
+
             # minify the JS file using the rjsmin package
             elif extension == ".js":
                 # do not minify a file that exists inside of the site_libs
@@ -145,6 +181,11 @@ def main() -> None:
         )
     # define the global source directory root
     source_directory_root = source_directory_path
+    # create a backup of the destination directory
+    timestamp = datetime.datetime.now().strftime("%Y%m%d%H%M%S")
+    backup_directory_path = f"{destination_directory_path}_backup_{timestamp}"
+    shutil.copytree(destination_directory_path, backup_directory_path)
+    console.print(f"Created a backup of the destination directory at {backup_directory_path}")
     # perform the minification of all of the files
     # inside of the directory; note that this is
     # a destructive operation that changes the
