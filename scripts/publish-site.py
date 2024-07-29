@@ -8,6 +8,8 @@ from rich.console import Console
 
 console = Console()
 
+use_poetry_venv = False
+
 INDENT = "  "
 
 
@@ -50,10 +52,23 @@ def minify() -> None:
     # as this is the one that contains the
     # Rust-based minifier that is not available
     # in nixpkgs and so not in the nix shell
-    subprocess.run(
-        ["poetry", "run", "python", "scripts/minify-files.py", "--verbose", "--force"],
-        check=True,
-    )
+    if use_poetry_venv:
+        subprocess.run(
+            [
+                "poetry",
+                "run",
+                "python",
+                "scripts/minify-files.py",
+                "--verbose",
+                "--force",
+            ],
+            check=True,
+        )
+    else:
+        subprocess.run(
+            ["python", "scripts/minify-files.py", "--verbose", "--force"],
+            check=True,
+        )
 
 
 def perform_stage(stage: str, command: Callable) -> bool:
@@ -68,41 +83,55 @@ def perform_stage(stage: str, command: Callable) -> bool:
 
 def main() -> None:
     """Perform the steps for the main function."""
+    global use_poetry_venv
     # parse the command-line arguments using argparse
     parser = argparse.ArgumentParser()
     parser.add_argument("-s", "--stage")
+    parser.add_argument("-p", "--use-poetry-venv", action="store_true")
     # create the argument parser
     args = parser.parse_args()
     # extract the stage from the command-line arguments
     stage = args.stage
+    use_poetry_venv = args.use_poetry_venv
     # designate whether or not a prior stage was run
     prior_stage_ran = False
     # PRE-RENDER: perform the pre-render step(s) if the stage is "pre-render" or "all"
     if stage in ("pre-render", "all"):
+        if prior_stage_ran:
+            console.print()
         current_stage = "pre-render"
         command = pre_render
         prior_stage_ran = perform_stage(current_stage, command)
     # RENDER: perform the render step(s) if the stage is "render" or "all"
     if stage in ("render", "all"):
-        current_stage = "render"
         if prior_stage_ran:
             console.print()
-        console.print(f":clap: Starting the '{current_stage}' stage")
-        console.print()
-        render()
-        console.print(f":clap: Finishing the '{current_stage}' stage")
-        prior_stage_ran = True
+        current_stage = "render"
+        command = render
+        prior_stage_ran = perform_stage(current_stage, command)
+        # current_stage = "render"
+        # if prior_stage_ran:
+        #     console.print()
+        # console.print(f":clap: Starting the '{current_stage}' stage")
+        # console.print()
+        # render()
+        # console.print(f":clap: Finishing the '{current_stage}' stage")
+        # prior_stage_ran = True
     # MINIFY: perform the minify step(s) if the stage is "minify" or "all"
     if stage in ("minify", "all"):
-        current_stage = "minify"
         if prior_stage_ran:
             console.print()
-        console.print(f":clap: Starting the '{current_stage}' stage")
-        console.print()
-        minify()
-        console.print()
-        console.print(f":clap: Finishing the '{current_stage}' stage")
-        prior_stage_ran = True
+        current_stage = "minify"
+        command = minify
+        prior_stage_ran = perform_stage(current_stage, command)
+        # if prior_stage_ran:
+        #     console.print()
+        # console.print(f":clap: Starting the '{current_stage}' stage")
+        # console.print()
+        # minify()
+        # console.print()
+        # console.print(f":clap: Finishing the '{current_stage}' stage")
+        # prior_stage_ran = True
 
 
 if __name__ == "__main__":
