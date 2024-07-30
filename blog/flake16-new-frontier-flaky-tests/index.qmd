@@ -1,0 +1,59 @@
+---
+author: Gregory M. Kapfhammer
+title: Finding flaky tests with machine learning and the FLAKE16 feature set
+date: '2022-01-01'
+date-format: YYYY
+categories: [post, flaky tests, developer productivity]
+description: <em>How to best find flaky tests with machine learning?</em>
+---
+
+## Introduction
+
+Isn't it frustrating when you run your test suite and some tests pass and
+others fail, even though you haven't changed any code? These tests are often
+called flaky tests --- and they present a challenge for software engineers. My
+colleagues and I recently published [@Parry2022a] [{{< iconify fa6-solid
+book-open>}}](/research/papers/parry2022a/index.qmd)
+that introduces FLAKE16, a new feature set that significantly improves the
+detection of flaky tests with machine learning. Keep reading to learn more about this paper!
+
+## Results
+
+This paper's study evaluates the performance of 54 machine learning pipelines
+for detecting both non-order-dependent (NOD) and order-dependent (OD) flaky
+tests. Using real-world Python projects, we found that FLAKE16 outperformed a
+well-established feature set in detecting both types of flaky tests.
+Specifically, FLAKE16 offered a 13% increase in the overall F1-score when detecting
+NOD flaky tests and a 17% increase when detecting OD flaky tests.
+
+One of the key insights from our research is the identification of the most
+impactful features for detecting flaky tests. For NOD flaky tests, the peak
+number of concurrently running threads during test case execution was the most
+impactful. For OD flaky tests, the number of read- and write-related system
+calls had the greatest impact.
+
+## Future
+
+Our research is a significant step forward in the field of flaky test
+detection. However, we believe there is still much to explore. We plan to
+extend our work to include test cases from projects implemented in different
+programming languages and evaluate the performance of machine learning models
+for detecting flaky tests in additional specific categories.
+
+::: {.callout-note appearance="simple"}
+
+## Further Details
+
+As my colleagues and I dive deeper into the complexities of flaky tests, your
+insights and suggestions are invaluable! If you have ideas or experiences
+related to this pervasive issue in software testing, please [contact](/contact/)
+me. Furthermore, if you wish to stay informed about new developments and blog
+posts related to flaky tests and other software testing topics, consider
+[subscribing](/support/) to my mailing list. Finally, if you would like to
+listen to my talk about this research on a podcast, please check out <a
+  href="https://stackoverflow.blog/2023/01/17/flake-it-till-you-make-it-how-to-detect-and-deal-with-flaky-tests-ep-528/">\"Flake
+  it Till You Make It&#58; How to Detect and Deal with Flaky Tests\"</a>!
+
+:::
+
+{{< include /_back-blog.qmd >}}
