@@ -50,12 +50,11 @@ replicate this paper's empirical results by using the
 
 ## Further Details
 
-As we continue to explore and understand the intricacies of the FITTER
-technique, your insights and suggestions are invaluable. If you have ideas on
-how to enhance this flaky test detection technique, please do not hesitate to
-[contact](/contact/) me! Additionally, if you wish to stay updated on new
-developments and blog posts related to this topic and more, consider
-[subscribing](/support/) to my mailing list.
+If you have ideas on how to refine this test suite reduction method for database
+applications, please [contact](/contact/) me! Furthermore, if you wish to stay
+informed about new developments and blog posts related to STICCER and other
+similar topics, consider [subscribing](/support/) to my mailing list. Your
+engagement is greatly appreciated.
 
 :::
 
