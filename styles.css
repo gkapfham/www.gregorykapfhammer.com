@@ -535,7 +535,7 @@ th {
 }
 
 #listing-featured-papers {
-  margin-bottom: -2.0rem !important;
+  margin-bottom: -3rem !important;
   border-bottom: none;
 }
 
@@ -555,7 +555,7 @@ th {
 }
 
 #listing-featured-presentations {
-  margin-bottom: -2.0rem !important;
+  margin-bottom: -3rem !important;
 }
 
 #featured-presentations-pagination .quarto-listing {
@@ -574,7 +574,7 @@ th {
 }
 
 #listing-featured-posts {
-  margin-bottom: -2.0rem !important;
+  margin-bottom: -3rem !important;
 }
 
 #featured-posts-pagination .quarto-listing {
@@ -593,7 +593,8 @@ th {
 }
 
 #listing-featured-service {
-  margin-bottom: -1.5rem !important;
+  margin-bottom: -2.25rem !important;
+  /* margin-bottom: -1.5rem !important; */
 }
 
 #featured-service-pagination .quarto-listing {
@@ -612,7 +613,7 @@ th {
 }
 
 #listing-featured-service-biography {
-  margin-bottom: -2rem !important;
+  margin-bottom: -2.25rem !important;
 }
 
 #featured-service-biography-pagination .quarto-listing {
@@ -631,7 +632,7 @@ th {
 }
 
 #listing-featured-media {
-  margin-bottom: -2.0rem !important;
+  margin-bottom: -2.25rem !important;
 }
 
 #featured-media-pagination .quarto-listing {
