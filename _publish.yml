@@ -1,7 +1,7 @@
 - source: project
   netlify:
     - id: 4b09f0f4-78ed-4bed-a797-a7b19c9b08f9
-      url: 'https://gregorykapfhammer.netlify.app'
+      url: 'https://www.gregorykapfhammer.com'
   quarto-pub:
     - id: b8bcc783-0157-42e7-9d14-7313f3a70351
       url: 'https://gkapfham.quarto.pub/gregorykapfhammerstaging'
