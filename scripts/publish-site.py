@@ -143,10 +143,22 @@ def main() -> None:
             prior_stage_ran = perform_stage(command)
         # Quarto-Pub: perform the publish step(s) if the stage is
         # "quarto-pub" or "publish" or "all"
-        if stage in ("quarto-pub", "publish", "all"):
+        if stage in ("quarto-pub", "publish"):
             # correct set the host to always use quarto-pub
-            if stage in ("publish", "all"):
+            if stage == "publish":
                 host = "quarto-pub"
+            else:
+                host = stage 
+            if prior_stage_ran:
+                console.print()
+            command = quarto
+            prior_stage_ran = perform_stage(command)
+        # Netlify: perform the publish step(s) if the stage is
+        # "netlify" or "publish" or "all"
+        if stage in ("netlify", "publish"):
+            # correct set the host to always use netlify
+            if stage == "publish":
+                host = "netlify"
             else:
                 host = stage 
             if prior_stage_ran:
