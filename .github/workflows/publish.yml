@@ -27,18 +27,19 @@ jobs:
         uses: quarto-dev/quarto-actions/setup@v2
         with:
           # version: 1.3.361
-          version: 1.4.554
+          # version: 1.4.554
+          version: 1.r.55
       # Install Python
       - name: Install Python
         uses: actions/setup-python@v4
         with:
-          python-version: "3.11"
+          python-version: "3.12"
           cache: "pip"
       # Install Poetry
       - name: Install Poetry
         uses: abatilo/actions-poetry@v2.0.0
         with:
-          poetry-version: 1.4.0
+          poetry-version: 1.8.3
       # Setup the Virtual Environment
       - name: Setup Virtual Environment
         run: |
@@ -55,14 +56,23 @@ jobs:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           PYDEVD_DISABLE_FILE_VALIDATION: 1
         run: |
+          python --version
+          poetry --version
           quarto --version
-          # generate the markdown files from the bibliography for:
-          # 1) research papers
-          # 1a) conference papers
-          # 1b) journal papers
-          # 2) research presentations
-          poetry run python scripts/parse-bibliography.py --force
-          # directly publish a version of the site to Netlify, using
-          # the optimize profile that will perform minification
-          # poetry run quarto render --profile optimize
-          poetry run quarto publish netlify --profile optimize
+          quarto check
+          python scripts/publish-site.py --stage all --use-poetry-venv
+          python scripts/publish-site.py --stage render --use-poetry-venv --render-file index.qmd
+          python scripts/publish-site.py --use-poetry-venv --stage post-render
+          python scripts/publish-site.py --use-poetry-venv --stage netlify 
+
+          # Old version:
+          # # generate the markdown files from the bibliography for:
+          # # 1) research papers
+          # # 1a) conference papers
+          # # 1b) journal papers
+          # # 2) research presentations
+          # poetry run python scripts/parse-bibliography.py --force
+          # # directly publish a version of the site to Netlify, using
+          # # the optimize profile that will perform minification
+          # # poetry run quarto render --profile optimize
+          # poetry run quarto publish netlify --profile optimize
