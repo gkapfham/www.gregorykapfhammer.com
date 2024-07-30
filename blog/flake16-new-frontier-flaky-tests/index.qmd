@@ -30,12 +30,12 @@ One of the key insights from our research is the identification of the most
 impactful features for detecting flaky tests. For NOD flaky tests, the peak
 number of concurrently running threads during test case execution was the most
 impactful. For OD flaky tests, the number of read- and write-related system
-calls had the greatest impact.
+calls had the greatest impact on the detector's overall effectiveness.
 
 ## Future
 
 Our research is a significant step forward in the field of flaky test
-detection. However, we believe there is still much to explore. We plan to
+detection. Since there is evidence of the promise of this approach, we plan to
 extend our work to include test cases from projects implemented in different
 programming languages and evaluate the performance of machine learning models
 for detecting flaky tests in additional specific categories.
@@ -44,15 +44,16 @@ for detecting flaky tests in additional specific categories.
 
 ## Further Details
 
-As my colleagues and I dive deeper into the complexities of flaky tests, your
-insights and suggestions are invaluable! If you have ideas or experiences
-related to this pervasive issue in software testing, please [contact](/contact/)
-me. Furthermore, if you wish to stay informed about new developments and blog
-posts related to flaky tests and other software testing topics, consider
-[subscribing](/support/) to my mailing list. Finally, if you would like to
-listen to my talk about this research on a podcast, please check out <a
-  href="https://stackoverflow.blog/2023/01/17/flake-it-till-you-make-it-how-to-detect-and-deal-with-flaky-tests-ep-528/">\"Flake
-  it Till You Make It&#58; How to Detect and Deal with Flaky Tests\"</a>!
+As my colleagues and continue to explore how machine learning can support the
+detection and repair of flaky tests, your insights and suggestions are
+appreciated! If you have ideas or experiences related to this pervasive issue in
+software testing, please [contact](/contact/) me. Furthermore, if you wish to
+stay informed about new developments and blog posts related to flaky tests and
+other software testing topics, consider [subscribing](/support/) to my mailing
+list. Finally, if you would like to listen to me overview this research on a
+podcast, please check out <a
+  href="https://hanselminutes.com/874/dr-gregory-kapfhammer-wants-to-stop-flaky-tests">\"Dr.
+  Gregory Kapfhammer Wants to Stop Flaky Tests\"</a>!
 
 :::
 
