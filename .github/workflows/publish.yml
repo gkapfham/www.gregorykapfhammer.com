@@ -60,11 +60,10 @@ jobs:
           poetry --version
           quarto --version
           quarto check
-          poetry shell
-          python scripts/publish-site.py --stage all
-          python scripts/publish-site.py --stage render --render-file index.qmd
-          python scripts/publish-site.py --stage post-render
-          python scripts/publish-site.py --stage netlify 
+          poetry run python scripts/publish-site.py --stage all
+          poetry run python scripts/publish-site.py --stage render --render-file index.qmd
+          poetry run python scripts/publish-site.py --stage post-render
+          poetry run python scripts/publish-site.py --stage netlify 
 
           # Old version:
           # # generate the markdown files from the bibliography for:
