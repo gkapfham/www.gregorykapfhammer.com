@@ -38,7 +38,12 @@ Our research is a significant step forward in the field of flaky test
 detection. Since there is evidence of the promise of this approach, we plan to
 extend our work to include test cases from projects implemented in different
 programming languages and evaluate the performance of machine learning models
-for detecting flaky tests in additional specific categories.
+for detecting flaky tests in additional specific categories. You can explore
+[@Parry2023] [{{< iconify fa6-solid
+book-open>}}](/research/papers/parry2023/index.qmd) for a detailed introduction
+and evaluation of a both feature set that extends FLAKE16 and a hybrid approach
+that combines machine learning with test re-running. Guess what? It turns out
+that re-running and machine learning work better together!
 
 ::: {.callout-note appearance="simple"}
 
@@ -46,12 +51,12 @@ for detecting flaky tests in additional specific categories.
 
 As my colleagues and continue to explore how machine learning can support the
 detection and repair of flaky tests, your insights and suggestions are
-appreciated! If you have ideas or experiences related to this pervasive issue in
-software testing, please [contact](/contact/) me. Furthermore, if you wish to
-stay informed about new developments and blog posts related to flaky tests and
-other software testing topics, consider [subscribing](/support/) to my mailing
-list. Finally, if you would like to listen to me overview this research on a
-podcast, please check out <a
+appreciated! If you have ideas or experiences related to this pervasive issue
+in software testing, please [contact](/contact/) me. Or, if you want to stay
+informed about new developments and blog posts related to flaky tests and other
+software testing topics, consider [subscribing](/support/) to my mailing list.
+Finally, if you would like to listen to me discuss this paper on a podcast,
+please check out <a
   href="https://hanselminutes.com/874/dr-gregory-kapfhammer-wants-to-stop-flaky-tests">\"Dr.
   Gregory Kapfhammer Wants to Stop Flaky Tests\"</a>!
 
