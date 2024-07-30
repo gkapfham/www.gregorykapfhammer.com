@@ -59,7 +59,7 @@ jobs:
           python --version
           poetry --version
           quarto --version
-          quarto check
+          poetry run quarto check
           poetry run python scripts/publish-site.py --stage all
           poetry run python scripts/publish-site.py --stage render --render-file index.qmd
           poetry run python scripts/publish-site.py --stage post-render
