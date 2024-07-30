@@ -12,6 +12,8 @@ console.print(
 )
 ```
 
+## Overview
+
 To arrange a meeting with me during my office hours, please try to <a
 href="https://calendar.app.google/PJcK4hv1zBNMg3Sv5">Schedule
 an Appointment</a>&mdash;you can browse my available office hours and pick a
@@ -24,12 +26,16 @@ during any of <a href="http://www.allegheny.edu">Allegheny College</a>'s breaks
 that are documented in the <a href =
 "http://sites.allegheny.edu/dean/academic-calendar/">Academic Calendar</a>.
 
+## Considerations
+
 Individuals seeking to schedule an appointment with me should also bear in mind
 that I have previously scheduled teaching, mentoring, research, and
 administrative events that may prevent me from either holding office hours
 beyond those normally scheduled or agreeing to extra meetings outside of
 existing office hours. As such, I greatly appreciate your understanding of my
 circumstances when I must decline a meeting due to schedule constraints.
+
+## Schedule
 
 You can also schedule an appointment with me through this widget!
 
