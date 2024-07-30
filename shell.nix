@@ -1,3 +1,7 @@
+# Note: This shell.nix is deprecated. The complete setup
+# of my development environment in the unstable.nix file
+# inside of the gkapfham/nixos repository handles everything.
+
 # Note: Enter this shell before running the following commands
 
 # Command to enter the shell environment: nix-shell shell.nix
