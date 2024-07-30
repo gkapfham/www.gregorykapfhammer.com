@@ -10,6 +10,7 @@ console = Console()
 
 use_poetry_venv = False
 render_file = None
+host = "quarto-pub"
 
 INDENT = "  "
 
@@ -20,21 +21,6 @@ def pre_render() -> None:
     # capture the output so that it can be displayed
     python_script = "python scripts/parse-bibliography.py --force"
     run_python_script(python_script, use_poetry_venv)
-
-
-def render() -> None:
-    """Perform the render step."""
-    # call the quarto render command
-    if render_file is None:
-        subprocess.run(
-            ["quarto", "render"],
-            check=True,
-        )
-    else:
-        subprocess.run(
-            ["quarto", "render", render_file],
-            check=True,
-        )
 
 
 def minify() -> None:
@@ -70,6 +56,32 @@ def run_python_script(script_path: str, use_poetry_venv: bool) -> None:
         )
 
 
+def render() -> None:
+    """Perform the render step."""
+    # call the quarto render command
+    if render_file is None:
+        subprocess.run(
+            ["quarto", "render"],
+            check=True,
+        )
+    else:
+        subprocess.run(
+            ["quarto", "render", render_file],
+            check=True,
+        )
+
+
+def quarto() -> None:
+    """Perform the step that publishes to Quarto-Pub or Netlify based on host."""
+    # call the quarto render command
+    quarto_publish_command = f"quarto publish {host} --no-render --no-prompt --no-browser"
+    quarto_publish_command_parts = quarto_publish_command.split()
+    subprocess.run(
+        quarto_publish_command_parts,
+        check=True,
+    )
+
+
 def perform_stage(command: Callable) -> bool:
     """Perform the stage."""
     stage = command.__name__
@@ -85,6 +97,7 @@ def main() -> None:
     """Perform the steps for the main function."""
     global use_poetry_venv  # noqa: PLW0603
     global render_file  # noqa: PLW0603
+    global host  # noqa: PLW0603
     # parse the command-line arguments using argparse
     parser = argparse.ArgumentParser()
     parser.add_argument("-p", "--use-poetry-venv", action="store_true")
@@ -114,17 +127,31 @@ def main() -> None:
                 console.print()
             command = render
             prior_stage_ran = perform_stage(command)
-        # MINIFY: perform the minify step(s) if the stage is "minify" or "all"
+        # MINIFY: perform the minify step(s) if the stage is
+        # "minify" or "post-render" or "all"
         if stage in ("minify", "post-render", "all"):
             if prior_stage_ran:
                 console.print()
             command = minify
             prior_stage_ran = perform_stage(command)
-        # COPY: perform the copy step(s) if the stage is "copy" or "all"
+        # COPY: perform the copy step(s) if the stage is
+        # "copy" or "post-render" or "all"
         if stage in ("copy", "post-render", "all"):
             if prior_stage_ran:
                 console.print()
             command = copy
+            prior_stage_ran = perform_stage(command)
+        # Quarto-Pub: perform the publish step(s) if the stage is
+        # "quarto-pub" or "publish" or "all"
+        if stage in ("quarto-pub", "publish", "all"):
+            # correct set the host to always use quarto-pub
+            if stage in ("publish", "all"):
+                host = "quarto-pub"
+            else:
+                host = stage 
+            if prior_stage_ran:
+                console.print()
+            command = quarto
             prior_stage_ran = perform_stage(command)
 
 
@@ -138,4 +165,7 @@ if __name__ == "__main__":
     # 3. post-render
     # 3a. minify
     # 3b. copy
+    # 4. publish
+    # 4a. quarto-pub
+    # 4b. netlify
     main()
