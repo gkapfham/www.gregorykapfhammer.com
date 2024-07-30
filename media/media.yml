@@ -1,3 +1,13 @@
+- title: <a href="https://se-radio.net/2024/07/se-radio-625-jonathan-schneider-on-automated-refactoring-with-openrewrite/">\"Jonathan Schneider on Automated Refactoring with OpenRewrite\"</a>
+  date: '2024-07-16'
+  date-format: short
+  description: "Host"
+  venue: <a href="https://www.se-radio.net/">Software Engineering Radio</a>
+- title: <a href="https://se-radio.net/2024/07/se-radio-624-marcelo-trylesinski-on-fastapi/">\"Marcelo Trylesinski on FastAPI\"</a>
+  date: '2024-07-11'
+  date-format: short
+  description: "Host"
+  venue: <a href="https://www.se-radio.net/">Software Engineering Radio</a>
 - title: <a href="https://se-radio.net/2024/06/se-radio-622-wolf-vollprecht-on-python-tooling-in-rust/">\"Wolf Vollprecht on Python Tooling in Rust\"</a>
   date: '2024-06-26'
   date-format: short
