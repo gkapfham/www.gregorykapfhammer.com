@@ -118,10 +118,10 @@ Verification and Validation](https://cs.gmu.edu/icst/index.html), and a reviewer
 for journals such as [Transactions on Software
 Engineering](https://www.computer.org/csdl/journal/ts). Along with serving as a
 review panelist at the [U.S. National Science Foundation](https://nsf.gov/), I
-work as a program chair and general chair for workshops and conferences. As a
-member of software engineering teams, I create useful research
-[software](/software/index.qmd) for the purposes of experimentation,
-replication, and technology transfer.
+lead as a session chair, program chair, and general chair for international
+workshops and conferences. As a member of software engineering teams, I create
+useful research [software](/software/index.qmd) for the purposes of
+experimentation, replication, and technology transfer.
 
 My co-authors and I publish papers like [@Walsh2017] [{{< iconify
 fa6-solid book-open
