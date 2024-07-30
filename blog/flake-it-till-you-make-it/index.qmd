@@ -24,9 +24,9 @@ flaky but could become so in the future.
 
 Key contributions of this paper include:
 
-1. Introducing the concept of latent test flakiness
-2. Suggesting the use of automated program repair (APR) to generate flakiness-inducing tests
-3. Suggest that FITTER focus first on test order dependencies and resource leaks
+- Introducing the concept of latent test flakiness
+- Suggesting the use of automated program repair (APR) to generate flakiness-inducing tests
+- Suggest that FITTER focus first on test order dependencies and resource leaks
 
 We demonstrate FITTER's potential using a real-world example from the Hydra
 project, showing how it could reveal latent flakiness due to state pollution.
