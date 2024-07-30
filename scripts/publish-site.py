@@ -108,7 +108,6 @@ def main() -> None:
     # extract the values from the command-line arguments;
     # note that stages is a list of strings that will be
     # empty if no stages are specified on the command-line
-    console.print(args.stages)
     stages = args.stages
     use_poetry_venv = args.use_poetry_venv
     render_file = args.render_file
