@@ -7,9 +7,11 @@ categories: [post, developer development, software engineering]
 description: <em>What is the best way to teach software engineering?</em>
 ---
 
-<span class="gist">At Allegheny College, a class of students and I are embarking
+## Introduction
+
+At Allegheny College, a class of students and I are embarking
   on a developer development adventure as we take a hands-on approach to
-  learning software engineering.</span> You can participate in our adventure by
+  learning software engineering. You can participate in our adventure by
 reading the collaboratively published content on the [Developer
 Development](https://developerdevelopment.com/) web site and joining our
 [Developer Development Discord Server](https://discord.gg/aNfn8DNEMx). As part
@@ -25,6 +27,8 @@ code-focused introduction to the automated tools and techniques for generating
 software tests.
 - [Debugging Book](https://www.debuggingbook.org/) (abbreviated as **DB**): an
 interactive introduction to automated methods for debugging and fixing programs.
+
+## Ideas
 
 The idea is that the **SE** book will help the students and I to learn the
 *professional knowledge and skills* that we need to develop as developers while
@@ -65,6 +69,8 @@ developers! With that said, I see that, as an instructor, I face challenges on
 the time, change, and scale fronts. How can I ensure that students develop as
 software developers during a constrained sixteen-week course?
 
+## Plans
+
 I plan to introduce a number of my strategies through blog posts that I will
 write until the course concludes at the end of December 2023. With that said,
 here is an insight into one aspect of my current plans, which are documented
@@ -77,10 +83,8 @@ implement, deploy, and maintain software. We will work in pairs, small teams,
 and large-ish teams!
 
 So, is it possible to effectively teach software engineering, as defined in the
-**SE** book? I'm not yet sure --- let's see! Please follow my blog posts for more
-details!
-
-{{< include /_gist.qmd >}}
+**SE** book? I'm not yet sure --- let's see! Please check the course site and
+follow my blog posts for more details!
 
 ::: {.callout-note appearance="simple"}
 
