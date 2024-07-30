@@ -28,29 +28,30 @@ that their impacts are widespread and significant.
 
 ## Findings
 
-- **The Developer's Perspective on Flaky Tests**: Through a literature-guided
+- **Discerning the Developer's Perspective**: Through a literature-guided
 survey distributed across social media and a detailed analysis of 38
 StackOverflow threads, we collected responses from 170 developers. This
 mixed-method approach helped us understand the common definitions, impacts,
-causes, and responses related to flaky tests.
+causes, and solutions related to flaky tests. The survey reveals that flaky
+tests are a pernicious issue, with one developer saying that "[T]hey suck!"
 
-- **Impacts on Continuous Integration and Productivity**: Developers unanimously
-agreed that flaky tests disrupt CI processes. Frequent encounters with flaky
-tests can lead to ignoring test failures, which might mask genuine issues. Our
-respondents highlighted that setup and teardown issues were the most common
-causes of flaky tests, often resulting in a loss of valuable development time.
+- **Impacts on Continuous Integration and Productivity**: Developers
+unanimously agreed that flaky tests disrupt CI processes. They also note that
+frequent encounters with flaky tests can lead to their teams ignoring test
+failures, which might mask genuine issues. Ultimately, the survey points out
+that flaky tests result in a loss of valuable development time.
 
 - **Common Causes of Flaky Tests**: The top causes identified include issues in
-setup and teardown processes, asynchronous operations, and concurrency problems.
-Contrary to some prior studies, we found that asynchronicity and concurrency
-were not the top causes, which adds a new dimension to understanding test
-flakiness.
+setup and teardown processes, asynchronous operations, and concurrency
+problems. Contrary to some prior studies, we found that asynchronicity and
+concurrency were not the top causes, which adds a new dimension to our
+community's understanding test flakiness.
 
-- **Strategies for Addressing Flaky Tests**: Developers adopt various strategies
-to mitigate flaky tests, from re-running tests and documenting the issues to
-quarantining or even deleting problematic tests. Our study provides actionable
-recommendations to help developers and researchers tackle flaky tests more
-effectively.
+- **Strategies for Addressing Flaky Tests**: Developers adopt various
+strategies to mitigate flaky tests, from re-running tests and documenting their
+issues to quarantining or even deleting problematic tests. This paper's survey
+provides actionable recommendations to help developers and researchers tackle
+flaky tests more effectively.
 
 ### Conclusion
 
@@ -61,10 +62,12 @@ responses can equip you with the knowledge to improve your testing strategies
 and maintain a more reliable CI process.
 
 Our research not only aligns with existing literature but also presents
-unexpected findings that challenge previous assumptions about the prevalence and
-causes of flaky tests. Whether you're a software developer, tester, or
-researcher, the findings and recommendations in this paper will help you enhance
-your approach to dealing with flaky tests.
+unexpected findings that challenge previous assumptions about the prevalence
+and causes of flaky tests. Whether you're a software developer, tester, or
+researcher, the this paper's findings will help you enhance your approach to
+dealing with flaky tests. Make sure to read [@Parry2022b] [{{< iconify
+fa6-solid book-open
+>}}](/research/papers/parry2022b/index.qmd)!
 
 ::: {.callout-note appearance="simple"}
 
