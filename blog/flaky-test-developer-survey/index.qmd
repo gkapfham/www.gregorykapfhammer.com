@@ -1,0 +1,85 @@
+---
+author: Gregory M. Kapfhammer
+title: What do developers say about flaky tests? Well ... "They Suck"!
+date: '2022-01-01'
+date-format: YYYY
+categories: [post, flaky tests, developer productivity]
+description: <em>Let's discover developer's views on flaky tests!</em>
+---
+
+## Introduction
+
+As a software developer, you might have encountered the frustrating phenomenon
+of flaky tests --- or test cases that pass and fail intermittently without any
+changes to the code under test. My colleagues and I recently published
+[@Parry2022b] [{{< iconify fa6-solid book-open
+>}}](/research/papers/parry2022b/index.qmd), "Surveying the Developer Experience
+of Flaky Tests," that dives into this issue by exploring how real-world software
+developers define, experience, and address flaky tests. Keep reading to learn
+more about this paper!
+
+## Definitions
+
+Flaky tests often show inconsistent results since they pass or fail seemingly at
+random. This inconsistency can severely hinder continuous integration (CI)
+processes, decrease productivity, and erode confidence in the testing framework.
+Our study confirmed that developers often encounter these troublesome tests, and
+that their impacts are widespread and significant.
+
+## Findings
+
+- **The Developer's Perspective on Flaky Tests**: Through a literature-guided
+survey distributed across social media and a detailed analysis of 38
+StackOverflow threads, we collected responses from 170 developers. This
+mixed-method approach helped us understand the common definitions, impacts,
+causes, and responses related to flaky tests.
+
+- **Impacts on Continuous Integration and Productivity**: Developers unanimously
+agreed that flaky tests disrupt CI processes. Frequent encounters with flaky
+tests can lead to ignoring test failures, which might mask genuine issues. Our
+respondents highlighted that setup and teardown issues were the most common
+causes of flaky tests, often resulting in a loss of valuable development time.
+
+- **Common Causes of Flaky Tests**: The top causes identified include issues in
+setup and teardown processes, asynchronous operations, and concurrency problems.
+Contrary to some prior studies, we found that asynchronicity and concurrency
+were not the top causes, which adds a new dimension to understanding test
+flakiness.
+
+- **Strategies for Addressing Flaky Tests**: Developers adopt various strategies
+to mitigate flaky tests, from re-running tests and documenting the issues to
+quarantining or even deleting problematic tests. Our study provides actionable
+recommendations to help developers and researchers tackle flaky tests more
+effectively.
+
+### Conclusion
+
+If you've ever been bogged down by the unpredictability of flaky tests, this
+paper offers comprehensive insights and practical solutions drawn directly from
+the experiences of your peers. Understanding the root causes and common
+responses can equip you with the knowledge to improve your testing strategies
+and maintain a more reliable CI process.
+
+Our research not only aligns with existing literature but also presents
+unexpected findings that challenge previous assumptions about the prevalence and
+causes of flaky tests. Whether you're a software developer, tester, or
+researcher, the findings and recommendations in this paper will help you enhance
+your approach to dealing with flaky tests.
+
+::: {.callout-note appearance="simple"}
+
+## Further Details
+
+As my colleagues and I dive deeper into the complexities of flaky tests, your
+insights and suggestions are invaluable! If you have ideas or experiences
+related to this pervasive issue in software testing, please [contact](/contact/)
+me. Furthermore, if you wish to stay informed about new developments and blog
+posts related to flaky tests and other software testing topics, consider
+[subscribing](/support/) to my mailing list. Finally, if you would like to
+listen to my talk about this research on a podcast, please check out <a
+  href="https://stackoverflow.blog/2023/01/17/flake-it-till-you-make-it-how-to-detect-and-deal-with-flaky-tests-ep-528/">\"Flake
+  it Till You Make It&#58; How to Detect and Deal with Flaky Tests\"</a>!
+
+:::
+
+{{< include /_back-blog.qmd >}}
