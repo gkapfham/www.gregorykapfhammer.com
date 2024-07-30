@@ -80,11 +80,9 @@ aspect of the course, ensuring that students learn how to engineer software in
 an organization. Together, the students and I will run class sessions, write and
 publish articles, give presentations, assign software engineering tasks, and
 implement, deploy, and maintain software. We will work in pairs, small teams,
-and large-ish teams!
-
-So, is it possible to effectively teach software engineering, as defined in the
-**SE** book? I'm not yet sure --- let's see! Please check the course site and
-follow my blog posts for more details!
+and large-ish teams! So, is it possible to effectively teach software
+engineering, as defined in the **SE** book? I'm not yet sure --- let's see!
+Please check the course site and follow my blog posts for more details!
 
 ::: {.callout-note appearance="simple"}
 
