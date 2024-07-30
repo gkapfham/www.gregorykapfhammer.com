@@ -177,8 +177,10 @@ My technical expertise led to these recent media engagements:
 
 ## Enthusiastic Invitation
 
-Do you work in one of my areas of expertise? Are you interested in
-collaborating with me on a project? If so, then please
-[contact](/contact/index.qmd) me with your ideas.
+Do you work in one of my areas of expertise? Are you interested in collaborating
+with me on a research, software engineering, or educational project or appearing
+as a guest on the [Software Engineering Radio](https://www.se-radio.net/)
+podcast? If so, then please [contact](/contact/index.qmd) me to share your
+ideas!
 
 :::
