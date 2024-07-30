@@ -212,15 +212,21 @@ effectively rerunning test suites
 
 ## Highlighted Courses
 
+- [Algorithm Analysis](https://www.algorithmology.org): Implement and evaluate
+correct and efficient algorithms
+
 - [Data
-  Abstraction](https://proactiveprogrammers.com/data-abstraction/introduction-data-abstraction/):
-  Build and manipulate correct and efficient data structures
+Abstraction](https://proactiveprogrammers.com/data-abstraction/introduction-data-abstraction/):
+Build and manipulate correct and efficient data structures
 
 - [Discrete
-  Structures](https://proactiveprogrammers.com/discrete-structures/introduction-discrete-structures/):
-  Clearly connect mathematics to Python programming
+Structures](https://proactiveprogrammers.com/discrete-structures/introduction-discrete-structures/):
+Clearly connect mathematics to Python programming
 
 - [Operating Systems](https://www.os-sketch.com/): Build and understand operating system components
+
+- [Software Engineering](https://developerdevelopment.com/): Team-based
+introduction to building software systems
 
 ::: {.callout-tip appearance="minimal"}
 
