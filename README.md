@@ -7,5 +7,7 @@ Actions to see the steps for building and deploying the site to Netlify.
 
 ## Commands
 
-- **Create Nix Shell**: `nix-shell shell.nix`
-- **Active Environment**: `poetry shell`
+- `python scripts/publish-site.py --stage all --use-poetry-venv`
+- `python scripts/publish-site.py --stage render --use-poetry-venv --render-file index.qmd`
+- `python scripts/publish-site.py --use-poetry-venv --stage post-render`
+- `python scripts/publish-site.py --use-poetry-venv --stage netlify`
