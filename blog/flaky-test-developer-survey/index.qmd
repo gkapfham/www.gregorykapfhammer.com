@@ -79,7 +79,7 @@ related to this pervasive issue in software testing, please [contact](/contact/)
 me. Furthermore, if you wish to stay informed about new developments and blog
 posts related to flaky tests and other software testing topics, consider
 [subscribing](/support/) to my mailing list. Finally, if you would like to
-listen to my talk about this research on a podcast, please check out <a
+listen to me talk about this research on a podcast, please check out <a
   href="https://stackoverflow.blog/2023/01/17/flake-it-till-you-make-it-how-to-detect-and-deal-with-flaky-tests-ep-528/">\"Flake
   it Till You Make It&#58; How to Detect and Deal with Flaky Tests\"</a>!
 
