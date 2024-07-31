@@ -3,7 +3,7 @@ author: Gregory M. Kapfhammer
 title: Insights from my Software Engineering Radio Interview with Zach Lloyd
 date: '2023-01-01'
 date-format: YYYY
-categories: [post, terminal emulators, software engineering radio]
+categories: [post, developer productivity, software engineering radio]
 description: <em>How does Warp offer an innovative terminal?</em>
 ---
 
