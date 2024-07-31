@@ -8,6 +8,8 @@ description: <em>Do you test the responsive layout of your web pages?</em>
 aliases: ["/research/software/testing/2020/06/12/Responsive-Web-Testing/"]
 ---
 
+## Introduction
+
 Given its exceptional page layout, interesting and relevant articles, and
 amazing artwork, I've enjoyed reading all the issues of [Increment
 Magazine](https://increment.com/). Since web testing is one of my active
@@ -36,9 +38,11 @@ of mobile-ready web testing. Well, I teach [courses](/teaching/)
 on web development &mdash; in fact, I'm teaching the course again during the
 Fall 2020 semester! &mdash; and I've used a variety of technologies to create
 and maintain several web sites, helping me to understand how hard it is to test
-the responsive layout of a mobile-ready page.
+a page's responsive layout.
 
-<span class="gist">Since 2015 my colleagues and I have also been building and experimentally
+## Research
+
+Since 2015 my colleagues and I have also been building and experimentally
 studying tools that support the testing of responsive web pages. To date, our
 work has created automated techniques to address two key challenges: (i)
 surfacing differences in responsive web layouts and (ii) detecting responsive
@@ -53,10 +57,10 @@ experiments presented in those papers reveal that, when compared with manual and
 automated baseline testing techniques, our automated technique detected 12.5%
 and 18.75% more layout changes, respectively.
 
-<span class="gist">Since web developers often lack an automated oracle by which they can validate a
+Since web developers often lack an automated oracle by which they can validate a
 web page's responsive layout, my colleagues and I also developed an "oracle
 free" failure detection technique that checks the consistency of a page's
-responsive layout across a range of viewport widths.</span> The results in
+responsive layout across a range of viewport widths. The results in
 [@Walsh2017] [{{< iconify fa6-solid book-open >}}](/research/papers/walsh2017/index.qmd)
 show that our
 approach can find failures in 16 of the 26 production web pages studied,
@@ -68,6 +72,8 @@ layout failure as a true positive, a false positive, or a non-observable issue.
 Using these two tools in conjunction means that developers have a fully
 automated way to automatically detect responsive layout failures!
 
+## Conclusion
+
 In summary, it is exciting to see that software engineers in industry are
 adopting commercial tools, like [Percy](https://percy.io/), that are similar in
 aim to those that we are prototyping and releasing as free and open-source
@@ -75,8 +81,6 @@ aim to those that we are prototyping and releasing as free and open-source
 progress on this important problem, more work remains to create fully automated
 methods for testing responsive web pages. What research and development should
 we try next?
-
-{{< include /_gist.qmd >}}
 
 ::: {.callout-note appearance="simple"}
 
@@ -86,7 +90,7 @@ Do you have ideas about how to further enhance the process of testing a
 mobile-ready web page? Are you interested in collaborating with me on
 [research](/research/) to make the next generation of automated responsive web
 testing techniques? If so, then I hope that you will [contact](/contact/) me to
-share some of your ideas!
+share your ideas!
 
 :::
 
