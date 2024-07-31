@@ -9,7 +9,7 @@ description: <em>How does Warp offer an innovative terminal?</em>
 
 ## Introduction
 
-In this interview for the [Software Engineering
+As a co-host of the [Software Engineering
 Radio](https://www.se-radio.net/) podcast, I talked with [Zach
 Lloyd](https://www.linkedin.com/in/zachlloyd/), the founder and CEO of
 [Warp](https://www.warp.dev/), to discuss the innovative features and the
