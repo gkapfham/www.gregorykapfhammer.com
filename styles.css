@@ -81,6 +81,10 @@ p a:hover {
   text-underline-offset: 0.3em;
 }
 
+.podcast-paragraph {
+  margin-bottom: 1em;
+}
+
 .body a:hover {
   color: #e65100 !important;
 }
