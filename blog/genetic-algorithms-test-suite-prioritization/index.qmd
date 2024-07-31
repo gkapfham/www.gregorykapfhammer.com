@@ -13,11 +13,11 @@ Ever wondered how to optimize the order of your test suite for so that it
 quickly covers parts of your program under test? In a recent research paper I
 wrote [@Conrad2010a] [{{< iconify fa6-solid
 book-open>}}](/research/papers/conrad2010a/index.qmd), my co-authors and I
-experimentally investigate how genetic algorithms can best support test suite
-prioritizers that re-order the tests to cover code quickly. This paper presents
-a comprehensive genetic algorithm-based prioritization technique that employs a
-wide variety of mutation, crossover, and selection operators. Intrigued? Keep
-reading for a brief overview!
+experimentally investigated how genetic algorithms can best support test suite
+prioritizers that re-order a test suite to cover code quickly. This paper
+presents a comprehensive genetic algorithm-based prioritizer that employs a wide
+variety of mutation, crossover, and selection operators. Intrigued? Keep reading
+for a brief overview!
 
 ## Research
 
