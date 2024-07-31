@@ -43,7 +43,7 @@ to my questions:
 > use the terminal, but one of the things I think that’s absolutely essential is
 > that the terminal performs really, really well."
 
-**Why did Zach and his team choose Rust for the Warp terminal?**
+**Why did Zach and his team choose Rust to build the Warp terminal?**
 
 > "Rust is a great language. It’s ... I think you typically call it a systems
 > language. It compiles down to binary ... It has great community support and it
