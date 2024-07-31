@@ -47,7 +47,8 @@ listing:
       - "!blog/index.qmd"
     sort:
       - "date desc"
-      - "author title categories"
+      - "title"
+      - "author categories"
     type: default
     date-format: "YYYY"
     sort-ui: false
