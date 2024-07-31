@@ -12,7 +12,7 @@ description: <em>How does Warp offer an innovative terminal?</em>
 In this interview for the [Software Engineering
 Radio](https://www.se-radio.net/) podcast, I talked with [Zach
 Lloyd](https://www.linkedin.com/in/zachlloyd/), the founder and CEO of
-[Warp](https://www.warp.dev/), discusses the innovative features and the
+[Warp](https://www.warp.dev/), to discuss the innovative features and the
 development process behind the Warp command-line terminal. During our
 discussion, Lloyd highlights the unique aspects of Warp, such as its use of
 artificial intelligence (AI) for command completion and error explanation, its
