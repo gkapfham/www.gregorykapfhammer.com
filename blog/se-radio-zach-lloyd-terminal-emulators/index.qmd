@@ -50,7 +50,7 @@ to my questions:
 > has great cross-platform support, which is another really key thing for us."
 
 <p class="podcast-paragraph">
-  {{< fa headphones >}} Listen to the episode [Zach Lloyd on Terminal Emulators](https://se-radio.net/2023/09/se-radio-581-zach-lloyd-on-terminal-emulators/) on [Software Engineering Radio](https://se-radio.net/)!
+  {{< fa headphones >}} Listen to the episode [Zach Lloyd on Terminal Emulators](https://se-radio.net/2023/09/se-radio-581-zach-lloyd-on-terminal-emulators/) from [Software Engineering Radio](https://se-radio.net/)!
 </p>
 
 {{< include /_back-blog.qmd >}}
