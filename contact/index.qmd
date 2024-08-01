@@ -34,9 +34,9 @@ Validation](https://cs.gmu.edu/icst/index.html) and the [International
 Conference on Automated Software
 Engineering](https://conf.researchr.org/series/ase), and a reviewer for journals
 like [Transactions on Software
-Engineering](https://www.computer.org/csdl/journal/ts). I am also the host of of
-the [Software Engineering Radio](https://www.se-radio.net/) podcast. You can
-me and my work by reading my [biography](/biography/index.qmd), downloading my
+Engineering](https://www.computer.org/csdl/journal/ts). I am also the co-host of
+the [Software Engineering Radio](https://www.se-radio.net/) podcast. You can me
+and my work by reading my [biography](/biography/index.qmd), downloading my
 [curriculum
 vitae](https://github.com/gkapfham/curriculum-vitae/releases/download/v1.5.0/curriculum_vitae_kapfhammer.pdf),
 and [subscribing](/support/index.qmd) to my mailing list.
