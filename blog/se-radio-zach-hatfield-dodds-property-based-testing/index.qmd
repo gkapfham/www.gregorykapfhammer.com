@@ -13,12 +13,12 @@ In a recent episode of the [Software Engineering
 Radio](https://www.se-radio.net/) podcast, I had the pleasure of interviewing
 [Zac Hatfield-Dodds](https://zhd.dev/), a leading researcher, software engineer,
 and maintainer of open-source software. Zac currently leads the assurance team
-at Anthropic, an artificial intelligence (AI) safety and research company. He is
-also known for his contributions to open source projects like `Hypothesis`,
-`Pytest`, and `HypoFuzz`. We discussed property-based testing and how it can be
-effectively implemented using `Hypothesis`, an advanced testing library for
-Python. I'm really thankful that Zac took the time to share his knowledge with
-me!
+at [Anthropic](https://www.anthropic.com/), an artificial intelligence (AI)
+safety and research company. He is also known for his contributions to open
+source projects like `Hypothesis`, `Pytest`, and `HypoFuzz`. We discussed
+property-based testing and how it can be effectively implemented using
+`Hypothesis`, an advanced testing library for Python. I'm really thankful that
+Zac took the time to share his knowledge with me!
 
 ## Insights
 
