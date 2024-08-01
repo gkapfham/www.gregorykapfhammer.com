@@ -36,13 +36,14 @@ The paper presents several key findings:
 - **Improvements**: The configurations returned by the parameter tuning
 algorithm only performed better on eleven of the 475 classes.
 
-- There were many Java classes in the randomly chosen experimental subset that
-were either “easy” (i.e., all configurations always achieved perfect coverage)
-or “hard” (i.e, all configurations always achieved no coverage because, in some
-cases, EVOSUITE could not generate any data).
+- **Disparities**: Many Java classes in the randomly chosen subset that were
+either "easy" (i.e., all configurations always achieved perfect coverage) or
+"hard" (i.e, all configurations always achieved no coverage because, in some
+cases, `EvoSuite` could not generate any data).
 
-- The SPOT-derived configuration either performed worse than the defaults or had
-no statistically significant impact.
+- **Limitations**: The `SPOT`-derived configuration either performed worse than
+the defaults or had no statistically significant impact, suggesting the limits
+of parameter tuning.
 
 ## Conclusion
 
@@ -58,10 +59,11 @@ parameter tuning in search-based test data generation.
 If you're interested in diving deeper into this research, I encourage you to
 read the full paper [@Kotelyanskii2014a] [{{< iconify fa6-solid
 book-open>}}](/research/papers/kotelyanskii2014a/index.qmd). After you have read
-the paper, your insights and suggestions are appreciated! If you have ideas or
-experiences related to this topic, please [contact](/contact/) me. If you want
-to stay informed about new developments and blog posts related to search-based
-software testing, consider [subscribing](/support/) to my mailing list.
+the paper, your insights about parameter tuning or search-based test data
+generation are appreciated! If you have ideas or experiences related to this
+topic, please [contact](/contact/) me. If you want to stay informed about new
+developments and blog posts related to this research paper, consider
+[subscribing](/support/) to my mailing list.
 
 :::
 
