@@ -43,7 +43,7 @@ difficult to quantify numerically.
 The results of the empirical studies in this paper demonstrate that, in some
 cases, a statistical, statement-based approach to fault-localization is
 effective at locating database-related faults. However, if the application uses
-a relational database, then the statement-based approach is insufficient and
+a database, then the statement-based approach is insufficient and
 fault-localization is considerably more effective with a database-aware
 approach.
 
