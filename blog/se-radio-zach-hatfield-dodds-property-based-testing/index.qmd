@@ -13,14 +13,16 @@ In a recent episode of the [Software Engineering
 Radio](https://www.se-radio.net/) podcast, I had the pleasure of interviewing
 [Zac Hatfield-Dodds](https://zhd.dev/), a leading researcher, software engineer,
 and maintainer of open-source software. Zac currently leads the assurance team
-at Anthropic, an AI Safety and Research company. He is also known for his
-contributions to open source projects like `Hypothesis`, `Pytest`, and
-`HypoFuzz`. Our focused on property-based testing and how it can be effectively
-implemented using `Hypothesis`, an advanced Python library.
+at Anthropic, an artificial intelligence (AI) safety and research company. He is
+also known for his contributions to open source projects like `Hypothesis`,
+`Pytest`, and `HypoFuzz`. We discussed property-based testing and how it can be
+effectively implemented using `Hypothesis`, an advanced testing library for
+Python. I'm really thankful that Zac took the time to share his knowledge with
+me!
 
 ## Insights
 
-Here are some of the key insights from our conversation:
+I learned a lot from Zac during this interview. Here are some of his key insights:
 
 **What is property-based testing and how does it work with the Hypothesis tool?**
 
@@ -33,7 +35,7 @@ Here are some of the key insights from our conversation:
 > and the second is that you need to check in some way that your code didn't do
 > the wrong thing."
 
-**What are the challenges or limitations that developers may face when using Hypothesis?**
+**What  challenges or limitations may developers face when using Hypothesis?**
 
 > "The first thing I do wanna say before I get into the downsides is that I
 > think almost every good test suite will involve some or maybe many example
@@ -47,7 +49,7 @@ Here are some of the key insights from our conversation:
 
 > "What you do with Hypothesis is you write a test function which should work
 > for any valid input and then you describe to Hypothesis what kind of inputs
-> are valid... And then Hypothesis can try to generate many valid inputs
+> are valid. ... And then Hypothesis can try to generate many valid inputs
 > according to that specification you gave it looking for one which makes your
 > test fail."
 
