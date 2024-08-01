@@ -33,10 +33,10 @@ structured query language (SQL) faults by as much as 94.6% over existing
 techniques that do not carefully consider a program's interactions with the
 database through SQL statements.
 
-- **Qualitative Results**: A case study, using concrete examples from real-world
-programs, showing that the presented technique provides additional benefits,
-such as a potentially more efficient debugging process, which are difficult to
-quantify numerically.
+- **Qualitative Results**: A case study that uses concrete examples from
+real-world programs to show that the presented technique provides additional
+benefits, such as a potentially more efficient debugging process, which are
+difficult to quantify numerically.
 
 ## Future
 
