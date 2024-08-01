@@ -17,21 +17,21 @@ specifically designed for database applications. This approach significantly
 enhances the debugging process, making it more efficient and accurate. Keep
 reading this short post to discover some of the key findings of this new paper!
 
-## Findings
+## Contributions
 
-The paper presents several interesting insights:
+The paper makes several important contributions:
 
 - **Automated Technique**: The introduction of the first-ever database-aware
 fault-localization technique, a statistical method that takes into account an
-application's interactions with its database when it uses test execution
-information to automatically rank the program and schema locations that are the
-likely sources for a fault.
+application's interactions with its database when it uses information arising
+from test execution to automatically rank the program and schema locations that
+are the likely sources for a fault.
 
-- **Quantitative Results**: An empirical study demonstrating that our new
-technique can improve the effectiveness of finding SQL faults by as much as
-94.6% over existing techniques that do not carefully consider a program's
-interactions with the database through structured query language (SQL)
-statements.
+- **Quantitative Results**: Using three Java programs, an empirical study
+demonstrating that our new technique can improve the effectiveness of finding
+structured query language (SQL) faults by as much as 94.6% over existing
+techniques that do not carefully consider a program's interactions with the
+database through SQL statements.
 
 - **Qualitative Results**: A case study, using concrete examples from real-world
 programs, showing that the presented technique provides additional benefits,
@@ -42,15 +42,16 @@ quantify numerically.
 
 The results of the empirical studies in this paper demonstrate that, in some
 cases, a statistical, statement-based approach to fault-localization is
-effective at locating database-related faults. However, there are also cases in
-which the statement-based approach is insufficient and fault-localization is
-considerably more effective with a database-aware approach.
+effective at locating database-related faults. However, if the application uses
+a relational database, then the statement-based approach is insufficient and
+fault-localization is considerably more effective with a database-aware
+approach.
 
-This research opens up several exciting avenues for future work. We plan to
-expand the class of faults we address to include multiple-attribute faults and
-faults within other parts of the SQL command. Additionally, we are working on
-techniques that can localize data and schema faults, which are not captured by
-analyzing SQL commands.
+This research opens up several exciting avenues for future work. For instance,
+we plan to expand the class of faults that the technique finds to include
+multiple-attribute faults and faults within other parts of the SQL command.
+Additionally, we are working on techniques that can localize data and schema
+faults, which are not captured by analyzing SQL commands.
 
 ::: {.callout-note appearance="simple"}
 
