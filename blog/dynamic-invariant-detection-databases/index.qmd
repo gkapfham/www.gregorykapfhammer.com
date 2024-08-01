@@ -13,25 +13,29 @@ Have you ever wondered how to extend the concept of dynamic invariant detection
 from software programs to relational databases? In a recent research paper
 [@Cobb2011] [{{< iconify fa6-solid
 book-open>}}](/research/papers/cobb2011/index.qmd), my co-authors and I
-introduce a novel approach that does just that! The presented method
-significantly enhances the detection of meaningful invariants in both fixed data
-sets and subject programs. Keep reading to learn more about this research!
+introduced a novel approach that does just that! The presented method
+significantly enhances the detection of meaningful invariants in both fixed
+data sets and subject programs. Keep reading to learn more about this research!
 
 ## Contributions
 
-The paper presents several key contributions:
+The paper presents several key contributions, summarized in the following list:
 
-- **Technique**: A new technique that extends the notion of dynamic invariant
-detection to SQL-based relational databases and the applications that employ
-them.
+- **Technique**: A new method that extends the notion of dynamic invariant
+detection to structured query language (SQL)-based databases and the
+applications that employ them.
 
-- **Tool**: An implementation that analyzes existing databases and the Java
-applications that utilize these databases to automatically produce files for
-input to Daikon.
+- **Tool**: An implementation that analyzes existing MySQL databases and the
+Java applications that use these databases to automatically produce files
+for input to Daikon, a popular dynamic invariant detection tool commonly applied
+to Java applications.
 
 - **Experiments**: Two empirical studies using seven subjects, one of which
 analyzes the quality of invariant detection and the other of which examines a
-database-specific application for schema constraint modification.
+database-specific application for schema constraint modification. An insight
+from these experiments is that the tool can automatically detect that programs
+are enforcing constraints on their data that are not --- but could be! ---
+encoded in the relational database's schema.
 
 ## Results
 
