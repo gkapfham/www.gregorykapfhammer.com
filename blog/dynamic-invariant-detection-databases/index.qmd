@@ -37,13 +37,11 @@ from these experiments is that the tool can automatically detect that programs
 are enforcing constraints on their data that are not --- but could be! ---
 encoded in the relational database's schema.
 
-## Results
-
-The results of the empirical studies demonstrate the feasibility of collecting
+Overall, this paper's results demonstrate the feasibility of collecting
 meaningful invariants for four fixed data sets and three subject programs.
-Furthermore, the research shows that dynamic invariants for relational databases
-can be effectively used to identify areas where the database schema constraints
-could be tightened to protect data integrity.
+Furthermore, the paper shows that dynamic invariants for relational databases
+can be effectively used to identify areas where the relational database schema
+constraints could be tightened to protect data integrity.
 
 ## Future
 
