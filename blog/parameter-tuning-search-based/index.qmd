@@ -29,7 +29,7 @@ metric. To collect enough data points to support a rigorous statistical
 analysis, we ran `EvoSuite` for 100 trials with the default configuration and
 100 trials with the configuration returned after parameter tuning with `SPOT`.
 
-## Key Findings
+## Findings
 
 The paper presents several key findings:
 
