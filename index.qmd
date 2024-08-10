@@ -39,8 +39,8 @@ listing:
     sort-ui: false
     filter-ui: false
     fields: [author, date, title, description]
-    max-items: 3
-    page-size: 3
+    max-items: 5
+    page-size: 5
   - id: featured-posts
     contents:
       - "blog/**/*.qmd"
@@ -54,8 +54,8 @@ listing:
     sort-ui: false
     filter-ui: false
     fields: [author, title, date, description, reading-time]
-    max-items: 3
-    page-size: 3
+    max-items: 5
+    page-size: 5
   - id: featured-service
     contents:
       - "service/**/*.qmd"
