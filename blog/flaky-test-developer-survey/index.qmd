@@ -12,8 +12,8 @@ description: <em>Let's discover developer's views on flaky tests!</em>
 As a software developer, you might have encountered the frustrating phenomenon
 of flaky tests --- or test cases that pass and fail intermittently without any
 changes to the code under test. My colleagues and I recently published
-[@Parry2022b] [{{< iconify fa6-solid book-open
->}}](/research/papers/parry2022b/index.qmd), "Surveying the Developer Experience
+[@Parry2022b] [{{< iconify fa6-solid book-open >}}](/research/papers/parry2022b/index.qmd), 
+"Surveying the Developer Experience
 of Flaky Tests," that dives into this issue by exploring how real-world software
 developers define, experience, and address flaky tests. Keep reading to learn
 more about this paper!
