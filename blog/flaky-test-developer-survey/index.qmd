@@ -64,10 +64,9 @@ and maintain a more reliable CI process.
 Our research not only aligns with existing literature but also presents
 unexpected findings that challenge previous assumptions about the prevalence
 and causes of flaky tests. Whether you're a software developer, tester, or
-researcher, the this paper's findings will help you enhance your approach to
-dealing with flaky tests. Make sure to read [@Parry2022b] [{{< iconify
-fa6-solid book-open
->}}](/research/papers/parry2022b/index.qmd)!
+researcher, this paper's findings will help you enhance how you deal with flaky
+tests. When you have time, make sure to read [@Parry2022b] [{{< iconify
+fa6-solid book-open >}}](/research/papers/parry2022b/index.qmd)!
 
 ::: {.callout-note appearance="simple"}
 
