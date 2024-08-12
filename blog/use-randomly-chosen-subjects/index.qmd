@@ -58,9 +58,8 @@ our approach.
 
 If you are a software engineering researcher, I am interested in learning how
 you pick the subjects that you use to experimentally evaluate your methods. I
-would also appreciate your feedback on the approach that we adopted in our work
-on testing mobile-ready web pages. So, please [contact]({{site.baseurl}}contact)
-me to share your insights!
+would also appreciate your feedback on our approach to testing mobile-ready web
+pages. So, please [contact](/contact/) me to share your insights!
 
 :::
 
