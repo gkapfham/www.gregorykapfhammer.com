@@ -13,9 +13,9 @@ Have you ever wondered how to extend the concept of dynamic invariant detection
 from software programs to relational databases? In a recent research paper
 [@Cobb2011] [{{< iconify fa6-solid
 book-open>}}](/research/papers/cobb2011/index.qmd), my co-authors and I
-introduced a novel approach that does just that! The presented method
-significantly enhances the detection of meaningful invariants in both fixed
-data sets and subject programs. Keep reading to learn more about this research!
+introduced a novel approach that makes this extension. The presented method
+significantly enhances the detection of meaningful invariants in both fixed data
+sets and subject programs. Keep reading to learn more about this research!
 
 ## Contributions
 
