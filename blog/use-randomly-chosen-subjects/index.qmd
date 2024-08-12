@@ -8,12 +8,14 @@ description: <em>Control validity threats by picking random programs!</em>
 aliases: ["/research/methodology/idea/2017/06/09/Random-Subjects/"]
 ---
 
-<span class="gist">Many types of software engineering research require software
-  subjects that a researcher can use during an experimental evaluation of a
-  technique.</span> For instance, if you develop a new way to test software,
-then you need to demonstrate that it can effectively find defects in real-world
-programs. So, where will you find these programs? And, how can you select the
-programs so as to minimize the risk of compromising your experiment?
+## Introduction
+
+Many types of software engineering research require software subjects that a
+researcher can use during an experimental evaluation of a technique. For
+instance, if you develop a new way to test software, then you need to
+demonstrate that it can effectively find defects in real-world programs. So,
+where will you find these programs? And, how can you select the programs so as
+to minimize the risk of compromising your experiment?
 
 One way to pick subject programs is to download them from an archive like the
 Software-Artifact Infrastructure Repository, known by the
@@ -25,10 +27,12 @@ While it is possible to run experiments with programs that you download from
 sites like [GitHub](http://www.github.com), there are challenges associated with
 this approach as well. For instance, researchers may be inclined &mdash;
 consciously or not &mdash; to specifically download and use programs on which
-their technique is likely to perform well.
+their technique is likely to perform well, which is a threat to the validity of
+their experimental results.
 
-<span class="gist">This sounds like a thorny problem! Are there any viable
-  solutions? Well, yes!</span>
+## Solutions
+
+This sounds like a thorny problem! Are there any viable solutions? Well, yes!
 
 If you happen to conduct research that focuses on Java programs, then you can
 use the [SF100](http://www.evosuite.org/experimental-data/sf100/) to evaluate
@@ -43,12 +47,10 @@ In a recent paper that introduces a technique for testing mobile-ready web
 pages, my colleagues and I used <a href
   ="https://www.discuvver.com/">Discuvver</a> to randomly pick web sites for use
 in the experiments that we report on in [@Walsh2017] [{{< iconify fa6-solid
-book-open >}}](/research/papers/walsh2017/index.qmd). <span class="gist">The
-  benefits associated with using randomly chosen subjects in our research is
-  that now we can have more confidence in the results that demonstrate the
-  efficiency and effectiveness of our approach.</span>
-
-{{< include /_gist.qmd >}}
+book-open >}}](/research/papers/walsh2017/index.qmd). The benefits associated
+with using randomly chosen subjects in our research is that now we can have more
+confidence in the results that demonstrate the efficiency and effectiveness of
+our approach.
 
 ::: {.callout-note appearance="simple"}
 
