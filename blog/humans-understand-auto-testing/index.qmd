@@ -47,7 +47,7 @@ the database's contents. While having tools like SchemaAnalyst [@McMinn2016c]
 automatically generate tests is useful, as I mentioned previously, there has
 been no research to analyze how well testers both understand tests involving SQL
 and decide if they reveal flaws. So, my collaborators and I decided to conduct a
-human study!
+human study --- both a first for me and for this research area!
 
 The aforementioned paper,
 [@Alsharif2019] [{{< iconify fa6-solid book-open >}}](/research/papers/alsharif2019/index.qmd)
@@ -84,7 +84,7 @@ focus on the critical values on which the test's status hinges.
 
 - Since readable strings, in comparison to random textual values, help to ensure
 that human testers better understand the intention of the test case, they should
-be used whenever possible.
+be used if possible.
 
 ::: {.callout-note appearance="simple"}
 
@@ -93,10 +93,10 @@ be used whenever possible.
 While some automated test data generation methods are starting to adopt these
 suggestions, more work remains to create automated test data generation tools
 and manual testing guidelines that ensure that tests are understandable by human
-testers. Do you have ideas about how to make tests more human readable? Are you
+testers. Do you have ideas about how to make tests more readable? Are you
 interested in collaborating with me on research to make the next generation of
-automated test data generation techniques? If so, then I hope that you will
-[contact](/contact/) me to share some of your ideas!
+automated test data generators? If so, then I hope that you will
+[contact](/contact/) me with your ideas!
 
 :::
 
