@@ -8,6 +8,8 @@ description: <em>Have a database schema? You need to test it!</em>
 aliases: ["/testing/database/tool/2014/06/12/Schema-Testing/"]
 ---
 
+## Introduction
+
 Database applications are very common and there has been much attention to
 testing them and the individual database management systems with which they
 interact. Yet, there has been very little work devoted to testing arguably the
@@ -20,19 +22,23 @@ cornerstone nature to a database application means that defects need to be
 found early in order to prevent knock-on effects to other parts of an
 application and the spiraling bug-fixing costs that may be incurred.
 
+## Challenges
+
 In this important area of testing for relational database schemas, there are
 many challenges that researchers and developers need to address. Some recent
-advances in this field have focused on automatically generating test data to
-exercise the constraints in the database schema and assessing the effectiveness
-of the generated data through the use of mutation analysis.
+advances have focused on automatically generating test data to exercise the
+constraints in the database schema and assessing the effectiveness of the
+generated data through the use of mutation analysis.
 
 The paper [@Kapfhammer2013] [{{< iconify fa6-solid book-open
 >}}](/research/papers/kapfhammer2013/index.qmd) introduces a search-based
 technique for generating database table data with the intention of exercising
 the integrity constraints placed on table columns. The testing tool described
-in this paper, [SchemaAnalyst](http://schemaanalyst.org/), can automatically
-generate data that will both satisfy and negate the constraints in the database
+in this paper, [SchemaAnalyst](http://schemaanalyst.org/), automatically
+generates data that will both satisfy and negate the constraints in the database
 schema.
+
+## Approach
 
 Of course, the process of automatically generating test data raises the
 question "well, how good is this data?" The paper [@Wright2013] [{{< iconify
@@ -40,12 +46,11 @@ fa6-solid book-open >}}](/research/papers/wright2013/index.qmd) introduces
 efficient techniques for answering this question. The presented mutation
 analysis methods insert simple faults into the database's schema and check to
 see whether or not the test cases can find them. Intuitively, the tests are not
-very good if they can not find these faults! In recent empirical studies
-designed to evaluate the effectiveness of SchemaAnalyst we compared it to a
-popular tool for generating table data,
-[DBMonster](http://dbmonster.sourceforge.net/). With competitive or faster data
-generation times, our method outperforms DBMonster in terms of both the schema
-constraint coverage and mutation adequacy scores.</span>
+very good if they can not find these faults! In recent studies designed to
+evaluate the effectiveness of SchemaAnalyst we compared it to a tool for
+generating table data, [DBMonster](http://dbmonster.sourceforge.net/). With
+competitive or faster data generation times, our method outperforms DBMonster
+in both the schema constraint coverage and mutation adequacy scores.
 
 ::: {.callout-note appearance="simple"}
 
