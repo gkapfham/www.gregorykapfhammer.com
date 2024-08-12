@@ -9,13 +9,13 @@ description: <em>How to best find flaky tests with machine learning?</em>
 
 ## Introduction
 
-Isn't it frustrating when you run your test suite and some tests pass and
-others fail, even though you haven't changed any code? These tests are often
-called flaky tests --- and they present a challenge for software engineers. My
-colleagues and I recently published [@Parry2022a] [{{< iconify fa6-solid
-book-open>}}](/research/papers/parry2022a/index.qmd)
-that introduces FLAKE16, a new feature set that significantly improves the
-detection of flaky tests with machine learning. Keep reading to learn more about this paper!
+Isn't it frustrating when you run your test suite and some tests pass and others
+fail, even though you haven't changed any code? These tests are often called
+flaky tests --- and they present a serious and pernicious challenge for software
+engineers. My colleagues and I recently published [@Parry2022a] [{{< iconify
+fa6-solid book-open>}}](/research/papers/parry2022a/index.qmd) that introduces
+FLAKE16, a new feature set that significantly improves the detection of flaky
+tests with machine learning. Keep reading to learn more about this paper!
 
 ## Results
 
