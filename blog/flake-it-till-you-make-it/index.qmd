@@ -10,15 +10,15 @@ description: <em>How can we find and fix flaky tests?</em>
 ## Introduction
 
 As software developers, we've all faced the frustration of flaky tests. In our
-recent paper, "Flake It 'Till You Make It," [@Parry2020] [{{< iconify fa6-solid
-book-open >}}](/research/papers/parry2020/index.qmd) my colleagues and I
+recent paper, "Flake It 'Till You Make It" [@Parry2020] [{{< iconify fa6-solid
+book-open >}}](/research/papers/parry2020/index.qmd), my colleagues and I
 introduce FITTER (Flakiness Inducing TesT crEation and Repair), a novel
 technique to address this persistent problem.
 
-In this position paper, we propose that the best time to discover and repair
-flaky tests is when a developer first creates them. Our approach focuses on
-exposing and fixing "latent test flakiness" --- or tests that aren't currently
-flaky but could become so in the future.
+In this position paper, we argue that the best time to discover and repair flaky
+tests is when a developer first creates them. Our approach focuses on exposing
+and fixing "latent test flakiness" --- or tests that aren't currently flaky but
+could become so in the future.
 
 ## Contributions
 
