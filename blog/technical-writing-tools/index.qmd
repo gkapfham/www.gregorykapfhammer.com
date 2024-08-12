@@ -8,15 +8,19 @@ description: <em>Prepare papers and talks like you create software!</em>
 aliases: ["/writing/programming/vim/2016/07/12/Technical-Writing/"]
 ---
 
+## Introduction
+
 If you are like me, then you may enjoy writing in a notebook with a fountain pen
 &mdash; if you have not tried writing this way, then borrow someone's fountain
-pen and try it. <span class="gist">As much as I may like taking notes and
-brainstorming with a fountain pen, I spend a substantial amount of time
-preparing technical [papers](/research/papers/index.qmd) and
+pen and try it. As much as I may like taking notes and brainstorming with a
+fountain pen, I spend a substantial amount of time preparing technical
+[papers](/research/papers/index.qmd) and
 [presentations](/research/presentations/index.qmd) in
 [LaTeX](http://www.latex-project.org/) with the [Vim](http://www.vim.org/) text
-editor &mdash; a task I also find to be challenging and rewarding.</span> Thankfully,
+editor &mdash; a task I also find to be challenging and rewarding. Thankfully,
 some tools can aid your writing process!
+
+## Tools
 
 If you write with Vim and LaTeX and you would like to improve your writing
 experience, then please consider using the
@@ -27,7 +31,9 @@ and reverse searching for either the
 [Zathura](https://pwmt.org/projects/zathura/) or [MuPDF](http://mupdf.com/) PDF
 viewers. Are you interested in learning more about how I configured these
 plugins? Please study the source code of my `.vimrc` that is available in the
-GitHub repository [gkapfham/dotfiles](https://github.com/gkapfham/dotfiles).
+GitHub repository called [gkapfham/dotfiles](https://github.com/gkapfham/dotfiles).
+
+## Examples
 
 Yes, it is possible to use these tools to create nicely formatted and correct
 papers. As an example of a paper, please consider reading [@McMinn2016a] [{{<
@@ -38,12 +44,10 @@ An example of a presentation that my collaborators and I prepared in LaTeX is fo
 iconify fa6-solid book-open >}}](/research/papers/kinneer2015/index.qmd), which
 is available in the GitHub repository <a
   href="https://github.com/gkapfham/seke2015-presentation">gkapfham/seke2015-presentation</a>.
-<span class="gist">There's something else that is really nice about making your papers and
+There's something else that is really nice about making your papers and
 presentations in LaTeX &mdash; you can release their source code on GitHub to
 share with others an "instruction manual" that explains, in a step-by-step
-fashion, exactly how to produce a document like yours!</span>
-
-{{< include /_gist.qmd >}}
+fashion, exactly how to produce a document like yours!
 
 ::: {.callout-note appearance="simple"}
 
