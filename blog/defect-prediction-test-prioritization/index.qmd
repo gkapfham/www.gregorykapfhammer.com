@@ -15,12 +15,13 @@ I've written about test suite prioritization in two previous posts called
 it!](/blog/regression-testing-costly/index.qmd) and [Using real faults to
 evaluate test suite prioritization
 techniques](/blog/real-faults-test-prioritization). In those posts I pointed out
-that software engineers often write test suites that they will re-run as they
-modify a program. I also explained that this this valuable &mdash; and
-expensive! &mdash; process, called regression testing, helps developers to
-ensure that they have not introduced new defects as they add new features or bug
-fixes. One way to perform regression testing is to prioritize the test suite so
-that test execution first runs those tests that are most likely to find defects.
+that, to confirm the correctness of an evolving system, software engineers often
+write test suites that they will re-run as they modify a program. I also
+explained that this this valuable &mdash; and expensive! &mdash; process, called
+regression testing, helps developers to ensure that they have not introduced new
+defects as they add new features or bug fixes. One way to perform regression
+testing is to prioritize the test suite so that test execution first runs those
+tests that are most likely to find defects.
 
 ## Prediction
 
