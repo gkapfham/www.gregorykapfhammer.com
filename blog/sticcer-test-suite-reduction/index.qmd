@@ -33,7 +33,8 @@ minimal impact on fault detection.
 
 - **Real-World Application**: Whether you’re working with SQLite, PostgreSQL, or
 transitioning between different DBMSs, STICCER adapts to your needs, maintaining
-the integrity and consistency of your database.
+the integrity and consistency of your relational database through an approach to
+efficient schema testing.
 
 ## Future
 
