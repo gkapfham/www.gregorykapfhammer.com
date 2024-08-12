@@ -235,6 +235,25 @@ introduction to building software systems
 
 :::
 
+## Software Engineering
+
+<ul>
+
+<li class="software"><a target="_blank" rel="noopener"
+href="https://github.com/GatorEducator/gatorgrade">GatorGrade</a>: Python
+front-end for the GatorGrader assessment tool</li>
+
+<li class="software"><a target="_blank" rel="noopener"
+href="https://github.com/GatorEducator/gatorgrader">GatorGrader</a>: Automated
+assessment for source code and writing</li>
+</ul>
+
+::: {.callout-tip appearance="minimal"}
+
+{{< fa rocket >}} <em>Benefit</em> from my open-source [software](software/index.qmd)
+
+:::
+
 ## Status Updates
 
 ```{=html}
