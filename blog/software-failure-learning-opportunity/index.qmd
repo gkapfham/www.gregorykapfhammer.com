@@ -8,6 +8,8 @@ description: <em>Software failure is a growth opportunity!</em>
 aliases: ["/writing/research/idea/2019/11/15/Breaking-Benefits/"]
 ---
 
+## Introduction
+
 My [research](/research/) in the fields of software engineering and software
 testing focuses on the design, implementation, and experimental evaluation of
 automated techniques for finding and fixing the defects that lead to software
@@ -15,9 +17,10 @@ failure. Even though much of my professional work develops methods to avoid
 software failure, I've also learned that when software fails it is an
 opportunity for me to learn about why it failed and to explore alternatives to,
 for instance, the approach that lead to the failure or the software that itself
-failed. <span class="gist">After reflecting on my research and teaching
-  experiences, it is now clear that I've greatly benefited from software
-  failures!</span>
+failed. After reflecting on my research and teaching experiences, it is now
+clear that I've greatly benefited from software failures!
+
+## Examples
 
 Here are a few examples that help to illustrate my point:
 
@@ -31,7 +34,7 @@ computer that was still running Windows, I experienced anew the failings of that
 operating system. Ultimately, I decided to take the plunge and after a
 significant amount of trial and error and a lot of help from my fellow computer
 science majors, I finally got Linux to work on my computer. Now, nearly 25 years
-later I'm still delighted to use Linux for all of my computing tasks!
+later I'm still delighted to use Linux!
 
 - **Adventures in Text Editors**: When I started programming I used the TextEdit
 text editor integrated into the NeXTSTEP operating system. Later, whenever I
@@ -44,20 +47,21 @@ when I learned that it featured a package that supported Java programming
 through a connection to an Eclipse server. Even though I no longer use Vim to
 program in Java with that package, I've continued to use Vim, and then Neovim,
 for years, ultimately finding a text editor that helps me to effectively edit
-emails, Markdown, HTML, CSS, JavaScript, LaTeX, Python, R, Java, and more!
+emails, Markdown, HTML, CSS, JavaScript, LaTeX, Python, R, Java, and more. Yes,
+I write my email in Neovim!
 
 - **Victories with Version Control**: Throughout my undergraduate and graduate
 education in computer science and then my early years as computer science
 instructor, I used a variety of version control systems including the source
 code control system (SCCS), revision control system (RCS), concurrent versions
 system (CVS), subversion (SVN), and Git. Although I benefited from personally
-using SCCS and RCS, I became frustrated with attempting to use them in a team
-setting, ultimately adopting CVS and then SVN. I can also remember first
-struggling to use Git, always wondering why I had to run my own server or daemon
-to share files with collaborators in a decentralized fashion. Even though I
-delightfully adopted the use of Bitbucket for all of my teaching and research I
-never really felt completely victorious with version control until I adopted
-GitHub and GitHub Classroom for all of my teaching and research!
+using SCCS and RCS, I became frustrated when using them in a team setting,
+ultimately adopting CVS and then SVN. I can also remember first struggling to
+use Git, always wondering why I had to run my own server or daemon to share
+files with collaborators in a decentralized fashion. Even though I delightfully
+adopted the use of Bitbucket for all of my teaching and research I never really
+felt completely victorious with version control until I adopted GitHub and
+GitHub Classroom for my teaching and research!
 
 - **Struggles with Statistical Analysis**: Since some of my computer science
 graduate courses required me to program in Matlab, I decided that, after using
@@ -91,24 +95,23 @@ configurations to craft one of my own. Today, my customized configuration of i3
 is a delight to use and I could not imagine returning to heavy-weight
 environments such as Unity or GNOME Shell!
 
+## Conclusion
+
 In summary, I might still be using Windows, plotting data with commercial
 software, and managing my own version control server if it were not for all of
-these frustrating experiences with software! <span class="gist">Was making a
-  change to the new software painful? Was it time consuming to learn the
-  ins-and-outs of a new program? Yes and yes. But, was it worth it? Yes,
-  absolutely!</span>
-
-{{< include /_gist.qmd >}}
+these frustrating experiences with software! Was making a change to the new
+software painful? Was it time consuming to learn the ins-and-outs of a new
+program? Yes and yes. But, was it worth it? Yes, absolutely!
 
 ::: {.callout-note appearance="simple"}
 
 ## Experience Sharing
 
-Do you have experiences with software failure? Have you seen the
-benefits of a program no longer meeting your needs? If you have, then I hope
-that you will [contact](/contact/) me to share some of your thoughts. Do you
-want to be updated when I publish new blog posts? If you do, then please
-[subscribe](/support/) to my mailing list.
+Do you have experiences with software failure? Have you seen the benefits of a
+program no longer meeting your needs? If you have, then I invite you to
+[contact](/contact/) with your thoughts. Do you want to be updated when I
+publish new blog posts? If you do, then please [subscribe](/support/) to my
+mailing list.
 
 :::
 
