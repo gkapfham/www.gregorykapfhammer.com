@@ -27,26 +27,26 @@ industry.
 
 ### What is one fun fact that you can share about your company or a current project?
 
-FirstEnergy has a wide range of jobs, with the information technology (IT)
-division focusing on the use of three different programming languages. So,
-there are always areas in which you can learn and grow at FirstEnergy! I use
-ABAP or the Advanced Business Application Programming language. ABAP is the
-language for SAP and is written in German &mdash; so if you know German, ABAP
-may be the development language for you!
+> FirstEnergy has a wide range of jobs, with the information technology (IT)
+> division focusing on the use of three different programming languages. So,
+> there are always areas in which you can learn and grow at FirstEnergy! I use
+> ABAP or the Advanced Business Application Programming language. ABAP is the
+> language for SAP and is written in German &mdash; so if you know German, ABAP
+> may be the development language for you!
 
 ### What is the greatest challenge that you face when working in your field?
 
-The greatest challenge I face as a developer at FirstEnergy is communicating
-with business stakeholders. As a developer you must take business requirements
-and turn them into code &mdash; however, many times the business clients do not
-even know themselves what they want in their desired product!
+> The greatest challenge I face as a developer at FirstEnergy is communicating
+> with business stakeholders. As a developer you must take business requirements
+> and turn them into code &mdash; however, many times the business clients do not
+> even know themselves what they want in their desired product!
 
 ### What is one point of advice that you can give to people who plan to enter your field?
 
-Networking is a huge advantage when searching for a job. I still network in my
-current job in case I have a desire to "test the waters" in a different part of
-my company. Also, take advantage of internships &mdash; they get your foot in
-the door!
+> Networking is a huge advantage when searching for a job. I still network in my
+> current job in case I have a desire to "test the waters" in a different part of
+> my company. Also, take advantage of internships &mdash; they get your foot in
+> the door!
 
 ::: {.callout-note appearance="simple"}
 
@@ -55,8 +55,7 @@ the door!
 Do you have any questions about this interview? Or, do you have a response to
 Kara's ideas? If you do, then I hope that you will [contact](/contact/) me to
 share some of your thoughts. Or, do you want to be updated when I publish new
-interviews in this series? If you do, then please [subscribe](/support/) to my
-mailing list.
+interviews? If you do, then please [subscribe](/support/) to my mailing list.
 
 :::
 
