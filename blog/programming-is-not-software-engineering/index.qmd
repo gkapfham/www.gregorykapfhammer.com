@@ -50,7 +50,7 @@ teach undergraduates how to engineer software.
 The preface of **SE** makes it clear that *programming* is not the same as
 *software engineering* --- even though software engineering certainly involves
 programming! The authors of **SE** make the compelling point that software is
-different than programming due to the following organizational concerns:
+different than programming due to the following concerns:
 
 - **Time and Change**: while focused on solving problems with software,
 engineers must maintain software systems over long periods of time.
@@ -67,7 +67,8 @@ deploy global-scale software. I'm hoping that the students and I can learn
 lessons from the engineers and managers at Google so that we can develop as
 developers! With that said, I see that, as an instructor, I face challenges on
 the time, change, and scale fronts. How can I ensure that students develop as
-software developers during a constrained sixteen-week course?
+software developers during a sixteen-week course? What is your advice for
+software engineering education?
 
 ## Plans
 
