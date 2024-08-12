@@ -37,8 +37,9 @@ becomes less clear to the reader what technique performed this computation.
 However, it is important for the reader to understand that the technique
 presented in the paper is, in fact, the one that performed the computation.
 Moreover, using passive voice in sentences with "was performed" or "was
-analyzed" makes it less clear if the action was done in an automated or a
-manual fashion, which is also useful for computer science research papers.
+analyzed" makes it less clear if the action was done in an automated or a manual
+fashion, which is a useful distinction to make for research papers in computer
+science and software engineering.
 
 ## Solutions
 
