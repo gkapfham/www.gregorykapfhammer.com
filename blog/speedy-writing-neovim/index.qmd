@@ -44,13 +44,13 @@ inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 ## Status Update
 
 What tools do you use to ensure that you write in an efficient and effective
-fashion? I invite you to [contact]({{site.baseurl}}contact/) me with your own
+fashion? I invite you to [contact](/contact/) me with your own
 tips for speedy technical writing. It is also important to note that, since this
 post was written, I've converted my Neovim configuration to use Lua and the
 [lazy.nvim](https://github.com/folke/lazy.nvim) plugin manager. Finally, instead
 of using the completion engine described in this post I now use
 [hrsh7th/nvim-cmp](https://github.com/hrsh7th/nvim-cmp). It is easy to configure
-and super-fast!
+and super-fast and I think you will like it!
 
 :::
 
