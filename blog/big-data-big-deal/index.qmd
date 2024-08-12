@@ -12,14 +12,14 @@ aliases: ["/testing/database/idea/2015/07/05/Big-Data-Big-Deal/"]
 
 ## Important Context
 
-This post was written to support my participation in a panel at the
-<em>27th International Conference on Software Engineering and Knowledge
-Engineering</em>. To view the accompanying slides for this presentation, please
-refer to [@Kapfhammer2015a] [{{< iconify fa6-solid book-open
+This post was written to support my participation in a panel at the <em>27th
+  International Conference on Software Engineering and Knowledge
+  Engineering</em>. To view the accompanying slides for this presentation,
+please refer to [@Kapfhammer2015a] [{{< iconify fa6-solid book-open
 >}}](/research/presentations/kapfhammer2015a/index.qmd).
 If you want to learn more about new work that my colleagues and students and I
-are conducting in the area of efficiently testing data-centric applications,
-then please read [@Kinneer2015] [{{< iconify fa6-solid book-open
+are conducting in the area of efficiently and effectively testing data-centric
+applications, then please read [@Kinneer2015] [{{< iconify fa6-solid book-open
 >}}](/research/papers/kinneer2015/index.qmd) and
 [@Kinneer2015a] [{{< iconify fa6-solid book-open
 >}}](/research/papers/kinneer2015a/index.qmd), two papers
@@ -87,8 +87,8 @@ noteworthy one being [@McMinn2015] [{{< iconify fa6-solid book-open
 >}}](/research/papers/mcminn2015/index.qmd).
 If you are interested in using SchemaAnalyst to test your own database schema,
 then please download and use the tool, which is now available from the GitHub
-site <a
-href="https://github.com/schemaanalyst/schemaanalyst">schemaanalyst/schemaanalyst</a>.
+repository <a
+  href="https://github.com/schemaanalyst/schemaanalyst">schemaanalyst/schemaanalyst</a>.
 
 :::
 
