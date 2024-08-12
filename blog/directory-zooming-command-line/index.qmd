@@ -8,12 +8,16 @@ description: <em>Cool tools can enhance your command-line!</em>
 aliases: ["/software/tool/productivity/2017/05/08/Directory-Zooming/"]
 ---
 
+## Introduction
+
 If you are working on many projects in many different directories of your
-computer, <span class="gist">it is often difficult to remember the full path
-  name of the directory that contains the files that you need.</span> However,
+computer, it is often difficult to remember the full path
+  name of the directory that contains the files that you need. However,
 if you are already using a terminal window to navigate your file system, then
 there are some tools that can make this task easier. This post introduces two
 useful tools!
+
+## Zooming
 
 <span class="gist">To take advantage of the "directory zooming" technique that I
   present in this post, you will need to install two programs:
@@ -24,6 +28,8 @@ For now, you should know that <code>fzf</code> is a "fuzzy finder" that makes it
 easy for you to select matching items from a list. Alternatively, the
 <code>fasd</code> program stores information about the files and directories
 that you frequently access, allowing you to quickly navigate to them.
+
+## Combination
 
 <span class="gist">Now, we can put these two programs together so that `fasd`
   stores the directories you most commonly access and `fzf` acts as a filter for
@@ -41,11 +47,11 @@ t() {
 }
 ```
 
-Now, if I type `t paper` in my terminal window, I would see the following
-output. I can now  type in partial matches of
-directory names (e.g., "avmf") and then "zoom" to the directory that
-contains the source code for a paper, [@McMinn2016b] [{{< iconify fa6-solid
-book-open >}}](/research/papers/mcminn2016b/index.qmd) that my colleague and I recently published.
+Now, if I type `t paper` in my terminal, I would see the following
+output. I can now type in partial matches of directory names (e.g., "avmf") and
+then "zoom" to the directory that contains the code for a paper,
+[@McMinn2016b] [{{< iconify fa6-solid book-open >}}](/research/papers/mcminn2016b/index.qmd)
+that my colleague and I recently wrote. 
 
 ```shell
 $ t paper
@@ -56,22 +62,22 @@ $ t paper
   /home/gkapfham/working/research/writing/softwaretesting/databases/icsme2016-mrstudyrtool-paper
 ```
 
-What are the ways in which you navigate your file system? If you are a
-researcher, writer, or software developer who regularly uses the terminal
-window, I would also appreciate your feedback on the approach that I suggested
-in this post. So, please [contact](/contact/index.qmd) me to share your
-insights!
+## Improvements
 
-{{< include /_gist.qmd >}}
+What are the ways in which you navigate your file system? If you are a
+researcher, writer, or software developer who regularly uses the terminal, I
+would also appreciate your feedback on the approach that I suggested in this
+post. So, please [contact](/contact/index.qmd) me with your insights!
 
 ::: {.callout-note appearance="simple"}
 
 ## Status Update
 
 Since this blog post was written, I continue to use a wide variety of
-command-line tools to implement and test software.
-You can learn more about the tools that I currently used by checking the configuration files in
-[gkapfham/dotfiles](https://github.com/gkapfham/dotfiles)!
+command-line tools to implement and test software. You can learn more about the
+tools that I currently used by checking the configuration files in
+[gkapfham/dotfiles](https://github.com/gkapfham/dotfiles) and
+[gkapfham/nixos](https://github.com/gkapfham/nixos)!
 
 :::
 
