@@ -10,11 +10,12 @@ aliases: ["/testing/mutation/research/2014/10/25/Major-Mutation/"]
 
 ## Introduction
 
-If you have a [JUnit](http://www.junit.org) test suite, it is
-important that you ask the question "how good are my test cases?" If you
-have a low quality test suite, then you may not be doing a good job at
-establishing a confidence in the correctness of the program under test&mdash;and
-there also could be defects lurking in the application!
+If you have a [JUnit](http://www.junit.org) test suite, it is important that you
+ask the question "how good are my test cases?" If you have a low quality test
+suite, then you may not be doing a good job at establishing a confidence in the
+correctness of the program under test &mdash; and there also could be defects
+lurking in the application! How can you find these bugs and establish a
+confidence in your tests?
 
 One strategy for assessing the quality of your test suite is to run coverage
 analysis with a tool like [JaCoCo](http://www.eclemma.org/jacoco/).  Since a
