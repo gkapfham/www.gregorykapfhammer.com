@@ -414,6 +414,11 @@ these tools in your teaching!
 <ul>
 
 <li class="software"><a target="_blank" rel="noopener"
+href="https://www.algorithmology.org">Algorithm Analysis</a>: Implement and evaluate
+correct and efficient algorithms
+</li>
+
+<li class="software"><a target="_blank" rel="noopener"
 href="https://proactiveprogrammers.com/data-abstraction/introduction-data-abstraction/">Data
 Abstraction</a>: Build and manipulate correct and efficient data structures
 </li>
@@ -424,9 +429,13 @@ Discrete Structures</a>: Clearly connect mathematics to Python programming
 </li>
 
 <li class="software"><a target="_blank" rel="noopener"
+href="https://www.developerdevelopment.com/">
+Developer Development</a>: Team-based introduction to building software systems
+</li>
+
+<li class="software"><a target="_blank" rel="noopener"
 href="https://www.os-sketch.com/">
 Operating Systems</a>: Build and understand operating system components
-
 </li>
 
 </ul>
