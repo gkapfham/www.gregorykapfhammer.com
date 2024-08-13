@@ -226,7 +226,7 @@ MastodonApi.prototype.getToots = function () {
 
   // Inner function to add each toot content in container
   let appendToot = function (status_, index) {
-    let avatar, user, content, url, date;
+    let user, content, url, date;
 
     if (status_.reblog) {
       // BOOSTED toot
@@ -234,21 +234,21 @@ MastodonApi.prototype.getToots = function () {
       url = status_.reblog.url;
 
       // Boosted avatar
-      avatar =
-        '<a href="' +
-        status_.reblog.account.url +
-        '" class="mt-avatar mt-avatar-boosted" style="background-image:url(' +
-        status_.reblog.account.avatar +
-        ');" rel="nofollow noopener noreferrer" target="_blank">' +
-        '<div class="mt-avatar mt-avatar-booster" style="background-image:url(' +
-        status_.account.avatar +
-        ');">' +
-        "</div>" +
-        '<span class="visually-hidden">' +
-        status_.account.username +
-        " avatar" +
-        "</span>" +
-        "</a>";
+      // avatar =
+      //   '<a href="' +
+      //   status_.reblog.account.url +
+      //   '" class="mt-avatar mt-avatar-boosted" style="background-image:url(' +
+      //   status_.reblog.account.avatar +
+      //   ');" rel="nofollow noopener noreferrer" target="_blank">' +
+      //   '<div class="mt-avatar mt-avatar-booster" style="background-image:url(' +
+      //   status_.account.avatar +
+      //   ');">' +
+      //   "</div>" +
+      //   '<span class="visually-hidden">' +
+      //   status_.account.username +
+      //   " avatar" +
+      //   "</span>" +
+      //   "</a>";
 
       // User name and url
       user =
@@ -268,18 +268,18 @@ MastodonApi.prototype.getToots = function () {
       // Toot url
       url = status_.url;
 
-      // Avatar
-      avatar =
-        '<a href="' +
-        status_.account.url +
-        '" class="mt-avatar" style="background-image:url(' +
-        status_.account.avatar +
-        ');" rel="nofollow noopener noreferrer" target="_blank">' +
-        '<span class="visually-hidden">' +
-        status_.account.username +
-        " avatar" +
-        "</span>" +
-        "</a>";
+      // // Avatar
+      // avatar =
+      //   '<a href="' +
+      //   status_.account.url +
+      //   '" class="mt-avatar" style="background-image:url(' +
+      //   status_.account.avatar +
+      //   ');" rel="nofollow noopener noreferrer" target="_blank">' +
+      //   '<span class="visually-hidden">' +
+      //   status_.account.username +
+      //   " avatar" +
+      //   "</span>" +
+      //   "</a>";
 
       // User name and url
       user =
@@ -386,7 +386,7 @@ MastodonApi.prototype.getToots = function () {
       '" data-location="' +
       url +
       '" tabindex="0">' +
-      avatar +
+      // avatar +
       user +
       content +
       media +
