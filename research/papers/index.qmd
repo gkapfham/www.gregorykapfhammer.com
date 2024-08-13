@@ -13,8 +13,8 @@ listing:
   type: default
   categories: true
   date-format: "YYYY"
-  sort-ui: true
-  filter-ui: true
+  sort-ui: [date, author]
+  filter-ui: [title, author, date, description, categories]
   fields: [title, author, date, description, categories]
   feed:
     title: "Research Papers"
