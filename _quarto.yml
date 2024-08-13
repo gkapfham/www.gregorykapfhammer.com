@@ -121,11 +121,14 @@ format:
       # - united-dark.css
     toc: true
     toc-title: "Contents"
-    code-copy: hover
+    code-copy: false
     code-overflow: wrap
-    code-fold: false
+    code-fold: show
     code-tools: false
+    code-summary: "Code"
     highlight-style: gruvbox
+    code-block-bg: false
+    code-block-border-left: "#e65100"
     email-obfuscation: javascript
     # note: needs to be false so as to
     # ensure that the back to top button
