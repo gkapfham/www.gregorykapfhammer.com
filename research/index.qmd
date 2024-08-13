@@ -9,7 +9,6 @@ bibliography: ../bibliography/bibtex/bibliography_kapfhammer.bib
 
 ```{python}
 from rich.console import Console
-
 console = Console()
 console.print(
     f":rocket: Have fun exploring my research in fields like testing and debugging!"
