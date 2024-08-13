@@ -1,0 +1,57 @@
+---
+author: Gregory M. Kapfhammer
+title: Insights from my Software Engineering Radio interview with Wolf Wollprecht
+date: '2024-02-01'
+date-format: YYYY
+categories: [post, developer productivity, software engineering radio]
+description: <em>What are the best practices for Python tooling in Rust?</em>
+---
+
+## Introduction
+
+As a co-host of the [Software Engineering Radio](https://www.se-radio.net/)
+podcast, I interviewed [Wolf Vollprecht](https://wolfv.github.io/), the founder
+and CEO of [Prefix](https://prefix.dev/), to discuss the creator of
+[Pixi](https://pixi.sh/latest/), a Rust-based workflow manager for Python.
+During our conversation, Wolf shared some fascinating insights into both the
+development process and unique features of Pixi. I'm thankful that Wolf took
+the time to participate in this thought-provoking discussion! Here are three
+key takeaways from it:
+
+## Insights
+
+**Why did Wolf choose the Rust programming language to build Pixi?**
+
+> "It was not initially a completely obvious decision because I already had a
+> lot of experience with C++ and Mamba and we could have stuck to the C++
+> ecosystem, but in hindsight I’m very happy that we chose Rust. It comes with
+> this rich ecosystem; it helped us to use the same sort of underlying code in
+> our website as well and our platform and we want to capitalize on that in the
+> future much more by building awesome services."
+
+**How does Pixi ensure reproducibility in Python projects?**
+
+> "Reproducibility in the scientific world is also a big problem. And with Pixi
+> we want to make sure that the scientist that uses Pixi can get the same
+> results now and then also get the same results in 10 years if you run the
+> same data pipelines and things like this. And we make sure of that by
+> creating a very tight lock file that locks down packages down to the SHA
+> hash."
+
+**How does Pixi handle the challenge of cross-platform compatibility?**
+
+> "So the majority of work was already done because, well we are piggybacking
+> on the Conda ecosystem and Conda Forge specifically as a really large
+> repository of existing packages. And so a lot of the nice tools that we want
+> to use, or our users might want to use are already available. But then there
+> are some more intricate challenges because Windows and Unix are usually quite
+> different."
+
+<p class="podcast-paragraph">
+  {{< fa headphones >}} Listen to the episode [Wolf Vollprecht on Python
+  Tooling in
+  Rust](https://se-radio.net/2024/06/se-radio-622-wolf-vollprecht-on-python-tooling-in-rust/)
+  from [Software Engineering Radio](https://se-radio.net/)!
+</p>
+
+{{< include /_back-blog.qmd >}}
