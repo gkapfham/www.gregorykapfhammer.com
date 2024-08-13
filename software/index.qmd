@@ -4,7 +4,7 @@ page-layout: full
 ---
 
 ```{python}
-from rich.console import Console
+#| echo: false
 import re
 
 def count_software(file_path: str) -> int:
@@ -12,7 +12,10 @@ def count_software(file_path: str) -> int:
         html_content = file.read()
     pattern = r'<li\s+class="software"\s*>'
     return len(re.findall(pattern, html_content))
+```
 
+```{python}
+from rich.console import Console
 console = Console()
 file_path = "../software/index.qmd"
 count = count_software(file_path)
