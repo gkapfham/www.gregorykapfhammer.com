@@ -31,7 +31,6 @@ def count_research_presentations():
   subdirs = [pdir for pdir in presentation_dir.iterdir() if pdir.is_dir()]
   paper_count = len(subdirs)
   return paper_count
-
 ```
 
 ```{python}
