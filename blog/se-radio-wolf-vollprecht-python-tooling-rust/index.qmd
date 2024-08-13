@@ -20,7 +20,7 @@ tooling for Python!
 
 ## Insights
 
- Here are three takeaways from my interview with Wolf Vollprecht:
+Here are three takeaways from my interview with Wolf Vollprecht:
 
 **Why did Wolf choose the Rust programming language to build Pixi?**
 
