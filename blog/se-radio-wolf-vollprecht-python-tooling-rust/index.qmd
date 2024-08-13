@@ -49,11 +49,21 @@ tooling for Python!
 > are some more intricate challenges because Windows and Unix are usually quite
 > different."
 
-<p class="podcast-paragraph">
-  {{< fa headphones >}} Listen to the episode [Wolf Vollprecht on Python
-  Tooling in
-  Rust](https://se-radio.net/2024/06/se-radio-622-wolf-vollprecht-on-python-tooling-in-rust/)
-  from [Software Engineering Radio](https://se-radio.net/)!
-</p>
+## Listen
+
+In conclusion, if you're interested in learning more about the challenges and
+benefits of implementing Python tooling in Rust, I highly recommend that you
+listen to [Wolf Vollprecht on Python Tooling in
+Rust](https://se-radio.net/2024/06/se-radio-622-wolf-vollprecht-on-python-tooling-in-rust/)
+from [Software Engineering Radio](https://se-radio.net/)! You can find it on
+your favorite podcast player, [Apple
+Podcasts](https://podcasts.apple.com/us/podcast/software-engineering-radio-the-podcast-for/id120906714),
+[Spotify](https://open.spotify.com/show/6UO3XQclSuNnGxB39QdAnL),
+[YouTube](https://www.youtube.com/playlist?list=PLHJB2bhmgB7esz0BxMCt1jJwsoaqWtFff),
+or listen to it with this handy podcast player.
+
+{{< audio
+file="https://traffic.libsyn.com/secure/forcedn/seradio/622-wolf_vollprecht_python_tooling_in_rust.mp3"
+caption="Listen to Software Engineering Radio Episode 622" >}}
 
 {{< include /_back-blog.qmd >}}
