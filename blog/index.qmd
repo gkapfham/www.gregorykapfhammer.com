@@ -13,7 +13,7 @@ listing:
   type: default
   categories: true
   date-format: "YYYY"
-  sort-ui: true
+  sort-ui: [date]
   filter-ui: true
   fields: [date, title, reading-time, description, categories]
   feed:
