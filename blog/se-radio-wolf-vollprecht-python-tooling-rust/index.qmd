@@ -13,8 +13,8 @@ As a co-host of the [Software Engineering Radio](https://www.se-radio.net/)
 podcast, I interviewed [Wolf Vollprecht](https://wolfv.github.io/), the founder
 and CEO of [Prefix](https://prefix.dev/), to discuss the creation of
 [Pixi](https://pixi.sh/latest/), a Rust-based workflow manager for Python.
-During our conversation, Wolf shared some fascinating insights into both the
-development process and unique features of Pixi. I'm thankful that Wolf took
+During our conversation, Wolf shared some fascinating insights into both his
+development process and the unique features of Pixi. I'm thankful that Wolf took
 the time to participate in this thought-provoking discussion about Rust-based
 tooling for Python!
 
