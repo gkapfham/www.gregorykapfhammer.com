@@ -44,11 +44,21 @@ I learned a lot from Jonathan during this interview. Here are some of his key in
 > change, then we have a signal that there is something to do on the codebase at
 > large."
 
-<p class="podcast-paragraph">
-  {{< fa headphones >}} Listen to the episode [Jonathan Schneider on Automated
-  Refactoring with
-  OpenRewrite](https://se-radio.net/2024/07/se-radio-625-jonathan-schneider-on-automated-refactoring-with-openrewrite/)
-  from [Software Engineering Radio](https://se-radio.net/)!
-</p>
+## Listen
+
+In conclusion, if you're interested in learning more about automated refactoring
+with OpenRewrite, I highly recommend that you listen to [Jonathan Schneider on
+Automated Refactoring with
+OpenRewrite](https://se-radio.net/2024/07/se-radio-625-jonathan-schneider-on-automated-refactoring-with-openrewrite/)
+from [Software Engineering Radio](https://se-radio.net/)! You can find it on
+your favorite podcast player, [Apple
+Podcasts](https://podcasts.apple.com/us/podcast/software-engineering-radio-the-podcast-for/id120906714),
+[Spotify](https://open.spotify.com/show/6UO3XQclSuNnGxB39QdAnL),
+[YouTube](https://www.youtube.com/playlist?list=PLHJB2bhmgB7esz0BxMCt1jJwsoaqWtFff),
+or listen to it with this handy podcast player.
+
+{{< audio
+file="https://traffic.libsyn.com/secure/forcedn/seradio/625-jonathan-schneider-automated-refactoring.mp3"
+caption="Listen to Software Engineering Radio Episode 625" >}}
 
 {{< include /_back-blog.qmd >}}

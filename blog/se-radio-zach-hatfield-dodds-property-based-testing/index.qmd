@@ -53,9 +53,21 @@ I learned a lot from Zac during this interview. Here are some of his key insight
 > according to that specification you gave it looking for one which makes your
 > test fail."
 
-<p class="podcast-paragraph">
-  {{< fa headphones >}} Listen to the episode [Zac Hatfield-Dodds on Property-Based Testing](https://se-radio.net/2023/11/se-radio-589-zac-hatfield-dodds-on-property-based-testing-in-python/) from [Software Engineering Radio](https://se-radio.net/)!
-</p>
+## Listen
+
+In conclusion, if you want to explore property-based testing for Python programs
+and the `Hypothesis` tool, I strongly suggest that you listen to [Zac
+Hatfield-Dodds on Property-Based
+Testing](https://se-radio.net/2023/11/se-radio-589-zac-hatfield-dodds-on-property-based-testing-in-python/)
+from [Software Engineering Radio](https://se-radio.net/)! You can find it on
+your favorite podcast player, [Apple
+Podcasts](https://podcasts.apple.com/us/podcast/software-engineering-radio-the-podcast-for/id120906714),
+[Spotify](https://open.spotify.com/show/6UO3XQclSuNnGxB39QdAnL),
+[YouTube](https://www.youtube.com/playlist?list=PLHJB2bhmgB7esz0BxMCt1jJwsoaqWtFff),
+or listen to it with this handy podcast player.
+
+{{< audio
+file="https://traffic.libsyn.com/secure/forcedn/seradio/589_Zac_Hatfield-Dodds_Property-Based_Testing_in_Python.mp3"
+caption="Listen to Software Engineering Radio Episode 589" >}}
 
 {{< include /_back-blog.qmd >}}
-

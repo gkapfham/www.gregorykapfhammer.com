@@ -47,8 +47,22 @@ importance of time, scale, and trade-offs.
 > all the source code, but specific individuals and teams are responsible for
 > maintaining specific parts of the code base."
 
-<p class="podcast-paragraph">
-  {{< fa headphones >}} Listen to the episode [Hyrum Wright on Software Engineering at Google](https://se-radio.net/2024/03/se-radio-609-hyrum-wright-on-software-engineering-at-google/) from [Software Engineering Radio](https://se-radio.net/) for more insights!
-</p>
+## Listen
+
+In conclusion, if you're interested in learning more about software engineering
+practices at Google --- including testing, static analysis, large-scale code
+changes, and the importance of time, scale, and trade-offs --- I highly recommend
+listening to [Hyrum Wright on Software Engineering at
+Google](https://se-radio.net/2024/03/se-radio-609-hyrum-wright-on-software-engineering-at-google/)
+from [Software Engineering Radio](https://se-radio.net/)! You can find it on
+your favorite podcast player, [Apple
+Podcasts](https://podcasts.apple.com/us/podcast/software-engineering-radio-the-podcast-for/id120906714),
+[Spotify](https://open.spotify.com/show/6UO3XQclSuNnGxB39QdAnL),
+[YouTube](https://www.youtube.com/playlist?list=PLHJB2bhmgB7esz0BxMCt1jJwsoaqWtFff),
+or you can listen to it with this handy podcast player.
+
+{{< audio
+file="https://traffic.libsyn.com/secure/forcedn/seradio/609_hyrum_wright_software_engineering_at_google.mp3"
+caption="Listen to Software Engineering Radio Episode 609" >}}
 
 {{< include /_back-blog.qmd >}}

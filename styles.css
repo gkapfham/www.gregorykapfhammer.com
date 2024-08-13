@@ -185,6 +185,12 @@ div.callout-note.callout {
   border-top: none;
 }
 
+audio {
+  width: 300px;
+  height: 54px;
+  margin-top: 0.5em;
+}
+
 /* }}} */
 
 /* Forms {{{ */

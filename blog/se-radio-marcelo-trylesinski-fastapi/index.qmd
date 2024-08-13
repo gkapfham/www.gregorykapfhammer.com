@@ -10,14 +10,14 @@ description: <em>Let's learn more about the creation and use of FastAPI!</em>
 ## Introduction
 
 In a recent episode of the [Software Engineering
-Radio](https://www.se-radio.net/) podcast, I had interviewed [Marcelo
+Radio](https://www.se-radio.net/) podcast, I interviewed [Marcelo
 Trylesinski](https://fastapiexpert.com/), a senior software engineer at
 [Pydantic](https://docs.pydantic.dev/latest/) and a maintainer of open-source
 Python tools including [Starlette](https://www.starlette.io/) and
 [Uvicorn](https://www.uvicorn.org/). Our conversation focused on the unique
 features of [FastAPI](https://fastapi.tiangolo.com/), a modern and
 high-performance web framework for building APIs with Python 3.6+ based on
-standard Python type hints. I'm thankful that Marcelo was talked with me about
+standard Python type hints. I'm thankful that Marcelo talked with me about
 the design, implementation, and use of FastAPI --- it was a fun and fast-paced
 conversation!
 
@@ -51,10 +51,21 @@ These three questions overview my discussion with Marcelo about FastAPI:
 > you use that class just to kind of parse that data for you, but it does not
 > handle that for you."
 
-<p class="podcast-paragraph">
-  {{< fa headphones >}} Listen to the episode [Marcelo Trylesinski on
-  FastAPI](https://se-radio.net/2024/07/se-radio-624-marcelo-trylesinski-on-fastapi/)
-  from [Software Engineering Radio](https://se-radio.net/)!
-</p>
+## Listen
+
+In conclusion, if you're interested in learning more about the design and
+implementation of FastAPI or approaches to building APIs in Python, I highly
+recommend that you listen to [Marcelo Trylesinski on
+FastAPI](https://se-radio.net/2024/07/se-radio-624-marcelo-trylesinski-on-fastapi/)
+from [Software Engineering Radio](https://se-radio.net/)! You can find it on
+your favorite podcast player, [Apple
+Podcasts](https://podcasts.apple.com/us/podcast/software-engineering-radio-the-podcast-for/id120906714),
+[Spotify](https://open.spotify.com/show/6UO3XQclSuNnGxB39QdAnL),
+[YouTube](https://www.youtube.com/playlist?list=PLHJB2bhmgB7esz0BxMCt1jJwsoaqWtFff),
+or listen to it with this handy podcast player.
+
+{{< audio
+file="https://traffic.libsyn.com/secure/forcedn/seradio/624-marcelo_trylesinski_on_fastAPI.mp3"
+caption="Listen to Software Engineering Radio Episode 624" >}}
 
 {{< include /_back-blog.qmd >}}

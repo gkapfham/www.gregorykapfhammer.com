@@ -13,7 +13,7 @@ As a co-host of the [Software Engineering Radio](https://www.se-radio.net/)
 podcast, I interviewed [Zach Lloyd](https://www.linkedin.com/in/zachlloyd/), the
 founder and CEO of [Warp](https://www.warp.dev/), to discuss the innovative
 features and the development process behind the Warp command-line terminal.
-During our discussion, Lloyd highlights the unique aspects of Warp, such as its
+During our discussion, Zach highlights the unique aspects of Warp, such as its
 use of artificial intelligence (AI) for command completion and error
 explanation, its GPU-accelerated text rendering for enhanced performance, and
 its "command block" feature for improved command organization and sharing. He
@@ -48,8 +48,21 @@ to my questions:
 > language. It compiles down to binary ... It has great community support and it
 > has great cross-platform support, which is another really key thing for us."
 
-<p class="podcast-paragraph">
-  {{< fa headphones >}} Listen to the episode [Zach Lloyd on Terminal Emulators](https://se-radio.net/2023/09/se-radio-581-zach-lloyd-on-terminal-emulators/) from [Software Engineering Radio](https://se-radio.net/)!
-</p>
+## Listen
+
+In conclusion, if you're interested in learning more about the design and
+implementation of Warp or programming in Rust, I highly recommend that you
+listen to [Zach Lloyd on Terminal
+Emulators](https://se-radio.net/2023/09/se-radio-581-zach-lloyd-on-terminal-emulators/)
+from [Software Engineering Radio](https://se-radio.net/)! You can find it on
+your favorite podcast player, [Apple
+Podcasts](https://podcasts.apple.com/us/podcast/software-engineering-radio-the-podcast-for/id120906714),
+[Spotify](https://open.spotify.com/show/6UO3XQclSuNnGxB39QdAnL),
+[YouTube](https://www.youtube.com/playlist?list=PLHJB2bhmgB7esz0BxMCt1jJwsoaqWtFff),
+or listen to it with this handy podcast player.
+
+{{< audio
+file="https://traffic.libsyn.com/secure/forcedn/seradio/581_Zach_Lloyd_Terminal_Emulators.mp3"
+caption="Listen to Software Engineering Radio Episode 581" >}}
 
 {{< include /_back-blog.qmd >}}
