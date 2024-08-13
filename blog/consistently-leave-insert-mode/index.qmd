@@ -8,29 +8,32 @@ description: <em>You know that joke about exiting Vim? Still true!</em>
 aliases: ["/writing/tool/vim/2017/06/30/Consistently-Leaving-Neovim/"]
 ---
 
+## Introduction
+
 I write my [research papers](/research/papers/) and [blog posts](/blog/) in
 [Neovim](https://neovim.io/). However, before using Neovim, I have spent years
-writing papers and code in Vim. <span class="gist">Like many others who use Vim
+writing papers and code in Vim. Like many others who use Vim
   for programming and writing, I have added the following two commands to my
   `.vimrc` file, thus enabling me to press `jk` when I want to leave insert
   mode. This works great in Vim &mdash; but I found that I needed a few other
   settings to ensure that I could consistently leave insert mode in
-  Neovim!</span>
+  Neovim!
 
 ```vim
 inoremap jk <ESC>
 inoremap <ESC> <NOP>
 ```
 
-<span class="gist">If you decide to use both Vim and Neovim, then you need to
-  have a configuration file that contains code blocks for one text editor or the
-  other, achieved by using conditional logic in the following code
-  segment.</span> The first line of code see to it that `<ESC>` is mapped the
-same way in Neovim as it is in Vim.  The second line of code is useful since
-Neovim now includes a built-in terminal window. Since you want to be able to
-exit insert mode in Neovim's terminal window in the same way that you exit
-insert mode in a regular buffer, this second line is needed. Okay, now you
-should be able to exit insert mode!
+## Mapping
+
+If you decide to use both Vim and Neovim, then you need to have a configuration
+file that contains code blocks for one text editor or the other, achieved by
+using conditional logic in the following code segment. The first line of code
+see to it that `<ESC>` is mapped the same way in Neovim as it is in Vim.  The
+second line of code is useful since Neovim now includes a built-in terminal
+window. Since you want to be able to exit insert mode in Neovim's terminal
+window in the same way that you exit insert mode in a regular buffer, this
+second line is needed. Okay, now you should be able to exit insert mode!
 
 ```vim
 if has("nvim")
@@ -38,8 +41,6 @@ if has("nvim")
   tnoremap jk <C-\><C-n>
 endif
 ```
-
-{{< include /_gist.qmd >}}
 
 ::: {.callout-note appearance="simple"}
 

@@ -1,0 +1,66 @@
+---
+author: Gregory M. Kapfhammer
+title: Studying the power of genetic algorithms for test suite prioritization
+date: '2010-01-01'
+date-format: YYYY
+categories: [post, research paper, regression testing]
+description: <em>How can genetic algorithms improve regression testing?</em>
+---
+
+## Introduction
+
+Ever wondered how to optimize the order of your test suite so that it quickly
+covers parts of your program under test? In one of my recent research papers
+[@Conrad2010a] [{{< iconify fa6-solid
+book-open>}}](/research/papers/conrad2010a/index.qmd), my co-authors and I
+experimentally investigated how genetic algorithms can best support test suite
+prioritizers that re-order a test suite to cover code quickly. This paper
+presents a comprehensive genetic algorithm-based prioritizer that employs a wide
+variety of mutation, crossover, and selection operators. Intrigued? Keep reading
+for a brief overview!
+
+## Research
+
+Our research introduces a genetic algorithm-based prioritizer that optimizes a
+population of test orderings by applying six mutation operators, seven
+approaches to individual crossover, and three methods for performing selection.
+Using the coverage effectiveness (CE) metric [@Kapfhammer2007] [{{< iconify
+fa6-solid book-open>}}](/research/papers/kapfhammer2007/index.qmd) as a fitness
+function, the prioritization method incorporates both the execution time and
+requirement coverage of each test to evolve a test suite that rapidly covers
+test requirements like the statements or branches in the program under test. 
+
+## Findings
+
+The empirical study reveals the unique role that the selection operator plays in
+constructing an effective ordering of a test suite. The results suggest that
+high selection intensity and selection elitism are both important for producing
+good test suite orderings. Furthermore, the genetic algorithm consistently
+produces results that are better than random search, suggesting that it may
+serve as the foundation for a powerful approach to test suite prioritization.
+
+## Future
+
+Our research opens up new avenues for future work. We intend to further
+investigate ways to improve the performance of the genetic algorithm, such as
+reducing fitness calculation time or implementing parallel genetic algorithms
+that reorder test suites. Interested in learning more about the power of genetic
+algorithms in test suite prioritization? Make sure to read [@Conrad2010a] [{{< iconify
+fa6-solid book-open>}}](/research/papers/conrad2010a/index.qmd) for more
+information about the technique that we implemented and the approach that we
+took to evaluate its effectiveness.
+
+::: {.callout-note appearance="simple"}
+
+## Further Details
+
+As we continue to explore the potential of genetic algorithms in software
+testing, your insights and suggestions are appreciated! If you have ideas or
+experiences related to this topic, please [contact](/contact/) me. Or, if you
+want to stay informed about new developments and blog posts related to software
+testing and other topics, please consider [subscribing](/support/) to my mailing
+list.
+
+:::
+
+{{< include /_back-blog.qmd >}}

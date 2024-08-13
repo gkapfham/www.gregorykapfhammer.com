@@ -1,0 +1,57 @@
+---
+author: Gregory M. Kapfhammer
+title: You gotta flake it till you make it! Tackling flaky tests with FITTER
+date: '2021-01-01'
+date-format: YYYY
+categories: [post, flaky tests, research methodology]
+description: <em>How can we find and fix flaky tests?</em>
+---
+
+## Introduction
+
+As software developers, we've all faced the frustration of flaky tests. In our
+recent paper, "Flake It 'Till You Make It" [@Parry2020] [{{< iconify fa6-solid
+book-open >}}](/research/papers/parry2020/index.qmd), my colleagues and I
+introduce FITTER (Flakiness Inducing TesT crEation and Repair), a novel
+technique to address this persistent problem.
+
+In this position paper, we argue that the best time to discover and repair flaky
+tests is when a developer first creates them. Our approach focuses on exposing
+and fixing "latent test flakiness" --- or tests that aren't currently flaky but
+could become so in the future.
+
+## Contributions
+
+Key contributions of this paper include:
+
+- Introducing the concept of latent test flakiness
+- Suggesting the use of automated program repair (APR) to generate flakiness-inducing tests
+- Suggest that FITTER focus first on test order dependencies and resource leaks
+
+We demonstrate FITTER's potential using a real-world example from the Hydra
+project, showing how it could reveal latent flakiness due to state pollution.
+Unlike previous methods, we aim for this proposed approach to be
+language-agnostic. We plan to evaluate FITTER with Python programs, addressing a
+gap in current research that has primarily focused on Java.
+
+## Future
+
+I believe our work offers a fresh perspective on an old problem. By proactively
+addressing flakiness, we aim to improve test reliability and reduce headaches
+for developers. If you're interested in learning more about our suggested
+approach, please checkout this short paper!
+
+::: {.callout-note appearance="simple"}
+
+## Further Details
+
+As we continue to explore and understand the intricacies of the FITTER
+technique, your insights and suggestions are invaluable. If you have ideas on
+how to build and evaluate this flaky test detection technique, please
+[contact](/contact/) me! Additionally, if you wish to stay updated on new
+developments and blog posts related to this topic and more, consider
+[subscribing](/support/) to my mailing list.
+
+:::
+
+{{< include /_back-blog.qmd >}}

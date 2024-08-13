@@ -52,7 +52,7 @@ listing:
 from rich.console import Console
 console = Console()
 console.print(
-    ":rocket: Hi! I'm a researcher, teacher, and software developer!"
+    ":rocket: Hi! I'm a researcher, teacher, software developer, and podcaster!"
 )
 ```
 
@@ -86,17 +86,16 @@ partially funded by <a href =
 
 ## Teaching
 
-<span class="gist">As an educator, I teach [courses](/teaching/index.qmd) in
-  the alphabetically ordered areas of algorithm analysis, discrete structures,
-  data management, distributed systems, software engineering, software testing,
-  operating systems, and web development.</span> I am also a research adviser
-for undergraduate and graduate theses and PhD dissertations. My expertise in
-teaching was recognized when Allegheny College presented him with the [Thoburn
-Award for Excellence in
-Teaching](https://sites.allegheny.edu/alumni/award-recipients/#thoburn). <span
-  class="gist">As a leader of software engineering teams, I create useful
-  educational [software](/software/index.qmd) that supports automated tasks
-  such as project assessment and team formation.</span>
+As an educator, I teach [courses](/teaching/index.qmd) in the alphabetically
+ordered areas of algorithm analysis, discrete structures, data management,
+distributed systems, software engineering, software testing, operating systems,
+and web development.</span> I am also a research adviser for undergraduate and
+graduate theses and PhD dissertations. My expertise in teaching was recognized
+when Allegheny College presented him with the [Thoburn Award for Excellence in
+Teaching](https://sites.allegheny.edu/alumni/award-recipients/#thoburn). As a
+leader of software engineering teams, I create useful educational
+[software](/software/index.qmd) that supports automated tasks such as project
+assessment and team formation.
 
 ## Research
 
@@ -104,29 +103,27 @@ Funded by [Facebook
 Research](https://research.fb.com/blog/2019/10/announcing-the-winners-of-the-2019-testing-and-verification-research-awards/)
 and the [Mozilla
 Foundation](https://foundation.mozilla.org/en/what-we-fund/awards/responsible-computer-science-challenge/winners/),
-<span class="gist">I conduct [research](/research/index.qmd) in areas such as
-  software engineering and software testing.</span> Collaborating with a
-diverse and skilled group of students and colleagues, I complete research that
-results in award-winning and frequently cited research
-[papers](/research/papers/index.qmd), oft-complimented
+I conduct [research](/research/index.qmd) in areas such as software engineering
+and software testing. Collaborating with a diverse and skilled group of students
+and colleagues, I complete research that results in award-winning and frequently
+cited research [papers](/research/papers/index.qmd), oft-complimented
 [presentations](/research/presentations/index.qmd), useful free and open-source
 [software](/software/index/qmd), and valued [service](/service/index.qmd) to a
-variety of organizations. I am an associate editor for the [Journal of
-Software: Evolution and
-Process](https://onlinelibrary.wiley.com/journal/20477481), an academic editor
-for the [PeerJ Computer Science](https://peerj.com/computer-science/) journal,
-a program committee member for conferences like the [International Conference
-on Software Testing, Verification and
-Validation](https://cs.gmu.edu/icst/index.html), and a reviewer for journals
-such as [Transactions on Software
+variety of organizations. I am an associate editor for the [Journal of Software:
+Evolution and Process](https://onlinelibrary.wiley.com/journal/20477481), an
+academic editor for the [PeerJ Computer
+Science](https://peerj.com/computer-science/) journal, a program committee
+member for conferences like the [International Conference on Software Testing,
+Verification and Validation](https://cs.gmu.edu/icst/index.html), and a reviewer
+for journals such as [Transactions on Software
 Engineering](https://www.computer.org/csdl/journal/ts). Along with serving as a
 review panelist at the [U.S. National Science Foundation](https://nsf.gov/), I
-work as a program chair and general chair for workshops and conferences. <span
-  class="gist">As a member of software engineering teams, I create useful
-  research [software](/software/index.qmd) for the purposes of experimentation,
-  replication, and technology transfer.</span>
+lead as a session chair, program chair, and general chair for international
+workshops and conferences. As a member of software engineering teams, I create
+useful research [software](/software/index.qmd) for the purposes of
+experimentation, replication, and technology transfer.
 
-<span class="gist">I collaboratively publish papers</span> like [@Walsh2017] [{{< iconify
+My co-authors and I publish papers like [@Walsh2017] [{{< iconify
 fa6-solid book-open
 >}}](/research/papers/walsh2017/index.qmd), [@Alsharif2018] [{{< iconify fa6-solid book-open >}}](/research/papers/alsharif2018/index.qmd), and
 [@McMinn2019] [{{< iconify fa6-solid book-open >}}](/research/papers/mcminn2019/index.qmd) at venues like the <a href =
@@ -136,14 +133,14 @@ fa6-solid book-open
   Testing, Verification and Validation</a>, and <a href =
   "https://www.computer.org/csdl/journal/ts">Transactions on Software
   Engineering</a>.
-The paper [@Kapfhammer2003] [{{< iconify fa6-solid book-open >}}](/research/papers/kapfhammer2003/index.qmd)
+Several of these papers were recognized with awards.
+For instance, the paper [@Kapfhammer2003] [{{< iconify fa6-solid book-open >}}](/research/papers/kapfhammer2003/index.qmd)
 received the ACM
 SIGSOFT Distinguished Paper Award at the <a
   href="http://esecfse.cs.helsinki.fi/">ACM SIGSOFT Foundations of Software
   Engineering Conference (ESEC/FSE 2003)</a>.
 The paper [@Conrad2010a] [{{< iconify fa6-solid book-open >}}](/research/papers/conrad2010a/index.qmd) was
-also recognized
-as the best paper in the <a
+the best paper in the <a
   href="http://www.sigevo.org/gecco-2010/organizers-tracks.html#sbse">Search-Based
   Software Engineering Track</a> of the <a
   href="http://www.sigevo.org/gecco-2010/">ACM SIGEVO Genetic and Evolutionary
@@ -176,14 +173,14 @@ My technical expertise led to these recent media engagements:
 :::{#featured-media-biography}
 :::
 
-{{< include /_gist.qmd >}}
-
 ::: {.callout-note appearance="simple"}
 
 ## Enthusiastic Invitation
 
-Do you work in one of my areas of expertise? Are you interested in
-collaborating with me on a project? If so, then please
-[contact](/contact/index.qmd) me with your ideas.
+Do you work in one of my areas of expertise? Are you interested in collaborating
+with me on a research, software engineering, or educational project or appearing
+as a guest on the [Software Engineering Radio](https://www.se-radio.net/)
+podcast? If so, then please [contact](/contact/index.qmd) me to share your
+ideas!
 
 :::

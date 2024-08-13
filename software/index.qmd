@@ -363,6 +363,10 @@ repositories for more details!
 <ul>
 
 <li class="software"><a target="_blank" rel="noopener"
+href="https://github.com/AstuteSource/chasten">chasten</a>: Configurable
+linting tool that uses XPath expressions</li>
+
+<li class="software"><a target="_blank" rel="noopener"
 href="https://github.com/GatorEducator/dockagator">dockagator</a>: Docker
 container and infrastructure for GatorGrader</li>
 
@@ -414,6 +418,11 @@ these tools in your teaching!
 <ul>
 
 <li class="software"><a target="_blank" rel="noopener"
+href="https://www.algorithmology.org">Algorithm Analysis</a>: Implement and evaluate
+correct and efficient algorithms
+</li>
+
+<li class="software"><a target="_blank" rel="noopener"
 href="https://proactiveprogrammers.com/data-abstraction/introduction-data-abstraction/">Data
 Abstraction</a>: Build and manipulate correct and efficient data structures
 </li>
@@ -424,9 +433,13 @@ Discrete Structures</a>: Clearly connect mathematics to Python programming
 </li>
 
 <li class="software"><a target="_blank" rel="noopener"
+href="https://www.developerdevelopment.com/">
+Developer Development</a>: Team-based introduction to building software systems
+</li>
+
+<li class="software"><a target="_blank" rel="noopener"
 href="https://www.os-sketch.com/">
 Operating Systems</a>: Build and understand operating system components
-
 </li>
 
 </ul>
@@ -549,10 +562,10 @@ Computer Science 280 Fall 2015</li>
 
 Prior to developing course platforms for each of the classes that I teach, I
 created GitHub repositories and/or organizations for every course and linked to
-them from my professional web site's [teaching](/teaching/index.qmd) page. Even
-though I no longer maintain out-of-date course content and instead encourage
-learners to visit my course platforms, you may [contact me](/contact/) with
-your request for old materials.
+them from my professional web site's [teaching](/teaching/index.qmd) page. While
+I no longer maintain out-of-date course content and instead encourage learners
+to visit my course platforms, you may [contact me](/contact/) with your request
+for old materials.
 
 :::
 
@@ -567,8 +580,12 @@ href="https://github.com/gkapfham/dotfiles">dotfiles</a>: Configuration files
 for my development environment</li>
 
 <li class="software"><a target="_blank" rel="noopener"
+href="https://github.com/gkapfham/nixos">nixos</a>: Configuration files
+for the NixOS Linux distribution</li>
+
+<li class="software"><a target="_blank" rel="noopener"
 href="https://github.com/gkapfham/tmuxinators">tmuxinators</a>: Configuration
-files for the terminal multiplexor</li>
+files for the terminal multiplexer</li>
 
 <li class="software"><a target="_blank" rel="noopener"
 href="https://github.com/gkapfham/vim-vitamin-onec">vim-vitamin-onec</a>: Dark
@@ -582,7 +599,9 @@ color scheme for Vim and Neovim</li>
 
 I aim to have a well-documented set of software tools that I run on the laptop
 that I use for all of my professional activities. I hope that some of these
-configurations can help you to setup your own development workstation!
+configurations can help you to setup your own workstation for teaching,
+research, and software engineering. Checkout
+my configuration of [NixOS](https://nixos.org/)!
 
 :::
 
@@ -608,7 +627,7 @@ href="https://github.com/education/classroom/issues/1543">education/classroom
 
 <li class="software"><a target="_blank" rel="noopener"
 href="https://github.com/git-lfs/git-lfs/issues/3474">git-lfs/git-lfs #3474</a>:
-Installation in ubuntu is not working</li>
+Installation in Ubuntu is not working</li>
 
 <li class="software"><a target="_blank" rel="noopener"
 href="https://github.com/junegunn/fzf/issues/712">junegunn/fzf Issue #712</a>:
@@ -710,7 +729,8 @@ support</li>
 
 Whenever I can do so, I participate in the maintenance and enhancement of
 open-software software tools by reporting defects and participating in
-discussions. My aim is to help and encourage the maintainers of these tools!
+discussions. Along with documenting my software adventures, I aim for these
+notes to help and encourage the maintainers of open-source software.
 
 :::
 
@@ -741,6 +761,7 @@ execution and management</li>
 #### Software Connection
 
 Although I no longer maintain any of these software tools, I'm glad to make them
-available so that others can use them as a source of inspiration.
+available as a history of prior work and as a source of inspiration and ideas
+for software engineers. 
 
 :::

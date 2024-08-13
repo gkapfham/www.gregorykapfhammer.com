@@ -11,6 +11,11 @@ project:
 
 website:
   title: ""
+  announcement: 
+    icon: megaphone
+    dismissable: true
+    content: 'I recently hosted an episode of <a href = "https://www-se-radio.net">Software Engineering Radio</a> called <a href="https://se-radio.net/2024/07/se-radio-625-jonathan-schneider-on-automated-refactoring-with-openrewrite/">\"Jonathan Schneider on Automated Refactoring with OpenRewrite\"</a>!'
+    type: primary
   page-navigation: true
   favicon: "icons/fxemoji-rocket.svg"
   open-graph: true

@@ -49,11 +49,11 @@
   service-count: 7
 - title: "International Conference on Software Engineering"
   categories: [conference]
-  date: '2022-01-01'
+  date: '2025-01-01'
   date-format: YYYY
   description: "Program Committee Member, Reviewer"
-  year-range: "2022 - 2005"
-  service-count: 4
+  year-range: "2025 - 2005"
+  service-count: 5
 - title: "International Conference on the Foundations of Software Engineering"
   categories: [conference]
   date: '2005-01-01'

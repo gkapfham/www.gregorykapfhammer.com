@@ -8,44 +8,54 @@ description: <em>We should write to aid reader understanding!</em>
 aliases: ["/writing/research/advice/2017/06/24/Avoid-Words/"]
 ---
 
-<span class="gist">As a writer of technical content in a field like computer
-  science you should strive for papers that are clear and easy to
-  understand.</span> Yet, as I write my own research [papers](/research/papers/)
-I often notice that I use certain words that make my content harder to
-interpret. Since many of these words are simple, I am often surprised that their
-introduction leads to confusion on my part when I review drafts of my writing.
-Finally, I don't think that I am the only technical writer abusing these words
-&mdash; I commonly see their inappropriate use when I am [reviewing](/service/)
-papers for top conferences and journals in the field of software engineering.
+## Introduction
+
+As a writer of technical content in a field like computer science you should
+strive for papers that are clear and easy to understand. Yet, as I write my own
+research [papers](/research/papers/) I often notice that I use certain words
+that make my content harder to interpret. Since many of these words are simple,
+I am often surprised that their introduction leads to confusion on my part when
+I review drafts of my writing. Finally, I don't think that I am the only
+technical writer abusing these words &mdash; I commonly see their inappropriate
+use when I am [reviewing](/service/) papers for top conferences and journals in
+the field of software engineering.
+
+# Words
 
 So, what are these five words that you should avoid in your technical writing?
 
-<span class="gist">The first two are "above" and "below" and they are often used
-  in phrases like "as depicted in the above figure" or "as given in the equation
-  below".</span> Yet, since the layout of a paper is fluid &mdash; especially
-when the revisions cause entire sections and subsections to move around &mdash;
-these words are problematic because readers who look above or below may not
-finding what you are referencing. For instance, the "above figure" may now be on
-the previous page and the "equation below" may have been pushed to the top of
-the next column!
+The first two are "above" and "below" and they are often used in phrases like
+"as depicted in the above figure" or "as given in the equation below". Yet,
+since the layout of a paper is fluid &mdash; especially when the revisions cause
+entire sections and subsections to move around &mdash; these words are
+problematic because readers who look above or below may not finding what you are
+referencing. For instance, the "above figure" may now be on the previous page
+and the "equation below" may have been pushed to the top of the next column!
 
-<span class="gist">Technical writers should also be careful about using the
-  words "later" and "previously" in phrases such as "this method is explained
-  later" and "using the previously defined equation".</span> Instead of
-including these words, authors should instead consider making a direct reference
-to the specific section that explains the method and the number of the
-previously defined equation. When readers have this additional information, it
-makes it much easier for them to see how the current content connects to what
-you wrote in other sections of your paper!
+Technical writers should also be careful about using the words "later" and
+"previously" in phrases such as "this method is explained later" and "using the
+previously defined equation". Instead of including these words, authors should
+instead consider making a direct reference to the specific section that explains
+the method and the number of the previously defined equation. When readers have
+this additional information, it makes it much easier for them to see how the
+current content connects to what you wrote in other sections of your paper!
 
-<span>The final word that writers should be careful about using is the royal
-  "we".</span> When used incorrectly, this word obscures the key technical
-contribution of your paper. For instance, if you write "next, we transform the
-graph" and this process is automatically performed by an algorithm, then you are
-underselling your paper's contribution since it seems that you (and your
-co-authors, if you jointly wrote the paper) manually transform this graph.
+The final word that writers should be careful about using is the royal "we".
+When used incorrectly, this word obscures the key technical contribution of your
+paper. For instance, if you write "next, we transform the graph" and this
+process is automatically performed by an algorithm, then you are underselling
+your paper's contribution since it seems that you (and your co-authors, if you
+jointly wrote the paper) manually transform this graph.
 
-{{< include /_gist.qmd >}}
+## Conclusion
+
+I hope that you are convinced that the careful selection of words is crucial in
+technical writing! Avoiding the use of words such as "above", "below", "later",
+"previously", and the royal "we" can significantly enhance the clarity and
+comprehensibility of your content. Instead, direct references to specific
+sections, figures, or equations can provide readers with a more straightforward
+and accessible understanding. Remember, the goal is to communicate your ideas
+effectively and clearly, and every word choice contributes to this objective!
 
 ::: {.callout-note appearance="simple"}
 

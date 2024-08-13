@@ -8,6 +8,8 @@ description: <em>Let's have educational discussions with industry!</em>
 aliases: ["/seed/interview/software/2017/07/05/Introducing-SEED/"]
 ---
 
+## Introduction
+
 Do you work in the software industry? Are you interested in sharing your
 knowledge and experiences with up-and-coming members of your field? Do you want
 to influence the way academics teach and conduct research? If so, then please
@@ -25,14 +27,16 @@ to improve how teachers equip the up-and-coming members of the software field
 and, if you are already in this profession, I hope that you will take fifteen
 minutes to help me achieve this goal.
 
-<span class="gist">Today I am introducing Educational Discussions with Software
-  Engineers, or the SEED project, in which I will interview and publish the
-  insights from influential members of the software industry.</span> If you are
-a software or hardware engineer, quality assurance engineer, database
-administrator, software project manager, technology evangelist &mdash; or an
-individual who operates in one of the many other important roles in the software
-field &mdash; then I hope that you will complete the [SEED survey](/seed/) right
-away. I'd love to publish your insights!
+## Launch
+
+Today I am introducing Educational Discussions with Software Engineers, or the
+SEED project, in which I will interview and publish the insights from
+influential members of the software industry. If you are a software or hardware
+engineer, quality assurance engineer, database administrator, software project
+manager, technology evangelist &mdash; or an individual who operates in one of
+the many other important roles in the software field &mdash; then I hope that
+you will complete the [SEED survey](/seed/) right away. I'd love to publish your
+insights!
 
 You might have noticed that I named this project "SEED" instead of "EDSE", which
 would be the most direct acronym to choose. I did this because I want practicing
@@ -44,13 +48,13 @@ allow the interviewees to teach both students and educators about the realities
 of the software industry. I also hope that the interviewees will plant seeds of
 inspiration in all of the individuals who read their published responses.
 
+## Connections
+
 My role in the SEED project is to administer the [SEED survey](/seed/),
 copy-edit and analyze the responses, and then publish them on my [blog](/blog/).
 I may also release a retrospective at the start of 2018 in which I will report
 back on the key lessons taught by the interviewees and make suggestions for ways
 in which educators like me can improve their teaching and research.
-
-{{< include /_gist.qmd >}}
 
 ::: {.callout-note appearance="simple"}
 
@@ -59,9 +63,8 @@ in which educators like me can improve their teaching and research.
 Are you an industrialist who wants to make a difference? Please complete the
 [SEED survey](/seed/) now! Although I have not published SEED interviews for
 several years, I would like publish your insights shortly after you complete the
-survey!
+survey! As always, your feedback and support is appreciated!
 
 :::
 
 {{< include /_back-blog.qmd >}}
-

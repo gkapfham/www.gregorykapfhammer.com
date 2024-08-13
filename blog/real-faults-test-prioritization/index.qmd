@@ -8,39 +8,42 @@ description: <em>Evaluate test prioritization with real faults!</em>
 aliases: ["/research/software/testing/2018/12/07/Real-Faults-Prioritization/"]
 ---
 
+## Introduction
+
 In a previous post, called [Regression testing of software is costly &mdash; but
 you can do something about it!](/blog/regression-testing-costly/index.qmd), I
 pointed out that software engineers often write test suites that they will
-re-run as they modify a program. <span class="gist">This valuable &mdash; and
-  expensive! &mdash; process, called regression testing, helps developers to
-  ensure that they have not introduced new defects as they add features or bug
-  fixes.</span>
+re-run as they modify a program. This valuable &mdash; and expensive! &mdash;
+process, called regression testing, helps developers to ensure that they have
+not introduced new defects as they add features or bug fixes.
 
-Instead of focuses on the practices of software engineers, this draws attention
-to the common practices that researchers follow when they are assessing the
-effectiveness of prioritization techniques that reorder a test suite. Many
-research papers, including some of my own like
-[@Lin2017] [{{< iconify fa6-solid book-open >}}](/research/papers/lin2017/index.qmd)
-seed the program under test with synthetic faults called mutants and then see
-how quickly different test orderings detect those faults. Since mutation testing
-tools exist for many programming languages, this approach is appealing to
-researchers who want to evaluate the effectiveness of a new test prioritizer.
+## Research
+
+Instead of focusing on the practices of software engineers, this post draws
+attention to the common practices that researchers follow when they are
+assessing the effectiveness of prioritization techniques that reorder a test
+suite. Many research papers, including some of my own like [@Lin2017] [{{<
+iconify fa6-solid book-open >}}](/research/papers/lin2017/index.qmd) seed the
+program under test with synthetic faults called mutants and then see how quickly
+different test orderings detect those faults. Since mutation testing tools exist
+for many programming languages, this approach is appealing to researchers who
+want to evaluate the effectiveness of a new test prioritizer.
+
+## Result
 
 One of my research collaborations lead to the recent publication of
 [@Paterson2018] [{{< iconify fa6-solid book-open >}}](/research/papers/paterson2018/index.qmd),
 a paper that calls into question the use of mutants during the experimental
-evaluation of test suite prioritization methods. <span class="gist">Using <a href =
+evaluation of test suite prioritization methods. Using <a href =
   "https://github.com/rjust/defects4j">Defects4J</a>, the database of real
 faults for Java programs, this paper reports on experiments that investigate how
 the use of mutants and real faults influence the experimental study of
-coverage-based test prioritizers.</span> The paper shows that real faults, in
+coverage-based test prioritizers. The paper shows that real faults, in
 comparison to synthetic mutants, are harder for a reordered test suite to
 detect. The results also suggest that using mutants leads to an
-unpredictable scoring of a test suite's effectiveness. <span class="gist">In the
+unpredictable scoring of test effectiveness. In the
   context of test prioritization, this paper shows that mutants
-  are not a surrogate for real faults!</span>
-
-{{< include /_gist.qmd >}}
+  are not a surrogate for real faults!
 
 ::: {.callout-note appearance="simple"}
 

@@ -8,11 +8,14 @@ description: <em>Have JUnit tests? Use Major to assess their quality!</em>
 aliases: ["/testing/mutation/research/2014/10/25/Major-Mutation/"]
 ---
 
-<span class="gist">If you have a [JUnit](http://www.junit.org) test suite, it is
-important that you ask the question "how good are my test cases?"</span> If you
-have a low quality test suite, then you may not be doing a good job at
-establishing a confidence in the correctness of the program under test&mdash;and
-there also could be defects lurking in the application!
+## Introduction
+
+If you have a [JUnit](http://www.junit.org) test suite, it is important that you
+ask the question "how good are my test cases?" If you have a low quality test
+suite, then you may not be doing a good job at establishing a confidence in the
+correctness of the program under test &mdash; and there also could be defects
+lurking in the application! How can you find these bugs and establish a
+confidence in your tests?
 
 One strategy for assessing the quality of your test suite is to run coverage
 analysis with a tool like [JaCoCo](http://www.eclemma.org/jacoco/).  Since a
@@ -20,17 +23,20 @@ test case cannot find a defect unless it first executes it, the idea is that you
 can judge a test suite to be good if it adequately covers the code in the
 program under test. However, coverage analysis does not help a tester to know
 with certainty that the tests are design in such a way that they are likely to
-find defects. <span class="gist">As an alternative to, or in addition to
-coverage analysis, mutation testing inserts simple faults into the program under
-test to determine whether or not the tests can find them. Intuitively, a test
-case that can find many of these faults is a good one.</span>
+find defects. As an alternative to, or in addition to coverage analysis,
+mutation testing inserts simple faults into the program under test to determine
+whether or not the tests can find them. Intuitively, a test case that can find
+many of these faults is a good one and faults that are overlooked suggest
+testing weaknesses.
+
+## Major
 
 While mutation analysis is simple and useful, historically, it has been
 difficult to apply to large-scale programs because it was computationally
-expensive. <span class="gist">This all changed with the design, implementation,
+expensive. This all changed with the design, implementation,
 and release of <a href="http://www.mutation-testing.org">Major</a>, a
 compiler-integrated mutation testing tool for the Java programming
-language.</span> You can learn more about Major by reading [@Just2011a] [{{<
+language. You can learn more about Major by reading [@Just2011a] [{{<
 iconify fa6-solid book-open
 >}}](/research/papers/just2011a/index.qmd) and
 [@Just2011b] [{{< iconify fa6-solid book-open
@@ -48,17 +54,14 @@ $ javac -XMutator:ALL MyFile.java
 # Generated Mutants: 190 (96 ms)
 ```
 
-The creator of Major, [Rene Just](https://homes.cs.washington.edu/~rjust/),
-took great care to ensure that it is fast, allowing mutation testing to be
-applied to large real-world programs. <span class="gist">Major version 2.0.0,
-for a recent version of the Java programming language, is now available for
-download&mdash;check Major's site so that you can download the tool and get
-started with mutation analysis for your JUnit test suites!</span> If you are
-interested in Major, then you may also want to investigate the use of
-[PIT](http://pitest.org/), another mutation testing tool for programs written
-in the Java language.
-
-{{< include /_gist.qmd >}}
+The creator of Major, [Rene Just](https://homes.cs.washington.edu/~rjust/), took
+great care to ensure that it is fast, allowing mutation testing to be applied to
+large real-world programs. Major version 2.0.0, for a recent version of the Java
+programming language, is now available for download&mdash;check Major's site so
+that you can download the tool and get started with mutation analysis for your
+JUnit test suites! If you are interested in Major, then you may also want to
+investigate the use of [PIT](http://pitest.org/), another mutation testing tool
+for programs written in the Java language.
 
 ::: {.callout-note appearance="simple"}
 

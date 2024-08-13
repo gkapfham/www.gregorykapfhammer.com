@@ -1,0 +1,55 @@
+---
+author: Gregory M. Kapfhammer
+title: Insights from my Software Engineering Radio interview with Zach Lloyd
+date: '2023-01-01'
+date-format: YYYY
+categories: [post, developer productivity, software engineering radio]
+description: <em>How does Warp offer an innovative terminal?</em>
+---
+
+## Introduction
+
+As a co-host of the [Software Engineering Radio](https://www.se-radio.net/)
+podcast, I interviewed [Zach Lloyd](https://www.linkedin.com/in/zachlloyd/), the
+founder and CEO of [Warp](https://www.warp.dev/), to discuss the innovative
+features and the development process behind the Warp command-line terminal.
+During our discussion, Lloyd highlights the unique aspects of Warp, such as its
+use of artificial intelligence (AI) for command completion and error
+explanation, its GPU-accelerated text rendering for enhanced performance, and
+its "command block" feature for improved command organization and sharing. He
+also delves into the technical details of implementing Warp in the
+[Rust](https://www.rust-lang.org/) programming language and using
+[Metal](https://developer.apple.com/metal/) for macOS GPU API, and shares his
+vision for Warp's future, including its expansion to other platforms and the
+web. I'm thankful that Zach took the time to participate in this discussion!
+
+## Insights
+
+I learned a lot from Zach during this interview. Here are some of his responses
+to my questions:
+
+**How is the Warp terminal different from other terminals?**
+
+> "The big sort of product innovations that we’re trying to bring to the terminal
+> is to make it work not just for individuals, but for teams. And so one of the
+> features I talked about earlier, the ability to take a block, get a link to it
+> and share it to people on your team is the start of that."
+
+**Why does the Warp terminal use the GPU?**
+
+> "The primary reason that we use the GPU is performance. When you’re a
+> developer using the terminal, there’s a lot of reasons why you might want to
+> use the terminal, but one of the things I think that’s absolutely essential is
+> that the terminal performs really, really well."
+
+**Why did Zach and his team choose Rust to build the Warp terminal?**
+
+> "Rust is a great language. It’s ... I think you typically call it a systems
+> language. It compiles down to binary ... It has great community support and it
+> has great cross-platform support, which is another really key thing for us."
+
+<p class="podcast-paragraph">
+  {{< fa headphones >}} Listen to the episode [Zach Lloyd on Terminal Emulators](https://se-radio.net/2023/09/se-radio-581-zach-lloyd-on-terminal-emulators/) from [Software Engineering Radio](https://se-radio.net/)!
+</p>
+
+{{< include /_back-blog.qmd >}}

@@ -8,13 +8,17 @@ description: <em>I've updated some of my software suggestions!</em>
 aliases: ["/writing/software/productivity/2018/11/01/Technique-Retrospective/"]
 ---
 
+## Introduction
+
 Many of the articles on my [blog](/blog/) describe the tools that I use when I
 prepare my [courses](/teaching/), conduct [research](/research/), write
-[papers](/research/papers/), and implement [software](/software/). <span
-  class="gist">Given the rapid pace of innovation in the field of software
-  engineering, I thought that it would be a good idea to share a status update
-  on my use of some software that I suggested in previous posts. But, be more
-  software tool changes are likely!</span>
+[papers](/research/papers/), and implement [software](/software/). Given the
+rapid pace of innovation in the field of software engineering, I thought that it
+would be a good idea to share a status update on my use of some software that I
+suggested in previous posts. With that said, be on the alert since more software
+tool changes are likely!
+
+## Review
 
 - In the article [Distraction-free writing with a terminal timer and Ubuntu
 notifications](/blog/distraction-free-terminal-timer/index.qmd), I suggested
@@ -61,11 +65,9 @@ performs fuzzy search on the output of an affiliated program that produces
 searchable text. Instead of using the [Silver Searcher](http://www.url.com) to
 find matching files or directories and produce a list for Fzf, I now use a
 drop-in replacement, called [Ripgrep](https://github.com/BurntSushi/ripgrep),
-with better performance. Again, you can check my `.vimrc` and `.zshrc` files in
-my [dotfiles](https://github.com/gkapfham/dotfiles) to learn how I configured
-these and other command-line tools.
-
-{{< include /_gist.qmd >}}
+with better performance. You can check my `.vimrc` and `.zshrc` files in my
+[dotfiles](https://github.com/gkapfham/dotfiles) to learn how I configured these
+and other tools.
 
 ::: {.callout-note appearance="simple"}
 

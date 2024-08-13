@@ -1,0 +1,52 @@
+---
+author: Gregory M. Kapfhammer
+title: Insights from my Software Engineering Radio interview with Hyrum Wright
+date: '2024-01-01'
+date-format: YYYY
+categories: [post, developer productivity, software engineering radio]
+description: <em>What are software engineering best practices at Google?</em>
+---
+
+## Introduction
+
+In a recent episode of the [Software Engineering
+Radio](https://www.se-radio.net/) podcast, I had the pleasure of interviewing
+[Hyrum Wright](https://www.hyrumwright.org/), a senior staff software engineer
+at Google and one of the editors of the book [Software Engineering at
+Google](https://abseil.io/resources/swe-book). During our conversation, we
+discussed various aspects of software engineering practices at Google, including
+testing, static analysis, large-scale code changes, and the importance of time,
+scale, and trade-offs. I'm thankful that Hyrum took the time to participate in
+this discussion! Here are some key insights from it:
+
+## Insights
+
+**How does a project's lifespan influence engineering decisions?**
+
+> "As you write software, think about how long does this software have to last?
+> Am I just going to throw this away tomorrow? Is it a bash script that's going
+> to exist on my command line, or is this something I need to have for the next
+> 10 years? At Google, we actually think a lot about whether or not this is
+> software that's going to last for a long time."
+
+**What role do constraints play in software engineering?**
+
+> "Picking appropriate constraints as an organization scale is actually a really
+> powerful way of enabling that kind of scalability. We kind of knew that going
+> in, but it's amazing to me how that came out in the book, whether it’s, again,
+> large-scale changes or build systems or testing infrastructure or style
+> guides. All those things benefit from having appropriate sets of constraints."
+
+**What role do automated changes play in software engineering?**
+
+> "Early on when we were doing a lot of these automated changes, people would
+> push back, how do I know that this change is correct? Do I trust you? There's
+> a strong culture of stewardship within Google’s code base. Everyone can read
+> all the source code, but specific individuals and teams are responsible for
+> maintaining specific parts of the code base."
+
+<p class="podcast-paragraph">
+  {{< fa headphones >}} Listen to the episode [Hyrum Wright on Software Engineering at Google](https://se-radio.net/2024/03/se-radio-609-hyrum-wright-on-software-engineering-at-google/) from [Software Engineering Radio](https://se-radio.net/) for more insights!
+</p>
+
+{{< include /_back-blog.qmd >}}

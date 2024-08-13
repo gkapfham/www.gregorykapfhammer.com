@@ -81,6 +81,10 @@ p a:hover {
   text-underline-offset: 0.3em;
 }
 
+.podcast-paragraph {
+  margin-bottom: 1em;
+}
+
 .body a:hover {
   color: #e65100 !important;
 }
@@ -158,6 +162,35 @@ div.callout-tip.callout {
   color: #fff;
   background-color: #007bff;
   border-color: #007bff;
+}
+
+/* }}} */
+
+/* Announcement {{{ */
+
+.alert-primary {
+    --bs-alert-color: var(--bs-primary-text-emphasis);
+    --bs-alert-bg: var(--bs-primary-bg-subtle);
+    --bs-alert-border-color: var(--bs-primary-border-subtle);
+    --bs-alert-link-color: var(--bs-primary-text-emphasis);
+}
+
+.alert {
+    --bs-alert-padding-x: 1rem;
+    --bs-alert-padding-y: 1rem;
+    --bs-alert-margin-bottom: 1rem;
+    --bs-alert-color: inherit;
+    --bs-alert-border-color: transparent;
+    --bs-alert-border: 1px solid var(--bs-alert-border-color);
+    --bs-alert-border-radius: 0.25rem;
+    --bs-alert-link-color: inherit;
+    position: relative;
+    padding: var(--bs-alert-padding-y) var(--bs-alert-padding-x);
+    margin-bottom: var(--bs-alert-margin-bottom);
+    color: var(--bs-alert-color);
+    background-color: var(--bs-alert-bg);
+    border: var(--bs-alert-border);
+    border-radius: 0rem;
 }
 
 /* }}} */
@@ -535,7 +568,7 @@ th {
 }
 
 #listing-featured-papers {
-  margin-bottom: -2.0rem !important;
+  margin-bottom: -3rem !important;
   border-bottom: none;
 }
 
@@ -555,7 +588,7 @@ th {
 }
 
 #listing-featured-presentations {
-  margin-bottom: -2.0rem !important;
+  margin-bottom: -3rem !important;
 }
 
 #featured-presentations-pagination .quarto-listing {
@@ -574,7 +607,7 @@ th {
 }
 
 #listing-featured-posts {
-  margin-bottom: -2.0rem !important;
+  margin-bottom: -3rem !important;
 }
 
 #featured-posts-pagination .quarto-listing {
@@ -593,7 +626,8 @@ th {
 }
 
 #listing-featured-service {
-  margin-bottom: -1.5rem !important;
+  margin-bottom: -2.25rem !important;
+  /* margin-bottom: -1.5rem !important; */
 }
 
 #featured-service-pagination .quarto-listing {
@@ -612,7 +646,7 @@ th {
 }
 
 #listing-featured-service-biography {
-  margin-bottom: -2rem !important;
+  margin-bottom: -2.25rem !important;
 }
 
 #featured-service-biography-pagination .quarto-listing {
@@ -631,7 +665,7 @@ th {
 }
 
 #listing-featured-media {
-  margin-bottom: -2.0rem !important;
+  margin-bottom: -2.25rem !important;
 }
 
 #featured-media-pagination .quarto-listing {

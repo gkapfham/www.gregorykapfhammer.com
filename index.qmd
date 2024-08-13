@@ -39,22 +39,23 @@ listing:
     sort-ui: false
     filter-ui: false
     fields: [author, date, title, description]
-    max-items: 3
-    page-size: 3
+    max-items: 5
+    page-size: 5
   - id: featured-posts
     contents:
       - "blog/**/*.qmd"
       - "!blog/index.qmd"
     sort:
       - "date desc"
-      - "author title categories"
+      - "title"
+      - "author categories"
     type: default
     date-format: "YYYY"
     sort-ui: false
     filter-ui: false
     fields: [author, title, date, description, reading-time]
-    max-items: 3
-    page-size: 3
+    max-items: 5
+    page-size: 5
   - id: featured-service
     contents:
       - "service/**/*.qmd"
@@ -212,19 +213,58 @@ effectively rerunning test suites
 
 ## Highlighted Courses
 
+- [Algorithm Analysis](https://www.algorithmology.org): Implement and evaluate
+correct and efficient algorithms
+
 - [Data
-  Abstraction](https://proactiveprogrammers.com/data-abstraction/introduction-data-abstraction/):
-  Build and manipulate correct and efficient data structures
+Abstraction](https://proactiveprogrammers.com/data-abstraction/introduction-data-abstraction/):
+Build and manipulate correct and efficient data structures
 
 - [Discrete
-  Structures](https://proactiveprogrammers.com/discrete-structures/introduction-discrete-structures/):
-  Clearly connect mathematics to Python programming
+Structures](https://proactiveprogrammers.com/discrete-structures/introduction-discrete-structures/):
+Clearly connect mathematics to Python programming
 
 - [Operating Systems](https://www.os-sketch.com/): Build and understand operating system components
+
+- [Software Engineering](https://developerdevelopment.com/): Team-based
+introduction to building software systems
 
 ::: {.callout-tip appearance="minimal"}
 
 {{< fa rocket >}} <em>Explore</em> all of my [teaching materials](teaching/index.qmd)
+
+:::
+
+## Software Engineering
+
+<ul>
+
+<li><p><a target="_blank" rel="noopener"
+href="https://github.com/GatorEducator/cellveyor">Cellveyor</a>: Easily convey
+reports from Google Sheets to GitHub</p></li>
+
+<li><p><a target="_blank" rel="noopener"
+href="https://github.com/AstuteSource/chasten">Chasten</a>: Configurable
+linting tool that uses XPath expressions</p></li>
+
+<li><p><a target="_blank" rel="noopener"
+href="https://github.com/GatorEducator/gatorgrade">GatorGrade</a>: Python
+front-end for the GatorGrader assessment tool</p></li>
+
+<li><p><a target="_blank" rel="noopener"
+href="https://github.com/GatorEducator/gatorgrader">GatorGrader</a>: Automated
+assessment for source code and writing</p></li>
+
+<li><p><a target="_blank" rel="noopener"
+href="https://github.com/schemaanalyst-team/schemaanalyst">SchemaAnalyst</a>:
+Data generation and mutation analysis for database schemas</p></li>
+
+</ul>
+
+
+::: {.callout-tip appearance="minimal"}
+
+{{< fa rocket >}} <em>Benefit</em> from my open-source [software](software/index.qmd)
 
 :::
 

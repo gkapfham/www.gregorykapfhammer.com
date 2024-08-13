@@ -1,0 +1,70 @@
+---
+author: Gregory M. Kapfhammer
+title: Does parameter tuning improve search-based test data generation?
+date: '2013-01-01'
+date-format: YYYY
+categories: [post, research paper, software testing]
+description: <em>Parameter tuning is expensive ... and maybe not worth it?</em>
+---
+
+## Introduction
+
+Ever wondered about the intricacies of parameter tuning in search-based test
+data generation? In a recent research paper [@Kotelyanskii2014a] [{{< iconify
+fa6-solid book-open>}}](/research/papers/kotelyanskii2014a/index.qmd), I delve
+into the challenges and outcomes of parameter tuning for a tool called
+`EvoSuite`. This tool uses a genetic algorithm to generate a JUnit test suite
+for a Java class. The paper presents an empirical study that further supports
+previous research findings: tuning `EvoSuite`'s parameters with a well-known
+optimizer called `SPOT` does not yield configurations significantly better than
+the defaults. Keep reading to discover the key findings of this intriguing
+research!
+
+## Setup
+
+This paper's experiment involved a random selection of 10 Java projects
+available in the `SF100` repository, with 475 classes in total. The evaluation
+metric for these experiments was the lower-is-better inverse branch coverage
+metric. To collect enough data points to support a rigorous statistical
+analysis, we ran `EvoSuite` for 100 trials with the default configuration and
+100 trials with the configuration returned after parameter tuning with `SPOT`.
+
+## Findings
+
+The paper presents several key findings:
+
+- **Improvements**: The configurations returned by the parameter tuning
+algorithm only performed better on eleven of the 475 classes.
+
+- **Disparities**: Many Java classes in the randomly chosen subset that were
+either "easy" (i.e., all configurations always achieved perfect coverage) or
+"hard" (i.e, all configurations always achieved no coverage because, in some
+cases, `EvoSuite` could not generate any data).
+
+- **Limitations**: The `SPOT`-derived configuration either performed worse than
+the defaults or had no statistically significant impact, suggesting the limits
+of parameter tuning.
+
+## Conclusion
+
+The research suggests that `EvoSuite`’s default parameters have been set by
+experts and are thus suitable for use in future experimental studies and
+industrial testing efforts. This negative result highlights the challenges of
+parameter tuning in search-based test data generation.
+
+::: {.callout-note appearance="simple"}
+
+## Further Details
+
+If you're interested in diving deeper into this research, I encourage you to
+read the full paper [@Kotelyanskii2014a] [{{< iconify fa6-solid
+book-open>}}](/research/papers/kotelyanskii2014a/index.qmd). After you have read
+the paper, your insights about parameter tuning or search-based test data
+generation are appreciated! If you have ideas or experiences related to this
+topic, please [contact](/contact/) me. If you want to stay informed about new
+developments and blog posts related to this research paper, consider
+[subscribing](/support/) to my mailing list.
+
+:::
+
+{{< include /_back-blog.qmd >}}

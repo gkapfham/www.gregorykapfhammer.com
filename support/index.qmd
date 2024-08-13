@@ -18,7 +18,9 @@ Innovating in technical areas such as software engineering and software testing,
 I teach [courses](/teaching/index.qmd), conduct [research](/research/index.qmd),
 write [papers](/research/papers/index.qmd) and a [blog](/blog/index.qmd), give
 [presentations](/research/presentations/index.qmd), create
-[software](/software/index.qmd), and [serve](/service/index.qmd) organizations. Let's stay connected!
+[software](/software/index.qmd), [serve](/service/index.qmd) organizations, and
+co-host the [Software Engineering Radio](https://www.se-radio.net/) podcast.
+Let's stay connected!
 
 ## Subscription
 

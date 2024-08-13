@@ -42,8 +42,8 @@ console.print(
 An award-winning [teacher](/teaching/index.qmd),
 [researcher](/research/index.qmd), [writer](/research/papers/index.qmd), and
 [presenter](/research/presentations/index.qmd), I have expertise in areas such
-as software engineering and software testing.</span> I am an associate editor
-for the [Journal of Software: Evolution and
+as software engineering and software testing. I am an associate editor for the
+[Journal of Software: Evolution and
 Process](https://onlinelibrary.wiley.com/journal/20477481), an academic editor
 for the [PeerJ Computer Science](https://peerj.com/computer-science/) journal, a
 program committee member for conferences like the [International Conference on

@@ -8,6 +8,8 @@ description: <em>Hey, you can use AVMf to do SBSE in Java!</em>
 aliases: ["/research/software/tool/2017/01/20/2017-Search-Tool/"]
 ---
 
+## Introduction
+
 Prior research and development experiences have proven the Alternating Variable
 Method (AVM) to be a fast and effective local search technique for search-based
 software engineering. Moreover, recent improvements to the AVM have generalized
@@ -15,12 +17,14 @@ the representations it can optimize and have provably reduced its running time.
 Yet, until recently, there has been no general, publicly-available
 implementation of the AVM that incorporates these features.
 
-<span class="gist">I am pleased to report that [@McMinn2016b] [{{< iconify fa6-solid book-open >}}](/research/papers/mcminn2016b/index.qmd)
+I am pleased to report that [@McMinn2016b] [{{< iconify fa6-solid book-open >}}](/research/papers/mcminn2016b/index.qmd)
 introduced AVMf, an object-oriented
 framework that provides an implementation of the AVM in the Java programming
 language. AVMf is available from the <a
-  href="https://github.com/AVMf/avmf">AVMf/avmf</a> GitHub repository for you to
-configure and use in a wide variety of projects.</span>
+  href="https://github.com/AVMf/avmf">AVMf/avmf</a> GitHub repository for your
+use!
+
+## Launch Pad
 
 My hope is that AVMf can serve as a "launch pad" for new research and
 development in search-based software engineering (SBSE). So, do you have a new
@@ -28,9 +32,5 @@ search-based method but are dreading the creation of a bespoke system? Are you
 interested in learning how to use an AVM? Or, do you have an idea for a new
 SBSE example that we should integrate into the tool? If yes, then please try
 AVMf and [contact](/contact/index.qmd) me to share your ideas!
-
-{{< include /_gist.qmd >}}
-
-<br>
 
 {{< include /_back-blog.qmd >}}

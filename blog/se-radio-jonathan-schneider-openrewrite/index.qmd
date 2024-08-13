@@ -1,0 +1,53 @@
+---
+author: Gregory M. Kapfhammer
+title: Insights from my Software Engineering Radio interview with Jonathan Schneider
+date: '2024-04-01'
+date-format: YYYY
+categories: [post, regression testing, software engineering radio]
+description: <em>How does OpenRewrite support automated refactoring?</em>
+---
+
+## Introduction
+
+In a recent episode of the [Software Engineering
+Radio](https://www.se-radio.net/) podcast, I had the opportunity to interview
+[Jonathan Schneider](https://www.linkedin.com/in/jonkschneider/), a co-founder
+of [Moderne](https://www.moderne.ai/) and the creator of
+[OpenRewrite](https://docs.openrewrite.org/). Our conversation focused on the
+unique features of OpenRewrite, an automated refactoring tool for software
+modernization. I'm thankful that Jonathan took the time to participate in this
+energizing discussion! Here are three key insights about refactoring with
+OpenRewrite:
+
+## Insights
+
+**What is automated refactoring and what are its benefits?**
+
+> "Automated refactoring is writing software that rewrites other software. Its
+> main benefits are to achieve some modernization in that software, to fix
+> security vulnerabilities, and to ensure a consistent style or fix
+> inconsistencies in codebases."
+
+**How does OpenRewrite ensure the correctness of automated refactoring?**
+
+> "The correctness really stems from some of the characteristics of that data
+> that we mentioned earlier. It's when a recipe is able to use the type
+> attribution information that the compiler knows that this info method comes
+> from a particular type that we're able to make that change. So type
+> attribution is one of the essential elements of correctness in a recipe."
+
+**How does OpenRewrite handle the challenge of code quality issues?**
+
+> "We've been taking those recommendations and then matching them to the recipe
+> catalog, those 2,200 recipes that exist, pre-running them, and when they make
+> change, then we have a signal that there is something to do on the codebase at
+> large."
+
+<p class="podcast-paragraph">
+  {{< fa headphones >}} Listen to the episode [Jonathan Schneider on Automated
+  Refactoring with
+  OpenRewrite](https://se-radio.net/2024/07/se-radio-625-jonathan-schneider-on-automated-refactoring-with-openrewrite/)
+  from [Software Engineering Radio](https://se-radio.net/)!
+</p>
+
+{{< include /_back-blog.qmd >}}

@@ -12,14 +12,14 @@ aliases: ["/testing/database/idea/2015/07/05/Big-Data-Big-Deal/"]
 
 ## Important Context
 
-This post was written to support my participation in a panel at the
-<em>27th International Conference on Software Engineering and Knowledge
-Engineering</em>. To view the accompanying slides for this presentation, please
-refer to [@Kapfhammer2015a] [{{< iconify fa6-solid book-open
+This post was written to support my participation in a panel at the <em>27th
+  International Conference on Software Engineering and Knowledge
+  Engineering</em>. To view the accompanying slides for this presentation,
+please refer to [@Kapfhammer2015a] [{{< iconify fa6-solid book-open
 >}}](/research/presentations/kapfhammer2015a/index.qmd).
 If you want to learn more about new work that my colleagues and students and I
-are conducting in the area of efficiently testing data-centric applications,
-then please read [@Kinneer2015] [{{< iconify fa6-solid book-open
+are conducting in the area of efficiently and effectively testing data-centric
+applications, then please read [@Kinneer2015] [{{< iconify fa6-solid book-open
 >}}](/research/papers/kinneer2015/index.qmd) and
 [@Kinneer2015a] [{{< iconify fa6-solid book-open
 >}}](/research/papers/kinneer2015a/index.qmd), two papers
@@ -27,23 +27,27 @@ that were also presented at the same conference.
 
 :::
 
+## Introduction
+
 Big data analytics software allows researchers and practitioners to create
-descriptive models and make predictions. <span class="gist">Often characterized
+descriptive models and make predictions. Often characterized
 by the "three Vs" of volume, velocity, and variety, big data systems must
 respectively handle large amounts of data that arrive rapidly and take many
-different forms.</span> In fields such as evidence-based medicine and the
+different forms. In fields such as evidence-based medicine and the
 detection of financial fraud, big data software is poised to and, indeed
 already is, making important contributions.
 
-<span class="gist">However, there is an additional "V" that is often overlooked
-by both researchers and practitioners: veracity.</span> That is, if there is a
+## Challenge
+
+However, there is an additional "V" that is often overlooked
+by both researchers and practitioners: veracity. That is, if there is a
 lack of correctness in the software and data that makes up a big data analytics
 system, then the data models and the resulting predictions may be compromised
 &mdash; with serious consequences. For instance, the Data Warehouse Institute
 reports that North American organizations experience a $611 billion annual loss
-due to poor data quality. <span class="gist">Scott W. Ambler argues that the
+due to poor data quality. Scott W. Ambler argues that the
 "virtual absence" of software and data testing is the primary cause of this
-loss.</span> Although this example is not specifically tied to big data
+loss. Although this example is not specifically tied to big data
 systems, it clearly illustrates the risks associated with a lack of veracity in
 any data-rich field.
 
@@ -54,10 +58,12 @@ the testing of both data mining systems and database applications) has recently
 been published, few software engineering researchers have focused on big data
 testing. Since veracity is not always considered by big data researchers, the
 challenge for these individuals is to create and assess new techniques that,
-whenever possible, holistically consider all of the "four Vs". <span
-class="gist">If not already doing so, practitioners in both of these fields
-should start to establish a confidence in the correctness of both their
-software and data through the disciplined use of testing.</span>
+whenever possible, holistically consider all of the "four Vs". If not already
+doing so, practitioners in both of these fields should start to establish a
+confidence in the correctness of both their software and data through the
+disciplined use of testing.
+
+## Position
 
 The title of my position statement poses the question "is big data a big deal?"
 Of course, the answer to this question is "yes". With that said, the increase
@@ -65,12 +71,10 @@ of big data's importance and impact will be accelerated and even sustained if
 researchers and practitioners in fields such as software engineering, software
 testing, and big data collaborate with each other to develop efficient and
 effective data analytics systems that construct high-quality models and make
-accurate predictions. <span class="gist">Let's collaborate across the fields of
+accurate predictions. Let's collaborate across the fields of
 software engineering and big data to ensure that we have a positive influence
 on society &mdash; thus proving to be a "bigger deal" together than we would
-have been on our own.</span>
-
-{{< include /_gist.qmd >}}
+have been on our own.
 
 ::: {.callout-note appearance="simple"}
 
@@ -83,8 +87,8 @@ noteworthy one being [@McMinn2015] [{{< iconify fa6-solid book-open
 >}}](/research/papers/mcminn2015/index.qmd).
 If you are interested in using SchemaAnalyst to test your own database schema,
 then please download and use the tool, which is now available from the GitHub
-site <a
-href="https://github.com/schemaanalyst/schemaanalyst">schemaanalyst/schemaanalyst</a>.
+repository <a
+  href="https://github.com/schemaanalyst/schemaanalyst">schemaanalyst/schemaanalyst</a>.
 
 :::
 

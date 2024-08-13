@@ -8,12 +8,13 @@ description: <em>Re-running your test suite is often expensive!</em>
 aliases: ["/testing/research/advice/2017/07/03/Regression-Testing-Costs/"]
 ---
 
-<span class="gist">To establish a confidence in the correctness of their
-  software, developers will often write test suites that they will re-run as the
-  program is modified, attempting to ensure that they have not introduced
-  regressions, or faults that arise as an unintended side effect of changes.
-  This process, known as regression testing, is important and yet
-  expensive.</span>
+## Introduction
+
+To establish a confidence in the correctness of their software, developers will
+often write test suites that they will re-run as the program is modified,
+attempting to ensure that they have not introduced regressions, or faults that
+arise as an unintended side effect of changes. This process, known as regression
+testing, is important and yet expensive.
 
 Regression testing is costly because, as software grows in size and complexity,
 a suite accumulate more tests and therefore take longer to run. For instance, a
@@ -21,6 +22,8 @@ a suite accumulate more tests and therefore take longer to run. For instance, a
 product](http://dl.acm.org/citation.cfm?id=2119649) required several days. Of
 course, even if a regression test suite only takes minutes to run, developers
 may find its execution distracting.
+
+## Techniques
 
 Prior work has developed many techniques to address the substantial
 computational cost associated with regression testing, with test suite reduction
@@ -30,7 +33,7 @@ full test suite
 [@Lin2014] [{{< iconify fa6-solid book-open >}}](/research/papers/lin2014/index.qmd).
 Alternatively, test suite prioritization aims to find a test
 ordering such that faults in a program can be detected as early as is possible,
-thus enabling the processes of debugging and program repair to quickly start
+thus enabling the processes of debugging to start
 [@Lin2013] [{{< iconify fa6-solid book-open >}}](/research/papers/lin2013/index.qmd).
 
 Another approach to regression testing involves selecting only those test cases
@@ -43,8 +46,6 @@ regression testing? If you are, then please read [@Kapfhammer2010] [{{< iconify
 fa6-solid book-open >}}](/research/papers/kapfhammer2010/index.qmd) to explore
 the basics of the field.
 
-{{< include /_gist.qmd >}}
-
 ::: {.callout-note appearance="simple"}
 
 ## Further Details
@@ -52,12 +53,11 @@ the basics of the field.
 Do you perform regression testing of software in industry? Or, do you conduct
 regression testing on an open-source tool? Are you interested in discovering
 ways to transition cutting-edge research into your practice of regressing
-testing? If you answered "yes" to any of these questions, I hope that you will
-soon [contact](/contact/) me with your own ideas and experiences. Finally, since
-this blog post was written, my colleagues and students and I have published
-additional papers about regression testing, with a focus on re-running tests for database
-schemas, as explained in papers like
-[@Alsharif2020] [{{< iconify fa6-solid book-open >}}](/research/papers/alsharif2020/index.qmd).
+testing? If you answered "yes" to any of these questions, please
+[contact](/contact/) me with your own ideas and experiences. Finally, since I
+wrote this blog post, my colleagues and students and I have published additional
+papers about regression testing, with a focus on re-running tests for database
+schemas, in papers like [@Alsharif2020] [{{< iconify fa6-solid book-open >}}](/research/papers/alsharif2020/index.qmd).
 
 :::
 

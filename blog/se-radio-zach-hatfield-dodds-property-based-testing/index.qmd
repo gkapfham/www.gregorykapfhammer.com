@@ -1,0 +1,61 @@
+---
+author: Gregory M. Kapfhammer
+title: Insights from my Software Engineering Radio interview with Zac Hatfield-Dodds
+date: '2023-01-02'
+date-format: YYYY
+categories: [post, developer productivity, software engineering radio]
+description: <em>What is revolutionary about property-based testing?</em>
+---
+
+## Introduction
+
+In a recent episode of the [Software Engineering
+Radio](https://www.se-radio.net/) podcast, I had the pleasure of interviewing
+[Zac Hatfield-Dodds](https://zhd.dev/), a leading researcher, software engineer,
+and maintainer of open-source software. Zac currently leads the assurance team
+at [Anthropic](https://www.anthropic.com/), an artificial intelligence (AI)
+safety and research company. He is also known for his contributions to open
+source projects like `Hypothesis`, `Pytest`, and `HypoFuzz`. We discussed
+property-based testing and how it can be effectively implemented using
+`Hypothesis`, an advanced testing library for Python. I'm really thankful that
+Zac took the time to share his knowledge with me!
+
+## Insights
+
+I learned a lot from Zac during this interview. Here are some of his key insights:
+
+**What is property-based testing and how does it work with the Hypothesis tool?**
+
+> "Property-based testing gives us a different attitude to what we check and a
+> much richer set of tooling to help computers generate those inputs for us. ...
+> So when I think about writing software tests and the kind of unit test style,
+> maybe they’re testing small units, maybe they’re testing whole programs. There
+> are basically two problems that you have to solve in order to have a software
+> test. The first is that you need to work out what kind of input data you run,
+> and the second is that you need to check in some way that your code didn't do
+> the wrong thing."
+
+**What  challenges or limitations may developers face when using Hypothesis?**
+
+> "The first thing I do wanna say before I get into the downsides is that I
+> think almost every good test suite will involve some or maybe many example
+> based tests. ... The problem with basing your entire test suite on example based
+> tests is just that it takes a long time and it gets really tedious to write
+> them. ... And so I think most of the downsides are a combination of requiring a
+> lot of manual effort to define a rigorous test suite like this. And also that
+> it’s really easy to miss the edge cases that you didn't think of."
+
+**How does Hypothesis work and how can developers effectively use it?**
+
+> "What you do with Hypothesis is you write a test function which should work
+> for any valid input and then you describe to Hypothesis what kind of inputs
+> are valid. ... And then Hypothesis can try to generate many valid inputs
+> according to that specification you gave it looking for one which makes your
+> test fail."
+
+<p class="podcast-paragraph">
+  {{< fa headphones >}} Listen to the episode [Zac Hatfield-Dodds on Property-Based Testing](https://se-radio.net/2023/11/se-radio-589-zac-hatfield-dodds-on-property-based-testing-in-python/) from [Software Engineering Radio](https://se-radio.net/)!
+</p>
+
+{{< include /_back-blog.qmd >}}
+

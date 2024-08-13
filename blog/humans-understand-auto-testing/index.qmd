@@ -4,9 +4,11 @@ title: Can human testers understand automatically generated test cases?
 date: '2020-01-01'
 date-format: YYYY
 categories: [post, database testing, developer productivity]
-description: <em>How well to humans understand automatically generated tests?</em>
+description: <em>How well do humans understand automatically generated tests?</em>
 aliases: ["/research/software/testing/2020/03/10/Human-Understandable-Test-Data/"]
 ---
+
+## Introduction
 
 Throughout my career, my <a href="/research/">research</a>
 has focused on creating and evaluating methods for automatically generating test
@@ -22,10 +24,12 @@ generation tools for the Java programming language. However, until recently,
 none of my research <a href="/research/papers/">papers</a>
 assessed whether or not these approaches actually help human testers. Of course,
 my colleagues and I recognized that this was an area that warranted further
-investigation! <span class="gist">I'm pleased to report that our recent paper,
+investigation! I'm pleased to report that our recent paper,
 [@Alsharif2019] [{{< iconify fa6-solid book-open >}}](/research/papers/alsharif2019/index.qmd)
 presents a human study of automated test data generation techniques for
-relational database schemas.</span>
+relational database schemas.
+
+## Research
 
 Since relational databases are a key component of software systems ranging from
 small mobile to large enterprise applications, there are well-studied methods
@@ -43,7 +47,7 @@ the database's contents. While having tools like SchemaAnalyst [@McMinn2016c]
 automatically generate tests is useful, as I mentioned previously, there has
 been no research to analyze how well testers both understand tests involving SQL
 and decide if they reveal flaws. So, my collaborators and I decided to conduct a
-human study!
+human study --- both a first for me and for this research area!
 
 The aforementioned paper,
 [@Alsharif2019] [{{< iconify fa6-solid book-open >}}](/research/papers/alsharif2019/index.qmd)
@@ -54,20 +58,22 @@ two key findings. First, the choice of data values in <code>INSERT</code>s
 influences human understandability: the use of default values for elements not
 involved in the test (but necessary for adhering to SQL’s syntax rules) aided
 participants, allowing them to easily identify and understand the important test
-values. Yet, negative numbers and "garbage" strings hindered this process. The
-second finding is more far reaching: humans found the outcome of test cases very
-difficult to predict when <code>NULL</code> was used in conjunction with foreign
-keys and <code>CHECK</code> constraints. This suggests that, while including
-<code>NULL</code>s can surface the confusing semantics of database schemas,
-their use makes tests less understandable for humans. While these results
-specifically apply to database schema tests, we anticipate that the results may
-apply to automatically generated tests for general-purpose programs in languages
-like Java.
+values. Yet, negative numbers and "garbage" strings hindered this process.
 
-<span class="gist">In the context of database schema testing, my co-authors and
-  I make the following suggestions for both the software engineers who manually
-  write tests and for developers who create tools that automatically generate
-  tests.</span>
+The second finding is more far reaching: humans found the outcome of test cases
+very difficult to predict when <code>NULL</code> was used in conjunction with
+foreign keys and <code>CHECK</code> constraints. This suggests that, while
+including <code>NULL</code>s can surface the confusing semantics of database
+schemas, their use makes tests less understandable for humans. While these
+results specifically apply to database schema tests, we anticipate that the
+results may apply to automatically generated tests for general-purpose programs
+in languages like Java.
+
+## Recommendations
+
+In the context of database schema testing, my co-authors and I make the
+following suggestions for both the software engineers who manually write tests
+and for developers who create tools that automatically generate tests.
 
 - Negative numbers and <code>NULL</code> values are confusing for human testers
 and tests should only include them when they are needed to reveal a defect.
@@ -78,9 +84,7 @@ focus on the critical values on which the test's status hinges.
 
 - Since readable strings, in comparison to random textual values, help to ensure
 that human testers better understand the intention of the test case, they should
-be used whenever possible.
-
-{{< include /_gist.qmd >}}
+be used if possible.
 
 ::: {.callout-note appearance="simple"}
 
@@ -89,10 +93,10 @@ be used whenever possible.
 While some automated test data generation methods are starting to adopt these
 suggestions, more work remains to create automated test data generation tools
 and manual testing guidelines that ensure that tests are understandable by human
-testers. Do you have ideas about how to make tests more human readable? Are you
+testers. Do you have ideas about how to make tests more readable? Are you
 interested in collaborating with me on research to make the next generation of
-automated test data generation techniques? If so, then I hope that you will
-[contact](/contact/) me to share some of your ideas!
+automated test data generators? If so, then I hope that you will
+[contact](/contact/) me with your ideas!
 
 :::
 
