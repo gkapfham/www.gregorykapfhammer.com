@@ -1,6 +1,6 @@
 ---
 author: Gregory M. Kapfhammer
-title: Insights from my Software Engineering Radio Interview with Zac Hatfield-Dodds
+title: Insights from my Software Engineering Radio interview with Zac Hatfield-Dodds
 date: '2023-01-02'
 date-format: YYYY
 categories: [post, developer productivity, software engineering radio]
