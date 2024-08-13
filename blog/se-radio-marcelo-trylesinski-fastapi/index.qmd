@@ -10,14 +10,14 @@ description: <em>Let's learn more about the creation and use of FastAPI!</em>
 ## Introduction
 
 In a recent episode of the [Software Engineering
-Radio](https://www.se-radio.net/) podcast, I had interviewed [Marcelo
+Radio](https://www.se-radio.net/) podcast, I interviewed [Marcelo
 Trylesinski](https://fastapiexpert.com/), a senior software engineer at
 [Pydantic](https://docs.pydantic.dev/latest/) and a maintainer of open-source
 Python tools including [Starlette](https://www.starlette.io/) and
 [Uvicorn](https://www.uvicorn.org/). Our conversation focused on the unique
 features of [FastAPI](https://fastapi.tiangolo.com/), a modern and
 high-performance web framework for building APIs with Python 3.6+ based on
-standard Python type hints. I'm thankful that Marcelo was talked with me about
+standard Python type hints. I'm thankful that Marcelo talked with me about
 the design, implementation, and use of FastAPI --- it was a fun and fast-paced
 conversation!
 
