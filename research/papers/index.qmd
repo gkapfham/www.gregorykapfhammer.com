@@ -23,14 +23,21 @@ execute:
 ---
 
 ```{python}
+#| echo: false
 from pathlib import Path
+
+def count_research_papers():
+  paper_dir = Path(".")
+  subdirs = [pdir for pdir in paper_dir.iterdir() if pdir.is_dir()]
+  paper_count = len(subdirs)
+  return paper_count
+
+```
+
+```{python}
 from rich.console import Console
-
 console = Console()
-paper_dir = Path(".")
-subdirs = [pdir for pdir in paper_dir.iterdir() if pdir.is_dir()]
-paper_count = len(subdirs)
-
+paper_count = count_research_papers()
 console.print(
     f":rocket: It was super-fun to collaboratively create these {paper_count} papers!"
 )
