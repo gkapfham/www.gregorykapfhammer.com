@@ -106,6 +106,8 @@ format:
     # and builds will normally crash with an out
     # of memory error from the JavaScript runtime
     embed-resources: false
+    # do not use mathjax as it is a large download
+    # and there is no math content inside of this site
     html-math-method: plain
     mainfont: IBM Plex Sans
     monofont: IBM Plex Mono
