@@ -19,25 +19,24 @@ useful tools!
 
 ## Zooming
 
-<span class="gist">To take advantage of the "directory zooming" technique that I
-  present in this post, you will need to install two programs:
-  [fzf](https://github.com/junegunn/fzf) and
-  [fasd](https://github.com/clvv/fasd).</span> To learn more about these
-programs, you should visit their sites and read their extensive documentation.
-For now, you should know that <code>fzf</code> is a "fuzzy finder" that makes it
-easy for you to select matching items from a list. Alternatively, the
-<code>fasd</code> program stores information about the files and directories
-that you frequently access, allowing you to quickly navigate to them.
+To take advantage of the "directory zooming" technique that I present in this
+post, you will need to install two programs:
+[fzf](https://github.com/junegunn/fzf) and
+[fasd](https://github.com/clvv/fasd).</span> To learn more about these programs,
+you should visit their sites and read their extensive documentation. For now,
+you should know that <code>fzf</code> is a "fuzzy finder" that makes it easy for
+you to select matching items from a list. Alternatively, the <code>fasd</code>
+program stores information about the files and directories that you frequently
+access, allowing you to quickly navigate to them.
 
 ## Combination
 
-<span class="gist">Now, we can put these two programs together so that `fasd`
-  stores the directories you most commonly access and `fzf` acts as a filter for
-  those directories, helping you to change into the one whose name you only
-  partially remember.</span> In the following code segment, the `t()` function
-&mdash; that is short for "to" &mdash; first gets a list of all the directories
-you have recently and frequently visited and then passes that program's output
-to `fzf`.
+Now, we can put these two programs together so that `fasd` stores the
+directories you most commonly access and `fzf` acts as a filter for those
+directories, helping you to change into the one whose name you only partially
+remember. In the following code segment, the `t()` function &mdash; that is
+short for "to" &mdash; first gets a list of all the directories you have
+recently and frequently visited and then passes that program's output to `fzf`.
 
 ```shell
 t() {
