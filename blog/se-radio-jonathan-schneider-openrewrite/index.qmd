@@ -55,7 +55,7 @@ your favorite podcast player, [Apple
 Podcasts](https://podcasts.apple.com/us/podcast/software-engineering-radio-the-podcast-for/id120906714),
 [Spotify](https://open.spotify.com/show/6UO3XQclSuNnGxB39QdAnL),
 [YouTube](https://www.youtube.com/playlist?list=PLHJB2bhmgB7esz0BxMCt1jJwsoaqWtFff),
-or this handy podcast player.
+or listen to it with this handy podcast player.
 
 {{< audio
 file="https://traffic.libsyn.com/secure/forcedn/seradio/625-jonathan-schneider-automated-refactoring.mp3"
