@@ -3,7 +3,7 @@ author: Gregory M. Kapfhammer
 title: Programming is not software engineering
 date: '2023-01-01'
 date-format: YYYY
-categories: [post, developer development, software engineering]
+categories: [post, developer development, software development]
 description: <em>What is the best way to teach software engineering?</em>
 ---
 
