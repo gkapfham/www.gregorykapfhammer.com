@@ -436,6 +436,18 @@ div.quarto-post .thumbnail {
   font-weight: 500;
 }
 
+#title-block-header.quarto-title-block.default .quarto-title-meta-contents {
+    font-size: 1em;
+}
+
+#title-block-header.quarto-title-block.default .keywords .block-title, #title-block-header.quarto-title-block.default .description .block-title, #title-block-header.quarto-title-block.default .abstract .block-title {
+    margin-top: 1em;
+    text-transform: uppercase;
+    font-size: 1em;
+    opacity: 1;
+    font-weight: 500;
+}
+
 .quarto-title .quarto-categories .quarto-category {
   padding: 0.25em 0.75em;
   font-size: 0.55em;
