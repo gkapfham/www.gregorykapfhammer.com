@@ -10,12 +10,11 @@ aliases: ["/writing/research/vim/2017/07/01/Speedy-Writing-Neovim/"]
 
 ## Introduction
 
-Since, in my experience, writing technical research
-  [papers](/research/papers/) is a challenging task, I always try to use a
-  writing environment that effectively supports my endeavors.</span> If I am
-writing a paper in Neovim, then I now often use
-[deoplete.nvim](https://github.com/Shougo/deoplete.nvim) complete the words that
-I am writing in my paper.
+Since, in my experience, writing technical research [papers](/research/papers/)
+is a challenging task, I always try to use a writing environment that
+effectively supports my endeavors. If I am writing a paper in Neovim, then I now
+often use [deoplete.nvim](https://github.com/Shougo/deoplete.nvim) complete the
+words that I am writing in my paper.
 
 Unlike other completion engines for Vim and Neovim, `deoplete.nvim` is flexible
 in its capability to perform completion from a wide variety of sources. In
