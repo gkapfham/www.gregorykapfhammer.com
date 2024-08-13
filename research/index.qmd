@@ -19,13 +19,13 @@ console.print(
 ## Overview
 
 As an experimental computer scientist, the goal of my research is to design,
-implement, and rigorously evaluate techniques and tools that support the
-creation of useful, dependable, and efficient software.</span> My research
-addresses the challenges in fields such as software engineering, software
-testing, and computer systems. I conduct this research with undergraduates at
-[Allegheny College](http://www.allegheny.edu), graduate students and professors
-at several universities, and colleagues in industry. Keep reading for more
-details!
+implement, and evaluate techniques and tools that support the creation of
+useful, dependable, and efficient software. My research addresses the challenges
+in fields such as software engineering, software testing, and computer systems.
+I conduct this research with undergraduates at [Allegheny
+College](http://www.allegheny.edu), graduate students and professors at several
+universities (e.g., University of Sheffield and the University of Passau), and
+colleagues in industry. Keep reading for more details!
 
 ## Details
 
@@ -36,8 +36,10 @@ conclusions based on the results. Each project focuses on the development and
 evaluation of [software](/software/) artifacts that can be used in both
 empirical studies and real-world practice by undergraduate and graduate
 students, software engineers, and computer scientists in both academia and
-industry. In addition to supporting my professional [service](/service/), my
-research results in award-winning and frequently cited research
+industry.
+
+In addition to supporting my professional [service](/service/), my research
+results in award-winning and frequently cited research
 [papers](/research/papers/), oft-complimented
 [presentations](/research/presentations/), and useful free and open-source
 [software](/software/). My research focuses on software engineering and software
