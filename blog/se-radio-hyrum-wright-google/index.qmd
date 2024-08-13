@@ -17,7 +17,7 @@ Google](https://abseil.io/resources/swe-book). During our conversation, we
 discussed various aspects of software engineering practices at Google, including
 testing, static analysis, large-scale code changes, and the importance of time,
 scale, and trade-offs. I'm thankful that Hyrum took the time to participate in
-this discussion! Here are some key insights from it.
+this discussion! Here are some key insights from it:
 
 ## Insights
 
