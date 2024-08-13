@@ -51,8 +51,8 @@ to my questions:
 ## Listen
 
 In conclusion, if you're interested in learning more about the design and
-implementation of Warp, I highly recommend that you listen to [Zach Lloyd on
-Terminal
+implementation of Warp or programming in Rust, I highly recommend that you
+listen to [Zach Lloyd on Terminal
 Emulators](https://se-radio.net/2023/09/se-radio-581-zach-lloyd-on-terminal-emulators/)
 from [Software Engineering Radio](https://se-radio.net/)! You can find it on
 your favorite podcast player, [Apple
@@ -64,9 +64,5 @@ or listen to it with this handy podcast player.
 {{< audio
 file="https://traffic.libsyn.com/secure/forcedn/seradio/581_Zach_Lloyd_Terminal_Emulators.mp3"
 caption="Listen to Software Engineering Radio Episode 581" >}}
-
-<!-- <p class="podcast-paragraph"> -->
-<!--   {{< fa headphones >}} Listen to the episode [Zach Lloyd on Terminal Emulators](https://se-radio.net/2023/09/se-radio-581-zach-lloyd-on-terminal-emulators/) from [Software Engineering Radio](https://se-radio.net/)! -->
-<!-- </p> -->
 
 {{< include /_back-blog.qmd >}}
