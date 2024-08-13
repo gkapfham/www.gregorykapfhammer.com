@@ -14,12 +14,14 @@ Radio](https://www.se-radio.net/) podcast, I had the pleasure of interviewing
 [Hyrum Wright](https://www.hyrumwright.org/), a senior staff software engineer
 at Google and one of the editors of the book [Software Engineering at
 Google](https://abseil.io/resources/swe-book). During our conversation, we
-discussed various aspects of software engineering practices at Google, including
-testing, static analysis, large-scale code changes, and the importance of time,
-scale, and trade-offs. I'm thankful that Hyrum took the time to participate in
-this discussion! Here are some key insights from it:
+discussed various aspects of software engineering practices at Google,
+including testing, static analysis, large-scale code changes, and the
+importance of time, scale, and trade-offs.
 
 ## Insights
+
+ I'm thankful that Hyrum took the time for this interview! Here are some key
+ insights from it:
 
 **How does a project's lifespan influence engineering decisions?**
 
