@@ -46,7 +46,7 @@ Since 2015 my colleagues and I have also been building and experimentally
 studying tools that support the testing of responsive web pages. To date, our
 work has created automated techniques to address two key challenges: (i)
 surfacing differences in responsive web layouts and (ii) detecting responsive
-layout failures without explicit test oracles.</span> Our work published in
+layout failures without explicit test oracles. Our work published in
 [@Walsh2015] [{{< iconify fa6-solid book-open >}}](/research/papers/walsh2015/index.qmd)
 and
 [@Walsh2020] [{{< iconify fa6-solid book-open >}}](/research/papers/walsh2020/index.qmd)
