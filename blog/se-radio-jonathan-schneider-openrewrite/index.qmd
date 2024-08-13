@@ -16,10 +16,11 @@ of [Moderne](https://www.moderne.ai/) and the creator of
 [OpenRewrite](https://docs.openrewrite.org/). Our conversation focused on the
 unique features of OpenRewrite, an automated refactoring tool for software
 modernization. I'm thankful that Jonathan took the time to participate in this
-energizing discussion! Here are three key insights about refactoring with
-OpenRewrite:
+energizing discussion about automated refactoring with OpenRewrite!
 
 ## Insights
+
+I learned a lot from Jonathan during this interview. Here are some of his key insights:
 
 **What is automated refactoring and what are its benefits?**
 
