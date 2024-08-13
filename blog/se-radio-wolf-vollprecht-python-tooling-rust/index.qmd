@@ -15,10 +15,12 @@ and CEO of [Prefix](https://prefix.dev/), to discuss the creator of
 [Pixi](https://pixi.sh/latest/), a Rust-based workflow manager for Python.
 During our conversation, Wolf shared some fascinating insights into both the
 development process and unique features of Pixi. I'm thankful that Wolf took
-the time to participate in this thought-provoking discussion! Here are three
-key takeaways from it:
+the time to participate in this thought-provoking discussion about Rust-based
+tooling for Python!
 
 ## Insights
+
+ Here are three takeaways from my interview with Wolf Vollprecht:
 
 **Why did Wolf choose the Rust programming language to build Pixi?**
 
