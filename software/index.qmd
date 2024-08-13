@@ -367,6 +367,10 @@ repositories for more details!
 <ul>
 
 <li class="software"><a target="_blank" rel="noopener"
+href="https://github.com/GatorEducator/cellveyor">cellveyor</a>: Easily convey
+reports from Google Sheets to GitHub</li>
+
+<li class="software"><a target="_blank" rel="noopener"
 href="https://github.com/AstuteSource/chasten">chasten</a>: Configurable
 linting tool that uses XPath expressions</li>
 
