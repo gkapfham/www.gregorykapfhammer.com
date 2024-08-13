@@ -1,0 +1,58 @@
+---
+author: Gregory M. Kapfhammer
+title: Insights from my Software Engineering Radio interview with Marcelo Trylesinski
+date: '2024-03-01'
+date-format: YYYY
+categories: [post, developer development, software engineering radio]
+description: <em>Let's learn more about the creation and use of FastAPI!</em>
+---
+
+## Introduction
+
+In a recent episode of the [Software Engineering
+Radio](https://www.se-radio.net/) podcast, I had interviewed [Marcelo
+Trylesinski](https://fastapiexpert.com/), a senior software engineer at
+[Pydantic](https://docs.pydantic.dev/latest/) and a maintainer of open-source
+Python tools including [Starlette](https://www.starlette.io/) and
+[Uvicorn](https://www.uvicorn.org/). Our conversation focused on the unique
+features of [FastAPI](https://fastapi.tiangolo.com/), a modern and
+high-performance web framework for building APIs with Python 3.6+ based on
+standard Python type hints. I'm thankful that Marcelo was talked with me about
+the design, implementation, and use of FastAPI! Here are three key insights
+from our discussion:
+
+## Insights
+
+**What is FastAPI and why is it important?**
+
+> "FastAPI, it’s a framework that’s used to build APIs in Python. It leverages
+> type hints and it’s very fun to develop with."
+
+**How does FastAPI ensure high performance and developer productivity?**
+
+> "So for me I always saw, I mean even if I’m the maintainer of Uvicorn, the
+> server that makes is one of the reasons that FastAPI to be fast on my
+> perspective, the fast is more about the user perspective. Because in any case
+> you’re still working with Python and there are certain limitations but the
+> idea is that since you’re leveraging the async world, you don’t need to use
+> the threads. So you can have more tasks running in a single thread and then
+> you have more capacity to run more tasks and that means that you can receive
+> and process more requests and that makes the server faster I would say."
+
+**How does FastAPI handle authentication and authorization?**
+
+> "So FastAPI does not handle that for you. So you need to implement the layer
+> yourself. What it does is you can define a way for how to interpret some data
+> that comes from the request. So for example, you have HTTP basic class, which
+> it’s used for FastAPI to get the authorization header and then get the
+> username and the password and it provides that to your endpoint. So you have,
+> you use that class just to kind of parse that data for you, but it does not
+> handle that for you."
+
+<p class="podcast-paragraph">
+  {{< fa headphones >}} Listen to the episode [Marcelo Trylesinski on
+  FastAPI](https://se-radio.net/2024/07/se-radio-624-marcelo-trylesinski-on-fastapi/)
+  from [Software Engineering Radio](https://se-radio.net/)!
+</p>
+
+{{< include /_back-blog.qmd >}}
