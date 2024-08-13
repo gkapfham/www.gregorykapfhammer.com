@@ -79,7 +79,8 @@ website:
         href: https://fosstodon.org/@gkapfham
       - icon: linkedin
         href: http://www.linkedin.com/in/GregKapfhammer
-      - text: "{{< iconify academicons google-scholar-square size=18.85px >}}"
+      - icon: google
+      # - text: "{{< iconify academicons google-scholar-square width=17.8px height=17.9px >}}"
         href: http://scholar.google.com/citations?user=g0eDPjYAAAAJ
   twitter-card:
     creator: "@GregKapfhammer"
@@ -105,6 +106,7 @@ format:
     # and builds will normally crash with an out
     # of memory error from the JavaScript runtime
     embed-resources: false
+    html-math-method: plain
     mainfont: IBM Plex Sans
     monofont: IBM Plex Mono
     fontsize: 1.375em
