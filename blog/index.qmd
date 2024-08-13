@@ -26,7 +26,7 @@ execute:
 #| echo: false
 from pathlib import Path
 
-def get_blog_post_count():
+def count_blog_posts():
   blog_dir = Path(".")
   subdirs = [bdir for bdir in blog_dir.iterdir() if bdir.is_dir()]
   post_count = len(subdirs)
@@ -36,7 +36,7 @@ def get_blog_post_count():
 ```{python}
 from rich.console import Console
 console = Console()
-post_count = get_blog_post_count()
+post_count = count_blog_posts()
 console.print(
     f":rocket: Enjoy reading these {post_count} blog posts! What else should I write about?"
 )
