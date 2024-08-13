@@ -4,7 +4,7 @@ title: Insights from my Software Engineering Radio interview with Hyrum Wright
 date: '2024-01-01'
 date-format: YYYY
 categories: [post, developer productivity, software engineering radio]
-description: <em>How do Google engineers innovate?</em>
+description: <em>What are software engineering best practices at Google?</em>
 ---
 
 ## Introduction
