@@ -7,7 +7,8 @@ page-layout: full
 #| echo: false
 import re
 
-def count_software(file_path: str) -> int:
+def count_software() -> int:
+    file_path = "../software/index.qmd"
     with open(file_path, "r") as file:
         html_content = file.read()
     pattern = r'<li\s+class="software"\s*>'
@@ -17,8 +18,7 @@ def count_software(file_path: str) -> int:
 ```{python}
 from rich.console import Console
 console = Console()
-file_path = "../software/index.qmd"
-count = count_software(file_path)
+count = count_software()
 console.print(
       f":rocket: Here are {count} software projects to which I have contributed!"
 )
