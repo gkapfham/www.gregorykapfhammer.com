@@ -62,15 +62,3 @@ jobs:
           poetry run python scripts/publish-site.py --stage render --render-file index.qmd
           poetry run python scripts/publish-site.py --stage post-render
           poetry run python scripts/publish-site.py --stage netlify 
-
-          # Old version:
-          # # generate the markdown files from the bibliography for:
-          # # 1) research papers
-          # # 1a) conference papers
-          # # 1b) journal papers
-          # # 2) research presentations
-          # poetry run python scripts/parse-bibliography.py --force
-          # # directly publish a version of the site to Netlify, using
-          # # the optimize profile that will perform minification
-          # # poetry run quarto render --profile optimize
-          # poetry run quarto publish netlify --profile optimize
