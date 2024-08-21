@@ -87,6 +87,7 @@ KEYWORDS_PRESENTATIONS = {
 KEYWORDS_ALL = {
     "adequacy criteria": "test coverage",
     "coverage criteria": "test coverage",
+    "coverage effectiveness": "test coverage",
     "current status": "literature review",
     "database-aware": "database testing",
     "defect prediction": "defect prediction",
