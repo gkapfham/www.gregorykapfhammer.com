@@ -80,7 +80,6 @@ website:
       - icon: linkedin
         href: http://www.linkedin.com/in/GregKapfhammer
       - icon: google
-      # - text: "{{< iconify academicons google-scholar-square width=17.8px height=17.9px >}}"
         href: http://scholar.google.com/citations?user=g0eDPjYAAAAJ
   twitter-card:
     creator: "@GregKapfhammer"
