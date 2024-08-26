@@ -37,6 +37,10 @@ circumstances when I must decline a meeting due to schedule constraints.
 
 ## Schedule
 
-You can also schedule an appointment with me through this widget!
+You can [schedule an
+appointment](https://calendar.app.google/oNetMoRQcawCLEsy8) or schedule one with the
+following embedded widget!
 
-<iframe src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ1JEAQfUpRIlkRnAhIetnHZeUMLKTtD1Ahawn8xsXvKpxY2BntK8RmZUFOfA73-5oiQ-fOZxZP-?gv=true" style="border: 0" width="100%" height="800" frameborder="0"></iframe>
+<!-- Google Calendar Appointment Scheduling begin -->
+<iframe src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ1_eRi6JBQbgNBmihMrp9qr5_XL2nWQn9HnL3R0rsB9e4YyteKd6EgYdG0ZQ0svomGOMBvuhFbA?gv=true" style="border: 0" width="100%" height="600" frameborder="0"></iframe>
+<!-- end Google Calendar Appointment Scheduling -->
