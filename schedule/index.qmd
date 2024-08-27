@@ -15,7 +15,7 @@ console.print(
 ## Overview
 
 To arrange a meeting with me during my office hours, please try to <a
-href="https://calendar.app.google/PJcK4hv1zBNMg3Sv5">Schedule
+href="https://calendar.app.google/oNetMoRQcawCLEsy8">Schedule
 an Appointment</a>&mdash;you can browse my available office hours and pick a
 time slot that fits into our schedules. Once you have chosen your appointment,
 it will appear in both your Google Calendar and mine. If you would like to see
