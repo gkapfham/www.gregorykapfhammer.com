@@ -10,14 +10,13 @@ description: <em>How do Google's engineers perform mutation testing?</em>
 ## Introduction
 
 In a recent episode of the [Software Engineering
-Radio](https://www.se-radio.net/) podcast, I had the pleasure of interviewing
-[Goran Petrovic](https://www.linkedin.com/in/goran-petrovi%C4%87-1a94641ba/), a
-senior staff software engineer at Google. Our conversation revolved around the
-intriguing topic of mutation testing at Google, a practice that assesses the
-efficacy of a test suite by inserting small faults into programs and measuring
-the test suite's ability to detect them. In the interview Goran offers
-exceptional insights into mutation testing and how it fits into the broader
-software engineering practices at Google.
+Radio](https://www.se-radio.net/) podcast, I interviewed [Goran
+Petrovic](https://www.linkedin.com/in/goran-petrovi%C4%87-1a94641ba/), a senior
+staff software engineer at Google. Our conversation focused on mutation testing
+at Google, a practice that assesses the efficacy of a test suite by inserting
+small faults into programs and measuring the test suite's ability to detect
+them. In this interview Goran offers insights into mutation testing and how it
+fits into broader software engineering practices.
 
 ## Key Insights
 
