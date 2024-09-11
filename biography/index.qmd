@@ -161,7 +161,7 @@ won the distinguished paper award from the <a href =
 
 ### Research Service
 
-I recently leveraged my research expertise to serve the following venues:
+I recently leveraged my scientific expertise to serve the following venues:
 
 :::{#featured-service-biography}
 :::
@@ -180,8 +180,9 @@ My technical expertise led to these recent media engagements:
 Do you work in one of my areas of expertise? Are you interested in
 collaborating with me on a research, software engineering, or educational
 project? Do you think that your knowledge and skills equip you to be guest on
-the [Software Engineering Radio](https://www.se-radio.net/) podcast? Or, would
-you like me to be a guest on a podcast that you host? If so, then please
+the [Software Engineering Radio](https://www.se-radio.net/) podcast that I
+co-host? Or, would you like me to be a guest on a podcast that you host? If you
+answered "yes" to one or more of these questions, then I invite you to
 [contact](/contact/index.qmd) me to share your ideas!
 
 :::
