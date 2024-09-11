@@ -7,6 +7,8 @@ categories: [post, mutation testing, software engineering radio]
 description: <em>How do Google's engineers perform mutation testing?</em>
 ---
 
+
+
 ## Introduction
 
 In a recent episode of the [Software Engineering
@@ -15,7 +17,9 @@ Radio](https://www.se-radio.net/) podcast, I had the pleasure of interviewing
 senior staff software engineer at Google. Our conversation revolved around the
 intriguing topic of mutation testing at Google, a practice that assesses the
 efficacy of a test suite by inserting small faults into programs and measuring
-the test suite's ability to detect them.
+the test suite's ability to detect them. In the interview Goran offers
+exceptional insights into mutation testing and how it fits into the broader
+software engineering practices at Google.
 
 ## Key Insights
 
@@ -24,27 +28,38 @@ insights from it:
 
 **What is mutation testing and how does it work?**
 
-Goran explained that mutation testing is a step further from standard criteria
-like line coverage. It ensures that the code is not only covered with tests but
-also properly tested in terms of assertions. Mutation testing mimics potential
-bugs, such as replacing 'a + b' with 'a - b', and then runs all the tests. If no
-tests fail, it indicates that the test suite might not be effective despite
-having coverage.
+> Mutation testing is just a step further in this to ensure that the code is not
+> only covered with tests, but actually properly tested in terms of assertions.
+> You could imagine that you can have a function that you call from a test and
+> don't assert anything. It can have 100% coverage, but it will never catch any
+> real bugs. And mutation testing comes to help in terms of validating that these
+> tests do something useful.
 
-**The Role of Constraints in Software Engineering**
+**Why was it initially hard to convince engineers at Google to use mutation testing?**
 
-Goran emphasized the importance of appropriate constraints in software
-engineering, especially as an organization scales. These constraints can enable
-scalability and benefit various aspects of software engineering, including
-large-scale changes, build systems, testing infrastructure, and style guides.
+> Mutation testing generates a huge amount of mutants and
+then shoves them down your throat. And when I started implementing this, what I
+did is I read a bunch of research papers. I was really excited. I started coding
+and in a few weeks I had something that worked originally for C++. And then I
+started generating these mutants. [...] And my first run, I remember it took a
+few hours to run. I ran it on my on a small code base of my team.
+> [...] And when I when it finished, I looked at the file and could barely open
+> it in
+Vim. It was huge! There were thousands, tens of thousands of mutants. And after
+three pages and two coffees, I was so tired that I just closed the file and
+forgot about it for a few weeks because there was a huge amount of mutants. And
+most of them were not things that I would actually be adding tests for!
 
-**Automated Changes in Software Engineering**
+**How did you know that it was the right time to introduce mutation testing at Google?**
 
-Goran also touched on the role of automated changes in software engineering. He
-mentioned that there was initial resistance to these changes, but over time, the
-culture of stewardship within Google’s codebase prevailed. Everyone can read all
-the source code, but specific individuals and teams are responsible for
-maintaining specific parts of the codebase.
+>I had no idea. I joined the team in Google Shopping. And as it used to be the
+>case, everyone had a 20% project. And my manager said, oh, we started this
+>mutation testing last hackathon. Maybe you can inherit it. And I'm like, oh, I
+>have no idea what this is. I've never heard of this, but I will inherit it
+>because I don't really have a choice. So I started reading those papers and
+>eventually rewrote all of their code because it was a hackathon project one
+>week of like just try to get a proof of concept working. And then that it
+>became my project over time!
 
 ## Listen
 
