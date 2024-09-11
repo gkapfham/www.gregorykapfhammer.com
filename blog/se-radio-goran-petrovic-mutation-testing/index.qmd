@@ -34,29 +34,28 @@ insights from it:
 
 **Why was it initially hard to convince engineers at Google to use mutation testing?**
 
-> Mutation testing generates a huge amount of mutants and
-then shoves them down your throat. And when I started implementing this, what I
-did is I read a bunch of research papers. I was really excited. I started coding
-and in a few weeks I had something that worked originally for C++. And then I
-started generating these mutants. [...] And my first run, I remember it took a
-few hours to run. I ran it on my on a small code base of my team.
-> [...] And when I when it finished, I looked at the file and could barely open
-> it in
-Vim. It was huge! There were thousands, tens of thousands of mutants. And after
-three pages and two coffees, I was so tired that I just closed the file and
-forgot about it for a few weeks because there was a huge amount of mutants. And
-most of them were not things that I would actually be adding tests for!
+> Mutation testing generates a huge amount of mutants and then shoves them down
+> your throat. And when I started implementing this, what I did is I read a
+> bunch of research papers. I was really excited. I started coding and in a few
+> weeks I had something that worked originally for C++. And then I started
+> generating these mutants. [...] And my first run, I remember it took a few
+> hours to run. I ran it on my on a small code base of my team. [...] And when I
+> when it finished, I looked at the file and could barely open it in Vim. It was
+> huge! There were thousands, tens of thousands of mutants. And after
+> three pages and two coffees, I was so tired that I just closed the file and
+> forgot about it for a few weeks because there was a huge amount of mutants. And
+> most of them were not things that I would actually be adding tests for!
 
 **How did you know that it was the right time to introduce mutation testing at Google?**
 
->I had no idea. I joined the team in Google Shopping. And as it used to be the
->case, everyone had a 20% project. And my manager said, oh, we started this
->mutation testing last hackathon. Maybe you can inherit it. And I'm like, oh, I
->have no idea what this is. I've never heard of this, but I will inherit it
->because I don't really have a choice. So I started reading those papers and
->eventually rewrote all of their code because it was a hackathon project one
->week of like just try to get a proof of concept working. And then that it
->became my project over time!
+> I joined the team in Google Shopping. And as it used to be the
+> case, everyone had a 20% project. And my manager said, oh, we started this
+> mutation testing last hackathon. Maybe you can inherit it. And I'm like, oh, I
+> have no idea what this is. I've never heard of this, but I will inherit it
+> because I don't really have a choice. So I started reading those papers and
+> eventually rewrote all of their code because it was a hackathon project one
+> week of like just try to get a proof of concept working. And then that it
+> became my project over time!
 
 ## Listen
 
