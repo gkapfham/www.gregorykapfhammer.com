@@ -1,3 +1,8 @@
+- title: <a href="https://se-radio.net/2024/09/se-radio-632-goran-petrovic-on-mutation-testing-at-google/">\"Goran Petrovic on Mutation Testing at Google\"</a>
+  date: '2024-09-05'
+  date-format: short
+  description: "Host"
+  venue: <a href="https://www.se-radio.net/">Software Engineering Radio</a>
 - title: <a href="https://se-radio.net/2024/07/se-radio-625-jonathan-schneider-on-automated-refactoring-with-openrewrite/">\"Jonathan Schneider on Automated Refactoring with OpenRewrite\"</a>
   date: '2024-07-16'
   date-format: short
