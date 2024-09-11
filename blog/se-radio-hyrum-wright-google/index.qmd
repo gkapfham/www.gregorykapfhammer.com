@@ -20,8 +20,8 @@ importance of time, scale, and trade-offs.
 
 ## Insights
 
- I'm thankful that Hyrum took the time for this interview! Here are some key
- insights from it:
+I'm thankful that Hyrum took the time for this interview! Here are some key
+insights from it:
 
 **How does a project's lifespan influence engineering decisions?**
 
