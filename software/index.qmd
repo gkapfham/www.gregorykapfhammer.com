@@ -382,6 +382,10 @@ href="https://github.com/GatorEducator/dockagator">dockagator</a>: Docker
 container and infrastructure for GatorGrader</li>
 
 <li class="software"><a target="_blank" rel="noopener"
+href="https://github.com/GatorEducator/execexam">execexam</a>: Run
+executable examinations to assess programming skills</li>
+
+<li class="software"><a target="_blank" rel="noopener"
 href="https://github.com/GatorEducator/gatorgrade">gatorgrade</a>: Python
 front-end for the GatorGrader assessment tool</li>
 
