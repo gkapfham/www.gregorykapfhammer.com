@@ -1,0 +1,66 @@
+---
+author: Gregory M. Kapfhammer
+title: Insights from my Software Engineering Radio interview with Goran Petrovic
+date: '2024-09-04'
+date-format: YYYY
+categories: [post, mutation testing, software engineering radio]
+description: <em>How do Google's engineers perform mutation testing?</em>
+---
+
+## Introduction
+
+In a recent episode of the [Software Engineering
+Radio](https://www.se-radio.net/) podcast, I had the pleasure of interviewing
+[Goran Petrovic](https://www.linkedin.com/in/goran-petrovi%C4%87-1a94641ba/), a
+senior staff software engineer at Google. Our conversation revolved around the
+intriguing topic of mutation testing at Google, a practice that assesses the
+efficacy of a test suite by inserting small faults into programs and measuring
+the test suite's ability to detect them.
+
+## Key Insights
+
+I'm thankful that Goran took the time for this interview! Here are some key
+insights from it:
+
+**What is mutation testing and how does it work?**
+
+Goran explained that mutation testing is a step further from standard criteria
+like line coverage. It ensures that the code is not only covered with tests but
+also properly tested in terms of assertions. Mutation testing mimics potential
+bugs, such as replacing 'a + b' with 'a - b', and then runs all the tests. If no
+tests fail, it indicates that the test suite might not be effective despite
+having coverage.
+
+**The Role of Constraints in Software Engineering**
+
+Goran emphasized the importance of appropriate constraints in software
+engineering, especially as an organization scales. These constraints can enable
+scalability and benefit various aspects of software engineering, including
+large-scale changes, build systems, testing infrastructure, and style guides.
+
+**Automated Changes in Software Engineering**
+
+Goran also touched on the role of automated changes in software engineering. He
+mentioned that there was initial resistance to these changes, but over time, the
+culture of stewardship within Google’s codebase prevailed. Everyone can read all
+the source code, but specific individuals and teams are responsible for
+maintaining specific parts of the codebase.
+
+## Listen
+
+If you're interested in learning more about mutation testing and software
+engineering practices at Google, I highly recommend listening to [Goran Petrovic
+on Mutation Testing at
+Google](https://se-radio.net/2024/09/se-radio-632-goran-petrovic-on-mutation-testing-at-google/)
+from [Software Engineering Radio](https://se-radio.net/)! You can find it on
+your favorite podcast player, [Apple
+Podcasts](https://podcasts.apple.com/us/podcast/software-engineering-radio-the-podcast-for/id120906714),
+[Spotify](https://open.spotify.com/show/6UO3XQclSuNnGxB39QdAnL),
+[YouTube](https://www.youtube.com/playlist?list=PLHJB2bhmgB7esz0BxMCt1jJwsoaqWtFff),
+or you can listen to it with this handy podcast player.
+
+{{< audio
+file="https://traffic.libsyn.com/secure/forcedn/seradio/632-goran-petrovic-mutation-testing-at-google.mp3"
+caption="Listen to Software Engineering Radio Episode 632" >}}
+
+{{< include /_back-blog.qmd >}}
