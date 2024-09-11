@@ -7,8 +7,6 @@ categories: [post, mutation testing, software engineering radio]
 description: <em>How do Google's engineers perform mutation testing?</em>
 ---
 
-
-
 ## Introduction
 
 In a recent episode of the [Software Engineering
