@@ -18,7 +18,7 @@ small faults into programs and measuring the test suite's ability to detect
 them. In this interview Goran offers insights into mutation testing and how it
 fits into broader software engineering practices.
 
-## Key Insights
+## Insights
 
 I'm thankful that Goran took the time for this interview! Here are some key
 insights from it:
