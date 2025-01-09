@@ -137,9 +137,6 @@ format:
     # ensure that the back to top button
     # in the footer of the page works correctly
     smooth-scroll: false
-    #link-external-icon: true
-    #link-external-filter: '^(?:http:|https:)\/\/www\.gregorykapfhammer\.com\/custom'
-    #link-external-newwindow: true
     citations-hover: true
     footnotes-hover: true
     citeproc: true
