@@ -11,9 +11,9 @@ description: <em>Can experiments help us to understand algorithmic complexity?</
 
 It is essential for software engineers to understand the efficiency of the
 algorithms in a complex system. Since the worst-case analysis of an algorithm is
-often difficult, one effective way to empirically determine an algorithm's
-worst-case time complexity is through doubling experiments. This post explores a
-tool called `ExpOse`, originally described in
+often difficult to discern, one effective alternative is to empirically
+determine an algorithm's worst-case time complexity is through doubling
+experiments. This post explores a tool called `ExpOse`, originally described in
 [@Kinneer2015] [{{< iconify fa6-solid book-open >}}](/research/papers/Kinneer2015/index.qmd)
 and [@Kinneer2015a] [{{< iconify fa6-solid book-open >}}](/research/papers/Kinneer2015a/index.qmd),
 for conducting these experiments, focusing on the domain of search-based test
