@@ -1,7 +1,7 @@
 ---
 author: Gregory M. Kapfhammer
 title: Can doubling experiments characterize worst-case time complexity?
-date: '2015-01-01'
+date: '2016-01-01'
 date-format: YYYY
 categories: [post, database testing, performance evaluation]
 description: <em>Can experiments help us to understand algorithmic complexity?</em>
@@ -17,7 +17,9 @@ tool called `ExpOse`, originally described in
 [@Kinneer2015] [{{< iconify fa6-solid book-open >}}](/research/papers/Kinneer2015/index.qmd)
 and [@Kinneer2015a] [{{< iconify fa6-solid book-open >}}](/research/papers/Kinneer2015a/index.qmd),
 for conducting these experiments, focusing on the domain of search-based test
-data generation for relational database schemas. Keep reading to learn more
+data generation for relational database schemas
+[@McMinn2016c] [{{< iconify fa6-solid book-open >}}](/research/papers/McMinn2016c/index.qmd).
+Keep reading to learn more
 about this technique and its broader applicability!
 
 ## Doubling Experiments
@@ -26,9 +28,12 @@ A doubling experiment involves systematically doubling the size of the input to
 an algorithm and observing the change in its runtime. This method helps in
 empirically determining the algorithm's order of growth, often expressed in
 "big-Oh" notation. By measuring the time needed to run the algorithm on inputs
-of size \( n \) and \( 2n \), we can draw conclusions about its efficiency.
+of size $n$ and $2n$, we can draw conclusions about its efficiency. Intuitively,
+if a doubling of the input size leads to a doubling in the execution time, then
+this means that the algorithm is likely linear in its worst-case time complexity
+and thus likely a member of the $O(n)$ worst-case time complexity class.
 
-Here are some of the key Aspects of this paper's presented technique:
+Here are some of the key aspects of the technique presented in these papers:
 
 - **Doubling Schemas**: The framework systematically doubles the size of a
 relational database schema, including tables, columns, and constraints. This
