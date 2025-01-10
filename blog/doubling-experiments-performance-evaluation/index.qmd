@@ -82,7 +82,7 @@ Doubling experiments provide a powerful and general approach to empirically
 determine the worst-case time complexity of algorithms. By applying the
 presented technique to search-based test data generation for relational database
 schemas, my colleagues and I have gained valuable insights into performance
-trade-offs and efficiency. Importantly, this method holds promise for broader
+trade-offs and efficiency. Importantly, this approach holds promise for broader
 applications in software engineering, which we hope to explore in future work.
 
 ::: {.callout-note appearance="simple"}
