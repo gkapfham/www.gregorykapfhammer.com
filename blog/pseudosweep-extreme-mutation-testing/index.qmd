@@ -19,45 +19,35 @@ not --- XMT can help you improve your test suite's effectiveness and ensure more
 robust software. Let's dive into how these XMT works and why it may be a
 game-changer for software testing!
 
-## The Basics of Extreme Mutation Testing
+## XMT Basics
 
-Extreme mutation testing (XMT) is a technique that detects deficiencies in a
-test suite by deleting method bodies in covered code and observing whether the
-test suite detects their absence. If a method deletion goes unnoticed, the
-method is labeled as "pseudo-tested." This means the method is executed by the
-test suite but its result isn't checked by any assertions, indicating a
-potential blind spot in your tests.
+An XMT tool automatically detects deficiencies in a test suite by deleting
+method bodies in covered code and observing whether the test suite detects their
+absence. If a method deletion goes unnoticed, then the method is labeled as
+"pseudo-tested." This means the method is executed by the test suite but its
+result isn't checked by any assertions, indicating a potential blind spot in a
+program's test suite.
 
-## Pseudo-Tested Methods: The Hidden Weaknesses
+## Research Insights
 
-Pseudo-tested methods are those that are executed during testing but aren't
-effectively validated. This can lead to lower mutation scores and missed bugs.
-Tools like Descartes and Reneri can identify these pseudo-tested methods without
-the need for full mutation testing, providing quick feedback to developers.
+Our paper introduces the statement deletion mutation operator (SDL) to uncover
+pseudo-tested statements within methods. Using four frequently-studied Apache
+Commons Java projects and 23 projects randomly selected from the Maven Central
+Repository, this paper's experiments find 722 different cases of pseudo-tested
+statements. Interestingly, the paper's results show that 48% of pseudo-tested
+statements exist outside of pseudo-tested methods! This means that the detection
+of testing deficiencies related to these statements would likely be left to
+traditional, resource-intensive, mutation testing. Ultimately, this paper shows
+that XMT alone is insufficient and should be combined with pseudo-tested
+statement evaluation to pinpoint subtle, yet important, testing oversights that
+a developer should tackle before applying traditional mutation testing.
 
-## Key Insights from Our Research
-
-Our research introduces the statement deletion mutation operator (SDL) to
-uncover pseudo-tested statements within methods. We found that 48% of
-pseudo-tested statements exist outside of pseudo-tested methods, meaning
-traditional mutation testing would miss these deficiencies. By combining XMT
-with SDL, we can pinpoint subtle yet important testing oversights.
-
-## Empirical Results
-
-In our study involving 27 Java projects, we discovered 722 pseudo-tested
-statements. We also found that pseudo-tested statements achieved lower mutation
-scores than required statements. This highlights the importance of using SDL to
-detect these hidden weaknesses.
-
-## Why This Matters
+## Future Directions
 
 While our research focused on Java programs, the concepts of XMT and
 pseudo-tested methods are broadly applicable. These techniques can be used in
 various programming languages to improve test suite effectiveness and ensure
 more robust software.
-
-## Future Directions
 
 We're excited about the potential of combining XMT with other testing techniques
 to further enhance test suite robustness. Future work will involve extending our
