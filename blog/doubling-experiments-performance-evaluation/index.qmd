@@ -3,7 +3,7 @@ author: Gregory M. Kapfhammer
 title: Can doubling experiments characterize worst-case time complexity?
 date: '2016-01-01'
 date-format: YYYY
-categories: [post, database testing, performance evaluation]
+categories: [post, database testing, performance analysis]
 description: <em>Can experiments help us to understand algorithmic complexity?</em>
 ---
 
