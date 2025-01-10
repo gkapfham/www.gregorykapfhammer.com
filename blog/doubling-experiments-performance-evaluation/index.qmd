@@ -44,10 +44,11 @@ measures the runtime for each input size. It uses a convergence algorithm to
 determine when a stable ratio of runtimes is achieved, indicating the likely
 worst-case time complexity.
 
-- **Empirical Analysis**: We applied this tool to various database schemas,
-revealing performance trade-offs in search-based test data generation. The
-results showed that, in many cases, the time complexity was linear or
-linearithmic, while in others, it was quadratic, cubic, or worse.
+- **Empirical Analysis**: We applied this tool to various relational database
+schemas, revealing performance trade-offs in search-based test data generation.
+The results showed that, in many cases, the time complexity of automatically
+generating test data was linear or linearithmic, while in others, it was
+quadratic, cubic, or worse.
 
 While these papers specifically apply the concept of doubling experiments to the
 domain of relational database schemas, the technique is general and can be used
@@ -57,7 +58,7 @@ into the efficiency of various algorithms.
 
 ## Database-Specific Results
 
-The empirical study conducted using this framework focused on nine different
+The empirical study conducted using the `ExpOse` tool focused on nine different
 database schemas. The experiments revealed that doubling certain schema
 structures, such as `UNIQUE`, `NOT NULL`, and `CHECK` constraints, often
 resulted in linear or linearithmic time complexity. However, doubling the number
