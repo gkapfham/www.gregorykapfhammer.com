@@ -60,7 +60,7 @@ contributing to open-source [software](/software/index.qmd), I collaborate with
 people at leading academic institutions, government agencies, open-source
 projects, and technology companies.
 
-The following searchable table gives a list of my professional service!
+The following searchable table gives a complete list of my professional service!
 
 :::{#full-service}
 :::
