@@ -3,7 +3,7 @@ title: "Blog"
 toc: true
 page-layout: full
 listing:
-  page-size: 15
+  page-size: 10
   contents:
     - "../blog/**/*.qmd"
     - "!../blog/index.qmd"
