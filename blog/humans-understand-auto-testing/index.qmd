@@ -93,10 +93,10 @@ be used if possible.
 While some automated test data generation methods are starting to adopt these
 suggestions, more work remains to create automated test data generation tools
 and manual testing guidelines that ensure that tests are understandable by human
-testers. Do you have ideas about how to make tests more readable? Are you
-interested in collaborating with me on research to make the next generation of
-automated test data generators? If so, then I hope that you will
-[contact](/contact/) me with your ideas!
+testers. Do you have ideas about how to make tests more readable? Do you want to
+collaborate with me on research to make the next generation of automated test
+data generators? If so, then I hope that you will [contact](/contact/) me with
+your ideas!
 
 :::
 
