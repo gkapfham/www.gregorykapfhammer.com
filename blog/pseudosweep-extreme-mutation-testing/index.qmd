@@ -55,11 +55,12 @@ exploring additional ways to detect and repair pseudo-tested methods.
 ## Further Details
 
 As we continue to explore how mutation testing can support the detection and
-repair of pseudo-tested methods, your insights and suggestions are appreciated!
-If you have ideas or experiences related to this pervasive issue in software
-testing, please [contact](/contact/) me. Or, if you want to stay informed about
-new developments and blog posts related to mutation testing and other software
-testing topics, you can [subscribe](/support/) to my mailing list. 
+enhanced assessment of pseudo-tested methods, your insights and suggestions are
+appreciated! If you have ideas or experiences related to this pervasive issue in
+software testing, please [contact](/contact/) me. Or, if you want to stay
+informed about new developments and blog posts related to mutation testing and
+other software testing topics, you can [subscribe](/support/) to my mailing
+list. 
 
 :::
 
