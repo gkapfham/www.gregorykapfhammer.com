@@ -38,19 +38,19 @@ Relational database schemas define the structure and type of data that will
 reside within a database, declaring any relationships between pieces of data
 that may exist. Integrity constraints are vital for protecting the validity and
 authenticity of database data. There are five common types of constraints:
-PRIMARY KEY, UNIQUE, NOT NULL, FOREIGN KEY, and CHECK constraints. Testing these
-constraints is crucial to ensure data integrity.
+`PRIMARY KEY`, `UNIQUE`, `NOT NULL`, `FOREIGN KEY`, and `CHECK` constraints.
+Testing these constraints is crucial to ensure the integrity of the data stored
+in the relational database. Mutation analysis helps to evaluate the quality of
+the tests.
 
-## Mutation Analysis
-
-Mutation analysis estimates the fault-finding capability of a test suite by
-generating copies of an artifact under test and seeding small faults, known as
-“mutants”, into those copies. The percentage of mutants killed by a test suite
-is known as the “mutation score”; the higher the mutation score, the stronger
-the suite is judged to be at trapping real faults. However, mutation analysis
-can result in the generation of many ineffective mutants, which can be invalid,
-equivalent, or redundant. These ineffective mutants reduce the usefulness of the
-final mutation score and incur an execution time overhead.
+Specifically, mutation analysis estimates the fault-finding capability of a test
+suite by generating copies of an artifact under test and seeding small faults,
+known as "mutants", into those copies. The percentage of mutants detected by a
+test suite is known as the "mutation score": the higher the mutation score, the
+stronger the suite is judged to be at trapping real faults. However, mutation
+analysis can result in the generation of many "ineffective mutants", which can be
+invalid, equivalent, or redundant. These ineffective mutants reduce the
+usefulness of the final mutation score and incur an execution time overhead.
 
 ## Detecting Ineffective Mutants
 
