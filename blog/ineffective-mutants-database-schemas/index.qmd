@@ -52,7 +52,7 @@ analysis can result in the generation of many "ineffective mutants", which can b
 invalid, equivalent, or redundant. These ineffective mutants reduce the
 usefulness of the final mutation score and incur an execution time overhead.
 
-## Detecting Ineffective Mutants
+## Ineffective Mutants
 
 Ineffective mutants can manifest in various ways. For instance, `PRIMARY KEY`
 constraints ensure the uniqueness of database table rows, which is also a
@@ -70,10 +70,10 @@ introduces ways to statically analyze database schema mutants, identifying those
 that are ineffective and removing them from the mutant pool used in mutation
 analysis. These algorithms are implemented in our open-source tool called
 [SchemaAnalyst](https://github.com/schemaanalyst/schemaanalyst). An experimental
-study using real-world database schemas and three relational database management
-systems shows that these techniques can detect and remove large numbers of
-ineffective mutants, making mutation scores more useful and reducing the
-execution cost of mutation analysis.
+study using real-world database schemas hosted by three relational database
+management systems shows that these techniques can detect and remove large
+numbers of ineffective mutants, making mutation scores more useful and reducing
+the execution cost of mutation analysis.
 
 ## Conclusion
 
@@ -83,7 +83,19 @@ forward in the field of mutation analysis for relational database schemas. By
 automatically detecting and removing ineffective mutants, the presented
 techniques improve the usefulness of mutation scores and reduce the time needed
 for mutation analysis. As part of future work my colleagues and I plan to extend
-these methods methods to handle more complex cases and applying them to other
-domains beyond relational database schemas.
+these methods methods to handle more complex cases in real-world database
+schemas and to apply them to other domains beyond relational database schemas.
+
+::: {.callout-note appearance="simple"}
+
+## Connections
+
+As my colleagues and I continue to explore both mutation testing database schema
+testing, your insights and suggestions are appreciated! If you have ideas on
+this topic, please [contact](/contact/) me. Or, if you want to stay informed
+about new developments and blog posts related to mutation testing and other
+software testing topics, you can [subscribe](/support/) to my mailing list.
+
+:::
 
 {{< include /_back-blog.qmd >}}
