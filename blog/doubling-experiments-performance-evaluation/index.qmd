@@ -4,18 +4,21 @@ title: Can doubling experiments characterize worst-case time complexity?
 date: '2015-01-01'
 date-format: YYYY
 categories: [post, database testing, performance evaluation]
-description: <em>Can experiments help us understand algorithmic complexity?</em>
+description: <em>Can experiments help us to understand algorithmic complexity?</em>
 ---
 
 ## Introduction
 
-Understanding the efficiency of algorithms is crucial for software engineers,
-especially when dealing with complex systems. One effective way to empirically
-determine an algorithm's worst-case time complexity is through doubling
-experiments. This blog post introduces a framework for conducting these
-experiments, focusing on the domain of search-based test data generation for
-relational database schemas. Keep reading to learn more about this technique and
-its broader applicability!
+It is essential for software engineers to understand the efficiency of the
+algorithms in a complex system. Since the worst-case analysis of an algorithm is
+often difficult, one effective way to empirically determine an algorithm's
+worst-case time complexity is through doubling experiments. This post explores a
+tool called `ExpOse`, originally described in
+[@Kinneer2015] [{{< iconify fa6-solid book-open >}}](/research/papers/Kinneer2015/index.qmd)
+and [@Kinneer2015a] [{{< iconify fa6-solid book-open >}}](/research/papers/Kinneer2015a/index.qmd),
+for conducting these experiments, focusing on the domain of search-based test
+data generation for relational database schemas. Keep reading to learn more
+about this technique and its broader applicability!
 
 ## Doubling Experiments
 
