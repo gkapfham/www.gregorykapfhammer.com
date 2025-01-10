@@ -7,30 +7,30 @@ categories: [post, mutation testing, database testing]
 description: <em>How can tools automatically detect ineffective mutants?</em>
 ---
 
-[@Parry2022a] [{{< iconify
-fa6-solid book-open>}}](/research/papers/parry2022a/index.qmd)
-
 ## Introduction
 
-Data is one of an organization’s most valuable and strategic assets. Testing the
-relational database schema, which protects the integrity of this data, is of
-paramount importance. Mutation analysis is a means of estimating the
-fault-finding “strength” of a test suite. As with program mutation, however,
+Since data is one of an organization’s most valuable and strategic assets,
+testing the relational database schema, which protects the integrity of this
+data, is of paramount importance. Mutation analysis is a means of estimating the
+fault-finding "strength" of a test suite. As with program mutation, however,
 relational database schema mutation results in many “ineffective” mutants that
 both degrade test suite quality estimates and make mutation analysis more time
-consuming. This paper presents a taxonomy of ineffective mutants for relational
-database schemas, summarizing the root causes of ineffectiveness with a series
-of key patterns evident in database schemas. On the basis of these, we introduce
-algorithms that automatically detect and remove ineffective mutants. In an
-experimental study involving the mutation analysis of 34 schemas used with three
-popular relational database management systems—HyperSQL, PostgreSQL, and
-SQLite—the results show that our algorithms can identify and discard large
-numbers of ineffective mutants that can account for up to 24% of mutants,
-leading to a change in mutation score for 33 out of 34 schemas. The tests for
-seven schemas were found to achieve 100% scores, indicating that they were
-capable of detecting and killing all non-equivalent mutants. The results also
-reveal that the execution cost of mutation analysis may be significantly
-reduced, especially with “heavyweight” DBMSs like PostgreSQL.
+consuming. My colleagues and I recently published a paper that presents a
+taxonomy of ineffective mutants for relational database schemas, summarizing the
+root causes of ineffectiveness with a series of key patterns [@McMinn2019] [{{<
+iconify fa6-solid book-open>}}](/research/papers/McMinn2019/index.qmd).
+
+Using these patterns, the paper also presents algorithms that automatically
+detect and remove ineffective mutants. In an experimental study involving the
+mutation analysis of 34 schemas used with three popular relational database
+management systems—HyperSQL, PostgreSQL, and SQLite—the results show that the
+presented techniques can identify and discard large numbers of ineffective
+mutants that can account for up to 24% of mutants overall, leading to a change
+in mutation score for 33 out of 34 schemas. The tests for seven schemas were
+found to achieve 100% scores, indicating that they were capable of detecting and
+killing all non-equivalent mutants. The results also reveal that the execution
+cost of mutation analysis may be significantly reduced, especially for popular,
+yet "heavyweight", DBMSs like PostgreSQL.
 
 ## Background
 
@@ -52,7 +52,7 @@ can result in the generation of many ineffective mutants, which can be invalid,
 equivalent, or redundant. These ineffective mutants reduce the usefulness of the
 final mutation score and incur an execution time overhead.
 
-## Ineffective Mutants
+## Detecting Ineffective Mutants
 
 Ineffective mutants can manifest in various ways. For instance, PRIMARY KEY
 constraints ensure the uniqueness of database table rows, which is also a
@@ -64,14 +64,12 @@ for ineffective mutant detection. We also introduce a new type of ineffective
 mutant: the “impaired” mutant, which represents infeasible database schemas that
 are not completely invalid but are trivially killed by test cases.
 
-## Detecting Ineffective Mutants
-
-We present algorithms capable of statically analyzing mutants, identifying those
-that are ineffective, and removing them from the mutant pool used in mutation
-analysis. These algorithms are implemented in our open-source tool called
-SchemaAnalyst. Our experimental study shows that these algorithms can detect and
-remove large numbers of ineffective mutants, making mutation scores more useful
-and reducing the execution cost of mutation analysis.
+The paper presents techniques for statically analyzing schema mutants,
+identifying those that are ineffective, and removing them from the mutant pool
+used in mutation analysis. These algorithms are implemented in our open-source
+tool called SchemaAnalyst. Our experimental study shows that these algorithms
+can detect and remove large numbers of ineffective mutants, making mutation
+scores more useful and reducing the execution cost of mutation analysis.
 
 ## Conclusion
 
