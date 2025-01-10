@@ -35,58 +35,61 @@ and thus likely a member of the $O(n)$ worst-case time complexity class.
 
 Here are some of the key aspects of the technique presented in these papers:
 
-- **Doubling Schemas**: The framework systematically doubles the size of a
-relational database schema, including tables, columns, and constraints. This
-process is non-trivial due to the complex interrelationships within a schema.
+- **Doubling Schemas**: The tool systematically doubles the size of a relational
+database schema, including tables, columns, and constraints. This process is
+non-trivial due to the complex interrelationships within a database schema.
 
-- **Automatic Experimentation**: The framework automates the doubling process
-and measures the runtime for each input size. It uses a convergence algorithm to
-determine when a stable ratio of runtimes is achieved, indicating the worst-case
-time complexity.
+- **Automatic Experimentation**: The tool automates the doubling process and
+measures the runtime for each input size. It uses a convergence algorithm to
+determine when a stable ratio of runtimes is achieved, indicating the likely
+worst-case time complexity.
 
-- **Empirical Analysis**: The framework was applied to various database schemas,
+- **Empirical Analysis**: We applied this tool to various database schemas,
 revealing performance trade-offs in search-based test data generation. The
 results showed that, in many cases, the time complexity was linear or
 linearithmic, while in others, it was quadratic, cubic, or worse.
 
-While this paper specifically applies doubling experiments to the domain of
-relational database schemas, the technique is general and can be used for other
-algorithms and domains. By systematically increasing the input size and
-observing the runtime changes, software engineers can gain valuable insights
+While these papers specifically apply the concept of doubling experiments to the
+domain of relational database schemas, the technique is general and can be used
+for other algorithms and domains. By systematically increasing the input size
+and observing the runtime changes, software engineers can gain valuable insights
 into the efficiency of various algorithms.
 
-## Results
+## Database-Specific Results
 
 The empirical study conducted using this framework focused on nine different
 database schemas. The experiments revealed that doubling certain schema
-structures, such as UNIQUE, NOT NULL, and CHECK constraints, often resulted in
-linear or linearithmic time complexity. However, doubling the number of tables
-and columns produced less conclusive results, with many experiments indicating
-quadratic or cubic behavior.
+structures, such as `UNIQUE`, `NOT NULL`, and `CHECK` constraints, often
+resulted in linear or linearithmic time complexity. However, doubling the number
+of tables and columns produced less conclusive results, with many experiments
+indicating quadratic or cubic behavior. More details about the results from
+these experiments are available in [@Kinneer2015] [{{< iconify fa6-solid
+book-open >}}](/research/papers/Kinneer2015/index.qmd).
 
 ## Future Work
 
 Future research will focus on extending the doubling technique to other types of
-constraints, such as FOREIGN KEYs, and implementing more realistic ways to
+constraints, such as `FOREIGN KEY`s, and implementing more realistic ways to
 double relational schemas. Additionally, automated parameter tuning will be
 explored to optimize the convergence conditions for different execution
-environments.
+environments. We would also like to develop a more general-purpose version of
+the tool that would work for, say, Python functions or Java methods.
 
 ## Conclusion
 
 Doubling experiments provide a powerful and general approach to empirically
-determine the worst-case time complexity of algorithms. By applying this
-technique to search-based test data generation for relational database schemas,
-we have gained valuable insights into performance trade-offs and efficiency.
-This method holds promise for broader applications in software engineering and
-beyond.
+determine the worst-case time complexity of algorithms. By applying the
+presented technique to search-based test data generation for relational database
+schemas, my colleagues and I have gained valuable insights into performance
+trade-offs and efficiency. Importantly, this method holds promise for broader
+applications in software engineering, which we hope to explore in future work.
 
 ::: {.callout-note appearance="simple"}
 
 ## Further Details
 
-If you have any insights or experiences related to this topic, please
-[contact](/contact/) me. To stay informed about new developments and blog posts,
+Please [contact](/contact/) me if you have any insights or experiences related
+to this topic. To stay informed about new research developments and blog posts,
 consider [subscribing](/support/) to my mailing list.
 
 :::
