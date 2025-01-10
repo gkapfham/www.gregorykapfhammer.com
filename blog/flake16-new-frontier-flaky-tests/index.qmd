@@ -49,14 +49,14 @@ that re-running and machine learning work better together!
 
 ## Further Details
 
-As my colleagues and continue to explore how machine learning can support the
+As my colleagues and I continue to explore how machine learning can support the
 detection and repair of flaky tests, your insights and suggestions are
-appreciated! If you have ideas or experiences related to this pervasive issue
-in software testing, please [contact](/contact/) me. Or, if you want to stay
+appreciated! If you have ideas or experiences related to this pervasive issue in
+software testing, please [contact](/contact/) me. Or, if you want to stay
 informed about new developments and blog posts related to flaky tests and other
 software testing topics, consider [subscribing](/support/) to my mailing list.
-Finally, if you would like to listen to me discuss this paper on a podcast,
-please check out <a
+Finally, you can listen to me discuss this paper on a podcast, please check out
+<a
   href="https://hanselminutes.com/874/dr-gregory-kapfhammer-wants-to-stop-flaky-tests">\"Dr.
   Gregory Kapfhammer Wants to Stop Flaky Tests\"</a>!
 
