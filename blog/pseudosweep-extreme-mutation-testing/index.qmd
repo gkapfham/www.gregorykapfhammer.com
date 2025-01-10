@@ -32,15 +32,13 @@ mutation operator (SDL) to uncover pseudo-tested statements within methods.
 ## Research Insights
 
 Using the `PseudoSweep` tool [@Maton2024a] [{{< iconify fa6-solid book-open >}}](/research/papers/Maton2024a/index.qmd) to perform mutation testing with the XMT and SDL operators
-on four frequently-studied Apache Commons Java projects and 23 projects randomly
+on four Apache Commons projects and 23 projects randomly
 selected from the Maven Central Repository, this paper's experiments find 722
-different cases of pseudo-tested statements. Interestingly, results show that
-48% of pseudo-tested statements exist outside of pseudo-tested methods! This
-means that the detection of testing deficiencies related to these statements
-would likely be left to traditional, yet resource-intensive, mutation testing.
-Ultimately, this paper shows that XMT alone is insufficient and should be
-combined with pseudo-tested statement evaluation to pinpoint testing oversights
-that a developer should tackle before using standard mutation testing.
+different cases of pseudo-tested statements. Interestingly, the results show
+that 48% of pseudo-tested statements exist outside of pseudo-tested methods!
+This suggests that XMT alone is insufficient and should be combined with
+pseudo-tested statement evaluation to find testing oversights that a
+developer should tackle before using standard mutation testing.
 
 ## Future Directions
 
@@ -50,7 +48,7 @@ various programming languages to improve test suite effectiveness and ensure
 more robust software. We're excited about the potential of combining XMT with
 other testing techniques to further enhance test suite robustness. Future work
 will involve extending our approach to different programming languages and
-exploring additional categories of flaky tests.
+exploring additional ways to detect and repair pseudo-tested methods.
 
 ::: {.callout-note appearance="simple"}
 
