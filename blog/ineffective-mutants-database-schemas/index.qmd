@@ -90,9 +90,9 @@ schemas and to apply them to other domains beyond relational database schemas.
 
 ## Connections
 
-As my colleagues and I continue to explore both mutation testing database schema
-testing, your insights and suggestions are appreciated! If you have ideas on
-this topic, please [contact](/contact/) me. Or, if you want to stay informed
+As my colleagues and I continue to explore both mutation testing and database
+schema testing, your insights and suggestions are appreciated! If you have ideas
+on this topic, please [contact](/contact/) me. Or, if you want to stay informed
 about new developments and blog posts related to mutation testing and other
 software testing topics, you can [subscribe](/support/) to my mailing list.
 
