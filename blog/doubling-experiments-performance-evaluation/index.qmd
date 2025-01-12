@@ -14,11 +14,11 @@ algorithms in a complex system. Since the worst-case analysis of an algorithm is
 often difficult to discern, one effective alternative is to empirically
 determine an algorithm's worst-case time complexity is through doubling
 experiments. This post explores a tool called `ExpOse`, originally described in
-[@Kinneer2015] [{{< iconify fa6-solid book-open >}}](/research/papers/Kinneer2015/index.qmd)
-and [@Kinneer2015a] [{{< iconify fa6-solid book-open >}}](/research/papers/Kinneer2015a/index.qmd),
+[@Kinneer2015] [{{< iconify fa6-solid book-open >}}](/research/papers/kinneer2015/index.qmd)
+and [@Kinneer2015a] [{{< iconify fa6-solid book-open >}}](/research/papers/kinneer2015a/index.qmd),
 for conducting these experiments, focusing on the domain of search-based test
 data generation for relational database schemas
-[@McMinn2016c] [{{< iconify fa6-solid book-open >}}](/research/papers/McMinn2016c/index.qmd).
+[@McMinn2016c] [{{< iconify fa6-solid book-open >}}](/research/papers/mcminn2016c/index.qmd).
 Keep reading to learn more
 about this technique and its broader applicability!
 
@@ -65,7 +65,7 @@ resulted in linear or linearithmic time complexity. However, doubling the number
 of tables and columns produced less conclusive results, with many experiments
 indicating quadratic or cubic behavior. More details about the results from
 these experiments are available in [@Kinneer2015] [{{< iconify fa6-solid
-book-open >}}](/research/papers/Kinneer2015/index.qmd).
+book-open >}}](/research/papers/kinneer2015/index.qmd).
 
 ## Future Work
 
