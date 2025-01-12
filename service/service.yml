@@ -5,13 +5,13 @@
   description: "Program Committee Member"
   year-range: "2025 - 2024"
   service-count: 2
-- title: "International Symposium on Software Testing and Analysis / European Conference on Object-Oriented Programming"
+- title: "International Symposium on Software Testing and Analysis"
   categories: [conference]
-  date: '2024-01-01'
+  date: '2025-01-01'
   date-format: YYYY
   description: "Tool Demonstrations Program Committee"
-  year-range: "2024"
-  service-count: 1
+  year-range: "2025 - 2024"
+  service-count: 2
 - title: "Teaching Computer Science Workshop at Carnegie Mellon University"
   categories: [workshop]
   date: '2023-01-01'
