@@ -55,7 +55,7 @@ appreciated! If you have ideas or experiences related to this pervasive issue in
 software testing, please [contact](/contact/) me. Or, if you want to stay
 informed about new developments and blog posts related to flaky tests and other
 software testing topics, consider [subscribing](/support/) to my mailing list.
-Finally, you can listen to me discuss this paper on a podcast, please check out
+Finally, you can listen to me discuss this paper on a podcast by listening to
 <a
   href="https://hanselminutes.com/874/dr-gregory-kapfhammer-wants-to-stop-flaky-tests">\"Dr.
   Gregory Kapfhammer Wants to Stop Flaky Tests\"</a>!
