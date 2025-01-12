@@ -11,7 +11,7 @@ description: <em>Can tools detect hidden weaknesses in test suites?</em>
 
 Ever wondered if your test suite is truly good at finding bugs? What if there
 are hidden weaknesses that traditional testing methods miss? 
-In the paper [@Maton2024] [{{< iconify fa6-solid book-open >}}](/research/papers/Maton2024/index.qmd),
+In the paper [@Maton2024] [{{< iconify fa6-solid book-open >}}](/research/papers/maton2024/index.qmd),
 my colleagues and I explore how eXtreme mutation testing (XMT) can uncover these
 hidden weaknesses in your test suite. By identifying pseudo-tested methods ---
 or those methods in your program that appear to be tested even though they are
@@ -32,7 +32,7 @@ methods.
 
 ## Research Insights
 
-Using the `PseudoSweep` tool [@Maton2024a] [{{< iconify fa6-solid book-open >}}](/research/papers/Maton2024a/index.qmd) to perform mutation testing with the XMT and SDL operators
+Using the `PseudoSweep` tool [@Maton2024a] [{{< iconify fa6-solid book-open >}}](/research/papers/maton2024a/index.qmd) to perform mutation testing with the XMT and SDL operators
 on four Apache Commons projects and 23 projects randomly
 selected from the Maven Central Repository, this paper's experiments find 722
 different cases of pseudo-tested statements. Interestingly, the results show
