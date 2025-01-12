@@ -83,7 +83,7 @@ forward in the field of mutation analysis for relational database schemas. By
 automatically detecting and removing ineffective mutants, the presented
 techniques improve the usefulness of mutation scores and reduce the time needed
 for mutation analysis. As part of future work my colleagues and I plan to extend
-these methods methods to handle more complex cases in real-world database
+these methods to handle more complex cases in real-world database
 schemas and to apply them to other domains beyond relational database schemas.
 
 ::: {.callout-note appearance="simple"}
