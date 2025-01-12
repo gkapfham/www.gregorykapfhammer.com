@@ -1,6 +1,6 @@
 ---
 author: Gregory M. Kapfhammer
-title: Using eXtreme mutation testing to discover hidden testing weaknesses
+title: Using eXtreme mutation testing to discover hidden test suite weaknesses
 date: '2024-10-01'
 date-format: YYYY
 categories: [post, mutation testing, developer productivity]
