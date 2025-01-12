@@ -22,12 +22,13 @@ game-changer for software testing!
 ## Understanding XMT
 
 An XMT tool automatically detects deficiencies in a test suite by deleting
-method bodies in covered code and observing whether the test suite detects their
-absence. If a method deletion goes unnoticed, then the method is labeled as
-"pseudo-tested," meaning that the test suite calls the method but its result
-isn't checked by the assertions, indicating a potential testing blind spot. As
-an extension to XMT, our paper explores the use of the statement deletion
-mutation operator (SDL) to uncover pseudo-tested statements within methods.
+method bodies in covered code and observing whether the test suite detects
+their absence. If a method deletion goes unnoticed, then the method is labeled
+as "pseudo-tested," meaning that the test suite calls the method but its result
+isn't checked by the assertions, indicating a potential blind spot in the test
+suite. As an extension to XMT, our paper explores the use of the statement
+deletion mutation operator (SDL) to uncover pseudo-tested statements within
+methods.
 
 ## Research Insights
 
@@ -56,11 +57,11 @@ exploring additional ways to detect and repair pseudo-tested methods.
 
 As we continue to explore how mutation testing can support the detection and
 enhanced assessment of pseudo-tested methods, your insights and suggestions are
-appreciated! If you have ideas or experiences related to this pervasive issue in
-software testing, please [contact](/contact/) me. Or, if you want to stay
-informed about new developments and blog posts related to mutation testing and
-other software testing topics, you can [subscribe](/support/) to my mailing
-list. 
+appreciated! If you have ideas or experiences related to assessing the quality
+of a test suite or finding testing blind spots, please [contact](/contact/) me.
+Or, if you want to stay informed about new developments and blog posts related
+to mutation testing and other software testing topics, you can
+[subscribe](/support/) to my mailing list. 
 
 :::
 
