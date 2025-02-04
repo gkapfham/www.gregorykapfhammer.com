@@ -106,6 +106,7 @@ KEYWORDS_ALL = {
     "failure checking": "fault localization",
     "failure detection": "fault localization",
     "fault injection": "mutation testing",
+    "test suite health": "mutation testing",
     "flaky": "flaky tests",
     "handbook": "literature review",
     "genetic": "search-based methods",
