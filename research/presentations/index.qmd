@@ -38,6 +38,6 @@ from rich.console import Console
 console = Console()
 presentation_count = count_research_presentations()
 console.print(
-    f":rocket: It was super-fun to collaboratively create these {presentation_count} papers!"
+    f":rocket: It was super-fun to collaboratively create these {presentation_count} presentations!"
 )
 ```
