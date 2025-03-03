@@ -2,8 +2,9 @@
 
 ## Introduction
 
-Web site of Gregory M. using Quarto. Please review the configuration for GitHub
-Actions to see the steps for building and deploying the site to Netlify.
+This is the Website of Gregory M. Kapfhammer that was built with Quarto.
+Please review the configuration for GitHub Actions to see the steps for
+building and deploying the site to Netlify.
 
 ## Commands
 
