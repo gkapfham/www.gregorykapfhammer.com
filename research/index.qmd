@@ -72,7 +72,7 @@ book-open>}}](/research/papers/parry2022b/index.qmd).
 My most recent work in this area advocates for researchers and developers to go
 beyond any individual metric of "good" or "bad" tests --- like test flakiness
 --- as it argues for a more holistic view test suite health [@McMinn2025] [{{<
-iconify fa6-solid book-open>}}](/research/papers/parry2022b/index.qmd).
+iconify fa6-solid book-open>}}](/research/papers/mcminn2025/).
 
 </div>
 
@@ -138,6 +138,12 @@ programs and relational database schemas, some examples of papers include
 [@Just2012b] [{{< iconify fa6-solid book-open >}}](/research/papers/just2012b/index.qmd), [@Wright2014] [{{< iconify
 fa6-solid book-open >}}](/research/papers/wright2014/index.qmd), and
 [@McMinn2019] [{{< iconify fa6-solid book-open >}}](/research/papers/mcminn2019/index.qmd).
+
+Finally, recent work explores how eXtreme mutation testing (XMT) and statement
+deletion (SDL) mutation operators can detect pseudo-tested statements in a
+Java program
+[@Maton2024] [{{< iconify fa6-solid book-open >}}](/research/papers/mcminn2019/index.qmd).
+
 
 </div>
 
