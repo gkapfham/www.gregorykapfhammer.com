@@ -113,9 +113,11 @@ book-open>}}](/research/papers/althomali2019/index.qmd) can visually confirm and
 classify the reported responsive layout failures in a web page. The method
 described in [@Walsh2020] [{{< iconify fa6-solid
 book-open>}}](/research/papers/walsh2020/index.qmd) can automatically identify
-potential regressions from the correct responsive layout of a web page. Finally,
-recent work introduced a method to automatically repair a layout failure in a
-responsive web page [@Althomali2022] [{{< iconify fa6-solid
+potential regressions from the correct responsive layout of a web page.
+Finally, recent work introduced a method that automatically repairs a layout
+failure in a responsive web page by effectively "hiding" the defect
+from perception
+[@Althomali2022] [{{< iconify fa6-solid
 book-open>}}](/research/papers/althomali2022/index.qmd).
 
 </div>
