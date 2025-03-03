@@ -41,9 +41,14 @@ In addition to supporting my professional [service](/service/), my research
 results in award-winning and frequently cited research
 [papers](/research/papers/), oft-complimented
 [presentations](/research/presentations/), and useful free and open-source
-[software](/software/). My research focuses on software engineering and software
-testing, examples of which are described in these summaries that reference key
-papers.
+[software](/software/). I also leverage my research expertise as a co-host of
+[Software Engineering Radio](https://se-radio.net/), the podcast for which I
+conduct [interviews](https://se-radio.net/team/gregory-kapfhammer/) with the
+world's leading experts on topics like automated refactoring and property-based
+testing. My research focuses on software engineering and software testing,
+examples of which are described in these summaries that reference key papers.
+Please click the {{< iconify fa6-solid book-open >}} icon next to a reference
+to access the full paper!
 
 <div id="flaky-tests">
 
@@ -88,7 +93,8 @@ Recent papers such as
 and
 [@Alsharif2020a] [{{< iconify fa6-solid book-open >}}](/research/papers/alsharif2020a/index.qmd)
 present and study techniques for improving the efficiency and effectiveness of
-regression testing for relational database schemas.
+regression testing for relational database schemas by reordering or reducing
+the schema's test suites.
 
 </div>
 
