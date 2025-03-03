@@ -69,6 +69,10 @@ book-open>}}](/research/papers/parry2022/index.qmd), and a multi-source
 investigation into how developers experience the impacts and causes of flaky
 tests [@Parry2022b] [{{< iconify fa6-solid
 book-open>}}](/research/papers/parry2022b/index.qmd).
+My most recent work in this area advocates for researchers and developers to go
+beyond any individual metric of "good" or "bad" tests --- like test flakiness
+--- as it argues for a more holistic view test suite health [@McMinn2025] [{{<
+iconify fa6-solid book-open>}}](/research/papers/parry2022b/index.qmd).
 
 </div>
 
