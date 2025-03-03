@@ -138,12 +138,10 @@ programs and relational database schemas, some examples of papers include
 [@Just2012b] [{{< iconify fa6-solid book-open >}}](/research/papers/just2012b/index.qmd), [@Wright2014] [{{< iconify
 fa6-solid book-open >}}](/research/papers/wright2014/index.qmd), and
 [@McMinn2019] [{{< iconify fa6-solid book-open >}}](/research/papers/mcminn2019/index.qmd).
-
-Finally, recent work explores how eXtreme mutation testing (XMT) and statement
-deletion (SDL) mutation operators can detect pseudo-tested statements in a
-Java program
-[@Maton2024] [{{< iconify fa6-solid book-open >}}](/research/papers/mcminn2019/index.qmd).
-
+Finally, recent work explores how the eXtreme mutation testing (XMT) and
+statement deletion (SDL) mutation operators can detect pseudo-tested methods
+and statements in a Java program [@Maton2024] [{{< iconify fa6-solid
+book-open >}}](/research/papers/maton2024/index.qmd).
 
 </div>
 
