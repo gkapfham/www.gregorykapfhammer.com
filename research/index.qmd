@@ -152,13 +152,14 @@ book-open >}}](/research/papers/maton2024/index.qmd).
 Since software is often incrementally developed, my
 research on regression testing has created research automated ways to
 efficiently and effectively run test suites for complex programs.
-Some examples
-of papers that present and evaluate regression testing techniques include
+Some examples of papers that present and evaluate regression testing techniques
+for reordering and reducing test suites include
 [@Walcott2006] [{{< iconify fa6-solid book-open >}}](/research/papers/walcott2006/index.qmd),
 [@Lin2014] [{{< iconify fa6-solid book-open >}}](/research/papers/lin2014/index.qmd),
 and
 [@Lin2017] [{{< iconify fa6-solid book-open >}}](/research/papers/lin2017/index.qmd).
-Leading the way in the realistic assessment of regression testing, papers such as
+Leading the way in the realistic assessment of regression testing methods,
+papers such as
 [@Paterson2018] [{{< iconify fa6-solid book-open >}}](/research/papers/paterson2018/index.qmd)
 and
 [@Paterson2019] [{{< iconify fa6-solid book-open >}}](/research/papers/paterson2019/index.qmd),
