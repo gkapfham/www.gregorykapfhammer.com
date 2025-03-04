@@ -205,8 +205,9 @@ and
 [@Kinneer2015] [{{< iconify fa6-solid book-open >}}](/research/papers/kinneer2015/index.qmd).
 Papers such as
 [@Kotelyanskii2014a] [{{< iconify fa6-solid book-open >}}](/research/papers/kotelyanskii2014a/index.qmd)
-highlight how my research has investigated the influence that the parameters of a search-based
-algorithm have on efficiency and effectiveness.
+highlight how my research has investigated the influence that the parameters of
+a search-based algorithm have on efficiency and effectiveness of methods for
+automated test data generation.
 
 </div>
 
@@ -230,8 +231,8 @@ statistical methods. I have also written papers, like
 [@Alsharif2018a] [{{< iconify fa6-solid book-open >}}](/research/papers/alsharif2018a/index.qmd)
 and
 [@Alsharif2018b] [{{< iconify fa6-solid book-open >}}](/research/papers/alsharif2018b/index.qmd),
-that explain
-how to replicate my research.
+that explain how to replicate my empirical studies of search-based testing
+techniques.
 
 </div>
 
