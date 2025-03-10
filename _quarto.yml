@@ -59,8 +59,9 @@ website:
             href: schedule/index.qmd
           - text: "Contact"
             href: contact/index.qmd
-      - text: "Feeds"
-        menu:
+    right:
+       - text: "{{< fa rss >}}"
+         menu:
           - text: Blog
             url: blog/index.xml
           - text: Service
