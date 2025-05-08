@@ -402,6 +402,10 @@ href="https://github.com/GatorEducator/gatorgrouper">gatorgrouper</a>: Group
 formation tool for team-based courses</li>
 
 <li class="software"><a target="_blank" rel="noopener"
+href="https://github.com/GatorEducator/reporover">reporover</a>: Easily manage
+components in GitHub repositories</li>
+
+<li class="software"><a target="_blank" rel="noopener"
 href="https://github.com/GatorEducator/SheetShuttle">sheetshuttle</a>: Tool for
 data transfer between Google Sheets and GitHub</li>
 
