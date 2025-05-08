@@ -45,20 +45,22 @@ An award-winning [teacher](/teaching/index.qmd),
 as software engineering and software testing. I am an associate editor for the
 [Journal of Software: Evolution and
 Process](https://onlinelibrary.wiley.com/journal/20477481), an academic editor
-for the [PeerJ Computer Science](https://peerj.com/computer-science/) journal, a
-program committee member for conferences like the [International Conference on
-Software Testing, Verification and
+for the [PeerJ Computer Science](https://peerj.com/computer-science/) journal,
+a program committee member for conferences like the [International Conference
+on Software Testing, Verification and
 Validation](https://cs.gmu.edu/icst/index.html), the [International Conference
 on Software Engineering](https://conf.researchr.org/series/icse), and the
 [International Conference on Automated Software
 Engineering](https://conf.researchr.org/series/ase), and a reviewer for journals
 such as [Transactions on Software
-Engineering](https://www.computer.org/csdl/journal/ts) and [Journal of Software
-Testing, Verification and
+Engineering](https://www.computer.org/csdl/journal/ts) and [Journal of
+Software Testing, Verification and
 Reliability](https://onlinelibrary.wiley.com/journal/10991689). Along with
-contributing to open-source [software](/software/index.qmd), I collaborate with
-people at leading academic institutions, government agencies, open-source
-projects, and technology companies.
+contributing to open-source [software](/software/index.qmd), I collaborate
+with people at leading academic institutions, government agencies, open-source
+projects, and technology companies. I am also a guest on podcasts like [Stack
+Overflow](https://stackoverflow.blog/podcast) and a co-host of [Software Engineering
+Radio](https://se-radio.net/).
 
 The following searchable table gives a complete list of my professional service!
 
