@@ -707,7 +707,8 @@ th {
 }
 
 #listing-featured-service-biography {
-  margin-bottom: -2.25rem !important;
+  /* margin-bottom: -2.25rem !important; */
+  margin-bottom: -1.5rem !important;
 }
 
 #featured-service-biography-pagination .quarto-listing {
