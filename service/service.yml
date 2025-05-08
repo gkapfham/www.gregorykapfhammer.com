@@ -5,6 +5,13 @@
   description: "Program Committee Member"
   year-range: "2025 - 2024"
   service-count: 2
+- title: "International Conference on Software Maintenance and Evolution"
+  categories: [conference]
+  date: '2025-01-01'
+  date-format: YYYY
+  description: "Tool Demonstrations Program Committee"
+  year-range: "2025"
+  service-count: 1
 - title: "International Symposium on Software Testing and Analysis"
   categories: [conference]
   date: '2025-01-01'
