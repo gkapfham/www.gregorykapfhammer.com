@@ -93,7 +93,7 @@ def perform_stage(command: Callable) -> bool:
     return prior_stage_ran
 
 
-def main() -> None:
+def main() -> None:  # noqa: PLR0912
     """Perform the steps for the main function."""
     global use_poetry_venv  # noqa: PLW0603
     global render_file  # noqa: PLW0603
@@ -147,7 +147,7 @@ def main() -> None:
             if stage == "publish":
                 host = "quarto-pub"
             else:
-                host = stage 
+                host = stage
             if prior_stage_ran:
                 console.print()
             command = quarto
@@ -159,7 +159,7 @@ def main() -> None:
             if stage == "publish":
                 host = "netlify"
             else:
-                host = stage 
+                host = stage
             if prior_stage_ran:
                 console.print()
             command = quarto
