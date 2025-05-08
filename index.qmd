@@ -110,26 +110,31 @@ console.print(
 ```
 
 Innovating in technical areas such as software engineering and software testing,
-I teach [courses](teaching/index.qmd), conduct [research](research/index.qmd),
-write [papers](research/papers/index.qmd) and a [blog](blog/index.qmd), give
+I teach [courses](teaching/index.qmd), conduct
+[research](research/index.qmd), write [papers](research/papers/index.qmd)
+and a [blog](blog/index.qmd), give
 [presentations](research/presentations/index.qmd), create
-[software](software/index.qmd), and [serve](service/index.qmd) organizations.
-Working as an Associate Professor in the [Department of Computer and Information
-Science](https://www.cis.allegheny.edu/) at [Allegheny
-College](http://www.allegheny.edu), I am an associate editor for the [Journal of
-Software: Evolution and
+[software](software/index.qmd), and [serve](service/index.qmd)
+organizations. Working as an Associate Professor in the [Department of
+Computer and Information Science](https://www.cis.allegheny.edu/) at
+[Allegheny College](http://www.allegheny.edu), I am an associate editor for
+the [Journal of Software: Evolution and
 Process](https://onlinelibrary.wiley.com/journal/20477481), an academic editor
-for the [PeerJ Computer Science](https://peerj.com/computer-science/) journal, a
-program committee member for conferences like the [International Conference on
-Software Testing, Verification and
+for the [PeerJ Computer Science](https://peerj.com/computer-science/) journal,
+a program committee member for conferences like the [International Conference
+on Software Testing, Verification and
 Validation](https://cs.gmu.edu/icst/index.html) and the [International
 Conference on Software Engineering](https://conf.researchr.org/series/icse), and
 a reviewer for journals like [Transactions on Software
 Engineering](https://www.computer.org/csdl/journal/ts) and the [Journal of
 Software Testing, Verification and
-Reliability](https://onlinelibrary.wiley.com/journal/10991689). You can learn
-more about me and my work by reading my [biography](biography/index.qmd),
-downloading my [curriculum
+Reliability](https://onlinelibrary.wiley.com/journal/10991689). Along with
+[media appearances](biography/#media-engagements) on podcasts like [Stack
+Overflow](https://stackoverflow.blog/podcast) and [Talk
+Python](https://talkpython.fm/), I interview the world's leading experts on
+software engineering as a co-host of [Software Engineering
+Radio](https://se-radio.net/). You can learn more about me and my work by
+reading my [biography](biography/index.qmd), downloading my [curriculum
 vitae](https://github.com/gkapfham/curriculum-vitae/releases/download/v1.4.0/curriculum_vitae_kapfhammer.pdf),
 and [subscribing](support/index.qmd) to my mailing list.
 
