@@ -19,7 +19,7 @@ listing:
       - "!research/papers/index.qmd"
     sort:
       - "date desc"
-      - "author title categories"
+      - "author title"
     type: default
     date-format: "YYYY"
     sort-ui: false
