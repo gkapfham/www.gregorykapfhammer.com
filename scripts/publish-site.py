@@ -93,7 +93,7 @@ def perform_stage(command: Callable) -> bool:
     return prior_stage_ran
 
 
-def main() -> None:  # noqa: PLR0912
+def main() -> None:  # noqa: PLR0912, PLR0915
     """Perform the steps for the main function."""
     global use_poetry_venv  # noqa: PLW0603
     global render_file  # noqa: PLW0603
