@@ -12,14 +12,22 @@ $link-color: #ef6c00;
 
 #quarto-announcement .quarto-announcement-content p {
   margin-bottom: 0;
-  color: #1c1c1c;
+  color: #212121;
 }
 
 #quarto-announcement .quarto-announcement-icon {
   margin-right: 0.5em;
   font-size: 1.2em;
   margin-top: -0.15em;
-  color: #1c1c1c;
+  color: #212121;
+}
+
+// }}}
+
+// Details {{{
+
+details>summary {
+  color: #bdbdbd !important;
 }
 
 // }}}
