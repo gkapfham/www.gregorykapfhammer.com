@@ -112,9 +112,18 @@ format:
     mainfont: IBM Plex Sans
     monofont: IBM Plex Mono
     fontsize: 1.375em
+    # respect the user's color scheme preference
+    # (so, if they have a dark theme set then it
+    # should be used and, conversely, if they have
+    # a light theme set then it should be used)
+    respect-user-color-scheme: true
+    # provide both a light and dark theme
     theme:
         light: [united, united-light.scss]
         dark: [united, united-dark.scss]
+    # support a custom CSS file with additional
+    # rules and overrides that apply to all
+    # pages for both light and dark modes
     css: styles.css
     toc: true
     toc-title: "Contents"
