@@ -8,6 +8,22 @@ $link-color: #ef6c00;
 
 // }}}
 
+// Announcement {{{
+
+#quarto-announcement .quarto-announcement-content p {
+  margin-bottom: 0;
+  color: #1c1c1c;
+}
+
+#quarto-announcement .quarto-announcement-icon {
+  margin-right: 0.5em;
+  font-size: 1.2em;
+  margin-top: -0.15em;
+  color: #1c1c1c;
+}
+
+// }}}
+
 // Search Box {{{
 
 #quarto-search input {
@@ -32,11 +48,7 @@ $link-color: #ef6c00;
 .aa-Autocomplete .aa-Form .aa-InputWrapperPrefix .aa-Label svg,
 .aa-Autocomplete .aa-Form .aa-InputWrapperPrefix .aa-LoadingIndicator svg,
 .aa-DetachedFormContainer .aa-Form .aa-InputWrapperPrefix .aa-Label svg,
-.aa-DetachedFormContainer
-  .aa-Form
-  .aa-InputWrapperPrefix
-  .aa-LoadingIndicator
-  svg {
+.aa-DetachedFormContainer .aa-Form .aa-InputWrapperPrefix .aa-LoadingIndicator svg {
   color: #333 !important;
   opacity: 0.5;
 }
