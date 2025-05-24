@@ -32,6 +32,21 @@ details>summary {
 
 // }}}
 
+// Tables {{{
+
+thead,
+tbody,
+tfoot,
+tr,
+td,
+th {
+  color: #bdbdbd !important;
+  border-style: none !important;
+  border-width: 0;
+}
+
+// }}}
+
 // Search Box {{{
 
 #quarto-search input {
