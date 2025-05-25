@@ -79,6 +79,10 @@ th {
   border-radius: 0.2em;
 }
 
+.input-group> :not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
+  color: #bdbdbd !important;
+}
+
 #quarto-search input {
   font-size: 0.925rem;
   background-color: #fdfeff;
