@@ -3,8 +3,8 @@
 // Links {{{
 
 // Base document colors
-// $link-color: #ef6c00;
 $link-color: #e65100;
+$code-color: #98971A;
 
 // }}}
 
@@ -13,6 +13,19 @@ $link-color: #e65100;
 // Define the color of the navbar
 .navbar-light {
   background-color: #e65100 !important;
+}
+
+// }}}
+
+// Source Code {{{
+
+code {
+  font-size: 0.875em;
+  color: var(--bs-code-color);
+  background-color: #fff !important;
+  border-radius: 0.25rem;
+  padding: 0.125rem 0.25rem;
+  word-wrap: break-word;
 }
 
 // }}}
