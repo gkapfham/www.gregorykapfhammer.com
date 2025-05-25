@@ -69,6 +69,16 @@ th {
 
 // Search Box {{{
 
+.input-group-sm>.form-control,
+.input-group-sm>.form-select,
+.input-group-sm>.input-group-text,
+.input-group-sm>.btn {
+  color: #212121;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
+  border-radius: 0.2em;
+}
+
 #quarto-search input {
   font-size: 0.925rem;
   background-color: #fdfeff;
