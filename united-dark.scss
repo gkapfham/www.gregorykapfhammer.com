@@ -5,6 +5,7 @@
 $body-bg: #212121;
 $body-color: #bdbdbd;
 $link-color: #ef6c00;
+$code-color: #98971A;
 
 // }}}
 
@@ -117,6 +118,15 @@ th {
 // Code blocks
 $code-block-bg-alpha: -0.9;
 
+code {
+  font-size: 0.875em;
+  color: var(--bs-code-color);
+  background-color: #212121 !important;
+  border-radius: 0.25rem;
+  padding: 0.125rem 0.25rem;
+  word-wrap: break-word;
+}
+
 pre {
   display: block;
   margin-top: 0;
@@ -142,6 +152,19 @@ pre {
   color: #333333;
   text-align: inherit;
   text-decoration: none;
+}
+
+// }}}
+
+// Pagination {{{
+
+.page-item.disabled {
+  background-color: #e65100 !important;
+}
+
+.page-item.disabled a.page-link {
+  background-color: #e65100 !important;
+  color: #fff !important;
 }
 
 // }}}
