@@ -513,7 +513,7 @@ div.quarto-post .thumbnail {
 }
 
 div.quarto-post .listing-categories .listing-category {
-  color: #333333 !important;
+  color: #333333;
   padding: 0.25em 0.75em;
   font-size: 0.55em;
   font-weight: 500;
@@ -522,6 +522,7 @@ div.quarto-post .listing-categories .listing-category {
   border-radius: 0.25rem;
   opacity: 1;
   cursor: pointer;
+  margin-top: 4px;
   margin-right: 4px;
   margin-bottom: 4px;
 }
