@@ -4,7 +4,7 @@
 
 // Base document colors
 $link-color: #e65100;
-$code-color: #98971A;
+$code-color: #98971a;
 
 // }}}
 
@@ -26,6 +26,24 @@ code {
   border-radius: 0.25rem;
   padding: 0.125rem 0.25rem;
   word-wrap: break-word;
+}
+
+// }}}
+
+// Pagination {{{
+
+.page-link.disabled,
+.disabled>.page-link {
+  color: var(--bs-pagination-disabled-border-color) !important;
+  pointer-events: none;
+  background-color: #fff !important;
+  border-color: var(--bs-pagination-disabled-border-color);
+}
+
+ul.pagination li.disabled a,
+ul.pagination li.active a {
+  color: #343a40;
+  text-decoration: none;
 }
 
 // }}}
