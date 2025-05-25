@@ -5,7 +5,7 @@
 $body-bg: #212121;
 $body-color: #bdbdbd;
 $link-color: #ef6c00;
-$code-color: #98971A;
+$code-color: #98971a;
 
 // }}}
 
@@ -158,13 +158,12 @@ pre {
 
 // Pagination {{{
 
-.page-item.disabled {
-  background-color: #e65100 !important;
-}
-
-.page-item.disabled a.page-link {
-  background-color: #e65100 !important;
-  color: #fff !important;
+.page-link.disabled,
+.disabled>.page-link {
+  color: var(--bs-pagination-disabled-color);
+  pointer-events: none;
+  background-color: #212121 !important;
+  border-color: var(--bs-pagination-disabled-border-color);
 }
 
 // }}}
