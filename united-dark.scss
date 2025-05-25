@@ -10,6 +10,15 @@ $link-color: #ef6c00;
 
 // Announcement {{{
 
+#quarto-announcement {
+  color: #212121;
+  padding: 0.5em;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0;
+  font-size: 0.9em;
+}
+
 #quarto-announcement .quarto-announcement-content p {
   margin-bottom: 0;
   color: #212121;
