@@ -122,6 +122,7 @@ KEYWORDS_ALL = {
     "localiz": "fault localization",
     "machine learning": "machine learning",
     "memory overhead": "performance analysis",
+    "multi-source": "empirical study",
     "mutants": "mutation testing",
     "mutation": "mutation testing",
     "prioritizing test suites": "test-suite prioritization",
