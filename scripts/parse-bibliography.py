@@ -94,6 +94,7 @@ KEYWORDS_ALL = {
     "defect prediction": "defect prediction",
     "developer survey": "human study",
     "demonstrations track": "software tool",
+    "encourage": "literature review",
     "empirical": "empirical study",
     "empirically": "empirical study",
     "encyclopedia": "literature review",
