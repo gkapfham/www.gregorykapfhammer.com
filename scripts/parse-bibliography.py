@@ -59,6 +59,7 @@ KEYWORDS_PRESENTATIONS = {
     "doubling experiments": "performance analysis",
     "efficient": "program performance",
     "efficiency": "program performance",
+    "encourage": "literature review",
     "GitHub": "continuous integration",
     "JavaSpace": "distributed systems",
     "Jini": "distributed systems",
