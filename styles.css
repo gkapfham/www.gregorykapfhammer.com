@@ -448,6 +448,11 @@ div.quarto-post .thumbnail {
 
 /* Papers and Presentations {{{ */
 
+#quarto-content.page-columns #quarto-margin-sidebar,
+#quarto-content.page-columns #quarto-sidebar {
+  z-index: 0;
+}
+
 .quarto-title-reference-heading {
   text-transform: uppercase;
   margin-top: 1em;
