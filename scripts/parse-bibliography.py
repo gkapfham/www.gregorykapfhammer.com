@@ -128,6 +128,7 @@ KEYWORDS_ALL = {
     "prioritizing test suites": "test-suite prioritization",
     "prioritizing tests": "test-suite prioritization",
     "prioritization": "test-suite prioritization",
+    "propose": "literature review",
     "pseudo-tested": "mutation testing",
     "PseudoSweep": "test coverage",
     "regression testing": "test-suite prioritization",
