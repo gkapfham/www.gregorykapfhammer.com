@@ -11,13 +11,15 @@ description: <em>How can generative AI transform automated testing?</em>
 
 In a recent episode of the [Software Engineering
 Radio](https://www.se-radio.net/) podcast, I interviewed [Itamar
-Friedman](https://www.linkedin.com/in/itamarf/), CEO and Co-founder of Qodo (a
-company previously called CodiumAI). Our conversation focused on automated
-testing with generative AI, exploring how large language models can augment
-existing test suites and increase code coverage. Itamar shared insights about
-Cover Agent, an open-source tool that automatically generates qualified tests to
-enhance testing practices, and discussed the broader implications of AI-powered
-development tools.
+Friedman](https://www.linkedin.com/in/itamarf/), CEO and Co-founder of
+[Qodo](https://www.qodo.ai/) (a company previously called CodiumAI). Our
+conversation focused on automated testing with generative artificial
+intelligence (AI), exploring how large language models (LLMs) can augment
+existing test suites and increase code coverage. Itamar and I discussed the
+design, implementation, use, and future of
+[Qodo-Cover](https://github.com/qodo-ai/qodo-cover/tree/main), an open-source
+tool that automatically generates tests to increase the coverage of an existing
+test suite.
 
 ## Insights
 
