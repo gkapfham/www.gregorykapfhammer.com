@@ -16,47 +16,58 @@ Friedman](https://www.linkedin.com/in/itamarf/), CEO and Co-founder of
 conversation focused on automated testing with generative artificial
 intelligence (AI), exploring how large language models (LLMs) can augment
 existing test suites and increase code coverage. Itamar and I discussed the
-design, implementation, use, and future of
-[Qodo-Cover](https://github.com/qodo-ai/qodo-cover/tree/main), an open-source
-tool that automatically generates tests to increase the coverage of an existing
-test suite.
+design, implementation, and use of
+[Qodo-Cover](https://github.com/qodo-ai/qodo-cover/tree/main) (previously
+called Cover-Agent), an open-source tool that uses LLMs to automatically enhance
+a provided test suite.
 
 ## Insights
 
 I'm thankful that Itamar took the time for this interview! Here are some key
 insights from it:
 
-**What testing tasks does Cover Agent automatically perform?**
+**What testing tasks does Qodo-Cover automatically perform?**
 
-> Cover Agent can try to generate all types of testing, but the sweet spot that
+> Qodo-Cover can try to generate all types of testing, but the sweet spot that
 > we saw is mostly around component testing. If you provide an initial few tests
-> that cover one or more components and you run Cover Agent, it'll try to
+> that cover one or more components and you run Qodo-Cover, it'll try to
 > generate many more. It takes the first few tests that were given as part of
 > the test suite and exploits these to inspire it to generate more.
 
 **Why is code coverage still a valuable metric despite its limitations?**
 
-> Code coverage in many ways is a proxy metric, and some would say it's a vanity
-> metric. But if you can say that you've covered 100% of the lines, then you're
-> probably in a good place proxy wise because you probably passed through all
-> the options. These days nobody has invented something better. Higher is better
-> because you probably tested more statements, more use cases, more flows of your
-> software.
+> Many would say that code coverage is a proxy metric. I think almost 100% people
+> would say that. But I think that also some percentage of developers and managers
+> would say that code coverage is actually a vanity metric. Practically what we’re
+> trying to say is that did we check that the code work exactly as expected? Okay
+> and now how do you check that?
 
-**How does Cover Agent leverage flow engineering rather than simple prompting?**
+**What is a flaky test case? How does Qodo-Cover handle flaky test cases?**
 
-> We coined a term "flow engineering." Usually how we perceive AI-empowered
-> systems is system one thinking - you give the system a prompt, it collects
-> context, and with one inference provides output. System two thinking is
-> running a full flow with multiple prompts. It's almost a state machine with
-> edges and nodes where you define what task needs to be done. Flow engineering
-> is designing that flow, and it reduces the variance in accuracy because the
-> intelligence is in the flow itself.
+> If you have a test and you’re running it five times and it doesn't give you the
+> same result each time, especially if sometimes it's passed, sometimes it fails,
+> that's the most obvious flakiness, then it's flaky. It means how can you trust
+> that test if it passed four times the same test, you know, just run it five
+> times and pass four times and fail one that's a flaky test. LLMs, you can try to
+> prompt it not to generate the flaky test. I think the prompting to start with
+> will try to do that and because there are tests smells that can be smelled for
+> example if there is an obvious API call an obvious one.
+
+**What advice do you have for developers adopting AI-powered development tools?**
+
+> About dev tools, I think developers love writing code, they love building and
+> now they can, you know, use code completion to do even a bit more, probably save
+> time and go drink more coffee. I don’t think it’s really helpful for generating
+> more features. But actually let’s think about the real bottlenecks. I don’t
+> think it’s writing more lines of code. It’s about code quality, it’s about code
+> reviewing, it’s about testing, etc. So I think that when you want to start
+> integrating, you know, different AI dev tools to improve your productivity,
+> think what are your today bottlenecks and what are your today problems?
 
 ## Listen
 
 If you're interested in learning more about automated testing with generative AI
-and how tools like Cover Agent can enhance your development workflow, I highly
+and how tools like Qodo-Cover can enhance your development workflow, I highly
 recommend listening to [Itamar Friedman on Automated Testing with Generative
 AI](https://se-radio.net/2024/09/se-radio-633-itamar-friedman-on-automated-testing-with-generative-ai/)
 from [Software Engineering Radio](https://se-radio.net/)! You can find it on
