@@ -595,6 +595,19 @@ th {
 
 /* }}} */
 
+/* Listing Search and Filter {{{ */
+
+.listing-actions-group {
+  font-size: 0.825rem;
+  display: flex;
+}
+
+input.search.form-control {
+  font-size: 0.725rem !important;
+}
+
+/* }}} */
+
 /* Professional Service and other Listing Table {{{ */
 
 .listing-description {
