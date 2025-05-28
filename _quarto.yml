@@ -14,7 +14,7 @@ website:
   announcement: 
     icon: megaphone
     dismissable: true
-    content: 'I recently hosted an episode of <a href = "https://se-radio.net/">Software Engineering Radio</a> called <a href="https://se-radio.net/2025/04/se-radio-666-eran-yahav-on-the-tabnine-ai-coding-assistant/">\"Eran Yahav on the Tabnine AI Coding Assistant\"</a>!'
+    content: 'I recently hosted an episode of <a href = "https://se-radio.net/">Software Engineering Radio</a> called <a href="https://se-radio.net/2025/05/se-radio-669-will-mcgugan-on-text-based-user-interfaces/">\"Will McGugan on Text-Based User Interfaces\"</a>!'
     type: primary
   page-navigation: true
   favicon: "icons/fxemoji-rocket.svg"
