@@ -1,0 +1,71 @@
+---
+author: Gregory M. Kapfhammer
+title: Insights from my Software Engineering Radio interview with Itamar Friedman 
+date: '2024-09-11'
+date-format: YYYY
+categories: [post, automated testing, software engineering radio]
+description: <em>How can generative AI transform automated testing?</em>
+---
+
+## Introduction
+
+In a recent episode of the [Software Engineering
+Radio](https://www.se-radio.net/) podcast, I interviewed [Itamar
+Friedman](https://www.linkedin.com/in/itamarf/), CEO and Co-founder of Qodo (a
+company previously called CodiumAI). Our conversation focused on automated
+testing with generative AI, exploring how large language models can augment
+existing test suites and increase code coverage. Itamar shared insights about
+Cover Agent, an open-source tool that automatically generates qualified tests to
+enhance testing practices, and discussed the broader implications of AI-powered
+development tools.
+
+## Insights
+
+I'm thankful that Itamar took the time for this interview! Here are some key
+insights from it:
+
+**What testing tasks does Cover Agent automatically perform?**
+
+> Cover Agent can try to generate all types of testing, but the sweet spot that
+> we saw is mostly around component testing. If you provide an initial few tests
+> that cover one or more components and you run Cover Agent, it'll try to
+> generate many more. It takes the first few tests that were given as part of
+> the test suite and exploits these to inspire it to generate more.
+
+**Why is code coverage still a valuable metric despite its limitations?**
+
+> Code coverage in many ways is a proxy metric, and some would say it's a vanity
+> metric. But if you can say that you've covered 100% of the lines, then you're
+> probably in a good place proxy wise because you probably passed through all
+> the options. These days nobody has invented something better. Higher is better
+> because you probably tested more statements, more use cases, more flows of your
+> software.
+
+**How does Cover Agent leverage flow engineering rather than simple prompting?**
+
+> We coined a term "flow engineering." Usually how we perceive AI-empowered
+> systems is system one thinking - you give the system a prompt, it collects
+> context, and with one inference provides output. System two thinking is
+> running a full flow with multiple prompts. It's almost a state machine with
+> edges and nodes where you define what task needs to be done. Flow engineering
+> is designing that flow, and it reduces the variance in accuracy because the
+> intelligence is in the flow itself.
+
+## Listen
+
+If you're interested in learning more about automated testing with generative AI
+and how tools like Cover Agent can enhance your development workflow, I highly
+recommend listening to [Itamar Friedman on Automated Testing with Generative
+AI](https://se-radio.net/2024/09/se-radio-633-itamar-friedman-on-automated-testing-with-generative-ai/)
+from [Software Engineering Radio](https://se-radio.net/)! You can find it on
+your favorite podcast player, [Apple
+Podcasts](https://podcasts.apple.com/us/podcast/software-engineering-radio-the-podcast-for/id120906714),
+[Spotify](https://open.spotify.com/show/6UO3XQclSuNnGxB39QdAnL),
+[YouTube](https://www.youtube.com/playlist?list=PLHJB2bhmgB7esz0BxMCt1jJwsoaqWtFff),
+or you can listen to it with this handy podcast player.
+
+{{< audio
+file="https://traffic.libsyn.com/secure/forcedn/seradio/633-itamar-friedman-testing-generative-ai.mp3"
+caption="Listen to Software Engineering Radio Episode 633" >}}
+
+{{< include /_back-blog.qmd >}}
