@@ -62,7 +62,7 @@ insights from it:
 > think it’s writing more lines of code. It’s about code quality, it’s about code
 > reviewing, it’s about testing, etc. So I think that when you want to start
 > integrating, you know, different AI dev tools to improve your productivity,
-> think what are your today bottlenecks and what are your today problems?
+> think what are your "today bottlenecks" and what are your "today problems"?
 
 ## Listen
 
