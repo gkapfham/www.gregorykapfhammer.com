@@ -56,9 +56,9 @@ other ecosystems.
 
 - **Automated Root Cause Analysis**: While our manual inspection revealed
 important patterns, the process was time-consuming and sometimes inconclusive.
-Developing AI-powered techniques to automatically analyze test code and stack
-traces could significantly accelerate the identification of systemic flakiness
-causes.
+Developing artificial intelligence (AI)-powered techniques to automatically
+analyze test code and stack traces could significantly accelerate the
+identification of systemic flakiness causes.
 
 - **Integration with CI/CD Tools**: Current flaky test detection tools focus on
 individual tests without considering failure co-occurrence. Research should
@@ -76,8 +76,9 @@ failures. These assessments should be revisited using realistic models that
 account for clustered failures.
 
 - **Benchmark Datasets**: The research community needs datasets that explicitly
-capture failure co-occurrence patterns. Such benchmarks would enable comparative
-evaluation of systemic flakiness detection techniques.
+capture failure co-occurrence patterns and the phenomenon of systemic flakiness.
+These benchmarks would enable comparative evaluation of systemic flakiness
+detection tools.
 
 ::: {.callout-note appearance="simple"}
 
