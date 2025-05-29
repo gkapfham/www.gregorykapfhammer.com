@@ -48,9 +48,9 @@ approach, please checkout this short paper!
 As we continue to explore and understand the intricacies of the FITTER
 technique, your insights and suggestions are invaluable. If you have ideas on
 how to build and evaluate this flaky test detection technique, please
-[contact](/contact/) me! Additionally, if you wish to stay updated on new
-developments and blog posts related to this topic and more, consider
-[subscribing](/support/) to my mailing list.
+[contact](/contact/) me! If you wish to stay updated on new developments and
+blog posts related to this topic and more, consider [subscribing](/support/)
+to my mailing list.
 
 :::
 
