@@ -10,11 +10,12 @@ description: <em>Flaky tests often cluster together with shared root causes!</em
 ## Introduction
 
 Have you ever noticed that when one flaky test fails in your continuous
-integration pipeline, several others seem to fail at the same time? You're not
-imagining things! My colleagues and I recently completed a comprehensive study
-that reveals flaky tests often exist in clusters, failing together due to shared
-root causes. We call this phenomenon *systemic flakiness*, and we think it
-represents a major shift in how we should think about and address flaky tests.
+integration pipeline, several others seem to fail at the same time? Well, you're
+not imagining things! My colleagues and I recently completed a comprehensive
+study that reveals flaky tests often exist in clusters, failing together due to
+shared root causes. We call this phenomenon *systemic flakiness*, and we think
+it represents a major shift in how we should think about and address flaky
+tests.
 
 Our research paper "Systemic Flakiness: An Empirical Analysis of Co-Occurring
 Flaky Test Failures" [@Parry2025] [{{< iconify fa6-solid
@@ -28,8 +29,8 @@ developers can reduce the time and cost of fixing flaky tests!
 - **The Prevalence of Systemic Flakiness**: Our analysis of 810 flaky tests
 across 24 Java projects revealed that 75% of flaky tests belong to clusters with
 an average of 13.5 tests per cluster. This means that when one flaky test fails,
-it's likely that 12-13 other tests will fail at the same time due to shared root
-causes.
+it's likely that 12 or 13 other test cases will also fail at the same time due
+to shared root causes.
 
 - **Predicting Systemic Flakiness with Machine Learning**: Rather than requiring
 thousands of test suite runs to identify which tests fail together, we found
@@ -60,10 +61,11 @@ Developing artificial intelligence (AI)-powered techniques to automatically
 analyze test code and stack traces could significantly accelerate the
 identification of systemic flakiness causes.
 
-- **Integration with CI/CD Tools**: Current flaky test detection tools focus on
-individual tests without considering failure co-occurrence. Research should
-explore how to integrate systemic flakiness prediction into existing continuous
-integration pipelines.
+- **Integration with CI/CD Tools**: Current flaky test detection tools normally
+focus on individual tests without considering failure co-occurrence. Research
+should explore how to integrate systemic flakiness prediction into existing
+continuous integration (CI) and continuous delivery (CD) pipelines on platforms
+like GitHub Actions.
 
 - **Developer Studies**: Our research was based on quantitative analysis, but we
 need to understand how developers currently perceive and handle systemic
