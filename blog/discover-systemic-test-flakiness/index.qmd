@@ -40,10 +40,10 @@ was more predictive than analyzing the actual source code.
 
 - **Root Causes of Systemic Flakiness**: Through manual inspection of error
 messages and stack traces, we discovered that systemic flakiness is primarily
-caused by networking issues (like DNS failures or connection timeouts) and
-external dependencies (such as unstable services or library version conflicts).
-This differs significantly from individual flaky tests, which are usually caused
-by concurrency or timing issues.
+caused by networking issues (e.g., domain name service failures or
+connection timeouts) and external dependencies (e.g., unstable services or
+library version conflicts). This differs significantly from individual flaky
+tests, which are usually caused by concurrency or timing issues.
 
 ## Future Research Suggestions
 
