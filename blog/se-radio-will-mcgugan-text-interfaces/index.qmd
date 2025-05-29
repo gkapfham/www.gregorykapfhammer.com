@@ -15,10 +15,11 @@ McGugan](https://willmcgugan.github.io/), the creator of
 [Rich](https://github.com/Textualize/rich) and
 [Textual](https://github.com/Textualize/textual) and the CEO and founder of
 [Textualize](https://www.textualize.io/). Our conversation focused on building
-text-based user interfaces (TUIs) and command line interfaces (CLIs) using
-Python frameworks. Will shared fascinating insights about how modern web
-technologies can be adapted for terminal applications, performance optimization
-strategies, and the future of text-based interfaces in software development.
+text-based user interfaces (TUIs) and command line interfaces (CLIs) using the
+aforementioned Python frameworks. Will explained how concepts from web
+technologies can be adapted for terminal applications, strategies for optimizing
+the performance of TUI and CLI frameworks, and the future of text-based
+interfaces in software development.
 
 ## Insights
 
@@ -71,17 +72,17 @@ insights from it:
 ## Listen
 
 If you're interested in learning more about Rich, Textual, and building
-text-based user interfaces, I highly recommend listening to my interview with
-Will McGugan about text-based user interfaces on [Software Engineering
-Radio](https://se-radio.net/)! You can find it on your favorite podcast player,
-[Apple
+text-based user interfaces in Python, I highly recommend listening to my
+interview with Will McGugan about text-based user interfaces on [Software
+Engineering Radio](https://se-radio.net/)! You can find it on your favorite
+podcast player, [Apple
 Podcasts](https://podcasts.apple.com/us/podcast/software-engineering-radio-the-podcast-for/id120906714),
 [Spotify](https://open.spotify.com/show/6UO3XQclSuNnGxB39QdAnL),
 [YouTube](https://www.youtube.com/playlist?list=PLHJB2bhmgB7esz0BxMCt1jJwsoaqWtFff),
 or you can listen to it with this handy podcast player.
 
 {{< audio
-file="https://traffic.libsyn.com/secure/forcedn/seradio/669-will-mcgugan-text-interfaces.mp3"
+file="https://traffic.libsyn.com/secure/forcedn/seradio/669-will-mcgugan-text-based-ui.mp3"
 caption="Listen to Software Engineering Radio Episode with Will McGugan" >}}
 
 {{< include /_back-blog.qmd >}}
