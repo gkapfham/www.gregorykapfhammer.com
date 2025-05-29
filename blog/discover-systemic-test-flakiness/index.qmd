@@ -84,8 +84,8 @@ detection tools.
 
 ## Further Details
 
-This research represents a fundamental shift in how we understand flaky tests.
-If you're interested in learning more about systemic flakiness or have
+This research paper represents a fundamental shift in how we understand flaky
+tests. If you're interested in learning more about systemic flakiness or have
 experiences with clustered test failures, I'd love to hear from you! Please
 [contact](/contact/) me with your insights. To stay updated on the latest
 developments in flaky test research, consider [subscribing](/support/) to my
