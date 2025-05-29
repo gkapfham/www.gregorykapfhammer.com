@@ -1,0 +1,87 @@
+---
+author: Gregory M. Kapfhammer
+title: Insights from my Software Engineering Radio interview with Will McGugan
+date: '2025-05-21'
+date-format: YYYY
+categories: [post, text interfaces, software engineering radio, python, rich, textual]
+description: <em>How do you build text-based user interfaces?</em>
+---
+
+## Introduction
+
+In a recent episode of the [Software Engineering
+Radio](https://www.se-radio.net/) podcast, I interviewed [Will
+McGugan](https://willmcgugan.github.io/), the creator of
+[Rich](https://github.com/Textualize/rich) and
+[Textual](https://github.com/Textualize/textual) and the CEO and founder of
+[Textualize](https://www.textualize.io/). Our conversation focused on building
+text-based user interfaces (TUIs) and command line interfaces (CLIs) using
+Python frameworks. Will shared fascinating insights about how modern web
+technologies can be adapted for terminal applications, performance optimization
+strategies, and the future of text-based interfaces in software development.
+
+## Insights
+
+I'm thankful that Will took the time for this interview! Here are some key
+insights from it:
+
+**What makes text-based user interfaces compelling for developers?**
+
+> They tend to be very responsive and very quick and very snappy and there's
+> less contact switching. I mean I used to be a web developer, I kind of use the
+> web a lot like most people do, but there's quite a lot of contexts switching
+> when you go between web application, browser tab, et cetera. But the benefits
+> of 2E running in the terminal is that it stays in your own flow. So it's like
+> everything's in one place and it's snappy and responsive and it comes up when
+> you need it. It's very quick to interact with and then it goes away as quickly
+> when you don't need it.
+
+**How does bringing web technologies to the terminal improve development?**
+
+> So I come from the web world and the great thing about the web is that
+> building user interfaces has been iterated on very rapidly for the last 10, 20
+> years. People have been trying new ways, new interfaces, refining it and
+> creating new technologies to create these user interfaces. But none of that
+> made it to the terminal. The terminal was considered a bit archaic and people
+> used it for more simplistic outputs. So I took web technologies and
+> essentially ported what I think is the best of them to the terminal.
+
+**What performance strategies are crucial for smooth terminal interfaces?**
+
+> You consider the terminal to be a matrix of characters. That's essentially
+> all, it's that composes all the elements that run inside the terminal and if
+> you change it, you can build up a new frame. If you were to clear the screen,
+> which might be obvious and then write your new screen on top of it, you get
+> flicker because the terminal was never really designed. In a sense it was, but
+> it's not good at displaying user interfaces. That's not really its primary
+> purpose even though it can, the way around that is instead of clearing the
+> screen, you just write the new content on top of it and do you need to change
+> the bits of the screen which have logically changed.
+
+**How does caching with immutable objects improve performance?**
+
+> Immutability is the opposite of mutability. Mutability means the ability to
+> change, mutate your data. If an object isn't mutable, it's immutable and it
+> can't change and it might seem like a restriction, like you've got a data,
+> you've got an object, you can't change it. It feels like a restriction but it
+> is massively beneficial. It means that when you change it, you create a new
+> object rather than modifying the existing one. And when you do that, caching
+> works a lot better.
+
+## Listen
+
+If you're interested in learning more about Rich, Textual, and building
+text-based user interfaces, I highly recommend listening to my interview with
+Will McGugan about text-based user interfaces on [Software Engineering
+Radio](https://se-radio.net/)! You can find it on your favorite podcast player,
+[Apple
+Podcasts](https://podcasts.apple.com/us/podcast/software-engineering-radio-the-podcast-for/id120906714),
+[Spotify](https://open.spotify.com/show/6UO3XQclSuNnGxB39QdAnL),
+[YouTube](https://www.youtube.com/playlist?list=PLHJB2bhmgB7esz0BxMCt1jJwsoaqWtFff),
+or you can listen to it with this handy podcast player.
+
+{{< audio
+file="https://traffic.libsyn.com/secure/forcedn/seradio/669-will-mcgugan-text-interfaces.mp3"
+caption="Listen to Software Engineering Radio Episode with Will McGugan" >}}
+
+{{< include /_back-blog.qmd >}}
