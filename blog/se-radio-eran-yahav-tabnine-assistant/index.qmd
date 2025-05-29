@@ -11,14 +11,15 @@ description: <em>How does Tabnine automate the engineering process?</em>
 
 In a recent episode of the [Software Engineering
 Radio](https://www.se-radio.net/) podcast, I interviewed [Eran
-Yahav](https://csaws.cs.technion.ac.il/~yahave/), the CTO of Tabnine and a
-faculty member in the Computer Science Department at the Israel Institute of
-Technology. Our conversation focused on [Tabnine](https://www.tabnine.com/),
-an artificial intelligence (AI) coding assistant that uses large language models
-(LLMs) to help software engineers with tasks like code completion, explanation,
-and test case generation. In this podcast interview, Eran offers insights into
-how Tabnine bridges the gap between powerful LLMs and practical software
-engineering needs through enterprise context and trust.
+Yahav](https://csaws.cs.technion.ac.il/~yahave/), the CTO of
+[Tabnine](https://www.tabnine.com/) and a faculty member in the [Computer
+Science Department](https://www.cs.technion.ac.il/) at the [Israel Institute
+of Technology](https://www.technion.ac.il/en/). Our conversation focused on
+Tabnine, an artificial intelligence (AI) coding assistant that uses large
+language models (LLMs) to help software engineers with tasks like code
+completion, explanation, and test case generation. In this podcast interview,
+Eran offers insights into how Tabnine bridges the gap between powerful LLMs and
+practical software engineering needs through enterprise context and trust.
 
 ## Insights
 
