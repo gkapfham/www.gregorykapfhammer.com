@@ -1,0 +1,86 @@
+---
+author: Gregory M. Kapfhammer
+title: Insights from my Software Engineering Radio interview with Eran Yahav 
+date: '2025-04-30'
+date-format: YYYY
+categories: [post, automated testing, software engineering radio]
+description: <em>How does Tabnine automate the engineering process?</em>
+---
+
+## Introduction
+
+In a recent episode of the [Software Engineering
+Radio](https://www.se-radio.net/) podcast, I interviewed [Eran
+Yahav](https://csaws.cs.technion.ac.il/~yahave/), the CTO of Tabnine and a
+faculty member in the Computer Science Department at the Israel Institute of
+Technology. Our conversation focused on [Tabnine](https://www.tabnine.com/),
+an artificial intelligence (AI) coding assistant that uses large language models
+(LLMs) to help software engineers with tasks like code completion, explanation,
+and test case generation. In this podcast interview, Eran offers insights into
+how Tabnine bridges the gap between powerful LLMs and practical software
+engineering needs through enterprise context and trust.
+
+## Insights
+
+I'm thankful for this fun and thought-provoking interview with Eran! Here are
+some of its insights:
+
+**How does Tabnine's enterprise context engine make AI assistants more effective?**
+
+> From the LLM to an actual use of software engineer, there is a hole that has
+> to happen in the middle, right? Part of that is the context that I mentioned
+> earlier. So Tabnine has what we call the enterprise context engine, which is
+> something that basically knows how to draw relevant context from all code
+> sources of information and non-code sources of information in the
+> organization to make sure that again, Tabnine operates like an onboarded
+> employee of the organization and not as a foreign engineer in the org. So
+> Tabnine knows everything about the org, and which informs the code that it
+> generates, how it reviews code, etc.
+
+**What is the vision for AI assistance across the software development lifecycle?**
+
+> So the Tabnine provides assistance across the entire SDLC. It helps you write
+> code with code completions that are very advanced. It has a chat interface
+> that allows you to create new code, review code, refactor code, translate
+> between languages, generate tests as you mentioned initially, document code,
+> explain it. So it basically helps you do anything that you have to do as a
+> software engineer and the vision is really to provide agents that help you do
+> anything and everything a software engineer does just faster and with a
+> higher quality.
+
+**How should software engineers think about the future of AI in programming?**
+
+> I think really the future is every engineer is really a team lead and that
+> team lead is leading a team of AI engineers. They could be specialized in
+> different domains, the AI engineers, they could have varying expertise, but I
+> think every engineer would have to start thinking like an engineering manager
+> in a sense, or at least like a team lead.
+
+**What makes the difference between AI assistants and existing tools like ChatGPT?**
+
+> You can think about the LM as a kind of an ignorant genius. It knows how to
+> do many, many, many things, but not in in the relevant context in which I'm
+> operating, right? And you can think about the best engineer in the
+> organization as someone who really knows the nuts and bolts of how things
+> operate, right? [...] So you want really to bridge these two things, make the
+> LLM as aware of the org as your best engineer and this is how you get like to
+> 10x productivity of the AI engineer, right? To onboard the AI to your
+> organization.
+
+## Listen
+
+If you're interested in learning more about Tabnine and AI-powered software 
+engineering tools, I highly recommend listening to my interview with Eran Yahav 
+about Tabnine on [Software Engineering Radio](https://se-radio.net/)! You can 
+find it on your favorite podcast player, [Apple
+Podcasts](https://podcasts.apple.com/us/podcast/software-engineering-radio-the-podcast-for/id120906714),
+[Spotify](https://open.spotify.com/show/6UO3XQclSuNnGxB39QdAnL),
+[YouTube](https://www.youtube.com/playlist?list=PLHJB2bhmgB7esz0BxMCt1jJwsoaqWtFff),
+or you can listen to it with this handy podcast player.
+
+{{< audio
+file="https://traffic.libsyn.com/secure/forcedn/seradio/666-eran-yahav-tabnine-coding-assistant.mp3"
+caption="Listen to Software Engineering Radio Episode with Eran Yahav" >}}
+
+{{< include /_back-blog.qmd >}}
+
