@@ -1,0 +1,95 @@
+---
+author: Gregory M. Kapfhammer
+title: "When flaky tests fail together: Empirical evidence for systemic flakiness"
+date: '2025-05-30'
+date-format: YYYY
+categories: [post, flaky tests, empirical study]
+description: <em>Flaky tests often cluster together with shared root causes!</em>
+---
+
+## Introduction
+
+Have you ever noticed that when one flaky test fails in your continuous
+integration pipeline, several others seem to fail at the same time? You're not
+imagining things! My colleagues and I recently completed a comprehensive study
+that reveals flaky tests often exist in clusters, failing together due to shared
+root causes. We call this phenomenon *systemic flakiness*, and we think it
+represents a major shift in how we should think about and address flaky tests.
+
+Our research paper "Systemic Flakiness: An Empirical Analysis of Co-Occurring
+Flaky Test Failures" [@Parry2025] [{{< iconify fa6-solid
+book-open>}}](/research/papers/parry2025/index.qmd) reveals that that 75% of
+flaky tests belong to clusters with an average of 13.5 tests per cluster. As
+explained in this post, our discovery has profound implications for how
+developers can reduce the time and cost of fixing flaky tests!
+
+## Summary of Key Results
+
+- **The Prevalence of Systemic Flakiness**: Our analysis of 810 flaky tests
+across 24 Java projects revealed that 75% of flaky tests belong to clusters with
+an average of 13.5 tests per cluster. This means that when one flaky test fails,
+it's likely that 12-13 other tests will fail at the same time due to shared root
+causes.
+
+- **Predicting Systemic Flakiness with Machine Learning**: Rather than requiring
+thousands of test suite runs to identify which tests fail together, we found
+that machine learning models can predict systemic flakiness using simple static
+analysis. Extra trees models achieved the best performance with 74% accuracy,
+and surprisingly, the structure of test names (like package and class hierarchy)
+was more predictive than analyzing the actual source code.
+
+- **Root Causes of Systemic Flakiness**: Through manual inspection of error
+messages and stack traces, we discovered that systemic flakiness is primarily
+caused by networking issues (like DNS failures or connection timeouts) and
+external dependencies (such as unstable services or library version conflicts).
+This differs significantly from individual flaky tests, which are usually caused
+by concurrency or timing issues.
+
+## Future Research Suggestions
+
+This paper's results suggest several exciting avenues for future investigation:
+
+- **Expanding Beyond Java**: The current study focused on Java projects, but
+systemic flakiness likely occurs across all programming languages and testing
+frameworks. Research should examine whether similar clustering patterns exist in
+other ecosystems.
+
+- **Automated Root Cause Analysis**: While our manual inspection revealed
+important patterns, the process was time-consuming and sometimes inconclusive.
+Developing AI-powered techniques to automatically analyze test code and stack
+traces could significantly accelerate the identification of systemic flakiness
+causes.
+
+- **Integration with CI/CD Tools**: Current flaky test detection tools focus on
+individual tests without considering failure co-occurrence. Research should
+explore how to integrate systemic flakiness prediction into existing continuous
+integration pipelines.
+
+- **Developer Studies**: Our research was based on quantitative analysis, but we
+need to understand how developers currently perceive and handle systemic
+flakiness. Surveys and interviews could reveal whether practitioners are already
+aware of this phenomenon.
+
+- **Realistic Testing Impact**: Previous studies evaluated how flaky tests
+affect fault localization and mutation testing using simulated individual
+failures. These assessments should be revisited using realistic models that
+account for clustered failures.
+
+- **Benchmark Datasets**: The research community needs datasets that explicitly
+capture failure co-occurrence patterns. Such benchmarks would enable comparative
+evaluation of systemic flakiness detection techniques.
+
+::: {.callout-note appearance="simple"}
+
+## Further Details
+
+This research represents a fundamental shift in how we understand flaky tests.
+If you're interested in learning more about systemic flakiness or have
+experiences with clustered test failures, I'd love to hear from you! Please
+[contact](/contact/) me with your insights. To stay updated on the latest
+developments in flaky test research, consider [subscribing](/support/) to my
+mailing list.
+
+:::
+
+{{< include /_back-blog.qmd >}}
