@@ -22,8 +22,8 @@ engineering needs through enterprise context and trust.
 
 ## Insights
 
-I'm thankful for this fun and thought-provoking interview with Eran! Here are
-some of its insights:
+I'm thankful for this thought-provoking interview with Eran Yahav! Here are some
+of its insights:
 
 **How does Tabnine's enterprise context engine make AI assistants more effective?**
 
@@ -69,10 +69,11 @@ some of its insights:
 
 ## Listen
 
-If you're interested in learning more about Tabnine and AI-powered software 
-engineering tools, I highly recommend listening to my interview with Eran Yahav 
-about Tabnine on [Software Engineering Radio](https://se-radio.net/)! You can 
-find it on your favorite podcast player, [Apple
+If you're interested in learning more about Tabnine and exploring the landscape
+of AI-powered software engineering tools, I highly recommend listening to my
+interview with Eran Yahav about Tabnine on [Software Engineering
+Radio](https://se-radio.net/)! You can find it on your favorite podcast player,
+[Apple
 Podcasts](https://podcasts.apple.com/us/podcast/software-engineering-radio-the-podcast-for/id120906714),
 [Spotify](https://open.spotify.com/show/6UO3XQclSuNnGxB39QdAnL),
 [YouTube](https://www.youtube.com/playlist?list=PLHJB2bhmgB7esz0BxMCt1jJwsoaqWtFff),
