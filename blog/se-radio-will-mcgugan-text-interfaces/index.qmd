@@ -3,7 +3,7 @@ author: Gregory M. Kapfhammer
 title: Insights from my Software Engineering Radio interview with Will McGugan
 date: '2025-05-21'
 date-format: YYYY
-categories: [post, text interfaces, software engineering radio, python, rich, textual]
+categories: [post, python, software engineering radio]
 description: <em>How do you build text-based user interfaces?</em>
 ---
 

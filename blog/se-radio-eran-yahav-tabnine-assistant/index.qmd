@@ -3,7 +3,7 @@ author: Gregory M. Kapfhammer
 title: Insights from my Software Engineering Radio interview with Eran Yahav 
 date: '2025-04-30'
 date-format: YYYY
-categories: [post, automated testing, software engineering radio]
+categories: [post, software development, software engineering radio]
 description: <em>How does Tabnine automate the engineering process?</em>
 ---
 
