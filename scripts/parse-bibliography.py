@@ -105,6 +105,7 @@ KEYWORDS_PRESENTATIONS = {
     "test suite execution": "test coverage",
     "test execution": "test coverage",
     "test adequacy": "test coverage",
+    "testing": "software testing",
     "text": "undergraduate education",
     "time-aware": "performance analysis",
     "text editor": "software development",
