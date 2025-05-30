@@ -620,8 +620,8 @@ color scheme for Vim and Neovim</li>
 
 #### Software Connection
 
-I aim to have a well-documented set of software tools that I run on the laptop
-that I use for all of my professional activities. I hope that some of these
+I aim to have a well-documented software tools that I run on the laptop
+that I use for all my professional activities. I hope that some of these
 configurations can help you to setup your own workstation for teaching,
 research, and software engineering. Checkout
 my configuration of [NixOS](https://nixos.org/)!
@@ -750,7 +750,7 @@ support</li>
 
 #### Software Connection
 
-Whenever I can do so, I participate in the maintenance and enhancement of
+Whenever possible, I participate in the maintenance and enhancement of
 open-software software tools by reporting defects and participating in
 discussions. Along with documenting my software adventures, I aim for these
 notes to help and encourage the maintainers of open-source software.
