@@ -46,9 +46,13 @@ PAGE_FULL_ATTRIBUTE = "page-layout: full"
 MAX_KEYWORD_SIZE = 3
 
 KEYWORDS_PRESENTATIONS = {
+    "automation": "software testing",
+    "automated": "software testing",
     "application development": "software development",
     "big data": "database testing",
+    "chasten": "software tool",
     "commit messages": "software development",
+    "course websites": "undergraduate education",
     "correct software": "software testing",
     "communication": "distributed systems",
     "communication primitive": "distributed systems",
@@ -59,6 +63,7 @@ KEYWORDS_PRESENTATIONS = {
     "doubling experiments": "performance analysis",
     "efficient": "program performance",
     "efficiency": "program performance",
+    "examinations": "undergraduate education",
     "encourage": "literature review",
     "GitHub": "continuous integration",
     "JavaSpace": "distributed systems",
@@ -73,6 +78,7 @@ KEYWORDS_PRESENTATIONS = {
     "software development": "software development",
     "software testing": "software testing",
     "synthetic coverage": "test coverage",
+    "teach": "undergraduate education",
     "teaching": "undergraduate education",
     "test suite execution": "test coverage",
     "test execution": "test coverage",
@@ -82,6 +88,7 @@ KEYWORDS_PRESENTATIONS = {
     "tuple space": "distributed systems",
     "type annotations": "software development",
     "undergraduates": "undergraduate education",
+    "up and running": "undergraduate education",
     "wrapping": "software development",
 }
 
