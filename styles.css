@@ -624,6 +624,17 @@ th {
 
 /* Listing Search and Filter {{{ */
 
+div.quarto-post .body h3.listing-title,
+div.quarto-post .body .listing-title.h3 {
+  margin-top: 0px;
+  margin-bottom: 5px;
+  border-bottom: none;
+}
+
+/* }}} */
+
+/* Listing Search and Filter {{{ */
+
 .listing-actions-group {
   font-size: 0.825rem;
   display: flex;
