@@ -220,7 +220,7 @@ publish, I've made the GitHub repository of select papers publicly available.
 For instance, the source code that results in the paper [@McMinn2016a] [{{<
 iconify fa6-solid book-open
 >}}](/research/papers/mcminn2016a/index.qmd) is in the
-[gkapfham/ast2016-paper](https://github.com/gkapfham/ast2016-paper) GitHub
+[gkapfham/ast2016-paper](https://github.com/gkapfham/ast2016-paper)
 repository. Check it out to see how we structure papers!
 
 :::
