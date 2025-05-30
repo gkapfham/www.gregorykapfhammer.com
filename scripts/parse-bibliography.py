@@ -46,6 +46,8 @@ PAGE_FULL_ATTRIBUTE = "page-layout: full"
 MAX_KEYWORD_SIZE = 3
 
 KEYWORDS_PRESENTATIONS = {
+    "Actions": "software tool",
+    "annotations": "software testing",
     "application": "software tool",
     "applications": "software tool",
     "automation": "software testing",
