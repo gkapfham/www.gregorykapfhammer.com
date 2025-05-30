@@ -28,28 +28,28 @@ insights from it:
 
 **What makes text-based user interfaces compelling for developers?**
 
-> They tend to be very responsive and very quick and very snappy and there's
+> "They tend to be very responsive and very quick and very snappy and there's
 > less contact switching. I mean I used to be a web developer, I kind of use the
 > web a lot like most people do, but there's quite a lot of contexts switching
-> when you go between web application, browser tab, etc. But the benefits
-> of 2E running in the terminal is that it stays in your own flow. So it's like
+> when you go between web application, browser tab, etc. But the benefits of
+> running in the terminal is that it stays in your own flow. So it's like
 > everything's in one place and it's snappy and responsive and it comes up when
 > you need it. It's very quick to interact with and then it goes away as quickly
-> when you don't need it.
+> when you don't need it."
 
 **How does bringing web technologies to the terminal improve development?**
 
-> So I come from the web world and the great thing about the web is that
+> "So I come from the web world and the great thing about the web is that
 > building user interfaces has been iterated on very rapidly for the last 10, 20
 > years. People have been trying new ways, new interfaces, refining it and
 > creating new technologies to create these user interfaces. But none of that
 > made it to the terminal. The terminal was considered a bit archaic and people
 > used it for more simplistic outputs. So I took web technologies and
-> essentially ported what I think is the best of them to the terminal.
+> essentially ported what I think is the best of them to the terminal."
 
 **What performance strategies are crucial for smooth terminal interfaces?**
 
-> You consider the terminal to be a matrix of characters. That's essentially
+> "You consider the terminal to be a matrix of characters. That's essentially
 > all, it's that composes all the elements that run inside the terminal and if
 > you change it, you can build up a new frame. If you were to clear the screen,
 > which might be obvious and then write your new screen on top of it, you get
@@ -57,17 +57,17 @@ insights from it:
 > it's not good at displaying user interfaces. That's not really its primary
 > purpose even though it can, the way around that is instead of clearing the
 > screen, you just write the new content on top of it and do you need to change
-> the bits of the screen which have logically changed.
+> the bits of the screen which have logically changed."
 
 **How does caching with immutable objects improve performance?**
 
-> Immutability is the opposite of mutability. Mutability means the ability to
+> "Immutability is the opposite of mutability. Mutability means the ability to
 > change, mutate your data. If an object isn't mutable, it's immutable and it
 > can't change and it might seem like a restriction, like you've got a data,
 > you've got an object, you can't change it. It feels like a restriction but it
 > is massively beneficial. It means that when you change it, you create a new
 > object rather than modifying the existing one. And when you do that, caching
-> works a lot better.
+> works a lot better."
 
 ## Listen
 
