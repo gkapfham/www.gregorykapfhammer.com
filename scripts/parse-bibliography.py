@@ -63,6 +63,7 @@ KEYWORDS_PRESENTATIONS = {
     "doubling experiments": "performance analysis",
     "efficient": "program performance",
     "efficiency": "program performance",
+    "exam": "undergraduate education",
     "examinations": "undergraduate education",
     "encourage": "literature review",
     "GitHub": "continuous integration",
