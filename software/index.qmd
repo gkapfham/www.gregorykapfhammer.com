@@ -230,6 +230,10 @@ repository. Check it out to see how we structure papers!
 <ul>
 
 <li class="software"><a target="_blank" rel="noopener"
+href="https://github.com/GatorEducator/PyCon2025-EducationAndTypingSummit-Presentations">pycon2025-educationsummit-presentations</a>:
+Presentation slides the PyCon 2025 talks</li>
+
+<li class="software"><a target="_blank" rel="noopener"
 href="https://github.com/gkapfham/pyohio2021-presentation">pyohio2021-presentation</a>:
 Presentation slides the PyOhio 2021 talk</li>
 
