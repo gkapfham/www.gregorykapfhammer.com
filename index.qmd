@@ -135,7 +135,7 @@ Python](https://talkpython.fm/), I interview the world's leading experts on
 software engineering as a co-host of [Software Engineering
 Radio](https://se-radio.net/). You can learn more about me and my work by
 reading my [biography](biography/index.qmd), downloading my [curriculum
-vitae](https://github.com/gkapfham/curriculum-vitae/releases/download/v1.4.0/curriculum_vitae_kapfhammer.pdf),
+vitae](https://github.com/gkapfham/curriculum-vitae/releases/download/v1.6.0/curriculum_vitae_kapfhammer.pdf),
 and [subscribing](support/index.qmd) to my mailing list.
 
 ## Research Expertise
