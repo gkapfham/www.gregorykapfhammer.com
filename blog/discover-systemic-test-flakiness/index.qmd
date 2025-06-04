@@ -22,7 +22,11 @@ Flaky Test Failures" [@Parry2025] [{{< iconify fa6-solid
 book-open>}}](/research/papers/parry2025/index.qmd) reveals that that 75% of
 flaky tests belong to clusters with an average of 13.5 tests per cluster. As
 explained in this post, our discovery has profound implications for how
-developers can reduce the time and cost of fixing flaky tests!
+developers can reduce the time and cost of fixing flaky tests! Interested in
+learning more about systemic flakiness? You can read this post for an overview
+of both the key empirical findings and the future research suggestions presented in
+[@Parry2025] [{{< iconify fa6-solid
+book-open>}}](/research/papers/parry2025/index.qmd).
 
 ## Summary of Key Results
 
