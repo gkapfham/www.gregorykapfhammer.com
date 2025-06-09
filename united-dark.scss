@@ -194,6 +194,44 @@ div.quarto-post .listing-categories .listing-category {
 
 // }}}
 
+// Links with Anchors {{{
+
+.anchorjs-link {
+  color: #bdbdbd;
+  opacity: 0.5;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+.anchorjs-link:hover {
+  color: #ef6c00 !important;
+  opacity: 1;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+.anchored:target .anchorjs-link,
+.anchored.active .anchorjs-link,
+.anchored.highlighted .anchorjs-link,
+.anchored.current .anchorjs-link {
+  color: #ef6c00 !important;
+  opacity: 1;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+.anchored:target,
+.anchored.active,
+.anchored.highlighted,
+.anchored.current {
+  color: #ef6c00;
+  opacity: 1;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+// }}}
+
 // Get the Gist {{{
 
 .form-switch .form-check-input {
