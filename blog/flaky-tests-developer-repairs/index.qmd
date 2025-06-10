@@ -10,11 +10,11 @@ description: <em>Let's leverage developer-repaired flaky tests!</em>
 ## Introduction
 
 As a software developer, you've likely encountered flaky tests that seem to pass
-and fail at random, disrupting your continuous integration process and wasting
-valuable development time. While automated tools promise to help detect these
-problematic tests, how well do they actually work for finding the flaky tests
-that developers care about fixing? My colleagues and I recently published
-[@Parry2022c] [{{< iconify fa6-solid book-open >}}](/research/papers/parry2022c/index.qmd),
+and fail at random, disrupting the continuous integration process and wasting
+your valuable development time. While automated tools promise to detect these
+problematic tests, it is important to study how well they actually find the flaky tests
+that developers care about fixing. My colleagues and I recently published
+[@Parry2022c] [{{< iconify fa6-solid book-open >}}](/research/papers/parry2022c/index.qmd)
 that investigates this critical question by examining real developer behavior.
 Keep reading to learn about our surprising findings!
 
