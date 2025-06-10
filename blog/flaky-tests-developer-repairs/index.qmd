@@ -55,32 +55,31 @@ automated rerunning as a baseline for evaluating other detection techniques may
 not accurately reflect their usefulness for developers, since rerunning itself
 may not find developer-relevant flaky tests.
 
-## Implications for Practice
+## Important Implications
 
 For developers considering automated flaky test detection tools, this paper's
 findings suggest that current rerunning-based approaches have limited practical
 value. If you do use automated rerunning, make sure to include environmental
-noise to improve detection rates. More importantly, don't rely solely on
-automated tools as manual inspection and developer intuition remain crucial for
-identifying problematic flaky tests.
+noise to improve detection rates. More importantly, developers should not rely
+solely on automated tools as manual inspection and developer intuition remain
+crucial for identifying problematic flaky tests.
 
-For researchers developing new detection techniques, our study highlights the
-importance of evaluation methodology. Supplementing traditional rerun-based
-evaluations with developer-based baselines provides a more realistic assessment
-of practical usefulness.
+For researchers developing new detection techniques, this paper's study
+highlights the importance of evaluation methodology. Supplementing traditional
+rerun-based evaluations with developer-based baselines provides a more realistic
+assessment of practical usefulness.
 
 ## Conclusion
 
 This research reveals a significant gap between what automated tools detect and
 what developers actually need to fix. The 40% recall rate of automated rerunning
 against developer-repaired flaky tests indicates that current detection
-approaches may miss many practically important cases. 
-
-Our developer-based evaluation methodology offers a more realistic way to assess
-flaky test detection techniques, focusing on tests that developers have
-demonstrated are worth their time to repair. As the software testing community
-continues developing better detection tools, understanding this developer
-perspective is crucial for creating solutions that truly enhance productivity.
+approaches may miss many practically important cases. Our developer-based
+evaluation methodology offers a more realistic way to assess flaky test
+detection techniques, focusing on tests that developers have demonstrated are
+worth their time to repair. Going forward, it is critical to understand,
+leverage, and enhance this developer perspective as we create effective
+solutions to the problem of flaky tests.
 
 ::: {.callout-note appearance="simple"}
 
