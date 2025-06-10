@@ -35,7 +35,8 @@ usefulness of flaky test detection.
 - **Automated Rerunning Has Low Recall**: When we applied automated test
 rerunning to the flaky tests that developers actually fixed, it only detected
 them in 40% of the studied commits. This surprisingly low recall suggests that
-automated rerunning often misses the flaky tests that matter most to developers.
+automated rerunning often misses the flaky tests that matter most to the
+developers of open-source Python projects.
 
 - **Noise Improves Detection**: Rerunning with environmental noise (e.g.,
 randomizing thread priorities, test execution order, network speeds, and Python
@@ -56,12 +57,12 @@ may not find developer-relevant flaky tests.
 
 ## Implications for Practice
 
-For developers considering automated flaky test detection tools, our findings
-suggest that current rerunning-based approaches have limited practical value. If
-you do use automated rerunning, make sure to include environmental noise to
-improve detection rates. More importantly, don't rely solely on automated tools
-— manual inspection and developer intuition remain crucial for identifying
-problematic flaky tests.
+For developers considering automated flaky test detection tools, this paper's
+findings suggest that current rerunning-based approaches have limited practical
+value. If you do use automated rerunning, make sure to include environmental
+noise to improve detection rates. More importantly, don't rely solely on
+automated tools as manual inspection and developer intuition remain crucial for
+identifying problematic flaky tests.
 
 For researchers developing new detection techniques, our study highlights the
 importance of evaluation methodology. Supplementing traditional rerun-based
