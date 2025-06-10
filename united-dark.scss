@@ -232,6 +232,16 @@ div.quarto-post .listing-categories .listing-category {
 
 // }}}
 
+// Tables {{{
+
+.table::-webkit-scrollbar-thumb {
+  background: #e65100;
+  border-radius: 6px;
+  border: 1px solid #9e9e9e;
+}
+
+// }}}
+
 // Get the Gist {{{
 
 .form-switch .form-check-input {
