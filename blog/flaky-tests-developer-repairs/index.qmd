@@ -43,15 +43,16 @@ versions) performed significantly better than standard automated test rerunning,
 improving recall from 21% to 40%. This result supports the importance of running
 tests in diverse environments.
 
-- **Common Causes and Repairs**: Through manual analysis, we found that
-randomness was the most frequent cause of flaky tests, followed by asynchronous
-waiting issues and timing problems. The most common developer repair was
-widening test assertion ranges to accept broader value ranges.
+- **Common Causes and Repairs**: Through manual analysis of the code changes in
+the 75 commits, we found that randomness was the most frequent cause of flaky
+tests, followed by asynchronous waiting issues and timing problems. The most
+common developer repair was widening test assertion ranges to accept broader
+value ranges.
 
 - **Evaluation Methodology Matters**: Our results demonstrate that using
 automated rerunning as a baseline for evaluating other detection techniques may
 not accurately reflect their usefulness for developers, since rerunning itself
-struggles to find developer-relevant flaky tests.
+may not find developer-relevant flaky tests.
 
 ## Implications for Practice
 
