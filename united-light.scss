@@ -4,7 +4,7 @@
 
 // Base document colors
 $link-color: #e65100;
-$code-color: #98971a;
+$code-color: #007bff;
 
 // }}}
 
@@ -23,8 +23,13 @@ code {
   font-size: 0.875em;
   color: var(--bs-code-color);
   background-color: #fff !important;
+  border: 1.5px solid var(--bs-code-color);
   border-radius: 0.25rem;
-  padding: 0.125rem 0.25rem;
+  padding-top: 0.175rem !important;
+  padding-bottom: 0.1rem !important;
+  padding-right: 0.15rem !important;
+  padding-left: 0.1rem !important;
+  // padding-bottom: 0.1rem;
   word-wrap: break-word;
 }
 
