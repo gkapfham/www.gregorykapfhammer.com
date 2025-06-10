@@ -61,8 +61,8 @@ For developers considering automated flaky test detection tools, this paper's
 findings suggest that current rerunning-based approaches have limited practical
 value. If you do use automated rerunning, make sure to include environmental
 noise to improve detection rates. More importantly, developers should not rely
-solely on automated tools as manual inspection and developer intuition remain
-crucial for identifying problematic flaky tests.
+solely on automated tools that rerun tests since manual inspection and developer
+intuition remain crucial for identifying problematic flaky tests.
 
 For researchers developing new detection techniques, this paper's study
 highlights the importance of evaluation methodology. Supplementing traditional
