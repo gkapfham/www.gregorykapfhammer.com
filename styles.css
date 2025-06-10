@@ -688,6 +688,8 @@ input.search.form-control {
     width: 100%;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
+    scrollbar-width: thick !important;
+    scrollbar-color: #ef6c00 rgba(255, 255, 255, 0.2) !important;
   }
 
   .table th,
@@ -705,18 +707,6 @@ input.search.form-control {
   .table td:first-child {
     min-width: 120px;
     max-width: 250px;
-  }
-
-  /* Make scrollbar very obvious on mobile */
-  .table::-webkit-scrollbar {
-    height: 10px;
-    background: rgba(0, 0, 0, 0.1);
-    border-radius: 1px;
-  }
-
-  .table::-webkit-scrollbar-track {
-    background: rgba(0, 0, 0, 0.05);
-    border-radius: 6px;
   }
 }
 
