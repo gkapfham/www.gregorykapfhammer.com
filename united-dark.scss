@@ -122,13 +122,18 @@ code {
   font-size: 0.875em;
   color: var(--bs-code-color);
   background-color: #212121 !important;
+  word-wrap: break-word;
+}
+
+code:not(.sourceCode),
+p code:not(.sourceCode) {
+  white-space: pre-wrap;
   border: 1.5px solid var(--bs-code-color);
   border-radius: 0.25rem;
   padding-top: 0.175rem !important;
   padding-bottom: 0.1rem !important;
-  padding-right: 0.15rem !important;
+  padding-right: 0.125rem !important;
   padding-left: 0.1rem !important;
-  word-wrap: break-word;
 }
 
 pre {
