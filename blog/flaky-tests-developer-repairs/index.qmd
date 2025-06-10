@@ -37,16 +37,16 @@ rerunning to the flaky tests that developers actually fixed, it only detected
 them in 40% of the studied commits. This surprisingly low recall suggests that
 automated rerunning often misses the flaky tests that matter most to developers.
 
-- **Noise Improves Detection**: Rerunning with environmental noise (randomizing
-thread priorities, test execution order, network speeds, and Python versions)
-performed significantly better than plain rerunning, improving recall from 21%
-to 40%. This supports the importance of testing under diverse conditions.
+- **Noise Improves Detection**: Rerunning with environmental noise (e.g.,
+randomizing thread priorities, test execution order, network speeds, and Python
+versions) performed significantly better than standard automated test rerunning,
+improving recall from 21% to 40%. This result supports the importance of running
+tests in diverse environments.
 
 - **Common Causes and Repairs**: Through manual analysis, we found that
-randomness was the most frequent cause of flaky tests (appearing in 23% of
-commits), followed by asynchronous waiting issues and timing problems. The most
-common developer repair was widening assertion ranges to accept broader value
-ranges (25% of commits).
+randomness was the most frequent cause of flaky tests, followed by asynchronous
+waiting issues and timing problems. The most common developer repair was
+widening test assertion ranges to accept broader value ranges.
 
 - **Evaluation Methodology Matters**: Our results demonstrate that using
 automated rerunning as a baseline for evaluating other detection techniques may
