@@ -22,17 +22,15 @@ Keep reading to learn about our surprising findings!
 
 Most research on flaky test detection suffers from a fundamental evaluation
 problem. Researchers typically assess their techniques against baselines created
-by automated rerunning tools, or they present results without any baseline at
-all. But here's the issue: these approaches don't tell us whether the detected
-flaky tests are actually ones that developers would spend time fixing in
-practice.
+by automated rerunning tools. However, these approaches don't tell us whether
+the detected flaky tests are actually the ones that developers would spend time
+fixing in practice. This paper's study addresses this gap by using a baseline
+derived from actual developer behavior: 75 commits where human software
+developers repaired flaky tests in 31 real-world Python projects. This
+developer-based methodology may provide a more realistic assessment of the
+usefulness of flaky test detection.
 
-Our study addresses this gap by using a baseline derived from actual developer
-behavior — 75 commits where human software developers repaired flaky tests in 31
-real-world Python projects. This developer-based methodology provides a more
-realistic assessment of detection technique usefulness.
-
-## Key Findings
+## Key Research Findings
 
 - **Automated Rerunning Has Low Recall**: When we applied automated test
 rerunning to the flaky tests that developers actually fixed, it only detected
