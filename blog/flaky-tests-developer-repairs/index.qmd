@@ -1,0 +1,101 @@
+---
+author: Gregory M. Kapfhammer
+title: "Does automated test rerunning find the flaky tests that developers fix?"
+date: '2022-05-01'
+date-format: YYYY
+categories: [post, flaky tests, research paper]
+description: <em>Let's leverage developer-repaired flaky tests!</em>
+---
+
+## Introduction
+
+As a software developer, you've likely encountered flaky tests that seem to pass
+and fail at random, disrupting your continuous integration process and wasting
+valuable development time. While automated tools promise to help detect these
+problematic tests, how well do they actually work for finding the flaky tests
+that developers care about fixing? My colleagues and I recently published
+[@Parry2022c] [{{< iconify fa6-solid book-open >}}](/research/papers/parry2022c/index.qmd),
+that investigates this critical question by examining real developer behavior.
+Keep reading to learn about our surprising findings!
+
+## Limitations of Current Methods
+
+Most research on flaky test detection suffers from a fundamental evaluation
+problem. Researchers typically assess their techniques against baselines created
+by automated rerunning tools, or they present results without any baseline at
+all. But here's the issue: these approaches don't tell us whether the detected
+flaky tests are actually ones that developers would spend time fixing in
+practice.
+
+Our study addresses this gap by using a baseline derived from actual developer
+behavior — 75 commits where human software developers repaired flaky tests in 31
+real-world Python projects. This developer-based methodology provides a more
+realistic assessment of detection technique usefulness.
+
+## Key Findings
+
+- **Automated Rerunning Has Low Recall**: When we applied automated test
+rerunning to the flaky tests that developers actually fixed, it only detected
+them in 40% of the studied commits. This surprisingly low recall suggests that
+automated rerunning often misses the flaky tests that matter most to developers.
+
+- **Noise Improves Detection**: Rerunning with environmental noise (randomizing
+thread priorities, test execution order, network speeds, and Python versions)
+performed significantly better than plain rerunning, improving recall from 21%
+to 40%. This supports the importance of testing under diverse conditions.
+
+- **Common Causes and Repairs**: Through manual analysis, we found that
+randomness was the most frequent cause of flaky tests (appearing in 23% of
+commits), followed by asynchronous waiting issues and timing problems. The most
+common developer repair was widening assertion ranges to accept broader value
+ranges (25% of commits).
+
+- **Evaluation Methodology Matters**: Our results demonstrate that using
+automated rerunning as a baseline for evaluating other detection techniques may
+not accurately reflect their usefulness for developers, since rerunning itself
+struggles to find developer-relevant flaky tests.
+
+## Implications for Practice
+
+For developers considering automated flaky test detection tools, our findings
+suggest that current rerunning-based approaches have limited practical value. If
+you do use automated rerunning, make sure to include environmental noise to
+improve detection rates. More importantly, don't rely solely on automated tools
+— manual inspection and developer intuition remain crucial for identifying
+problematic flaky tests.
+
+For researchers developing new detection techniques, our study highlights the
+importance of evaluation methodology. Supplementing traditional rerun-based
+evaluations with developer-based baselines provides a more realistic assessment
+of practical usefulness.
+
+## Conclusion
+
+This research reveals a significant gap between what automated tools detect and
+what developers actually need to fix. The 40% recall rate of automated rerunning
+against developer-repaired flaky tests indicates that current detection
+approaches may miss many practically important cases. 
+
+Our developer-based evaluation methodology offers a more realistic way to assess
+flaky test detection techniques, focusing on tests that developers have
+demonstrated are worth their time to repair. As the software testing community
+continues developing better detection tools, understanding this developer
+perspective is crucial for creating solutions that truly enhance productivity.
+
+::: {.callout-note appearance="simple"}
+
+## Further Details
+
+As my colleagues and I continue exploring the complexities of flaky test
+detection and developer workflows, your insights and experiences are invaluable!
+If you have thoughts about flaky test detection tools or experiences with
+developer-relevant testing challenges, please [contact](/contact/) me.
+Furthermore, if you wish to stay informed about new developments and blog posts
+related to flaky tests and software testing research, consider
+[subscribing](/support/) to my mailing list. The intersection of developer
+behavior and automated testing tools remains a rich area for future
+investigation!
+
+:::
+
+{{< include /_back-blog.qmd >}}
