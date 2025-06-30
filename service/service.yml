@@ -173,13 +173,13 @@
   description: "Reviewer"
   year-range: "2021 - 2009"
   service-count: 13
-- title: "Journal of Software Systems and Software"
+- title: "Journal of Systems and Software"
   categories: [journal]
-  date: '2020-01-01'
+  date: '2025-01-01'
   date-format: YYYY
   description: "Reviewer"
-  year-range: "2020 - 2009"
-  service-count: 14
+  year-range: "2025 - 2009"
+  service-count: 15
 - title: "Software Quality Journal"
   categories: [journal]
   date: '2020-01-01'
