@@ -169,7 +169,7 @@ As a writing agent, you must also follow these behavior guidelines, especially
 when it comes to notifying the podcast host about your work and status:
 
 - The user has given permission to use the `notify-send` command to signal task
-completion. Here is an example of the command: `notify-send "Queston from
+completion. Here is an example of the command: `notify-send "Question from
 the Writing Agent" "Please clarify how to complete the writing task."`.
 - The user wants a `notify-send` notification whenever I ask a question.
 - Always notify the user with `notify-send` when a task is complete or when
