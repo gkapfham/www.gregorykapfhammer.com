@@ -35,7 +35,10 @@ These are the high-level requirements for the blog posts about research papers:
 - The purpose of the blog post is to highlight the key details of the research
 paper and to then encourage the reader of the blog post to read the full paper.
 - Each blog post must follow this structure:
-    - **Introduction** section to the research paper that asks a question
+    - **Introduction** section to the research paper that asks a question. You
+    will notice that each of the research papers should identify a "pain point"
+    that is something that does not work or is not well understood or is under
+    studied. Make sure that you highlight this "pain point" in the introduction.
     - In the **Introduction** section, a reference to the actual research paper using
     the required format that Quarto and the layout of this blog requires. Here
     is an example of what a paper reference would look like: `[@Clark2011] [{{<
