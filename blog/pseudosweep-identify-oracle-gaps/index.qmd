@@ -41,16 +41,17 @@ needs.
 ## Empirical Results
 
 We conducted an empirical study on 30 Java classes from six open-source
-projects, and our findings were clear:
+projects. This paper identifies several interesting results such as the following:
 
 * **PTSI is the most efficient and effective OGCA**: This method consistently
 identified the oracle gaps with the lowest mutation scores, indicating that it
 is the best at pinpointing areas where fault detection is weak.
-* **PTSI is the fastest approach**: Using pseudo-testedness to identify
-program statements in the oracle gap has good performance, making it a
-practical choice for developers who need to quickly assess their test suites.
-* **Distinct oracle gaps**: identified by the three OGCAs were largely
-distinct, suggesting that they uncover different types of testing weaknesses.
+* **PTSI is the fastest approach**: Using pseudo-testedness to identify program
+statements in the oracle gap has the best performance, making it a practical
+choice for developers who need to quickly assess their test suites.
+* **Distinct oracle gaps**: The three OGCAs created oracle gaps that were
+largely distinct, suggesting that they uncover different types of testing
+weaknesses.
 
 ## Future
 
@@ -58,15 +59,19 @@ While our study focused on programs implemented in Java, the concept of oracle
 gaps is applicable to a wide range of programming languages. Future work will
 involve expanding our analysis to other languages and exploring how these
 techniques can be integrated into the software development lifecycle to provide
-developers with real-time feedback on their tests.
+developers with real-time feedback on their tests. Ultimately, we hope that the
+current and future versions of the `GapGrep` tool can offer developers an
+automated approach to identifying how their test cases fall short.
 
 ::: {.callout-note appearance="simple"}
 
 ## Further Details
 
-I am passionate about helping developers improve the quality of their software.
-If you have any questions about this research or want to share your own
-experiences with test suite analysis, please [contact](/contact/) me. To stay
+My colleagues and I are keen to help developers improve the quality of their
+software. If you have any questions about this research or want to share your
+own experiences with test suite analysis, please [contact](/contact/) me. If
+you want to learn more about oracle gaps, you can read [@Maton2025] [{{<
+iconify fa6-solid book-open>}}](/research/papers/maton2025/index.qmd). To stay
 up-to-date on my latest research and blog posts, please
 [subscribe](/support/) to my mailing list. Your feedback and insights are
 always welcome!
