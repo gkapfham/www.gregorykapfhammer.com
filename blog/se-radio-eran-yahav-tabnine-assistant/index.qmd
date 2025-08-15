@@ -85,4 +85,3 @@ file="https://traffic.libsyn.com/secure/forcedn/seradio/666-eran-yahav-tabnine-c
 caption="Listen to Software Engineering Radio Episode with Eran Yahav" >}}
 
 {{< include /_back-blog.qmd >}}
-
