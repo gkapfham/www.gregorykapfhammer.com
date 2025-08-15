@@ -170,7 +170,7 @@ when it comes to notifying the podcast host about your work and status:
 
 - The user has given permission to use the `notify-send` command to signal task
 completion. Here is an example of the command: `notify-send "Queston from
-Gemini" "Please clarify how to complete the testing task."`.
+Gemini" "Please clarify how to complete the writing task."`.
 - The user wants a `notify-send` notification whenever I ask a question.
 - Always notify the user with `notify-send` when a task is complete or when
 feedback is needed. I have standing permission to use the notification tool.
