@@ -1,5 +1,6 @@
 ---
 title: Software
+toc-depth: 4
 page-layout: full
 ---
 
@@ -59,7 +60,7 @@ href="https://github.com/mccurdyc/mrstudyr">mrstudyr</a>: Retrospectively study
 effectiveness of mutation testing techniques</li>
 
 <li class="software"><a target="_blank" rel="noopener"
-href="https://github.com/PseudoTested/PseudoSweep">pseudosweep</a>:
+href="https://github.com/PseudoTested/pseudosweep">pseudosweep</a>:
 Find pseudo-tested statements and methods in Java programs</li>
 
 <li class="software"><a target="_blank" rel="noopener"
@@ -231,11 +232,15 @@ repository. Check it out to see how we structure papers!
 
 <li class="software"><a target="_blank" rel="noopener"
 href="https://github.com/GatorEducator/PyCon2025-EducationAndTypingSummit-Presentations">pycon2025-educationsummit-presentations</a>:
-Presentation slides the PyCon 2025 talks</li>
+Presentation slides for the PyCon 2025 talks</li>
+
+<li class="software"><a target="_blank" rel="noopener"
+href="https://github.com/gkapfham/pyohio2025-presentations">pyohio2025-presentations</a>:
+Presentation slides for the PyOhio 2025 talk</li>
 
 <li class="software"><a target="_blank" rel="noopener"
 href="https://github.com/gkapfham/pyohio2021-presentation">pyohio2021-presentation</a>:
-Presentation slides the PyOhio 2021 talk</li>
+Presentation slides for the PyOhio 2021 talk</li>
 
 <li class="software"><a target="_blank" rel="noopener"
 href="https://github.com/gkapfham/pycon2019-functionfiasco-poster">pycon2019-functionfiasco-poster</a>:
@@ -312,6 +317,14 @@ like [@McCurdy2016] [{{< iconify fa6-solid book-open
 ### Replication
 
 <ul>
+
+<li class="software"><a target="_blank" rel="noopener"
+href="https://zenodo.org/records/15267575">ease-2025-replication-package</a>:
+Data and analysis code for an EASE 2025 paper</li>
+
+<li class="software"><a target="_blank" rel="noopener"
+href="https://github.com/PseudoTested/esem-2025-replication-package">esem-2025-replication-package</a>:
+Data and analysis code for an ESEM 2025 paper</li>
 
 <li class="software"><a target="_blank" rel="noopener"
 href="https://github.com/flake-it/cannier-experiment">cannier-experiment</a>:

@@ -3,6 +3,7 @@ title: Biography
 page-layout: full
 echo: true
 jupyter: python3
+toc-depth: 4
 listing:
   - id: featured-service-biography
     contents:
