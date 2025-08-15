@@ -1,0 +1,70 @@
+---
+author: Gregory M. Kapfhammer
+title: Insights from my Software Engineering Radio interview with Samuel Colvin 
+date: '2025-08-15'
+date-format: YYYY
+categories: [post, software development, software engineering radio]
+description: <em>How does Pydantic support Python programming?</em>
+---
+
+## Introduction
+
+In a recent episode of the [Software Engineering
+Radio](https://www.se-radio.net/) podcast, I interviewed [Samuel
+Colvin](https://www.linkedin.com/in/samuel-colvin/), the CEO and founder of the
+Pydantic company. Our conversation focused on Pydantic, a popular data
+validation library for Python, and its ecosystem, including Pydantic AI and
+Logfire. Samuel offers many insights into how these tools can help Python
+developers build more robust and reliable applications.
+
+## Insights
+
+I'm thankful for this thought-provoking interview with Samuel Colvin! Before you
+listen to the full episode, please checkout some of its insights:
+
+**What is Pydantic and how does it help with data validation?**
+
+> "So Pydantic, to all intents and purposes, is a data validation library for
+> Python. But it does a bunch more stuff above and beyond simple data validation
+> --- like controlling serialization, coercion when you're validating and
+> generating JSON schema."
+
+**What were the motivations for rewriting Pydantic V2 in Rust?**
+
+> "Initially the internals of Pydantic were all Python. I wasn't particularly
+> proud of the internals. And so at the beginning of 2022, I started working
+> full-time on Pydantic, rebuilding the core in Rust. There's an amazing library
+> called Py03 that allows you to write Python extensions in Rust, which gives
+> you an enormous performance improvement. But it's actually, it goes beyond
+> simply the performance. It allows you to write fundamentally more robust and
+> scalable and maintainable code when you're building these big, performance-
+> critical complex applications."
+
+**How does Pydantic AI help developers interact with large language models (LLMs)?**
+
+> "So the number one piece of value I think that Pydantic AI brings is this
+> model agnosticism. You can switch in and out, OpenAI, Anthropic, Gemini, Grok,
+> DeepSeek, et cetera, et cetera, Mistral, Cohere, with one line of code."
+
+**What is Logfire and how does it help with observability?**
+
+> "Logfire is an observability platform. We do logs, traces and metrics that
+> let you understand and monitor your application. It is very useful when you're
+> building applications in Python in general, but particularly AI applications."
+
+## Listen
+
+If you're interested in learning more about Pydantic and its ecosystem, I highly
+recommend listening to my interview with Samuel Colvin on [Software Engineering
+Radio](https://se-radio.net/)! You can find it on your favorite podcast player,
+[Apple
+Podcasts](https://podcasts.apple.com/us/podcast/software-engineering-radio-the-podcast-for/id120906714),
+[Spotify](https://open.spotify.com/show/6UO3XQclSuNnGxB39QdAnL),
+[YouTube](https://www.youtube.com/playlist?list=PLHJB2bhmgB7esz0BxMCt1jJwsoaqWtFff),
+or you can listen to it with this handy podcast player.
+
+{{< audio
+file="https://traffic.libsyn.com/secure/forcedn/seradio/676-samuel-colvin-pydantic-ecosystem.mp3"
+caption="Listen to Software Engineering Radio Episode with Samuel Colvin" >}}
+
+{{< include /_back-blog.qmd >}}
