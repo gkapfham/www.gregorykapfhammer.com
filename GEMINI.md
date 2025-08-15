@@ -31,12 +31,36 @@ These are the high-level requirements for the outlines:
     will see, for instance, the following inside of the metadata at the top of the file:
     `categories: [post, research paper, database testing]`. Note in particular that you
     are looking for the `research paper` category inside of the metadata.
+- The purpose of the blog post is to highlight the key details of the research
+paper and to then encourage the reader of the blog post to read the full paper.
+- Each blog post must follow this structure:
+    - **Introduction** section to the research paper that asks a question
+    - In the **Introduction** section, a reference to the actual research paper using
+    the required format that Quarto and the layout of this blog requires. Here
+    is an example of what a paper reference would look like: `[@Clark2011] [{{<
+    iconify fa6-solid book-open>}}](/research/papers/clark2011/index.qmd)`. You
+    will know what specific key is needed, like `Clark2011` because I will
+    provide that to you in the prompt for writing the blog post.
+    - **Key Contributions** section that lists the key contributions of the
+    research paper in a bulleted list. Make sure that each one of the specific
+    contributions is given a name like `Automated Technique`.
+    - **Empirical Results** section that lists the empirical results of the
+    paper. Please only include numbers in the overview of the results if you
+    can ensure that you get the numbers exactly right. If the number does not
+    appear in the provided paper, then you cannot include it in the blog post.
+    - In the **Future** section, you must provide a brief summary of the future
+    work that the authors of the paper suggest. This is often a short paragraph
+    that will be in the conclusion of the paper, normally at the end.
+    - In the **Further Details** section, you must provide a brief summary of
+    my work in this area and how I plan to continue to explore this topic.
+    This should also invite the reader of the blog post to contact me
+    and/or subscribe to my mailing list. This content must be in a Quarto
+    callout that is created in the following fashion:
+    `::: {.callout-note appearance="simple"}`.
 
-- Each episode must follow this structure:
-    - Introduction to the show, with a brief introduction
-    to the guest(s) and the specific technical topic
-
-These are aspects of an outline that you must avoid:
+## Additional Rules for All Blog Posts
+    
+These are aspects of any blog post that you must avoid:
 
 - Do not include any personal opinions or subjective statements not in the paper.
 - Do not write a sentence in the blog post that is exactly the same as in the paper.
