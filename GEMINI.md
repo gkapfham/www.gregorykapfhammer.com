@@ -58,6 +58,8 @@ paper and to then encourage the reader of the blog post to read the full paper.
     and/or subscribe to my mailing list. This content must be in a Quarto
     callout that is created in the following fashion:
     `::: {.callout-note appearance="simple"}`.
+    - Make sure to include `{{< include /_back-blog.qmd >}}` at the end of
+    the file as this code is needed to ensure that the back button works.
 
 ## Additional Rules for All Blog Posts
     
