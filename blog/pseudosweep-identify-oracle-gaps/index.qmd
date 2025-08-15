@@ -1,0 +1,70 @@
+---
+author: Gregory M. Kapfhammer
+title: "Using slicing and mutation testing to identify weaknesses in your test suite"
+date: '2025-08-15'
+date-format: YYYY-MM-DD
+categories: [post, research paper, software testing]
+description: <em>How can we find the blind spots of our test suites?</em>
+---
+
+## Introduction
+
+Are your tests as effective as you think they are? While statement coverage is a
+common metric for test suite quality, it often doesn't tell the whole story.
+High coverage scores can create a false sense of security, leaving critical
+gaps in your testing strategy. In the paper [@Maton2025] [{{< iconify fa6-solid
+book-open>}}](/research/papers/maton2025/index.qmd), my colleagues and I
+investigate how to identify these "oracle gaps" --- code that is executed by
+tests but not actually checked by any assertions.
+
+## Key Contributions
+
+This research provides a comprehensive comparison of three different Oracle Gap
+Calculation Approaches (OGCAs):
+
+*   **Checked Coverage using a Dynamic Slicer (CCDS)**: This technique uses
+    dynamic slicing to identify statements that influence the outcome of a test
+    assertion.
+*   **Checked Coverage using an Observational Slicer (CCOS)**: This approach
+    repeatedly deletes lines of code to see if the program's behavior changes.
+*   **Pseudo-Tested Statement Identification (PTSI)**: This method identifies
+    statements that can be removed without causing any test to fail.
+
+Our study offers a quantitative and qualitative analysis of these techniques,
+helping developers choose the most suitable approach for their needs.
+
+## Empirical Results
+
+We conducted an empirical study on 30 Java classes from six open-source
+projects, and our findings were clear:
+
+*   **PTSI is the most efficient and effective OGCA**. It consistently
+    identified the oracle gaps with the lowest mutation scores, indicating that
+    it is the best at pinpointing areas where fault detection is weak.
+*   **PTSI is the fastest approach**, making it a practical choice for
+    developers who need to quickly assess their test suites.
+*   The oracle gaps identified by the three OGCAs were **largely distinct**,
+    suggesting that they uncover different types of testing weaknesses.
+
+## Future
+
+While our study focused on Java, the concept of oracle gaps is applicable to a
+wide range of programming languages. Future work will involve expanding our
+analysis to other languages and exploring how these techniques can be integrated
+into the software development lifecycle to provide developers with real-time
+feedback on their tests.
+
+::: {.callout-note appearance="simple"}
+
+## Further Details
+
+I am passionate about helping developers improve the quality of their software.
+If you have any questions about this research or want to share your own
+experiences with test suite analysis, please [contact](/contact/) me. To stay
+up-to-date on my latest research and blog posts, please
+[subscribe](/support/) to my mailing list. Your feedback and insights are
+always welcome!
+
+:::
+
+{{< include /_back-blog.qmd >}}
