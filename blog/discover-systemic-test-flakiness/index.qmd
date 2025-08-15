@@ -3,7 +3,7 @@ author: Gregory M. Kapfhammer
 title: "When flaky tests fail together: Empirical evidence for systemic flakiness"
 date: '2025-05-30'
 date-format: YYYY
-categories: [post, flaky tests, empirical study]
+categories: [post, research paper, flaky tests]
 description: <em>Flaky tests often cluster together with shared root causes!</em>
 ---
 
