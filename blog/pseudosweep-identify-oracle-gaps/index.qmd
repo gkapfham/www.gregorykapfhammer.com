@@ -1,6 +1,6 @@
 ---
 author: Gregory M. Kapfhammer
-title: "Using slicing and mutation testing to identify weaknesses in your test suite"
+title: "Is slicing or mutation testing better at identifying weaknesses in your test suite?"
 date: '2025-08-15'
 date-format: YYYY
 categories: [post, research paper, software testing]
