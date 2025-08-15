@@ -21,9 +21,12 @@ These are the high-level requirements for the blog posts about research papers:
 - The prompt you receive will specify:
     - A PDF file of the actual research paper
     - A template file in which you can place your content
+    - The key that you will use to reference the paper in the blog post
 - You must first take these steps:
     - Read the entire research paper by converting it from PDF to text (or, take
     any additional steps that you need to take to read the entire paper)
+    - Identify the "pain point" that the paper surfaces and solves and
+    why it is important for the research paper solve this problem
     - Identify the key contributions of the specified research paper
     - Identify the key technical terms and concepts used in the research paper
     - Identify any figures or tables that are essential to understanding the research paper
@@ -52,7 +55,7 @@ paper and to then encourage the reader of the blog post to read the full paper.
     paper. Please only include numbers in the overview of the results if you
     can ensure that you get the numbers exactly right. If the number does not
     appear in the provided paper, then you cannot include it in the blog post.
-    - In the **Future** section, you must provide a brief summary of the future
+    - In the **Future Work** section, you must provide a brief summary of the future
     work that the authors of the paper suggest. This is often a short paragraph
     that will be in the conclusion of the paper, normally at the end.
     - In the **Further Details** section, you must provide a brief summary of
@@ -73,6 +76,10 @@ These are aspects of any blog post that you must avoid:
 - Do not give the blog post a title that is exactly the same as the paper.
 - Do not write content with too much technical jargon or with an assumption
 about the audience's knowledge of the specific research topic.
+- Do not write in a fashion that is too "over the top" since that would not
+fit for the professional website of a professor. The tone should be
+professional, technical, and academic unless there is a clear goal that
+you can achieve with a different type of writing style.
 
 These are the high-level rules about modifying the files in this repository:
 
