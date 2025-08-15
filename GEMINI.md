@@ -16,14 +16,15 @@ professional, technical content suitable for a professor's website.
 
 ## Blog Posts about Research Papers
 
-These are the high-level requirements for the outlines:
+These are the high-level requirements for the blog posts about research papers:
 
 - The prompt you receive will specify:
     - A PDF file of the actual research paper
     - A template file in which you can place your content
 - You must first take these steps:
-    - Read the entire research paper by converting it from PDF to text
-    - Identify the key contributions of the research paper
+    - Read the entire research paper by converting it from PDF to text (or, take
+    any additional steps that you need to take to read the entire paper)
+    - Identify the key contributions of the specified research paper
     - Identify the key technical terms and concepts used in the research paper
     - Identify any figures or tables that are essential to understanding the research paper
     - Review all the prior blog posts about research papers. You will know which of the
