@@ -22,40 +22,43 @@ their test suites. Interested in learning more about this paper? Keep reading!
 
 ## Key Contributions
 
-This research provides a comprehensive comparison of three different Oracle Gap
-Calculation Approaches (OGCAs):
+This research provides a comprehensive empirical comparison of three different
+Oracle Gap Calculation Approaches (OGCAs) and the gaps that they produce:
 
-*   **Checked Coverage using a Dynamic Slicer (CCDS)**: This technique uses
-    dynamic slicing to identify statements that influence the outcome of a test
-    assertion.
-*   **Checked Coverage using an Observational Slicer (CCOS)**: This approach
-    repeatedly deletes lines of code to see if the program's behavior changes.
-*   **Pseudo-Tested Statement Identification (PTSI)**: This method identifies
-    statements that can be removed without causing any test to fail.
+* **Checked Coverage using a Dynamic Slicer (CCDS)**: This technique uses
+dynamic slicing to identify statements that influence the outcome of a test
+assertion.
+* **Checked Coverage using an Observational Slicer (CCOS)**: This approach
+repeatedly deletes lines of code to see if the program's behavior changes.
+* **Pseudo-Tested Statement Identification (PTSI)**: This method identifies
+the pseudo-tested statements that can be removed without causing any test to
+fail.
 
-Our study offers a quantitative and qualitative analysis of these techniques,
-helping developers choose the most suitable approach for their needs.
+This paper's study offers a quantitative and qualitative analysis of these
+techniques, helping developers choose the most suitable approach for their
+needs.
 
 ## Empirical Results
 
 We conducted an empirical study on 30 Java classes from six open-source
 projects, and our findings were clear:
 
-*   **PTSI is the most efficient and effective OGCA**. It consistently
-    identified the oracle gaps with the lowest mutation scores, indicating that
-    it is the best at pinpointing areas where fault detection is weak.
-*   **PTSI is the fastest approach**, making it a practical choice for
-    developers who need to quickly assess their test suites.
-*   The oracle gaps identified by the three OGCAs were **largely distinct**,
-    suggesting that they uncover different types of testing weaknesses.
+* **PTSI is the most efficient and effective OGCA**: This method consistently
+identified the oracle gaps with the lowest mutation scores, indicating that it
+is the best at pinpointing areas where fault detection is weak.
+* **PTSI is the fastest approach**: Using pseudo-testedness to identify
+program statements in the oracle gap has good performance, making it a
+practical choice for developers who need to quickly assess their test suites.
+* **Distinct oracle gaps**: identified by the three OGCAs were largely
+distinct, suggesting that they uncover different types of testing weaknesses.
 
 ## Future
 
-While our study focused on Java, the concept of oracle gaps is applicable to a
-wide range of programming languages. Future work will involve expanding our
-analysis to other languages and exploring how these techniques can be integrated
-into the software development lifecycle to provide developers with real-time
-feedback on their tests.
+While our study focused on programs implemented in Java, the concept of oracle
+gaps is applicable to a wide range of programming languages. Future work will
+involve expanding our analysis to other languages and exploring how these
+techniques can be integrated into the software development lifecycle to provide
+developers with real-time feedback on their tests.
 
 ::: {.callout-note appearance="simple"}
 
