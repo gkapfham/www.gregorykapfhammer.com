@@ -70,11 +70,11 @@
   service-count: 5
 - title: "International Conference on the Foundations of Software Engineering"
   categories: [conference]
-  date: '2005-01-01'
+  date: '2026-01-01'
   date-format: YYYY
-  description: "Reviewer"
-  year-range: "2005"
-  service-count: 1
+  description: "Program Committee Member, Reviewer"
+  year-range: "2026 - 2005"
+  service-count: 2
 - title: "International Symposium on Applied Computing"
   categories: [conference]
   date: '2009-01-01'
