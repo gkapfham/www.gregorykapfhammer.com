@@ -24,7 +24,7 @@ Test Case Rerunning and Machine Learning Models" [@Parry2023] [{{< iconify
 fa6-solid book-open>}}](/research/papers/parry2023/index.qmd), presents a way
 to combine the strengths of both test rerunning and machine learning to create
 a flaky test detection technique that is both fast and accurate. Read this post
-to learn more and then dive into the paper for more details!
+to learn more about CANNIER!
 
 ## Key Contributions
 
