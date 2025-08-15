@@ -59,7 +59,7 @@ of its insights:
 
 **What makes the difference between AI assistants and existing tools like ChatGPT?**
 
-> "You can think about the LM as a kind of an ignorant genius. It knows how to
+> "You can think about the LLM as a kind of an ignorant genius. It knows how to
 > do many, many, many things, but not in in the relevant context in which I'm
 > operating, right? And you can think about the best engineer in the
 > organization as someone who really knows the nuts and bolts of how things
