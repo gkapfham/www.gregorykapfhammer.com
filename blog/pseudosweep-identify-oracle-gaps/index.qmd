@@ -74,7 +74,7 @@ own experiences with test suite analysis, please [contact](/contact/) me. If
 you want to learn more about oracle gaps, you can read [@Maton2025] [{{<
 iconify fa6-solid book-open>}}](/research/papers/maton2025/index.qmd). To stay
 up-to-date on my latest research and blog posts, please [subscribe](/support/)
-to my mailing list. Your feedback is always welcome!
+to my mailing list. As always, your feedback is welcome!
 
 :::
 
