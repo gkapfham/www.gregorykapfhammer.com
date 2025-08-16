@@ -14,11 +14,11 @@ comes to flaky test detection? On the one hand, you can repeatedly rerun your
 tests, which is accurate but can take an enormous amount of time and
 computational resources. On the other hand, you can use a machine learning
 model to predict flaky tests, which is fast but often not accurate enough to be
-reliable. This trade-off between accuracy and speed has been a long-standing
-challenge for software developers.
+reliable. This trade-off between prediction accuracy and speed has been a
+long-standing challenge for software developers who tackle flaky tests.
 
 In a recent paper, my co-authors and I introduced CANNIER, an approach that
-offers a "best of both worlds" solution to the problem of flaky test detection.
+offers a "best-of-both-worlds" solution to the problem of flaky test detection.
 Our paper, "Empirically Evaluating Flaky Test Detection Techniques Combining
 Test Case Rerunning and Machine Learning Models" [@Parry2023] [{{< iconify
 fa6-solid book-open>}}](/research/papers/parry2023/index.qmd), presents a way
@@ -36,9 +36,10 @@ a heuristic to significantly reduce the problem space for rerunning-based flaky
 test detection. For many projects, CANNIER leads to a dramatic reduction in the
 time cost of detection with only a minimal decrease in performance.
 
-- **Extensive Tooling**: We developed and released a comprehensive framework of
-automated tools to facilitate the replication of our results and to empower
-other researchers to build upon our work in hybrid flaky test detection.
+- **Extensive Tooling**: The lead author developed and released a comprehensive
+framework of automated tools to facilitate the replication of our results and
+to empower other researchers to build upon our work in hybrid flaky test
+detection.
 
 - **Comprehensive Empirical Evaluation**: A study involving nearly 90,000 test
 cases from 30 Python projects that not only demonstrates the effectiveness of
@@ -50,10 +51,10 @@ foster further research and innovation in the flaky test detection community.
 
 ## Empirical Results
 
-Our empirical evaluation shows that, while only slightly reducing accuracy,
-CANNIER can reduce the time cost of rerunning-based flaky test detection
+Our empirical evaluation shows that, while only slightly dropping accuracy,
+CANNIER can decrease the time cost of rerunning-based flaky test detection
 techniques by an average of 88% across three different techniques. For
-instance, when applying CANNIER to the RERUN technique, we were able to reduce
+instance, when applying CANNIER to the rerunning technique, we were able to reduce
 the time cost by 89% while maintaining a high Matthews correlation coefficient
 (MCC) of 0.92 for the correlation between the technique's flakiness predictions
 and the actual flakiness labels. This result demonstrates that CANNIER is a
@@ -67,10 +68,10 @@ The findings in this paper open up several avenues for future research. For
 instance, we plan to further investigate the features associated with test
 flakiness, potentially using causal inference techniques to gain a deeper
 understanding of the root causes of flakiness. We also intend to evaluate the
-performance of CANNIER on more specific categories of flaky tests, such as
-"implementation-dependent" flaky tests. Since this paper's experiments were done
-on Python projects, we are also interested in applying CANNIER to programs
-and test suites written in other programming languages like Java.
+performance of CANNIER on more specific categories of flaky tests. Since this
+paper's experiments were done on open-source Python projects, we are also
+interested in applying CANNIER to both commercial software projects and
+programs and test suites written in other programming languages like Java.
 
 ::: {.callout-note appearance="simple"}
 
