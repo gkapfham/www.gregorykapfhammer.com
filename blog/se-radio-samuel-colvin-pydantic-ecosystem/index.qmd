@@ -14,12 +14,12 @@ Radio](https://www.se-radio.net/) podcast, I interviewed [Samuel
 Colvin](https://www.linkedin.com/in/samuel-colvin/), the CEO and founder of the
 Pydantic company. Our conversation focused on Pydantic, a popular data
 validation library for Python, and its ecosystem, including Pydantic AI and
-Logfire. Samuel offers many insights into how these tools can help Python
-developers build more robust and reliable applications.
+Logfire. During our interview, Samuel offers many insights into how these tools
+can help Python developers build more robust and reliable applications.
 
 ## Insights
 
-I'm thankful for this thought-provoking interview with Samuel Colvin! Before you
+I'm thankful for this thought-provoking discussion with Samuel Colvin! Before you
 listen to the full episode, please checkout some of its insights:
 
 **What is Pydantic and how does it help with data validation?**
@@ -43,7 +43,7 @@ listen to the full episode, please checkout some of its insights:
 **How does Pydantic AI help developers interact with large language models (LLMs)?**
 
 > "So the number one piece of value I think that Pydantic AI brings is this
-> model agnosticism. You can switch in and out, OpenAI, Anthropic, Gemini, Grok,
+> model agnosticism. You can switch in and out of OpenAI, Anthropic, Gemini, Grok,
 > DeepSeek, et cetera, et cetera, Mistral, Cohere, with one line of code."
 
 **What is Logfire and how does it help with observability?**
