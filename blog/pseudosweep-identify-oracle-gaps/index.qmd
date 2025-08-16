@@ -1,10 +1,10 @@
 ---
 author: Gregory M. Kapfhammer
-title: "Is slicing or mutation testing better at identifying weaknesses in your test suite?"
+title: "Is slicing or mutation testing better at automatically identifying weaknesses in your test suite?"
 date: '2025-08-15'
 date-format: YYYY
 categories: [post, research paper, software testing]
-description: <em>How can we find the blind spots of our test suites?</em>
+description: <em>How can we best find the blind spots of our test suites?</em>
 ---
 
 ## Introduction
@@ -12,7 +12,7 @@ description: <em>How can we find the blind spots of our test suites?</em>
 Are your tests as effective as you think they are? While statement coverage is
 a common metric for test suite quality, it often doesn't tell the whole story.
 High coverage scores can create a false sense of security, leaving critical
-gaps in your testing strategy. In the paper [@Maton2025] [{{< iconify
+"gaps" in your testing strategy. In the paper [@Maton2025] [{{< iconify
 fa6-solid book-open>}}](/research/papers/maton2025/index.qmd), my colleagues
 and I investigate how to identify an "oracle gap" that comprises the code that
 is executed by test suite but not actually checked by any assertions. A key
@@ -22,8 +22,9 @@ their test suites. Interested in learning more about this paper? Keep reading!
 
 ## Key Contributions
 
-This research provides a comprehensive empirical comparison of three different
-Oracle Gap Calculation Approaches (OGCAs) and the gaps that they produce:
+This paper's research offers a comprehensive empirical comparison of three
+different Oracle Gap Calculation Approaches (OGCAs) and the gaps that they
+produce:
 
 * **Checked Coverage using a Dynamic Slicer (CCDS)**: This technique uses
 dynamic slicing to identify statements that influence the outcome of a test
@@ -34,9 +35,9 @@ repeatedly deletes lines of code to see if the program's behavior changes.
 the pseudo-tested statements that can be removed without causing any test to
 fail.
 
-This paper's study offers a quantitative and qualitative analysis of these
+This paper's study gives a quantitative and qualitative analysis of these
 techniques, helping developers choose the most suitable approach for their
-needs.
+needs. Read on to learn more!
 
 ## Empirical Results
 
@@ -45,10 +46,10 @@ projects. This paper identifies several interesting results such as the followin
 
 * **PTSI is the most efficient and effective OGCA**: This method consistently
 identified the oracle gaps with the lowest mutation scores, indicating that it
-is the best at pinpointing areas where fault detection is weak.
+is the best at pinpointing areas where the test suite's fault detection is weak.
 * **PTSI is the fastest approach**: Using pseudo-testedness to identify program
 statements in the oracle gap has the best performance, making it a practical
-choice for developers who need to quickly assess their test suites.
+choice for developers who need to quickly assess the strength of their test suites.
 * **Distinct oracle gaps**: The three OGCAs created oracle gaps that were
 largely distinct, suggesting that they uncover different types of testing
 weaknesses.
@@ -72,9 +73,8 @@ software. If you have any questions about this research or want to share your
 own experiences with test suite analysis, please [contact](/contact/) me. If
 you want to learn more about oracle gaps, you can read [@Maton2025] [{{<
 iconify fa6-solid book-open>}}](/research/papers/maton2025/index.qmd). To stay
-up-to-date on my latest research and blog posts, please
-[subscribe](/support/) to my mailing list. Your feedback and insights are
-always welcome!
+up-to-date on my latest research and blog posts, please [subscribe](/support/)
+to my mailing list. Your feedback is always welcome!
 
 :::
 
