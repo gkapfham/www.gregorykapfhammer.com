@@ -9,13 +9,13 @@ description: <em>How can we best find the blind spots of our test suites?</em>
 
 ## Introduction
 
-Are your tests as effective as you think they are? While statement coverage is
-a common metric for test suite quality, it often doesn't tell the whole story.
+Are your tests as effective as you think they are? While statement coverage is a
+common metric for test suite quality, it often doesn't tell the whole story.
 High coverage scores can create a false sense of security, leaving critical
 "gaps" in your testing strategy. In the paper [@Maton2025] [{{< iconify
-fa6-solid book-open>}}](/research/papers/maton2025/index.qmd), my colleagues
-and I investigate how to identify an "oracle gap" that comprises the code that
-is executed by test suite but not actually checked by any assertions. A key
+fa6-solid book-open>}}](/research/papers/maton2025/index.qmd), my colleagues and
+I investigate how to identify an "oracle gap" that comprises the code that is
+executed by the tests but not actually checked by any assertions. A key
 contribution of this paper is a tool called `GapGrep` that uses three distinct
 methods to helps researchers and practitioners identify these oracle gaps in
 their test suites. Interested in learning more about this paper? Keep reading!
