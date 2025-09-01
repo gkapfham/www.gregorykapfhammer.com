@@ -31,10 +31,10 @@ website:
         menu:
           - text: "Overview"
             href: "teaching/index.qmd"
-          - text: "Software Engineering"
-            href: "https://developerdevelopment.com/"
           - text: "Computer Security"
             href: "https://securitysynapse.org/"
+          - text: "Software Engineering"
+            href: "https://developerdevelopment.com/"
       - text: "Research"
         menu:
           - text: "Overview"
