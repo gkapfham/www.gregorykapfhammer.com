@@ -22,17 +22,20 @@ console.print(
 ## Overview
 
 Learners can access the content from my recent courses through web-based
-platforms such as [Algorithmology](https://www.algorithmology.org), [Developer
-Development](https://developerdevelopment.com/), [OS
-Sketch](https://www.os-sketch.com/), and [Proactive
+platforms such as [Algorithmology](https://algorithmology.org),
+[Developer Development](https://developerdevelopment.com/), [OS
+Sketch](https://www.os-sketch.com/),
+[Proofgrammers](https://proofgrammers.com/),
+[Prosegrammers](https://prosegrammers.com/), and [Proactive
 Programmers](https://proactiveprogrammers.com/). By clicking on the following
-links you can learn more about algorithm analysis, data structures, discrete
-mathematics, operating systems, and software engineering! Each course platform
-features a syllabus and course schedule, links to assignments, technical
-content, and a dedicated [Discord](https://discord.com/) server. All of my prior
-course materials are available by [contacting me](/contact/) with your request.
+links you can learn more about topics like algorithm analysis, data structures,
+discrete mathematics, operating systems, and software engineering! Each course
+platform features a syllabus and course schedule, links to assignments,
+technical content, and a dedicated [Discord](https://discord.com/) server. All
+of my prior course materials are available by [contacting me](/contact/) with
+your request.
 
-## Recent Courses
+## Learning Platforms
 
 - [Algorithm Analysis](https://www.algorithmology.org): Implement and evaluate
 correct and efficient algorithms
