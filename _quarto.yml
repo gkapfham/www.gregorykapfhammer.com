@@ -31,10 +31,10 @@ website:
         menu:
           - text: "Overview"
             href: "teaching/index.qmd"
-          - text: "Data Abstraction"
-            href: "https://www.proactiveprogrammers.com"
-          - text: "Operating Systems"
-            href: "https://www.os-sketch.com/"
+          - text: "Software Engineering"
+            href: "https://developerdevelopment.com/"
+          - text: "Computer Security"
+            href: "https://securitysynapse.org/"
       - text: "Research"
         menu:
           - text: "Overview"
