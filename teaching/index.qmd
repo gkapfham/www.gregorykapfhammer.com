@@ -48,8 +48,14 @@ Build and manipulate correct and efficient data structures
 Structures](https://www.proactiveprogrammers.com/discrete-structures/introduction-discrete-structures/):
 Clearly connect mathematics to Python programming
 
+- [Document Engineering](https://prosegrammers.com/): Use Python to analyze and
+create documentation
+
 - [Operating Systems](https://www.os-sketch.com/): Build and understand
 operating system components
 
 - [Software Engineering](https://www.developerdevelopment.com/): Team-based
 introduction to building software systems
+
+- [Theoretical Machines](https://proofgrammers.com/): Applied introduction to
+the theory of computation
