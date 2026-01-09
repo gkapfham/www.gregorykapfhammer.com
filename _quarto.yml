@@ -11,10 +11,10 @@ project:
 
 website:
   title: ""
-  announcement: 
+  announcement:
     icon: megaphone
     dismissable: true
-    content: 'I recently hosted an episode of <a href = "https://se-radio.net/">Software Engineering Radio</a> called <a href="https://se-radio.net/2025/07/se-radio-676-samuel-colvin-on-the-pydantic-ecosystem/">\"Samuel Colvin on the Pydantic Ecosystem\"</a>!'
+    content: 'I recently hosted an episode of <a href = "https://se-radio.net/">Software Engineering Radio</a> called <a href="https://se-radio.net/2025/11/se-radio-694-jennings-anderson-and-amy-rose-on-overture-maps/">\"Jennings Anderson and Amy Rose on Overture Maps\"</a>!'
     type: primary
   page-navigation: true
   favicon: "icons/fxemoji-rocket.svg"
@@ -31,10 +31,10 @@ website:
         menu:
           - text: "Overview"
             href: "teaching/index.qmd"
-          - text: "Computer Security"
-            href: "https://securitysynapse.org/"
-          - text: "Software Engineering"
-            href: "https://developerdevelopment.com/"
+          - text: "Algorithm Analysis"
+            href: "https://www.algorithmology.org/"
+          - text: "Document Engineering"
+            href: "https://prosegrammers.com/"
       - text: "Research"
         menu:
           - text: "Overview"
@@ -60,8 +60,8 @@ website:
           - text: "Contact"
             href: contact/index.qmd
     right:
-       - text: "{{< fa rss >}}"
-         menu:
+      - text: "{{< fa rss >}}"
+        menu:
           - text: Blog
             url: blog/index.xml
           - text: Service
@@ -95,9 +95,9 @@ format:
     # always load the instant-page.js script
     # that pre-fetches links person hovers over them
     include-after-body:
-      - file: _include/js/instant-page.js 
+      - file: _include/js/instant-page.js
     # always display the page in full layout;
-    # this seems to minimize the amount of 
+    # this seems to minimize the amount of
     # "jumping" that occurs when page loads
     # and there is a page with a non-full layout
     page-layout: full
@@ -119,8 +119,8 @@ format:
     respect-user-color-scheme: true
     # provide both a light and dark theme
     theme:
-        light: [united, united-light.scss]
-        dark: [united, united-dark.scss]
+      light: [united, united-light.scss]
+      dark: [united, united-dark.scss]
     # support a custom CSS file with additional
     # rules and overrides that apply to all
     # pages for both light and dark modes
