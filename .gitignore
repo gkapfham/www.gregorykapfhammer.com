@@ -157,3 +157,6 @@ research/presentations/*/
 
 ### Minification ###
 _site_backup*
+
+### Generated Notebooks ###
+index.quarto_ipynb
