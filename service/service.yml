@@ -1,3 +1,10 @@
+- title: "Python Conference United States"
+  categories: [workshop]
+  date: "2026-01-01"
+  date-format: YYYY
+  description: "Posters Program Committee Member"
+  year-range: "2026"
+  service-count: 1
 - title: "International Flaky Tests Workshop"
   categories: [workshop]
   date: "2026-01-01"
