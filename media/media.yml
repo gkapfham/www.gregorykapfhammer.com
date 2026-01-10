@@ -1,80 +1,85 @@
+- title: <a href="https://se-radio.net/2025/10/se-radio-691-kacper-lukawski-on-qdrant-vector-database/">\"Kacper Łukawski on Qdrant Vector Database\"</a>
+  date: "2025-10-22"
+  date-format: short
+  description: "Host"
+  venue: <a href="https://www.se-radio.net/">Software Engineering Radio</a>
 - title: <a href="https://se-radio.net/2025/07/se-radio-676-samuel-colvin-on-the-pydantic-ecosystem/">\"Samuel Colvin on the Pydantic Ecosystem\"</a>
-  date: '2025-07-10'
+  date: "2025-07-10"
   date-format: short
   description: "Host"
   venue: <a href="https://www.se-radio.net/">Software Engineering Radio</a>
 - title: <a href="https://se-radio.net/2025/05/se-radio-669-will-mcgugan-on-text-based-user-interfaces/">\"Will McGugan on Text-Based User Interfaces\"</a>
-  date: '2025-05-21'
+  date: "2025-05-21"
   date-format: short
   description: "Host"
   venue: <a href="https://www.se-radio.net/">Software Engineering Radio</a>
 - title: <a href="https://se-radio.net/2025/04/se-radio-666-eran-yahav-on-the-tabnine-ai-coding-assistant/">\"Eran Yahav on the Tabnine AI Coding Assistant\"</a>
-  date: '2025-04-30'
+  date: "2025-04-30"
   date-format: short
   description: "Host"
   venue: <a href="https://www.se-radio.net/">Software Engineering Radio</a>
 - title: <a href="https://se-radio.net/2024/09/se-radio-633-itamar-friedman-on-automated-testing-with-generative-ai/">\"Itamar Friedman on Automated Testing with Generative AI\"</a>
-  date: '2024-09-11'
+  date: "2024-09-11"
   date-format: short
   description: "Host"
   venue: <a href="https://www.se-radio.net/">Software Engineering Radio</a>
 - title: <a href="https://se-radio.net/2024/09/se-radio-632-goran-petrovic-on-mutation-testing-at-google/">\"Goran Petrovic on Mutation Testing at Google\"</a>
-  date: '2024-09-05'
+  date: "2024-09-05"
   date-format: short
   description: "Host"
   venue: <a href="https://www.se-radio.net/">Software Engineering Radio</a>
 - title: <a href="https://se-radio.net/2024/07/se-radio-625-jonathan-schneider-on-automated-refactoring-with-openrewrite/">\"Jonathan Schneider on Automated Refactoring with OpenRewrite\"</a>
-  date: '2024-07-16'
+  date: "2024-07-16"
   date-format: short
   description: "Host"
   venue: <a href="https://www.se-radio.net/">Software Engineering Radio</a>
 - title: <a href="https://se-radio.net/2024/07/se-radio-624-marcelo-trylesinski-on-fastapi/">\"Marcelo Trylesinski on FastAPI\"</a>
-  date: '2024-07-11'
+  date: "2024-07-11"
   date-format: short
   description: "Host"
   venue: <a href="https://www.se-radio.net/">Software Engineering Radio</a>
 - title: <a href="https://se-radio.net/2024/06/se-radio-622-wolf-vollprecht-on-python-tooling-in-rust/">\"Wolf Vollprecht on Python Tooling in Rust\"</a>
-  date: '2024-06-26'
+  date: "2024-06-26"
   date-format: short
   description: "Host"
   venue: <a href="https://www.se-radio.net/">Software Engineering Radio</a>
 - title: <a href="https://se-radio.net/2024/03/se-radio-609-hyrum-wright-on-software-engineering-at-google/">\"Hyrum Wright on Software Engineering at Google\"</a>
-  date: '2024-03-28'
+  date: "2024-03-28"
   date-format: short
   description: "Host"
   venue: <a href="https://www.se-radio.net/">Software Engineering Radio</a>
 - title: <a href="https://se-radio.net/2023/11/se-radio-589-zac-hatfield-dodds-on-property-based-testing-in-python/">\"Zac Hatfield-Dodds on Property-Based Testing in Python\"</a>
-  date: '2023-11-09'
+  date: "2023-11-09"
   date-format: short
   description: "Host"
   venue: <a href="https://www.se-radio.net/">Software Engineering Radio</a>
 - title: <a href="https://hanselminutes.com/874/dr-gregory-kapfhammer-wants-to-stop-flaky-tests">\"Dr. Gregory Kapfhammer Wants to Stop Flaky Tests\"</a>
-  date: '2023-01-05'
+  date: "2023-01-05"
   date-format: short
   description: "Guest"
   venue: <a href="https://hanselminutes.com/">Hanselminutes Podcast</a>
 - title: <a href="https://stackoverflow.blog/2023/01/17/flake-it-till-you-make-it-how-to-detect-and-deal-with-flaky-tests-ep-528/">\"Flake it Till You Make It&#58; How to Detect and Deal with Flaky Tests\"</a>
-  date: '2023-01-15'
+  date: "2023-01-15"
   date-format: short
   description: "Guest"
   venue: <a href="https://stackoverflow.blog/podcast">Stack Overflow Podcast</a>
 - title: <a href="https://www.se-radio.net/2023/07/se-radio-572-greg-kapfhammer-on-flaky-tests/">\"Greg Kapfhammer on Flaky Tests\"</a>
-  date: '2023-07-13'
+  date: "2023-07-13"
   date-format: short
   description: "Guest"
   venue: <a href="https://www.se-radio.net/">Software Engineering Radio</a>
 - title: <a href="https://talkpython.fm/episodes/show/429/taming-flaky-tests">\"Taming Flaky Tests\"</a>
-  date: '2023-09-11'
+  date: "2023-09-11"
   date-format: short
   description: "Guest"
   venue: <a href="https://talkpython.fm/">Talk Python Podcast</a>
 - title: <a href="https://www.se-radio.net/2023/09/se-radio-581-zach-lloyd-on-terminal-emulators/">\"Zach Lloyd on Terminal Emulators\"</a>
-  date: '2023-09-14'
+  date: "2023-09-14"
   date-format: short
   description: "Host"
   venue: <a href="https://www.se-radio.net/">Software Engineering Radio</a>
 - title: <a href="https://newsletter.getdx.com/p/flaky-tests">\"How Flaky Tests Impact Developers\"</a>
-  date: '2022-10-28'
+  date: "2022-10-28"
   date-format: short
   description: "Cited Author"
   venue: <a href="https://newsletter.getdx.com/">Engineering Enablement</a>
