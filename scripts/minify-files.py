@@ -93,7 +93,7 @@ def minify_files(source_directory: str, destination_directory: str) -> None:  # 
                         minify_css=True,
                         keep_comments=False,
                         keep_closing_tags=True,
-                        keep_spaces_between_attributes=True,
+                        allow_removing_spaces_between_attributes=True
                     )
                     # calculate the size of the minified content
                     minified_size = len(minified_content)
