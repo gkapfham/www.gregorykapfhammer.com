@@ -1,300 +1,300 @@
 - title: "International Flaky Tests Workshop"
   categories: [workshop]
-  date: '2025-01-01'
+  date: "2026-01-01"
   date-format: YYYY
   description: "Program Committee Member"
-  year-range: "2025 - 2024"
-  service-count: 2
+  year-range: "2026 - 2024"
+  service-count: 3
 - title: "International Conference on Software Maintenance and Evolution"
   categories: [conference]
-  date: '2025-01-01'
+  date: "2026-01-01"
   date-format: YYYY
   description: "Tool Demonstrations Program Committee"
-  year-range: "2025"
-  service-count: 1
+  year-range: "2026 - 2025"
+  service-count: 2
 - title: "International Symposium on Software Testing and Analysis"
   categories: [conference]
-  date: '2025-01-01'
+  date: "2025-01-01"
   date-format: YYYY
   description: "Tool Demonstrations Program Committee"
   year-range: "2025 - 2024"
   service-count: 2
 - title: "Teaching Computer Science Workshop at Carnegie Mellon University"
   categories: [workshop]
-  date: '2023-01-01'
+  date: "2023-01-01"
   date-format: YYYY
   description: "Panelist"
   year-range: "2023"
   service-count: 1
 - title: "International Symposium on Software Testing and Analysis"
   categories: [conference]
-  date: '2023-01-01'
+  date: "2023-01-01"
   date-format: YYYY
   description: "Program Committee Member"
   year-range: "2023"
   service-count: 1
 - title: "International Workshop on Search-Based and Fuzz Testing"
   categories: [workshop]
-  date: '2024-01-01'
+  date: "2024-01-01"
   date-format: YYYY
   description: "Program Committee Member"
   year-range: "2024 - 2023"
   service-count: 2
 - title: "International Workshop on Search-Based Software Testing"
   categories: [workshop]
-  date: '2022-01-01'
+  date: "2022-01-01"
   date-format: YYYY
   description: "Program Committee Member"
   year-range: "2022 - 2008"
   service-count: 12
 - title: "Testing: Academic and Industrial Conference &mdash; Practice and Research Techniques"
   categories: [conference]
-  date: '2015-01-01'
+  date: "2015-01-01"
   date-format: YYYY
   description: "Program Co-Chair, Program Committee Member"
   year-range: "2015 - 2007"
   service-count: 7
 - title: "International Symposium on Engineering Test Harness"
   categories: [conference]
-  date: '2013-01-01'
+  date: "2013-01-01"
   date-format: YYYY
   description: "Program Committee Member"
   year-range: "2013"
   service-count: 1
 - title: "International Conference on Software Engineering"
   categories: [conference]
-  date: '2025-01-01'
+  date: "2025-01-01"
   date-format: YYYY
   description: "Program Committee Member, Reviewer"
   year-range: "2025 - 2005"
   service-count: 5
 - title: "International Conference on the Foundations of Software Engineering"
   categories: [conference]
-  date: '2026-01-01'
+  date: "2026-01-01"
   date-format: YYYY
   description: "Program Committee Member, Reviewer"
   year-range: "2026 - 2005"
   service-count: 2
 - title: "International Symposium on Applied Computing"
   categories: [conference]
-  date: '2009-01-01'
+  date: "2009-01-01"
   date-format: YYYY
   description: "Session Chair, Reviewer"
   year-range: "2009 - 2004"
   service-count: 2
 - title: "International Conference on Distributed Computing Systems"
   categories: [conference]
-  date: '2003-01-01'
+  date: "2003-01-01"
   date-format: YYYY
   description: "Reviewer"
   year-range: "2003"
   service-count: 2
 - title: "PeerJ Computer Science Journal"
   categories: [journal]
-  date: '2025-01-01'
+  date: "2025-01-01"
   date-format: YYYY
   description: "Academic Editor"
   year-range: "2025 - 2019"
   service-count: 7
 - title: "Genetic Programming and Evolvable Machines Journal"
   categories: [journal]
-  date: '2020-01-01'
+  date: "2020-01-01"
   date-format: YYYY
   description: "Reviewer"
   year-range: "2020"
   service-count: 1
 - title: "Formal Aspects of Computing Journal"
   categories: [journal]
-  date: '2018-01-01'
+  date: "2018-01-01"
   date-format: YYYY
   description: "Reviewer"
   year-range: "2018"
   service-count: 1
 - title: "IET Software Journal"
   categories: [journal]
-  date: '2019-01-01'
+  date: "2019-01-01"
   date-format: YYYY
   description: "Reviewer"
   year-range: "2019 - 2018"
   service-count: 4
 - title: "Transactions on Services Computing"
   categories: [journal]
-  date: '2018-01-01'
+  date: "2018-01-01"
   date-format: YYYY
   description: "Reviewer"
   year-range: "2018 - 2017"
   service-count: 2
 - title: "Transactions on Industrial Informatics"
   categories: [journal]
-  date: '2017-01-01'
+  date: "2017-01-01"
   date-format: YYYY
   description: "Reviewer"
   year-range: "2017"
   service-count: 1
 - title: "Software and Systems Modelling Journal"
   categories: [journal]
-  date: '2016-01-01'
+  date: "2016-01-01"
   date-format: YYYY
   description: "Reviewer"
   year-range: "2016"
   service-count: 1
 - title: "IEEE Software Journal"
   categories: [journal]
-  date: '2015-01-01'
+  date: "2015-01-01"
   date-format: YYYY
   description: "Reviewer"
   year-range: "2015"
   service-count: 1
 - title: "Empirical Software Engineering Journal"
   categories: [journal]
-  date: '2020-01-01'
+  date: "2020-01-01"
   date-format: YYYY
   description: "Reviewer"
   year-range: "2020 - 2012"
   service-count: 4
 - title: "Advances in Software Engineering Journal"
   categories: [journal]
-  date: '2010-01-01'
+  date: "2010-01-01"
   date-format: YYYY
   description: "Reviewer"
   year-range: "2010"
   service-count: 1
 - title: "Journal of Software Engineering and Knowledge Engineering"
   categories: [journal]
-  date: '2010-01-01'
+  date: "2010-01-01"
   date-format: YYYY
   description: "Reviewer"
   year-range: "2010"
   service-count: 1
 - title: "Journal of Software Testing Verification and Reliability"
   categories: [journal]
-  date: '2021-01-01'
+  date: "2021-01-01"
   date-format: YYYY
   description: "Reviewer"
   year-range: "2021 - 2009"
   service-count: 13
 - title: "Journal of Systems and Software"
   categories: [journal]
-  date: '2025-01-01'
+  date: "2025-01-01"
   date-format: YYYY
   description: "Reviewer"
   year-range: "2025 - 2009"
   service-count: 15
 - title: "Software Quality Journal"
   categories: [journal]
-  date: '2020-01-01'
+  date: "2020-01-01"
   date-format: YYYY
   description: "Reviewer"
   year-range: "2021 - 2009"
   service-count: 16
 - title: "Information and Software Technology"
   categories: [journal]
-  date: '2023-01-01'
+  date: "2023-01-01"
   date-format: YYYY
   description: "Reviewer"
   year-range: "2023 - 2009"
   service-count: 13
 - title: "Automated Software Engineering Journal"
   categories: [journal]
-  date: '2010-01-01'
+  date: "2010-01-01"
   date-format: YYYY
   description: "Reviewer"
   year-range: "2010 - 2008"
   service-count: 2
 - title: "Communications of the ACM"
   categories: [journal]
-  date: '2008-01-01'
+  date: "2008-01-01"
   date-format: YYYY
   description: "Reviewer"
   year-range: "2008"
   service-count: 1
 - title: "Science of Computer Programming"
   categories: [journal]
-  date: '2007-01-01'
+  date: "2007-01-01"
   date-format: YYYY
   description: "Reviewer"
   year-range: "2017 - 2007"
   service-count: 3
 - title: "Transactions on Computers"
   categories: [journal]
-  date: '2007-01-01'
+  date: "2007-01-01"
   date-format: YYYY
   description: "Reviewer"
   year-range: "2007"
   service-count: 1
 - title: "Transactions on Software Engineering"
   categories: [journal]
-  date: '2021-01-01'
+  date: "2021-01-01"
   date-format: YYYY
   description: "Reviewer"
   year-range: "2021 - 2006"
   service-count: 34
 - title: "Transactions on Software Engineering and Methodology"
   categories: [journal]
-  date: '2021-01-01'
+  date: "2021-01-01"
   date-format: YYYY
   description: "Reviewer"
   year-range: "2021 - 2004"
   service-count: 7
 - title: "IEE Proceedings &mdash; Software"
   categories: [journal]
-  date: '2002-01-01'
+  date: "2002-01-01"
   date-format: YYYY
   description: "Reviewer"
   year-range: "2002"
   service-count: 1
 - title: "Natural Sciences and Engineering Research Council of Canada"
   categories: [foundation]
-  date: '2016-01-01'
+  date: "2016-01-01"
   date-format: YYYY
   description: "Reviewer"
   year-range: "2006"
   service-count: 1
 - title: "National Science Foundation of the United States of America"
   categories: [foundation]
-  date: '2022-01-01'
+  date: "2022-01-01"
   date-format: YYYY
   description: "Reviewer"
   year-range: "2022 - 2010"
   service-count: 2
 - title: "Addison-Wesley"
   categories: [publisher]
-  date: '2012-01-01'
+  date: "2012-01-01"
   date-format: YYYY
   description: "Reviewer"
   year-range: "2012"
   service-count: 1
 - title: "Prentice Hall"
   categories: [publisher]
-  date: '2006-01-01'
+  date: "2006-01-01"
   date-format: YYYY
   description: "Reviewer"
   year-range: "2006 - 2005"
   service-count: 1
 - title: "Encyclopedia of Software Engineering"
   categories: [publisher]
-  date: '2012-01-01'
+  date: "2012-01-01"
   date-format: YYYY
   description: "Reviewer"
   year-range: "2010"
   service-count: 1
 - title: "Handbook of Technology Management"
   categories: [publisher]
-  date: '2008-01-01'
+  date: "2008-01-01"
   date-format: YYYY
   description: "Reviewer"
   year-range: "2008"
   service-count: 1
 - title: "Handbook of Technology Management"
   categories: [publisher]
-  date: '2008-01-01'
+  date: "2008-01-01"
   date-format: YYYY
   description: "Reviewer"
   year-range: "2008"
   service-count: 1
 - title: "Handbook of Computer Networks"
   categories: [publisher]
-  date: '2006-01-01'
+  date: "2006-01-01"
   date-format: YYYY
   description: "Reviewer"
   year-range: "2006"
