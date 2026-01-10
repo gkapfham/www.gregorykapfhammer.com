@@ -11,7 +11,7 @@ on:
     branches: [ master ]
 
 # Jobs for setup, rendering, and publishing
-# for the web site, using Python, Poetry,
+# for the web site, using Python, uv,
 # and the Quarto publishing system
 jobs:
   build-deploy:
@@ -33,15 +33,15 @@ jobs:
         with:
           python-version: "3.12"
           cache: "pip"
-      # Install Poetry
-      - name: Install Poetry
-        uses: abatilo/actions-poetry@v2.0.0
+      # Install uv
+      - name: Install uv
+        uses: astral-sh/setup-uv@v4
         with:
-          poetry-version: 1.8.3
+          enable-cache: true
       # Setup the Virtual Environment
       - name: Setup Virtual Environment
         run: |
-          poetry install
+          uv sync
       # Render and Publish the Site
       # Note that this uses Quarto to
       # directly publish the site, which
@@ -55,10 +55,10 @@ jobs:
           PYDEVD_DISABLE_FILE_VALIDATION: 1
         run: |
           python --version
-          poetry --version
+          uv --version
           quarto --version
-          poetry run quarto check
-          poetry run python scripts/publish-site.py --stage all
-          poetry run python scripts/publish-site.py --stage render --render-file index.qmd
-          poetry run python scripts/publish-site.py --stage post-render
-          poetry run python scripts/publish-site.py --stage netlify 
+          uv run quarto check
+          uv run python scripts/publish-site.py --stage all
+          uv run python scripts/publish-site.py --stage render --render-file index.qmd
+          uv run python scripts/publish-site.py --stage post-render
+          uv run python scripts/publish-site.py --stage netlify
