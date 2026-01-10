@@ -121,8 +121,8 @@ Engineering](https://www.computer.org/csdl/journal/ts). Along with serving as a
 review panelist at the [U.S. National Science Foundation](https://nsf.gov/), I
 lead as a session chair, program chair, and general chair for international
 workshops and conferences. As a member of software engineering teams, I create
-useful research [software](/software/index.qmd) for the purposes of
-experimentation, replication, and technology transfer.
+[software](/software/index.qmd) for the purposes of
+running novel experiments, replicating empirical studies, and transferring technology to industry.
 
 My co-authors and I publish papers like [@Walsh2017] [{{< iconify
 fa6-solid book-open
