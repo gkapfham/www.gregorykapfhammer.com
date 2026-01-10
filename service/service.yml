@@ -91,11 +91,11 @@
   service-count: 2
 - title: "PeerJ Computer Science Journal"
   categories: [journal]
-  date: "2025-01-01"
+  date: "2026-01-01"
   date-format: YYYY
   description: "Academic Editor"
-  year-range: "2025 - 2019"
-  service-count: 7
+  year-range: "2026 - 2019"
+  service-count: 8
 - title: "Genetic Programming and Evolvable Machines Journal"
   categories: [journal]
   date: "2020-01-01"
