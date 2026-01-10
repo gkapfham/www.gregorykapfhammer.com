@@ -187,21 +187,19 @@ engineering community.
 
 ### Media Engagements
 
-My technical expertise enabled these successful media engagements:
+My technical expertise and communication skills enabled these media engagements:
 
 :::{#featured-media-biography}
 :::
 
 ::: {.callout-note appearance="simple"}
 
-## Enthusiastic Invitation
+## Media Invitation
 
-Do you work in one of my areas of expertise? Are you interested in
-collaborating with me on a research, software engineering, or educational
-project? Do you think that your knowledge and skills equip you to be guest on
-the [Software Engineering Radio](https://www.se-radio.net/) podcast that I
-co-host? Or, would you like me to be a guest on a podcast that you host? If you
-answered "yes" to one or more of these questions, then I invite you to
-[contact](/contact/index.qmd) me to share your ideas!
+ Do you think that your knowledge and skills equip you to be a guest on the
+ [Software Engineering Radio](https://www.se-radio.net/) podcast that I
+ co-host? Or, would you like me to be a guest on a podcast that you host? If
+ so, then I hope that you will [contact](/contact/index.qmd) me to share your
+ ideas!
 
 :::
