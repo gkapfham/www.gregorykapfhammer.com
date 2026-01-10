@@ -87,13 +87,12 @@ partially funded by <a href =
 
 ## Teaching
 
-As an educator, I teach [courses](/teaching/index.qmd) in the alphabetically
-ordered areas of algorithm analysis, computation theory, discrete structures,
-data management, distributed systems, software engineering, software testing,
-operating systems, and web development.</span> I am also a research adviser for
-undergraduate and graduate theses and PhD dissertations. My expertise in
-teaching was recognized when Allegheny College presented me with the [Thoburn
-Award for Excellence in
+As an educator, I teach [courses](/teaching/index.qmd) in areas such as
+algorithm analysis, computation theory, discrete structures, data management,
+distributed systems, software engineering, software testing, operating systems,
+and web development. I am also a research adviser for undergraduate and graduate
+theses and PhD dissertations. My expertise in teaching was recognized when
+Allegheny College presented me with the [Thoburn Award for Excellence in
 Teaching](https://sites.allegheny.edu/alumni/award-recipients/#thoburn). As a
 leader of software engineering teams, I create useful educational
 [software](/software/index.qmd) that supports automated tasks such as project
