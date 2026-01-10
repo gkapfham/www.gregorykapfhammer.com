@@ -163,7 +163,8 @@ won the distinguished paper award from the <a href =
 
 ### Research Service
 
-I leveraged my scientific and engineering expertise to serve the following venues:
+I leveraged my scientific and engineering expertise to serve the following
+recent venues:
 
 :::{#featured-service-biography}
 :::
