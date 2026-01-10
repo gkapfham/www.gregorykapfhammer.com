@@ -168,6 +168,22 @@ I leveraged my scientific and engineering expertise to serve the following venue
 :::{#featured-service-biography}
 :::
 
+::: {.callout-note appearance="simple"}
+
+## Research Invitation
+
+Do you work in one of my areas of expertise? Are you interested in collaborating
+with me on a research, software engineering, or educational project? If you
+answered "yes" to one or more of these questions, then I invite you to
+[contact](/contact/index.qmd) me to share your ideas! You can also learn more
+about my [research](/research/index.qmd), check out my
+[papers](/research/papers/index.qmd) or
+[presentations](/research/presentations/index.qmd), or explore the ways in
+which I use my technical expertise to [serve](/service/index.qmd) the software
+engineering community.
+
+:::
+
 ### Media Engagements
 
 My technical expertise enabled these successful media engagements:
