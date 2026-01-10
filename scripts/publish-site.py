@@ -84,7 +84,7 @@ def quarto() -> None:
 
 def perform_stage(command: Callable) -> bool:
     """Perform the stage."""
-    stage = command.__name__
+    stage = command.__name__  # ty:ignore[unresolved-attribute]
     console.print(f":clap: Starting the '{stage}' stage")
     command()
     console.print()
