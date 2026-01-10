@@ -32,7 +32,7 @@ def display_file_sizes(original_size: int, minified_size: int, type: str) -> Non
     console.print()
 
 
-def minify_files(source_directory: str, destination_directory: str) -> None:
+def minify_files(source_directory: str, destination_directory: str) -> None:  # noqa: PLR0915
     """Minify all of the files in the project directory."""
     # global source_directory_root
     # recursively iterate through all files and directories
