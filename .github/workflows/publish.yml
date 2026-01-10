@@ -31,8 +31,7 @@ jobs:
       - name: Install Python
         uses: actions/setup-python@v4
         with:
-          python-version: "3.12"
-          cache: "pip"
+          python-version: "3.14"
       # Install uv
       - name: Install uv
         uses: astral-sh/setup-uv@v4
@@ -59,6 +58,4 @@ jobs:
           quarto --version
           uv run quarto check
           uv run python scripts/publish-site.py --stage all
-          uv run python scripts/publish-site.py --stage render --render-file index.qmd
-          uv run python scripts/publish-site.py --stage post-render
           uv run python scripts/publish-site.py --stage netlify
