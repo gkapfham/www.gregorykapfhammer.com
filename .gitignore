@@ -159,4 +159,4 @@ research/presentations/*/
 _site_backup*
 
 ### Generated Notebooks ###
-index.quarto_ipynb
+*.quarto_ipynb
