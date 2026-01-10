@@ -61,7 +61,7 @@ console.print(
 
 Guided by my <a href = "/principles/">professional principles</a>, I am an
 Associate Professor in the <a href="http://www.cs.allegheny.edu">Department of
-  Computer Science</a> at <a href="http://www.allegheny.edu">Allegheny
+  Computer and Information Science</a> at <a href="http://www.allegheny.edu">Allegheny
   College</a>. I earned a PhD from the <a href="https://cs.pitt.edu">Department
   of Computer Science</a> at the <a href="http://www.pitt.edu">University of
   Pittsburgh</a>, writing a PhD dissertation on database application testing
@@ -78,7 +78,7 @@ short-term visitor in the <a href="http://www.cs.virginia.edu">Department of
   href="https://www.sheffield.ac.uk/dcs">Department of Computer Science</a> at
 the <a href="http://www.sheffield.ac.uk/">University of Sheffield</a>. In a
 prior position, I was a research associate at Cigital, a software company
-acquired by <a href="https://www.synopsys.com/">Synopsys</a>. My work is
+acquired by <a href="https://www.synopsys.com/">Synopsys</a>. My professional work is
 partially funded by <a href =
   "https://research.fb.com/blog/2019/10/announcing-the-winners-of-the-2019-testing-and-verification-research-awards/">Facebook
   Research</a> and the <a href =
@@ -163,7 +163,7 @@ won the distinguished paper award from the <a href =
 
 ### Research Service
 
-I recently leveraged my scientific expertise to serve the following venues:
+I leveraged my scientific and engineering expertise to serve the following venues:
 
 :::{#featured-service-biography}
 :::
