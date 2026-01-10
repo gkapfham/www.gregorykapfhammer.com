@@ -6,9 +6,9 @@ name: Publish
 # Focuses on the master branch only
 on:
   push:
-    branches: [ master ]
+    branches: [master]
   pull_request:
-    branches: [ master ]
+    branches: [master]
 
 # Jobs for setup, rendering, and publishing
 # for the web site, using Python, uv,
@@ -58,4 +58,6 @@ jobs:
           quarto --version
           uv run quarto check
           uv run python scripts/publish-site.py --stage all
+          uv run python scripts/publish-site.py --stage render --render-file index.qmd
+          uv run python scripts/publish-site.py --stage post-render
           uv run python scripts/publish-site.py --stage netlify
