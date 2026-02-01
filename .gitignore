@@ -165,3 +165,4 @@ _site_backup*
 # generated CSS subset and backup files
 _include/css/fontawesome-subset.css
 _extensions/quarto-ext/fontawesome/assets/css/all.css.backup
+_extensions/quarto-ext/fontawesome/assets/css/all.subset.css
