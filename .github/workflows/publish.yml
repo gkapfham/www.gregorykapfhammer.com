@@ -46,7 +46,7 @@ jobs:
       # a minimal CSS file (2KB instead of 135KB)
       - name: Optimize Font Awesome CSS
         run: |
-          uv run scripts/generate-fontawesome-subset.py
+          uv run scripts/generate-fontawesome-subset.py --replace
       # Render and Publish the Site
       # Note that this uses Quarto to
       # directly publish the site, which
