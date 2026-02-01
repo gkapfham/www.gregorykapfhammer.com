@@ -3,6 +3,10 @@
 import subprocess
 from pathlib import Path
 
+from rich.console import Console
+
+console = Console()
+
 # base directory
 BASE_DIR = Path(__file__).parent.parent
 EXT_CSS = BASE_DIR / "_extensions/quarto-ext/fontawesome/assets/css/all.css"
@@ -29,7 +33,7 @@ ICON_CODES = {
 }
 
 
-def find_all_icons():
+def find_all_icons():  # noqa: PLR0912
     """Scan all content files and find Font Awesome icons used."""
     icons = set()
     # find {{< fa ... >}} shortcodes
@@ -194,21 +198,21 @@ def generate_css(icons):
 
 def main():
     """Generate the Font Awesome subset CSS file."""
-    print("🔍 Scanning for Font Awesome icons...")
+    console.print(":magnifying_glass_tilted_left: Scanning for Font Awesome icons...")
     icons = find_all_icons()
     if not icons:
-        print("❌ No icons found!")
+        console.print(":cross_mark: No icons found!")
         return
-    print(f"✅ Found {len(icons)} unique icons:")
+    console.print(f":check_mark_button: Found {len(icons)} unique icons:")
     for icon in icons:
-        print(f"   - {icon}")
+        console.print(f"   - {icon}")
     # create backup if it doesn't exist
     if not BACKUP_CSS.exists() and EXT_CSS.exists():
-        print(f"\n📦 Creating backup: {BACKUP_CSS.name}")
+        console.print(f"\n:package: Creating backup: {BACKUP_CSS.name}")
         EXT_CSS.rename(BACKUP_CSS)
         EXT_CSS.write_text(BACKUP_CSS.read_text())
     # generate and write minimal CSS
-    print("\n✏️  Generating minimal CSS...")
+    console.print("\n:pencil: Generating minimal CSS...")
     css = generate_css(set(icons))
     EXT_CSS.write_text(css)
     # show size comparison
@@ -216,13 +220,15 @@ def main():
         original_size = BACKUP_CSS.stat().st_size
         new_size = EXT_CSS.stat().st_size
         reduction = ((original_size - new_size) / original_size) * 100
-        print("\n📊 Size comparison:")
-        print(f"   Original: {original_size:,} bytes")
-        print(f"   Subset:   {new_size:,} bytes")
-        print(f"   Reduction: {reduction:.1f}%")
-    print("\n🎉 Done! Minimal CSS generated at:")
-    print(f"   {EXT_CSS.relative_to(BASE_DIR)}")
-    print("\n💡 Remember to run 'quarto render' to rebuild your site!")
+        console.print("\n:bar_chart: Size comparison:")
+        console.print(f"   Original: {original_size:,} bytes")
+        console.print(f"   Subset:   {new_size:,} bytes")
+        console.print(f"   Reduction: {reduction:.1f}%")
+    console.print("\n:party_popper: Done! Minimal CSS generated at:")
+    console.print(f"   {EXT_CSS.relative_to(BASE_DIR)}")
+    console.print(
+        "\n:light_bulb: Remember to run 'quarto render' to rebuild your site!"
+    )
 
 
 if __name__ == "__main__":
