@@ -67,6 +67,5 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: >-
-            pages deploy _site --project-name=www-gregorykapfhammer-com
+          command: deploy
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
