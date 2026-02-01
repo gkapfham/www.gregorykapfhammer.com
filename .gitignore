@@ -166,3 +166,8 @@ _site_backup*
 _include/css/fontawesome-subset.css
 _extensions/quarto-ext/fontawesome/assets/css/all.css.backup
 _extensions/quarto-ext/fontawesome/assets/css/all.subset.css
+
+### Bootstrap Icons Optimization ###
+# generated CSS subset and backup files in _site
+_site/site_libs/bootstrap/bootstrap-icons.subset.css
+_site/site_libs/bootstrap/bootstrap-icons.css.backup
