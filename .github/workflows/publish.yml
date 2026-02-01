@@ -61,3 +61,12 @@ jobs:
           uv run python scripts/publish-site.py --stage render --render-file index.qmd
           uv run python scripts/publish-site.py --stage post-render
           uv run python scripts/publish-site.py --stage netlify
+      # Deploy to Cloudflare Pages
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: >-
+            pages deploy _site --project-name=www-gregorykapfhammer-com
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
