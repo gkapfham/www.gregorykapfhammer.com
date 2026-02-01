@@ -1,5 +1,6 @@
 """Generate a minimal Font Awesome CSS subset with only the icons actually used."""
 
+import argparse
 import subprocess
 from pathlib import Path
 
@@ -10,6 +11,7 @@ console = Console()
 # base directory
 BASE_DIR = Path(__file__).parent.parent
 EXT_CSS = BASE_DIR / "_extensions/quarto-ext/fontawesome/assets/css/all.css"
+SUBSET_CSS = BASE_DIR / "_extensions/quarto-ext/fontawesome/assets/css/all.subset.css"
 BACKUP_CSS = BASE_DIR / "_extensions/quarto-ext/fontawesome/assets/css/all.css.backup"
 
 # icon unicode mappings (Font Awesome 6)
@@ -252,6 +254,16 @@ def generate_css(icons_dict):
 
 def main():
     """Generate the Font Awesome subset CSS file."""
+    # parse command-line arguments
+    parser = argparse.ArgumentParser(
+        description="Generate minimal Font Awesome CSS with only used icons"
+    )
+    parser.add_argument(
+        "--replace",
+        action="store_true",
+        help="Replace all.css with the subset (use in CI only)",
+    )
+    args = parser.parse_args()
     console.print(":magnifying_glass_tilted_left: Scanning for Font Awesome icons...")
     icons_dict = find_all_icons()
     total_icons = len(icons_dict["solid"]) + len(icons_dict["brands"])
@@ -265,26 +277,43 @@ def main():
     console.print(f"   Brand icons ({len(icons_dict['brands'])}):")
     for icon in icons_dict["brands"]:
         console.print(f"      - {icon}")
-    # create backup if it doesn't exist
-    if not BACKUP_CSS.exists() and EXT_CSS.exists():
-        console.print(f"\n:package: Creating backup: {BACKUP_CSS.name}")
-        EXT_CSS.rename(BACKUP_CSS)
-        EXT_CSS.write_text(BACKUP_CSS.read_text())
-    # generate and write minimal CSS
+    # generate minimal CSS
     console.print("\n:pencil: Generating minimal CSS...")
     css = generate_css(icons_dict)
-    EXT_CSS.write_text(css)
+    # write to subset file first
+    SUBSET_CSS.write_text(css)
+    console.print(f":floppy_disk: Wrote subset to: {SUBSET_CSS.name}")
     # show size comparison
-    if BACKUP_CSS.exists():
-        original_size = BACKUP_CSS.stat().st_size
-        new_size = EXT_CSS.stat().st_size
-        reduction = ((original_size - new_size) / original_size) * 100
+    if EXT_CSS.exists():
+        original_size = EXT_CSS.stat().st_size
+        subset_size = SUBSET_CSS.stat().st_size
+        reduction = ((original_size - subset_size) / original_size) * 100
         console.print("\n:bar_chart: Size comparison:")
-        console.print(f"   Original: {original_size:,} bytes")
-        console.print(f"   Subset:   {new_size:,} bytes")
+        console.print(f"   Original: {original_size:,} bytes ({EXT_CSS.name})")
+        console.print(f"   Subset:   {subset_size:,} bytes ({SUBSET_CSS.name})")
         console.print(f"   Reduction: {reduction:.1f}%")
-    console.print("\n:party_popper: Done! Minimal CSS generated at:")
-    console.print(f"   {EXT_CSS.relative_to(BASE_DIR)}")
+    # optionally replace the original file (CI only)
+    if args.replace:
+        console.print(
+            f"\n:warning: Replacing {EXT_CSS.name} with subset (--replace flag)"
+        )
+        # create backup if it doesn't exist
+        if not BACKUP_CSS.exists():
+            console.print(f":package: Creating backup: {BACKUP_CSS.name}")
+            import shutil
+
+            shutil.copy2(EXT_CSS, BACKUP_CSS)
+        # replace original with subset
+        import shutil
+
+        shutil.copy2(SUBSET_CSS, EXT_CSS)
+        console.print(":check_mark: Replaced successfully!")
+    else:
+        console.print(f"\n:information: Testing mode - {EXT_CSS.name} was not modified")
+        console.print(
+            f":information: Use --replace flag to replace {EXT_CSS.name} with subset"
+        )
+    console.print("\n:party_popper: Done!")
     console.print(
         "\n:light_bulb: Remember to run 'quarto render' to rebuild your site!"
     )
