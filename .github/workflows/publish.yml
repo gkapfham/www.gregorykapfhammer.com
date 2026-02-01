@@ -61,7 +61,9 @@ jobs:
           uv run python scripts/publish-site.py --stage render --render-file index.qmd
           uv run python scripts/publish-site.py --stage post-render
           uv run python scripts/publish-site.py --stage netlify
-      # Deploy to Cloudflare Pages
+      # Deploy to Cloudflare Pages, which manages
+      # both the domain's DNS records and hosts the
+      # site through the use of Cloudflare Workers
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/wrangler-action@v3
         with:
