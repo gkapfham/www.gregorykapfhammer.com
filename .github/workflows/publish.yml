@@ -41,6 +41,12 @@ jobs:
       - name: Setup Virtual Environment
         run: |
           uv sync
+      # Generate Font Awesome Subset
+      # This scans all .qmd files for icon usage and creates
+      # a minimal CSS file (2KB instead of 135KB)
+      - name: Optimize Font Awesome CSS
+        run: |
+          python scripts/generate-fontawesome-subset.py
       # Render and Publish the Site
       # Note that this uses Quarto to
       # directly publish the site, which

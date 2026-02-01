@@ -160,3 +160,8 @@ _site_backup*
 
 ### Generated Notebooks ###
 *.quarto_ipynb
+
+### Font Awesome Optimization ###
+# generated CSS subset and backup files
+_include/css/fontawesome-subset.css
+_extensions/quarto-ext/fontawesome/assets/css/all.css.backup
