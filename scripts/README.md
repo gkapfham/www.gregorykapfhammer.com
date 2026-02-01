@@ -11,6 +11,7 @@ bibliography parsing, file optimization, asset copying, and deployment.
   - [parse-bibliography.py](#parse-bibliographypy)
   - [generate-fontawesome-subset.py](#generate-fontawesome-subsetpy)
   - [test-fontawesome-subset.py](#test-fontawesome-subsetpy)
+  - [generate-bootstrap-icons-subset.py](#generate-bootstrap-icons-subsetpy)
   - [minify-files.py](#minify-filespy)
   - [copy-files.py](#copy-filespy)
   - [publish-site.py](#publish-sitepy)
@@ -166,6 +167,67 @@ python scripts/test-fontawesome-subset.py
 
 **When it runs**: Manually after running `generate-fontawesome-subset.py` and
 `quarto render` to verify the optimization worked correctly.
+
+______________________________________________________________________
+
+### generate-bootstrap-icons-subset.py
+
+**Purpose**: Generates an optimized Bootstrap Icons CSS file containing only the
+icons actually used on the website, reducing file size from 96KB to ~1KB
+(98.9% reduction).
+
+**Location**: `scripts/generate-bootstrap-icons-subset.py`
+
+**Usage**:
+
+```bash
+# Local testing (safe mode - won't modify original)
+uv run scripts/generate-bootstrap-icons-subset.py
+
+# CI/production (replaces original file)
+uv run scripts/generate-bootstrap-icons-subset.py --replace
+```
+
+**Arguments**:
+
+- `--replace` - Replace `bootstrap-icons.css` with the optimized subset (use in
+  CI only)
+
+**What it does**:
+
+1. Scans all HTML files in `_site` for Bootstrap Icons usage
+1. Detects icons from class attributes (`class="bi bi-github"`)
+1. Checks `_quarto.yml` for icon declarations in navbar/footer
+1. Generates minimal CSS with only used icons
+1. Writes to `bootstrap-icons.subset.css` (safe mode) or replaces
+   `bootstrap-icons.css` (--replace mode)
+1. Creates backup at `bootstrap-icons.css.backup` when replacing
+1. Handles read-only file permissions set by Quarto
+
+**Output files**:
+
+- `_site/site_libs/bootstrap/bootstrap-icons.subset.css` (always)
+- `_site/site_libs/bootstrap/bootstrap-icons.css` (only with --replace)
+- `_site/site_libs/bootstrap/bootstrap-icons.css.backup` (backup)
+
+**Current icons** (8 total):
+
+- github, google, linkedin, mastodon, megaphone, search, sort-down, x-lg
+
+**Adding new icons**:
+
+1. Use the icon in your Quarto config (e.g., `icon: twitter` in navbar)
+1. Find the icon's unicode at https://icons.getbootstrap.com/
+1. Add to `ICON_CODES` dict in the script
+1. Run the script - it will automatically detect and include the new icon
+
+**When it runs**:
+
+- Manually during local testing (after `quarto render`)
+- Automatically in GitHub Actions with `--replace` flag after rendering
+
+**Note**: This script must run AFTER `quarto render` because Quarto generates
+the `bootstrap-icons.css` file during the render process.
 
 ______________________________________________________________________
 
@@ -339,7 +401,10 @@ Here's how the scripts work together in the complete build process:
 2. uv run scripts/publish-site.py --stages render
    └─ quarto render builds entire site
    ↓
-3. uv run scripts/publish-site.py --stages post-render
+3. uv run scripts/generate-bootstrap-icons-subset.py
+   └─ optimize Bootstrap Icons CSS (must run after render)
+   ↓
+4. uv run scripts/publish-site.py --stages post-render
    ├─ minify-files.py compresses HTML/CSS/JS
    └─ copy-files.py moves PDFs to _site
 ```
@@ -352,7 +417,7 @@ Here's how the scripts work together in the complete build process:
 2. Install uv and dependencies
    └─ uv sync
    ↓
-3. Optimize Font Awesome CSS
+3. Optimize Font Awesome CSS (pre-render)
    └─ uv run scripts/generate-fontawesome-subset.py --replace
    ↓
 4. Pre-render
@@ -361,11 +426,14 @@ Here's how the scripts work together in the complete build process:
 5. Render
    └─ quarto render builds site
    ↓
-6. Post-render
+6. Optimize Bootstrap Icons CSS (post-render)
+   └─ uv run scripts/generate-bootstrap-icons-subset.py --replace
+   ↓
+7. Post-render
    ├─ minify-files.py (optional, currently not in workflow)
    └─ copy-files.py (via quarto post-render hook)
    ↓
-7. Deploy to Cloudflare Workers
+8. Deploy to Cloudflare Workers
    └─ wrangler pages deploy
 ```
 
