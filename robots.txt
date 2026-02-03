@@ -1,0 +1,12 @@
+# robots.txt for www.gregorykapfhammer.com
+# This file controls how search engines crawl and index the site
+
+# Note: Cloudflare may inject additional rules for AI bot blocking
+# Those rules are managed in Cloudflare Dashboard → Scraper Shield
+
+# Allow all well-behaved crawlers
+User-agent: *
+Allow: /
+
+# Reference to sitemap for efficient crawling
+Sitemap: https://www.gregorykapfhammer.com/sitemap.xml
