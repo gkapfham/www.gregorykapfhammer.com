@@ -86,7 +86,7 @@ def generate_css(icons):
  */
 
 @font-face {
-  font-display: block;
+  font-display: swap;
   font-family: "bootstrap-icons";
   src: 
 url("./bootstrap-icons.woff?2820a3852bdb9a5832199cc61cec4e65") format("woff");
