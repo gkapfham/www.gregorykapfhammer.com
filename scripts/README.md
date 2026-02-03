@@ -7,11 +7,14 @@ bibliography parsing, file optimization, asset copying, and deployment.
 ## Table of Contents
 
 - [Overview](#overview)
+- [Quick Start](#quick-start)
 - [Script Descriptions](#script-descriptions)
+  - [build-local.py](#build-localpy)
   - [parse-bibliography.py](#parse-bibliographypy)
   - [generate-fontawesome-subset.py](#generate-fontawesome-subsetpy)
   - [test-fontawesome-subset.py](#test-fontawesome-subsetpy)
   - [generate-bootstrap-icons-subset.py](#generate-bootstrap-icons-subsetpy)
+  - [purge-bootstrap-css-simple.py](#purge-bootstrap-css-simplepy)
   - [minify-files.py](#minify-filespy)
   - [copy-files.py](#copy-filespy)
   - [publish-site.py](#publish-sitepy)
@@ -33,7 +36,116 @@ conventions:
 
 ______________________________________________________________________
 
+## Quick Start
+
+### Local Build (Recommended)
+
+Build the site locally with all optimizations (mimics GitHub Actions workflow):
+
+```bash
+# Full build: render + all CSS optimizations
+uv run python scripts/build-local.py
+
+# Then test locally
+cd _site
+python3 -m http.server 8000
+# Open http://localhost:8000 in browser
+```
+
+### Development Preview
+
+For rapid iteration during content development:
+
+```bash
+# Live preview without running optimization scripts
+quarto preview
+```
+
+### Manual Build Steps
+
+If you need fine-grained control over the build process:
+
+```bash
+# Step 1: Pre-render (parse bibliography)
+uv run python scripts/publish-site.py --stage all
+
+# Step 2: Render site
+uv run python scripts/publish-site.py --stage render --render-file index.qmd
+
+# Step 3: Post-render (minify, copy files)
+uv run python scripts/publish-site.py --stage post-render
+
+# Step 4: Optimize CSS (must run AFTER render)
+uv run python scripts/generate-fontawesome-subset.py --replace
+uv run python scripts/generate-bootstrap-icons-subset.py --replace
+uv run python scripts/purge-bootstrap-css-simple.py --replace
+```
+
+______________________________________________________________________
+
 ## Script Descriptions
+
+### build-local.py
+
+**Purpose**: Orchestrates a complete local build that mimics the GitHub Actions
+workflow. Runs all render steps and CSS optimizations in the correct order.
+
+**Location**: `scripts/build-local.py`
+
+**Usage**:
+
+```bash
+# Full build (render + all optimizations)
+uv run python scripts/build-local.py
+
+# Skip render, only run optimizations (if _site already exists)
+uv run python scripts/build-local.py --skip-render
+```
+
+**Arguments**:
+
+- `--skip-render` - Skip the render step and only run CSS optimizations
+
+**What it does**:
+
+1. **Render Stage**: Runs `publish-site.py` with stages: all, render, post-render
+   - Pre-render: Parse bibliography, minify files, copy files
+   - Render: `quarto render` to build entire site
+   - Post-render: Final cleanup steps
+2. **Optimize Font Awesome CSS**: Runs `generate-fontawesome-subset.py --replace`
+3. **Optimize Bootstrap Icons CSS**: Runs `generate-bootstrap-icons-subset.py --replace`
+4. **Optimize Bootstrap CSS**: Runs `purge-bootstrap-css-simple.py --replace`
+
+**Output**:
+
+- Colored progress indicators for each step
+- Error messages if any step fails
+- Success message with next steps for local testing
+
+**When to use**:
+
+- Before committing changes to verify everything builds correctly
+- To test CSS optimizations locally before pushing to GitHub
+- To ensure your local build matches production deployment
+
+**Example workflow**:
+
+```bash
+# Make content changes
+vim blog/my-new-post.qmd
+
+# Build with optimizations
+uv run python scripts/build-local.py
+
+# Test locally
+cd _site && python3 -m http.server 8000
+
+# If everything looks good, commit and push
+git add . && git commit -m "add new blog post"
+git push
+```
+
+______________________________________________________________________
 
 ### parse-bibliography.py
 
@@ -231,6 +343,72 @@ the `bootstrap-icons.css` file during the render process.
 
 ______________________________________________________________________
 
+### purge-bootstrap-css-simple.py
+
+**Purpose**: Optimizes Bootstrap CSS files by removing unused CSS classes and
+rules, reducing file size from 997KB to ~157KB (84% reduction).
+
+**Location**: `scripts/purge-bootstrap-css-simple.py`
+
+**Usage**:
+
+```bash
+# Local testing (safe mode - won't modify original)
+uv run scripts/purge-bootstrap-css-simple.py
+
+# CI/production (replaces original files)
+uv run scripts/purge-bootstrap-css-simple.py --replace
+```
+
+**Arguments**:
+
+- `--replace` - Replace original Bootstrap CSS files with optimized versions
+  (use in CI only)
+
+**What it does**:
+
+1. Locates Bootstrap CSS files in `_site/site_libs/bootstrap/`:
+   - `bootstrap-*.min.css` (light theme)
+   - `bootstrap-dark-*.min.css` (dark theme)
+2. Uses PurgeCSS (via npx) to remove unused CSS classes
+3. Scans all HTML and JS files in `_site` to determine which classes are used
+4. Automatically detects which Bootstrap classes are needed (no manual safelist)
+5. Writes to `.purged.css` files (safe mode) or replaces originals (--replace mode)
+6. Creates backup files with `.backup` extension when replacing
+
+**Output files**:
+
+- `_site/site_libs/bootstrap/bootstrap-*.min.css.purged` (always)
+- `_site/site_libs/bootstrap/bootstrap-dark-*.min.css.purged` (always)
+- `_site/site_libs/bootstrap/bootstrap-*.min.css` (only with --replace)
+- `_site/site_libs/bootstrap/bootstrap-dark-*.min.css` (only with --replace)
+- `_site/site_libs/bootstrap/*.backup` (backup files)
+
+**Performance impact**:
+
+- Light theme: 498KB → 78KB (84% reduction)
+- Dark theme: 500KB → 80KB (84% reduction)
+- Total savings: ~839KB
+
+**PurgeCSS configuration**:
+
+The script uses PurgeCSS with these settings:
+- Content sources: All HTML and JS files in `_site/`
+- No manual safelist (auto-detection only)
+- Preserves keyframes and font-face rules
+- Handles dynamic class names via regex patterns
+
+**When it runs**:
+
+- Manually during local testing (after `quarto render`)
+- Automatically in GitHub Actions with `--replace` flag after rendering
+
+**Note**: This script must run AFTER `quarto render` because Quarto generates
+the Bootstrap CSS files during the render process. It requires Node.js and npx
+to be installed (for running PurgeCSS).
+
+______________________________________________________________________
+
 ### minify-files.py
 
 **Purpose**: Minifies HTML, CSS, and JavaScript files in the rendered `_site`
@@ -392,7 +570,24 @@ Here's how the scripts work together in the complete build process:
 3. Review changes
 ```
 
-### Full Local Build
+### Full Local Build (Recommended)
+
+**Using the build-local.py script** (easiest method):
+
+```
+1. uv run python scripts/build-local.py
+   ├─ Pre-render: parse-bibliography.py generates research pages
+   ├─ Render: quarto render builds entire site
+   ├─ Post-render: minify-files.py and copy-files.py
+   ├─ Optimize Font Awesome CSS (135KB → 2KB)
+   ├─ Optimize Bootstrap Icons CSS (96KB → 1KB)
+   └─ Optimize Bootstrap CSS (997KB → 157KB)
+   ↓
+2. cd _site && python3 -m http.server 8000
+   └─ Test at http://localhost:8000
+```
+
+**Manual steps** (if you need fine-grained control):
 
 ```
 1. uv run scripts/publish-site.py --stages pre-render
@@ -401,10 +596,16 @@ Here's how the scripts work together in the complete build process:
 2. uv run scripts/publish-site.py --stages render
    └─ quarto render builds entire site
    ↓
-3. uv run scripts/generate-bootstrap-icons-subset.py
+3. uv run scripts/generate-fontawesome-subset.py --replace
+   └─ optimize Font Awesome CSS (must run after render)
+   ↓
+4. uv run scripts/generate-bootstrap-icons-subset.py --replace
    └─ optimize Bootstrap Icons CSS (must run after render)
    ↓
-4. uv run scripts/publish-site.py --stages post-render
+5. uv run scripts/purge-bootstrap-css-simple.py --replace
+   └─ optimize Bootstrap CSS (must run after render)
+   ↓
+6. uv run scripts/publish-site.py --stages post-render
    ├─ minify-files.py compresses HTML/CSS/JS
    └─ copy-files.py moves PDFs to _site
 ```
@@ -417,25 +618,27 @@ Here's how the scripts work together in the complete build process:
 2. Install uv and dependencies
    └─ uv sync
    ↓
-3. Optimize Font Awesome CSS (pre-render)
+3. Pre-render and Render
+   └─ uv run scripts/publish-site.py (all stages)
+   ↓
+4. Optimize Font Awesome CSS
    └─ uv run scripts/generate-fontawesome-subset.py --replace
    ↓
-4. Pre-render
-   └─ parse-bibliography.py generates research pages
-   ↓
-5. Render
-   └─ quarto render builds site
-   ↓
-6. Optimize Bootstrap Icons CSS (post-render)
+5. Optimize Bootstrap Icons CSS
    └─ uv run scripts/generate-bootstrap-icons-subset.py --replace
    ↓
-7. Post-render
-   ├─ minify-files.py (optional, currently not in workflow)
-   └─ copy-files.py (via quarto post-render hook)
+6. Optimize Bootstrap CSS
+   └─ uv run scripts/purge-bootstrap-css-simple.py --replace
    ↓
-8. Deploy to Cloudflare Workers
+7. Deploy to Cloudflare Pages
    └─ wrangler pages deploy
 ```
+
+**Total CSS Savings**: ~1,070 KB (87% reduction)
+
+- Font Awesome: 133 KB saved
+- Bootstrap Icons: 95 KB saved
+- Bootstrap CSS: 839 KB saved
 
 ______________________________________________________________________
 
