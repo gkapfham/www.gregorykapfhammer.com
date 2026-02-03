@@ -137,6 +137,20 @@ def optimize_bootstrap() -> bool:
     )
 
 
+def defer_javascript() -> bool:
+    """Add defer attributes to JavaScript to prevent render-blocking."""
+    console.print(
+        "\n[bold yellow]════════════════════════════════════════[/bold yellow]"
+    )
+    console.print("[bold yellow]STEP 5: Defer JavaScript Loading[/bold yellow]")
+    console.print("[bold yellow]════════════════════════════════════════[/bold yellow]")
+
+    return run_command(
+        ["uv", "run", "python", "scripts/defer-javascript.py", "--replace"],
+        "Add defer attributes to script tags",
+    )
+
+
 def main():
     """Build the site locally with all optimizations."""
     parser = argparse.ArgumentParser(
@@ -175,6 +189,10 @@ def main():
 
     # step 4: optimize Bootstrap CSS
     if not optimize_bootstrap():
+        all_success = False
+
+    # step 5: defer JavaScript
+    if not defer_javascript():
         all_success = False
 
     # final summary
