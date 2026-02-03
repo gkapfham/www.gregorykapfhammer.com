@@ -1,6 +1,8 @@
 """Generate a minimal Font Awesome CSS subset with only the icons actually used."""
 
 import argparse
+import os
+import shutil
 import subprocess
 from pathlib import Path
 
@@ -10,9 +12,10 @@ console = Console()
 
 # base directory
 BASE_DIR = Path(__file__).parent.parent
-EXT_CSS = BASE_DIR / "_extensions/quarto-ext/fontawesome/assets/css/all.css"
-SUBSET_CSS = BASE_DIR / "_extensions/quarto-ext/fontawesome/assets/css/all.subset.css"
-BACKUP_CSS = BASE_DIR / "_extensions/quarto-ext/fontawesome/assets/css/all.css.backup"
+SITE_LIBS = BASE_DIR / "_site/site_libs/quarto-contrib/fontawesome6-0.1.0"
+ORIGINAL_CSS = SITE_LIBS / "all.css"
+SUBSET_CSS = SITE_LIBS / "all.subset.css"
+BACKUP_CSS = SITE_LIBS / "all.css.backup"
 
 # icon unicode mappings (Font Awesome 6)
 ICON_CODES = {
@@ -264,6 +267,18 @@ def main():
         help="Replace all.css with the subset (use in CI only)",
     )
     args = parser.parse_args()
+    # check if _site directory exists
+    if not SITE_LIBS.exists():
+        console.print(
+            ":cross_mark: _site/site_libs/quarto-contrib/fontawesome6-0.1.0/ directory not found!"
+        )
+        console.print(":information: Run 'quarto render' first to generate the site.")
+        return
+    # check if original CSS exists
+    if not ORIGINAL_CSS.exists():
+        console.print(f":cross_mark: {ORIGINAL_CSS.name} not found in {SITE_LIBS}!")
+        console.print(":information: Run 'quarto render' first to generate the site.")
+        return
     console.print(":magnifying_glass_tilted_left: Scanning for Font Awesome icons...")
     icons_dict = find_all_icons()
     total_icons = len(icons_dict["solid"]) + len(icons_dict["brands"])
@@ -284,39 +299,36 @@ def main():
     SUBSET_CSS.write_text(css)
     console.print(f":floppy_disk: Wrote subset to: {SUBSET_CSS.name}")
     # show size comparison
-    if EXT_CSS.exists():
-        original_size = EXT_CSS.stat().st_size
+    if ORIGINAL_CSS.exists():
+        original_size = ORIGINAL_CSS.stat().st_size
         subset_size = SUBSET_CSS.stat().st_size
         reduction = ((original_size - subset_size) / original_size) * 100
         console.print("\n:bar_chart: Size comparison:")
-        console.print(f"   Original: {original_size:,} bytes ({EXT_CSS.name})")
+        console.print(f"   Original: {original_size:,} bytes ({ORIGINAL_CSS.name})")
         console.print(f"   Subset:   {subset_size:,} bytes ({SUBSET_CSS.name})")
         console.print(f"   Reduction: {reduction:.1f}%")
     # optionally replace the original file (CI only)
     if args.replace:
         console.print(
-            f"\n:warning: Replacing {EXT_CSS.name} with subset (--replace flag)"
+            f"\n:warning: Replacing {ORIGINAL_CSS.name} with subset (--replace flag)"
         )
         # create backup if it doesn't exist
         if not BACKUP_CSS.exists():
             console.print(f":package: Creating backup: {BACKUP_CSS.name}")
-            import shutil
-
-            shutil.copy2(EXT_CSS, BACKUP_CSS)
+            shutil.copy2(ORIGINAL_CSS, BACKUP_CSS)
         # replace original with subset
-        import shutil
-
-        shutil.copy2(SUBSET_CSS, EXT_CSS)
+        # set file permissions to writable first (Quarto sets files as read-only)
+        os.chmod(ORIGINAL_CSS, 0o600)
+        shutil.copy2(SUBSET_CSS, ORIGINAL_CSS)
         console.print(":check_mark: Replaced successfully!")
     else:
-        console.print(f"\n:information: Testing mode - {EXT_CSS.name} was not modified")
         console.print(
-            f":information: Use --replace flag to replace {EXT_CSS.name} with subset"
+            f"\n:information: Testing mode - {ORIGINAL_CSS.name} was not modified"
+        )
+        console.print(
+            f":information: Use --replace flag to replace {ORIGINAL_CSS.name} with subset"
         )
     console.print("\n:party_popper: Done!")
-    console.print(
-        "\n:light_bulb: Remember to run 'quarto render' to rebuild your site!"
-    )
 
 
 if __name__ == "__main__":
