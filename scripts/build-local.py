@@ -151,6 +151,20 @@ def defer_javascript() -> bool:
     )
 
 
+def preload_critical_resources() -> bool:
+    """Add preload tags for critical resources."""
+    console.print(
+        "\n[bold yellow]════════════════════════════════════════[/bold yellow]"
+    )
+    console.print("[bold yellow]STEP 6: Preload Critical Resources[/bold yellow]")
+    console.print("[bold yellow]════════════════════════════════════════[/bold yellow]")
+
+    return run_command(
+        ["uv", "run", "python", "scripts/preload-critical-resources.py", "--replace"],
+        "Add preload tags for critical resources",
+    )
+
+
 def main():
     """Build the site locally with all optimizations."""
     parser = argparse.ArgumentParser(
@@ -193,6 +207,10 @@ def main():
 
     # step 5: defer JavaScript
     if not defer_javascript():
+        all_success = False
+
+    # step 6: preload critical resources
+    if not preload_critical_resources():
         all_success = False
 
     # final summary
