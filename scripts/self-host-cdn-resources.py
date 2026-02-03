@@ -13,9 +13,14 @@ Why this needs to be a post-render script:
 - We replace CDN URLs with local paths in all HTML files
 - Eliminates 2 TLS handshakes per page (~150ms each on mobile 4G)
 
-Source files:
-- _include/js/jquery.min.js (jQuery 3.5.1 from cdnjs)
-- _include/js/require.min.js (require.js 2.3.6 from cdnjs)
+Source files (checked into repository):
+- _include/js/jquery.min.js (currently jQuery 3.5.1 from cdnjs)
+- _include/js/require.min.js (currently require.js 2.3.6 from cdnjs)
+
+Version handling:
+- Script uses regex patterns to match ANY version from cdnjs
+- Works with jQuery 3.x, 4.x, etc. and require.js 2.x, 3.x, etc.
+- This makes the script resilient to Quarto updating dependency versions
 """
 
 import argparse
@@ -34,15 +39,21 @@ SITE_LIBS_DIR = SITE_DIR / "site_libs"
 INCLUDE_JS_DIR = BASE_DIR / "_include" / "js"
 
 # CDN resources to self-host
+# Uses regex patterns to match ANY version (e.g., 3.5.1, 3.6.0, 4.0.0)
+# This makes the script resilient to Quarto updating dependency versions
 CDN_RESOURCES = {
     "jquery": {
-        "cdn_url": "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js",
+        # Matches: https://cdnjs.cloudflare.com/ajax/libs/jquery/X.Y.Z/jquery.min.js
+        # Where X.Y.Z is any semantic version (e.g., 3.5.1, 3.7.0, 4.0.0)
+        "cdn_url_pattern": r"https://cdnjs\.cloudflare\.com/ajax/libs/jquery/[\d.]+/jquery\.min\.js",
         "source_file": INCLUDE_JS_DIR / "jquery.min.js",
         "site_libs_dir": "jquery",
         "site_libs_file": "jquery.min.js",
     },
     "requirejs": {
-        "cdn_url": "https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js",
+        # Matches: https://cdnjs.cloudflare.com/ajax/libs/require.js/X.Y.Z/require.min.js
+        # Where X.Y.Z is any semantic version (e.g., 2.3.6, 2.4.0, 3.0.0)
+        "cdn_url_pattern": r"https://cdnjs\.cloudflare\.com/ajax/libs/require\.js/[\d.]+/require\.min\.js",
         "source_file": INCLUDE_JS_DIR / "require.min.js",
         "site_libs_dir": "requirejs",
         "site_libs_file": "require.min.js",
@@ -133,17 +144,17 @@ def replace_cdn_urls(html_content: str, html_file: Path) -> tuple[str, dict]:
 
     modified_content = html_content
 
-    # Replace jQuery CDN URL
+    # Replace jQuery CDN URL (matches ANY version)
     jquery_info = CDN_RESOURCES["jquery"]
-    jquery_cdn_url = jquery_info["cdn_url"]
+    jquery_cdn_pattern = jquery_info["cdn_url_pattern"]
     jquery_local_path = calculate_relative_path(html_file, jquery_info["site_libs_dir"])
     jquery_local_url = f"{jquery_local_path}{jquery_info['site_libs_file']}"
 
-    # Pattern to match jQuery script tag
+    # Pattern to match jQuery script tag with ANY version
     # Handles minified HTML: src=URL (no quotes) and src="URL" (with quotes)
-    # Also handles integrity and crossorigin attributes before src
-    jquery_pattern = (
-        rf'<script[^>]*src=["\']?{re.escape(jquery_cdn_url)}["\']?[^>]*></script>'
+    # Matches: <script ... src=https://cdnjs.cloudflare.com/ajax/libs/jquery/X.Y.Z/jquery.min.js ...>
+    jquery_script_pattern = (
+        rf'<script[^>]*src=["\']?({jquery_cdn_pattern})["\']?[^>]*></script>'
     )
 
     def replace_jquery(match):
@@ -156,22 +167,22 @@ def replace_cdn_urls(html_content: str, html_file: Path) -> tuple[str, dict]:
             return f"<script src={jquery_local_url}></script>"
 
     modified_content = re.sub(
-        jquery_pattern, replace_jquery, modified_content, flags=re.IGNORECASE
+        jquery_script_pattern, replace_jquery, modified_content, flags=re.IGNORECASE
     )
 
-    # Replace require.js CDN URL
+    # Replace require.js CDN URL (matches ANY version)
     requirejs_info = CDN_RESOURCES["requirejs"]
-    requirejs_cdn_url = requirejs_info["cdn_url"]
+    requirejs_cdn_pattern = requirejs_info["cdn_url_pattern"]
     requirejs_local_path = calculate_relative_path(
         html_file, requirejs_info["site_libs_dir"]
     )
     requirejs_local_url = f"{requirejs_local_path}{requirejs_info['site_libs_file']}"
 
-    # Pattern to match require.js script tag
+    # Pattern to match require.js script tag with ANY version
     # Handles minified HTML: src=URL (no quotes) and src="URL" (with quotes)
-    # Also handles integrity and crossorigin attributes before src
-    requirejs_pattern = (
-        rf'<script[^>]*src=["\']?{re.escape(requirejs_cdn_url)}["\']?[^>]*></script>'
+    # Matches: <script ... src=https://cdnjs.cloudflare.com/ajax/libs/require.js/X.Y.Z/require.min.js ...>
+    requirejs_script_pattern = (
+        rf'<script[^>]*src=["\']?({requirejs_cdn_pattern})["\']?[^>]*></script>'
     )
 
     def replace_requirejs(match):
@@ -184,7 +195,10 @@ def replace_cdn_urls(html_content: str, html_file: Path) -> tuple[str, dict]:
             return f"<script src={requirejs_local_url}></script>"
 
     modified_content = re.sub(
-        requirejs_pattern, replace_requirejs, modified_content, flags=re.IGNORECASE
+        requirejs_script_pattern,
+        replace_requirejs,
+        modified_content,
+        flags=re.IGNORECASE,
     )
 
     return modified_content, stats
@@ -320,13 +334,6 @@ def main():
     if total_replacements > 0:
         console.print(
             "\n[bold green]🚀 Expected Lighthouse performance improvement:[/bold green]"
-        )
-        console.print("[bold green]   Mobile: +8-15 points[/bold green]")
-        console.print("[bold green]   Desktop: +3-6 points[/bold green]")
-        console.print("[dim]   (Eliminates 2 TLS handshakes to external CDN)[/dim]")
-        console.print("\n[bold green]🦊 Firefox loading speed:[/bold green]")
-        console.print(
-            "[bold green]   Should fix 'TLS Handshake Finished' hang[/bold green]"
         )
 
     console.print("\n[bold green]✓ Done![/bold green]")
