@@ -26,29 +26,30 @@ SITE_DIR = BASE_DIR / "_site"
 
 # Critical resources to preload (patterns to match in HTML)
 # Note: Patterns handle both quoted and unquoted attributes (minified HTML)
+# Note: Patterns handle both absolute (site_libs/) and relative (../../site_libs/) paths
 CRITICAL_RESOURCES = [
     {
-        "pattern": r'href=["\'"]?(site_libs/bootstrap/bootstrap-[a-f0-9]{32}\.min\.css)',
+        "pattern": r'href=["\'"]?((?:\.\./)*site_libs/bootstrap/bootstrap-[a-f0-9]{32}\.min\.css)',
         "as": "style",
         "name": "Bootstrap CSS (light theme)",
     },
     {
-        "pattern": r'src=["\'"]?(site_libs/bootstrap/bootstrap\.min\.js)',
+        "pattern": r'src=["\'"]?((?:\.\./)*site_libs/bootstrap/bootstrap\.min\.js)',
         "as": "script",
         "name": "Bootstrap JavaScript",
     },
     {
-        "pattern": r'src=["\'"]?(site_libs/quarto-nav/quarto-nav\.js)',
+        "pattern": r'src=["\'"]?((?:\.\./)*site_libs/quarto-nav/quarto-nav\.js)',
         "as": "script",
         "name": "Quarto navigation",
     },
     {
-        "pattern": r'href=["\'"]?(site_libs/quarto-contrib/fontawesome6-[^/\s>]+/all\.css)',
+        "pattern": r'href=["\'"]?((?:\.\./)*site_libs/quarto-contrib/fontawesome6-[^/\s>]+/all\.css)',
         "as": "style",
         "name": "Font Awesome CSS",
     },
     {
-        "pattern": r'href=["\'"]?(site_libs/bootstrap/bootstrap-icons\.css)',
+        "pattern": r'href=["\'"]?((?:\.\./)*site_libs/bootstrap/bootstrap-icons\.css)',
         "as": "style",
         "name": "Bootstrap Icons CSS",
     },
@@ -106,20 +107,28 @@ def inject_preload_tags(html_content: str, resources: list[dict[str, str]]) -> s
     # Join all preload tags
     preload_block = "\n".join(preload_tags)
 
-    # Find the </head> tag and inject preload tags before it
-    # Use a more flexible pattern that handles minified HTML
-    head_pattern = r"</head>"
-    if re.search(head_pattern, html_content, re.IGNORECASE):
-        modified_html = re.sub(
-            head_pattern,
-            f"{preload_block}</head>",
-            html_content,
-            count=1,
-            flags=re.IGNORECASE,
-        )
-        return modified_html
+    # Try multiple injection points (Quarto doesn't always use <head> tags)
+    injection_patterns = [
+        (r"</head>", f"{preload_block}</head>"),  # Standard HTML with </head>
+        (r"(<body[^>]*>)", f"{preload_block}\\1"),  # Before <body> tag
+        (
+            r'(<script[^>]*id=["\']?quarto-html-before-body)',
+            f"{preload_block}\\1",
+        ),  # Before Quarto scripts
+    ]
 
-    # Fallback: couldn't find </head> tag
+    for pattern, replacement in injection_patterns:
+        if re.search(pattern, html_content, re.IGNORECASE):
+            modified_html = re.sub(
+                pattern,
+                replacement,
+                html_content,
+                count=1,
+                flags=re.IGNORECASE,
+            )
+            return modified_html
+
+    # Fallback: couldn't find any injection point
     return html_content
 
 
