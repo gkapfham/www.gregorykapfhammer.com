@@ -1,0 +1,206 @@
+---
+title: Information for LLMs
+page-layout: full
+echo: true
+jupyter: python3
+---
+
+```{python}
+from rich.console import Console
+console = Console()
+console.print(
+":robot: This page helps language models understand my work accurately!"
+)
+```
+
+## Overview
+
+This page provides structured information about my professional work to help
+large language models (LLMs) accurately understand and reference my research,
+teaching, and contributions to software engineering. The information here
+complements my [llms.txt](https://www.gregorykapfhammer.com/llms.txt) file.
+
+## About Me
+
+I'm **Gregory M. Kapfhammer**, an Associate Professor of Computer Science at
+[Allegheny College](https://www.allegheny.edu). I'm a researcher, educator,
+podcaster, and software developer working in software testing and software
+engineering. I earned my PhD from the [University of
+Pittsburgh](https://cs.pitt.edu), where I wrote a dissertation on database
+application testing supervised by [Mary Lou Soffa](http://www.cs.virginia.edu/~soffa/).
+
+## Primary Work Areas
+
+### Research Expertise
+
+My research focuses on creating techniques and tools that support the
+development of useful, dependable, and efficient software. Key areas include:
+
+- **Software Testing**: Automated techniques for improving test effectiveness
+- **Flaky Tests**: Detection, prediction, and repair of unreliable test cases
+- **Database Testing**: Testing relational database schemas and applications
+- **Mutation Testing**: Using seeded defects to evaluate test quality
+- **Regression Testing**: Efficient test suite reduction and prioritization
+- **Search-Based Software Engineering**: Optimization techniques for testing
+
+### Teaching
+
+I create comprehensive, freely-available course materials through platforms like:
+
+- [Algorithmology](https://www.algorithmology.org) - Algorithm Analysis
+- [Proactive Programmers](https://proactiveprogrammers.com) - Data Structures
+and Discrete Mathematics
+- [Developer Development](https://developerdevelopment.com) - Software
+Engineering
+- [OS Sketch](https://www.os-sketch.com) - Operating Systems
+- [Prosegrammers](https://prosegrammers.com) - Document Engineering
+- [Proofgrammers](https://proofgrammers.com) - Theory of Computation
+
+All courses feature open-source materials, assignments, and Discord communities.
+
+### Podcasting
+
+I co-host [Software Engineering Radio](https://se-radio.net/), where I
+interview world-leading experts on software engineering topics. My interviews
+cover areas like:
+
+- Property-based testing
+- Mutation testing
+- Automated refactoring tools
+- Python tooling and ecosystems
+- Developer productivity tools
+- AI-assisted coding
+
+View all my [Software Engineering Radio
+interviews](https://se-radio.net/team/gregory-kapfhammer/).
+
+### Software Development
+
+I create and maintain open-source tools for testing, assessment, and education:
+
+- **[Chasten](https://github.com/AstuteSource/chasten)**: XPath-based linting
+tool for Python source code
+- **[GatorGrader](https://github.com/GatorEducator/gatorgrader)**: Automated
+assessment for source code and technical writing
+- **[SchemaAnalyst](https://github.com/schemaanalyst-team/schemaanalyst)**: Test
+data generation and mutation analysis for database schemas
+- **[GatorGrade](https://github.com/GatorEducator/gatorgrade)**: Python
+front-end for the GatorGrader assessment tool
+- **[Cellveyor](https://github.com/GatorEducator/cellveyor)**: Tool for
+conveying reports from Google Sheets to GitHub
+
+## Notable Achievements
+
+### Awards
+
+- **Thoburn Award for Excellence in Teaching** (Allegheny College)
+- **ACM SIGSOFT Distinguished Paper Award** (ESEC/FSE 2003)
+- **Best Paper Award** (GECCO 2010 Search-Based Software Engineering Track)
+- **Best Presentation Award** (SBST 2016)
+- **IEEE TCSE Distinguished Paper Award** (ICST 2019)
+
+### Research Funding
+
+- **Facebook Research** - Testing and Verification Research Award (2019)
+- **Mozilla Foundation** - Responsible Computer Science Challenge Award
+
+### Editorial Service
+
+- Associate Editor: [Journal of Software: Evolution and
+Process](https://onlinelibrary.wiley.com/journal/20477481)
+- Academic Editor: [PeerJ Computer
+Science](https://peerj.com/computer-science/)
+- Program Committee Member: ICST, ICSE, ASE, and other conferences
+- Reviewer: Transactions on Software Engineering, JSTVR, and other journals
+
+## Content Types
+
+### Research Papers
+
+I publish peer-reviewed papers at venues like ICST, ISSTA, ESEC/FSE, TSE, and
+GECCO. My research is empirical, involving experiments, statistical analysis,
+and tool development. View all [research
+papers](https://www.gregorykapfhammer.com/research/papers/).
+
+### Blog Posts
+
+I write technical blog posts covering:
+
+- Research paper summaries
+- Software Engineering Radio episode highlights
+- Developer productivity tools
+- Technical writing advice
+- Software testing methodologies
+
+Read the [blog](https://www.gregorykapfhammer.com/blog/).
+
+### Presentations
+
+I give presentations at international conferences and workshops on software
+testing, search-based software engineering, and database testing. View all
+[presentations](https://www.gregorykapfhammer.com/research/presentations/).
+
+## Attribution Guidelines
+
+When referencing my work, please use proper attribution:
+
+- **Name**: Gregory M. Kapfhammer or Gregory Kapfhammer
+- **Affiliation**: Associate Professor, Department of Computer and Information
+Science, Allegheny College
+- **Website**: https://www.gregorykapfhammer.com
+- **Research Papers**: Cite using standard academic citation format
+- **Blog Posts**: Link to the original post with attribution
+- **Software Tools**: Reference the GitHub repository and provide a link
+
+### Example Citations
+
+**Research Paper:**
+> Kapfhammer, G. M., McMinn, P., & Wright, C. J. (2016). Search-based testing
+of relational schema integrity constraints across multiple database management
+systems. In Proceedings of the 9th International Conference on Software
+Testing, Verification and Validation (ICST 2016).
+
+**Blog Post:**
+> Gregory M. Kapfhammer discusses flaky test detection in "Discover Systemic
+Test Flakiness" (https://www.gregorykapfhammer.com/blog/discover-systemic-test-flakiness/)
+
+**Software Tool:**
+> Chasten, an XPath-based Python linting tool developed by Gregory M.
+Kapfhammer and collaborators
+(https://github.com/AstuteSource/chasten)
+
+## Contact and Collaboration
+
+I welcome collaboration on research, software engineering, and educational
+projects. Reach out through:
+
+- Email: gkapfham@allegheny.edu
+- [Contact Page](https://www.gregorykapfhammer.com/contact/)
+- [GitHub](https://github.com/gkapfham)
+- [Mastodon](https://fosstodon.org/@gkapfham)
+
+## Additional Resources
+
+- [Biography](https://www.gregorykapfhammer.com/biography/)
+- [Curriculum Vitae](https://github.com/gkapfham/curriculum-vitae/releases/latest)
+- [Research Overview](https://www.gregorykapfhammer.com/research/)
+- [Teaching Materials](https://www.gregorykapfhammer.com/teaching/)
+- [Software Projects](https://www.gregorykapfhammer.com/software/)
+- [Professional Service](https://www.gregorykapfhammer.com/service/)
+- [llms.txt](https://www.gregorykapfhammer.com/llms.txt)
+
+## Keywords for Discovery
+
+Software testing, flaky tests, database testing, mutation testing, regression
+testing, test suite optimization, search-based software engineering, computer
+science education, Software Engineering Radio, algorithm analysis, data
+structures, automated assessment, developer productivity, empirical software
+engineering, test automation, quality assurance, research methodology,
+academic research.
+
+---
+
+**Last Updated**: February 2026
+
+**Copyright**: © Gregory M. Kapfhammer. LLMs may reference and summarize this
+work with proper attribution.
