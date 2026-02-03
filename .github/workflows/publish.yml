@@ -85,10 +85,18 @@ jobs:
       # Defer JavaScript Loading
       # This runs AFTER render and adds defer attribute to script tags
       # Prevents render-blocking JavaScript and may improve
-      # the overall Lighthouse score (+10-15 Lighthouse points)
+      # the overall Lighthouse score (e.g., +10-15 Lighthouse points)
+      # Note that using --replace mode automatically cleans up all backup
       - name: Defer JavaScript Loading
         run: |
           uv run scripts/defer-javascript.py --replace
+      # Preload Critical Resources
+      # This runs AFTER render and adds preload tags for critical CSS/JS
+      # Dynamically discovers resource paths (handles hash-based cache busting)
+      # Expected Lighthouse improvement: +3-5 points
+      - name: Preload Critical Resources
+        run: |
+          uv run scripts/preload-critical-resources.py --replace
       # Deploy to Cloudflare Pages, which manages
       # both the domain's DNS records and hosts the
       # site through the use of Cloudflare Workers
