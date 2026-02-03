@@ -241,7 +241,7 @@ def generate_css(icons_dict):
   font-style: normal;
   font-weight: 900;
   font-display: swap;
-  src: url("../webfonts/fa-solid-900.woff2") format("woff2");
+  src: url("1e21o67/fa-solid-900.woff2") format("woff2"), url("1e21o67/fa-solid-900.ttf") format("truetype");
 }
 
 @font-face {
@@ -249,7 +249,7 @@ def generate_css(icons_dict):
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url("../webfonts/fa-brands-400.woff2") format("woff2");
+  src: url("1e21o67/fa-brands-400.woff2") format("woff2"), url("1e21o67/fa-brands-400.ttf") format("truetype");
 }
 """
     return css
