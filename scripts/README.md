@@ -15,6 +15,7 @@ bibliography parsing, file optimization, asset copying, and deployment.
   - [test-fontawesome-subset.py](#test-fontawesome-subsetpy)
   - [generate-bootstrap-icons-subset.py](#generate-bootstrap-icons-subsetpy)
   - [purge-bootstrap-css-simple.py](#purge-bootstrap-css-simplepy)
+  - [defer-javascript.py](#defer-javascriptpy)
   - [minify-files.py](#minify-filespy)
   - [copy-files.py](#copy-filespy)
   - [publish-site.py](#publish-sitepy)
@@ -38,12 +39,31 @@ ______________________________________________________________________
 
 ## Quick Start
 
-### Local Build (Recommended)
+### Fast Optimization Workflow (Recommended for Testing)
 
-Build the site locally with all optimizations (mimics GitHub Actions workflow):
+**If you already have `_site/` from a previous build**, run optimizations only:
 
 ```bash
-# Full build: render + all CSS optimizations
+# Skip slow quarto render, only run optimizations (FAST!)
+uv run python scripts/build-local.py --skip-render
+
+# Then test locally
+cd _site
+python3 -m http.server 8000
+# Open http://localhost:8000 in browser
+```
+
+**This is perfect for:**
+- Testing CSS/JS optimizations quickly
+- Iterating on optimization scripts
+- Verifying changes before committing
+
+### Full Build (When Content Changes)
+
+Build the site from scratch with all optimizations:
+
+```bash
+# Full build: render + all optimizations (SLOW - 5+ minutes)
 uv run python scripts/build-local.py
 
 # Then test locally
@@ -51,6 +71,11 @@ cd _site
 python3 -m http.server 8000
 # Open http://localhost:8000 in browser
 ```
+
+**Use this when:**
+- You've edited `.qmd` content files
+- You need a fresh build
+- You're testing after pulling from GitHub
 
 ### Development Preview
 
@@ -75,10 +100,11 @@ uv run python scripts/publish-site.py --stage render --render-file index.qmd
 # Step 3: Post-render (minify, copy files)
 uv run python scripts/publish-site.py --stage post-render
 
-# Step 4: Optimize CSS (must run AFTER render)
+# Step 4: Optimize CSS and JS (must run AFTER render)
 uv run python scripts/generate-fontawesome-subset.py --replace
 uv run python scripts/generate-bootstrap-icons-subset.py --replace
 uv run python scripts/purge-bootstrap-css-simple.py --replace
+uv run python scripts/defer-javascript.py --replace
 ```
 
 ______________________________________________________________________
@@ -95,26 +121,35 @@ workflow. Runs all render steps and CSS optimizations in the correct order.
 **Usage**:
 
 ```bash
-# Full build (render + all optimizations)
+# Full build (render + all optimizations) - SLOW, ~5 minutes
 uv run python scripts/build-local.py
 
-# Skip render, only run optimizations (if _site already exists)
+# Fast optimization-only mode (skip render) - FAST, ~30 seconds
 uv run python scripts/build-local.py --skip-render
 ```
 
 **Arguments**:
 
-- `--skip-render` - Skip the render step and only run CSS optimizations
+- `--skip-render` - Skip the slow quarto render step, only run CSS/JS optimizations
 
 **What it does**:
 
-1. **Render Stage**: Runs `publish-site.py` with stages: all, render, post-render
+**Without `--skip-render` (full build):**
+1. **Render Stage** (SLOW): Runs `publish-site.py` with stages: all, render, post-render
    - Pre-render: Parse bibliography, minify files, copy files
-   - Render: `quarto render` to build entire site
+   - Render: `quarto render` to build entire site (~5 minutes)
    - Post-render: Final cleanup steps
 2. **Optimize Font Awesome CSS**: Runs `generate-fontawesome-subset.py --replace`
 3. **Optimize Bootstrap Icons CSS**: Runs `generate-bootstrap-icons-subset.py --replace`
 4. **Optimize Bootstrap CSS**: Runs `purge-bootstrap-css-simple.py --replace`
+5. **Defer JavaScript**: Runs `defer-javascript.py --replace`
+
+**With `--skip-render` (fast mode):**
+1. ✅ Skip render (assumes `_site/` already exists)
+2. **Optimize Font Awesome CSS**: Runs `generate-fontawesome-subset.py --replace`
+3. **Optimize Bootstrap Icons CSS**: Runs `generate-bootstrap-icons-subset.py --replace`
+4. **Optimize Bootstrap CSS**: Runs `purge-bootstrap-css-simple.py --replace`
+5. **Defer JavaScript**: Runs `defer-javascript.py --replace`
 
 **Output**:
 
@@ -122,27 +157,36 @@ uv run python scripts/build-local.py --skip-render
 - Error messages if any step fails
 - Success message with next steps for local testing
 
-**When to use**:
+**When to use `--skip-render`**:
 
-- Before committing changes to verify everything builds correctly
-- To test CSS optimizations locally before pushing to GitHub
-- To ensure your local build matches production deployment
+- ✅ Testing optimization scripts quickly
+- ✅ Iterating on CSS/JS optimization changes
+- ✅ You already have a recent `_site/` build
+- ✅ You only changed optimization scripts, not content
 
-**Example workflow**:
+**When to use full build** (without `--skip-render`):
+
+- ✅ You edited `.qmd` content files
+- ✅ You need a fresh build from scratch
+- ✅ First-time setup or testing after pulling from GitHub
+
+**Example workflows**:
 
 ```bash
-# Make content changes
+# Workflow 1: Testing optimizations (FAST)
+uv run python scripts/build-local.py --skip-render
+cd _site && python3 -m http.server 8000
+# Open http://localhost:8000 and check Lighthouse score
+
+# Workflow 2: Content changes (SLOW)
 vim blog/my-new-post.qmd
-
-# Build with optimizations
-uv run python scripts/build-local.py
-
-# Test locally
+uv run python scripts/build-local.py  # No --skip-render
 cd _site && python3 -m http.server 8000
 
-# If everything looks good, commit and push
-git add . && git commit -m "add new blog post"
-git push
+# Workflow 3: Optimization script changes (FAST)
+vim scripts/defer-javascript.py
+uv run python scripts/build-local.py --skip-render
+cd _site && python3 -m http.server 8000
 ```
 
 ______________________________________________________________________
@@ -409,6 +453,75 @@ to be installed (for running PurgeCSS).
 
 ______________________________________________________________________
 
+### defer-javascript.py
+
+**Purpose**: Adds `defer` attribute to script tags in HTML files to prevent
+render-blocking JavaScript, significantly improving Lighthouse performance scores
+(+10-15 points expected).
+
+**Location**: `scripts/defer-javascript.py`
+
+**Usage**:
+
+```bash
+# Local testing (safe mode - won't modify original)
+uv run scripts/defer-javascript.py
+
+# CI/production (replaces original files)
+uv run scripts/defer-javascript.py --replace
+```
+
+**Arguments**:
+
+- `--replace` - Replace original HTML files with optimized versions (use in CI only)
+
+**What it does**:
+
+1. Scans all HTML files in `_site/` directory
+2. Finds all `<script>` tags with `src` attributes (external scripts)
+3. Adds `defer` attribute to eligible scripts
+4. Skips scripts that should NOT be deferred:
+   - Scripts with `type="application/json"` (configuration data)
+   - Scripts with `type="module"` (already deferred by browsers)
+   - Critical inline scripts (DOM-ready handlers, color scheme toggles)
+   - Scripts that already have `defer` or `async` attributes
+5. Creates backup files with `.backup-defer` extension when replacing
+
+**How `defer` works**:
+
+- **Without defer**: Browser downloads and executes JS immediately, blocking HTML parsing
+- **With defer**: Browser downloads JS in parallel with HTML parsing, executes after DOM is ready
+- **Result**: Page renders faster, improves First Contentful Paint (FCP) and Largest Contentful Paint (LCP)
+
+**Performance impact**:
+
+- Expected Lighthouse performance score improvement: **+10-15 points**
+- Improves Time to Interactive (TTI) and Total Blocking Time (TBT)
+- Scripts still execute in order and have access to full DOM
+
+**Scripts that get deferred**:
+
+- Bootstrap.min.js (79KB)
+- jQuery (from CDN)
+- quarto-nav.js, quarto-listing.js
+- All Quarto helper libraries (popper, tippy, anchor, etc.)
+
+**When it runs**:
+
+- Manually during local testing (after `quarto render`)
+- Automatically in GitHub Actions with `--replace` flag after all CSS optimizations
+
+**Why this must be a script**:
+
+Quarto doesn't provide built-in options to add `defer` attributes to its generated
+script tags. This script modifies the HTML output AFTER Quarto renders to add the
+optimization while preserving all functionality.
+
+**Note**: This script must run AFTER `quarto render` because it modifies the HTML
+files that Quarto generates.
+
+______________________________________________________________________
+
 ### minify-files.py
 
 **Purpose**: Minifies HTML, CSS, and JavaScript files in the rendered `_site`
@@ -581,7 +694,22 @@ Here's how the scripts work together in the complete build process:
    ├─ Post-render: minify-files.py and copy-files.py
    ├─ Optimize Font Awesome CSS (135KB → 2KB)
    ├─ Optimize Bootstrap Icons CSS (96KB → 1KB)
-   └─ Optimize Bootstrap CSS (997KB → 157KB)
+   ├─ Optimize Bootstrap CSS (997KB → 157KB)
+   └─ Defer JavaScript (prevent render-blocking)
+   ↓
+2. cd _site && python3 -m http.server 8000
+   └─ Test at http://localhost:8000
+```
+
+**Fast mode** (if `_site/` already exists):
+
+```
+1. uv run python scripts/build-local.py --skip-render
+   ├─ Skip slow render (use existing _site/)
+   ├─ Optimize Font Awesome CSS (135KB → 2KB)
+   ├─ Optimize Bootstrap Icons CSS (96KB → 1KB)
+   ├─ Optimize Bootstrap CSS (997KB → 157KB)
+   └─ Defer JavaScript (prevent render-blocking)
    ↓
 2. cd _site && python3 -m http.server 8000
    └─ Test at http://localhost:8000
@@ -605,7 +733,10 @@ Here's how the scripts work together in the complete build process:
 5. uv run scripts/purge-bootstrap-css-simple.py --replace
    └─ optimize Bootstrap CSS (must run after render)
    ↓
-6. uv run scripts/publish-site.py --stages post-render
+6. uv run scripts/defer-javascript.py --replace
+   └─ add defer attributes to script tags (must run after render)
+   ↓
+7. uv run scripts/publish-site.py --stages post-render
    ├─ minify-files.py compresses HTML/CSS/JS
    └─ copy-files.py moves PDFs to _site
 ```
@@ -630,15 +761,19 @@ Here's how the scripts work together in the complete build process:
 6. Optimize Bootstrap CSS
    └─ uv run scripts/purge-bootstrap-css-simple.py --replace
    ↓
-7. Deploy to Cloudflare Pages
+7. Defer JavaScript Loading
+   └─ uv run scripts/defer-javascript.py --replace
+   ↓
+8. Deploy to Cloudflare Pages
    └─ wrangler pages deploy
 ```
 
-**Total CSS Savings**: ~1,070 KB (87% reduction)
+**Total Optimizations**: ~1,070 KB CSS saved + render-blocking JS eliminated
 
-- Font Awesome: 133 KB saved
-- Bootstrap Icons: 95 KB saved
-- Bootstrap CSS: 839 KB saved
+- Font Awesome: 133 KB saved (98.5% reduction)
+- Bootstrap Icons: 95 KB saved (98.9% reduction)
+- Bootstrap CSS: 839 KB saved (84% reduction)
+- JavaScript: Defer attribute added (improves Lighthouse +10-15 points)
 
 ______________________________________________________________________
 
