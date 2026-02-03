@@ -119,7 +119,7 @@ Science](https://peerj.com/computer-science/)
 
 I publish peer-reviewed papers at venues like ICST, ISSTA, ESEC/FSE, TSE, and
 GECCO. My research is empirical, involving experiments, statistical analysis,
-and tool development. View all [research
+and tool development. View all my [research
 papers](https://www.gregorykapfhammer.com/research/papers/).
 
 ### Blog Posts
@@ -138,7 +138,7 @@ Read the [blog](https://www.gregorykapfhammer.com/blog/).
 
 I give presentations at international conferences and workshops on software
 testing, search-based software engineering, and database testing. View all
-[presentations](https://www.gregorykapfhammer.com/research/presentations/).
+my [presentations](https://www.gregorykapfhammer.com/research/presentations/).
 
 ## Attribution Guidelines
 
