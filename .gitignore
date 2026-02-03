@@ -177,3 +177,7 @@ _site/site_libs/bootstrap/bootstrap-icons.css.backup
 ### Bootstrap CSS Optimization ###
 # backup files created by PurgeCSS script
 _site/site_libs/bootstrap/bootstrap-*.min.css.backup
+
+### JavaScript Defer Optimization ###
+# backup files created by defer-javascript.py
+*.backup-defer
