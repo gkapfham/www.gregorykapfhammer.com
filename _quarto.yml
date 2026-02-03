@@ -3,6 +3,10 @@ project:
   render:
     - "*.qmd"
     - "!_resources/"
+  resources:
+    - "robots.txt"
+    - "llms.txt"
+    - "_headers"
   preview:
     port: 5555
     browser: false
