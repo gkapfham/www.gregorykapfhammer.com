@@ -165,6 +165,20 @@ def preload_critical_resources() -> bool:
     )
 
 
+def self_host_cdn_resources() -> bool:
+    """Self-host CDN resources (jQuery and require.js)."""
+    console.print(
+        "\n[bold yellow]════════════════════════════════════════[/bold yellow]"
+    )
+    console.print("[bold yellow]STEP 7: Self-Host CDN Resources[/bold yellow]")
+    console.print("[bold yellow]════════════════════════════════════════[/bold yellow]")
+
+    return run_command(
+        ["uv", "run", "python", "scripts/self-host-cdn-resources.py", "--replace"],
+        "Download and replace CDN resources with local copies",
+    )
+
+
 def main():
     """Build the site locally with all optimizations."""
     parser = argparse.ArgumentParser(
@@ -211,6 +225,10 @@ def main():
 
     # step 6: preload critical resources
     if not preload_critical_resources():
+        all_success = False
+
+    # step 7: self-host CDN resources
+    if not self_host_cdn_resources():
         all_success = False
 
     # final summary
