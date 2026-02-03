@@ -1,6 +1,11 @@
 <meta name="theme-color" content="#e95420" />
+
 <!-- DNS prefetch and preconnect for faster external resource loading -->
 <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
 <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<!-- NOTE: Preload tags are dynamically added by scripts/preload-critical-resources.py -->
+<!-- This is necessary because Quarto uses hash-based cache busting for CSS files -->
+<!-- (e.g., bootstrap-abc123def456.min.css) and these hashes change between builds -->
