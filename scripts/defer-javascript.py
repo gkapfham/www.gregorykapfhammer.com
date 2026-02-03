@@ -108,6 +108,7 @@ def process_html_files(replace: bool = False) -> dict[str, int]:
         "files_processed": 0,
         "scripts_deferred": 0,
         "files_modified": 0,
+        "backups_cleaned": 0,
     }
 
     if not SITE_DIR.exists():
@@ -179,6 +180,20 @@ def main():
     console.print("[yellow]🔍[/yellow] Scanning HTML files for script tags...\n")
     stats = process_html_files(replace=args.replace)
 
+    # Clean up backup files if in replace mode
+    if args.replace:
+        console.print("\n[yellow]🧹[/yellow] Cleaning up backup files...\n")
+        backup_count = 0
+        for backup_file in SITE_DIR.rglob("*.backup-defer"):
+            try:
+                backup_file.unlink()
+                backup_count += 1
+            except Exception as e:
+                console.print(f"[red]✗[/red] Error deleting {backup_file}: {e}")
+        stats["backups_cleaned"] = backup_count
+        if backup_count > 0:
+            console.print(f"  [green]✓[/green] Deleted {backup_count} backup file(s)")
+
     # Print summary
     console.print(f"\n[bold yellow]{'─' * 50}[/bold yellow]")
     console.print("[bold yellow]Summary[/bold yellow]")
@@ -187,10 +202,12 @@ def main():
     console.print(f"  Files processed: {stats['files_processed']}")
     console.print(f"  Files modified: {stats['files_modified']}")
     console.print(f"  Scripts deferred: {stats['scripts_deferred']}")
+    if args.replace and stats["backups_cleaned"] > 0:
+        console.print(f"  Backups cleaned: {stats['backups_cleaned']}")
 
     if args.replace:
         console.print("\n[green]✓[/green] HTML files updated with defer attributes")
-        console.print("[cyan]ℹ[/cyan] Backup files saved with .backup-defer extension")
+        console.print("[green]✓[/green] Backup files cleaned up")
     else:
         console.print("\n[yellow]ℹ[/yellow] Test mode - HTML files were NOT modified")
         console.print("[yellow]ℹ[/yellow] Use --replace flag to update files")
