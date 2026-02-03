@@ -97,6 +97,14 @@ jobs:
       - name: Preload Critical Resources
         run: |
           uv run scripts/preload-critical-resources.py --replace
+      # Self-Host CDN Resources
+      # This runs AFTER render and downloads jQuery/require.js from CDN
+      # Replaces CDN URLs with local paths to eliminate external TLS handshakes
+      # Expected Mobile Lighthouse improvement: +8-15 points
+      # Fixes Firefox "TLS Handshake Finished" hang
+      - name: Self-Host CDN Resources
+        run: |
+          uv run scripts/self-host-cdn-resources.py --replace
       # Deploy to Cloudflare Pages, which manages
       # both the domain's DNS records and hosts the
       # site through the use of Cloudflare Workers
