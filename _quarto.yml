@@ -6,7 +6,6 @@ project:
   resources:
     - "robots.txt"
     - "llms.txt"
-    - "_headers"
   preview:
     port: 5555
     browser: false
@@ -96,6 +95,7 @@ format:
     # that defines the theme-color meta tag
     include-in-header:
       - file: _include/html/header-include.html
+      - file: _include/html/structured-data.html
     # always load the instant-page.js script
     # that pre-fetches links person hovers over them
     include-after-body:
