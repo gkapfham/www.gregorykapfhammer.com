@@ -140,6 +140,7 @@ These are aspects of any blog post that you must avoid:
   fit for the professional website of a professor. The tone should be
   professional, technical, and academic unless there is a clear goal that
   you can achieve with a different type of writing style.
+- Do not create links to pages on the Web that do not exist.
 
 These are the high-level rules about modifying the files in this repository:
 
@@ -163,6 +164,8 @@ These are the high-level rules about modifying the files in this repository:
   should provide the exact extracts from the transcript that you used to create
   the answers from the guest that are in the blog post. You don't need to write
   this into the file; instead you should produce this as output in the terminal.
+- **Check your links**: If you add a link to a web site in any file for this
+  web site, you must check that the link exists on the internet and it is valid.
 
 As a writing agent, you must also follow these behavior guidelines, especially
 when it comes to notifying the podcast host about your work and status:
