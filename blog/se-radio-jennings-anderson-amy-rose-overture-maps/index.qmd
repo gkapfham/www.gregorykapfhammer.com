@@ -24,9 +24,9 @@ episode was fun to record --- I hope you enjoy it!
 
 ## Insights
 
-I'm thankful for this thought-provoking discussion with
-both Jennings Anderson and Amy Rose! Before you listen to
-the full episode, you can read some of its key insights:
+I'm thankful for this fun-loving and engaging discussion with both Jennings
+Anderson and Amy Rose! Before you listen to the full episode, you can preview
+some of its insights:
 
 **Why is normalizing geospatial data to a single schema so
 important?**
