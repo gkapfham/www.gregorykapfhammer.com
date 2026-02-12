@@ -1,0 +1,113 @@
+---
+author: Gregory M. Kapfhammer
+title: Insights from my Software Engineering Radio interview with Jennings Anderson and Amy Rose
+date: '2025-12-15'
+date-format: YYYY
+categories: [post, software development, software engineering radio]
+description: <em>How does Overture Maps create open geospatial data?</em>
+---
+
+## Introduction
+
+In a recent episode of the [Software Engineering
+Radio](https://www.se-radio.net/) podcast, I interviewed [Jennings
+Anderson](https://jenningsanderson.com/cv/), a Software Engineer at Meta
+Platforms, and [Amy Rose](https://www.linkedin.com/in/amynrose/), the Chief
+Technology Officer at the [Overture Maps
+Foundation](https://overturemaps.org/). Our conversation focused on the Overture
+Maps project, which creates reliable, easy-to-use, and interoperable open map
+data. During the interview, Amy and Jennings share insights into the foundations
+of geospatial information systems, the Global Entity Reference System (GERS),
+the challenges of normalizing diverse map data into a unified schema, and how
+developers can build applications using tools like DuckDB and GeoParquet. This
+episode was fun to record --- I hope you enjoy it!
+
+## Insights
+
+I'm thankful for this thought-provoking discussion with
+both Jennings Anderson and Amy Rose! Before you listen to
+the full episode, you can read some of its key insights:
+
+**Why is normalizing geospatial data to a single schema so
+important?**
+
+Amy explains the challenge that Overture Maps solves
+for developers:
+
+> "Imagine you're trying to build an application that uses
+> map data. You're pulling all this information from
+> different sources if each source has its own unique way of
+> describing things. So let's say some data refers to roads
+> as quote unquote streets and others as highways. Or if you
+> have in some datasets, the height is measured in meters
+> and others in feet just because of cultural differences.
+> It's a total nightmare to get them to all work together,
+> right?"
+
+**What is the Global Entity Reference System (GERS) and why
+does it matter?**
+
+Jennings describes the innovation behind stable identifiers in Overture Maps:
+
+> "The idea of GERS is to say, okay, well there might be
+> different representations of each of these buildings, but
+> each building is in fact its own building entity, the
+> building-ness of the building, so to say. So we will
+> define a single entity for a building, give that a unique
+> identifier."
+
+**How does DuckDB enable developers to query Overture Maps
+data efficiently?**
+
+Jennings explains the cloud-native workflow that Overture Maps makes possible:
+
+> "Our data is all released in GeoParquet format, which is
+> a columnar format that's optimized for the cloud native
+> environment here. And DuckDB is a fantastic open-source
+> query engine that allows us to investigate that data *in
+> situ* in the cloud. ... However, with DuckDB and with
+> really with Geo Parquet and what that enables us is the
+> ability to actually query the data in place."
+
+**How is the relationship between open-source software and
+open data different?**
+
+Amy highlights a distinction that is often overlooked by software engineers:
+
+> "Open-source software and open-source data you might want
+> to lump them together because it's all open source, but
+> they're very different things. ... How you build
+> open-source software is much clearer. There's a lot of
+> tools out there already to very cleanly execute on these
+> types of collaborations, particularly in big projects.
+> And code is pretty easy to think about how you would
+> release and continue to maintain and update. Data's a
+> very different animal, not the least of which is because
+> it can get really big."
+
+**Why is Overture Maps part of the Linux Foundation?**
+
+Amy explains the governance model that guides the project:
+
+> "As part of the Linux Foundation, Overture operates as a
+> nonprofit technology consortium. So the idea of operating
+> under that structure is that it provides a neutral kind
+> of vendor agnostic home for the project. It gives us a
+> much better way to remain open and truly collaborative."
+
+## Listen
+
+If you're interested in learning more about Overture Maps
+and open geospatial data, I highly recommend listening to
+my interview with Jennings Anderson and Amy Rose on
+[Software Engineering Radio](https://se-radio.net/)! You
+can find it on your favorite podcast player, [Apple
+Podcasts](https://podcasts.apple.com/us/podcast/software-engineering-radio-the-podcast-for/id120906714),
+[Spotify](https://open.spotify.com/show/6UO3XQclSuNnGxB39QdAnL),
+[YouTube](https://www.youtube.com/playlist?list=PLHJB2bhmgB7esz0BxMCt1jJwsoaqWtFff),
+or you can listen to it with this handy podcast player.
+
+{{< audio file="https://traffic.libsyn.com/secure/seradio/694-anderson-rose-overture-maps.mp3"
+  caption="Listen to Software Engineering Radio Episode with Jennings Anderson and Amy Rose">}}
+
+{{< include /_back-blog.qmd >}}
