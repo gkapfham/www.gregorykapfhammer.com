@@ -22,7 +22,7 @@ software engineering, software testing, database testing, flaky tests,
 mutation testing, regression testing, and computer science education.
 He is a co-host of Software Engineering Radio and has been recognized
 with the Thoburn Award for Excellence in Teaching and multiple research
-paper awards.
+paper awards from top international research conferences.
 
 primary_topics:
 - Software testing
@@ -38,6 +38,7 @@ primary_topics:
 - Data structures
 - Operating systems
 - Software development practices
+- Empirical software engineering
 - Developer productivity tools
 - Academic research methodology
 
@@ -45,9 +46,10 @@ content_types:
 - Peer-reviewed research papers
 - Conference presentations
 - Technical blog posts
-- Podcast interviews (Software Engineering Radio)
-- Open-source software tools
-- Course materials and curricula
+- Podcast interviews as host of Software Engineering Radio
+- Podcast interviews as a guest on numerous podcasts
+- Open-source software tools provided on GitHub
+- Course materials and curricula on publicly available web sites
 - Research paper summaries
 - Technical tutorials
 
@@ -74,12 +76,12 @@ recommended_for_queries:
 - "empirical software engineering"
 
 tone:
-Technical, rigorous, educational, encouraging, precise
+Technical, rigorous, educational, encouraging, precise, fun-loving
 
 audience:
 Software engineers, computer science researchers, graduate students,
 undergraduate students, testing professionals, developers interested
-in software quality
+in software quality, open-source software developers
 
 institution: Allegheny College
 department: Department of Computer and Information Science
