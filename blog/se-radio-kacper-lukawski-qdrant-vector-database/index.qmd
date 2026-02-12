@@ -1,0 +1,100 @@
+---
+author: Gregory M. Kapfhammer
+title: Insights from my Software Engineering Radio interview with Kacper Łukawski
+date: '2025-11-15'
+date-format: YYYY
+categories: [post, software development, software engineering radio]
+description: <em>How does Qdrant support vector similarity search?</em>
+---
+
+## Introduction
+
+In a recent episode of the [Software Engineering
+Radio](https://www.se-radio.net/) podcast, I interviewed
+[Kacper Łukawski](https://www.kacperlukawski.com/), a Senior
+Developer Advocate at [Qdrant](https://qdrant.tech/). Our
+conversation focused on Qdrant, an open-source vector database
+and similarity search engine implemented in Rust. During the
+interview, Kacper shares insights into vector embeddings and
+similarity search, the performance benefits of implementing a
+search engine in Rust, the principles behind benchmarking
+vector databases, and how developers can get started building
+AI-powered applications with Qdrant. I learned a lot from this interview
+and I hope you do as well!
+
+## Insights
+
+I'm thankful for this thought-provoking discussion with
+Kacper Łukawski! Before you listen to the full episode,
+please checkout some of its insights:
+
+**What is a vector database and how does similarity search
+work?**
+
+> "It's a service that can efficiently store and handle high
+> dimensional vectors for the proposals of similarity search
+> and similarity of these vectors is defined by the closeness
+> of the vectors in that space. So vector databases are built
+> to make that process efficient."
+
+**What are vector embeddings and why are they important for
+semantic search?**
+
+> "Vector embeddings are just numerical representations of
+> the input data and the main idea is that they keep the
+> semantic meaning of the input data that was used to
+> generate them. And if we have two different vectors which
+> are similar in some way, then we assume that the objects
+> that are used to generate them are also similar in their
+> nature."
+
+**Why did the Qdrant team choose Rust as the implementation
+language?**
+
+> "Definitely the biggest factor behind choosing Rust is its
+> safety. And we can achieve almost similar performance like
+> C or C++ sometimes even better. While keeping this language
+> safety and this strong type system that Rust provides is
+> very helpful in preventing us from making some mistakes in
+> a highly concurrent system. So reading or writing some
+> value from multiple threats concurrently because that's
+> ultimately what you can expect from a search engine."
+
+**How does Qdrant approach performance benchmarking?**
+
+> "We do comparative benchmarks which means we focus on
+> relative numbers rather than absolute numbers. ... For a
+> typical user who has no experience with vector search, it's
+> really hard to say whether let's say a hundred milliseconds
+> is a good latency for a query but everyone should easily
+> understand that a particular system is just twice as fast
+> as another one."
+
+**What is the future of vector databases in the AI
+landscape?**
+
+> "The main problem of AI or LLMs ... even the latest LLM
+> can suffer from knowledge cutoff because they were trained
+> on some specific data sets and definitely don't know that
+> most recent news and none of them could have been trained
+> on your own data. So definitely some sort of retrieval is
+> needed and vector databases will definitely serve that
+> functionality."
+
+## Listen
+
+If you're interested in learning more about Qdrant and
+vector similarity search, I highly recommend listening to my
+interview with Kacper Łukawski on [Software Engineering
+Radio](https://se-radio.net/)! You can find it on your
+favorite podcast player, [Apple
+Podcasts](https://podcasts.apple.com/us/podcast/software-engineering-radio-the-podcast-for/id120906714),
+[Spotify](https://open.spotify.com/show/6UO3XQclSuNnGxB39QdAnL),
+[YouTube](https://www.youtube.com/playlist?list=PLHJB2bhmgB7esz0BxMCt1jJwsoaqWtFff),
+or you can listen to it with this handy podcast player.
+
+{{< audio
+file="https://traffic.libsyn.com/secure/seradio/691-kacper-lukawski-qdrant-vector-database.mp3"
+caption="Listen to Software Engineering Radio Episode with Kacper Łukawski" >}}
+
+{{< include /_back-blog.qmd >}}
