@@ -60,15 +60,19 @@ language?**
 > value from multiple threats concurrently because that's
 > ultimately what you can expect from a search engine."
 
-**How does Qdrant approach performance benchmarking?**
+**What metrics does Qdrant use when benchmarking
+performance?**
 
-> "We do comparative benchmarks which means we focus on
-> relative numbers rather than absolute numbers. ... For a
-> typical user who has no experience with vector search, it's
-> really hard to say whether let's say a hundred milliseconds
-> is a good latency for a query but everyone should easily
-> understand that a particular system is just twice as fast
-> as another one."
+> "Depending on a specific use case you have or maybe some
+> budget constraints, you might prefer to optimize for a
+> particular metric from those four. But we measure all of
+> them and report them in our benchmarks just so you can
+> have understanding of what you can expect in a very
+> specific setup. For example, low latency might be
+> important if your users expect immediate response, and we
+> measure an average latency P95 and P99 so we can see like
+> what the majority of users can expect from the system and
+> how fast it is going to be."
 
 **What is the future of vector databases in the AI
 landscape?**
