@@ -181,3 +181,7 @@ _site/site_libs/bootstrap/bootstrap-*.min.css.backup
 ### JavaScript Defer Optimization ###
 # backup files created by defer-javascript.py
 *.backup-defer
+
+### Generated Notebooks ###
+# generated files make by Python script or quarto
+**/*.quarto_ipynb
