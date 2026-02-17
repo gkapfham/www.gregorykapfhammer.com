@@ -24,9 +24,9 @@ and I hope you do as well!
 
 ## Insights
 
-I'm thankful for this thought-provoking discussion with
-Kacper Łukawski! Before you listen to the full episode,
-please checkout some of its insights:
+I'm thankful for this action-packed and informative discussion with Kacper
+Łukawski! Before you listen to the full episode, please checkout some of its
+insights:
 
 **What is a vector database and how does similarity search
 work?**
