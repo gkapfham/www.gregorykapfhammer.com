@@ -48,6 +48,9 @@ href="https://github.com/kinneerc/ExpOse/">expose</a>: Doubling experiments to
 infer actual-worst-case time complexity</li>
 
 <li class="software"><a target="_blank" rel="noopener"
+href="https://github.com/test-flare/pytest-flakefighters">pytest-flakefighters</a>: Pytest plugin for flaky test failure detection and classification</li>
+
+<li class="software"><a target="_blank" rel="noopener"
 href="https://github.com/kanonizo/kanonizo">kanonizo</a>: Effective automated
 regression test suite prioritization for JUnit</li>
 
@@ -633,11 +636,11 @@ color scheme for Vim and Neovim</li>
 
 #### Software Connection
 
-I aim to have a well-documented software tools that I run on the laptop
-that I use for all my professional activities. I hope that some of these
-configurations can help you to setup your own workstation for teaching,
-research, and software engineering. Checkout
-my configuration of [NixOS](https://nixos.org/)!
+I aim to have a well-documented software tools that I run on the laptop that I
+use for all my professional activities. I hope that some of these configurations
+can help you to setup your own workstation for teaching, research, and software
+engineering. If you are interested in operating systems, check out my
+configuration of [NixOS](https://nixos.org/)!
 
 :::
 
