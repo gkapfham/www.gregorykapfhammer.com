@@ -55,7 +55,7 @@ fixed version of the page!
 
 ## Empirical Results
 
-Our evaluation revealed several practical insights about
+This paper revealed several insights about
 automated responsive layout repair:
 
 - **The wider bordering layout is more reliable**: LayoutDR
@@ -69,13 +69,14 @@ automated responsive layout repair:
   seconds to generate a repair, even for the most complex web
   page in the study, which had over 1,200 HTML elements. The
   repair time correlated with page complexity, but remained
-  practical for real-world use.
+  practical for real-world use, suggesting that it can be applied
+  in a variety of development contexts.
 
-- **Participants overwhelmingly preferred repairs**: For every
-  single RLF in the human study, votes for the original broken
-  page were never greater than votes for either of the two
-  repairs. This held true even when the repair contained minor
-  secondary layout issues.
+- **Participants overwhelmingly preferred repairs**: For every single RLF in the
+human study, votes for the original broken page were never greater than votes
+for either of the two repairs. Since this held true even when the repair
+contained minor secondary layout issues, there is evidence that people accept
+the automated repairs.
 
 ## Future Work
 
