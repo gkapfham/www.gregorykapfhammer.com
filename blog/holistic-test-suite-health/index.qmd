@@ -55,7 +55,7 @@ synthesizes insights from across the software testing literature
 to make the case that indicators like pseudo-testedness,
 brittleness, and realism deserve the same level of research
 attention that flakiness has received. The accompanying
-[resource page](https://philmcminn.com/test-suite-health)
+[resource page](https://github.com/test-suite-health)
 catalogs existing detection and improvement tools for each
 indicator, showing where tooling already exists and where gaps
 remain.
