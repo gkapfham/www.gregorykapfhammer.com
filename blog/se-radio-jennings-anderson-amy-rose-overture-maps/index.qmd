@@ -108,4 +108,4 @@ or you can listen to it with this handy podcast player.
 {{< audio file="https://traffic.libsyn.com/secure/seradio/694-anderson-rose-overture-maps.mp3"
   caption="Listen to Software Engineering Radio Episode with Jennings Anderson and Amy Rose">}}
 
-  {{< include /_back-blog.qmd>}}
+{{< include /_back-blog.qmd >}}
