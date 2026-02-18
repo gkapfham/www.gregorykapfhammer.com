@@ -25,7 +25,7 @@ episode was fun to record --- I hope you enjoy it!
 ## Insights
 
 I'm thankful for this fun-loving and engaging discussion with both Jennings
-Anderson and Amy Rose! Before you listen to the full episode, you can preview
+Anderson and Amy Rose. Before you listen to the full episode, you can preview
 some of its insights:
 
 **Why is normalizing geospatial data to a single schema so
@@ -61,13 +61,11 @@ data efficiently?**
 
 Jennings explains the cloud-native workflow that Overture Maps makes possible:
 
-> "Our data is all released in GeoParquet format, which is
-> a columnar format that's optimized for the cloud native
-> environment here. And DuckDB is a fantastic open-source
-> query engine that allows us to investigate that data *in
-> situ* in the cloud. ... However, with DuckDB and with
-> really with Geo Parquet and what that enables us is the
-> ability to actually query the data in place."
+> "Our data is all released in GeoParquet format, which is a columnar format
+> that's optimized for the cloud native environment here. And DuckDB is a
+> fantastic open-source query engine that allows us to investigate that data *in
+> situ* in the cloud. ... However, with DuckDB and with Geo Parquet, what that
+> enables us is the ability to actually query the data in place."
 
 **How is the relationship between open-source software and
 open data different?**
@@ -91,8 +89,8 @@ Amy explains the governance model that guides the project:
 
 > "As part of the Linux Foundation, Overture operates as a
 > nonprofit technology consortium. So the idea of operating
-> under that structure is that it provides a neutral kind
-> of vendor agnostic home for the project. It gives us a
+> under that structure is that it provides a neutral, kind
+> of vendor agnostic, home for the project. It gives us a
 > much better way to remain open and truly collaborative."
 
 ## Listen
@@ -110,4 +108,4 @@ or you can listen to it with this handy podcast player.
 {{< audio file="https://traffic.libsyn.com/secure/seradio/694-anderson-rose-overture-maps.mp3"
   caption="Listen to Software Engineering Radio Episode with Jennings Anderson and Amy Rose">}}
 
-{{< include /_back-blog.qmd >}}
+  {{< include /_back-blog.qmd>}}
