@@ -80,7 +80,7 @@ the automated repairs.
 
 ## Future Work
 
-We plan to extend LayoutDR in several directions. We intend
+We plan to extend LayoutDR in several directions. First, we intend
 to improve its detection capability by incorporating visual
 verification techniques that can better distinguish genuine
 layout failures from false positives. We also aim to develop
