@@ -1,7 +1,7 @@
 ---
 author: Gregory M. Kapfhammer
 title: >-
-  What do we know about flaky tests? A survey
+  What do researchers know about flaky tests? A survey
   of 76 papers has the answer to this and other questions!
 date: '2022-01-01'
 date-format: YYYY
@@ -13,20 +13,17 @@ description: >-
 
 ## Introduction
 
-If you have ever watched a test suite turn green one minute
-and red the next --- without touching a single line of code! ---
-then you already know the "pain" of flaky tests. But how deep
-does the problem really go? What causes flakiness, what does it
-cost, and what can we actually do about it? My colleagues and I
-set out to answer these questions by systematically surveying the
-research literature on flaky tests. The result is [@Parry2022]
-[{{< iconify fa6-solid
-book-open>}}](/research/papers/parry2022/index.qmd), "A Survey
-of Flaky Tests," published in the ACM Transactions on Software
-Engineering and Methodology. This paper examines 76
-peer-reviewed studies and organizes their findings around four
-research questions covering causes, costs, detection, and repair.
-This paper is a great resource for you if you need a self-contained
+If you have ever watched a test suite turn green one minute and red the next ---
+without touching a single line of code! --- then you already know the "pain" of
+flaky tests. But how deep does the problem really go? What causes flakiness,
+what does it cost, and what can we actually do about it? My colleagues and I set
+out to answer these questions by systematically surveying the research
+literature on flaky tests. The result is [@Parry2022] [{{< iconify fa6-solid
+book-open>}}](/research/papers/parry2022/index.qmd), "A Survey of Flaky Tests,"
+published in the ACM Transactions on Software Engineering and Methodology. This
+paper examines 76 peer-reviewed studies and organizes their
+findings around four research questions covering causes, costs, detection, and
+repair. This paper is a great resource for you if you need a self-contained
 "starting point" to learn more about flaky test research!
 
 ## Key Contributions
@@ -57,7 +54,7 @@ rerunning-based approaches to machine learning classifiers, and
 examine techniques for mitigating or repairing them, including
 the automatic repair of order-dependent tests.
 
-## Empirical Results
+## Key Insights
 
 Our analysis shows that research interest in flaky tests has
 grown rapidly, with 63% of all examined papers published between
