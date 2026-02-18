@@ -61,18 +61,16 @@ workflows.
 
 ## Empirical Results
 
-Our evaluation showed that VERVE performs well across all five
-RLF types, though with varying levels of agreement with human
-classifications. For the original 25 web pages used in the
-conference version of the paper, VERVE achieved 86.3% agreement
-for collision, protrusion, and viewport protrusion failures.
-For wrapping failures, the agreement was 78.6%, and for
-small-range failures it reached 98.5%. When we tested VERVE on
-20 entirely new web pages, it achieved 91.8% agreement for the
-first three failure types and 73.6% for small-range failures.
-The results also demonstrated that VERVE's automated approach
-can be less subjective than manual classification, since
-reviewers sometimes disagree on borderline cases.
+Our evaluation showed that VERVE performs well across all five RLF types, though
+with varying levels of agreement with human classifications. For the original 25
+web pages used in the conference version of the paper, VERVE achieved 86.3%
+agreement for collision, protrusion, and viewport protrusion failures. For
+wrapping failures, the agreement was 78.6%, and for small-range failures it
+reached 98.5%. When we tested VERVE on 20 entirely new web pages, it achieved
+91.8% agreement for the first three failure types and 73.6% for small-range
+failures. Since reviewers sometimes disagree on borderline cases, the results
+also demonstrated that VERVE's automated approach can be less subjective than
+manual classification, thereby demonstrating the tool's usefulness in practice.
 
 ## Future Work
 
@@ -81,7 +79,9 @@ failures and to integrate it more tightly with other responsive
 web testing tools. Future work will also explore how VERVE
 could be combined with our LayoutDR repair tool to create an
 end-to-end pipeline that detects, classifies, and fixes
-responsive layout failures automatically.
+responsive layout failures automatically. We are also investigating
+ways to implement VERVE and affiliated tools like ReDeCheck into 
+extensions for popular browsers like Chrome and Firefox.
 
 ::: {.callout-note appearance="simple"}
 
@@ -95,7 +95,7 @@ is available on
 [GitHub](https://github.com/verve-tool/verve). If you have
 questions or experiences with responsive layout testing, please
 [contact](/contact/) me. To stay updated on the latest
-developments in web testing research, consider
+developments in web testing research, please consider
 [subscribing](/support/) to my mailing list.
 
 :::
