@@ -46,11 +46,11 @@ fixed version of the page!
   demonstrating broad applicability across page sizes and
   complexities.
 
-- **Human Study**: We conducted a study on Amazon Mechanical
+- **Human Study**: We ran a study on Amazon Mechanical
   Turk with 101 participants who compared the original pages
   containing RLFs to the automatically repaired versions. Across
   738 votes, 92% favored a LayoutDR repair over the original
-  broken layout. This provides strong evidence that the automated
+  broken layout. This results suggests that the automated
   fixes are acceptable to real users.
 
 ## Empirical Results
