@@ -1,0 +1,92 @@
+---
+author: Gregory M. Kapfhammer
+title: >-
+Flaky tests are just the tip of the iceberg: Why
+your test suite needs a full health check
+date: '2025-01-01'
+date-format: YYYY
+categories: [post, research paper, software testing]
+description: >-
+<em>Nine indicators reveal whether your test suite
+  is truly healthy!</em>
+---
+
+## Introduction
+
+When software developers talk about problematic test suites,
+the conversation often begins and ends with flaky tests. And
+while flakiness is certainly a serious concern, is it really the
+only symptom of an unhealthy test suite? My colleagues and I
+argue that it is not. In [@McMinn2025] [{{< iconify fa6-solid book-open>}}](/research/papers/mcminn2025/index.qmd),
+  published
+  at the 2nd International Flaky Tests Workshop, we present a
+  manifesto that identifies nine distinct indicators of test suite
+  health and argues that researchers and practitioners should
+  take a holistic view rather than fixating on any single metric.
+
+## Key Contributions
+
+- **Nine Health Indicators**: We identify a checklist of
+  indicators that signal an unhealthy test suite, starting with
+
+  flakiness but extending to low code coverage,
+  pseudo-testedness, low mutation scores, long-running test
+  suites, low test diversity, high brittleness, low realism, and
+  high variability of indicator metrics.
+
+- **Trade-offs Between Indicators**: We argue that some
+  indicators are complementary while others are in tension. For
+
+  instance, a test suite with fewer assertions may be less flaky
+  but also more pseudo-tested, meaning it executes code without
+  actually checking it. Pursuing a high mutation score might
+  increase brittleness if tests become tightly coupled to
+  implementation details rather than intended behavior.
+
+- **A Research Agenda**: We outline seven challenges for the
+  research community, ranging from identifying further indicators
+
+  and quantifying trade-offs to building tooling that can give
+  developers actionable recommendations for improving the overall
+  health of their test suites.
+
+## Empirical Results
+
+  Since this is a short position paper and manifesto, the
+  contribution is conceptual rather than experimental. The paper
+  synthesizes insights from across the software testing literature
+  to make the case that indicators like pseudo-testedness,
+  brittleness, and realism deserve the same level of research
+  attention that flakiness has received. The accompanying
+  [resource page](https://philmcminn.com/test-suite-health)
+  catalogs existing detection and improvement tools for each
+  indicator, showing where tooling already exists and where gaps
+  remain.
+
+## Future Work
+
+  The paper outlines several open challenges, including how to
+  measure less well-understood indicators like test realism and
+  brittleness, how to combine multiple indicators into a
+  composite picture of test suite health, and how to study the
+  evolution of test suite health over the lifecycle of a project.
+  Ultimately, the goal is to move toward automated tools that not
+  only diagnose problems but also recommend concrete actions for
+  developers to improve their test suites.
+
+  ::: {.callout-note appearance="simple"}
+
+## Further Details
+
+  If you are interested in thinking about test quality beyond
+  flakiness, I encourage you to read [@McMinn2025] [{{< iconify fa6-solid book-open>
+    }}](/research/papers/mcminn2025/index.qmd). If you
+    have thoughts on what makes a test suite truly healthy, please
+    [contact](/contact/) me. To stay updated on the latest
+    developments in software testing research, consider
+    [subscribing](/support/) to my mailing list.
+
+```
+:::    :::
+
+    {{< include /_back-blog.qmd>}}
