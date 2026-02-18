@@ -45,8 +45,8 @@ listing:
       venue: "Venue"
       description: "Role"
     field-links: []
-    max-items: 20
-    page-size: 20
+    max-items: 25
+    page-size: 25
 ---
 
 ```{python}
