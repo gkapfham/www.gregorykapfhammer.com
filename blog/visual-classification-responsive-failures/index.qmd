@@ -1,0 +1,103 @@
+---
+author: Gregory M. Kapfhammer
+title: >-
+  Is that responsive layout failure real or just a
+  false alarm? We built VERVE to tell you automatically!
+date: '2021-01-01'
+date-format: YYYY
+categories: [post, research paper, web testing]
+description: >-
+  <em>Automated visual classification cuts through
+  the noise of DOM-based failure reports!</em>
+---
+
+## Introduction
+
+Responsive web design is essential for modern web pages that
+must look great on everything from a phone to a desktop
+monitor. But testing responsive layouts is tricky. Tools like
+ReDeCheck can automatically detect potential responsive layout
+failures (RLFs) by analyzing the document object model (DOM),
+but they often flag issues that are not actually visible to
+humans --- such as two transparent elements whose bounding
+boxes technically overlap but whose content does not interfere.
+This means developers must manually sift through every report
+to decide what is a real problem and what is just noise.
+
+My colleagues and I built a tool called VERVE --- short for **V**isual
+classifi**E**r for **R**esponsi**V**e t**E**sting --- that automates this
+tedious classification process. In [@Althomali2021] [{{< iconify fa6-solid
+book-open>}}](/research/papers/althomali2021/index.qmd), published in Journal of
+Software Testing, Verification and Reliability, we show that VERVE can
+automatically classify all five types of RLFs reported by ReDeCheck as true
+positives, false positives, or non-observable issues. Across 469 potential
+failures from 45 web pages, VERVE completed each classification in about 4
+seconds.
+
+## Key Contributions
+
+- **VERVE Tool**: We introduce VERVE, which extends our
+earlier VISER tool to classify all five types of responsive
+layout failures reported by ReDeCheck. VERVE uses two
+complementary techniques: manipulating the opacity of HTML
+elements and histogram-based image comparison.
+
+- **Comprehensive Empirical Evaluation**: We evaluate VERVE
+on 45 web pages containing 469 potential RLFs. For element
+collision, element protrusion, and viewport protrusion
+failures, VERVE's classification agreed with human
+classifications up to 91.8% of the time on new subjects not
+used during the tool's development.
+
+- **Efficiency**: VERVE took on average about 4 seconds to
+classify any individual RLF, making it far faster than the
+manual process of opening a browser, resizing the viewport,
+scrolling to the failure location, and visually inspecting it.
+
+- **Publicly Available Tool**: VERVE is available on
+[GitHub](https://github.com/verve-tool/verve), enabling other
+researchers and web developers to use it in their own testing
+workflows.
+
+## Empirical Results
+
+Our evaluation showed that VERVE performs well across all five
+RLF types, though with varying levels of agreement with human
+classifications. For the original 25 web pages used in the
+conference version of the paper, VERVE achieved 86.3% agreement
+for collision, protrusion, and viewport protrusion failures.
+For wrapping failures, the agreement was 78.6%, and for
+small-range failures it reached 98.5%. When we tested VERVE on
+20 entirely new web pages, it achieved 91.8% agreement for the
+first three failure types and 73.6% for small-range failures.
+The results also demonstrated that VERVE's automated approach
+can be less subjective than manual classification, since
+reviewers sometimes disagree on borderline cases.
+
+## Future Work
+
+We plan to enhance VERVE's classification accuracy for wrapping
+failures and to integrate it more tightly with other responsive
+web testing tools. Future work will also explore how VERVE
+could be combined with our LayoutDR repair tool to create an
+end-to-end pipeline that detects, classifies, and fixes
+responsive layout failures automatically.
+
+::: {.callout-note appearance="simple"}
+
+## Further Details
+
+If you develop or maintain responsive web pages, I encourage
+you to read [@Althomali2021] [{{< iconify fa6-solid
+book-open>}}](/research/papers/althomali2021/index.qmd) to
+learn how VERVE can streamline your testing process. The tool
+is available on
+[GitHub](https://github.com/verve-tool/verve). If you have
+questions or experiences with responsive layout testing, please
+[contact](/contact/) me. To stay updated on the latest
+developments in web testing research, consider
+[subscribing](/support/) to my mailing list.
+
+:::
+
+{{< include /_back-blog.qmd >}}
