@@ -1,0 +1,106 @@
+---
+author: Gregory M. Kapfhammer
+title: >-
+  Does your responsive web page look broken on some
+  screen sizes? LayoutDR can automatically fix it!
+date: '2022-06-01'
+date-format: YYYY
+categories: [post, research paper, web testing]
+description: >-
+  <em>Automated hotfixes for responsive layout
+  failures that 92% of people preferred!</em>
+---
+
+## Introduction
+
+Have you ever resized your browser window and watched a perfectly designed web
+page fall apart? Maybe a logo gets clipped at the edge of the viewport, or two
+page elements collide and overlap each other. These are called *responsive
+layout failures* (RLFs), and they are surprisingly common on real-world
+websites. Fixing them is no simple task either, since it can involve adjusting
+dozens of HTML elements and CSS properties across a range of screen sizes. My
+colleagues and I tackled this problem by building a tool called LayoutDR ---
+short for "Layout Doctor" --- that can automatically detect and repair these
+layout failures. In [@Althomali2022] [{{< iconify fa6-solid
+book-open>}}](/research/papers/althomali2022/index.qmd), published at the
+International Conference on Software Testing, Verification and Validation
+(ICST), we present this technique and evaluate it on 19 real-world web pages
+containing 55 RLFs. LayoutDR successfully found a fix for every single one, and
+when we asked humans to judge the repairs, 92% of participants preferred the
+fixed version of the page!
+
+## Key Contributions
+
+- **LayoutDR Technique**: We introduce an approach that
+  harnesses the web page's own responsive design to generate
+  repairs. When LayoutDR detects an RLF at a certain screen
+  width, it looks at the page's layout just outside the failure
+  range --- the "bordering layouts" that are free of the problem
+  --- and dynamically scales them to cover the broken viewport
+  widths, effectively creating a CSS hotfix.
+
+- **Comprehensive Evaluation**: We applied LayoutDR to 19
+  web pages from diverse domains, ranging from online language
+  learning platforms to browser automation tool sites. The tool
+  generated at least one repair for all 55 detected RLFs,
+  demonstrating broad applicability across page sizes and
+  complexities.
+
+- **Human Study**: We conducted a study on Amazon Mechanical
+  Turk with 101 participants who compared the original pages
+  containing RLFs to the automatically repaired versions. Across
+  738 votes, 92% favored a LayoutDR repair over the original
+  broken layout. This provides strong evidence that the automated
+  fixes are acceptable to real users.
+
+## Empirical Results
+
+Our evaluation revealed several practical insights about
+automated responsive layout repair:
+
+- **The wider bordering layout is more reliable**: LayoutDR
+  could always use the layout at the wider side of a failure
+  range to generate a repair, while the narrower side was only
+  applicable 36% of the time. Participants in the human study
+  also generally preferred repairs sourced from the wider
+  bordering layout.
+
+- **Repairs are fast**: LayoutDR never took longer than 40
+  seconds to generate a repair, even for the most complex web
+  page in the study, which had over 1,200 HTML elements. The
+  repair time correlated with page complexity, but remained
+  practical for real-world use.
+
+- **Participants overwhelmingly preferred repairs**: For every
+  single RLF in the human study, votes for the original broken
+  page were never greater than votes for either of the two
+  repairs. This held true even when the repair contained minor
+  secondary layout issues.
+
+## Future Work
+
+We plan to extend LayoutDR in several directions. We intend
+to improve its detection capability by incorporating visual
+verification techniques that can better distinguish genuine
+layout failures from false positives. We also aim to develop
+methods for repairing overlapping RLFs, where the bordering
+layouts themselves contain other failures. Ultimately, the goal
+is to create a comprehensive automated solution for
+maintaining the visual quality of responsive web pages across
+the full range of screen sizes.
+
+::: {.callout-note appearance="simple"}
+
+## Further Details
+
+If you build or maintain responsive web pages, I encourage you to read
+[@Althomali2022] [{{< iconify fa6-solid book-open>}}](/research/papers/althomali2022/index.qmd) to learn more about how
+LayoutDR works. The tool is available on
+[GitHub](https://github.com/LayoutDR/LayoutDR-tool). If you have questions or
+experiences with responsive layout failures, please [contact](/contact/) me.
+To stay updated on the latest developments in web testing research, you should consider
+[subscribing](/support/) to my mailing list.
+
+:::
+
+{{< include /_back-blog.qmd >}}
