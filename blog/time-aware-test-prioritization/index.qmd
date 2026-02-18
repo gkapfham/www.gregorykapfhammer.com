@@ -32,7 +32,7 @@ finishing within a specified time budget.
 the problem of reordering a test suite to maximize fault
 detection within a given time limit. This formulation reduces
 to the NP-complete 0/1 knapsack problem, making it a natural
-fit for heuristic search techniques.
+fit for heuristic search techniques like the one presented in this paper.
 
 - **Genetic Algorithm Approach**: We design a genetic algorithm
 that considers both the coverage potential and the execution
@@ -65,14 +65,15 @@ is particularly tight.
 
 ## Future Work
 
-The paper discusses several enhancements to the baseline
-approach. These include using per-test coverage information to
-improve the fitness function, extending the technique to
-additional time-constrained testing scenarios, and reducing the
-overhead of the prioritization process itself. The central
-insight --- that testing time should be treated as a
-first-class concern in test suite prioritization --- continues
-to influence research in regression testing.
+The paper discusses several enhancements to the baseline approach. These include
+using per-test coverage information to improve the fitness function, extending
+the technique to additional time-constrained testing scenarios, and reducing the
+overhead of the prioritization process itself. The central insight --- that
+testing time should be treated as a first-class concern in test suite
+prioritization --- will likely continue to influence research in regression
+testing. With that said, there is a clear need for software testing tools to
+perform regression test suite prioritization with methods like the one presented
+in this paper.
 
 ::: {.callout-note appearance="simple"}
 
