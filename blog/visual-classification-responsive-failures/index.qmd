@@ -31,8 +31,7 @@ book-open>}}](/research/papers/althomali2021/index.qmd), published in Journal of
 Software Testing, Verification and Reliability, we show that VERVE can
 automatically classify all five types of RLFs reported by ReDeCheck as true
 positives, false positives, or non-observable issues. Across 469 potential
-failures from 45 web pages, VERVE completed each classification in about 4
-seconds.
+failures from 45 web pages, VERVE made each classification in about 4 seconds.
 
 ## Key Contributions
 
