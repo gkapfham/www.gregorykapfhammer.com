@@ -1,0 +1,92 @@
+---
+author: Gregory M. Kapfhammer
+title: >-
+  Running out of time for testing? A genetic algorithm
+  can reorder your tests!
+date: '2006-01-01'
+date-format: YYYY
+categories: [post, research paper, regression testing]
+description: >-
+  <em>Time-aware prioritization finds more faults
+  when the testing clock is ticking!</em>
+---
+
+## Introduction
+
+If you have ever worked on a project that runs its entire
+test suite overnight --- or worse, over an entire weekend ---
+you know that testing time is a precious resource. When you
+only have a few hours to test before a release, which test
+cases should you run first? My colleagues and I addressed this
+question in [@Walcott2006] [{{< iconify fa6-solid
+book-open>}}](/research/papers/walcott2006/index.qmd),
+"Time-Aware Test Suite Prioritization," published at the
+International Symposium on Software Testing and Analysis
+(ISSTA). We present a genetic algorithm that reorders a test
+suite so that it detects faults as fast as possible while always
+finishing within a specified time budget.
+
+## Key Contributions
+
+- **Time-Aware Prioritization Problem**: We formally define
+the problem of reordering a test suite to maximize fault
+detection within a given time limit. This formulation reduces
+to the NP-complete 0/1 knapsack problem, making it a natural
+fit for heuristic search techniques.
+
+- **Genetic Algorithm Approach**: We design a genetic algorithm
+that considers both the coverage potential and the execution
+time of each test case. The algorithm uses crossover, mutation,
+and elitist selection operators to evolve test orderings that
+pack the most fault-detection capability into the available
+testing window.
+
+- **Empirical Evaluation**: Using two case study applications,
+we show that the genetic algorithm produces prioritizations
+with significantly higher fault detection rates than random
+orderings, the initial test ordering, and the reverse ordering.
+The technique proves especially valuable when the time budget
+is tight.
+
+## Empirical Results
+
+Our experiments revealed important trade-offs in time-aware
+prioritization. Test suites prioritized using basic block level
+coverage frequently achieved higher average percentage of
+faults detected (APFD) values compared to method level
+coverage. The genetic algorithm consistently outperformed
+simpler strategies, and the advantage was most pronounced when
+the testing time budget was small --- precisely when
+prioritization matters most. We also measured the time and
+space overheads of the approach and found that it is practical
+when there is a fixed set of time constraints, when
+prioritization occurs infrequently, or when the time budget
+is particularly tight.
+
+## Future Work
+
+The paper discusses several enhancements to the baseline
+approach. These include using per-test coverage information to
+improve the fitness function, extending the technique to
+additional time-constrained testing scenarios, and reducing the
+overhead of the prioritization process itself. The central
+insight --- that testing time should be treated as a
+first-class concern in test suite prioritization --- continues
+to influence research in regression testing.
+
+::: {.callout-note appearance="simple"}
+
+## Further Details
+
+If you work in an environment where testing time is limited, I
+encourage you to read [@Walcott2006] [{{< iconify fa6-solid
+book-open>}}](/research/papers/walcott2006/index.qmd) to learn
+more about how genetic algorithms can help you get the most out
+of your testing budget. If you have questions about test suite
+prioritization, please [contact](/contact/) me. To stay updated
+on the latest developments in software testing research,
+you can also [subscribe](/support/) to my mailing list.
+
+:::
+
+{{< include /_back-blog.qmd >}}
