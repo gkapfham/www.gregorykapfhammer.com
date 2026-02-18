@@ -17,7 +17,7 @@ What if changing the code under test --- not the test itself
 and not the execution environment --- could turn a perfectly
 stable test case into a flaky one? That is exactly what my
 colleagues and I discovered in a new phenomenon that we call
-"test flimsiness". The name is an acronym: **FLIM**siness stands
+"test flimsiness". The name is an acronym since **FLIM**siness stands
 for **FL**akiness **I**nduced by **M**utations to the code under
 test. In [@Parry2026] [{{< iconify fa6-solid
 book-open>}}](/research/papers/parry2026/index.qmd), published
@@ -67,25 +67,23 @@ flimsiness:
 percentage may seem small, we argue that the implications for mutant-driven
 techniques are significant.
 
-- **Mutation operators differ in their tendency to induce
-flakiness**: For example, mutants produced by the
-ReplaceUnaryOperator have over 3 times higher odds of inducing
-flakiness compared to other operators. Interestingly, operators
-that are better at producing killable mutants also tend to be
-better at inducing flakiness.
+- **Mutation operators differ in their tendency to induce flakiness**: For
+example, mutants produced by the ReplaceUnaryOperator have over 3 times higher
+odds of inducing flakiness compared to other operators. Interestingly, operators
+that are better at producing killable mutants also tend to be better at inducing
+flakiness.
 
-- **Mutation-based rerunning detects far more flaky tests**:
-The mutation-based strategy detected a median of 740 flaky tests
-per project compared to just 163 for standard rerunning. The
-flaky tests found by the mutation-based strategy are especially
-unlikely to be detected by the standard strategy, reinforcing
-flimsiness as a distinct form of flakiness.
+- **Mutation-based rerunning detects far more flaky tests**: The mutation-based
+strategy detected a median of 740 flaky tests per project compared to just 163
+for standard rerunning. The flaky tests found by the mutation-based strategy are
+especially unlikely to be detected by the standard strategy, reinforcing
+flimsiness as a distinct form of flakiness worthy of further study in future
+research.
 
-- **Unstable coverage does not explain flimsiness**: Whether a
-test case non-deterministically covered the mutated line prior
-to mutation is a poor predictor of whether the mutant will
-induce flakiness. This suggests that the causes of flimsiness
-are more nuanced than simply manifesting unstable coverage.
+- **Unstable coverage does not explain flimsiness**: Whether a test case
+non-deterministically covered the mutated line prior to mutation is a poor
+predictor of whether the mutant will induce flakiness. This suggests that the
+causes of flimsiness are more nuanced than simply manifesting unstable coverage.
 
 ## Future Work
 
@@ -111,7 +109,7 @@ book-open>}}](/research/papers/parry2026/index.qmd). If you
 have questions or experiences related to mutation-induced
 flakiness, please [contact](/contact/) me. To stay updated on
 the latest developments in flaky test research, you can
-[subscribing](/support/) to my mailing list.
+[subscribe](/support/) to my mailing list.
 
 :::
 
