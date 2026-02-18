@@ -1,0 +1,110 @@
+---
+author: Gregory M. Kapfhammer
+title: >-
+What do we really know about flaky tests? A survey
+of 76 research papers has the answers
+date: '2022-01-01'
+date-format: YYYY
+categories: [post, research paper, flaky tests]
+description: >-
+<em>A comprehensive survey charts the landscape of
+  flaky test research!</em>
+---
+
+## Introduction
+
+If you have ever watched a test suite turn green one minute
+and red the next --- without touching a single line of code ---
+then you already know the pain of flaky tests. But how deep
+does the problem really go? What causes flakiness, what does it
+cost, and what can we actually do about it? My colleagues and I
+set out to answer these questions by systematically surveying the
+research literature on flaky tests. The result is [@Parry2022]
+[{{< iconify fa6-solid book-open>}}](/research/papers/parry2022/index.qmd), "A Survey
+  of Flaky Tests," published in the ACM Transactions on Software
+  Engineering and Methodology. This paper examines 76
+  peer-reviewed studies and organizes their findings around four
+  research questions covering causes, costs, detection, and repair.
+
+## Key Contributions
+
+- **Comprehensive Literature Survey**: We systematically
+  collected and analyzed 76 peer-reviewed papers spanning over a
+
+  decade of research on flaky tests. Our survey covers general
+  flakiness as well as specific subtypes such as order-dependent
+  tests and implementation-dependent tests.
+
+- **Taxonomy of Causes**: We present a comparative analysis of
+  the causes of flaky tests as identified across multiple studies.
+
+  The leading causes include asynchronous waiting, concurrency
+  issues, and test order dependencies, though the relative
+  prevalence of each varies depending on the study's methodology
+  and the programming language under investigation.
+
+- **Costs and Consequences**: We catalog the ways flaky tests
+  harm both developers and researchers. For developers, flaky
+
+  tests erode confidence in test suites and waste time on
+  debugging spurious failures. For researchers, flaky tests
+  threaten the validity of techniques like fault localization,
+  mutation testing, and test suite acceleration.
+
+- **Detection and Repair Techniques**: We survey the automated
+  tools that have emerged for detecting flaky tests, from
+
+  rerunning-based approaches to machine learning classifiers, and
+  examine techniques for mitigating or repairing them, including
+  the automatic repair of order-dependent tests.
+
+## Empirical Results
+
+  Our analysis shows that research interest in flaky tests has
+  grown rapidly, with 63% of all examined papers published between
+  2019 and 2021. Across the studies we surveyed, asynchronous
+  waiting and concurrency consistently appear among the top causes
+  of flaky tests. Order-dependent tests constitute a particularly
+  important subtype, found to represent up to 16% of flaky test
+  bug reports. For this subtype, the majority of order-dependent
+  tests are victims that pass in isolation but fail after certain
+  polluter tests execute before them.
+
+  On the detection front, we found that rerunning-based techniques
+  remain the most straightforward approach but are also the most
+  expensive. Machine learning classifiers that predict flakiness
+  from static features of test code offer a faster alternative,
+  though they trade speed for accuracy. Regarding repair, between
+  57% and 86% of fixes for asynchronous wait flaky tests involved
+  adding or modifying an explicit waiting mechanism, and ensuring
+  proper setup and teardown was the dominant repair strategy for
+  order-dependent tests.
+
+## Future Work
+
+  The survey identifies several open directions for future
+  research. These include developing more scalable detection tools,
+  investigating flaky tests in under-studied domains such as
+  machine learning applications, creating techniques that can
+  automatically identify and repair a broader range of flakiness
+  categories, and conducting further studies to understand how
+  developers experience and respond to flaky tests in practice.
+
+  ::: {.callout-note appearance="simple"}
+
+## Further Details
+
+  If you are interested in exploring the landscape of flaky test
+  research, I encourage you to read the full survey [@Parry2022]
+  [{{< iconify fa6-solid book-open>}}](/research/papers/parry2022/index.qmd). A BibTeX
+    bibliography of all 76 examined studies is publicly available on
+    [GitHub](https://github.com/flake-it/flaky-tests-bibliography).
+    If you have questions or insights about flaky tests, please
+    [contact](/contact/) me. To stay updated on the latest
+    developments in this area, consider [subscribing](/support/) to
+    my mailing list.
+
+```
+:::    :::
+
+    {{< include /_back-blog.qmd>}}
