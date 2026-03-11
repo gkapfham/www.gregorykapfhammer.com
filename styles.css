@@ -13,6 +13,72 @@
 
 /* }}} */
 
+/* Back to Top Button {{{ */
+
+.back-to-top {
+  position: fixed;
+  bottom: 3rem;
+  right: 2rem;
+  width: 2.25rem;
+  height: 2.25rem;
+  background-color: #e65100;
+  color: #ffffff;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(1rem);
+  transition: all 0.3s ease;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.back-to-top:hover {
+  background-color: #d84300;
+  transform: translateY(-2px);
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.back-to-top svg {
+  width: 1.125rem;
+  height: 1.125rem;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .back-to-top {
+    bottom: 2.5rem;
+    right: 1rem;
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .back-to-top svg {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+  .back-to-top {
+    bottom: 2rem;
+    right: 0.75rem;
+    width: 2.25rem;
+    height: 2.25rem;
+  }
+}
+
+/* }}} */
+
 /* Custom Selection Colors {{{ */
 
 ::selection {
@@ -59,7 +125,7 @@ button:focus,
 
 /* Multi-line friendly focus for links using background */
 a:focus-visible {
-  background-color: rgba(230, 81, 0, 0.15);
+  background-color: rgba(230, 81, 0, 0.25);
   outline: none;
 }
 
@@ -122,6 +188,7 @@ h2,
   border-bottom: none;
   margin-bottom: 0.25rem !important;
   text-wrap: balance;
+  scroll-margin-top: 40px;
 }
 
 h1.title,
@@ -139,6 +206,7 @@ h4,
   opacity: 1;
   margin-top: 0.75rem;
   text-wrap: balance;
+  scroll-margin-top: 40px;
 }
 
 a {
@@ -166,6 +234,20 @@ p a:hover {
 
 .body a:hover {
   color: #e65100 !important;
+}
+
+/* Ensure links in lists and software section have hover underline */
+li a:hover,
+ul a:hover,
+dl a:hover,
+.software a:hover {
+  color: #e65100 !important;
+  transition:
+    text-decoration-color 300ms,
+    text-underline-offset 300ms;
+  text-decoration: underline 0.1em;
+  text-decoration-color: #e65100;
+  text-underline-offset: 0.3em;
 }
 
 li,
