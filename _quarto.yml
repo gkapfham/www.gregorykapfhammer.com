@@ -100,6 +100,7 @@ format:
     # that pre-fetches links person hovers over them
     include-after-body:
       - file: _include/js/instant-page.js
+      - file: _include/js/back-to-top.js
     # always display the page in full layout;
     # this seems to minimize the amount of
     # "jumping" that occurs when page loads
