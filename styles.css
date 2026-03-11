@@ -20,6 +20,53 @@
 
 /* }}} */
 
+/* Smooth Scrolling {{{ */
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* }}} */
+
+/* Enhanced Focus Indicators {{{ */
+
+:focus-visible {
+  outline: 2px solid #e65100;
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Remove default focus for elements with custom focus */
+a:focus,
+button:focus,
+.nav-link:focus,
+.navbar a:focus {
+  outline: none;
+}
+
+/* Multi-line friendly focus for links using background */
+a:focus-visible {
+  background-color: rgba(230, 81, 0, 0.15);
+  outline: none;
+}
+
+/* Keep outline for buttons and nav elements */
+button:focus-visible,
+.nav-link:focus-visible,
+.navbar a:focus-visible {
+  outline: 2px solid #e65100;
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* }}} */
+
 /* Basic Components {{{ */
 
 .page-rows-contents {
