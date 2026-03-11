@@ -6,6 +6,20 @@
 
 /* }}} */
 
+/* Custom Selection Colors {{{ */
+
+::selection {
+  background-color: #e65100;
+  color: #ffffff;
+}
+
+::-moz-selection {
+  background-color: #e65100;
+  color: #ffffff;
+}
+
+/* }}} */
+
 /* Basic Components {{{ */
 
 .page-rows-contents {
