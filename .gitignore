@@ -185,3 +185,4 @@ _site/site_libs/bootstrap/bootstrap-*.min.css.backup
 ### Generated Notebooks ###
 # generated files make by Python script or quarto
 **/*.quarto_ipynb
+**/*.quarto_ipynb_1
