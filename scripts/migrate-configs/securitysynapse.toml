@@ -1,0 +1,24 @@
+# Migration configuration for www.securitysynapse.org
+# Used by scripts/migrate-to-cloudflare.py -- see MIGRATE.md
+
+worker_name = "www-securitysynapse-org"
+apex = "securitysynapse.org"
+github_repo = "SecuritySynapse/www.securitysynapse.org"
+branch = "main"
+quarto_version = "1.5.56"
+
+# Minimal build: plain quarto render (freeze is not committed, so CI
+# re-executes the computational content exactly like the current Netlify
+# build does)
+render_command = "quarto render"
+
+# No custom 404 page in this site, so leave Workers' default (plain 404)
+# not_found_handling = "404-page"
+
+# Extra workflow steps (pre-indented YAML) inserted before the render step
+workflow_setup = [
+    "      - name: Install Build Dependencies",
+    "        run: |",
+    "          python3 -m pip install jupyter",
+    "          python3 -m pip install cryptography",
+]

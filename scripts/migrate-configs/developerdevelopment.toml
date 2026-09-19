@@ -1,0 +1,32 @@
+# Migration configuration for www.developerdevelopment.com
+# Used by scripts/migrate-to-cloudflare.py -- see MIGRATE.md
+
+worker_name = "www-developerdevelopment-com"
+apex = "developerdevelopment.com"
+github_repo = "TeamDevDev/www.developerdevelopment.com"
+branch = "master"
+quarto_version = "1.5.56"
+
+# Poetic build: render with the optimize profile (runs minify-files.py)
+render_command = "poetry run quarto render --profile optimize"
+
+# The site has a custom 404.html ("Sorry, this Page is Not Available!")
+not_found_handling = "404-page"
+
+# Environment variables for the render step (inline table)
+render_env = { PYDEVD_DISABLE_FILE_VALIDATION = "1" }
+
+# Extra workflow steps (pre-indented YAML) inserted before the render step
+workflow_setup = [
+    "      - name: Install Python",
+    "        uses: actions/setup-python@v4",
+    "        with:",
+    '          python-version: "3.11"',
+    "          cache: \"pip\"",
+    "      - name: Install Poetry",
+    "        uses: abatilo/actions-poetry@v2.0.0",
+    "        with:",
+    "          poetry-version: 1.8.3",
+    "      - name: Setup Virtual Environment",
+    "        run: poetry install",
+]
