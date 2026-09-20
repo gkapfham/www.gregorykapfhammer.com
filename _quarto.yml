@@ -17,7 +17,12 @@ website:
   announcement:
     icon: megaphone
     dismissable: true
-    content: 'I recently hosted an episode of <a href = "https://se-radio.net/">Software Engineering Radio</a> called <a href="https://se-radio.net/2025/11/se-radio-694-jennings-anderson-and-amy-rose-on-overture-maps/">\"Jennings Anderson and Amy Rose on Overture Maps\"</a>!'
+    content: >-
+      I recently hosted an episode of
+      <a href="https://se-radio.net/">Software Engineering Radio</a> called
+      <a
+      href="https://se-radio.net/2026/07/se-radio-727-jeroen-janssens-and-thijs-nieuwdorp-on-using-polars/">"Jeroen
+      Janssens and Thijs Nieuwdorp on Using Polars"</a>!
     type: primary
   page-navigation: true
   favicon: "icons/fxemoji-rocket.svg"
