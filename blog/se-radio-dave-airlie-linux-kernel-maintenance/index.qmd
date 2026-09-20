@@ -1,0 +1,140 @@
+---
+author: Gregory M. Kapfhammer
+title: >-
+  Insights from my Software Engineering Radio interview
+  with Dave Airlie
+date: '2026-06-03'
+date-format: YYYY
+categories: [post, software development, software engineering radio]
+description: >-
+  <em>How does the Linux kernel get maintained at
+  scale?</em>
+---
+
+## Introduction
+
+In a recent episode of the [Software Engineering
+Radio](https://www.se-radio.net/) podcast, I interviewed [Dave
+Airlie](https://airlied.blogspot.com/), a distinguished engineer at [Red
+Hat](https://www.redhat.com/) and a longtime Linux kernel maintainer who leads
+the Direct Rendering Manager (DRM) subsystem, which provides graphics and GPU
+support. Our conversation explored what it takes to maintain a subsystem that
+receives over 300 contributors in a single kernel release, how the
+[nine-to-ten-week kernel release
+cycle](https://www.kernel.org/doc/html/latest/process/2.Process.html) actually
+works, and why the standard response to a regression is to revert first and ask
+questions later. Dave is also candid about the limits of vendor code sharing
+across operating systems, warning that in his experience it "generally doesn't
+end with Linux being better off." He closes by explaining why he supports
+bringing Rust into the kernel and how AI-assisted review is starting to help
+with a chronic reviewer shortage. As a long-time Linux enthusiast, I'm thankful
+that Dave took the time for this interview. I hope you enjoy it!
+
+## Insights
+
+Before you listen to the full episode, please check out some of its insights:
+
+**What is the scale of the Linux kernel and of the DRM subsystem?**
+
+Dave describes the size of the project he helps to maintain:
+
+> "Linux kernel is, well, we consider it's probably the biggest software
+> engineering project in the world, at least that's what we like to say. In
+> terms of maintainers, the number is varied. Changeable, I would say on average
+> is between 80, a 100, 150."
+
+He also shares a number that surprised him when he checked it:
+
+> "If you'd asked me this yesterday, I would've said a hundred, but I ran the
+> numbers last night and apparently, we have over 300 people contributing every
+> kernel release to the DRM subsystem, which actually surprised me just as
+> much."
+
+**How does the kernel's release cycle work?**
+
+Dave walks through the merge window and the release candidates that follow it:
+
+> "overall on the kernel has what we call a nine-to-10-week release cycle. ...
+> The way that works is the first two weeks of every new kernel development
+> cycle are called the merge window. That's where Linus takes all of the pull
+> requests from all of the others, all of the maintainers under him and he puts
+> them all together and stabilizes that for two weeks. And we hope in those two
+> weeks that that's a runnable kernel. At the end of that two weeks, he'll
+> release what's called RC1 and then on a weekly basis, usually on a Sunday
+> afternoon Pacific time, he will release RC2, RC3 up until RC7 usually, and
+> then from RC7 he will release the final one the following week."
+
+**What counts as a regression, and how do maintainers respond to one?**
+
+Dave defines a regression and explains the discipline that follows from it:
+
+> "regression is made to be something that broke in RC1, if something is merged
+> during RC1 that causes anything to go be worse than it was before RC1, then
+> it's considered a regression. The standard method of dealing with regressions
+> is to revert first ask questions later. ... So we should remove the patch that
+> caused the problem and then work out what the problem was and fix it in the
+> next cycle."
+
+He adds that a regression only becomes urgent when somebody notices the
+problem:
+
+> "if it made something worse for a user, whether that user is causing a
+> performance difference or that user is seeing a functional break in their
+> hardware. ... If a regression happens and nobody notices, it's not considered
+> a regression till someone notices."
+
+**How is AI changing the review of kernel patches?**
+
+Dave describes how a colleague at Meta built a regression detector and
+evaluated it against the project's own history:
+
+> "I talked to a guy called Chris Mason at Meta has been leading their work on
+> this. He actually wrote framework for regression finding, for using AI. So, it
+> was very specifically focused on prompting AI to sort of find regressions. And
+> how he tested it was by running it on older kernel patches and then finding
+> fixes for those older kernel patches."
+
+He argues that even an imperfect reviewer is worth having, because the cost of a
+regression is so high:
+
+> "Even if there's noise in that system, it's still better. ... when that
+> regression actually gets into the Linux kernel and gets out into the world
+> that costs like actual money in the world."
+
+**Why do you support bringing Rust into the Linux kernel?**
+
+Dave explains that his motivation has as much to do with people as with
+programming languages:
+
+> "My push for getting behind the Rust effort was actually more social and
+> community focused. ... one of the big complaints in the private meeting over
+> the years as we're all getting older. There's, we've got a lot more gray
+> beards, like people are in their fifties now that were in their twenties when
+> they started this journey."
+
+He also expects Rust to reduce a particular class of mistakes that kernel
+developers keep repeating:
+
+> "I see Rust accelerating the ability to deliver GPU drivers. I see it being
+> much faster that we can build a lot more common infrastructure. We can avoid
+> making a lot of the C mistakes that we've repeatedly made. ... lifetimes are
+> one of the hardest things to get right in the Linux kernel."
+
+## Listen
+
+In conclusion, if you're interested in learning more about Linux kernel
+maintenance, release engineering at scale, or the process that keeps the kernel
+stable, I highly recommend that you listen to [Dave Airlie on Linux Kernel
+Maintenance](https://se-radio.net/2026/06/se-radio-723-dave-airlie-on-linux-kernel-maintenance/)
+from [Software Engineering Radio](https://se-radio.net/)! You can find it on
+your favorite podcast player, [Apple
+Podcasts](https://podcasts.apple.com/us/podcast/software-engineering-radio-the-podcast-for/id120906714),
+[Spotify](https://open.spotify.com/show/6UO3XQclSuNnGxB39QdAnL),
+[YouTube](https://www.youtube.com/playlist?list=PLHJB2bhmgB7esz0BxMCt1jJwsoaqWtFff),
+or listen to it with this handy podcast player.
+
+{{< audio
+file="https://traffic.libsyn.com/secure/forcedn/seradio/723-dave-arlie-linux-kernel-maintenance.mp3"
+caption="Listen to Software Engineering Radio Episode 723" >}}
+
+{{< include /_back-blog.qmd >}}
