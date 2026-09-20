@@ -15,7 +15,7 @@ format:
 listing:
   - id: featured-papers
     contents:
-      - "research/papers/**"
+      - "research/papers/**/*.qmd"
       - "!research/papers/index.qmd"
     sort:
       - "date desc"
@@ -29,7 +29,7 @@ listing:
     page-size: 5
   - id: featured-presentations
     contents:
-      - "research/presentations/**"
+      - "research/presentations/**/*.qmd"
       - "!research/presentations/index.qmd"
     sort:
       - "date desc"
