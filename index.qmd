@@ -168,7 +168,7 @@ effectively rerunning test suites
 
 ::: {.callout-tip appearance="minimal"}
 
-{{< fa rocket >}} <em>Read</em> all of my  [research papers](research/papers/index.qmd)
+{{< fa rocket >}} <em>Read</em> all of my [research papers](research/papers/index.qmd)
 
 :::
 
@@ -265,7 +265,6 @@ href="https://github.com/schemaanalyst-team/schemaanalyst">SchemaAnalyst</a>:
 Data generation and mutation analysis for database schemas</p></li>
 
 </ul>
-
 
 ::: {.callout-tip appearance="minimal"}
 
