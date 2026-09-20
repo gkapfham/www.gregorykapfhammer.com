@@ -32,7 +32,8 @@ that Dave took the time for this interview.
 
 ## Insights
 
-Before you listen to the full episode, please check out some of its insights:
+Before you listen to the full episode, please check out some of its key
+insights:
 
 **What is the scale of the Linux kernel and of the DRM subsystem?**
 
