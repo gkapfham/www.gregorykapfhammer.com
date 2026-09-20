@@ -76,14 +76,6 @@ Dave defines a regression and explains the discipline that follows from it:
 > caused the problem and then work out what the problem was and fix it in the
 > next cycle."
 
-He adds that a regression only becomes urgent when somebody notices the
-problem:
-
-> "if it made something worse for a user, whether that user is causing a
-> performance difference or that user is seeing a functional break in their
-> hardware. ... If a regression happens and nobody notices, it's not considered
-> a regression till someone notices."
-
 **How is AI changing the review of kernel patches?**
 
 Dave describes how a colleague at Meta built a regression detector and
