@@ -28,7 +28,7 @@ across operating systems, warning that in his experience it "generally doesn't
 end with Linux being better off." He closes by explaining why he supports
 bringing Rust into the kernel and how AI-assisted review is starting to help
 with a chronic reviewer shortage. As a long-time Linux enthusiast, I'm thankful
-that Dave took the time for this interview. I hope you enjoy it!
+that Dave took the time for this interview.
 
 ## Insights
 
