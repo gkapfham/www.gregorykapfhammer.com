@@ -67,12 +67,27 @@ file="https://traffic.libsyn.com/secure/forcedn/seradio/666-eran-yahav-tabnine-c
 caption="Listen to Software Engineering Radio Episode with Eran Yahav" >}}
 ```
 
-```
 - You will know what link to provide since I will give that to you in the
 prompt for writing this blog post.
 - Make sure to include `{{< include /_back-blog.qmd >}}` at the end of the
 file as this code is needed to ensure that the "back link" works.
-```
+- After you write the post, you must verify it with the tool that lives in
+  `_tools/verify-seradio-post.py`; `README.md` documents the tool and every
+  option that it supports. The tool checks that every quotation appears
+  verbatim in the transcript, that the front matter and the required sections
+  are present, and that the prose fits in 80 columns. Run the command below
+  with the slug of the new post and the number of the episode:
+
+  ```bash
+  uv run _tools/verify-seradio-post.py \
+      --post blog/<slug>/index.qmd --episode <number> --check-links
+  ```
+
+- The tool prints a table that pairs each quotation with the speaker and the
+  timestamp of the transcript turn that contains it. That table is the
+  evidence that the "Support your work" rule requires. A non-zero exit code
+  means that at least one check failed, so fix the post and run the tool
+  again.
 
 ## Blog Posts About Research Papers
 
@@ -164,8 +179,12 @@ These are the high-level rules about modifying the files in this repository:
   should provide the exact extracts from the transcript that you used to create
   the answers from the guest that are in the blog post. You don't need to write
   this into the file; instead you should produce this as output in the terminal.
+  For a Software Engineering Radio post, the `_tools/verify-seradio-post.py`
+  tool prints this evidence for you.
 - **Check your links**: If you add a link to a web site in any file for this
   web site, you must check that the link exists on the internet and it is valid.
+  For a Software Engineering Radio post, the `--check-links` option of
+  `_tools/verify-seradio-post.py` automates this check.
 
 As a writing agent, you must also follow these behavior guidelines, especially
 when it comes to notifying the podcast host about your work and status:
