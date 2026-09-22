@@ -351,12 +351,12 @@ fa6-solid
 book-open >}}](/research/papers/kapfhammer2008/index.qmd), search-based
 generation of integrity constraint tests [@Kapfhammer2013] [{{< iconify
 fa6-solid
-book-open >}}](/research/papers/kapfhammer2013/index.qmd), and an assessment of
+book-open >}}](/research/papers/kapfhammer2013/index.qmd), and the assessment of
 the efficiency of that search-based approach [@Kinneer2015] [{{< iconify
 fa6-solid
 book-open >}}](/research/papers/kinneer2015/index.qmd). My research has also
-adapted mutation analysis to this domain, studying efficient mutation of
-relational database structures [@Wright2013] [{{< iconify fa6-solid
+built tools that adapted mutation analysis to this domain, enabling the study of efficient mutation for
+database structures [@Wright2013] [{{< iconify fa6-solid
 book-open >}}](/research/papers/wright2013/index.qmd), the impact of equivalent
 and redundant mutants [@Wright2014] [{{< iconify fa6-solid
 book-open >}}](/research/papers/wright2014/index.qmd), and virtual mutation
@@ -442,7 +442,7 @@ book-open >}}](/research/papers/arnold2002a/index.qmd).
 
 In response to the prevalence and complexity of mobile-ready web sites, my
 research has developed automated tools for checking the pages in these sites.
-Some examples of papers describing methods for automatically detecting defects
+Some examples of papers describing methods and prototype tools for automatically detecting defects
 in web pages include [@Walsh2017] [{{< iconify fa6-solid
 book-open>}}](/research/papers/walsh2017/index.qmd) and [@Walsh2017a] [{{<
 iconify fa6-solid book-open>}}](/research/papers/walsh2017a/index.qmd). Earlier
@@ -464,6 +464,8 @@ failure in a responsive web page by effectively "hiding" the defect
 from perception
 [@Althomali2022] [{{< iconify fa6-solid
 book-open>}}](/research/papers/althomali2022/index.qmd).
+The experiments in the aforementioned papers study real-world web pages, ultimately
+demonstrating that the presented approaches can automatically detect layout defects in deployed sites.
 
 </div>
 
