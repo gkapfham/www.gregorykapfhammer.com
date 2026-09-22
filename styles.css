@@ -1353,9 +1353,31 @@ input.search.form-control {
   color: #e65100;
 }
 
+.pub-timeline figcaption a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.pub-timeline figcaption a:hover,
+.pub-timeline figcaption a:focus-visible {
+  color: #e65100;
+  text-decoration: underline;
+}
+
 .pt-rail {
   position: relative;
   height: 4.6rem;
+}
+
+/* The career timeline on the papers page spans 1999-2026: its stacks are
+   taller and only a subset of the years carry labels. */
+
+.pt-career .pt-rail {
+  height: 6.5rem;
+}
+
+.pt-career .pt-year {
+  font-size: 0.7rem;
 }
 
 .pt-track {
@@ -1422,15 +1444,6 @@ input.search.form-control {
   transform: translateX(-50%);
 }
 
-.pt-latest .pt-year {
-  font-weight: 600;
-  color: #e65100;
-}
-
-.pt-latest .pt-dot:last-child {
-  box-shadow: 0 0 0 3px rgba(230, 81, 0, 0.18);
-}
-
 /* dark mode */
 
 body.quarto-dark .pub-timeline figcaption,
@@ -1439,29 +1452,91 @@ body.quarto-dark .pt-year {
 }
 
 body.quarto-dark .pt-line {
-  background-color: #3d3d3d;
+  background-color: rgba(189, 189, 189, 0.55);
 }
 
 body.quarto-dark .pt-dot {
   background-color: #ef6c00;
 }
 
-body.quarto-dark .pt-latest .pt-year {
+body.quarto-dark .pub-timeline figcaption a:hover,
+body.quarto-dark .pub-timeline figcaption a:focus-visible {
   color: #ef6c00;
 }
 
-body.quarto-dark .pt-latest .pt-dot:last-child {
-  box-shadow: 0 0 0 3px rgba(239, 108, 0, 0.25);
+@media (max-width: 640px) {
+  .pt-year {
+    font-size: 0.7rem;
+  }
 }
 
-@media (max-width: 576px) {
-  .pt-track {
-    right: 1.1rem;
-    left: 1.1rem;
+/* On narrow screens the rail becomes a horizontally scrollable strip: the
+   marks keep their spacing and every year label stays visible, while a
+   swipe reveals the rest of the timeline. The soft edge hints that there
+   is more to see, and it matches the page background in both themes. */
+
+@media (max-width: 700px) {
+  .pt-rail {
+    height: 5.4rem;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    scrollbar-color: #e65100 rgba(127, 127, 127, 0.18);
+    background-image: linear-gradient(to left, rgba(255, 255, 255, 0.95),
+        rgba(255, 255, 255, 0));
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 1.75rem 100%;
   }
 
-  .pt-year {
-    font-size: 0.65rem;
+  .pt-career .pt-rail {
+    height: 7.3rem;
+  }
+
+  body.quarto-dark .pt-rail {
+    scrollbar-color: #ef6c00 rgba(189, 189, 189, 0.18);
+    background-image: linear-gradient(to left, rgba(33, 33, 33, 0.95),
+        rgba(33, 33, 33, 0));
+  }
+
+  .pt-rail:hover,
+  .pt-rail:focus-within {
+    scrollbar-color: #ef6c00 rgba(127, 127, 127, 0.28);
+  }
+
+  body.quarto-dark .pt-rail:hover,
+  body.quarto-dark .pt-rail:focus-within {
+    scrollbar-color: #ef6c00 rgba(189, 189, 189, 0.28);
+  }
+
+  .pt-rail::-webkit-scrollbar {
+    height: 0.5rem;
+  }
+
+  .pt-rail::-webkit-scrollbar-track {
+    background-color: rgba(127, 127, 127, 0.18);
+    border-radius: 0.25rem;
+  }
+
+  .pt-rail::-webkit-scrollbar-thumb {
+    background-color: #e65100;
+    border-radius: 0.25rem;
+  }
+
+  .pt-rail::-webkit-scrollbar-thumb:hover {
+    background-color: #ef6c00;
+  }
+
+  .pt-track {
+    right: 1.1rem;
+    bottom: 0.8rem;
+    left: 1.1rem;
+    min-width: 620px;
+  }
+
+  .pt-career .pt-track {
+    min-width: 780px;
   }
 }
 
