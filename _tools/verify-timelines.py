@@ -89,7 +89,10 @@ DOT_RE = re.compile(
 )
 CAPTION_RE = re.compile(r"<figcaption>(.*?)</figcaption>", re.S)
 COUNT_RE = re.compile(r'<span class="pt-count">(\d+) (?:papers|presentations)</span>')
-SINCE_RE = re.compile(r"(?:since|&middot;)\s*(\d{4})")
+SINCE_RE = re.compile(r"since(?:\s*<span[^>]*>)?\s*(\d{4})")
+CATEGORY_SPAN_RE = re.compile(
+    '<span\\s+class="pt-category">([^<]*)</span>', re.S
+)
 LINK_RE = re.compile(r'href="([^"]*#category=[^"]*)"')
 AUTHOR_RE = re.compile(r"^author:\s*(.*?)(?=\n[a-z-]+: |\n---)", re.S | re.M)
 
@@ -307,6 +310,13 @@ def check_caption(figure: Figure) -> None:
         figure.problems.append(
             f"the caption says {count.group(1)} entries, not {figure.expected_dots}"
         )
+    spans = CATEGORY_SPAN_RE.findall(text)
+    if len(spans) != 2:
+        figure.problems.append(
+            f"the caption has {len(spans)} pt-category spans, not 2"
+        )
+    elif not spans[0].strip():
+        figure.problems.append("the caption does not name the area")
     first = min(entry.year for entry in figure.entries)
     since = SINCE_RE.search(text)
     if not since:
