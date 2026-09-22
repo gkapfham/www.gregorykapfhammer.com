@@ -189,6 +189,41 @@ contains it. That table is the supporting evidence that
 The tools live in `_tools/`, a directory that Quarto ignores because its name
 starts with an underscore, so they are never rendered or deployed.
 
+### Verifying the research timelines
+
+The research overview, the papers page, and the presentations page each draw a
+publication timeline: one dot per paper or presentation on a year axis. The tool
+in `_tools/verify-timelines.py` re-derives what every timeline must contain from
+the front matter of the papers and the presentations, so it fails whenever an
+entry is added, removed, or re-dated without the timeline being regenerated.
+
+It checks that each timeline draws one dot per expected entry and no others, that
+every dot links to an entry that exists and carries that entry's year, that the
+marks advance with the years and span the whole axis, that the caption counts the
+entries and names the first year, that the axis labels cover the first and last
+year, that a caption links a listing filter only when the rail matches that
+filter exactly, that the raw HTML stays inside 80 columns, and that Quarto did
+not turn the nested HTML into a code block.
+
+```bash
+# verify every timeline: the research overview, the papers, and the presentations
+uv run _tools/verify-timelines.py
+
+# verify a single page
+uv run _tools/verify-timelines.py --target papers
+uv run _tools/verify-timelines.py --target presentations
+
+# also inspect the rendered HTML under a build directory, which is what a
+# browser downloads, and confirm that every dot points at a page that was built
+uv run _tools/verify-timelines.py --site _site
+
+# print only the summary and any problems
+uv run _tools/verify-timelines.py --quiet
+```
+
+The command exits with 0 when every timeline matches its sources and with 1 when
+any check fails, so it can be used in a build step or a shell script.
+
 ## Build Scripts
 
 This repository includes Python scripts for building, optimizing, and deploying
