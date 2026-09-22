@@ -142,7 +142,8 @@ flakiness --- as it argues for a more holistic view of a test suite's health
 [@McMinn2025] [{{< iconify fa6-solid
 book-open>}}](/research/papers/mcminn2025/).
 
-My research in this area also shows that flaky test failures often occur in clusters
+My research in this area also shows that flaky test failures often occur in
+clusters
 whose members share a common root cause, a phenomenon that my collaborators
 and I call systemic flakiness, since this result implies that developers can
 repair several flaky tests by addressing one underlying problem
@@ -337,11 +338,14 @@ automatically generate test data for integrity constraints, including DOMINO
 >}}](/research/papers/alsharif2018/index.qmd)
 and [@Alsharif2018a] [{{< iconify fa6-solid
 book-open >}}](/research/papers/alsharif2018a/index.qmd), and SchemaAnalyst,
-which supports several generators and a reproducible data analysis workflow
+which supports several test data generators and a reproducible data analysis
+workflow
 [@Alsharif2018b] [{{< iconify fa6-solid book-open
 >}}](/research/papers/alsharif2018b/index.qmd)
 and [@McMinn2016c] [{{< iconify fa6-solid
-book-open >}}](/research/papers/mcminn2016c/index.qmd). This line of work also
+book-open >}}](/research/papers/mcminn2016c/index.qmd).
+
+This line of work also
 includes database-aware coverage monitoring [@Kapfhammer2008] [{{< iconify
 fa6-solid
 book-open >}}](/research/papers/kapfhammer2008/index.qmd), search-based
@@ -352,7 +356,7 @@ the efficiency of that search-based approach [@Kinneer2015] [{{< iconify
 fa6-solid
 book-open >}}](/research/papers/kinneer2015/index.qmd). My research has also
 adapted mutation analysis to this domain, studying efficient mutation of
-relational structures [@Wright2013] [{{< iconify fa6-solid
+relational database structures [@Wright2013] [{{< iconify fa6-solid
 book-open >}}](/research/papers/wright2013/index.qmd), the impact of equivalent
 and redundant mutants [@Wright2014] [{{< iconify fa6-solid
 book-open >}}](/research/papers/wright2014/index.qmd), and virtual mutation
@@ -376,9 +380,10 @@ book-open >}}](/research/papers/arnold2002a/index.qmd).
 
 ```{=html}
 <figure class="pub-timeline">
-<figcaption> <span class="pt-count">7 papers</span> on <span
+<figcaption><a href="/research/papers/#category=web%20testing">
+ <span class="pt-count">7 papers</span> on <span
  class="pt-category">web testing</span> published since <span
- class="pt-category">2015</span>
+ class="pt-category">2015</span></a>
 </figcaption>
 <div class="pt-rail">
 <div class="pt-track">
