@@ -54,6 +54,74 @@ to access the full paper!
 
 ### Flaky Tests
 
+```{=html}
+<figure class="pub-timeline">
+<figcaption><a href="/research/papers/#category=flaky%20tests">
+<span class="pt-count">10 papers</span> &middot; flaky test research since
+2020</a></figcaption>
+<div class="pt-rail">
+<div class="pt-track">
+<span class="pt-line" aria-hidden="true"></span>
+<span class="pt-mark pt-first" style="--pt: 0.0;">
+<span class="pt-stack">
+<a class="pt-dot" href="/research/papers/parry2020/"
+ aria-label="parry2020: Flake it till you make it"
+ title="2020 &middot; Flake it till you make it"></a>
+</span>
+<span class="pt-year">2020</span>
+</span>
+<span class="pt-mark" style="--pt: 33.3;">
+<span class="pt-stack">
+<a class="pt-dot" href="/research/papers/parry2022/"
+ aria-label="parry2022: A survey of flaky tests"
+ title="2022 &middot; A survey of flaky tests"></a>
+<a class="pt-dot" href="/research/papers/parry2022a/"
+ aria-label="parry2022a: Evaluating features for machine learning"
+ title="2022 &middot; Evaluating features for machine learning"></a>
+<a class="pt-dot" href="/research/papers/parry2022b/"
+ aria-label="parry2022b: Surveying the developer experience"
+ title="2022 &middot; Surveying the developer experience"></a>
+<a class="pt-dot" href="/research/papers/parry2022c/"
+ aria-label="parry2022c: What do developer-repaired flaky tests"
+ title="2022 &middot; What do developer-repaired flaky tests"></a>
+</span>
+<span class="pt-year">2022</span>
+</span>
+<span class="pt-mark" style="--pt: 50.0;">
+<span class="pt-stack">
+<a class="pt-dot" href="/research/papers/parry2023/"
+ aria-label="parry2023: Empirically evaluating flaky test"
+ title="2023 &middot; Empirically evaluating flaky test"></a>
+</span>
+<span class="pt-year">2023</span>
+</span>
+<span class="pt-mark" style="--pt: 83.3;">
+<span class="pt-stack">
+<a class="pt-dot" href="/research/papers/mcminn2025/"
+ aria-label="mcminn2025: Beyond test flakiness"
+ title="2025 &middot; Beyond test flakiness"></a>
+<a class="pt-dot" href="/research/papers/parry2025/"
+ aria-label="parry2025: Systemic flakiness"
+ title="2025 &middot; Systemic flakiness"></a>
+</span>
+<span class="pt-year">2025</span>
+</span>
+<span class="pt-mark pt-latest pt-last" style="--pt: 100.0;">
+<span class="pt-stack">
+<a class="pt-dot" href="/research/papers/foster2026/"
+ aria-label="foster2026: FlakeFighters"
+ title="2026 &middot; FlakeFighters"></a>
+<a class="pt-dot" href="/research/papers/parry2026/"
+ aria-label="parry2026: Test flimsiness"
+ title="2026 &middot; Test flimsiness"></a>
+</span>
+<span class="pt-year">2026</span>
+</span>
+</div>
+</div>
+</figure>
+```
+
 Since flaky tests can pass or fail without any changes to the test code or the
 code under test, they are an unreliable indicator of software correctness and a
 major problem for many software developers. To address this challenge, my
@@ -74,11 +142,97 @@ beyond any individual metric of "good" or "bad" tests --- like test flakiness
 --- as it argues for a more holistic view of a test suite's health [@McMinn2025] [{{<
 iconify fa6-solid book-open>}}](/research/papers/mcminn2025/).
 
+My recent research also shows that flaky test failures often occur in clusters
+whose members share a common root cause, a phenomenon that my collaborators
+and I call systemic flakiness, since this result implies that developers can
+repair several flaky tests by addressing one underlying problem
+[@Parry2025] [{{< iconify fa6-solid
+book-open >}}](/research/papers/parry2025/index.qmd).
+Building on this observation, my colleagues and I revealed that the mutation
+operators used to seed synthetic faults can themselves induce flakiness, a
+phenomenon that we call test flimsiness and that calls into question any
+technique which assumes that a test reacts deterministically to a mutated
+program [@Parry2026] [{{< iconify fa6-solid
+book-open >}}](/research/papers/parry2026/index.qmd).
+
+My collaborators and I have also examined how well detection techniques serve
+the developers who repair flaky tests, since automated rerunning detects the
+developer-repaired tests in only 40% of the studied commits, which makes it an
+unsuitable baseline for judging a technique's usefulness for developers
+[@Parry2022c] [{{< iconify fa6-solid
+book-open >}}](/research/papers/parry2022c/index.qmd). To reduce the cost of
+detection without sacrificing its accuracy, my colleagues and I introduced
+CANNIER, which combines machine learning models with rerunning-based detection
+to decrease the time cost of detection by an order of magnitude
+[@Parry2023] [{{< iconify fa6-solid
+book-open >}}](/research/papers/parry2023/index.qmd). My collaborators and I
+have also turned these insights into a practical tool, FlakeFighters, an
+extensible PyTest plugin that combines static and execution data to classify a
+failing test as a genuine bug or a flaky failure in Python projects
+[@Foster2026] [{{< iconify fa6-solid
+book-open >}}](/research/papers/foster2026/index.qmd).
+
 </div>
 
 <div id="database-testing">
 
 ### Database Testing
+
+```{=html}
+<figure class="pub-timeline">
+<figcaption><a href="/research/papers/#category=database%20testing">
+<span class="pt-count">6 papers</span> &middot; database testing research
+since 2003</a></figcaption>
+<div class="pt-rail">
+<div class="pt-track">
+<span class="pt-line" aria-hidden="true"></span>
+<span class="pt-mark pt-first" style="--pt: 0.0;">
+<span class="pt-stack">
+<a class="pt-dot" href="/research/papers/kapfhammer2003/"
+ aria-label="kapfhammer2003: A family of test adequacy criteria"
+ title="2003 &middot; A family of test adequacy criteria"></a>
+</span>
+<span class="pt-year">2003</span>
+</span>
+<span class="pt-mark" style="--pt: 21.8;">
+<span class="pt-stack">
+<a class="pt-dot" href="/research/papers/kapfhammer2007d/"
+ aria-label="kapfhammer2007d: A comprehensive framework for testing"
+ title="2007 &middot; A comprehensive framework for testing"></a>
+</span>
+<span class="pt-year">2007</span>
+</span>
+<span class="pt-mark" style="--pt: 65.3;">
+<span class="pt-stack">
+<a class="pt-dot" href="/research/papers/mcminn2015/"
+ aria-label="mcminn2015: The effectiveness of test coverage"
+ title="2015 &middot; The effectiveness of test coverage"></a>
+</span>
+<span class="pt-year">2015</span>
+</span>
+<span class="pt-mark" style="--pt: 87.1;">
+<span class="pt-stack">
+<a class="pt-dot" href="/research/papers/mcminn2019/"
+ aria-label="mcminn2019: Automatic detection and removal"
+ title="2019 &middot; Automatic detection and removal"></a>
+</span>
+<span class="pt-year">2019</span>
+</span>
+<span class="pt-mark pt-latest pt-last" style="--pt: 100.0;">
+<span class="pt-stack">
+<a class="pt-dot" href="/research/papers/alsharif2020/"
+ aria-label="alsharif2020: STICCER"
+ title="2020 &middot; STICCER"></a>
+<a class="pt-dot" href="/research/papers/alsharif2020a/"
+ aria-label="alsharif2020a: Hybrid methods for reducing database"
+ title="2020 &middot; Hybrid methods for reducing database"></a>
+</span>
+<span class="pt-year">2020</span>
+</span>
+</div>
+</div>
+</figure>
+```
 
 Given the importance of verifying that a database application
 operates correctly, my PhD dissertation
@@ -106,6 +260,54 @@ the schema's test suites.
 
 ### Web Testing
 
+```{=html}
+<figure class="pub-timeline">
+<figcaption>
+<span class="pt-count">5 papers</span> &middot; web testing research since
+2017</figcaption>
+<div class="pt-rail">
+<div class="pt-track">
+<span class="pt-line" aria-hidden="true"></span>
+<span class="pt-mark pt-first" style="--pt: 0.0;">
+<span class="pt-stack">
+<a class="pt-dot" href="/research/papers/walsh2017/"
+ aria-label="walsh2017: Automated layout failure detection"
+ title="2017 &middot; Automated layout failure detection"></a>
+<a class="pt-dot" href="/research/papers/walsh2017a/"
+ aria-label="walsh2017a: ReDeCheck"
+ title="2017 &middot; ReDeCheck"></a>
+</span>
+<span class="pt-year">2017</span>
+</span>
+<span class="pt-mark" style="--pt: 40.0;">
+<span class="pt-stack">
+<a class="pt-dot" href="/research/papers/althomali2019/"
+ aria-label="althomali2019: Automatic visual verification of layout"
+ title="2019 &middot; Automatic visual verification of layout"></a>
+</span>
+<span class="pt-year">2019</span>
+</span>
+<span class="pt-mark" style="--pt: 60.0;">
+<span class="pt-stack">
+<a class="pt-dot" href="/research/papers/walsh2020/"
+ aria-label="walsh2020: Automatically identifying potential"
+ title="2020 &middot; Automatically identifying potential"></a>
+</span>
+<span class="pt-year">2020</span>
+</span>
+<span class="pt-mark pt-latest pt-last" style="--pt: 100.0;">
+<span class="pt-stack">
+<a class="pt-dot" href="/research/papers/althomali2022/"
+ aria-label="althomali2022: Automated repair of responsive web page"
+ title="2022 &middot; Automated repair of responsive web page"></a>
+</span>
+<span class="pt-year">2022</span>
+</span>
+</div>
+</div>
+</figure>
+```
+
 In response to the prevalence and complexity of mobile-ready web sites, my
 research has developed automated tools for checking the pages in these sites.
 Some examples of papers describing methods for automatically detecting defects
@@ -130,6 +332,73 @@ book-open>}}](/research/papers/althomali2022/index.qmd).
 
 ### Mutation Testing
 
+```{=html}
+<figure class="pub-timeline">
+<figcaption><a href="/research/papers/#category=mutation%20testing">
+<span class="pt-count">8 papers</span> &middot; mutation testing research
+since 2012</a></figcaption>
+<div class="pt-rail">
+<div class="pt-track">
+<span class="pt-line" aria-hidden="true"></span>
+<span class="pt-mark pt-first" style="--pt: 0.0;">
+<span class="pt-stack">
+<a class="pt-dot" href="/research/papers/just2012b/"
+ aria-label="just2012b: Using non-redundant mutation operators"
+ title="2012 &middot; Using non-redundant mutation operators"></a>
+</span>
+<span class="pt-year">2012</span>
+</span>
+<span class="pt-mark" style="--pt: 12.6;">
+<span class="pt-stack">
+<a class="pt-dot" href="/research/papers/wright2014/"
+ aria-label="wright2014: The impact of equivalent, redundant,"
+ title="2014 &middot; The impact of equivalent, redundant,"></a>
+</span>
+<span class="pt-year">2014</span>
+</span>
+<span class="pt-mark" style="--pt: 44.0;">
+<span class="pt-stack">
+<a class="pt-dot" href="/research/papers/mcminn2019/"
+ aria-label="mcminn2019: Automatic detection and removal"
+ title="2019 &middot; Automatic detection and removal"></a>
+</span>
+<span class="pt-year">2019</span>
+</span>
+<span class="pt-mark" style="--pt: 75.4;">
+<span class="pt-stack">
+<a class="pt-dot" href="/research/papers/maton2024/"
+ aria-label="maton2024: Exploring pseudo-testedness"
+ title="2024 &middot; Exploring pseudo-testedness"></a>
+<a class="pt-dot" href="/research/papers/maton2024a/"
+ aria-label="maton2024a: PseudoSweep"
+ title="2024 &middot; PseudoSweep"></a>
+</span>
+<span class="pt-year">2024</span>
+</span>
+<span class="pt-mark" style="--pt: 87.7;">
+<span class="pt-stack">
+<a class="pt-dot" href="/research/papers/maton2025/"
+ aria-label="maton2025: Where tests fall short"
+ title="2025 &middot; Where tests fall short"></a>
+</span>
+<span class="pt-year">2025</span>
+</span>
+<span class="pt-mark pt-latest pt-last" style="--pt: 100.0;">
+<span class="pt-stack">
+<a class="pt-dot" href="/research/papers/maton2026/"
+ aria-label="maton2026: Empirically comparing hazard-guided LLM"
+ title="2026 &middot; Empirically comparing hazard-guided LLM"></a>
+<a class="pt-dot" href="/research/papers/maton2026b/"
+ aria-label="maton2026b: multiplex"
+ title="2026 &middot; multiplex"></a>
+</span>
+<span class="pt-year">2026</span>
+</span>
+</div>
+</div>
+</figure>
+```
+
 Given the challenges associated with accurately judging the quality of a test
 suite, my research has designed efficient and useful ways to perform test
 assessment through mutation analysis. Presenting and evaluating automated
@@ -143,11 +412,94 @@ statement deletion (SDL) mutation operators can detect pseudo-tested methods
 and statements in a Java program [@Maton2024] [{{< iconify fa6-solid
 book-open >}}](/research/papers/maton2024/index.qmd).
 
+To bring these techniques into practice, my collaborators and I implemented
+PseudoSweep, a tool that automatically identifies pseudo-tested methods and
+statements in Java projects by combining method and statement deletion
+[@Maton2024a] [{{< iconify fa6-solid
+book-open >}}](/research/papers/maton2024a/index.qmd). Because developers who
+inspect covered but unchecked statements must first choose how to compute the
+corresponding oracle gaps, my colleagues and I empirically compared three
+calculation approaches and characterized how the discovered gaps differ in
+prominence, distribution, and fault detection ability [@Maton2025] [{{<
+iconify fa6-solid book-open >}}](/research/papers/maton2025/index.qmd).
+
+My research has also started to use large language models to create mutants,
+showing that a hazard-guided approach produces compilable, diverse, and
+powerful mutants that reveal defects which prior methods fail to detect
+[@Maton2026] [{{< iconify fa6-solid
+book-open >}}](/research/papers/maton2026/index.qmd). To help other researchers
+compare these emerging techniques, my colleagues and I released multiplex, a
+modular framework that supports the prototyping and evaluation of
+large-language-model-based mutant generation modules across different
+languages, models, and build environments [@Maton2026b] [{{<
+iconify fa6-solid book-open >}}](/research/papers/maton2026b/index.qmd).
+
 </div>
 
 <div id="regression-testing">
 
 ### Regression Testing
+
+```{=html}
+<figure class="pub-timeline">
+<figcaption>
+<span class="pt-count">6 papers</span> &middot; regression testing research
+since 2006</figcaption>
+<div class="pt-rail">
+<div class="pt-track">
+<span class="pt-line" aria-hidden="true"></span>
+<span class="pt-mark pt-first" style="--pt: 0.0;">
+<span class="pt-stack">
+<a class="pt-dot" href="/research/papers/walcott2006/"
+ aria-label="walcott2006: Time-aware test suite prioritization"
+ title="2006 &middot; Time-aware test suite prioritization"></a>
+</span>
+<span class="pt-year">2006</span>
+</span>
+<span class="pt-mark" style="--pt: 40.0;">
+<span class="pt-stack">
+<a class="pt-dot" href="/research/papers/lin2014/"
+ aria-label="lin2014: Test suite reduction methods that decrease"
+ title="2014 &middot; Test suite reduction methods that decrease"></a>
+</span>
+<span class="pt-year">2014</span>
+</span>
+<span class="pt-mark" style="--pt: 55.0;">
+<span class="pt-stack">
+<a class="pt-dot" href="/research/papers/lin2017/"
+ aria-label="lin2017: Empirically evaluating greedy-based test"
+ title="2017 &middot; Empirically evaluating greedy-based test"></a>
+</span>
+<span class="pt-year">2017</span>
+</span>
+<span class="pt-mark" style="--pt: 69.0;">
+<span class="pt-stack">
+<a class="pt-dot" href="/research/papers/paterson2018/"
+ aria-label="paterson2018: Using controlled numbers of real faults"
+ title="2018 &middot; Using controlled numbers of real faults"></a>
+</span>
+<span class="pt-year">2018</span>
+</span>
+<span class="pt-mark" style="--pt: 83.0;">
+<span class="pt-stack">
+<a class="pt-dot" href="/research/papers/paterson2019/"
+ aria-label="paterson2019: An empirical study on the use of defect"
+ title="2019 &middot; An empirical study on the use of defect"></a>
+</span>
+<span class="pt-year">2019</span>
+</span>
+<span class="pt-mark pt-latest pt-last" style="--pt: 100.0;">
+<span class="pt-stack">
+<a class="pt-dot" href="/research/papers/parry2026/"
+ aria-label="parry2026: Test flimsiness"
+ title="2026 &middot; Test flimsiness"></a>
+</span>
+<span class="pt-year">2026</span>
+</span>
+</div>
+</div>
+</figure>
+```
 
 Since software is often incrementally developed, my
 research on regression testing has created research automated ways to
@@ -164,12 +516,65 @@ papers such as
 and
 [@Paterson2019] [{{< iconify fa6-solid book-open >}}](/research/papers/paterson2019/index.qmd),
 show how to conduct rigorous regression testing experiments with real program faults.
+The variance that these experiments must control when they substitute mutants
+for real faults also motivates my recent work on test flimsiness
+[@Parry2026] [{{< iconify fa6-solid
+book-open >}}](/research/papers/parry2026/index.qmd), which shows that a
+mutation can itself make a test outcome non-deterministic.
 
 </div>
 
 <div id="search-based-testing">
 
 ### Search-Based Testing
+
+```{=html}
+<figure class="pub-timeline">
+<figcaption><a href="/research/papers/#category=search-based%20methods">
+<span class="pt-count">5 papers</span> &middot; search-based testing
+research since 2010</a></figcaption>
+<div class="pt-rail">
+<div class="pt-track">
+<span class="pt-line" aria-hidden="true"></span>
+<span class="pt-mark pt-first" style="--pt: 0.0;">
+<span class="pt-stack">
+<a class="pt-dot" href="/research/papers/conrad2010a/"
+ aria-label="conrad2010a: Empirically studying the role of selection"
+ title="2010 &middot; Empirically studying the role of selection"></a>
+<a class="pt-dot" href="/research/papers/kukunas2010a/"
+ aria-label="kukunas2010a: A genetic algorithm to improve Linux"
+ title="2010 &middot; A genetic algorithm to improve Linux"></a>
+</span>
+<span class="pt-year">2010</span>
+</span>
+<span class="pt-mark" style="--pt: 37.5;">
+<span class="pt-stack">
+<a class="pt-dot" href="/research/papers/mcminn2016b/"
+ aria-label="mcminn2016b: AVMf: An open-source framework"
+ title="2016 &middot; AVMf: An open-source framework"></a>
+</span>
+<span class="pt-year">2016</span>
+</span>
+<span class="pt-mark" style="--pt: 56.2;">
+<span class="pt-stack">
+<a class="pt-dot" href="/research/papers/alsharif2019/"
+ aria-label="alsharif2019: What factors make SQL test cases"
+ title="2019 &middot; What factors make SQL test cases"></a>
+</span>
+<span class="pt-year">2019</span>
+</span>
+<span class="pt-mark pt-latest pt-last" style="--pt: 100.0;">
+<span class="pt-stack">
+<a class="pt-dot" href="/research/papers/maton2026b/"
+ aria-label="maton2026b: multiplex"
+ title="2026 &middot; multiplex"></a>
+</span>
+<span class="pt-year">2026</span>
+</span>
+</div>
+</div>
+</figure>
+```
 
 Using a fitness function as a guide to a solution,
     search-based methods have shown promise in supporting many software
@@ -187,12 +592,62 @@ papers like
 [@Alsharif2019] [{{< iconify fa6-solid book-open >}}](/research/papers/alsharif2019/index.qmd)
 present experimental methodologies that effectively involve humans when studying the
 usefulness of tests that were generated by search-based techniques.
+The search-based automation that these techniques exemplify has more recently
+expanded to use large language models in place of a fitness function, as in my
+collaborative work on the multiplex framework, which enables the automatic
+generation of mutants for a program under test [@Maton2026b] [{{< iconify
+fa6-solid book-open >}}](/research/papers/maton2026b/index.qmd).
 
 </div>
 
 <div id="performance-evaluation">
 
 ### Performance Evaluation
+
+```{=html}
+<figure class="pub-timeline">
+<figcaption><a href="/research/papers/#category=performance%20analysis">
+<span class="pt-count">4 papers</span> &middot; performance evaluation
+research since 2011</a></figcaption>
+<div class="pt-rail">
+<div class="pt-track">
+<span class="pt-line" aria-hidden="true"></span>
+<span class="pt-mark pt-first" style="--pt: 0.0;">
+<span class="pt-stack">
+<a class="pt-dot" href="/research/papers/jones2011/"
+ aria-label="jones2011: Ask and you shall receive"
+ title="2011 &middot; Ask and you shall receive"></a>
+</span>
+<span class="pt-year">2011</span>
+</span>
+<span class="pt-mark" style="--pt: 25.0;">
+<span class="pt-stack">
+<a class="pt-dot" href="/research/papers/burdette2012/"
+ aria-label="burdette2012: An empirical comparison of Java remote"
+ title="2012 &middot; An empirical comparison of Java remote"></a>
+</span>
+<span class="pt-year">2012</span>
+</span>
+<span class="pt-mark" style="--pt: 75.0;">
+<span class="pt-stack">
+<a class="pt-dot" href="/research/papers/kotelyanskii2014a/"
+ aria-label="kotelyanskii2014a: Parameter tuning for search-based"
+ title="2014 &middot; Parameter tuning for search-based"></a>
+</span>
+<span class="pt-year">2014</span>
+</span>
+<span class="pt-mark pt-latest pt-last" style="--pt: 100.0;">
+<span class="pt-stack">
+<a class="pt-dot" href="/research/papers/kinneer2015/"
+ aria-label="kinneer2015: Automatically evaluating the efficiency"
+ title="2015 &middot; Automatically evaluating the efficiency"></a>
+</span>
+<span class="pt-year">2015</span>
+</span>
+</div>
+</div>
+</figure>
+```
 
 Given the importance of equipping software engineers with the
     insights and tools they need to create efficient software, my work has
@@ -215,6 +670,65 @@ automated test data generation.
 
 ### Research Methods
 
+```{=html}
+<figure class="pub-timeline">
+<figcaption>
+<span class="pt-count">7 papers</span> &middot; work on research methods
+since 2004</figcaption>
+<div class="pt-rail">
+<div class="pt-track">
+<span class="pt-line" aria-hidden="true"></span>
+<span class="pt-mark pt-first" style="--pt: 0.0;">
+<span class="pt-stack">
+<a class="pt-dot" href="/research/papers/kapfhammer2004/"
+ aria-label="kapfhammer2004: Software testing"
+ title="2004 &middot; Software testing"></a>
+</span>
+<span class="pt-year">2004</span>
+</span>
+<span class="pt-mark" style="--pt: 27.3;">
+<span class="pt-stack">
+<a class="pt-dot" href="/research/papers/kapfhammer2010/"
+ aria-label="kapfhammer2010: Regression testing"
+ title="2010 &middot; Regression testing"></a>
+</span>
+<span class="pt-year">2010</span>
+</span>
+<span class="pt-mark" style="--pt: 54.5;">
+<span class="pt-stack">
+<a class="pt-dot" href="/research/papers/kapfhammer2016/"
+ aria-label="kapfhammer2016: Hitchhikers need free vehicles! Shared"
+ title="2016 &middot; Hitchhikers need free vehicles! Shared"></a>
+<a class="pt-dot" href="/research/papers/mcminn2016/"
+ aria-label="mcminn2016: Automated search for good coverage"
+ title="2016 &middot; Automated search for good coverage"></a>
+</span>
+<span class="pt-year">2016</span>
+</span>
+<span class="pt-mark" style="--pt: 68.5;">
+<span class="pt-stack">
+<a class="pt-dot" href="/research/papers/alsharif2018a/"
+ aria-label="alsharif2018a: Generating test suites with DOMINO"
+ title="2018 &middot; Generating test suites with DOMINO"></a>
+<a class="pt-dot" href="/research/papers/alsharif2018b/"
+ aria-label="alsharif2018b: Running experiments and performing data"
+ title="2018 &middot; Running experiments and performing data"></a>
+</span>
+<span class="pt-year">2018</span>
+</span>
+<span class="pt-mark pt-latest pt-last" style="--pt: 100.0;">
+<span class="pt-stack">
+<a class="pt-dot" href="/research/papers/parry2026/"
+ aria-label="parry2026: Test flimsiness"
+ title="2026 &middot; Test flimsiness"></a>
+</span>
+<span class="pt-year">2026</span>
+</span>
+</div>
+</div>
+</figure>
+```
+
 My surveys of software testing techniques provide a starting
     point for people exploring this field, with
 [@Kapfhammer2004] [{{< iconify fa6-solid book-open >}}](/research/papers/kapfhammer2004/index.qmd)
@@ -233,6 +747,11 @@ and
 [@Alsharif2018b] [{{< iconify fa6-solid book-open >}}](/research/papers/alsharif2018b/index.qmd),
 that explain how to replicate my empirical studies of search-based testing
 techniques.
+The statistical rigor and replication practices advocated here also shape my
+recent large-scale studies of flaky tests [@Parry2026] [{{< iconify
+fa6-solid book-open >}}](/research/papers/parry2026/index.qmd), which analyze
+millions of mutant-test pairs collected from over half a million test suite
+executions across 28 Python projects.
 
 </div>
 
