@@ -19,6 +19,84 @@ quarto preview
 This starts a live preview server without running any build scripts or
 optimizations.
 
+### Preview Options for Concurrent Editing
+
+Quarto allows one preview server per project directory. The `--port` option
+selects the HTTP port, but it does not allow multiple preview processes for the
+same project. Quarto uses the following project-specific lock file:
+
+```text
+.quarto/preview/lock
+```
+
+Consequently, starting a second preview from this directory terminates the
+first one and prints `Terminating existing preview server....DONE`. Do not
+remove this lock file manually: doing so can leave multiple processes writing
+to the same Quarto state and generated files.
+
+The recommended workflow when several processes are editing this site is to
+run one shared preview server:
+
+```bash
+quarto preview --port 5556 --no-browser --no-navigate
+```
+
+The options have these meanings:
+
+- `--port 5556` selects the local HTTP port.
+- `--no-browser` prevents Quarto from opening a new browser window.
+- `--no-navigate` prevents Quarto from switching the browser to the page whose
+  source file was most recently changed.
+
+The `--no-navigate` option is important when reviewing one page while another
+process edits a different page. The current page remains open, while Quarto
+continues to rebuild changed inputs. All editing processes can use the same
+URL, `http://localhost:5556/`.
+
+Do not use `--no-watch-inputs` for this shared live-preview workflow. That
+option disables automatic input rebuilding; it is useful only when the output
+should remain unchanged until a manual render. For example:
+
+```bash
+quarto preview --port 5556 --no-browser --no-navigate \
+  --no-watch-inputs
+```
+
+If separate, isolated previews are required, use separate ordinary temporary
+copies of the project. A Git worktree is not required:
+
+```bash
+preview_dir="$(mktemp -d /tmp/www-preview.XXXXXX)"
+rsync -a --delete \
+  --exclude='.git' \
+  --exclude='.quarto' \
+  --exclude='_site' \
+  ./ "$preview_dir/"
+
+cd "$preview_dir"
+quarto preview --port 5557 --no-browser --no-navigate
+```
+
+This copy is a snapshot. Repeat the `rsync` command when the source directory
+changes if the isolated preview should receive later edits. Each copy has its
+own project directory, `.quarto` state, preview lock, and generated output.
+
+When only already-rendered HTML needs to be inspected, no Quarto preview
+process is necessary:
+
+```bash
+python -m http.server 8000 --directory _site
+```
+
+This serves the current `_site` directory without changing it. It is useful
+for inspecting a completed render, but it does not rebuild the site when QMD
+files change.
+
+Changing `--port`, selecting a Quarto `--profile`, or setting a different
+`--output-dir` does not by itself create a second project lock. Use one shared
+preview server, a separate project copy, or a separate Git worktree when two
+independent Quarto preview processes are genuinely needed.
+
 ### Full Local Build
 
 To build the site with all CSS optimizations (mimics production deployment):
