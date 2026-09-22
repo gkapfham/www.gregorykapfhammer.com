@@ -57,7 +57,7 @@ to access the full paper!
 ```{=html}
 <figure class="pub-timeline">
 <figcaption><a href="/research/papers/#category=flaky%20tests">
-<span class="pt-count">10 papers</span> on <span
+ <span class="pt-count">10 papers</span> on <span
  class="pt-category">flaky tests</span> published since <span
  class="pt-category">2020</span></a>
 </figcaption>
@@ -136,13 +136,13 @@ book-open>}}](/research/papers/parry2022/index.qmd), and a multi-source
 investigation into how developers experience the impacts and causes of flaky
 tests [@Parry2022b] [{{< iconify fa6-solid
 book-open>}}](/research/papers/parry2022b/index.qmd).
-My most recent work in this area suggests that researchers and developers
+Some of my recent work in this area suggests that researchers and developers
 should go beyond any individual metric of "good" or "bad" tests --- like test
 flakiness --- as it argues for a more holistic view of a test suite's health
 [@McMinn2025] [{{< iconify fa6-solid
 book-open>}}](/research/papers/mcminn2025/).
 
-My recent research also shows that flaky test failures often occur in clusters
+My research in this area also shows that flaky test failures often occur in clusters
 whose members share a common root cause, a phenomenon that my collaborators
 and I call systemic flakiness, since this result implies that developers can
 repair several flaky tests by addressing one underlying problem
@@ -181,8 +181,10 @@ book-open >}}](/research/papers/foster2026/index.qmd).
 ```{=html}
 <figure class="pub-timeline">
 <figcaption><a href="/research/papers/#category=database%20testing">
-<span class="pt-count">20 papers</span> &middot; database testing research
-since 2002</a></figcaption>
+ <span class="pt-count">20 papers</span> on <span
+ class="pt-category">database testing</span> published since <span
+ class="pt-category">2002</span></a>
+</figcaption>
 <div class="pt-rail">
 <div class="pt-track">
 <span class="pt-line" aria-hidden="true"></span>
@@ -374,9 +376,10 @@ book-open >}}](/research/papers/arnold2002a/index.qmd).
 
 ```{=html}
 <figure class="pub-timeline">
-<figcaption>
-<span class="pt-count">7 papers</span> &middot; web testing research since
-2015</figcaption>
+<figcaption> <span class="pt-count">7 papers</span> on <span
+ class="pt-category">web testing</span> published since <span
+ class="pt-category">2015</span>
+</figcaption>
 <div class="pt-rail">
 <div class="pt-track">
 <span class="pt-line" aria-hidden="true"></span>
@@ -466,8 +469,10 @@ book-open>}}](/research/papers/althomali2022/index.qmd).
 ```{=html}
 <figure class="pub-timeline">
 <figcaption><a href="/research/papers/#category=mutation%20testing">
-<span class="pt-count">25 papers</span> &middot; mutation testing research
-since 2000</a></figcaption>
+ <span class="pt-count">25 papers</span> on <span
+ class="pt-category">mutation testing</span> published since <span
+ class="pt-category">2000</span></a>
+</figcaption>
 <div class="pt-rail">
 <div class="pt-track">
 <span class="pt-line" aria-hidden="true"></span>
@@ -658,8 +663,10 @@ iconify fa6-solid book-open >}}](/research/papers/maton2026b/index.qmd).
 ```{=html}
 <figure class="pub-timeline">
 <figcaption><a href="/research/papers/#category=regression%20testing">
-<span class="pt-count">25 papers</span> &middot; regression testing research
-since 2001</a></figcaption>
+ <span class="pt-count">25 papers</span> on <span
+ class="pt-category">regression testing</span> published since <span
+ class="pt-category">2001</span></a>
+</figcaption>
 <div class="pt-rail">
 <div class="pt-track">
 <span class="pt-line" aria-hidden="true"></span>
@@ -808,88 +815,74 @@ since 2001</a></figcaption>
 </figure>
 ```
 
-Since software is often incrementally developed, my
-research on regression testing has created research automated ways to
-efficiently and effectively run test suites for complex programs.
-Some examples of papers that present and evaluate regression testing techniques
-for reordering and reducing test suites include
-[@Walcott2006] [{{< iconify fa6-solid book-open
->}}](/research/papers/walcott2006/index.qmd),
-[@Lin2014] [{{< iconify fa6-solid book-open
->}}](/research/papers/lin2014/index.qmd),
-and
-[@Lin2017] [{{< iconify fa6-solid book-open
-Earlier work in this line developed knapsack-based and time-aware methods
-for prioritizing test suites
-[@Alspaugh2007] [{{< iconify fa6-solid
-book-open >}}](/research/papers/alspaugh2007/index.qmd)
-[@Rummel2005a] [{{< iconify fa6-solid
-book-open >}}](/research/papers/rummel2005a/index.qmd)
-[@Bhadra2008a] [{{< iconify fa6-solid
-book-open >}}](/research/papers/bhadra2008a/index.qmd)
-[@Kapfhammer2001] [{{< iconify fa6-solid
-book-open >}}](/research/papers/kapfhammer2001/index.qmd)
-studied how to measure the coverage effectiveness of a prioritization
-[@Kapfhammer2007] [{{< iconify fa6-solid
-book-open >}}](/research/papers/kapfhammer2007/index.qmd)
-[@Smith2009a] [{{< iconify fa6-solid
-book-open >}}](/research/papers/smith2009a/index.qmd)
-compared prioritizations with synthetic test suites
-[@Williams2010] [{{< iconify fa6-solid
-book-open >}}](/research/papers/williams2010/index.qmd)
-and investigated history-based prioritization
-[@Lin2013] [{{< iconify fa6-solid
-book-open >}}](/research/papers/lin2013/index.qmd)
-My research has also reduced the cost of regression testing with call trees
-[@Smith2007b] [{{< iconify fa6-solid
-book-open >}}](/research/papers/smith2007b/index.qmd)
-cost-aware reduction
-[@Smith2009] [{{< iconify fa6-solid
-book-open >}}](/research/papers/smith2009/index.qmd)
-irreplaceable test cases
-[@Lin2012] [{{< iconify fa6-solid
-book-open >}}](/research/papers/lin2012/index.qmd)
-and methods tailored to database applications
-[@Kapfhammer2012a] [{{< iconify fa6-solid
-book-open >}}](/research/papers/kapfhammer2012a/index.qmd)
-[@Kapfhammer2007d] [{{< iconify fa6-solid
-book-open >}}](/research/papers/kapfhammer2007d/index.qmd)
-[@Alsharif2020] [{{< iconify fa6-solid
-book-open >}}](/research/papers/alsharif2020/index.qmd)
-[@Alsharif2020a] [{{< iconify fa6-solid
-book-open >}}](/research/papers/alsharif2020a/index.qmd)
-Complementing these techniques, my colleagues and I have studied the
-selection operators used by search-based prioritization
-[@Conrad2010a] [{{< iconify fa6-solid
-book-open >}}](/research/papers/conrad2010a/index.qmd)
-combined non-redundant mutation operators with test suite prioritization
-[@Just2012b] [{{< iconify fa6-solid
-book-open >}}](/research/papers/just2012b/index.qmd)
-built a framework that supports both industrial and academic work on these
-methods
-[@Kauffman2012a] [{{< iconify fa6-solid
-book-open >}}](/research/papers/kauffman2012a/index.qmd)
-and surveyed and empirically evaluated the field as a whole
-[@Kapfhammer2010] [{{< iconify fa6-solid
-book-open >}}](/research/papers/kapfhammer2010/index.qmd)
-and
-[@Kapfhammer2011] [{{< iconify fa6-solid
-book-open >}}](/research/papers/kapfhammer2011/index.qmd)
->}}](/research/papers/lin2017/index.qmd).
-Leading the way in the realistic assessment of regression testing methods,
-papers such as
+Since software is often incrementally developed, my research on regression
+testing has created research automated ways to efficiently and effectively run
+test suites for complex programs. Some examples of papers that present and
+evaluate regression testing techniques for reordering and reducing test suites
+include [@Walcott2006] [{{< iconify fa6-solid book-open
+>}}](/research/papers/walcott2006/index.qmd), [@Lin2014] [{{< iconify fa6-solid
+book-open
+>}}](/research/papers/lin2014/index.qmd), and [@Lin2017] [{{< iconify fa6-solid
+book-open
+>}}](/research/papers/lin2017/index.qmd). Earlier work in this line developed
+knapsack-based and time-aware methods for prioritizing test suites, including
+[@Alspaugh2007] [{{< iconify fa6-solid book-open
+>}}](/research/papers/alspaugh2007/index.qmd), [@Rummel2005a] [{{< iconify
+fa6-solid book-open
+>}}](/research/papers/rummel2005a/index.qmd), [@Bhadra2008a] [{{< iconify
+fa6-solid book-open
+>}}](/research/papers/bhadra2008a/index.qmd), and [@Kapfhammer2001] [{{< iconify
+fa6-solid book-open
+>}}](/research/papers/kapfhammer2001/index.qmd). Papers such as
+[@Kapfhammer2007] [{{< iconify fa6-solid book-open
+>}}](/research/papers/kapfhammer2007/index.qmd), and [@Smith2009a] [{{< iconify
+fa6-solid book-open
+>}}](/research/papers/smith2009a/index.qmd) studied how to measure the coverage
+effectiveness of a prioritization, [@Williams2010] [{{< iconify fa6-solid
+book-open
+>}}](/research/papers/williams2010/index.qmd) compared prioritizations with
+synthetic test suites, and [@Lin2013] [{{< iconify fa6-solid book-open
+>}}](/research/papers/lin2013/index.qmd) investigated history-based
+prioritization. My research has also reduced the cost of regression testing with
+call trees [@Smith2007b] [{{< iconify fa6-solid book-open
+>}}](/research/papers/smith2007b/index.qmd), cost-aware reduction [@Smith2009]
+[{{< iconify fa6-solid book-open
+>}}](/research/papers/smith2009/index.qmd), irreplaceable test cases [@Lin2012]
+[{{< iconify fa6-solid book-open
+>}}](/research/papers/lin2012/index.qmd), and methods tailored to database
+applications [@Kapfhammer2012a] [{{< iconify fa6-solid book-open
+>}}](/research/papers/kapfhammer2012a/index.qmd), [@Kapfhammer2007d] [{{<
+iconify fa6-solid book-open
+>}}](/research/papers/kapfhammer2007d/index.qmd), [@Alsharif2020] [{{< iconify
+fa6-solid book-open
+>}}](/research/papers/alsharif2020/index.qmd), and [@Alsharif2020a] [{{< iconify
+fa6-solid book-open
+>}}](/research/papers/alsharif2020a/index.qmd). Complementing these techniques,
+my colleagues and I have studied the selection operators used by search-based
+prioritization [@Conrad2010a] [{{< iconify fa6-solid book-open
+>}}](/research/papers/conrad2010a/index.qmd), combined non-redundant mutation
+operators with test suite prioritization [@Just2012b] [{{< iconify fa6-solid
+book-open
+>}}](/research/papers/just2012b/index.qmd), built a framework that supports both
+industrial and academic work on these methods [@Kauffman2012a] [{{< iconify
+fa6-solid book-open
+>}}](/research/papers/kauffman2012a/index.qmd), and surveyed and empirically
+evaluated the field as a whole [@Kapfhammer2010] [{{< iconify fa6-solid
+book-open
+>}}](/research/papers/kapfhammer2010/index.qmd), [@Kapfhammer2011] [{{< iconify
+fa6-solid book-open
+>}}](/research/papers/kapfhammer2011/index.qmd). Leading the way in the
+realistic assessment of regression testing methods, papers such as
 [@Paterson2018] [{{< iconify fa6-solid book-open
->}}](/research/papers/paterson2018/index.qmd)
-and
-[@Paterson2019] [{{< iconify fa6-solid book-open
->}}](/research/papers/paterson2019/index.qmd),
-show how to conduct rigorous regression testing experiments with real program
-faults.
-The variance that these experiments must control when they substitute mutants
-for real faults also motivates my recent work on test flimsiness
-[@Parry2026] [{{< iconify fa6-solid
-book-open >}}](/research/papers/parry2026/index.qmd), which shows that a
-mutation can itself make a test outcome non-deterministic.
+>}}](/research/papers/paterson2018/index.qmd) and [@Paterson2019] [{{< iconify
+fa6-solid book-open
+>}}](/research/papers/paterson2019/index.qmd), show how to conduct rigorous
+regression testing experiments with real program faults. The variance that these
+experiments must control when they substitute mutants for real faults also
+motivates my recent work on test flimsiness [@Parry2026] [{{< iconify fa6-solid
+book-open
+>}}](/research/papers/parry2026/index.qmd) which shows that a mutation can
+itself make a test outcome non-deterministic.
 
 </div>
 
@@ -900,8 +893,10 @@ mutation can itself make a test outcome non-deterministic.
 ```{=html}
 <figure class="pub-timeline">
 <figcaption><a href="/research/papers/#category=search-based%20methods">
-<span class="pt-count">9 papers</span> &middot; search-based testing
-research since 2002</a></figcaption>
+ <span class="pt-count">9 papers</span> on <span
+ class="pt-category">search-based methods</span> published since <span
+ class="pt-category">2002</span></a>
+</figcaption>
 <div class="pt-rail">
 <div class="pt-track">
 <span class="pt-line" aria-hidden="true"></span>
@@ -1015,8 +1010,10 @@ fa6-solid book-open >}}](/research/papers/maton2026b/index.qmd).
 ```{=html}
 <figure class="pub-timeline">
 <figcaption><a href="/research/papers/#category=performance%20analysis">
-<span class="pt-count">21 papers</span> &middot; performance evaluation
-research since 2002</a></figcaption>
+ <span class="pt-count">21 papers</span> on <span
+ class="pt-category">performance analysis</span> published since <span
+ class="pt-category">2002</span></a>
+</figcaption>
 <div class="pt-rail">
 <div class="pt-track">
 <span class="pt-line" aria-hidden="true"></span>
@@ -1192,9 +1189,10 @@ book-open >}}](/research/papers/kinneer2015a/index.qmd).
 
 ```{=html}
 <figure class="pub-timeline">
-<figcaption>
-<span class="pt-count">11 papers</span> &middot; work on research methods
-since 2004</figcaption>
+<figcaption> <span class="pt-count">11 papers</span> on <span
+ class="pt-category">research methods</span> published since <span
+ class="pt-category">2004</span>
+</figcaption>
 <div class="pt-rail">
 <div class="pt-track">
 <span class="pt-line" aria-hidden="true"></span>
