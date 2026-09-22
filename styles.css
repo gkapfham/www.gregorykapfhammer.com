@@ -1353,6 +1353,11 @@ input.search.form-control {
   color: #e65100;
 }
 
+.pub-timeline .pt-category {
+  font-weight: 600;
+  color: #e65100;
+}
+
 .pub-timeline figcaption a {
   color: inherit;
   text-decoration: none;
@@ -1378,6 +1383,14 @@ input.search.form-control {
 
 .pt-career .pt-year {
   font-size: 0.7rem;
+}
+
+/* The generator marks a timeline .pt-tall once one of its years holds six
+   or more papers, because those stacks need a taller rail. No timeline needs
+   this yet, so it is insurance against a growing research area. */
+
+.pt-tall .pt-rail {
+  height: 6.5rem;
 }
 
 .pt-track {
@@ -1491,6 +1504,10 @@ body.quarto-dark .pub-timeline figcaption a:focus-visible {
   }
 
   .pt-career .pt-rail {
+    height: 7.3rem;
+  }
+
+  .pt-tall .pt-rail {
     height: 7.3rem;
   }
 
