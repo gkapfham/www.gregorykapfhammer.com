@@ -57,8 +57,10 @@ to access the full paper!
 ```{=html}
 <figure class="pub-timeline">
 <figcaption><a href="/research/papers/#category=flaky%20tests">
-<span class="pt-count">10 papers</span> &middot; flaky test research since
-2020</a></figcaption>
+<span class="pt-count">10 papers</span> on <span
+ class="pt-category">flaky tests</span> published since <span
+ class="pt-category">2020</span></a>
+</figcaption>
 <div class="pt-rail">
 <div class="pt-track">
 <span class="pt-line" aria-hidden="true"></span>
@@ -464,7 +466,7 @@ book-open>}}](/research/papers/althomali2022/index.qmd).
 ```{=html}
 <figure class="pub-timeline">
 <figcaption><a href="/research/papers/#category=mutation%20testing">
-<span class="pt-count">26 papers</span> &middot; mutation testing research
+<span class="pt-count">25 papers</span> &middot; mutation testing research
 since 2000</a></figcaption>
 <div class="pt-rail">
 <div class="pt-track">
@@ -483,14 +485,6 @@ since 2000</a></figcaption>
  aria-label="haddox2002: An approach for understanding and testing"
  title="2002 &middot; An approach for understanding and testing"></a>
 </span>
-</span>
-<span class="pt-mark" style="--pt: 19.2;">
-<span class="pt-stack">
-<a class="pt-dot" href="/research/papers/rummel2005a/"
- aria-label="rummel2005a: Towards the prioritization of regression"
- title="2005 &middot; Towards the prioritization of regression"></a>
-</span>
-<span class="pt-year">2005</span>
 </span>
 <span class="pt-mark" style="--pt: 38.5;">
 <span class="pt-stack">
@@ -906,7 +900,7 @@ mutation can itself make a test outcome non-deterministic.
 ```{=html}
 <figure class="pub-timeline">
 <figcaption><a href="/research/papers/#category=search-based%20methods">
-<span class="pt-count">12 papers</span> &middot; search-based testing
+<span class="pt-count">9 papers</span> &middot; search-based testing
 research since 2002</a></figcaption>
 <div class="pt-rail">
 <div class="pt-track">
@@ -921,15 +915,9 @@ research since 2002</a></figcaption>
 </span>
 <span class="pt-mark" style="--pt: 50.0;">
 <span class="pt-stack">
-<a class="pt-dot" href="/research/papers/conrad2010a/"
- aria-label="conrad2010a: Empirically studying the role of selection"
- title="2010 &middot; Empirically studying the role of selection"></a>
 <a class="pt-dot" href="/research/papers/kukunas2010a/"
  aria-label="kukunas2010a: A genetic algorithm to improve Linux"
  title="2010 &middot; A genetic algorithm to improve Linux"></a>
-<a class="pt-dot" href="/research/papers/williams2010/"
- aria-label="williams2010: Using synthetic test suites to empirically"
- title="2010 &middot; Using synthetic test suites to empirically"></a>
 </span>
 <span class="pt-year">2010</span>
 </span>
@@ -938,13 +926,6 @@ research since 2002</a></figcaption>
 <a class="pt-dot" href="/research/papers/yalan2011/"
  aria-label="yalan2011: Empirically identifying the best genetic"
  title="2011 &middot; Empirically identifying the best genetic"></a>
-</span>
-</span>
-<span class="pt-mark" style="--pt: 62.5;">
-<span class="pt-stack">
-<a class="pt-dot" href="/research/papers/lin2012/"
- aria-label="lin2012: Reducing the cost of regression testing"
- title="2012 &middot; Reducing the cost of regression testing"></a>
 </span>
 </span>
 <span class="pt-mark" style="--pt: 75.0;">
@@ -1034,7 +1015,7 @@ fa6-solid book-open >}}](/research/papers/maton2026b/index.qmd).
 ```{=html}
 <figure class="pub-timeline">
 <figcaption><a href="/research/papers/#category=performance%20analysis">
-<span class="pt-count">23 papers</span> &middot; performance evaluation
+<span class="pt-count">21 papers</span> &middot; performance evaluation
 research since 2002</a></figcaption>
 <div class="pt-rail">
 <div class="pt-track">
@@ -1080,9 +1061,6 @@ research since 2002</a></figcaption>
 <a class="pt-dot" href="/research/papers/alspaugh2007/"
  aria-label="alspaugh2007: Efficient time-aware prioritization"
  title="2007 &middot; Efficient time-aware prioritization"></a>
-<a class="pt-dot" href="/research/papers/kapfhammer2007d/"
- aria-label="kapfhammer2007d: A comprehensive framework for testing"
- title="2007 &middot; A comprehensive framework for testing"></a>
 </span>
 </span>
 <span class="pt-mark" style="--pt: 27.3;">
@@ -1157,14 +1135,7 @@ research since 2002</a></figcaption>
  aria-label="lin2017: Empirically evaluating greedy-based test"
  title="2017 &middot; Empirically evaluating greedy-based test"></a>
 </span>
-</span>
-<span class="pt-mark" style="--pt: 81.8;">
-<span class="pt-stack">
-<a class="pt-dot" href="/research/papers/alsharif2020/"
- aria-label="alsharif2020: STICCER"
- title="2020 &middot; STICCER"></a>
-</span>
-<span class="pt-year">2020</span>
+<span class="pt-year">2017</span>
 </span>
 <span class="pt-mark pt-latest pt-last" style="--pt: 100.0;">
 <span class="pt-stack">
