@@ -34,8 +34,8 @@ observations, statistically analyze and visualize the data sets, and draw
 conclusions based on the results. Each research project focuses on the
 development, evaluation, and maintenance of [software](/software/) artifacts
 that can be used in both empirical studies and real-world practice by
-undergraduate and graduate students, software engineers, and computer
-scientists in both academia and industry.
+undergraduate and graduate students, software engineers, data scientists, and
+computer scientists in both academia and industry.
 
 In addition to supporting my professional [service](/service/), my research
 results in award-winning and frequently cited research
