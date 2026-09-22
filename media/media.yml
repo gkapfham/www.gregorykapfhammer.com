@@ -1,3 +1,23 @@
+- title: <a href="https://se-radio.net/2026/07/se-radio-727-jeroen-janssens-and-thijs-nieuwdorp-on-using-polars/">\"Jeroen Janssens and Thijs Nieuwdorp on Using Polars\"</a>
+  date: "2026-07-02"
+  date-format: short
+  description: "Host"
+  venue: <a href="https://www.se-radio.net/">Software Engineering Radio</a>
+- title: <a href="https://se-radio.net/2026/06/se-radio-726-scott-kingsley-on-the-swagger-ecosystem/">\"Scott Kingsley on the Swagger Ecosystem\"</a>
+  date: "2026-06-26"
+  date-format: short
+  description: "Host"
+  venue: <a href="https://www.se-radio.net/">Software Engineering Radio</a>
+- title: <a href="https://se-radio.net/2026/06/se-radio-725-danny-yang-and-sam-goldman-on-the-pyrefly-type-checker/">\"Danny Yang and Sam Goldman on the Pyrefly Type Checker\"</a>
+  date: "2026-06-18"
+  date-format: short
+  description: "Host"
+  venue: <a href="https://www.se-radio.net/">Software Engineering Radio</a>
+- title: <a href="https://se-radio.net/2026/06/se-radio-723-dave-airlie-on-linux-kernel-maintenance/">\"Dave Airlie on Linux Kernel Maintenance\"</a>
+  date: "2026-06-03"
+  date-format: short
+  description: "Host"
+  venue: <a href="https://www.se-radio.net/">Software Engineering Radio</a>
 - title: <a href="https://overturemaps.org/blog/2025/overture-maps-explained-on-software-engineering-radio/">\"Overture Maps Explained on Software Engineering Radio\"</a>
   date: "2025-12-11"
   date-format: short
