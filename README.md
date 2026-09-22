@@ -197,16 +197,16 @@ in `_tools/verify-timelines.py` re-derives what every timeline must contain from
 the front matter of the papers and the presentations, so it fails whenever an
 entry is added, removed, or re-dated without the timeline being regenerated.
 
-It checks that each timeline draws one dot per expected entry and no others, that
-every dot links to an entry that exists and carries that entry's year, that the
-marks advance with the years and span the whole axis, that the caption counts the
-entries and names the first year, that the axis labels cover the first and last
-year, that a caption links a listing filter only when the rail matches that
-filter exactly, that the raw HTML stays inside 80 columns, and that Quarto did
-not turn the nested HTML into a code block.
+It checks that each timeline draws one dot per expected entry and no others,
+that every dot links to an entry that exists and carries that entry's year,
+that the marks advance with the years and span the whole axis, that the caption
+counts the entries and names the first year, that the axis labels cover the
+first and last year, that a caption links a listing filter only when the rail
+matches that filter exactly, that the raw HTML stays inside 80 columns, and that
+Quarto did not turn the nested HTML into a code block.
 
 ```bash
-# verify every timeline: the research overview, the papers, and the presentations
+# verify every timeline: the overview, the papers, and the presentations
 uv run _tools/verify-timelines.py
 
 # verify a single page
