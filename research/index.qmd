@@ -891,9 +891,9 @@ itself make a test outcome non-deterministic.
 
 </div>
 
-<div id="search-based-testing">
+<div id="search-based-methods">
 
-### Search-Based Testing
+### Search-Based Methods
 
 ```{=html}
 <figure class="pub-timeline">
