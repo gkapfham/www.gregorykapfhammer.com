@@ -1328,3 +1328,141 @@ input.search.form-control {
 }
 
 /* }}} */
+
+/* Research Publication Timeline {{{ */
+
+/* A compact, theme-aware timeline that shows when the papers in a
+   research area were published. Each year sits on a rail in proportion
+   to its distance from the first and last year, and the stacked dots
+   above a year count the papers that were published in it. Labels use
+   IBM Plex Mono, which the site already downloads as the monofont. See
+   the "Flaky Tests" section of research/index.qmd for the markup. */
+
+.pub-timeline {
+  margin: 0.75rem 0 1.5rem 0.25rem;
+}
+
+.pub-timeline figcaption {
+  margin-bottom: 0.4rem;
+  font-size: 0.8rem;
+  color: #6c757d;
+}
+
+.pub-timeline .pt-count {
+  font-weight: 600;
+  color: #e65100;
+}
+
+.pt-rail {
+  position: relative;
+  height: 4.6rem;
+}
+
+.pt-track {
+  position: absolute;
+  top: 0;
+  right: 1.6rem;
+  bottom: 0;
+  left: 1.6rem;
+}
+
+.pt-line {
+  position: absolute;
+  right: 0;
+  bottom: 1.5rem;
+  left: 0;
+  height: 1px;
+  background-color: #dee2e6;
+}
+
+.pt-mark {
+  position: absolute;
+  bottom: 1.5rem;
+  left: calc(var(--pt) * 1%);
+  width: 0;
+  height: 0;
+}
+
+.pt-stack {
+  position: absolute;
+  bottom: 0.3rem;
+  left: 0;
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 0.18rem;
+  align-items: center;
+  transform: translateX(-50%);
+}
+
+.pt-dot {
+  display: block;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: #e65100;
+  opacity: 0.85;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.pt-dot:hover,
+.pt-dot:focus-visible {
+  opacity: 1;
+  transform: scale(1.35);
+}
+
+.pt-year {
+  position: absolute;
+  top: 0.4rem;
+  left: 0;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.75rem;
+  line-height: 1;
+  color: #6c757d;
+  white-space: nowrap;
+  transform: translateX(-50%);
+}
+
+.pt-latest .pt-year {
+  font-weight: 600;
+  color: #e65100;
+}
+
+.pt-latest .pt-dot:last-child {
+  box-shadow: 0 0 0 3px rgba(230, 81, 0, 0.18);
+}
+
+/* dark mode */
+
+body.quarto-dark .pub-timeline figcaption,
+body.quarto-dark .pt-year {
+  color: #9e9e9e;
+}
+
+body.quarto-dark .pt-line {
+  background-color: #3d3d3d;
+}
+
+body.quarto-dark .pt-dot {
+  background-color: #ef6c00;
+}
+
+body.quarto-dark .pt-latest .pt-year {
+  color: #ef6c00;
+}
+
+body.quarto-dark .pt-latest .pt-dot:last-child {
+  box-shadow: 0 0 0 3px rgba(239, 108, 0, 0.25);
+}
+
+@media (max-width: 576px) {
+  .pt-track {
+    right: 1.1rem;
+    left: 1.1rem;
+  }
+
+  .pt-year {
+    font-size: 0.65rem;
+  }
+}
+
+/* }}} */
