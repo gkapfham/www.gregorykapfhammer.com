@@ -53,9 +53,12 @@ from rich.text import Text
 
 REPO_ROOT = pathlib.Path(__file__).resolve().parent.parent
 MAX_LINE = 80
-POSITION_SANITY = 25.0
+# a rail with many year marks spreads tight clusters apart, so a mark
+# may legitimately sit well away from its proportional position
+POSITION_SANITY = 40.0
 MIN_LABELS = 2
 MIN_LABEL_GAP_PERCENT = 4.0
+CAPTION_SPANS = 2
 AXIS_END_TOLERANCE = 0.05
 AXIS_MAX_PERCENT = 100.0
 
@@ -90,6 +93,7 @@ DOT_RE = re.compile(
 CAPTION_RE = re.compile(r"<figcaption>(.*?)</figcaption>", re.S)
 COUNT_RE = re.compile(r'<span class="pt-count">(\d+) (?:papers|presentations)</span>')
 SINCE_RE = re.compile(r"since(?:\s*<span[^>]*>)?\s*(\d{4})")
+TIMELINE_ICON = "fa6-solid:timeline"
 CATEGORY_SPAN_RE = re.compile(
     '<span\\s+class="pt-category">([^<]*)</span>', re.S
 )
@@ -98,18 +102,21 @@ AUTHOR_RE = re.compile(r"^author:\s*(.*?)(?=\n[a-z-]+: |\n---)", re.S | re.M)
 
 # What each area timeline is supposed to cover. "category" means every paper
 # in that listing category, "authors" means the papers written with those
-# co-authors, and "cited" adds the papers that the paragraph cites. Only a
-# rule that is a bare category may link its caption to the listing filter,
-# because a link promises exactly the set that the filter shows.
+# co-authors, and "cited" adds the papers that the paragraph cites. Every
+# area sets "cited" so that a paper the paragraph describes always has a dot,
+# even when the three-tag cap keeps that paper out of the area's category.
+# Only a rail that draws exactly the papers of a listing filter may link its
+# caption to that filter, because a link promises exactly the set that the
+# filter shows.
 AREA_RULES = {
-    "Flaky Tests": {"category": "flaky tests"},
-    "Database Testing": {"category": "database testing"},
-    "Web Testing": {"authors": ("Althomali", "Walsh")},
-    "Mutation Testing": {"category": "mutation testing"},
-    "Regression Testing": {"category": "regression testing"},
-    "Search-Based Testing": {"category": "search-based methods"},
-    "Performance Evaluation": {"category": "performance analysis"},
-    "Research Methods": {"category": "human study", "cited": True},
+    "Flaky Tests": {"category": "flaky tests", "cited": True},
+    "Database Testing": {"category": "database testing", "cited": True},
+    "Web Testing": {"authors": ("Althomali", "Walsh"), "cited": True},
+    "Mutation Testing": {"category": "mutation testing", "cited": True},
+    "Regression Testing": {"category": "regression testing", "cited": True},
+    "Search-Based Methods": {"category": "search-based methods", "cited": True},
+    "Performance Evaluation": {"category": "performance analysis", "cited": True},
+    "Research Methods": {"category": "research methods", "cited": True},
 }
 
 
@@ -134,7 +141,6 @@ class Figure:
     block: str
     entries: list[Entry]
     category: str | None = None
-    link_allowed: bool = False
     problems: list[str] = field(default_factory=list)
     dots: int = 0
     marks: int = 0
@@ -186,18 +192,21 @@ def load_entries(directory: pathlib.Path) -> list[Entry]:
     return entries
 
 
-def load_categories(directory: pathlib.Path) -> set[str]:
-    """Collect every category that the papers declare."""
-    categories = set()
+def load_category_members(directory: pathlib.Path) -> dict[str, set[str]]:
+    """Map every category that the papers declare to the papers that carry it."""
+    members: dict[str, set[str]] = {}
     for child in sorted(path for path in directory.iterdir() if path.is_dir()):
         source = child / "index.qmd"
         if not source.is_file():
             continue
         match = CATEGORY_RE.search(source.read_text(encoding="utf-8"))
-        if match:
-            for item in match.group(1).strip("[]").split(","):
-                categories.add(item.strip())
-    return categories
+        if not match:
+            continue
+        for item in match.group(1).strip("[]").split(","):
+            name = item.strip()
+            if name:
+                members.setdefault(name, set()).add(child.name)
+    return members
 
 
 def relative_path(page: pathlib.Path) -> str:
@@ -205,25 +214,35 @@ def relative_path(page: pathlib.Path) -> str:
     return str(page.relative_to(REPO_ROOT))
 
 
+def rule_members(rule: dict, papers: Sequence[Entry]) -> set[str]:
+    """Return the slugs that a rule's category or author clause selects."""
+    slugs: set[str] = set()
+    if "category" in rule:
+        name = rule["category"]
+        slugs |= {entry.slug for entry in papers if name in entry.categories}
+    if "authors" in rule:
+        names = rule["authors"]
+        slugs |= {
+            entry.slug
+            for entry in papers
+            if any(name in entry.authors for name in names)
+        }
+    return slugs
+
+
 def area_entries(
     heading: str,
     body: str,
     papers: Sequence[Entry],
     by_identifier: dict[str, Entry],
-) -> tuple[list[Entry], str | None]:
-    """Return the entries and the category that the rail may link to."""
+) -> list[Entry]:
+    """Return the entries that the rail for one area must draw."""
     rule = AREA_RULES.get(heading)
     if not rule:
-        return [], None
-    found: list[Entry] = []
-    if "category" in rule:
-        name = rule["category"]
-        found += [entry for entry in papers if name in entry.categories]
-    if "authors" in rule:
-        names = rule["authors"]
-        found += [
-            entry for entry in papers if any(name in entry.authors for name in names)
-        ]
+        # no rule: the caller reports this, so return a plain empty list
+        return []
+    members = rule_members(rule, papers)
+    found: list[Entry] = [entry for entry in papers if entry.slug in members]
     if rule.get("cited"):
         keys = re.findall(r"@([A-Z][A-Za-z0-9]+)", body)
         found += [by_identifier[key] for key in keys if key in by_identifier]
@@ -234,32 +253,48 @@ def area_entries(
         if entry.slug not in seen:
             seen.add(entry.slug)
             entries.append(entry)
-    pure = set(rule) == {"category"}
-    return entries, rule["category"] if pure else None
+    return entries
+
+
+def page_sections(text: str) -> list[str]:
+    """Split the research overview into its anchored sections."""
+    parts = re.split(r'^<div id="[^"]+">[ \t]*$', text, flags=re.M)
+    return [part for part in parts[1:] if "### " in part]
 
 
 def area_figures(page: pathlib.Path, papers: Sequence[Entry]) -> list[Figure]:
-    """Build one figure expectation per research area."""
+    """Build one figure expectation per research area.
+
+    The sections are delimited by their `<div id="...">` anchors rather than
+    by a blank line before the closing `</div>`, because a paragraph may sit
+    directly above that tag.
+    """
     text = page.read_text(encoding="utf-8")
     by_identifier = {entry.identifier: entry for entry in papers}
     figures = []
-    pattern = r"### ([^\n]+)\n\n(.*?)(?=\n\n</div>)"
-    for match in re.finditer(pattern, text, re.S):
-        heading, body = match.group(1), match.group(2)
-        blocks = BLOCK_RE.findall(body)
+    for part in page_sections(text):
+        heading_match = re.search(r"^### (.+)$", part, re.M)
+        if not heading_match:
+            continue
+        heading = heading_match.group(1).strip()
+        blocks = BLOCK_RE.findall(part)
         block = blocks[0] if blocks else ""
-        entries, allowed = area_entries(heading, body, papers, by_identifier)
+        entries = area_entries(heading, part, papers, by_identifier)
         link = LINK_RE.search(block)
-        figures.append(
+        figure = (
             Figure(
                 page=relative_path(page),
                 label=heading,
                 block=block,
                 entries=entries,
                 category=link.group(1) if link else None,
-                link_allowed=allowed is not None,
             )
         )
+        if heading not in AREA_RULES:
+            figure.problems.append(
+                f"{heading} has no membership rule in AREA_RULES"
+            )
+        figures.append(figure)
     return figures
 
 
@@ -310,10 +345,22 @@ def check_caption(figure: Figure) -> None:
         figure.problems.append(
             f"the caption says {count.group(1)} entries, not {figure.expected_dots}"
         )
-    spans = CATEGORY_SPAN_RE.findall(text)
-    if len(spans) != 2:
+    icons = re.findall(r'<iconify-icon[^>]*icon="([^"]+)"', caption.group(0))
+    if icons != [TIMELINE_ICON]:
         figure.problems.append(
-            f"the caption has {len(spans)} pt-category spans, not 2"
+            f"the caption icons are {icons}, expected only {TIMELINE_ICON}"
+        )
+    icon_at = caption.group(0).find("<iconify-icon")
+    link_at = caption.group(0).find("<a href=")
+    if link_at != -1 and icon_at > link_at:
+        figure.problems.append(
+            "the timeline icon sits inside the caption link; it must come"
+            " before the link so that it is not clickable"
+        )
+    spans = CATEGORY_SPAN_RE.findall(text)
+    if len(spans) != CAPTION_SPANS:
+        figure.problems.append(
+            f"the caption has {len(spans)} pt-category spans, not {CAPTION_SPANS}"
         )
     elif not spans[0].strip():
         figure.problems.append("the caption does not name the area")
@@ -445,18 +492,25 @@ def check_targets(figure: Figure) -> None:
             figure.problems.append(f"{href} does not hold an index.qmd")
 
 
-def check_category(figure: Figure, categories: set[str]) -> None:
-    """Check that a linked caption names a category that exists."""
+def check_category(figure: Figure, members: dict[str, set[str]]) -> None:
+    """Check that a linked caption names a filter that the rail matches.
+
+    A caption may only link a listing filter when the rail draws exactly the
+    papers in that filter; otherwise the caption count and the filtered
+    listing would disagree.
+    """
     if not figure.category:
         return
-    raw = figure.category.split("#category=")[-1]
-    name = raw.replace("%20", " ")
-    if name not in categories:
+    name = figure.category.partition("#category=")[2].replace("%20", " ")
+    if name not in members:
         figure.problems.append(f"the caption links to unknown category {name}")
-    if not figure.link_allowed:
+        return
+    in_filter = members[name]
+    rail = {entry.slug for entry in figure.entries}
+    if rail != in_filter:
         figure.problems.append(
-            "the caption links a listing filter, but the rail covers"
-            " more than that filter, so the count and the link disagree"
+            f"the caption links a filter with {len(in_filter)} papers,"
+            f" but the rail draws {len(rail)}"
         )
 
 
@@ -609,7 +663,7 @@ def main(argv: Sequence[str] | None = None) -> int:
     args = build_parser().parse_args(argv)
     papers_dir = REPO_ROOT / "research" / "papers"
     figures = collect(args.target)
-    categories = load_categories(papers_dir)
+    members = load_category_members(papers_dir)
 
     for figure in figures:
         check_structure(figure)
@@ -620,7 +674,7 @@ def main(argv: Sequence[str] | None = None) -> int:
         check_labels(figure)
         check_dots(figure)
         check_targets(figure)
-        check_category(figure, categories)
+        check_category(figure, members)
 
     problems = []
     if args.site:
