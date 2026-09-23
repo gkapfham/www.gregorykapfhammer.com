@@ -701,10 +701,9 @@ iconify fa6-solid book-open >}}](/research/papers/maton2026b/index.qmd).
 ```{=html}
 <figure class="pub-timeline">
 <figcaption><iconify-icon inline icon="fa6-solid:timeline"></iconify-icon>
-<a href="/research/papers/#category=regression%20testing">
- <span class="pt-count">24 papers</span> on <span
+ <span class="pt-count">26 papers</span> on <span
  class="pt-category">regression testing</span> published since <span
- class="pt-category">2001</span></a>
+ class="pt-category">2001</span>
 </figcaption>
 <div class="pt-rail">
 <div class="pt-track">
@@ -717,22 +716,21 @@ iconify fa6-solid book-open >}}](/research/papers/maton2026b/index.qmd).
 </span>
 <span class="pt-year">2001</span>
 </span>
-<span class="pt-mark" style="--pt: 10.4;">
+<span class="pt-mark" style="--pt: 7.5;">
 <span class="pt-stack">
 <a class="pt-dot" href="/research/papers/rummel2005a/"
  aria-label="rummel2005a: Towards the prioritization of regression"
  title="2005 &middot; Towards the prioritization of regression"></a>
 </span>
 </span>
-<span class="pt-mark" style="--pt: 17.3;">
+<span class="pt-mark" style="--pt: 14.2;">
 <span class="pt-stack">
 <a class="pt-dot" href="/research/papers/walcott2006/"
  aria-label="walcott2006: Time-aware test suite prioritization"
  title="2006 &middot; Time-aware test suite prioritization"></a>
 </span>
-<span class="pt-year">2006</span>
 </span>
-<span class="pt-mark" style="--pt: 24.2;">
+<span class="pt-mark" style="--pt: 20.8;">
 <span class="pt-stack">
 <a class="pt-dot" href="/research/papers/alspaugh2007/"
  aria-label="alspaugh2007: Efficient time-aware prioritization"
@@ -747,15 +745,16 @@ iconify fa6-solid book-open >}}](/research/papers/maton2026b/index.qmd).
  aria-label="smith2007b: Test suite reduction and prioritization"
  title="2007 &middot; Test suite reduction and prioritization"></a>
 </span>
+<span class="pt-year">2007</span>
 </span>
-<span class="pt-mark" style="--pt: 31.1;">
+<span class="pt-mark" style="--pt: 27.4;">
 <span class="pt-stack">
 <a class="pt-dot" href="/research/papers/bhadra2008a/"
  aria-label="bhadra2008a: Prioritizing test suites by finding"
  title="2008 &middot; Prioritizing test suites by finding"></a>
 </span>
 </span>
-<span class="pt-mark" style="--pt: 37.9;">
+<span class="pt-mark" style="--pt: 34.0;">
 <span class="pt-stack">
 <a class="pt-dot" href="/research/papers/smith2009/"
  aria-label="smith2009: An empirical study of incorporating cost"
@@ -764,9 +763,8 @@ iconify fa6-solid book-open >}}](/research/papers/maton2026b/index.qmd).
  aria-label="smith2009a: Interactive coverage effectiveness"
  title="2009 &middot; Interactive coverage effectiveness"></a>
 </span>
-<span class="pt-year">2009</span>
 </span>
-<span class="pt-mark" style="--pt: 44.8;">
+<span class="pt-mark" style="--pt: 40.6;">
 <span class="pt-stack">
 <a class="pt-dot" href="/research/papers/conrad2010a/"
  aria-label="conrad2010a: Empirically studying the role of selection"
@@ -778,15 +776,16 @@ iconify fa6-solid book-open >}}](/research/papers/maton2026b/index.qmd).
  aria-label="williams2010: Using synthetic test suites to empirically"
  title="2010 &middot; Using synthetic test suites to empirically"></a>
 </span>
+<span class="pt-year">2010</span>
 </span>
-<span class="pt-mark" style="--pt: 51.7;">
+<span class="pt-mark" style="--pt: 47.2;">
 <span class="pt-stack">
 <a class="pt-dot" href="/research/papers/kapfhammer2011/"
  aria-label="kapfhammer2011: Empirically evaluating regression testing"
  title="2011 &middot; Empirically evaluating regression testing"></a>
 </span>
 </span>
-<span class="pt-mark" style="--pt: 58.6;">
+<span class="pt-mark" style="--pt: 53.8;">
 <span class="pt-stack">
 <a class="pt-dot" href="/research/papers/just2012b/"
  aria-label="just2012b: Using non-redundant mutation operators"
@@ -801,51 +800,61 @@ iconify fa6-solid book-open >}}](/research/papers/maton2026b/index.qmd).
  aria-label="lin2012: Reducing the cost of regression testing"
  title="2012 &middot; Reducing the cost of regression testing"></a>
 </span>
-<span class="pt-year">2012</span>
 </span>
-<span class="pt-mark" style="--pt: 65.5;">
+<span class="pt-mark" style="--pt: 60.4;">
 <span class="pt-stack">
 <a class="pt-dot" href="/research/papers/lin2013/"
  aria-label="lin2013: History-based test case prioritization"
  title="2013 &middot; History-based test case prioritization"></a>
 </span>
+<span class="pt-year">2013</span>
 </span>
-<span class="pt-mark" style="--pt: 72.4;">
+<span class="pt-mark" style="--pt: 67.0;">
 <span class="pt-stack">
 <a class="pt-dot" href="/research/papers/lin2014/"
  aria-label="lin2014: Test suite reduction methods that decrease"
  title="2014 &middot; Test suite reduction methods that decrease"></a>
 </span>
 </span>
-<span class="pt-mark" style="--pt: 79.3;">
+<span class="pt-mark" style="--pt: 73.6;">
 <span class="pt-stack">
 <a class="pt-dot" href="/research/papers/lin2017/"
  aria-label="lin2017: Empirically evaluating greedy-based test"
  title="2017 &middot; Empirically evaluating greedy-based test"></a>
 </span>
-<span class="pt-year">2017</span>
 </span>
-<span class="pt-mark" style="--pt: 86.2;">
+<span class="pt-mark" style="--pt: 80.2;">
 <span class="pt-stack">
 <a class="pt-dot" href="/research/papers/paterson2018/"
  aria-label="paterson2018: Using controlled numbers of real faults"
  title="2018 &middot; Using controlled numbers of real faults"></a>
 </span>
+<span class="pt-year">2018</span>
 </span>
-<span class="pt-mark" style="--pt: 93.1;">
+<span class="pt-mark" style="--pt: 86.8;">
 <span class="pt-stack">
 <a class="pt-dot" href="/research/papers/paterson2019/"
  aria-label="paterson2019: An empirical study on the use of defect"
  title="2019 &middot; An empirical study on the use of defect"></a>
 </span>
 </span>
-<span class="pt-mark pt-latest pt-last" style="--pt: 100.0;">
+<span class="pt-mark" style="--pt: 93.4;">
 <span class="pt-stack">
+<a class="pt-dot" href="/research/papers/alsharif2020/"
+ aria-label="alsharif2020: STICCER"
+ title="2020 &middot; STICCER"></a>
 <a class="pt-dot" href="/research/papers/alsharif2020a/"
  aria-label="alsharif2020a: Hybrid methods for reducing database"
  title="2020 &middot; Hybrid methods for reducing database"></a>
 </span>
-<span class="pt-year">2020</span>
+</span>
+<span class="pt-mark pt-latest pt-last" style="--pt: 100.0;">
+<span class="pt-stack">
+<a class="pt-dot" href="/research/papers/parry2026/"
+ aria-label="parry2026: Test flimsiness"
+ title="2026 &middot; Test flimsiness"></a>
+</span>
+<span class="pt-year">2026</span>
 </span>
 </div>
 </div>
@@ -930,10 +939,9 @@ itself make a test outcome non-deterministic.
 ```{=html}
 <figure class="pub-timeline">
 <figcaption><iconify-icon inline icon="fa6-solid:timeline"></iconify-icon>
-<a href="/research/papers/#category=search-based%20methods">
- <span class="pt-count">14 papers</span> on <span
+ <span class="pt-count">16 papers</span> on <span
  class="pt-category">search-based methods</span> published since <span
- class="pt-category">2002</span></a>
+ class="pt-category">2002</span>
 </figcaption>
 <div class="pt-rail">
 <div class="pt-track">
@@ -946,7 +954,7 @@ itself make a test outcome non-deterministic.
 </span>
 <span class="pt-year">2002</span>
 </span>
-<span class="pt-mark" style="--pt: 33.8;">
+<span class="pt-mark" style="--pt: 20.9;">
 <span class="pt-stack">
 <a class="pt-dot" href="/research/papers/conrad2010a/"
  aria-label="conrad2010a: Empirically studying the role of selection"
@@ -960,45 +968,44 @@ itself make a test outcome non-deterministic.
 </span>
 <span class="pt-year">2010</span>
 </span>
-<span class="pt-mark" style="--pt: 43.2;">
+<span class="pt-mark" style="--pt: 29.7;">
 <span class="pt-stack">
 <a class="pt-dot" href="/research/papers/yalan2011/"
  aria-label="yalan2011: Empirically identifying the best genetic"
  title="2011 &middot; Empirically identifying the best genetic"></a>
 </span>
-<span class="pt-year">2011</span>
 </span>
-<span class="pt-mark" style="--pt: 52.7;">
+<span class="pt-mark" style="--pt: 38.5;">
 <span class="pt-stack">
 <a class="pt-dot" href="/research/papers/lin2012/"
  aria-label="lin2012: Reducing the cost of regression testing"
  title="2012 &middot; Reducing the cost of regression testing"></a>
 </span>
+<span class="pt-year">2012</span>
 </span>
-<span class="pt-mark" style="--pt: 62.2;">
+<span class="pt-mark" style="--pt: 47.3;">
 <span class="pt-stack">
 <a class="pt-dot" href="/research/papers/kapfhammer2013/"
  aria-label="kapfhammer2013: Search-based testing of relational schema"
  title="2013 &middot; Search-based testing of relational schema"></a>
 </span>
-<span class="pt-year">2013</span>
 </span>
-<span class="pt-mark" style="--pt: 71.6;">
+<span class="pt-mark" style="--pt: 56.1;">
 <span class="pt-stack">
 <a class="pt-dot" href="/research/papers/kotelyanskii2014a/"
  aria-label="kotelyanskii2014a: Parameter tuning for search-based"
  title="2014 &middot; Parameter tuning for search-based"></a>
 </span>
+<span class="pt-year">2014</span>
 </span>
-<span class="pt-mark" style="--pt: 81.1;">
+<span class="pt-mark" style="--pt: 64.9;">
 <span class="pt-stack">
 <a class="pt-dot" href="/research/papers/kinneer2015/"
  aria-label="kinneer2015: Automatically evaluating the efficiency"
  title="2015 &middot; Automatically evaluating the efficiency"></a>
 </span>
-<span class="pt-year">2015</span>
 </span>
-<span class="pt-mark" style="--pt: 90.5;">
+<span class="pt-mark" style="--pt: 73.6;">
 <span class="pt-stack">
 <a class="pt-dot" href="/research/papers/kapfhammer2016/"
  aria-label="kapfhammer2016: Hitchhikers need free vehicles! Shared"
@@ -1014,13 +1021,28 @@ itself make a test outcome non-deterministic.
  title="2016 &middot; SchemaAnalyst"></a>
 </span>
 </span>
-<span class="pt-mark pt-latest pt-last" style="--pt: 100.0;">
+<span class="pt-mark" style="--pt: 82.4;">
 <span class="pt-stack">
 <a class="pt-dot" href="/research/papers/alsharif2018/"
  aria-label="alsharif2018: DOMINO"
  title="2018 &middot; DOMINO"></a>
 </span>
 <span class="pt-year">2018</span>
+</span>
+<span class="pt-mark" style="--pt: 91.2;">
+<span class="pt-stack">
+<a class="pt-dot" href="/research/papers/alsharif2019/"
+ aria-label="alsharif2019: What factors make SQL test cases"
+ title="2019 &middot; What factors make SQL test cases"></a>
+</span>
+</span>
+<span class="pt-mark pt-latest pt-last" style="--pt: 100.0;">
+<span class="pt-stack">
+<a class="pt-dot" href="/research/papers/maton2026b/"
+ aria-label="maton2026b: multiplex"
+ title="2026 &middot; multiplex"></a>
+</span>
+<span class="pt-year">2026</span>
 </span>
 </div>
 </div>
@@ -1077,10 +1099,9 @@ fa6-solid book-open >}}](/research/papers/maton2026b/index.qmd).
 ```{=html}
 <figure class="pub-timeline">
 <figcaption><iconify-icon inline icon="fa6-solid:timeline"></iconify-icon>
-<a href="/research/papers/#category=performance%20analysis">
- <span class="pt-count">25 papers</span> on <span
+ <span class="pt-count">26 papers</span> on <span
  class="pt-category">performance analysis</span> published since <span
- class="pt-category">2002</span></a>
+ class="pt-category">2002</span>
 </figcaption>
 <div class="pt-rail">
 <div class="pt-track">
@@ -1181,6 +1202,9 @@ fa6-solid book-open >}}](/research/papers/maton2026b/index.qmd).
 </span>
 <span class="pt-mark" style="--pt: 62.5;">
 <span class="pt-stack">
+<a class="pt-dot" href="/research/papers/kotelyanskii2014a/"
+ aria-label="kotelyanskii2014a: Parameter tuning for search-based"
+ title="2014 &middot; Parameter tuning for search-based"></a>
 <a class="pt-dot" href="/research/papers/lin2014/"
  aria-label="lin2014: Test suite reduction methods that decrease"
  title="2014 &middot; Test suite reduction methods that decrease"></a>
@@ -1282,10 +1306,9 @@ book-open >}}](/research/papers/kinneer2015a/index.qmd).
 ```{=html}
 <figure class="pub-timeline">
 <figcaption><iconify-icon inline icon="fa6-solid:timeline"></iconify-icon>
-<a href="/research/papers/#category=research%20methods">
- <span class="pt-count">12 papers</span> on <span
+ <span class="pt-count">15 papers</span> on <span
  class="pt-category">research methods</span> published since <span
- class="pt-category">2001</span></a>
+ class="pt-category">2001</span>
 </figcaption>
 <div class="pt-rail">
 <div class="pt-track">
@@ -1298,14 +1321,14 @@ book-open >}}](/research/papers/kinneer2015a/index.qmd).
 </span>
 <span class="pt-year">2001</span>
 </span>
-<span class="pt-mark" style="--pt: 10.3;">
+<span class="pt-mark" style="--pt: 9.5;">
 <span class="pt-stack">
 <a class="pt-dot" href="/research/papers/kapfhammer2004/"
  aria-label="kapfhammer2004: Software testing"
  title="2004 &middot; Software testing"></a>
 </span>
 </span>
-<span class="pt-mark" style="--pt: 27.7;">
+<span class="pt-mark" style="--pt: 24.3;">
 <span class="pt-stack">
 <a class="pt-dot" href="/research/papers/kapfhammer2010/"
  aria-label="kapfhammer2010: Regression testing"
@@ -1313,45 +1336,50 @@ book-open >}}](/research/papers/kinneer2015a/index.qmd).
 </span>
 <span class="pt-year">2010</span>
 </span>
-<span class="pt-mark" style="--pt: 38.0;">
+<span class="pt-mark" style="--pt: 33.8;">
 <span class="pt-stack">
 <a class="pt-dot" href="/research/papers/kauffman2012a/"
  aria-label="kauffman2012a: A framework to support research"
  title="2012 &middot; A framework to support research"></a>
 </span>
-<span class="pt-year">2012</span>
 </span>
-<span class="pt-mark" style="--pt: 48.3;">
+<span class="pt-mark" style="--pt: 43.2;">
 <span class="pt-stack">
 <a class="pt-dot" href="/research/papers/kapfhammer2016/"
  aria-label="kapfhammer2016: Hitchhikers need free vehicles! Shared"
  title="2016 &middot; Hitchhikers need free vehicles! Shared"></a>
+<a class="pt-dot" href="/research/papers/mcminn2016/"
+ aria-label="mcminn2016: Automated search for good coverage"
+ title="2016 &middot; Automated search for good coverage"></a>
 </span>
+<span class="pt-year">2016</span>
 </span>
-<span class="pt-mark" style="--pt: 58.7;">
+<span class="pt-mark" style="--pt: 52.7;">
 <span class="pt-stack">
+<a class="pt-dot" href="/research/papers/alsharif2018a/"
+ aria-label="alsharif2018a: Generating test suites with DOMINO"
+ title="2018 &middot; Generating test suites with DOMINO"></a>
 <a class="pt-dot" href="/research/papers/alsharif2018b/"
  aria-label="alsharif2018b: Running experiments and performing data"
  title="2018 &middot; Running experiments and performing data"></a>
 </span>
-<span class="pt-year">2018</span>
 </span>
-<span class="pt-mark" style="--pt: 69.0;">
+<span class="pt-mark" style="--pt: 62.2;">
 <span class="pt-stack">
 <a class="pt-dot" href="/research/papers/alsharif2019/"
  aria-label="alsharif2019: What factors make SQL test cases"
  title="2019 &middot; What factors make SQL test cases"></a>
 </span>
+<span class="pt-year">2019</span>
 </span>
-<span class="pt-mark" style="--pt: 79.3;">
+<span class="pt-mark" style="--pt: 71.6;">
 <span class="pt-stack">
 <a class="pt-dot" href="/research/papers/alsharif2020a/"
  aria-label="alsharif2020a: Hybrid methods for reducing database"
  title="2020 &middot; Hybrid methods for reducing database"></a>
 </span>
-<span class="pt-year">2020</span>
 </span>
-<span class="pt-mark" style="--pt: 89.7;">
+<span class="pt-mark" style="--pt: 81.1;">
 <span class="pt-stack">
 <a class="pt-dot" href="/research/papers/althomali2022/"
  aria-label="althomali2022: Automated repair of responsive web page"
@@ -1363,14 +1391,22 @@ book-open >}}](/research/papers/kinneer2015a/index.qmd).
  aria-label="parry2022b: Surveying the developer experience"
  title="2022 &middot; Surveying the developer experience"></a>
 </span>
+<span class="pt-year">2022</span>
 </span>
-<span class="pt-mark pt-latest pt-last" style="--pt: 100.0;">
+<span class="pt-mark" style="--pt: 90.5;">
 <span class="pt-stack">
 <a class="pt-dot" href="/research/papers/mcminn2025/"
  aria-label="mcminn2025: Beyond test flakiness"
  title="2025 &middot; Beyond test flakiness"></a>
 </span>
-<span class="pt-year">2025</span>
+</span>
+<span class="pt-mark pt-latest pt-last" style="--pt: 100.0;">
+<span class="pt-stack">
+<a class="pt-dot" href="/research/papers/parry2026/"
+ aria-label="parry2026: Test flimsiness"
+ title="2026 &middot; Test flimsiness"></a>
+</span>
+<span class="pt-year">2026</span>
 </span>
 </div>
 </div>
