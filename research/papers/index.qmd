@@ -41,3 +41,403 @@ console.print(
     f":rocket: It was super-fun to collaboratively create these {paper_count} papers!"
 )
 ```
+
+```{=html}
+<figure class="pub-timeline pt-career pt-tall">
+<figcaption><iconify-icon inline icon="fa6-solid:timeline"></iconify-icon>
+ <span class="pt-count">89 papers</span> on <span
+ class="pt-category">software engineering and software testing</span>
+ published since <span class="pt-category">1999</span>
+</figcaption>
+<div class="pt-rail">
+<div class="pt-track">
+<span class="pt-line" aria-hidden="true"></span>
+<span class="pt-mark pt-first" style="--pt: 0.0;">
+<span class="pt-stack">
+<a class="pt-dot" href="/research/papers/kapfhammer1999/"
+ aria-label="kapfhammer1999: A complex object data generator"
+ title="1999 &middot; A complex object data generator"></a>
+</span>
+<span class="pt-year">1999</span>
+</span>
+<span class="pt-mark" style="--pt: 3.7;">
+<span class="pt-stack">
+<a class="pt-dot" href="/research/papers/kapfhammer2000/"
+ aria-label="kapfhammer2000: An approach to identifying"
+ title="2000 &middot; An approach to identifying"></a>
+</span>
+</span>
+<span class="pt-mark" style="--pt: 7.4;">
+<span class="pt-stack">
+<a class="pt-dot" href="/research/papers/bittman2001a/"
+ aria-label="bittman2001a: Creating a free, dependable software"
+ title="2001 &middot; Creating a free, dependable software"></a>
+<a class="pt-dot" href="/research/papers/haddox2001/"
+ aria-label="haddox2001: Testing commercial-off-the-shelf"
+ title="2001 &middot; Testing commercial-off-the-shelf"></a>
+<a class="pt-dot" href="/research/papers/kapfhammer2001/"
+ aria-label="kapfhammer2001: Automatically and transparently"
+ title="2001 &middot; Automatically and transparently"></a>
+</span>
+</span>
+<span class="pt-mark" style="--pt: 11.1;">
+<span class="pt-stack">
+<a class="pt-dot" href="/research/papers/arnold2002a/"
+ aria-label="arnold2002a: Implementation and analysis of a JavaSpace"
+ title="2002 &middot; Implementation and analysis of a JavaSpace"></a>
+<a class="pt-dot" href="/research/papers/haddox2002/"
+ aria-label="haddox2002: An approach for understanding and testing"
+ title="2002 &middot; An approach for understanding and testing"></a>
+<a class="pt-dot" href="/research/papers/zorman2002a/"
+ aria-label="zorman2002a: Creation and analysis of a JavaSpace-based"
+ title="2002 &middot; Creation and analysis of a JavaSpace-based"></a>
+</span>
+</span>
+<span class="pt-mark" style="--pt: 14.8;">
+<span class="pt-stack">
+<a class="pt-dot" href="/research/papers/howell2003a/"
+ aria-label="howell2003a: An examination of the run-time performance"
+ title="2003 &middot; An examination of the run-time performance"></a>
+<a class="pt-dot" href="/research/papers/kapfhammer2003/"
+ aria-label="kapfhammer2003: A family of test adequacy criteria"
+ title="2003 &middot; A family of test adequacy criteria"></a>
+</span>
+</span>
+<span class="pt-mark" style="--pt: 18.5;">
+<span class="pt-stack">
+<a class="pt-dot" href="/research/papers/kapfhammer2004/"
+ aria-label="kapfhammer2004: Software testing"
+ title="2004 &middot; Software testing"></a>
+</span>
+<span class="pt-year">2004</span>
+</span>
+<span class="pt-mark" style="--pt: 22.2;">
+<span class="pt-stack">
+<a class="pt-dot" href="/research/papers/fiedler2005/"
+ aria-label="fiedler2005: Towards the measurement of tuple space"
+ title="2005 &middot; Towards the measurement of tuple space"></a>
+<a class="pt-dot" href="/research/papers/kapfhammer2005/"
+ aria-label="kapfhammer2005: Testing in resource-constrained execution"
+ title="2005 &middot; Testing in resource-constrained execution"></a>
+<a class="pt-dot" href="/research/papers/rummel2005a/"
+ aria-label="rummel2005a: Towards the prioritization of regression"
+ title="2005 &middot; Towards the prioritization of regression"></a>
+</span>
+</span>
+<span class="pt-mark" style="--pt: 25.9;">
+<span class="pt-stack">
+<a class="pt-dot" href="/research/papers/walcott2006/"
+ aria-label="walcott2006: Time-aware test suite prioritization"
+ title="2006 &middot; Time-aware test suite prioritization"></a>
+</span>
+</span>
+<span class="pt-mark" style="--pt: 29.6;">
+<span class="pt-stack">
+<a class="pt-dot" href="/research/papers/alspaugh2007/"
+ aria-label="alspaugh2007: Efficient time-aware prioritization"
+ title="2007 &middot; Efficient time-aware prioritization"></a>
+<a class="pt-dot" href="/research/papers/kapfhammer2007/"
+ aria-label="kapfhammer2007: Using coverage effectiveness to evaluate"
+ title="2007 &middot; Using coverage effectiveness to evaluate"></a>
+<a class="pt-dot" href="/research/papers/kapfhammer2007d/"
+ aria-label="kapfhammer2007d: A comprehensive framework for testing"
+ title="2007 &middot; A comprehensive framework for testing"></a>
+<a class="pt-dot" href="/research/papers/smith2007b/"
+ aria-label="smith2007b: Test suite reduction and prioritization"
+ title="2007 &middot; Test suite reduction and prioritization"></a>
+</span>
+</span>
+<span class="pt-mark" style="--pt: 33.3;">
+<span class="pt-stack">
+<a class="pt-dot" href="/research/papers/bhadra2008a/"
+ aria-label="bhadra2008a: Prioritizing test suites by finding"
+ title="2008 &middot; Prioritizing test suites by finding"></a>
+<a class="pt-dot" href="/research/papers/kapfhammer2008/"
+ aria-label="kapfhammer2008: Database-aware test coverage monitoring"
+ title="2008 &middot; Database-aware test coverage monitoring"></a>
+</span>
+</span>
+<span class="pt-mark" style="--pt: 37.0;">
+<span class="pt-stack">
+<a class="pt-dot" href="/research/papers/bhadra2009/"
+ aria-label="bhadra2009: An experimental study of methods"
+ title="2009 &middot; An experimental study of methods"></a>
+<a class="pt-dot" href="/research/papers/ostrofsky2009/"
+ aria-label="ostrofsky2009: An empirical comparison of methods"
+ title="2009 &middot; An empirical comparison of methods"></a>
+<a class="pt-dot" href="/research/papers/smith2009/"
+ aria-label="smith2009: An empirical study of incorporating cost"
+ title="2009 &middot; An empirical study of incorporating cost"></a>
+<a class="pt-dot" href="/research/papers/smith2009a/"
+ aria-label="smith2009a: Interactive coverage effectiveness"
+ title="2009 &middot; Interactive coverage effectiveness"></a>
+</span>
+</span>
+<span class="pt-mark" style="--pt: 40.7;">
+<span class="pt-stack">
+<a class="pt-dot" href="/research/papers/conrad2010a/"
+ aria-label="conrad2010a: Empirically studying the role of selection"
+ title="2010 &middot; Empirically studying the role of selection"></a>
+<a class="pt-dot" href="/research/papers/kapfhammer2010/"
+ aria-label="kapfhammer2010: Regression testing"
+ title="2010 &middot; Regression testing"></a>
+<a class="pt-dot" href="/research/papers/kukunas2010a/"
+ aria-label="kukunas2010a: A genetic algorithm to improve Linux"
+ title="2010 &middot; A genetic algorithm to improve Linux"></a>
+<a class="pt-dot" href="/research/papers/williams2010/"
+ aria-label="williams2010: Using synthetic test suites to empirically"
+ title="2010 &middot; Using synthetic test suites to empirically"></a>
+</span>
+<span class="pt-year">2010</span>
+</span>
+<span class="pt-mark" style="--pt: 44.4;">
+<span class="pt-stack">
+<a class="pt-dot" href="/research/papers/clark2011/"
+ aria-label="clark2011: Localizing SQL faults in database"
+ title="2011 &middot; Localizing SQL faults in database"></a>
+<a class="pt-dot" href="/research/papers/cobb2011/"
+ aria-label="cobb2011: Dynamic invariant detection for relational"
+ title="2011 &middot; Dynamic invariant detection for relational"></a>
+<a class="pt-dot" href="/research/papers/jones2011/"
+ aria-label="jones2011: Ask and you shall receive"
+ title="2011 &middot; Ask and you shall receive"></a>
+<a class="pt-dot" href="/research/papers/just2011a/"
+ aria-label="just2011a: Using conditional mutation to increase"
+ title="2011 &middot; Using conditional mutation to increase"></a>
+<a class="pt-dot" href="/research/papers/just2011b/"
+ aria-label="just2011b: MAJOR: An efficient and extensible tool"
+ title="2011 &middot; MAJOR: An efficient and extensible tool"></a>
+<a class="pt-dot" href="/research/papers/kapfhammer2011/"
+ aria-label="kapfhammer2011: Empirically evaluating regression testing"
+ title="2011 &middot; Empirically evaluating regression testing"></a>
+<a class="pt-dot" href="/research/papers/yalan2011/"
+ aria-label="yalan2011: Empirically identifying the best genetic"
+ title="2011 &middot; Empirically identifying the best genetic"></a>
+</span>
+</span>
+<span class="pt-mark" style="--pt: 48.1;">
+<span class="pt-stack">
+<a class="pt-dot" href="/research/papers/burdette2012/"
+ aria-label="burdette2012: An empirical comparison of Java remote"
+ title="2012 &middot; An empirical comparison of Java remote"></a>
+<a class="pt-dot" href="/research/papers/just2012a/"
+ aria-label="just2012a: Do redundant mutants affect"
+ title="2012 &middot; Do redundant mutants affect"></a>
+<a class="pt-dot" href="/research/papers/just2012b/"
+ aria-label="just2012b: Using non-redundant mutation operators"
+ title="2012 &middot; Using non-redundant mutation operators"></a>
+<a class="pt-dot" href="/research/papers/kapfhammer2012a/"
+ aria-label="kapfhammer2012a: Towards a method for reducing the test"
+ title="2012 &middot; Towards a method for reducing the test"></a>
+<a class="pt-dot" href="/research/papers/kauffman2012a/"
+ aria-label="kauffman2012a: A framework to support research"
+ title="2012 &middot; A framework to support research"></a>
+<a class="pt-dot" href="/research/papers/lin2012/"
+ aria-label="lin2012: Reducing the cost of regression testing"
+ title="2012 &middot; Reducing the cost of regression testing"></a>
+</span>
+</span>
+<span class="pt-mark" style="--pt: 51.9;">
+<span class="pt-stack">
+<a class="pt-dot" href="/research/papers/kapfhammer2013/"
+ aria-label="kapfhammer2013: Search-based testing of relational schema"
+ title="2013 &middot; Search-based testing of relational schema"></a>
+<a class="pt-dot" href="/research/papers/lin2013/"
+ aria-label="lin2013: History-based test case prioritization"
+ title="2013 &middot; History-based test case prioritization"></a>
+<a class="pt-dot" href="/research/papers/wright2013/"
+ aria-label="wright2013: Efficient mutation analysis of relational"
+ title="2013 &middot; Efficient mutation analysis of relational"></a>
+</span>
+</span>
+<span class="pt-mark" style="--pt: 55.6;">
+<span class="pt-stack">
+<a class="pt-dot" href="/research/papers/kotelyanskii2014a/"
+ aria-label="kotelyanskii2014a: Parameter tuning for search-based"
+ title="2014 &middot; Parameter tuning for search-based"></a>
+<a class="pt-dot" href="/research/papers/lin2014/"
+ aria-label="lin2014: Test suite reduction methods that decrease"
+ title="2014 &middot; Test suite reduction methods that decrease"></a>
+<a class="pt-dot" href="/research/papers/wright2014/"
+ aria-label="wright2014: The impact of equivalent, redundant,"
+ title="2014 &middot; The impact of equivalent, redundant,"></a>
+</span>
+</span>
+<span class="pt-mark" style="--pt: 59.3;">
+<span class="pt-stack">
+<a class="pt-dot" href="/research/papers/kinneer2015/"
+ aria-label="kinneer2015: Automatically evaluating the efficiency"
+ title="2015 &middot; Automatically evaluating the efficiency"></a>
+<a class="pt-dot" href="/research/papers/kinneer2015a/"
+ aria-label="kinneer2015a: ExpOse"
+ title="2015 &middot; ExpOse"></a>
+<a class="pt-dot" href="/research/papers/mcminn2015/"
+ aria-label="mcminn2015: The effectiveness of test coverage"
+ title="2015 &middot; The effectiveness of test coverage"></a>
+<a class="pt-dot" href="/research/papers/walsh2015/"
+ aria-label="walsh2015: Automatic detection of potential layout"
+ title="2015 &middot; Automatic detection of potential layout"></a>
+</span>
+<span class="pt-year">2015</span>
+</span>
+<span class="pt-mark" style="--pt: 63.0;">
+<span class="pt-stack">
+<a class="pt-dot" href="/research/papers/kapfhammer2016/"
+ aria-label="kapfhammer2016: Hitchhikers need free vehicles! Shared"
+ title="2016 &middot; Hitchhikers need free vehicles! Shared"></a>
+<a class="pt-dot" href="/research/papers/mccurdy2016/"
+ aria-label="mccurdy2016: mrstudyr"
+ title="2016 &middot; mrstudyr"></a>
+<a class="pt-dot" href="/research/papers/mcminn2016/"
+ aria-label="mcminn2016: Automated search for good coverage"
+ title="2016 &middot; Automated search for good coverage"></a>
+<a class="pt-dot" href="/research/papers/mcminn2016a/"
+ aria-label="mcminn2016a: Virtual mutation analysis of relational"
+ title="2016 &middot; Virtual mutation analysis of relational"></a>
+<a class="pt-dot" href="/research/papers/mcminn2016b/"
+ aria-label="mcminn2016b: AVMf: An open-source framework"
+ title="2016 &middot; AVMf: An open-source framework"></a>
+<a class="pt-dot" href="/research/papers/mcminn2016c/"
+ aria-label="mcminn2016c: SchemaAnalyst"
+ title="2016 &middot; SchemaAnalyst"></a>
+</span>
+</span>
+<span class="pt-mark" style="--pt: 66.7;">
+<span class="pt-stack">
+<a class="pt-dot" href="/research/papers/lin2017/"
+ aria-label="lin2017: Empirically evaluating greedy-based test"
+ title="2017 &middot; Empirically evaluating greedy-based test"></a>
+<a class="pt-dot" href="/research/papers/walsh2017/"
+ aria-label="walsh2017: Automated layout failure detection"
+ title="2017 &middot; Automated layout failure detection"></a>
+<a class="pt-dot" href="/research/papers/walsh2017a/"
+ aria-label="walsh2017a: ReDeCheck"
+ title="2017 &middot; ReDeCheck"></a>
+</span>
+</span>
+<span class="pt-mark" style="--pt: 70.4;">
+<span class="pt-stack">
+<a class="pt-dot" href="/research/papers/alsharif2018/"
+ aria-label="alsharif2018: DOMINO"
+ title="2018 &middot; DOMINO"></a>
+<a class="pt-dot" href="/research/papers/alsharif2018a/"
+ aria-label="alsharif2018a: Generating test suites with DOMINO"
+ title="2018 &middot; Generating test suites with DOMINO"></a>
+<a class="pt-dot" href="/research/papers/alsharif2018b/"
+ aria-label="alsharif2018b: Running experiments and performing data"
+ title="2018 &middot; Running experiments and performing data"></a>
+<a class="pt-dot" href="/research/papers/paterson2018/"
+ aria-label="paterson2018: Using controlled numbers of real faults"
+ title="2018 &middot; Using controlled numbers of real faults"></a>
+</span>
+</span>
+<span class="pt-mark" style="--pt: 74.1;">
+<span class="pt-stack">
+<a class="pt-dot" href="/research/papers/alsharif2019/"
+ aria-label="alsharif2019: What factors make SQL test cases"
+ title="2019 &middot; What factors make SQL test cases"></a>
+<a class="pt-dot" href="/research/papers/althomali2019/"
+ aria-label="althomali2019: Automatic visual verification of layout"
+ title="2019 &middot; Automatic visual verification of layout"></a>
+<a class="pt-dot" href="/research/papers/mcminn2019/"
+ aria-label="mcminn2019: Automatic detection and removal"
+ title="2019 &middot; Automatic detection and removal"></a>
+<a class="pt-dot" href="/research/papers/paterson2019/"
+ aria-label="paterson2019: An empirical study on the use of defect"
+ title="2019 &middot; An empirical study on the use of defect"></a>
+</span>
+</span>
+<span class="pt-mark" style="--pt: 77.8;">
+<span class="pt-stack">
+<a class="pt-dot" href="/research/papers/alsharif2020/"
+ aria-label="alsharif2020: STICCER"
+ title="2020 &middot; STICCER"></a>
+<a class="pt-dot" href="/research/papers/alsharif2020a/"
+ aria-label="alsharif2020a: Hybrid methods for reducing database"
+ title="2020 &middot; Hybrid methods for reducing database"></a>
+<a class="pt-dot" href="/research/papers/parry2020/"
+ aria-label="parry2020: Flake it till you make it"
+ title="2020 &middot; Flake it till you make it"></a>
+<a class="pt-dot" href="/research/papers/walsh2020/"
+ aria-label="walsh2020: Automatically identifying potential"
+ title="2020 &middot; Automatically identifying potential"></a>
+</span>
+</span>
+<span class="pt-mark" style="--pt: 81.5;">
+<span class="pt-stack">
+<a class="pt-dot" href="/research/papers/althomali2021/"
+ aria-label="althomali2021: Automated visual classification"
+ title="2021 &middot; Automated visual classification"></a>
+</span>
+<span class="pt-year">2021</span>
+</span>
+<span class="pt-mark" style="--pt: 85.2;">
+<span class="pt-stack">
+<a class="pt-dot" href="/research/papers/althomali2022/"
+ aria-label="althomali2022: Automated repair of responsive web page"
+ title="2022 &middot; Automated repair of responsive web page"></a>
+<a class="pt-dot" href="/research/papers/parry2022/"
+ aria-label="parry2022: A survey of flaky tests"
+ title="2022 &middot; A survey of flaky tests"></a>
+<a class="pt-dot" href="/research/papers/parry2022a/"
+ aria-label="parry2022a: Evaluating features for machine learning"
+ title="2022 &middot; Evaluating features for machine learning"></a>
+<a class="pt-dot" href="/research/papers/parry2022b/"
+ aria-label="parry2022b: Surveying the developer experience"
+ title="2022 &middot; Surveying the developer experience"></a>
+<a class="pt-dot" href="/research/papers/parry2022c/"
+ aria-label="parry2022c: What do developer-repaired flaky tests"
+ title="2022 &middot; What do developer-repaired flaky tests"></a>
+</span>
+</span>
+<span class="pt-mark" style="--pt: 88.9;">
+<span class="pt-stack">
+<a class="pt-dot" href="/research/papers/parry2023/"
+ aria-label="parry2023: Empirically evaluating flaky test"
+ title="2023 &middot; Empirically evaluating flaky test"></a>
+</span>
+</span>
+<span class="pt-mark" style="--pt: 92.6;">
+<span class="pt-stack">
+<a class="pt-dot" href="/research/papers/maton2024/"
+ aria-label="maton2024: Exploring pseudo-testedness"
+ title="2024 &middot; Exploring pseudo-testedness"></a>
+<a class="pt-dot" href="/research/papers/maton2024a/"
+ aria-label="maton2024a: PseudoSweep"
+ title="2024 &middot; PseudoSweep"></a>
+</span>
+</span>
+<span class="pt-mark" style="--pt: 96.3;">
+<span class="pt-stack">
+<a class="pt-dot" href="/research/papers/maton2025/"
+ aria-label="maton2025: Where tests fall short"
+ title="2025 &middot; Where tests fall short"></a>
+<a class="pt-dot" href="/research/papers/mcminn2025/"
+ aria-label="mcminn2025: Beyond test flakiness"
+ title="2025 &middot; Beyond test flakiness"></a>
+<a class="pt-dot" href="/research/papers/parry2025/"
+ aria-label="parry2025: Systemic flakiness"
+ title="2025 &middot; Systemic flakiness"></a>
+</span>
+</span>
+<span class="pt-mark pt-latest pt-last" style="--pt: 100.0;">
+<span class="pt-stack">
+<a class="pt-dot" href="/research/papers/foster2026/"
+ aria-label="foster2026: FlakeFighters"
+ title="2026 &middot; FlakeFighters"></a>
+<a class="pt-dot" href="/research/papers/maton2026/"
+ aria-label="maton2026: Empirically comparing hazard-guided LLM"
+ title="2026 &middot; Empirically comparing hazard-guided LLM"></a>
+<a class="pt-dot" href="/research/papers/maton2026b/"
+ aria-label="maton2026b: multiplex"
+ title="2026 &middot; multiplex"></a>
+<a class="pt-dot" href="/research/papers/parry2026/"
+ aria-label="parry2026: Test flimsiness"
+ title="2026 &middot; Test flimsiness"></a>
+</span>
+<span class="pt-year">2026</span>
+</span>
+</div>
+</div>
+</figure>
+```
