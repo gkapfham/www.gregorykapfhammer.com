@@ -1358,6 +1358,11 @@ input.search.form-control {
   color: #e65100;
 }
 
+/* the timeline icon sits to the left of the caption link */
+.pub-timeline figcaption iconify-icon {
+  margin-right: 0.35em;
+}
+
 .pub-timeline figcaption a {
   color: inherit;
   text-decoration: none;
@@ -1398,7 +1403,11 @@ input.search.form-control {
   top: 0;
   right: 1.6rem;
   bottom: 0;
-  left: 1.6rem;
+  /* The left inset is deliberately smaller than the right one: it pulls the
+     whole axis, its first dot and its first year label closer to the caption
+     directly above it, while the wider right inset keeps the last year label
+     inside the column. */
+  left: 1rem;
 }
 
 .pt-line {
