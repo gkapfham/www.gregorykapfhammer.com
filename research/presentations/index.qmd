@@ -41,3 +41,228 @@ console.print(
     f":rocket: It was super-fun to collaboratively create these {presentation_count} presentations!"
 )
 ```
+
+```{=html}
+<figure class="pub-timeline pt-career pt-tall">
+<figcaption><iconify-icon inline icon="fa6-solid:timeline"></iconify-icon>
+ <span class="pt-count">48 presentations</span> on <span
+ class="pt-category">software engineering and software testing</span>
+ published since <span class="pt-category">2000</span>
+</figcaption>
+<div class="pt-rail">
+<div class="pt-track">
+<span class="pt-line" aria-hidden="true"></span>
+<span class="pt-mark pt-first" style="--pt: 0.0;">
+<span class="pt-stack">
+<a class="pt-dot" href="kapfhammer2000pe/"
+ aria-label="kapfhammer2000pe: An automated wrapping system for Java"
+ title="2000 &middot; An automated wrapping system for Java"></a>
+</span>
+<span class="pt-year">2000</span>
+</span>
+<span class="pt-mark" style="--pt: 8.0;">
+<span class="pt-stack">
+<a class="pt-dot" href="kapfhammer2002pa/"
+ aria-label="kapfhammer2002pa: Towards a JavaSpace supported"
+ title="2002 &middot; Towards a JavaSpace supported"></a>
+<a class="pt-dot" href="kapfhammer2002pb/"
+ aria-label="kapfhammer2002pb: Building distributed genetic algorithms"
+ title="2002 &middot; Building distributed genetic algorithms"></a>
+<a class="pt-dot" href="kapfhammer2002pc/"
+ aria-label="kapfhammer2002pc: Improving the Jini out-of-box experience"
+ title="2002 &middot; Improving the Jini out-of-box experience"></a>
+<a class="pt-dot" href="kapfhammer2002pd/"
+ aria-label="kapfhammer2002pd: Teaching distributed systems"
+ title="2002 &middot; Teaching distributed systems"></a>
+</span>
+</span>
+<span class="pt-mark" style="--pt: 16.0;">
+<span class="pt-stack">
+<a class="pt-dot" href="kapfhammer2004p/"
+ aria-label="kapfhammer2004p: Testing database-driven applications"
+ title="2004 &middot; Testing database-driven applications"></a>
+<a class="pt-dot" href="kapfhammer2004pa/"
+ aria-label="kapfhammer2004pa: A primer on testing database-driven"
+ title="2004 &middot; A primer on testing database-driven"></a>
+</span>
+</span>
+<span class="pt-mark" style="--pt: 20.0;">
+<span class="pt-stack">
+<a class="pt-dot" href="kapfhammer2005p/"
+ aria-label="kapfhammer2005p: SETTLE"
+ title="2005 &middot; SETTLE"></a>
+<a class="pt-dot" href="kapfhammer2005pa/"
+ aria-label="kapfhammer2005pa: Further experience with teaching"
+ title="2005 &middot; Further experience with teaching"></a>
+<a class="pt-dot" href="kapfhammer2005pb/"
+ aria-label="kapfhammer2005pb: A test adequacy infrastructure"
+ title="2005 &middot; A test adequacy infrastructure"></a>
+<a class="pt-dot" href="kapfhammer2005pc/"
+ aria-label="kapfhammer2005pc: Empirical evaluation of an approach"
+ title="2005 &middot; Empirical evaluation of an approach"></a>
+</span>
+<span class="pt-year">2005</span>
+</span>
+<span class="pt-mark" style="--pt: 24.0;">
+<span class="pt-stack">
+<a class="pt-dot" href="kapfhammer2006pd/"
+ aria-label="kapfhammer2006pd: Measuring the performance of an XML-based"
+ title="2006 &middot; Measuring the performance of an XML-based"></a>
+</span>
+</span>
+<span class="pt-mark" style="--pt: 28.0;">
+<span class="pt-stack">
+<a class="pt-dot" href="kapfhammer2007p/"
+ aria-label="kapfhammer2007p: Automatic program instrumentation"
+ title="2007 &middot; Automatic program instrumentation"></a>
+<a class="pt-dot" href="kapfhammer2007pa/"
+ aria-label="kapfhammer2007pa: The measured performance of communication"
+ title="2007 &middot; The measured performance of communication"></a>
+<a class="pt-dot" href="kapfhammer2007pb/"
+ aria-label="kapfhammer2007pb: The measured performance of database-aware"
+ title="2007 &middot; The measured performance of database-aware"></a>
+<a class="pt-dot" href="kapfhammer2007pc/"
+ aria-label="kapfhammer2007pc: Exploring approaches to time-aware test"
+ title="2007 &middot; Exploring approaches to time-aware test"></a>
+<a class="pt-dot" href="kapfhammer2007pe/"
+ aria-label="kapfhammer2007pe: Towards regression testing for database"
+ title="2007 &middot; Towards regression testing for database"></a>
+</span>
+</span>
+<span class="pt-mark" style="--pt: 32.0;">
+<span class="pt-stack">
+<a class="pt-dot" href="kapfhammer2008pa/"
+ aria-label="kapfhammer2008pa: The theory and practice of software"
+ title="2008 &middot; The theory and practice of software"></a>
+<a class="pt-dot" href="kapfhammer2008pb/"
+ aria-label="kapfhammer2008pb: Set covers, knapsacks, and regression"
+ title="2008 &middot; Set covers, knapsacks, and regression"></a>
+<a class="pt-dot" href="kapfhammer2008pc/"
+ aria-label="kapfhammer2008pc: Using synthetic coverage information"
+ title="2008 &middot; Using synthetic coverage information"></a>
+<a class="pt-dot" href="kapfhammer2008pd/"
+ aria-label="kapfhammer2008pd: Can search-based prioritizers improve"
+ title="2008 &middot; Can search-based prioritizers improve"></a>
+</span>
+</span>
+<span class="pt-mark" style="--pt: 36.0;">
+<span class="pt-stack">
+<a class="pt-dot" href="kapfhammer2009pa/"
+ aria-label="kapfhammer2009pa: Practical suggestions for improving"
+ title="2009 &middot; Practical suggestions for improving"></a>
+<a class="pt-dot" href="kapfhammer2009pb/"
+ aria-label="kapfhammer2009pb: The measured performance of declarative"
+ title="2009 &middot; The measured performance of declarative"></a>
+</span>
+<span class="pt-year">2009</span>
+</span>
+<span class="pt-mark" style="--pt: 44.0;">
+<span class="pt-stack">
+<a class="pt-dot" href="kapfhammer2011pa/"
+ aria-label="kapfhammer2011pa: Regression testing"
+ title="2011 &middot; Regression testing"></a>
+<a class="pt-dot" href="kapfhammer2011pb/"
+ aria-label="kapfhammer2011pb: MAJOR: An efficient technique for mutation"
+ title="2011 &middot; MAJOR: An efficient technique for mutation"></a>
+</span>
+</span>
+<span class="pt-mark" style="--pt: 48.0;">
+<span class="pt-stack">
+<a class="pt-dot" href="kapfhammer2012/"
+ aria-label="kapfhammer2012: Using dynamic invariant detection"
+ title="2012 &middot; Using dynamic invariant detection"></a>
+<a class="pt-dot" href="kapfhammer2012pa/"
+ aria-label="kapfhammer2012pa: Regression testing techniques"
+ title="2012 &middot; Regression testing techniques"></a>
+<a class="pt-dot" href="kapfhammer2012pb/"
+ aria-label="kapfhammer2012pb: Practical techniques for improving"
+ title="2012 &middot; Practical techniques for improving"></a>
+<a class="pt-dot" href="kapfhammer2012pc/"
+ aria-label="kapfhammer2012pc: Efficient and effective mutation testing"
+ title="2012 &middot; Efficient and effective mutation testing"></a>
+<a class="pt-dot" href="kapfhammer2012pd/"
+ aria-label="kapfhammer2012pd: Software quality improvement through"
+ title="2012 &middot; Software quality improvement through"></a>
+</span>
+</span>
+<span class="pt-mark" style="--pt: 60.0;">
+<span class="pt-stack">
+<a class="pt-dot" href="kapfhammer2015/"
+ aria-label="kapfhammer2015: Searching for the best tests"
+ title="2015 &middot; Searching for the best tests"></a>
+<a class="pt-dot" href="kapfhammer2015a/"
+ aria-label="kapfhammer2015a: Is big data a big deal? Not without"
+ title="2015 &middot; Is big data a big deal? Not without"></a>
+</span>
+<span class="pt-year">2015</span>
+</span>
+<span class="pt-mark" style="--pt: 72.0;">
+<span class="pt-stack">
+<a class="pt-dot" href="kapfhammer2018/"
+ aria-label="kapfhammer2018: Using GitHub, Travis CI, and Python"
+ title="2018 &middot; Using GitHub, Travis CI, and Python"></a>
+<a class="pt-dot" href="kapfhammer2018a/"
+ aria-label="kapfhammer2018a: A hands-on guide to teaching programming"
+ title="2018 &middot; A hands-on guide to teaching programming"></a>
+<a class="pt-dot" href="kapfhammer2018b/"
+ aria-label="kapfhammer2018b: Using Python, Travis CI, and GitHub"
+ title="2018 &middot; Using Python, Travis CI, and GitHub"></a>
+</span>
+</span>
+<span class="pt-mark" style="--pt: 76.0;">
+<span class="pt-stack">
+<a class="pt-dot" href="kapfhammer2019/"
+ aria-label="kapfhammer2019: Using Python and GitHub for team formation"
+ title="2019 &middot; Using Python and GitHub for team formation"></a>
+<a class="pt-dot" href="kapfhammer2019a/"
+ aria-label="kapfhammer2019a: Automatic detection of pseudo-tested"
+ title="2019 &middot; Automatic detection of pseudo-tested"></a>
+<a class="pt-dot" href="kapfhammer2019b/"
+ aria-label="kapfhammer2019b: Find your feature fit"
+ title="2019 &middot; Find your feature fit"></a>
+</span>
+<span class="pt-year">2019</span>
+</span>
+<span class="pt-mark" style="--pt: 84.0;">
+<span class="pt-stack">
+<a class="pt-dot" href="kapfhammer2021/"
+ aria-label="kapfhammer2021: Committing to writing good commit messages"
+ title="2021 &middot; Committing to writing good commit messages"></a>
+<a class="pt-dot" href="kapfhammer2021a/"
+ aria-label="kapfhammer2021a: Type annotations in Python"
+ title="2021 &middot; Type annotations in Python"></a>
+<a class="pt-dot" href="kapfhammer2021b/"
+ aria-label="kapfhammer2021b: TaDa it''s magic"
+ title="2021 &middot; TaDa it''s magic"></a>
+<a class="pt-dot" href="kapfhammer2021c/"
+ aria-label="kapfhammer2021c: Great on their own, even better together"
+ title="2021 &middot; Great on their own, even better together"></a>
+</span>
+</span>
+<span class="pt-mark pt-latest pt-last" style="--pt: 100.0;">
+<span class="pt-stack">
+<a class="pt-dot" href="alaparthi2025/"
+ aria-label="alaparthi2025: ExecExam"
+ title="2025 &middot; ExecExam"></a>
+<a class="pt-dot" href="alaparthi2025a/"
+ aria-label="alaparthi2025a: Up and running with GitHub, GitHub"
+ title="2025 &middot; Up and running with GitHub, GitHub"></a>
+<a class="pt-dot" href="bekele2025/"
+ aria-label="bekele2025: Automated and configurable programming"
+ title="2025 &middot; Automated and configurable programming"></a>
+<a class="pt-dot" href="cain2025/"
+ aria-label="cain2025: ExecExam"
+ title="2025 &middot; ExecExam"></a>
+<a class="pt-dot" href="chhetri2025/"
+ aria-label="chhetri2025: Building and deploying course websites"
+ title="2025 &middot; Building and deploying course websites"></a>
+<a class="pt-dot" href="kapfhammer2025/"
+ aria-label="kapfhammer2025: Chasten your Python program"
+ title="2025 &middot; Chasten your Python program"></a>
+</span>
+<span class="pt-year">2025</span>
+</span>
+</div>
+</div>
+</figure>
+```
