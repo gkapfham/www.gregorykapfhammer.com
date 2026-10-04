@@ -1454,6 +1454,16 @@ input.search.form-control {
   transform: scale(1.35);
 }
 
+/* A related dot marks a paper that the paragraph cites but that the area's
+   listing filter does not hold. The caption counts and links only the
+   area's own papers, so the related dots are drawn hollow. */
+.pt-dot.pt-related {
+  background-color: transparent;
+  border: 1px solid #e65100;
+  box-sizing: border-box;
+  opacity: 0.7;
+}
+
 .pt-year {
   position: absolute;
   top: 0.4rem;
@@ -1479,6 +1489,11 @@ body.quarto-dark .pt-line {
 
 body.quarto-dark .pt-dot {
   background-color: #ef6c00;
+}
+
+body.quarto-dark .pt-dot.pt-related {
+  background-color: transparent;
+  border-color: #ef6c00;
 }
 
 body.quarto-dark .pub-timeline figcaption a:hover,
