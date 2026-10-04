@@ -120,7 +120,7 @@ Computer and Information Science](https://www.cis.allegheny.edu/) at
 [Allegheny College](http://www.allegheny.edu), I am an associate editor for
 the [Journal of Software: Evolution and
 Process](https://onlinelibrary.wiley.com/journal/20477481), an academic editor
-for the [PeerJ Computer Science](https://peerj.com/computer-science/) journal,
+for the [PeerJ Computer Science](https://peerj.com/journals/computer-science/) journal,
 a program committee member for conferences like the [International Conference
 on Software Testing, Verification and
 Validation](https://cs.gmu.edu/icst/index.html) and the [International
