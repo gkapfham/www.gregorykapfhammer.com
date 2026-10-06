@@ -86,7 +86,7 @@ MARK_RE = re.compile(
 )
 YEAR_LABEL_RE = re.compile(r'<span class="pt-year">(\d+)</span>')
 DOT_RE = re.compile(
-    r'<a class="pt-dot" href="(?P<href>[^"]*)"\n'
+    r'<a class="(?P<cls>pt-dot(?: pt-related)?)" href="(?P<href>[^"]*)"\n'
     r' aria-label="(?P<aria>[^"]*)"\n'
     r' title="(?P<title>[^"]*)"></a>'
 )
@@ -141,6 +141,8 @@ class Figure:
     block: str
     entries: list[Entry]
     category: str | None = None
+    members: list[Entry] = field(default_factory=list)
+    related: list[Entry] = field(default_factory=list)
     problems: list[str] = field(default_factory=list)
     dots: int = 0
     marks: int = 0
@@ -157,6 +159,11 @@ class Figure:
     def expected_dots(self) -> int:
         """How many dots the timeline must contain."""
         return len(self.entries)
+
+    @property
+    def expected_members(self) -> int:
+        """How many dots stand for the area's own tagged papers."""
+        return len(self.members)
 
 
 def load_entries(directory: pathlib.Path) -> list[Entry]:
@@ -280,6 +287,10 @@ def area_figures(page: pathlib.Path, papers: Sequence[Entry]) -> list[Figure]:
         blocks = BLOCK_RE.findall(part)
         block = blocks[0] if blocks else ""
         entries = area_entries(heading, part, papers, by_identifier)
+        rule = AREA_RULES.get(heading, {})
+        own = rule_members(rule, papers) if rule else {e.slug for e in entries}
+        members = [entry for entry in entries if entry.slug in own]
+        related = [entry for entry in entries if entry.slug not in own]
         link = LINK_RE.search(block)
         figure = (
             Figure(
@@ -288,6 +299,8 @@ def area_figures(page: pathlib.Path, papers: Sequence[Entry]) -> list[Figure]:
                 block=block,
                 entries=entries,
                 category=link.group(1) if link else None,
+                members=members,
+                related=related,
             )
         )
         if heading not in AREA_RULES:
@@ -306,6 +319,7 @@ def page_figure(page: pathlib.Path, entries: Sequence[Entry]) -> Figure:
         label="all entries",
         block=blocks[-1] if blocks else "",
         entries=list(entries),
+        members=list(entries),
     )
 
 
@@ -341,9 +355,10 @@ def check_caption(figure: Figure) -> None:
     count = COUNT_RE.search(text)
     if not count:
         figure.problems.append("the caption does not state how many entries")
-    elif int(count.group(1)) != figure.expected_dots:
+    elif int(count.group(1)) != figure.expected_members:
         figure.problems.append(
-            f"the caption says {count.group(1)} entries, not {figure.expected_dots}"
+            f"the caption says {count.group(1)} entries,"
+            f" not {figure.expected_members}"
         )
     icons = re.findall(r'<iconify-icon[^>]*icon="([^"]+)"', caption.group(0))
     if icons != [TIMELINE_ICON]:
@@ -364,7 +379,7 @@ def check_caption(figure: Figure) -> None:
         )
     elif not spans[0].strip():
         figure.problems.append("the caption does not name the area")
-    first = min(entry.year for entry in figure.entries)
+    first = min(entry.year for entry in (figure.members or figure.entries))
     since = SINCE_RE.search(text)
     if not since:
         figure.problems.append("the caption does not name the first year")
@@ -396,12 +411,15 @@ def check_marks(figure: Figure) -> None:
                 f"{year} sits at {position}%,"
                 f" far from its proportional {proportional:.1f}%"
             )
-        wanted = sum(1 for entry in figure.entries if entry.year == year)
-        if len(DOT_RE.findall(mark.group("body"))) != wanted:
+        member_wanted = sum(1 for entry in figure.members if entry.year == year)
+        related_wanted = sum(1 for entry in figure.related if entry.year == year)
+        found = list(DOT_RE.finditer(mark.group("body")))
+        member_found = sum(1 for dot in found if dot.group("cls") == "pt-dot")
+        related_found = len(found) - member_found
+        if (member_found, related_found) != (member_wanted, related_wanted):
             figure.problems.append(
-                f"{year} draws "
-                f"{len(DOT_RE.findall(mark.group('body')))} dots"
-                f" for {wanted} entries"
+                f"{year} draws {member_found} area dots and {related_found}"
+                f" related dots, not {member_wanted} and {related_wanted}"
             )
     check_axis(figure, years)
 
@@ -453,7 +471,7 @@ def check_labels(figure: Figure) -> None:
 def check_dots(figure: Figure) -> None:
     """Check that every dot points at one expected entry."""
     dots = list(DOT_RE.finditer(figure.block))
-    bare = len(re.findall(r'<a class="pt-dot"', figure.block))
+    bare = len(re.findall(r'<a class="pt-dot(?: pt-related)?"', figure.block))
     figure.dots = len(dots)
     if len(dots) != bare:
         figure.problems.append(f"{bare} dots, but only {len(dots)} carry a title")
@@ -506,11 +524,11 @@ def check_category(figure: Figure, members: dict[str, set[str]]) -> None:
         figure.problems.append(f"the caption links to unknown category {name}")
         return
     in_filter = members[name]
-    rail = {entry.slug for entry in figure.entries}
-    if rail != in_filter:
+    own = {entry.slug for entry in figure.members}
+    if own != in_filter:
         figure.problems.append(
             f"the caption links a filter with {len(in_filter)} papers,"
-            f" but the rail draws {len(rail)}"
+            f" but the area draws {len(own)}"
         )
 
 
@@ -532,7 +550,7 @@ def check_site(figures: Sequence[Figure], site: pathlib.Path) -> list[str]:
             continue
         text = html.read_text(encoding="utf-8")
         wanted = sum(figure.expected_dots for figure in figures if figure.page == page)
-        found = len(re.findall(r'class="pt-dot"', text))
+        found = len(re.findall(r'class="pt-dot(?: pt-related)?"', text))
         if found != wanted:
             problems.append(f"{page}: {found} dots in the built page, not {wanted}")
         problems += check_built_figures(page, text)
@@ -545,7 +563,9 @@ def check_built_figures(page: str, text: str) -> list[str]:
     for figure in FIGURE_RE.findall(text):
         if "<pre>" in figure or "<code>" in figure:
             problems.append(f"{page}: a rendered figure holds a code block")
-        for href in set(re.findall(r'class="pt-dot" href="([^"]*)"', figure)):
+        for href in set(
+            re.findall(r'class="pt-dot(?: pt-related)?" href="([^"]*)"', figure)
+        ):
             target = resolve_link(page, href)
             built = site_html(target)
             if not built.is_file():
@@ -566,6 +586,7 @@ def show(figures: Sequence[Figure]) -> None:
         table.add_column("Timeline", no_wrap=True)
         table.add_column("Entries", justify="right")
         table.add_column("Dots", justify="right")
+        table.add_column("Related", justify="right")
         table.add_column("Years", justify="right")
         table.add_column("Labels", justify="right")
         table.add_column("Width", justify="right")
@@ -580,6 +601,7 @@ def show(figures: Sequence[Figure]) -> None:
                 Text(figure.label),
                 str(figure.expected_dots),
                 str(figure.dots),
+                str(len(figure.related)),
                 str(figure.marks),
                 str(figure.labels),
                 str(figure.longest_line),
