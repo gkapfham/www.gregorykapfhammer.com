@@ -63,7 +63,7 @@ book-open>}}](/research/papers/clark2011/index.qmd). Your insights and
 suggestions are appreciated! If you have ideas or experiences related to this
 topic, please [contact](/contact/) me. If you want to stay informed about new
 developments and blog posts related to the field of software testing, consider
-[subscribing](/support/) to my mailing list.
+subscribing to the [RSS feed](/blog/index.xml) for my blog.
 
 :::
 
