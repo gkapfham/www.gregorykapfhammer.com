@@ -168,15 +168,27 @@ def wrap(opening: str, tokens: Sequence[str], limit: int = 78) -> list[str]:
     return lines
 
 
-def build(entries, rail: Rail) -> str:
-    """Return the HTML figure for one timeline (without the code fences)."""
+def build(entries, rail: Rail, related: Sequence = ()) -> str:
+    """Return the HTML figure for one timeline (without the code fences).
+
+    ``entries`` are the area's own papers, which the caption counts and
+    links. ``related`` are the papers that the paragraph cites but that the
+    area's listing filter does not hold; they are drawn as related dots so
+    that every described paper still appears on the rail.
+    """
     entries = sorted(entries, key=lambda entry: (entry.year, entry.slug))
-    years = sorted({entry.year for entry in entries})
+    related = sorted(related, key=lambda entry: (entry.year, entry.slug))
+    all_entries = sorted(
+        [*entries, *related], key=lambda entry: (entry.year, entry.slug)
+    )
+    years = sorted({entry.year for entry in all_entries})
     pct = positions(years, 0.0 if rail.career else MIN_MARK_GAP)
     labelled = label_years(years, pct)
-    by_year: dict[int, list] = {}
+    by_year: dict[int, list[tuple[str, object]]] = {}
     for entry in entries:
-        by_year.setdefault(entry.year, []).append(entry)
+        by_year.setdefault(entry.year, []).append(("member", entry))
+    for entry in related:
+        by_year.setdefault(entry.year, []).append(("related", entry))
 
     classes = "pub-timeline" + (" pt-career" if rail.career else "")
     if max(len(by_year[year]) for year in years) >= TALL_STACK:
@@ -185,11 +197,12 @@ def build(entries, rail: Rail) -> str:
     opening = "<figcaption>" + ICON
     if rail.category:
         opening += '\n<a href="/research/papers/#category=' + rail.category + '">'
+    first_year = min(entry.year for entry in entries)
     lines = [f'<figure class="{classes}">']
     lines += wrap(
         opening,
         caption_tokens(
-            len(entries), rail.word, rail.label, years[0], bool(rail.category)
+            len(entries), rail.word, rail.label, first_year, bool(rail.category)
         ),
     )
     lines += [
@@ -206,9 +219,10 @@ def build(entries, rail: Rail) -> str:
             mark += " pt-latest pt-last"
         lines.append(f'<span class="{mark}" style="--pt: {position};">')
         lines.append('<span class="pt-stack">')
-        for entry in by_year[year]:
+        for kind, entry in by_year[year]:
             dot = short_label(entry.title)
-            lines.append(f'<a class="pt-dot" href="{rail.dot_prefix}{entry.slug}/"')
+            cls = "pt-dot pt-related" if kind == "related" else "pt-dot"
+            lines.append(f'<a class="{cls}" href="{rail.dot_prefix}{entry.slug}/"')
             lines.append(f' aria-label="{entry.slug}: {dot}"')
             lines.append(f' title="{year} &middot; {dot}"></a>')
         lines.append("</span>")
@@ -223,21 +237,17 @@ def build(entries, rail: Rail) -> str:
     return "\n".join(lines)
 
 
-def linked_filter(current: str, entries, members: dict[str, set[str]]) -> str | None:
+def linked_filter(name: str, entries, all_members: dict[str, set[str]]) -> str | None:
     """Return the filter that a caption may link, or None when it may not.
 
-    A caption may link a listing filter only when the rail draws exactly the
-    papers in that filter. Every area rail also carries the papers that its
-    paragraph cites, so an area whose paragraph reaches outside its own
-    category no longer links the filter.
+    A caption may link a listing filter only when the area draws exactly the
+    papers in that filter. The cited-only papers are related dots, so they
+    take no part in this comparison.
     """
-    link = verifier.LINK_RE.search(current)
-    if not link:
+    own = {entry.slug for entry in entries}
+    if all_members.get(name) != own:
         return None
-    raw = link.group(1).partition("#category=")[2]
-    name = raw.replace("%20", " ")
-    rail = {entry.slug for entry in entries}
-    return raw if members.get(name) == rail else None
+    return name.replace(" ", "%20")
 
 
 def area_blocks(papers) -> list[tuple[str, str, str]]:
@@ -252,14 +262,19 @@ def area_blocks(papers) -> list[tuple[str, str, str]]:
         if not heading_match:
             continue
         heading = heading_match.group(1).strip()
-        block = verifier.BLOCK_RE.findall(part)
-        current = block[0] if block else ""
         entries = verifier.area_entries(heading, part, papers, by_identifier)
         rule = verifier.AREA_RULES.get(heading, {})
+        own = verifier.rule_members(rule, papers) if rule else set()
+        area = [entry for entry in entries if entry.slug in own]
+        related = [entry for entry in entries if entry.slug not in own]
         label = rule.get("category", heading.lower())
-        category = linked_filter(current, entries, members)
+        category = linked_filter(label, area, members)
         out.append(
-            (page, heading, build(entries, Rail(label=label, category=category)))
+            (
+                page,
+                heading,
+                build(area, Rail(label=label, category=category), related),
+            )
         )
     return out
 
