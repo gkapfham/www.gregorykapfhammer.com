@@ -37,23 +37,17 @@ insights:
 
 **What is the scale of the Linux kernel and of the DRM subsystem?**
 
-Dave describes the size of the project he helps to maintain:
-
 > "Linux kernel is, well, we consider it's probably the biggest software
 > engineering project in the world, at least that's what we like to say. In
 > terms of maintainers, the number is varied. Changeable, I would say on average
 > is between 80, a 100, 150."
-
-He also shares a number that surprised him when he checked it:
-
+>
 > "If you'd asked me this yesterday, I would've said a hundred, but I ran the
 > numbers last night and apparently, we have over 300 people contributing every
 > kernel release to the DRM subsystem, which actually surprised me just as
 > much."
 
 **How does the kernel's release cycle work?**
-
-Dave walks through the merge window and the release candidates that follow it:
 
 > "overall on the kernel has what we call a nine-to-10-week release cycle. ...
 > The way that works is the first two weeks of every new kernel development
@@ -87,8 +81,7 @@ evaluated it against the project's own history:
 > how he tested it was by running it on older kernel patches and then finding
 > fixes for those older kernel patches."
 
-He argues that even an imperfect reviewer is worth having, because the cost of a
-regression is so high:
+**What are the benefits of using AI if it is an imperfect reviewer?**
 
 > "Even if there's noise in that system, it's still better. ... when that
 > regression actually gets into the Linux kernel and gets out into the world
@@ -96,17 +89,13 @@ regression is so high:
 
 **Why do you support bringing Rust into the Linux kernel?**
 
-Dave explains that his motivation has as much to do with people as with
-programming languages:
-
 > "My push for getting behind the Rust effort was actually more social and
 > community focused. ... one of the big complaints in the private meeting over
 > the years as we're all getting older. There's, we've got a lot more gray
 > beards, like people are in their fifties now that were in their twenties when
 > they started this journey."
 
-He also expects Rust to reduce a particular class of mistakes that kernel
-developers keep repeating:
+**Why do you expect Rust to reduce a particular class of kernel mistakes?**
 
 > "I see Rust accelerating the ability to deliver GPU drivers. I see it being
 > much faster that we can build a lot more common infrastructure. We can avoid
