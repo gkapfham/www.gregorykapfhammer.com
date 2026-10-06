@@ -43,8 +43,7 @@ Jeroen explains the origin story of Polars and what attracts developers to it:
 
 **What does it mean that Polars can process data that is "out of core"?**
 
-Thijs describes the streaming engine that allows Polars to work with data sets
-that are too large for memory:
+Thijs describes the streaming engine built into Polars:
 
 > "So “out of core” indicates a set of algorithms that is designed to process
 > data that are too large to fit into a computer's main memory all at once. And
@@ -82,14 +81,13 @@ Jeroen describes why a lazy query can beat the equivalent eager code:
 > columns you actually need for your analysis. ... Now lazy mode is a bit
 > smarter because it waits until the very end to run everything."
 
-The switch to that lazy mode is a small change, since you only need to scan
-your data instead of reading it:
+He explains that the switch to that lazy mode is a small change:
 
-> "you have to make sure that you start off in lazy mode by either using a scan
-> function instead of a read function, right? If you were to, for example, use
-> read_CSV, you read the entire CSV file into memory, when you do scan_CSV, it
-> will start off in lazy mode and again, only read the parts that are actually
-> necessary."
+> "... you have to make sure that you start off in lazy mode by either using a
+> scan function instead of a read function, right? If you were to, for example,
+> use `read_csv`, you read the entire CSV file into memory, when you do
+> `scan_csv`, it will start off in lazy mode and again, only read the parts
+> that are actually necessary."
 
 **How much faster is Polars when a real production pipeline is migrated?**
 
@@ -107,7 +105,7 @@ starting with a single, deliberately modest piece of it:
 Jeroen adds an important lesson for anyone who wants to repeat this migration
 in their own code base:
 
-> "you cannot do this on a line-by-line basis because the two are just so
+> "... you cannot do this on a line-by-line basis because the two are just so
 > different."
 
 ## Listen
