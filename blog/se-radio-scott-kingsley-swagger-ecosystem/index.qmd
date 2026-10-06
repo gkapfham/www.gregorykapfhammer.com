@@ -82,7 +82,7 @@ specification?**
 > 85-90% of that work is all done for you and now you just kind of need to
 > review it."
 
-**What is an MCP server, and why does it matter for APIs?**
+**What is an MCP server and why does it matter for APIs?**
 
 > "I think it was late 2024 because Anthropic came out with the concept of MCP
 > servers and this was a way to extend an LLM and give it access to information
