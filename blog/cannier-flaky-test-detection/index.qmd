@@ -80,9 +80,9 @@ programs and test suites written in other programming languages like Java.
 If you are interested in learning more about CANNIER and our research on flaky
 test detection, I have encourage you to read the full paper [@Parry2023] [{{<
 iconify fa6-solid book-open>}}](/research/papers/parry2023/index.qmd). I
-welcome any feedback or questions you may have. Please feel free to
-[contact](/contact/) me. To stay up-to-date on my latest research, please
-consider [subscribing](/support/) to my mailing list.
+encourage you to [contact](/contact/) me with feedback or questions you may
+have about this paper. To stay up-to-date on my latest research, please consider
+subscribing to the [RSS feed](/blog/index.xml) for my blog.
 
 :::
 
