@@ -1,0 +1,143 @@
+---
+author: Gregory M. Kapfhammer
+title: >-
+  Insights from my Software Engineering Radio interview
+  with Danny Yang and Sam Goldman
+date: '2026-06-18'
+date-format: YYYY
+categories: [post, developer productivity, software engineering radio]
+description: >-
+  <em>How does Pyrefly type check Python code so
+  quickly?</em>
+---
+
+## Introduction
+
+In a recent episode of the [Software Engineering
+Radio](https://www.se-radio.net/) podcast, I interviewed [Sam
+Goldman](https://pyrefly.org/) and [Danny Yang](https://pyrefly.org/), two
+software engineers at Meta Platforms who build and maintain
+[Pyrefly](https://pyrefly.org/). Our conversation focused on Pyrefly, an
+open-source static type checker and language server for Python that is
+implemented in [Rust](https://www.rust-lang.org/). Pyrefly is fast: the project
+reports that it can type check more than 1.85 million lines of code per second
+on Meta's infrastructure. Sam and Danny explain how they achieve that speed,
+how the tool supports both an editor and a command-line workflow, and why a type
+checker is a surprisingly effective partner for an AI coding agent. I hope that
+you enjoy this thought-provoking interview!
+
+## Insights
+
+Before you listen to the full episode, please check out some of its insights:
+
+**What is a Python type checker and a language server, and where do you use
+them?**
+
+Sam describes where a type checker fits into everyday Python development:
+
+> "you would use it while you are writing code. So, a great way to use it is say
+> you use VS code as your main IDE, you can go right to the extension
+> marketplace, search for Pyrefly and install it and it will start working right
+> away. You'll see the language server behavior, you can get syntax
+> highlighting, you can jump to definitions and in the diagnostics pane Type
+> errors would appear as a list and you can navigate to the location of the Type
+> error in your code. ... Another place where it's really, really common and a
+> good idea to use Type checking is during CI continuous integration testing
+> that you would perform for every change that goes into your code base."
+
+Danny explains the protocol that lets one tool serve many different editors:
+
+> "a language server is a piece of software that understands and conforms to the
+> language server protocol, which allows it to communicate with various
+> different editors to provide IDE features, for example, go to definition,
+> hover, code actions, things like that. It's a common protocol so that you can
+> just implement one language server that conforms to the specification and you
+> can have it work in VS code, Neovim and other editors like that."
+
+**Why does the speed of a type checker matter so much?**
+
+Sam explains that developer tools change how you work when they respond
+instantaneously:
+
+> "the performance is critical for all of our developer tools. I think everyone
+> enjoys it when their tools are fast and then not just fast, but there's a
+> moment when a tool responds instantaneously. And I think at that moment a tool
+> can really transform where you don't think about using it, you can integrate
+> it on every keystroke, and it becomes very conversational. And so that was one
+> of our goals for Pyrefly."
+
+He also describes the implementation choices that make this responsiveness
+possible:
+
+> "Mypy is written in Python and because of Python's global interpreter lock
+> is single threaded and PyRIT written in TypeScript. So, running on a
+> JavaScript engine also a single threaded kind of environment by default, Rust
+> allows us to write very parallel analysis so we can use all of the CPU cores
+> on your machine to do analysis ... We don't want to redo all of the work for
+> everything every time you Type a single character in your IDE. So, the other
+> I think major aspect of the design of Pyrefly is incrementally updating the
+> analysis when the code changes."
+
+**How does Pyrefly help an AI coding agent work more effectively?**
+
+Sam explains why fast, cheap verification improves the trajectory of an agent
+interaction:
+
+> "if an agent can use a Type checker like Pyrefly as a tool and get better
+> information, then it can help the trajectory of that agent interaction be
+> better, tend towards success because the agent can verify it every step and
+> that the more it can verify and the more cheaply it can verify the fewer
+> tokens you use and the faster your interaction is with that agent."
+
+Danny points out that this is the same feedback loop that helps a human
+programmer:
+
+> "It tightens the feedback loop; it shifts errors left. You can see both a
+> human and an AI in absence of a Type checker. Maybe they would run the full
+> test suite of the program to verify that their change is correct and sit
+> around for several minutes waiting for the test to run. But instead with the
+> Type checker, they would be able to get updated signals on every keystroke or
+> every file save."
+
+**Why did you implement Pyrefly in Rust?**
+
+Sam explains that the choice was about community as much as about performance:
+
+> "Rust was really a great choice for us because we wanted to build a big open
+> community and OCaml has a much smaller developer population, whereas Rust is
+> very popular. People who don't already know Rust are interested in learning
+> Rust and a lot of people know Rust. Another big reason for our choice is the
+> just sheer quantity of high-quality third-party code that we can pull it and
+> use."
+
+**How does type checking complement the tests and linters that you already
+run?**
+
+Danny describes how type checkers and test suites cover different ground:
+
+> "I feel like there's like a perception that like linters give like
+> non-critical warnings that are like best practices and suggestions, whereas I
+> think Type checkers mostly flag things that could lead to runtime errors. And
+> of course, compared to runtime testing, I think it's useful to have both Type
+> checking and tests. The main benefit of Type checking in addition to tests is
+> that you kind of, you almost get a 100% coverage for free because the Type
+> checker reads all your code."
+
+## Listen
+
+In conclusion, if you're interested in learning more about Python type checking
+or about the design and implementation of a fast language server, I highly
+recommend that you listen to [Danny Yang and Sam Goldman on the Pyrefly Type
+Checker](https://se-radio.net/2026/06/se-radio-725-danny-yang-and-sam-goldman-on-the-pyrefly-type-checker/)
+from [Software Engineering Radio](https://se-radio.net/)! You can find it on
+your favorite podcast player, [Apple
+Podcasts](https://podcasts.apple.com/us/podcast/software-engineering-radio-the-podcast-for/id120906714),
+[Spotify](https://open.spotify.com/show/6UO3XQclSuNnGxB39QdAnL),
+[YouTube](https://www.youtube.com/playlist?list=PLHJB2bhmgB7esz0BxMCt1jJwsoaqWtFff),
+or listen to it with this handy podcast player.
+
+{{< audio
+file="https://traffic.libsyn.com/secure/forcedn/seradio/725-danny-yang-sam-goldman-pyrefly.mp3"
+caption="Listen to Software Engineering Radio Episode 725" >}}
+
+{{< include /_back-blog.qmd >}}
