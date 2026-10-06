@@ -333,7 +333,7 @@ div.callout-tip.callout {
 }
 
 .callout.callout-style-simple {
-  padding: 0.0em 0.75em 0.30em 0.75em;
+  padding: 0.0em 0.75em 0.75em 0.75em;
   margin-right: 0.5em;
   width: fit-content;
   border-left: 5px solid;
@@ -358,12 +358,6 @@ div.callout-note.callout {
 .table {
   border-bottom: none;
   border-top: none;
-}
-
-audio {
-  width: 300px;
-  height: 54px;
-  margin-top: 0.5em;
 }
 
 /* }}} */
@@ -1618,6 +1612,89 @@ body.quarto-dark .pub-timeline figcaption a:focus-visible {
   background-color: #c34500;
   color: #fff !important;
   text-decoration: none;
+}
+
+/* }}} */
+
+/* Audio Player {{{ */
+
+/*
+ * Quarto's audio shortcode emits a bare <audio> inside a <figure
+ * class="figure">. Style it to match the site's minimal callouts, which are
+ * transparent, shrink to fit their content instead of filling the text
+ * column, and carry a 5px orange left edge with thin grey borders and a
+ * 0.25rem radius.
+ */
+figure:has(> audio) {
+  margin: 1.25rem 0.5rem 1.25rem 0.25rem;
+  padding: 0.5rem 0.75rem 0.65rem;
+  width: fit-content;
+  max-width: 100%;
+  border-left: 5px solid #e65100;
+  border-right: 1px solid #dee2e6;
+  border-bottom: 1px solid #dee2e6;
+  border-top: 1px solid #dee2e6;
+  border-radius: 0.25rem;
+}
+
+/*
+ * The transport bar itself is painted by the browser, so CSS can only nudge
+ * it. The element gets a lighter surface plus rounded, clipped corners, and
+ * the ::-webkit-* hooks restyle the panel in Chromium browsers. Other
+ * engines ignore those hooks and keep the element level rules, so nothing
+ * breaks where they are unsupported.
+ */
+figure:has(> audio) audio {
+  display: block;
+  width: 300px;
+  max-width: 100%;
+  height: 54px;
+  margin: 0;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  background-color: #f1f3f5;
+  color-scheme: light;
+}
+
+figure:has(> audio) audio::-webkit-media-controls-enclosure {
+  border-radius: 0.5rem;
+  background-color: #f1f3f5;
+}
+
+figure:has(> audio) audio::-webkit-media-controls-panel {
+  background-color: #f1f3f5;
+}
+
+figure:has(> audio) figcaption {
+  margin-top: 0.6rem;
+  color: #5a6268;
+  font-size: 0.9rem;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+/* dark mode */
+
+body.quarto-dark figure:has(> audio) {
+  border-left-color: #ef6c00;
+  border-right-color: #495057;
+  border-bottom-color: #495057;
+  border-top-color: #495057;
+}
+
+body.quarto-dark figure:has(> audio) audio {
+  background-color: #495057;
+  color-scheme: dark;
+}
+
+body.quarto-dark figure:has(> audio) audio::-webkit-media-controls-enclosure,
+body.quarto-dark figure:has(> audio) audio::-webkit-media-controls-panel {
+  background-color: #495057;
+}
+
+body.quarto-dark figure:has(> audio) figcaption {
+  color: #9e9e9e;
 }
 
 /* }}} */
