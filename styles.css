@@ -1582,3 +1582,42 @@ body.quarto-dark .pub-timeline figcaption a:focus-visible {
 }
 
 /* }}} */
+
+/* Theme picker {{{ */
+
+/*
+ * The navbar theme menu replaces Quarto's colour-scheme toggle, whose
+ * icon is drawn by Quarto as a white SVG background image and is easy to
+ * miss against the orange navbar. Hide that toggle where the menu is
+ * available; pages without a navbar keep Quarto's floating toggle.
+ */
+.navbar .quarto-color-scheme-toggle {
+  display: none;
+}
+
+/*
+ * Mark the selected mode with a filled pill, built on Bootstrap's own
+ * .dropdown-item.active state. The fill uses the navbar orange so that the
+ * menu matches the site instead of Bootstrap's default #e95420.
+ */
+.navbar .dropdown-item.active {
+  background-color: #e65100;
+  color: #fff;
+}
+
+/*
+ * Hovering the selected entry needs explicit handling. Two rules in this file
+ * colour hovered list links orange with !important: .navbar
+ * .dropdown-item:hover (#ef6c00, specificity 0,3,0) and the li/ul a:hover
+ * group (#e65100, 0,1,2, which also adds a 0.1em underline). On an orange
+ * fill either one renders the label invisible. Keep the text white, drop the
+ * underline, and darken the fill so the hover is still perceptible. This
+ * selector's specificity of 0,4,0 outranks both of them.
+ */
+.navbar .dropdown-item.active:hover {
+  background-color: #c34500;
+  color: #fff !important;
+  text-decoration: none;
+}
+
+/* }}} */
