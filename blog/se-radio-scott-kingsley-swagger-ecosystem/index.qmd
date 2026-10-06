@@ -1,0 +1,119 @@
+---
+author: Gregory M. Kapfhammer
+title: >-
+  Insights from my Software Engineering Radio interview
+  with Scott Kingsley
+date: '2026-06-26'
+date-format: YYYY
+categories: [post, software development, software engineering radio]
+description: >-
+  <em>How does Swagger help you design, test, and
+  document APIs?</em>
+---
+
+## Introduction
+
+In a recent episode of the [Software Engineering
+Radio](https://www.se-radio.net/) podcast, I interviewed [Scott
+Kingsley](https://www.linkedin.com/in/scott-kingsley-5965923), the VP of
+Engineering at [SmartBear](https://smartbear.com/). Our conversation focused on
+the Swagger ecosystem, which is a family of open-source and commercial tools
+that helps engineers design, document, and test APIs. Building on the [OpenAPI
+specification](https://spec.openapis.org/oas/latest.html), the [Swagger
+Editor](https://swagger.io/tools/swagger-editor/) helps you define an API, the
+[Swagger UI](https://swagger.io/tools/swagger-ui/) makes it easy to explore that
+API, and [Swagger CodeGen](https://swagger.io/tools/swagger-codegen/) turns a
+specification into server stubs and client SDKs. Scott also shared some striking
+numbers about how widely this tooling is used: the three main Swagger UI
+distributions saw nine million downloads in a single week, and SmartBear
+manages more than 1.7 million APIs for its customers. I'm thankful that Scott
+took the time for this interview and I hope you really enjoy it!
+
+## Insights
+
+Before you listen to the full episode, please check out some of its insights:
+
+**What is the relationship between the Swagger ecosystem and the OpenAPI
+specification?**
+
+> "So, the OpenAPI initiative is a highly collaborative effort with experts
+> across all industries, really anyone interested in the advancement of APIs and
+> API functionality. ... Now for SmartBear, we're responsible for building
+> tooling, both open-source and commercial on top of that. ... And when it comes
+> to open-source versus commercial, if we don't build it in open-source first,
+> our commercial products aren't going to work either."
+
+**What is the trade-off between API design first and code first?**
+
+> "one is just unlocking parallel development. So, I love that analogy of
+> building a bridge from both sides and you've got that contract in the middle
+> and that contract is what's going to ensure that they're connecting in the
+> right spot rather just hoping that they do. But even worse than that is only
+> one side can start and the other side other teams just waiting and waiting and
+> waiting until it's done. ... And so, it really can be an accelerator in terms
+> of teams if you've got distributed teams that are dependent on each other."
+
+**How do you ensure that a team builds a consistent API?**
+
+> "Don't let each team decide what to call a field. You can end up with like
+> really a mess across your whole APIs if there isn't some sort of governance or
+> oversight into them."
+
+**How does bi-directional contract testing protect the consumers of an API?**
+
+> "...bi-directional contract testing is built around the premise of the provider
+> says what it does, all of your consumers say how they're using it and then
+> anytime you make a change you can see if that change is actually going to
+> break that relationship between the provider and the consumer. ... Well
+> bidirectional contract testing is going to catch like oh yeah, that's a
+> totally safe change to make because none of your consumers are using that
+> field or here's the two out of the five consumers that are using that field."
+
+**How much of the work of writing an API specification can AI do?**
+
+> "...one of the easiest things that we've done is create a natural language form
+> for creating an API from scratch. And so, say an engineer working with their
+> product manager to define the requirements, the API, what it should do, they
+> can then take that, paste that into Swagger studio and then it's going to go
+> and generate your spec. But not only is it generating your spec, it's going to
+> do it following your standardization and governance rules that you've created
+> and it's going to conform to that out of the box. So, right away you're going
+> to get an API that comes back, that's maybe it's not a 100% perfect, but
+> 85-90% of that work is all done for you and now you just kind of need to
+> review it."
+
+**What is an MCP server, and why does it matter for APIs?**
+
+> "I think it was late 2024 because Anthropic came out with the concept of MCP
+> servers and this was a way to extend an LLM and give it access to information
+> that it wouldn't normally have. ... it now can access the tools and APIs that
+> you've given it to in that MCP server. ... And in early 2025 this became a
+> standard that just every vendor started implementing. ... It really was a game
+> changer kind of for like getting the latest and newest information available
+> to LLMs."
+
+**How do you publish an MCP server for an existing API?**
+
+> "if you're building and managing APIs and Swagger Studio, literally at the
+> click of a button you can click the button that says generate MCP server, it's
+> going to bring up a window with a list of the endpoints from that API you
+> choose, which endpoints do I want to expose as MCP tools?"
+
+## Listen
+
+In conclusion, if you're interested in learning more about the Swagger
+ecosystem and how it supports the design, testing, and documentation of your
+APIs, I highly recommend that you listen to [Scott Kingsley on the Swagger
+Ecosystem](https://se-radio.net/2026/06/se-radio-726-scott-kingsley-on-the-swagger-ecosystem/)
+from [Software Engineering Radio](https://se-radio.net/)! You can find it on
+your favorite podcast player, [Apple
+Podcasts](https://podcasts.apple.com/us/podcast/software-engineering-radio-the-podcast-for/id120906714),
+[Spotify](https://open.spotify.com/show/6UO3XQclSuNnGxB39QdAnL),
+[YouTube](https://www.youtube.com/playlist?list=PLHJB2bhmgB7esz0BxMCt1jJwsoaqWtFff),
+or listen to it with this handy podcast player.
+
+{{< audio
+file="https://traffic.libsyn.com/secure/forcedn/seradio/726-sam-kingsley-the-swagger-ecosystem.mp3"
+caption="Listen to Software Engineering Radio Episode 726" >}}
+
+{{< include /_back-blog.qmd >}}
