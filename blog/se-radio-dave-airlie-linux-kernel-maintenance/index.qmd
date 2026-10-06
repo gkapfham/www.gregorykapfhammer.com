@@ -61,8 +61,6 @@ insights:
 
 **What counts as a regression, and how do maintainers respond to one?**
 
-Dave defines a regression and explains the discipline that follows from it:
-
 > "regression is made to be something that broke in RC1, if something is merged
 > during RC1 that causes anything to go be worse than it was before RC1, then
 > it's considered a regression. The standard method of dealing with regressions
@@ -71,9 +69,6 @@ Dave defines a regression and explains the discipline that follows from it:
 > next cycle."
 
 **How is AI changing the review of kernel patches?**
-
-Dave describes how a colleague at Meta built a regression detector and
-evaluated it against the project's own history:
 
 > "I talked to a guy called Chris Mason at Meta has been leading their work on
 > this. He actually wrote framework for regression finding, for using AI. So, it
