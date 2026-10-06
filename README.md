@@ -195,7 +195,10 @@ The research overview, the papers page, and the presentations page each draw a
 publication timeline: one dot per paper or presentation on a year axis. The tool
 in `_tools/verify-timelines.py` re-derives what every timeline must contain from
 the front matter of the papers and the presentations, so it fails whenever an
-entry is added, removed, or re-dated without the timeline being regenerated.
+entry is added, removed, or re-dated without the timeline being regenerated. An
+area timeline also draws the papers that its paragraph cites but that the
+area's listing filter does not hold; those related dots are drawn hollow, and
+the caption counts and links only the area's own tagged papers.
 
 It checks that each timeline draws one dot per expected entry and no others,
 that every dot links to an entry that exists and carries that entry's year,
