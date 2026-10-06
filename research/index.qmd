@@ -701,9 +701,10 @@ iconify fa6-solid book-open >}}](/research/papers/maton2026b/index.qmd).
 ```{=html}
 <figure class="pub-timeline">
 <figcaption><iconify-icon inline icon="fa6-solid:timeline"></iconify-icon>
- <span class="pt-count">26 papers</span> on <span
+<a href="/research/papers/#category=regression%20testing">
+ <span class="pt-count">24 papers</span> on <span
  class="pt-category">regression testing</span> published since <span
- class="pt-category">2001</span>
+ class="pt-category">2001</span></a>
 </figcaption>
 <div class="pt-rail">
 <div class="pt-track">
@@ -840,17 +841,17 @@ iconify fa6-solid book-open >}}](/research/papers/maton2026b/index.qmd).
 </span>
 <span class="pt-mark" style="--pt: 93.4;">
 <span class="pt-stack">
-<a class="pt-dot" href="/research/papers/alsharif2020/"
- aria-label="alsharif2020: STICCER"
- title="2020 &middot; STICCER"></a>
 <a class="pt-dot" href="/research/papers/alsharif2020a/"
  aria-label="alsharif2020a: Hybrid methods for reducing database"
  title="2020 &middot; Hybrid methods for reducing database"></a>
+<a class="pt-dot pt-related" href="/research/papers/alsharif2020/"
+ aria-label="alsharif2020: STICCER"
+ title="2020 &middot; STICCER"></a>
 </span>
 </span>
 <span class="pt-mark pt-latest pt-last" style="--pt: 100.0;">
 <span class="pt-stack">
-<a class="pt-dot" href="/research/papers/parry2026/"
+<a class="pt-dot pt-related" href="/research/papers/parry2026/"
  aria-label="parry2026: Test flimsiness"
  title="2026 &middot; Test flimsiness"></a>
 </span>
@@ -939,9 +940,10 @@ itself make a test outcome non-deterministic.
 ```{=html}
 <figure class="pub-timeline">
 <figcaption><iconify-icon inline icon="fa6-solid:timeline"></iconify-icon>
- <span class="pt-count">16 papers</span> on <span
+<a href="/research/papers/#category=search-based%20methods">
+ <span class="pt-count">14 papers</span> on <span
  class="pt-category">search-based methods</span> published since <span
- class="pt-category">2002</span>
+ class="pt-category">2002</span></a>
 </figcaption>
 <div class="pt-rail">
 <div class="pt-track">
@@ -1031,14 +1033,14 @@ itself make a test outcome non-deterministic.
 </span>
 <span class="pt-mark" style="--pt: 91.2;">
 <span class="pt-stack">
-<a class="pt-dot" href="/research/papers/alsharif2019/"
+<a class="pt-dot pt-related" href="/research/papers/alsharif2019/"
  aria-label="alsharif2019: What factors make SQL test cases"
  title="2019 &middot; What factors make SQL test cases"></a>
 </span>
 </span>
 <span class="pt-mark pt-latest pt-last" style="--pt: 100.0;">
 <span class="pt-stack">
-<a class="pt-dot" href="/research/papers/maton2026b/"
+<a class="pt-dot pt-related" href="/research/papers/maton2026b/"
  aria-label="maton2026b: multiplex"
  title="2026 &middot; multiplex"></a>
 </span>
@@ -1099,9 +1101,10 @@ fa6-solid book-open >}}](/research/papers/maton2026b/index.qmd).
 ```{=html}
 <figure class="pub-timeline">
 <figcaption><iconify-icon inline icon="fa6-solid:timeline"></iconify-icon>
- <span class="pt-count">26 papers</span> on <span
+<a href="/research/papers/#category=performance%20analysis">
+ <span class="pt-count">25 papers</span> on <span
  class="pt-category">performance analysis</span> published since <span
- class="pt-category">2002</span>
+ class="pt-category">2002</span></a>
 </figcaption>
 <div class="pt-rail">
 <div class="pt-track">
@@ -1202,12 +1205,12 @@ fa6-solid book-open >}}](/research/papers/maton2026b/index.qmd).
 </span>
 <span class="pt-mark" style="--pt: 62.5;">
 <span class="pt-stack">
-<a class="pt-dot" href="/research/papers/kotelyanskii2014a/"
- aria-label="kotelyanskii2014a: Parameter tuning for search-based"
- title="2014 &middot; Parameter tuning for search-based"></a>
 <a class="pt-dot" href="/research/papers/lin2014/"
  aria-label="lin2014: Test suite reduction methods that decrease"
  title="2014 &middot; Test suite reduction methods that decrease"></a>
+<a class="pt-dot pt-related" href="/research/papers/kotelyanskii2014a/"
+ aria-label="kotelyanskii2014a: Parameter tuning for search-based"
+ title="2014 &middot; Parameter tuning for search-based"></a>
 </span>
 <span class="pt-year">2014</span>
 </span>
@@ -1306,9 +1309,10 @@ book-open >}}](/research/papers/kinneer2015a/index.qmd).
 ```{=html}
 <figure class="pub-timeline">
 <figcaption><iconify-icon inline icon="fa6-solid:timeline"></iconify-icon>
- <span class="pt-count">15 papers</span> on <span
+<a href="/research/papers/#category=research%20methods">
+ <span class="pt-count">11 papers</span> on <span
  class="pt-category">research methods</span> published since <span
- class="pt-category">2001</span>
+ class="pt-category">2001</span></a>
 </figcaption>
 <div class="pt-rail">
 <div class="pt-track">
@@ -1348,7 +1352,7 @@ book-open >}}](/research/papers/kinneer2015a/index.qmd).
 <a class="pt-dot" href="/research/papers/kapfhammer2016/"
  aria-label="kapfhammer2016: Hitchhikers need free vehicles! Shared"
  title="2016 &middot; Hitchhikers need free vehicles! Shared"></a>
-<a class="pt-dot" href="/research/papers/mcminn2016/"
+<a class="pt-dot pt-related" href="/research/papers/mcminn2016/"
  aria-label="mcminn2016: Automated search for good coverage"
  title="2016 &middot; Automated search for good coverage"></a>
 </span>
@@ -1356,12 +1360,12 @@ book-open >}}](/research/papers/kinneer2015a/index.qmd).
 </span>
 <span class="pt-mark" style="--pt: 52.7;">
 <span class="pt-stack">
-<a class="pt-dot" href="/research/papers/alsharif2018a/"
- aria-label="alsharif2018a: Generating test suites with DOMINO"
- title="2018 &middot; Generating test suites with DOMINO"></a>
 <a class="pt-dot" href="/research/papers/alsharif2018b/"
  aria-label="alsharif2018b: Running experiments and performing data"
  title="2018 &middot; Running experiments and performing data"></a>
+<a class="pt-dot pt-related" href="/research/papers/alsharif2018a/"
+ aria-label="alsharif2018a: Generating test suites with DOMINO"
+ title="2018 &middot; Generating test suites with DOMINO"></a>
 </span>
 </span>
 <span class="pt-mark" style="--pt: 62.2;">
@@ -1374,7 +1378,7 @@ book-open >}}](/research/papers/kinneer2015a/index.qmd).
 </span>
 <span class="pt-mark" style="--pt: 71.6;">
 <span class="pt-stack">
-<a class="pt-dot" href="/research/papers/alsharif2020a/"
+<a class="pt-dot pt-related" href="/research/papers/alsharif2020a/"
  aria-label="alsharif2020a: Hybrid methods for reducing database"
  title="2020 &middot; Hybrid methods for reducing database"></a>
 </span>
@@ -1402,7 +1406,7 @@ book-open >}}](/research/papers/kinneer2015a/index.qmd).
 </span>
 <span class="pt-mark pt-latest pt-last" style="--pt: 100.0;">
 <span class="pt-stack">
-<a class="pt-dot" href="/research/papers/parry2026/"
+<a class="pt-dot pt-related" href="/research/papers/parry2026/"
  aria-label="parry2026: Test flimsiness"
  title="2026 &middot; Test flimsiness"></a>
 </span>
