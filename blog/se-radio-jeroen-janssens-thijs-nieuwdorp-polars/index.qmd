@@ -91,8 +91,7 @@ He explains that the switch to that lazy mode is a small change:
 
 **How much faster is Polars when a real production pipeline is migrated?**
 
-Thijs tells the story of porting a utilities pipeline from Pandas to Polars,
-starting with a single, deliberately modest piece of it:
+Thijs tells the story of porting a utilities pipeline from Pandas to Polars:
 
 > "I took one part of the pipeline's, relatively straightforward, it is like 30
 > seconds of runtime, and it was just, okay, grab data frame out of the Cloud,
@@ -102,8 +101,7 @@ starting with a single, deliberately modest piece of it:
 > for the entire calculation. We brought that down to 3.5 K euros, which is
 > well under the budgeted 5K Euro. So, a total reduction in cost of 98%."
 
-Jeroen adds an important lesson for anyone who wants to repeat this migration
-in their own code base:
+Jeroen adds an important lesson for anyone who wants to repeat this migration:
 
 > "... you cannot do this on a line-by-line basis because the two are just so
 > different."
