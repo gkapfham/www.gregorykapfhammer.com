@@ -56,10 +56,9 @@ Danny explains the protocol that lets one tool serve many different editors:
 
 **Why does the speed of a type checker matter so much?**
 
-Sam explains that developer tools change how you work when they respond
-instantaneously:
+Sam explains that super-fast developer tools change how you work:
 
-> "the performance is critical for all of our developer tools. I think everyone
+> "...the performance is critical for all of our developer tools. I think everyone
 > enjoys it when their tools are fast and then not just fast, but there's a
 > moment when a tool responds instantaneously. And I think at that moment a tool
 > can really transform where you don't think about using it, you can integrate
@@ -70,7 +69,7 @@ He also describes the implementation choices that make this responsiveness
 possible:
 
 > "Mypy is written in Python and because of Python's global interpreter lock
-> is single threaded and PyRIT written in TypeScript. So, running on a
+> is single threaded and Pyright written in TypeScript. So, running on a
 > JavaScript engine also a single threaded kind of environment by default, Rust
 > allows us to write very parallel analysis so we can use all of the CPU cores
 > on your machine to do analysis ... We don't want to redo all of the work for
@@ -83,7 +82,7 @@ possible:
 Sam explains why fast, cheap verification improves the trajectory of an agent
 interaction:
 
-> "if an agent can use a Type checker like Pyrefly as a tool and get better
+> "...if an agent can use a Type checker like Pyrefly as a tool and get better
 > information, then it can help the trajectory of that agent interaction be
 > better, tend towards success because the agent can verify it every step and
 > that the more it can verify and the more cheaply it can verify the fewer
