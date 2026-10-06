@@ -61,8 +61,8 @@ continuous integration environment, then running 10% fewer tests before you find
 the first defect could be beneficial. From my own experience in developing
 [software](/software/index.qmd) with thousands of tests that run on a
 cloud-based CI server in multiple operating systems, runtime environments, and
-versions of a programming language, then a small decrease in the number of
-needed tests would nicely streamline my workflow!
+versions of a programming language, a small decrease in the number of
+needed tests would streamline my workflow!
 
 ## Conclusion
 
@@ -79,9 +79,9 @@ that overviews the regression testing field
 
 Since I would also like to learn about and study other techniques, I hope that
 you will <a href="/contact/">contact</a> me with your suggestions for how to
-improve test suite prioritization techniques. Finally, do you want to be updated
+improve test suite prioritizers. Finally, do you want to be updated
 when I publish new blog posts? If you do, then please <a
-  href="/support/">subscribe</a> to my mailing list.
+  href="/blog/index.xml">subscribe</a> to the RSS feed for my blog.
 
 :::
 
