@@ -22,54 +22,12 @@ write [papers](/research/papers/index.qmd) and a [blog](/blog/index.qmd), give
 co-host the [Software Engineering Radio](https://www.se-radio.net/) podcast.
 Let's stay connected!
 
-## Subscription
-
-Please subscribe to my mailing list! I won't sell your email or bombard you with
-spam. Instead, I will send you informative and useful updates each year.
-
-```{=html}
-<form name="mailinglist" method="POST" action="/emailthanks/" netlify-honeypot="bot-field" netlify>
-
-  <!-- Request the name -->
-  <div class="form-group">
-    <p>
-    <label for="name">Name</label>
-    </p>
-    <div class="row">
-      <div class="col">
-        <input type="text" class="form-control" name="name" id="name" placeholder="Your name" required>
-      </div>
-    </div>
-  </div>
-
-  <p>
-
-  <!-- Request the email -->
-  <div class="form-group">
-    <p>
-    <label for="reply_to">Email</label>
-    </p>
-    <div class="row">
-      <div class="col">
-        <input type="email" class="form-control" name="reply_to" id="reply_to" placeholder="user.name@example.com"
-          required>
-      </div>
-    </div>
-  </div>
-
-  <p>
-
-  <!-- Display the button -->
-  <!-- Transmit a hidden field for spam detection -->
-  <div class="form-group">
-    <button type="submit" class="btn btn-info">Submit</button>
-    <input type="hidden" name="bot-field" />
-  </div>
-
-</form>
-```
-
 ## Connection
+
+Please stay in touch! I always enjoy hearing from people who are interested in
+software engineering and software testing, so I hope that you will
+[contact](/contact/index.qmd) me to ask a question, share an idea, or suggest a
+collaboration.
 
 I work hard to produce the highest quality content to serve people interested
 in software engineering and software testing. It would be greatly appreciated
@@ -88,8 +46,8 @@ if you will support my work in one or more of the following ways!
   </li>
 
   <li>
-    <p><a href="/software/">Software</a>: Browse my software, find a cool project,
-      try it out, and star it</p>
+    <p><a href="/software/">Software</a>: Browse my software, find a cool
+      project, try it out, and star it</p>
   </li>
 
   <li>
@@ -103,8 +61,8 @@ if you will support my work in one or more of the following ways!
   </li>
 
   <li>
-    <p><a href="/seed/">Survey</a>:
-      Take this survey if you work in the software industry</p>
+    <p><a href="/seed/">SEED</a>:
+      Read what software engineers taught me about their field</p>
   </li>
 
   <li>
