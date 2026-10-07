@@ -1698,3 +1698,239 @@ body.quarto-dark figure:has(> audio) figcaption {
 }
 
 /* }}} */
+
+/* Podcast Player {{{ */
+
+/*
+ * Custom transport for episode audio. The markup keeps a real <audio>
+ * element for playback and hides it, because streaming, buffering, and
+ * format support are best left to the browser while its user interface is
+ * impossible to style. The card reuses the minimal callout language: a 5px
+ * orange left edge, thin grey borders, and a 0.25rem radius.
+ */
+.pp {
+  --pp-accent: #e65100;
+  --pp-accent-hover: #c34500;
+  --pp-track: #dee2e6;
+  --pp-muted: #5a6268;
+  --pp-border: #dee2e6;
+  margin: 1.75rem 0;
+  padding: 0.95rem 1.1rem 1.05rem;
+  max-width: 32rem;
+  border-left: 5px solid var(--pp-accent);
+  border-right: 1px solid var(--pp-border);
+  border-bottom: 1px solid var(--pp-border);
+  border-top: 1px solid var(--pp-border);
+  border-radius: 0.25rem;
+}
+
+/*
+ * The native control and the custom transport are swapped only once the
+ * script has wired everything up, so a page without JavaScript falls back
+ * to a working native player instead of showing inert buttons.
+ */
+.pp.pp-ready audio {
+  display: none;
+}
+
+.pp-kicker {
+  margin: 0;
+  color: var(--pp-muted);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.pp-title {
+  margin: 0.15rem 0 0.85rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.pp-row {
+  display: none;
+}
+
+.pp.pp-ready .pp-row {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.pp-play {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background-color: var(--pp-accent);
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 150ms ease, transform 150ms ease;
+}
+
+.pp-play:hover {
+  background-color: var(--pp-accent-hover);
+}
+
+.pp-play:active {
+  transform: scale(0.96);
+}
+
+.pp-play svg {
+  width: 1.35rem;
+  height: 1.35rem;
+  fill: currentColor;
+}
+
+/* only one glyph is shown, chosen by the playback state */
+.pp-ico-pause,
+.pp-playing .pp-ico-play {
+  display: none;
+}
+
+.pp-playing .pp-ico-pause {
+  display: block;
+}
+
+.pp-body {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.pp-range {
+  --pp-fill: 0%;
+  display: block;
+  width: 100%;
+  height: 0.4rem;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 999px;
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  background: linear-gradient(
+    to right,
+    var(--pp-accent) 0,
+    var(--pp-accent) var(--pp-fill),
+    var(--pp-track) var(--pp-fill),
+    var(--pp-track) 100%
+  );
+}
+
+.pp-range::-moz-range-track {
+  border: 0;
+  background: transparent;
+}
+
+.pp-range::-webkit-slider-thumb {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 1rem;
+  height: 1rem;
+  border: 3px solid var(--pp-accent);
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.pp-range::-moz-range-thumb {
+  width: 1rem;
+  height: 1rem;
+  border: 3px solid var(--pp-accent);
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.pp-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-top: 0.55rem;
+}
+
+.pp-time {
+  color: var(--pp-muted);
+  font-size: 0.78rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.pp-sep {
+  padding: 0 0.15rem;
+  opacity: 0.6;
+}
+
+.pp-tools {
+  display: flex;
+  align-items: center;
+  gap: 0.15rem;
+}
+
+.pp-tool {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1.85rem;
+  height: 1.85rem;
+  padding: 0 0.4rem;
+  border: 0;
+  border-radius: 0.25rem;
+  background: transparent;
+  color: var(--pp-muted);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.pp-tool:hover {
+  background-color: rgba(230, 81, 0, 0.1);
+  color: var(--pp-accent);
+}
+
+.pp-tool svg {
+  width: 1.05rem;
+  height: 1.05rem;
+  fill: currentColor;
+}
+
+.pp button:focus-visible,
+.pp a:focus-visible,
+.pp input:focus-visible {
+  outline: 2px solid var(--pp-accent);
+  outline-offset: 2px;
+}
+
+/* dark mode */
+
+body.quarto-dark .pp {
+  --pp-accent: #ef6c00;
+  --pp-accent-hover: #ff8a3d;
+  --pp-track: #495057;
+  --pp-muted: #9e9e9e;
+  --pp-border: #495057;
+}
+
+body.quarto-dark .pp-play {
+  color: #212529;
+}
+
+body.quarto-dark .pp-range::-webkit-slider-thumb,
+body.quarto-dark .pp-range::-moz-range-thumb {
+  background-color: #212529;
+}
+
+body.quarto-dark .pp-tool:hover {
+  background-color: rgba(239, 108, 0, 0.18);
+}
+
+/* }}} */
