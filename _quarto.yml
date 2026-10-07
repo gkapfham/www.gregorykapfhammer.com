@@ -115,6 +115,7 @@ format:
       - file: _include/js/instant-page.js
       - file: _include/js/back-to-top.js
       - file: _include/js/theme-picker.js
+      - file: _include/js/podcast-player.js
     # always display the page in full layout;
     # this seems to minimize the amount of
     # "jumping" that occurs when page loads
