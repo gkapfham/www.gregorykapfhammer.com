@@ -8,6 +8,16 @@ description: <em>Let's have educational discussions with industry!</em>
 aliases: ["/seed/interview/software/2017/07/05/Introducing-SEED/"]
 ---
 
+::: {.callout-note appearance="simple"}
+
+## Survey Closed
+
+The SEED survey is closed and I am no longer collecting responses. You can read
+what the interviewees taught me on the [SEED page](/seed/). Yet, I would still
+like to hear your advice --- please [contact](/contact/) me with your insights!
+
+:::
+
 ## Introduction
 
 Do you work in the software industry? Are you interested in sharing your
@@ -60,10 +70,10 @@ in which educators like me can improve their teaching and research.
 
 ## Further Details
 
-Are you an industrialist who wants to make a difference? Please complete the
-[SEED survey](/seed/) now! Although I have not published SEED interviews for
-several years, I would like publish your insights shortly after you complete the
-survey! As always, your feedback and support is appreciated!
+Do you have a response to the ideas in these interviews? If you do, then please
+[contact](/contact/) me to share your thoughts. You can also read the lessons
+that all of the interviewees shared on my [SEED page](/seed/). As always, your
+feedback and support is appreciated!
 
 :::
 
