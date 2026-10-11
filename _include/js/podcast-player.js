@@ -48,9 +48,10 @@
     var total = root.querySelector("[data-pp-duration]");
     var rateButton = root.querySelector("[data-pp-rate]");
 
-    /* True while the listener is dragging, which suppresses timeupdate so
-       that the two do not fight over the slider position. */
-    var dragging = false;
+    /* True while the listener is interacting with the slider. It suppresses
+       timeupdate, which would otherwise overwrite the thumb from the
+       playback position before the interaction is committed. */
+    var seeking = false;
 
     function paintFill(percent) {
       if (range) {
@@ -83,7 +84,7 @@
       if (length && total) {
         total.textContent = formatTime(length);
       }
-      if (length && range && !dragging) {
+      if (length && range && !seeking) {
         var percent = (audio.currentTime / length) * 100;
         range.value = String(percent);
         paintFill(percent);
@@ -115,25 +116,39 @@
     audio.addEventListener("timeupdate", syncProgress);
 
     if (range) {
+      /* input begins the interaction as well as pointerdown, because not
+         every browser delivers pointer events to a native range input and
+         because keyboard seeking produces no pointer event at all. */
       range.addEventListener("pointerdown", function () {
-        dragging = true;
+        seeking = true;
       });
       range.addEventListener("input", function () {
+        seeking = true;
         var length = duration();
-        var preview = (Number(range.value) / 100) * length;
+        var percent = Number(range.value);
         if (length && elapsed) {
-          elapsed.textContent = formatTime(preview);
+          elapsed.textContent = formatTime((percent / 100) * length);
         }
-        paintFill(Number(range.value));
+        paintFill(percent);
       });
-      /* change fires when the pointer is released, and again on some
-         browsers for keyboard interaction, so seeking is idempotent. */
+      /* change commits the value, and it fires for keyboard interaction as
+         well as for the pointer, so committing stays idempotent. */
       range.addEventListener("change", function () {
         var length = duration();
-        if (length) {
-          audio.currentTime = (Number(range.value) / 100) * length;
+        var percent = Number(range.value);
+        if (length && isFinite(percent)) {
+          var clamped = Math.min(100, Math.max(0, percent));
+          audio.currentTime = (clamped / 100) * length;
         }
-        dragging = false;
+        seeking = false;
+      });
+      /* Safety nets: a cancelled gesture or a slider that loses focus must
+         not leave the thumb frozen for the rest of the visit. */
+      range.addEventListener("pointercancel", function () {
+        seeking = false;
+      });
+      range.addEventListener("blur", function () {
+        seeking = false;
       });
     }
 
