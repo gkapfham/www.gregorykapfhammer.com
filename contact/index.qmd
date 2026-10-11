@@ -35,12 +35,12 @@ Conference on Automated Software
 Engineering](https://conf.researchr.org/series/ase), and a reviewer for journals
 like [Transactions on Software
 Engineering](https://www.computer.org/csdl/journal/ts). I am also the co-host of
-the [Software Engineering Radio](https://www.se-radio.net/) podcast.
+the [Software Engineering Radio](https://www.se-radio.net/), the podcast for
+professional software developers.
 You can learn more about me
-and my work by reading my [biography](/biography/index.qmd), downloading my
+and my work by reading my [biography](/biography/index.qmd) and downloading my
 [curriculum
-vitae](https://github.com/gkapfham/curriculum-vitae/releases/download/v1.5.0/curriculum_vitae_kapfhammer.pdf),
-and [subscribing](/support/index.qmd) to my mailing list.
+vitae](https://github.com/gkapfham/curriculum-vitae/releases/download/v1.5.0/curriculum_vitae_kapfhammer.pdf).
 
 ## Details
 
@@ -51,5 +51,32 @@ Box Q <br>
 520 North Main Street <br>
 Meadville, Pennsylvania, USA 16335 <br>
 
-**Email**: gkapfham@allegheny.edu <br>
+**Email**: <gkapfham@allegheny.edu> <br>
 **Work Phone**: +1 814-332-2880
+
+## Connections
+
+You can also find me on the professional networks and platforms that I visit
+most often:
+
+<ul>
+
+  <li>
+    <p><a href="http://www.linkedin.com/in/GregKapfhammer">LinkedIn</a>:
+      Connect with me and send a message</p>
+  </li>
+
+  <li>
+    <p><a href="https://github.com/gkapfham">GitHub</a>: Follow my software
+      projects and open source contributions</p>
+  </li>
+
+  <li> <p><a href="https://fosstodon.org/@gkapfham">Mastodon</a>: Get updates
+    about software engineering, research, and teaching</p> </li>
+
+  <li>
+    <p><a href="http://scholar.google.com/citations?user=g0eDPjYAAAAJ">Google
+      Scholar</a>: Browse my publications and citation record</p>
+  </li>
+
+</ul>
