@@ -368,7 +368,8 @@ book-open >}}](/research/papers/wright2013/index.qmd), the impact of equivalent
 and redundant mutants [@Wright2014] [{{< iconify fa6-solid
 book-open >}}](/research/papers/wright2014/index.qmd), and virtual mutation
 analysis [@McMinn2016a] [{{< iconify fa6-solid
-book-open >}}](/research/papers/mcminn2016a/index.qmd). Complementing these
+book-open >}}](/research/papers/mcminn2016a/index.qmd).
+Complementing these
 techniques, my colleagues and I have examined how testers understand SQL test
 cases [@Alsharif2019] [{{< iconify fa6-solid
 book-open >}}](/research/papers/alsharif2019/index.qmd), localized SQL faults
@@ -904,7 +905,9 @@ iconify fa6-solid book-open
 fa6-solid book-open
 >}}](/research/papers/alsharif2020/index.qmd), and [@Alsharif2020a] [{{< iconify
 fa6-solid book-open
->}}](/research/papers/alsharif2020a/index.qmd). Complementing these techniques,
+>}}](/research/papers/alsharif2020a/index.qmd).
+
+Complementing these techniques,
 my colleagues and I have studied the selection operators used by search-based
 prioritization [@Conrad2010a] [{{< iconify fa6-solid book-open
 >}}](/research/papers/conrad2010a/index.qmd), combined non-redundant mutation
