@@ -91,7 +91,7 @@ applications in software engineering, which we hope to explore in future work.
 
 Please [contact](/contact/) me if you have any insights or experiences related
 to this topic. To stay informed about new research developments and blog posts,
-consider [subscribing](/support/) to my mailing list.
+consider subscribing to the [RSS feed](/blog/index.xml) for my blog.
 
 :::
 
