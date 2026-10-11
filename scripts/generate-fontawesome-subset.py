@@ -2,6 +2,7 @@
 
 import argparse
 import os
+import re
 import shutil
 import subprocess
 from pathlib import Path
@@ -36,6 +37,23 @@ ICON_CODES = {
     "linkedin": "\\f08c",
     "google": "\\f1a0",
 }
+
+
+def load_icon_codes() -> dict[str, str]:
+    """Read icon unicode values from the generated Font Awesome stylesheet.
+
+    ICON_CODES covers only a handful of icons, and generate_css used to skip
+    any icon that was missing from it, which made a newly used icon vanish
+    from the subset without any warning. Reading the values from all.css
+    keeps the subset in step with the icons that the site actually uses.
+    """
+    if not ORIGINAL_CSS.exists():
+        return {}
+    pattern = re.compile(
+        r'\.fa-([a-z0-9-]+)::?before\s*\{\s*content:\s*"([^"]+)"'
+    )
+    text = ORIGINAL_CSS.read_text(encoding="utf-8", errors="replace")
+    return dict(pattern.findall(text))
 
 
 def find_all_icons():  # noqa: PLR0912
@@ -221,18 +239,31 @@ def generate_css(icons_dict):
 
 /* icon definitions */
 """
+    # resolve unicode values; ICON_CODES wins so that the hand-checked values
+    # stay authoritative, while all.css covers every other icon
+    codes = {**load_icon_codes(), **ICON_CODES}
+    unresolved = []
     # add solid icons
     if solid_icons:
         css += "\n/* solid icons */\n"
         for icon in solid_icons:
-            if icon in ICON_CODES:
-                css += f'.fa-{icon}:before {{ content: "{ICON_CODES[icon]}"; }}\n'
+            value = codes.get(icon)
+            if value:
+                css += f'.fa-{icon}:before {{ content: "{value}"; }}\n'
+            else:
+                unresolved.append(icon)
     # add brand icons
     if brand_icons:
         css += "\n/* brand icons */\n"
         for icon in brand_icons:
-            if icon in ICON_CODES:
-                css += f'.fa-{icon}:before {{ content: "{ICON_CODES[icon]}"; }}\n'
+            value = codes.get(icon)
+            if value:
+                css += f'.fa-{icon}:before {{ content: "{value}"; }}\n'
+            else:
+                unresolved.append(icon)
+    if unresolved:
+        missing = ", ".join(sorted(unresolved))
+        console.print(f":warning: No unicode value found for: {missing}")
     # add font faces
     css += """
 /* font faces */
