@@ -109,7 +109,7 @@ book-open>}}](/research/papers/parry2026/index.qmd). If you
 have questions or experiences related to mutation-induced
 flakiness, please [contact](/contact/) me. To stay updated on
 the latest developments in flaky test research, you can
-[subscribe](/support/) to my mailing list.
+subscribe to the [RSS feed](/blog/index.xml) for my blog.
 
 :::
 
