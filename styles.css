@@ -1450,10 +1450,13 @@ input.search.form-control {
 
 /* A related dot marks a paper that the paragraph cites but that the area's
    listing filter does not hold. The caption counts and links only the
-   area's own papers, so the related dots are drawn hollow. */
+   area's own papers, so the related dots are drawn hollow. The ring is
+   deliberately thicker than a hairline: at 1px it was almost invisible on a
+   0.5rem dot, especially for the final mark, which the rail's right-edge
+   fade washes out. */
 .pt-dot.pt-related {
   background-color: transparent;
-  border: 1px solid #e65100;
+  border: 2px solid #e65100;
   box-sizing: border-box;
   opacity: 0.7;
 }
