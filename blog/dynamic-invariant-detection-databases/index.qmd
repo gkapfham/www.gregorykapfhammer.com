@@ -62,8 +62,8 @@ book-open>}}](/research/papers/cobb2011/index.qmd). Your insights and
 suggestions are appreciated! If you have ideas or experiences related to the
 topic of database testing, please [contact](/contact/) me. If you want to stay
 informed about new developments and blog posts related to dynamic invariant
-detection and other software testing topics, consider [subscribing](/support/)
-to my mailing list to receive updates.
+detection and other software testing topics, consider subscribing to the
+[RSS feed](/blog/index.xml) for my blog to receive updates.
 
 :::
 
