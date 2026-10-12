@@ -13,12 +13,11 @@ As software developers, we've all faced the frustration of flaky tests. In our
 recent paper, "Flake It 'Till You Make It" [@Parry2020] [{{< iconify fa6-solid
 book-open >}}](/research/papers/parry2020/index.qmd), my colleagues and I
 introduce FITTER (Flakiness Inducing TesT crEation and Repair), a novel
-technique to address this persistent problem.
-
-In this position paper, we argue that the best time to discover and repair flaky
-tests is when a developer first creates them. Our approach focuses on exposing
-and fixing "latent test flakiness" --- or tests that aren't currently flaky but
-could become so in the future.
+technique to address this persistent problem. In this position paper, we argue
+that the best time to discover and repair flaky tests is when a developer first
+creates them. Our approach focuses on exposing and fixing "latent test
+flakiness" --- or tests that aren't currently flaky but could become so in the
+future.
 
 ## Contributions
 
@@ -49,8 +48,9 @@ As we continue to explore and understand the intricacies of the FITTER
 technique, your insights and suggestions are invaluable. If you have ideas on
 how to build and evaluate this flaky test detection technique, please
 [contact](/contact/) me! You can stay updated on new developments and blog
-posts related to this topic by [subscribing](/support/) to my mailing list. You
-can also hear me discuss my flaky test research in the podcast episode <a
+posts related to this topic by subscribing to the [RSS feed](/blog/index.xml)
+for my blog. You can also hear me discuss my flaky test research in the podcast
+episode <a
   href="https://hanselminutes.com/874/dr-gregory-kapfhammer-wants-to-stop-flaky-tests">\"Dr.
   Gregory Kapfhammer Wants to Stop Flaky Tests\"</a>!
 
