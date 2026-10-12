@@ -1288,7 +1288,7 @@ highlight how my research has investigated the influence that the parameters of
 a search-based algorithm have on efficiency and effectiveness of methods for
 automated test data generation.
 My research has also measured the performance of the building blocks that such
-systems rely on, including the run-time behaviour of GUI creation frameworks
+systems rely on, including the run-time behavior of GUI creation frameworks
 [@Howell2003a] [{{< iconify fa6-solid
 book-open >}}](/research/papers/howell2003a/index.qmd), the performance of tuple
 space
@@ -1298,7 +1298,8 @@ test suite inside a resource-constrained environment
 [@Kapfhammer2005] [{{< iconify fa6-solid
 book-open >}}](/research/papers/kapfhammer2005/index.qmd). Since a theoretical
 analysis of
-an algorithm's worst-case time complexity is difficult to generalize, my
+an algorithm's worst-case time complexity is difficult to
+either prove in the first place or to generalize, my
 colleagues and I have also inferred that complexity automatically from
 empirical measurements [@Kinneer2015a] [{{< iconify fa6-solid
 book-open >}}](/research/papers/kinneer2015a/index.qmd).
