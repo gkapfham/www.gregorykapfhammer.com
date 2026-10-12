@@ -96,8 +96,8 @@ book-open>}}](/research/papers/parry2022/index.qmd). A BibTeX bibliography of
 all 76 examined studies is available at
 [GitHub](https://github.com/flake-it/flaky-tests-bibliography). If you have
 questions or insights about flaky tests, please [contact](/contact/) me. To
-stay updated on the latest work, please [subscribing](/support/) to my mailing
-list.
+stay updated on the latest work, please subscribe to the
+[RSS feed](/blog/index.xml) for my blog.
 
 :::
 

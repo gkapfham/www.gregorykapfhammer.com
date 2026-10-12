@@ -10,7 +10,7 @@ description: <em>Can tools detect hidden weaknesses in test suites?</em>
 ## Introduction
 
 Ever wondered if your test suite is truly good at finding bugs? What if there
-are hidden weaknesses that traditional testing methods miss? 
+are hidden weaknesses that traditional testing methods miss?
 In the paper [@Maton2024] [{{< iconify fa6-solid book-open >}}](/research/papers/maton2024/index.qmd),
 my colleagues and I explore how eXtreme mutation testing (XMT) can uncover these
 hidden weaknesses in your test suite. By identifying pseudo-tested methods ---
@@ -61,7 +61,7 @@ appreciated! If you have ideas or experiences related to assessing the quality
 of a test suite or finding testing blind spots, please [contact](/contact/) me.
 Or, if you want to stay informed about new developments and blog posts related
 to mutation testing and other software testing topics, you can
-[subscribe](/support/) to my mailing list. 
+subscribe to the [RSS feed](/blog/index.xml) for my blog.
 
 :::
 

@@ -63,7 +63,7 @@ the paper, your insights about parameter tuning or search-based test data
 generation are appreciated! If you have ideas or experiences related to this
 topic, please [contact](/contact/) me. If you want to stay informed about new
 developments and blog posts related to this research paper, consider
-[subscribing](/support/) to my mailing list.
+subscribing to the [RSS feed](/blog/index.xml) for my blog.
 
 :::
 

@@ -1,6 +1,6 @@
 ---
 author: Gregory M. Kapfhammer
-title: Insights from my Software Engineering Radio interview with Samuel Colvin 
+title: Insights from my Software Engineering Radio interview with Samuel Colvin
 date: '2025-08-15'
 date-format: YYYY
 categories: [post, software development, software engineering radio]
@@ -63,8 +63,9 @@ Podcasts](https://podcasts.apple.com/us/podcast/software-engineering-radio-the-p
 [YouTube](https://www.youtube.com/playlist?list=PLHJB2bhmgB7esz0BxMCt1jJwsoaqWtFff),
 or you can listen to it with this handy podcast player.
 
-{{< audio
-file="https://traffic.libsyn.com/secure/forcedn/seradio/676-samuel-colvin-pydantic-ecosystem.mp3"
-caption="Listen to Software Engineering Radio Episode with Samuel Colvin" >}}
+{{< podcast
+src="https://traffic.libsyn.com/secure/forcedn/seradio/676-samuel-colvin-pydantic-ecosystem.mp3"
+episode="676"
+title="Samuel Colvin on the Pydantic Ecosystem" >}}
 
 {{< include /_back-blog.qmd >}}

@@ -65,7 +65,7 @@ your idea? Do you have suggestions for how I can improve the writing in my
 [papers](/research/papers/) or on my [blog](/blog/)? If you do, then I hope
 that you will [contact](/contact/) me to share some of your suggestions. Or, do
 you want to be updated when I publish new blog posts like this one? If you do,
-then please [subscribe](/support/) to my mailing list.
+then please subscribe to the [RSS feed](/blog/index.xml) for my blog.
 
 :::
 

@@ -90,8 +90,8 @@ detection and developer workflows, your insights and experiences are invaluable!
 If you have thoughts about flaky test detection tools or experiences with
 developer-relevant testing challenges, please [contact](/contact/) me.
 Furthermore, if you wish to stay informed about new developments and blog posts
-related to flaky tests and software testing research, consider
-[subscribing](/support/) to my mailing list. The intersection of developer
+related to flaky tests and software testing research, consider subscribing to
+the [RSS feed](/blog/index.xml) for my blog. The intersection of developer
 behavior and automated testing tools remains a rich area for future
 investigation!
 

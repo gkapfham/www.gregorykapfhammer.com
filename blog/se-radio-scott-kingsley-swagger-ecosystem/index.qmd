@@ -112,8 +112,9 @@ Podcasts](https://podcasts.apple.com/us/podcast/software-engineering-radio-the-p
 [YouTube](https://www.youtube.com/playlist?list=PLHJB2bhmgB7esz0BxMCt1jJwsoaqWtFff),
 or listen to it with this handy podcast player.
 
-{{< audio
-file="https://traffic.libsyn.com/secure/forcedn/seradio/726-sam-kingsley-the-swagger-ecosystem.mp3"
-caption="Listen to Software Engineering Radio Episode 726" >}}
+{{< podcast
+src="https://traffic.libsyn.com/secure/forcedn/seradio/726-sam-kingsley-the-swagger-ecosystem.mp3"
+episode="726"
+title="Scott Kingsley on the Swagger Ecosystem" >}}
 
 {{< include /_back-blog.qmd >}}

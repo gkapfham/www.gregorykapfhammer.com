@@ -81,8 +81,8 @@ fa6-solid
 book-open>}}](/research/papers/mcminn2025/index.qmd). If you
 have thoughts on what makes a test suite truly healthy, please
 [contact](/contact/) me. To stay updated on the latest
-developments in software testing research, consider
-[subscribing](/support/) to my mailing list.
+developments in software testing research, consider subscribing to the
+[RSS feed](/blog/index.xml) for my blog.
 
 :::
 

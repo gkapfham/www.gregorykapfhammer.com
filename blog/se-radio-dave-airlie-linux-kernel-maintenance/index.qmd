@@ -110,8 +110,9 @@ Podcasts](https://podcasts.apple.com/us/podcast/software-engineering-radio-the-p
 [YouTube](https://www.youtube.com/playlist?list=PLHJB2bhmgB7esz0BxMCt1jJwsoaqWtFff),
 or listen to it with this handy podcast player.
 
-{{< audio
-file="https://traffic.libsyn.com/secure/forcedn/seradio/723-dave-arlie-linux-kernel-maintenance.mp3"
-caption="Listen to Software Engineering Radio Episode 723" >}}
+{{< podcast
+src="https://traffic.libsyn.com/secure/forcedn/seradio/723-dave-arlie-linux-kernel-maintenance.mp3"
+episode="723"
+title="Dave Airlie on Linux Kernel Maintenance" >}}
 
 {{< include /_back-blog.qmd >}}

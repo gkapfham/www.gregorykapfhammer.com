@@ -57,8 +57,9 @@ Podcasts](https://podcasts.apple.com/us/podcast/software-engineering-radio-the-p
 [YouTube](https://www.youtube.com/playlist?list=PLHJB2bhmgB7esz0BxMCt1jJwsoaqWtFff),
 or listen to it with this handy podcast player.
 
-{{< audio
-file="https://traffic.libsyn.com/secure/forcedn/seradio/625-jonathan-schneider-automated-refactoring.mp3"
-caption="Listen to Software Engineering Radio Episode 625" >}}
+{{< podcast
+src="https://traffic.libsyn.com/secure/forcedn/seradio/625-jonathan-schneider-automated-refactoring.mp3"
+episode="625"
+title="Jonathan Schneider on Automated Refactoring with OpenRewrite" >}}
 
 {{< include /_back-blog.qmd >}}

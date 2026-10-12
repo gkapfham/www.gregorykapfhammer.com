@@ -81,8 +81,9 @@ Podcasts](https://podcasts.apple.com/us/podcast/software-engineering-radio-the-p
 [YouTube](https://www.youtube.com/playlist?list=PLHJB2bhmgB7esz0BxMCt1jJwsoaqWtFff),
 or you can listen to it with this handy podcast player.
 
-{{< audio
-file="https://traffic.libsyn.com/secure/forcedn/seradio/669-will-mcgugan-text-based-ui.mp3"
-caption="Listen to Software Engineering Radio Episode with Will McGugan" >}}
+{{< podcast
+src="https://traffic.libsyn.com/secure/forcedn/seradio/669-will-mcgugan-text-based-ui.mp3"
+episode="669"
+title="Will McGugan on Text-Based User Interfaces" >}}
 
 {{< include /_back-blog.qmd >}}

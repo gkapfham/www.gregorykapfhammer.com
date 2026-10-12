@@ -138,6 +138,6 @@ or listen to it with this handy podcast player.
 {{< podcast
 src="https://traffic.libsyn.com/secure/forcedn/seradio/725-danny-yang-sam-goldman-pyrefly.mp3"
 episode="725"
-title="Danny Yang and Sam Goldman on Pyrefly" >}}
+title="Danny Yang and Sam Goldman on the Pyrefly Type Checker" >}}
 
 {{< include /_back-blog.qmd >}}

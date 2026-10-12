@@ -12,7 +12,7 @@ description: <em>Let's discover developer's views on flaky tests!</em>
 As a software developer, you might have encountered the frustrating phenomenon
 of flaky tests --- or test cases that pass and fail intermittently without any
 changes to the code under test. My colleagues and I recently published
-[@Parry2022b] [{{< iconify fa6-solid book-open >}}](/research/papers/parry2022b/index.qmd), 
+[@Parry2022b] [{{< iconify fa6-solid book-open >}}](/research/papers/parry2022b/index.qmd),
 "Surveying the Developer Experience
 of Flaky Tests," that dives into this issue by exploring how real-world software
 developers define, experience, and address flaky tests. Keep reading to learn
@@ -77,8 +77,9 @@ insights and suggestions are invaluable! If you have ideas or experiences
 related to this pervasive issue in software testing, please [contact](/contact/)
 me. Furthermore, if you wish to stay informed about new developments and blog
 posts related to flaky tests and other software testing topics, consider
-[subscribing](/support/) to my mailing list. Finally, if you would like to
-listen to me talk about this research on a podcast, please check out <a
+subscribing to the [RSS feed](/blog/index.xml) for my blog. Finally, if you
+would like to listen to me talk about this research on a podcast, please check
+out <a
   href="https://stackoverflow.blog/2023/01/17/flake-it-till-you-make-it-how-to-detect-and-deal-with-flaky-tests-ep-528/">\"Flake
   it Till You Make It&#58; How to Detect and Deal with Flaky Tests\"</a>!
 
