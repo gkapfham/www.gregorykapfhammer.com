@@ -42,6 +42,14 @@ console.print(
 )
 ```
 
+<!-- The timeline caption draws its icon as raw HTML inside a raw block, and
+     Quarto only registers the Iconify web component when the iconify
+     shortcode appears in the page, so this hidden copy registers it. Without
+     this the caption icon does not render on this page. -->
+::: {style="display:none"}
+{{< iconify fa6-solid timeline >}}
+:::
+
 ```{=html}
 <figure class="pub-timeline pt-career pt-tall">
 <figcaption><iconify-icon inline icon="fa6-solid:timeline"></iconify-icon>
