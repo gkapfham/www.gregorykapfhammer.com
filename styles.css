@@ -1994,4 +1994,54 @@ body.quarto-dark .pp-tool:hover {
   background-color: rgba(239, 108, 0, 0.18);
 }
 
+/*
+ * Narrow screens: the transport row does not fit beside the play button.
+ * The four tool buttons need roughly 150px and the clock about 100px,
+ * while a phone leaves only about 230px beside a 3rem play button. The
+ * clock therefore used to break across two lines, which made the player
+ * tall, and the row could not shrink, so it spilled out of the card and
+ * let Firefox scroll sideways. Shrink the fixed parts, keep the clock on
+ * one line, and let the tools drop to their own row rather than overflow.
+ */
+@media (max-width: 480px) {
+  .pp {
+    padding: 0.75rem 0.8rem 0.85rem;
+  }
+
+  .pp-row {
+    gap: 0.7rem;
+  }
+
+  .pp-play {
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+
+  .pp-play svg {
+    width: 1.1rem;
+    height: 1.1rem;
+  }
+
+  .pp-meta {
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
+  /* the two times always stay on one line */
+  .pp-time {
+    font-size: 0.68rem;
+    white-space: nowrap;
+  }
+
+  .pp-tool {
+    min-width: 1.55rem;
+    padding: 0 0.25rem;
+  }
+
+  /* right-align the tools when they land on a row of their own */
+  .pp-tools {
+    margin-left: auto;
+  }
+}
+
 /* }}} */
