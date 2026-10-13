@@ -489,6 +489,16 @@ href="https://www.os-sketch.com/">
 Operating Systems</a>: Build and understand operating system components
 </li>
 
+<li class="software"><a target="_blank" rel="noopener"
+href="https://proofgrammers.com/">Proofgrammers</a>: Explore how mathematical proof connects to Python programming
+</li>
+
+<li class="software"><a target="_blank" rel="noopener"
+href="https://prosegrammers.com/">Prosegrammers</a>: Learn Python-based techniques for document engineering
+
+<li class="software"><a target="_blank" rel="noopener"
+href="https://securitysynapse.org/">Security Synapse</a>: Connect theory to the practice of computer security
+
 </ul>
 
 ::: {.callout-note appearance="simple"}
