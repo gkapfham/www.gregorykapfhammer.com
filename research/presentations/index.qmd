@@ -45,7 +45,7 @@ console.print(
 ```{=html}
 <figure class="pub-timeline pt-career pt-tall">
 <figcaption><iconify-icon inline icon="fa6-solid:timeline"></iconify-icon>
- <span class="pt-count">48 presentations</span> on <span
+ <span class="pt-count">50 presentations</span> on <span
  class="pt-category">software engineering and software testing</span>
  published since <span class="pt-category">2000</span>
 </figcaption>
@@ -60,7 +60,7 @@ console.print(
 </span>
 <span class="pt-year">2000</span>
 </span>
-<span class="pt-mark" style="--pt: 8.0;">
+<span class="pt-mark" style="--pt: 7.7;">
 <span class="pt-stack">
 <a class="pt-dot" href="kapfhammer2002pa/"
  aria-label="kapfhammer2002pa: Towards a JavaSpace supported"
@@ -76,7 +76,7 @@ console.print(
  title="2002 &middot; Teaching distributed systems"></a>
 </span>
 </span>
-<span class="pt-mark" style="--pt: 16.0;">
+<span class="pt-mark" style="--pt: 15.4;">
 <span class="pt-stack">
 <a class="pt-dot" href="kapfhammer2004p/"
  aria-label="kapfhammer2004p: Testing database-driven applications"
@@ -86,7 +86,7 @@ console.print(
  title="2004 &middot; A primer on testing database-driven"></a>
 </span>
 </span>
-<span class="pt-mark" style="--pt: 20.0;">
+<span class="pt-mark" style="--pt: 19.2;">
 <span class="pt-stack">
 <a class="pt-dot" href="kapfhammer2005p/"
  aria-label="kapfhammer2005p: SETTLE"
@@ -103,14 +103,14 @@ console.print(
 </span>
 <span class="pt-year">2005</span>
 </span>
-<span class="pt-mark" style="--pt: 24.0;">
+<span class="pt-mark" style="--pt: 23.1;">
 <span class="pt-stack">
 <a class="pt-dot" href="kapfhammer2006pd/"
  aria-label="kapfhammer2006pd: Measuring the performance of an XML-based"
  title="2006 &middot; Measuring the performance of an XML-based"></a>
 </span>
 </span>
-<span class="pt-mark" style="--pt: 28.0;">
+<span class="pt-mark" style="--pt: 26.9;">
 <span class="pt-stack">
 <a class="pt-dot" href="kapfhammer2007p/"
  aria-label="kapfhammer2007p: Automatic program instrumentation"
@@ -129,7 +129,7 @@ console.print(
  title="2007 &middot; Towards regression testing for database"></a>
 </span>
 </span>
-<span class="pt-mark" style="--pt: 32.0;">
+<span class="pt-mark" style="--pt: 30.8;">
 <span class="pt-stack">
 <a class="pt-dot" href="kapfhammer2008pa/"
  aria-label="kapfhammer2008pa: The theory and practice of software"
@@ -145,7 +145,7 @@ console.print(
  title="2008 &middot; Can search-based prioritizers improve"></a>
 </span>
 </span>
-<span class="pt-mark" style="--pt: 36.0;">
+<span class="pt-mark" style="--pt: 34.6;">
 <span class="pt-stack">
 <a class="pt-dot" href="kapfhammer2009pa/"
  aria-label="kapfhammer2009pa: Practical suggestions for improving"
@@ -154,9 +154,8 @@ console.print(
  aria-label="kapfhammer2009pb: The measured performance of declarative"
  title="2009 &middot; The measured performance of declarative"></a>
 </span>
-<span class="pt-year">2009</span>
 </span>
-<span class="pt-mark" style="--pt: 44.0;">
+<span class="pt-mark" style="--pt: 42.3;">
 <span class="pt-stack">
 <a class="pt-dot" href="kapfhammer2011pa/"
  aria-label="kapfhammer2011pa: Regression testing"
@@ -165,8 +164,9 @@ console.print(
  aria-label="kapfhammer2011pb: MAJOR: An efficient technique for mutation"
  title="2011 &middot; MAJOR: An efficient technique for mutation"></a>
 </span>
+<span class="pt-year">2011</span>
 </span>
-<span class="pt-mark" style="--pt: 48.0;">
+<span class="pt-mark" style="--pt: 46.2;">
 <span class="pt-stack">
 <a class="pt-dot" href="kapfhammer2012/"
  aria-label="kapfhammer2012: Using dynamic invariant detection"
@@ -185,7 +185,7 @@ console.print(
  title="2012 &middot; Software quality improvement through"></a>
 </span>
 </span>
-<span class="pt-mark" style="--pt: 60.0;">
+<span class="pt-mark" style="--pt: 57.7;">
 <span class="pt-stack">
 <a class="pt-dot" href="kapfhammer2015/"
  aria-label="kapfhammer2015: Searching for the best tests"
@@ -196,7 +196,7 @@ console.print(
 </span>
 <span class="pt-year">2015</span>
 </span>
-<span class="pt-mark" style="--pt: 72.0;">
+<span class="pt-mark" style="--pt: 69.2;">
 <span class="pt-stack">
 <a class="pt-dot" href="kapfhammer2018/"
  aria-label="kapfhammer2018: Using GitHub, Travis CI, and Python"
@@ -209,7 +209,7 @@ console.print(
  title="2018 &middot; Using Python, Travis CI, and GitHub"></a>
 </span>
 </span>
-<span class="pt-mark" style="--pt: 76.0;">
+<span class="pt-mark" style="--pt: 73.1;">
 <span class="pt-stack">
 <a class="pt-dot" href="kapfhammer2019/"
  aria-label="kapfhammer2019: Using Python and GitHub for team formation"
@@ -221,9 +221,8 @@ console.print(
  aria-label="kapfhammer2019b: Find your feature fit"
  title="2019 &middot; Find your feature fit"></a>
 </span>
-<span class="pt-year">2019</span>
 </span>
-<span class="pt-mark" style="--pt: 84.0;">
+<span class="pt-mark" style="--pt: 80.8;">
 <span class="pt-stack">
 <a class="pt-dot" href="kapfhammer2021/"
  aria-label="kapfhammer2021: Committing to writing good commit messages"
@@ -232,14 +231,15 @@ console.print(
  aria-label="kapfhammer2021a: Type annotations in Python"
  title="2021 &middot; Type annotations in Python"></a>
 <a class="pt-dot" href="kapfhammer2021b/"
- aria-label="kapfhammer2021b: TaDa it''s magic"
- title="2021 &middot; TaDa it''s magic"></a>
+ aria-label="kapfhammer2021b: TaDa it's magic"
+ title="2021 &middot; TaDa it's magic"></a>
 <a class="pt-dot" href="kapfhammer2021c/"
  aria-label="kapfhammer2021c: Great on their own, even better together"
  title="2021 &middot; Great on their own, even better together"></a>
 </span>
+<span class="pt-year">2021</span>
 </span>
-<span class="pt-mark pt-latest pt-last" style="--pt: 100.0;">
+<span class="pt-mark" style="--pt: 96.2;">
 <span class="pt-stack">
 <a class="pt-dot" href="alaparthi2025/"
  aria-label="alaparthi2025: ExecExam"
@@ -260,7 +260,17 @@ console.print(
  aria-label="kapfhammer2025: Chasten your Python program"
  title="2025 &middot; Chasten your Python program"></a>
 </span>
-<span class="pt-year">2025</span>
+</span>
+<span class="pt-mark pt-latest pt-last" style="--pt: 100.0;">
+<span class="pt-stack">
+<a class="pt-dot" href="hasegawa2026/"
+ aria-label="hasegawa2026: Testing the parts you don’t see"
+ title="2026 &middot; Testing the parts you don’t see"></a>
+<a class="pt-dot" href="kaibas2026/"
+ aria-label="kaibas2026: Don't blame the type checker"
+ title="2026 &middot; Don't blame the type checker"></a>
+</span>
+<span class="pt-year">2026</span>
 </span>
 </div>
 </div>
