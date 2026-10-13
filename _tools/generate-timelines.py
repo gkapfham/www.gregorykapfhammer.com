@@ -137,6 +137,41 @@ def short_label(title: str) -> str:
     return " ".join(words) if words else title[:MAX_LABEL_CHARS]
 
 
+def attribute(text: str) -> str:
+    """Escape text for use inside a double-quoted HTML attribute.
+
+    A dot label is a paper title, so it can hold an ampersand or a quote that
+    would otherwise start an entity or close the attribute early. Only the
+    label is escaped; separators that this tool writes itself, such as the
+    middle dot before the year, are added after the call.
+    """
+    return (
+        text.replace("&", "&amp;")
+        .replace("<", "&lt;")
+        .replace(">", "&gt;")
+        .replace('"', "&quot;")
+    )
+
+
+def escaped_label(slug: str, plain: str, year: int) -> str:
+    """Escape a label, trimming it until both lines that carry it fit.
+
+    Escaping lengthens a label, because an ampersand becomes "&amp;" and so on,
+    so a title with a few of those characters can push an attribute line past
+    the column budget and stop this tool. Shorten the plain label and escape
+    again instead of cutting an entity in half.
+    """
+    plain = plain.rstrip()
+    while plain:
+        label = attribute(plain)
+        aria = len(f' aria-label="{slug}: {label}"')
+        heading = len(f' title="{year} &middot; {label}"></a>')
+        if max(aria, heading) <= MAX_COLUMN:
+            return label
+        plain = plain[:-1].rstrip()
+    return ""
+
+
 def caption_tokens(count: int, word: str, label: str, year: int, linked: bool):
     """Build the caption pieces in the site's format."""
     tail = "</span>" + ("</a>" if linked else "")
@@ -223,8 +258,9 @@ def build(entries, rail: Rail, related: Sequence = ()) -> str:
             dot = short_label(entry.title)
             cls = "pt-dot pt-related" if kind == "related" else "pt-dot"
             lines.append(f'<a class="{cls}" href="{rail.dot_prefix}{entry.slug}/"')
-            lines.append(f' aria-label="{entry.slug}: {dot}"')
-            lines.append(f' title="{year} &middot; {dot}"></a>')
+            label = escaped_label(entry.slug, dot, year)
+            lines.append(f' aria-label="{entry.slug}: {label}"')
+            lines.append(f' title="{year} &middot; {label}"></a>')
         lines.append("</span>")
         if year in labelled:
             lines.append(f'<span class="pt-year">{year}</span>')
