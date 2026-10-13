@@ -86,7 +86,7 @@ more about how genetic algorithms can help you get the most out
 of your testing budget. If you have questions about test suite
 prioritization, please [contact](/contact/) me. To stay updated
 on the latest developments in software testing research,
-you can also [subscribe](/support/) to my mailing list.
+you can also subscribe to the [RSS feed](/blog/index.xml) for my blog.
 
 :::
 

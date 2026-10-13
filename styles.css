@@ -8,8 +8,62 @@
    and improves Lighthouse scores significantly.
 
    Old method (commented out):
-   @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap");
+   @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap");
 */
+
+/* }}} */
+
+/* IBM Plex Mono Variable {{{ */
+
+/* The variable font has a continuous 100-700 weight axis, so code can
+   use 450, a weight between Regular (400) and Medium (500), and the
+   highlighted bold tokens can use the true bold weight. These rules
+   are inlined instead of loading another render-blocking stylesheet,
+   and the browser fetches only the subsets that a page actually uses. */
+@font-face {
+  font-family: "IBM Plex Mono Var";
+  font-style: normal;
+  font-weight: 100 700;
+  font-display: swap;
+  src: url("https://cdn.jsdelivr.net/npm/@ibm/plex-mono-variable@1.0.0/fonts/split/woff2/IBM%20Plex%20Mono%20Var-Roman-Latin1.woff2") format("woff2");
+  unicode-range: U+0020-007E, U+00A0-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2013-2014, U+2018-201A, U+201C-201E, U+2020-2022, U+2026, U+2030, U+2039-203A, U+2044, U+20AC, U+2122, U+2212, U+FB01-FB02;
+}
+
+@font-face {
+  font-family: "IBM Plex Mono Var";
+  font-style: normal;
+  font-weight: 100 700;
+  font-display: swap;
+  src: url("https://cdn.jsdelivr.net/npm/@ibm/plex-mono-variable@1.0.0/fonts/split/woff2/IBM%20Plex%20Mono%20Var-Roman-Latin2.woff2") format("woff2");
+  unicode-range: U+0100-0101, U+0104-0130, U+0132-0151, U+0154-017F, U+018F, U+0192, U+01A0-01A1, U+01AF-01B0, U+01FA-01FF, U+0218-021B, U+0237, U+0259, U+1E80-1E85, U+1E9E, U+20A1, U+20A4, U+20A6, U+20A8-20AA, U+20AD-20AE, U+20B1-20B2, U+20B4-20B5, U+20B8-20BA, U+20BD, U+20BF;
+}
+
+@font-face {
+  font-family: "IBM Plex Mono Var";
+  font-style: normal;
+  font-weight: 100 700;
+  font-display: swap;
+  src: url("https://cdn.jsdelivr.net/npm/@ibm/plex-mono-variable@1.0.0/fonts/split/woff2/IBM%20Plex%20Mono%20Var-Roman-Latin3.woff2") format("woff2");
+  unicode-range: U+0102-0103, U+01CD-01DC, U+1E0C-1E0D, U+1E12-1E13, U+1E24-1E25, U+1E36-1E37, U+1E3C-1E3D, U+1E40-1E47, U+1E4A-1E4B, U+1E62-1E63, U+1E6C-1E6D, U+1E70-1E71, U+1E92-1E93, U+1EA0-1EF9, U+20AB;
+}
+
+@font-face {
+  font-family: "IBM Plex Mono Var";
+  font-style: normal;
+  font-weight: 100 700;
+  font-display: swap;
+  src: url("https://cdn.jsdelivr.net/npm/@ibm/plex-mono-variable@1.0.0/fonts/split/woff2/IBM%20Plex%20Mono%20Var-Roman-Pi.woff2") format("woff2");
+  unicode-range: U+03C0, U+0E3F, U+2000-200D, U+2010-2012, U+2015, U+2028-2029, U+202F, U+2032-2033, U+203E, U+205F, U+2070, U+2074-2079, U+2080-2089, U+2113, U+2116, U+2126, U+212E, U+2150-2151, U+2153-215E, U+2190-2199, U+21A9-21AA, U+21B0-21B3, U+21B6-21B7, U+21BA-21BB, U+21C4, U+21C6, U+2202, U+2206, U+220F, U+2211, U+2215, U+2219-221A, U+221E, U+222B, U+2236, U+2248, U+2260, U+2264-2265, U+2400-2421, U+2500-259F, U+25CA, U+2713, U+274C, U+2B0E-2B11, U+3000, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "IBM Plex Mono Var";
+  font-style: normal;
+  font-weight: 100 700;
+  font-display: swap;
+  src: url("https://cdn.jsdelivr.net/npm/@ibm/plex-mono-variable@1.0.0/fonts/split/woff2/IBM%20Plex%20Mono%20Var-Roman-Cyrillic.woff2") format("woff2");
+  unicode-range: U+0400-045F, U+0462-0463, U+046A-046B, U+0472-0475, U+0490-04C2, U+04CF-04D9, U+04DC-04E9, U+04EE-04F9, U+0524-0525;
+}
 
 /* }}} */
 
@@ -158,7 +212,7 @@ p {
 }
 
 /* Reduce excessive margin from Bootstrap on first paragraph */
-main.content > p:has(+ section) {
+main.content>p:has(+ section) {
   margin-bottom: 1rem;
 }
 
@@ -269,7 +323,8 @@ dl {
 }
 
 pre {
-  font-family: "IBM Plex Mono" !important;
+  font-family: "IBM Plex Mono Var", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace !important;
+  font-weight: 450;
   overflow-x: auto !important;
   white-space: pre-wrap !important;
   white-space: -moz-pre-wrap !important;
@@ -294,6 +349,19 @@ pre.sourceCode {
   border-bottom: 1px solid #dee2e6;
   font-size: 0.875em;
   overflow: visible !important;
+}
+
+/* Give code a weight between Regular (400) and Medium (500), using
+   the variable IBM Plex Mono, so it reads a little heavier than the
+   surrounding IBM Plex Sans text without becoming too loud. */
+code,
+kbd,
+samp,
+pre code,
+pre.sourceCode code,
+code.sourceCode {
+  font-family: "IBM Plex Mono Var", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-weight: 450;
 }
 
 details>summary {
@@ -333,7 +401,7 @@ div.callout-tip.callout {
 }
 
 .callout.callout-style-simple {
-  padding: 0.0em 0.75em 0.70em 0.75em;
+  padding: 0.0em 0.75em 0.0em 0.75em;
   margin-right: 0.5em;
   width: fit-content;
   border-left: 5px solid;
@@ -343,6 +411,7 @@ div.callout-tip.callout {
 }
 
 div.callout-note.callout {
+  padding: 0.0em 0.75em 0.75em 0.75em;
   border-left-color: #007bff;
   margin-left: 0.2em !important;
 }
@@ -358,12 +427,6 @@ div.callout-note.callout {
 .table {
   border-bottom: none;
   border-top: none;
-}
-
-audio {
-  width: 300px;
-  height: 54px;
-  margin-top: 0.5em;
 }
 
 /* }}} */
@@ -1325,6 +1388,610 @@ input.search.form-control {
   clip: rect(0, 0, 0, 0) !important;
   white-space: nowrap !important;
   border: 0 !important;
+}
+
+/* }}} */
+
+/* Research Publication Timeline {{{ */
+
+/* A compact, theme-aware timeline that shows when the papers in a
+   research area were published. Each year sits on a rail in proportion
+   to its distance from the first and last year, and the stacked dots
+   above a year count the papers that were published in it. Labels use
+   IBM Plex Mono, which the site already downloads as the monofont. See
+   the "Flaky Tests" section of research/index.qmd for the markup. */
+
+.pub-timeline {
+  margin: 0.75rem 0 1.5rem 0.25rem;
+}
+
+.pub-timeline figcaption {
+  margin-bottom: 0.4rem;
+  font-size: 0.8rem;
+  color: var(--bs-body-color);
+}
+
+.pub-timeline .pt-count {
+  font-weight: 600;
+  color: #e65100;
+}
+
+.pub-timeline .pt-category {
+  font-weight: 600;
+  color: #e65100;
+}
+
+/* the timeline icon sits to the left of the caption link */
+.pub-timeline figcaption iconify-icon {
+  margin-right: 0.35em;
+}
+
+.pub-timeline figcaption a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.pub-timeline figcaption a:hover,
+.pub-timeline figcaption a:focus-visible {
+  color: #e65100;
+  text-decoration: underline;
+}
+
+.pt-rail {
+  position: relative;
+  height: 4.6rem;
+}
+
+/* The career timeline on the papers page spans 1999-2026: its stacks are
+   taller and only a subset of the years carry labels. */
+
+.pt-career .pt-rail {
+  height: 6.5rem;
+}
+
+.pt-career .pt-year {
+  font-size: 0.7rem;
+}
+
+/* The generator marks a timeline .pt-tall once one of its years holds six
+   or more papers, because those stacks need a taller rail. No timeline needs
+   this yet, so it is insurance against a growing research area. */
+
+.pt-tall .pt-rail {
+  height: 6.5rem;
+}
+
+.pt-track {
+  position: absolute;
+  top: 0;
+  right: 1.6rem;
+  bottom: 0;
+  /* The left inset is deliberately smaller than the right one: it pulls the
+     whole axis, its first dot and its first year label closer to the caption
+     directly above it, while the wider right inset keeps the last year label
+     inside the column. */
+  left: 1rem;
+}
+
+.pt-line {
+  position: absolute;
+  right: 0;
+  bottom: 1.5rem;
+  left: 0;
+  height: 1px;
+  background-color: var(--bs-body-color);
+}
+
+.pt-mark {
+  position: absolute;
+  bottom: 1.5rem;
+  left: calc(var(--pt) * 1%);
+  width: 0;
+  height: 0;
+}
+
+.pt-stack {
+  position: absolute;
+  bottom: 0.3rem;
+  left: 0;
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 0.18rem;
+  align-items: center;
+  transform: translateX(-50%);
+}
+
+.pt-dot {
+  display: block;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: #e65100;
+  opacity: 0.85;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.pt-dot:hover,
+.pt-dot:focus-visible {
+  opacity: 1;
+  transform: scale(1.35);
+}
+
+/* A related dot marks a paper that the paragraph cites but that the area's
+   listing filter does not hold. The caption counts and links only the
+   area's own papers, so the related dots are drawn hollow. The ring is
+   deliberately thicker than a hairline: at 1px it was almost invisible on a
+   0.5rem dot, especially for the final mark, which the rail's right-edge
+   fade washes out. */
+.pt-dot.pt-related {
+  background-color: transparent;
+  border: 2px solid #e65100;
+  box-sizing: border-box;
+  opacity: 0.7;
+}
+
+.pt-year {
+  position: absolute;
+  top: 0.4rem;
+  left: 0;
+  font-family: "IBM Plex Mono Var", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.75rem;
+  line-height: 1;
+  color: var(--bs-body-color);
+  white-space: nowrap;
+  transform: translateX(-50%);
+}
+
+/* dark mode */
+
+body.quarto-dark .pt-dot {
+  background-color: #ef6c00;
+}
+
+body.quarto-dark .pt-dot.pt-related {
+  background-color: transparent;
+  border-color: #ef6c00;
+}
+
+body.quarto-dark .pub-timeline figcaption a:hover,
+body.quarto-dark .pub-timeline figcaption a:focus-visible {
+  color: #ef6c00;
+}
+
+@media (max-width: 640px) {
+  .pt-year {
+    font-size: 0.7rem;
+  }
+}
+
+/* On narrow screens the rail becomes a horizontally scrollable strip: the
+   marks keep their spacing and every year label stays visible, while a
+   swipe reveals the rest of the timeline. The soft edge hints that there
+   is more to see, and it matches the page background in both themes. */
+
+@media (max-width: 700px) {
+  .pt-rail {
+    height: 5.4rem;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    scrollbar-color: #e65100 rgba(127, 127, 127, 0.18);
+    background-image: linear-gradient(to left, rgba(255, 255, 255, 0.95),
+        rgba(255, 255, 255, 0));
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 1.75rem 100%;
+  }
+
+  .pt-career .pt-rail {
+    height: 7.3rem;
+  }
+
+  .pt-tall .pt-rail {
+    height: 7.3rem;
+  }
+
+  body.quarto-dark .pt-rail {
+    scrollbar-color: #ef6c00 rgba(189, 189, 189, 0.18);
+    background-image: linear-gradient(to left, rgba(33, 33, 33, 0.95),
+        rgba(33, 33, 33, 0));
+  }
+
+  .pt-rail:hover,
+  .pt-rail:focus-within {
+    scrollbar-color: #ef6c00 rgba(127, 127, 127, 0.28);
+  }
+
+  body.quarto-dark .pt-rail:hover,
+  body.quarto-dark .pt-rail:focus-within {
+    scrollbar-color: #ef6c00 rgba(189, 189, 189, 0.28);
+  }
+
+  .pt-rail::-webkit-scrollbar {
+    height: 0.5rem;
+  }
+
+  .pt-rail::-webkit-scrollbar-track {
+    background-color: rgba(127, 127, 127, 0.18);
+    border-radius: 0.25rem;
+  }
+
+  .pt-rail::-webkit-scrollbar-thumb {
+    background-color: #e65100;
+    border-radius: 0.25rem;
+  }
+
+  .pt-rail::-webkit-scrollbar-thumb:hover {
+    background-color: #ef6c00;
+  }
+
+  .pt-track {
+    right: 1.1rem;
+    bottom: 0.8rem;
+    left: 1.1rem;
+    min-width: 620px;
+  }
+
+  .pt-career .pt-track {
+    min-width: 780px;
+  }
+}
+
+/* }}} */
+
+/* Theme picker {{{ */
+
+/*
+ * The navbar theme menu replaces Quarto's colour-scheme toggle, whose
+ * icon is drawn by Quarto as a white SVG background image and is easy to
+ * miss against the orange navbar. Hide that toggle where the menu is
+ * available; pages without a navbar keep Quarto's floating toggle.
+ */
+.navbar .quarto-color-scheme-toggle {
+  display: none;
+}
+
+/*
+ * Mark the selected mode with a filled pill, built on Bootstrap's own
+ * .dropdown-item.active state. The fill uses the navbar orange so that the
+ * menu matches the site instead of Bootstrap's default #e95420.
+ */
+.navbar .dropdown-item.active {
+  background-color: #e65100;
+  color: #fff;
+}
+
+/*
+ * Hovering the selected entry needs explicit handling. Two rules in this file
+ * colour hovered list links orange with !important: .navbar
+ * .dropdown-item:hover (#ef6c00, specificity 0,3,0) and the li/ul a:hover
+ * group (#e65100, 0,1,2, which also adds a 0.1em underline). On an orange
+ * fill either one renders the label invisible. Keep the text white, drop the
+ * underline, and darken the fill so the hover is still perceptible. This
+ * selector's specificity of 0,4,0 outranks both of them.
+ */
+.navbar .dropdown-item.active:hover {
+  background-color: #c34500;
+  color: #fff !important;
+  text-decoration: none;
+}
+
+/* }}} */
+
+/* Audio Player {{{ */
+
+/*
+ * Quarto's audio shortcode emits a bare <audio> inside a <figure
+ * class="figure">. Style it to match the site's minimal callouts, which are
+ * transparent, shrink to fit their content instead of filling the text
+ * column, and carry a 5px orange left edge with thin grey borders and a
+ * 0.25rem radius.
+ */
+figure:has(> audio) {
+  margin: 1.25rem 0.5rem 1.25rem 0.25rem;
+  padding: 0.5rem 0.75rem 0.65rem;
+  width: fit-content;
+  max-width: 100%;
+  border-left: 5px solid #e65100;
+  border-right: 1px solid #dee2e6;
+  border-bottom: 1px solid #dee2e6;
+  border-top: 1px solid #dee2e6;
+  border-radius: 0.25rem;
+}
+
+/*
+ * The transport bar itself is painted by the browser, so CSS can only nudge
+ * it. The element gets a lighter surface plus rounded, clipped corners, and
+ * the ::-webkit-* hooks restyle the panel in Chromium browsers. Other
+ * engines ignore those hooks and keep the element level rules, so nothing
+ * breaks where they are unsupported.
+ */
+figure:has(> audio) audio {
+  display: block;
+  width: 300px;
+  max-width: 100%;
+  height: 54px;
+  margin: 0;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  background-color: #f1f3f5;
+  color-scheme: light;
+}
+
+figure:has(> audio) audio::-webkit-media-controls-enclosure {
+  border-radius: 0.5rem;
+  background-color: #f1f3f5;
+}
+
+figure:has(> audio) audio::-webkit-media-controls-panel {
+  background-color: #f1f3f5;
+}
+
+figure:has(> audio) figcaption {
+  margin-top: 0.6rem;
+  color: #5a6268;
+  font-size: 0.9rem;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+/* dark mode */
+
+body.quarto-dark figure:has(> audio) {
+  border-left-color: #ef6c00;
+  border-right-color: #495057;
+  border-bottom-color: #495057;
+  border-top-color: #495057;
+}
+
+body.quarto-dark figure:has(> audio) audio {
+  background-color: #495057;
+  color-scheme: dark;
+}
+
+body.quarto-dark figure:has(> audio) audio::-webkit-media-controls-enclosure,
+body.quarto-dark figure:has(> audio) audio::-webkit-media-controls-panel {
+  background-color: #495057;
+}
+
+body.quarto-dark figure:has(> audio) figcaption {
+  color: #9e9e9e;
+}
+
+/* }}} */
+
+/* Podcast Player {{{ */
+
+/*
+ * Custom transport for episode audio. The markup keeps a real <audio>
+ * element for playback and hides it, because streaming, buffering, and
+ * format support are best left to the browser while its user interface is
+ * impossible to style. The card reuses the minimal callout language: a 5px
+ * orange left edge, thin grey borders, and a 0.25rem radius.
+ */
+.pp {
+  --pp-accent: #e65100;
+  --pp-accent-hover: #c34500;
+  --pp-track: #dee2e6;
+  --pp-muted: #5a6268;
+  --pp-border: #dee2e6;
+  margin: 1.75rem 0;
+  padding: 0.95rem 1.1rem 1.05rem;
+  max-width: 32rem;
+  border-left: 5px solid var(--pp-accent);
+  border-right: 1px solid var(--pp-border);
+  border-bottom: 1px solid var(--pp-border);
+  border-top: 1px solid var(--pp-border);
+  border-radius: 0.25rem;
+}
+
+/*
+ * The native control and the custom transport are swapped only once the
+ * script has wired everything up, so a page without JavaScript falls back
+ * to a working native player instead of showing inert buttons.
+ */
+.pp.pp-ready audio {
+  display: none;
+}
+
+.pp-kicker {
+  margin: 0;
+  color: var(--pp-muted);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.pp-title {
+  margin: 0.15rem 0 0.85rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.pp-row {
+  display: none;
+}
+
+.pp.pp-ready .pp-row {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.pp-play {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background-color: var(--pp-accent);
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 150ms ease, transform 150ms ease;
+}
+
+.pp-play:hover {
+  background-color: var(--pp-accent-hover);
+}
+
+.pp-play:active {
+  transform: scale(0.96);
+}
+
+.pp-play svg {
+  width: 1.35rem;
+  height: 1.35rem;
+  fill: currentColor;
+}
+
+/* only one glyph is shown, chosen by the playback state */
+.pp-ico-pause,
+.pp-playing .pp-ico-play {
+  display: none;
+}
+
+.pp-playing .pp-ico-pause {
+  display: block;
+}
+
+.pp-body {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.pp-range {
+  --pp-fill: 0%;
+  display: block;
+  width: 100%;
+  height: 0.4rem;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 999px;
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  background: linear-gradient(to right,
+      var(--pp-accent) 0,
+      var(--pp-accent) var(--pp-fill),
+      var(--pp-track) var(--pp-fill),
+      var(--pp-track) 100%);
+}
+
+.pp-range::-moz-range-track {
+  border: 0;
+  background: transparent;
+}
+
+.pp-range::-webkit-slider-thumb {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 1rem;
+  height: 1rem;
+  border: 3px solid var(--pp-accent);
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.pp-range::-moz-range-thumb {
+  width: 1rem;
+  height: 1rem;
+  border: 3px solid var(--pp-accent);
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.pp-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-top: 0.55rem;
+}
+
+.pp-time {
+  color: var(--pp-muted);
+  font-size: 0.78rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.pp-sep {
+  padding: 0 0.15rem;
+  opacity: 0.6;
+}
+
+.pp-tools {
+  display: flex;
+  align-items: center;
+  gap: 0.15rem;
+}
+
+.pp-tool {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1.85rem;
+  height: 1.85rem;
+  padding: 0 0.4rem;
+  border: 0;
+  border-radius: 0.25rem;
+  background: transparent;
+  color: var(--pp-muted);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.pp-tool:hover {
+  background-color: rgba(230, 81, 0, 0.1);
+  color: var(--pp-accent);
+}
+
+.pp-tool svg {
+  width: 1.05rem;
+  height: 1.05rem;
+  fill: currentColor;
+}
+
+.pp button:focus-visible,
+.pp a:focus-visible,
+.pp input:focus-visible {
+  outline: 2px solid var(--pp-accent);
+  outline-offset: 2px;
+}
+
+/* dark mode */
+
+body.quarto-dark .pp {
+  --pp-accent: #ef6c00;
+  --pp-accent-hover: #ff8a3d;
+  --pp-track: #495057;
+  --pp-muted: #9e9e9e;
+  --pp-border: #495057;
+}
+
+body.quarto-dark .pp-play {
+  color: #212529;
+}
+
+body.quarto-dark .pp-range::-webkit-slider-thumb,
+body.quarto-dark .pp-range::-moz-range-thumb {
+  background-color: #212529;
+}
+
+body.quarto-dark .pp-tool:hover {
+  background-color: rgba(239, 108, 0, 0.18);
 }
 
 /* }}} */

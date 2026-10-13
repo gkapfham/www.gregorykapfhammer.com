@@ -35,7 +35,7 @@ I learned a lot from Zac during this interview. Here are some of his key insight
 > and the second is that you need to check in some way that your code didn't do
 > the wrong thing."
 
-**What  challenges or limitations may developers face when using Hypothesis?**
+**What challenges or limitations may developers face when using Hypothesis?**
 
 > "The first thing I do wanna say before I get into the downsides is that I
 > think almost every good test suite will involve some or maybe many example
@@ -66,8 +66,9 @@ Podcasts](https://podcasts.apple.com/us/podcast/software-engineering-radio-the-p
 [YouTube](https://www.youtube.com/playlist?list=PLHJB2bhmgB7esz0BxMCt1jJwsoaqWtFff),
 or listen to it with this handy podcast player.
 
-{{< audio
-file="https://traffic.libsyn.com/secure/forcedn/seradio/589_Zac_Hatfield-Dodds_Property-Based_Testing_in_Python.mp3"
-caption="Listen to Software Engineering Radio Episode 589" >}}
+{{< podcast
+src="https://traffic.libsyn.com/secure/forcedn/seradio/589_Zac_Hatfield-Dodds_Property-Based_Testing_in_Python.mp3"
+episode="589"
+title="Zac Hatfield-Dodds on Property-Based Testing in Python" >}}
 
 {{< include /_back-blog.qmd >}}

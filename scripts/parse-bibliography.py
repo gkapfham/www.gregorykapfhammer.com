@@ -44,6 +44,24 @@ PRESENTATION_PDF = "presentation.pdf"
 PAGE_FULL_ATTRIBUTE = "page-layout: full"
 
 MAX_KEYWORD_SIZE = 3
+# Technique categories are the most descriptive ones, so they are kept in
+# front of the alphabetically sorted list below and therefore survive the
+# MAX_KEYWORD_SIZE limit. They are the labels that describe a whole
+# research area of the site together with the study design that a reader
+# must still be able to recognize on a paper page, so they outrank the
+# general-purpose ones: a paper keeps its area tags and its human study
+# badge even when it also earns a technique or fallback tag.
+TECHNIQUE_CATEGORIES = ("database testing", "flaky tests", "human study",
+                       "mutation testing", "performance analysis",
+                       "regression testing", "research methods",
+                       "search-based methods", "web testing")
+# When a title, abstract, or description matches fewer than
+# MAX_KEYWORD_SIZE categories, these general-purpose labels are added in
+# order until the publication carries three tags. Every one of them is a
+# fair description of a paper in this bibliography, and they are tried
+# after the specific keywords so that they never displace one.
+FALLBACK_CATEGORIES = ("software testing", "software development",
+                       "software tool")
 
 KEYWORDS_PRESENTATIONS = {
     "Actions": "software tool",
@@ -126,7 +144,7 @@ KEYWORDS_ALL = {
     "applications": "software tool",
     "automatic": "software development",
     "Automatic": "software development",
-    "approaches": "software tool",
+    # removed: approaches -- an ordinary plural noun; labelled thirteen papers as a tool
     "adequacy criteria": "test coverage",
     "benchmark": "performance analysis",
     "benchmarking": "performance analysis",
@@ -134,16 +152,16 @@ KEYWORDS_ALL = {
     "Building": "software development",
     "coverage criteria": "test coverage",
     "coverage effectiveness": "test coverage",
-    "current status": "literature review",
+    "current status": ("literature review", "research methods"),
     "database-aware": "database testing",
     "database-driven": "database testing",
     "defect prediction": "defect prediction",
-    "developer survey": "human study",
+    "developer survey": ("human study", "research methods"),
     "demonstrations track": "software tool",
-    "encourage": "literature review",
+    # removed: encourage -- an ordinary verb; labelled two papers as a literature review
     "empirical": "empirical study",
     "empirically": "empirical study",
-    "encyclopedia": "literature review",
+    "encyclopedia": ("literature review", "research methods"),
     "experiment": "empirical study",
     "experiments": "empirical study",
     "execution cost": "performance analysis",
@@ -156,10 +174,10 @@ KEYWORDS_ALL = {
     "fault injection": "mutation testing",
     "test suite health": "mutation testing",
     "flaky": "flaky tests",
-    "handbook": "literature review",
-    "instrumentation": "software testing",
+    "handbook": ("literature review", "research methods"),
+    # removed: instrumentation -- too general to imply testing
     "genetic": "search-based methods",
-    "human study": "human study",
+    "human study": ("human study", "research methods"),
     "initial results": "empirical study",
     "invariant": "invariant detection",
     "learned": "undergraduate education",
@@ -172,41 +190,44 @@ KEYWORDS_ALL = {
     "machine learning": "machine learning",
     "memory overhead": "performance analysis",
     "multi-source": "empirical study",
+    "manifesto": "research methods",
     "mutants": "mutation testing",
     "mutation": "mutation testing",
-    "prioritizing test suites": "test-suite prioritization",
-    "prioritizing tests": "test-suite prioritization",
-    "prioritization": "test-suite prioritization",
-    "propose": "literature review",
+    "prioritizing test suites": "regression testing",
+    "prioritizing tests": "regression testing",
+    "prioritization": "regression testing",
+    # removed: propose -- an ordinary verb; labelled five papers as a literature review
     "pseudo-tested": "mutation testing",
     "PseudoSweep": "test coverage",
-    "regression testing": "test-suite prioritization",
+    "regression testing": "regression testing",
     "relational database": "database testing",
+    "replicate": "research methods",
+    "replication": "research methods",
     "repair": "program repair",
     "response time": "performance analysis",
     "resource": "performance analysis",
-    "reduced test suite": "test-suite reduction",
+    "reduced test suite": "regression testing",
     "run-time performance": "performance analysis",
-    "practice": "software development",
+    # removed: practice -- an ordinary noun; labelled seven papers as development
     "solution": "software tool",
     "solutions": "software tool",
     "software wrapping": "software tool",
     "study the effectiveness": "empirical study",
     "supported": "software tool",
-    "systems": "software development",
+    # removed: systems -- an ordinary plural noun; labelled fifteen papers as development
     "testing": "software testing",
     "Testing": "software testing",
     "test data generation": "test-data generation",
     "test generation": "test-data generation",
-    "test reduction": "test-suite reduction",
-    "test suite reduction": "test-suite reduction",
+    "test reduction": "regression testing",
+    "test suite reduction": "regression testing",
     "time-aware": "program performance",
     "time complexity": "performance analysis",
     "tool": "software tool",
     "schema": "database testing",
     "SchemaAnalyst": "database testing",
     "search": "search-based methods",
-    "survey of": "literature review",
+    "survey of": ("literature review", "research methods"),
     "SBST": "search-based methods",
     "test coverage": "test coverage",
     "time overhead": "performance analysis",
@@ -270,6 +291,29 @@ def replace_word_in_string(search_string: str, old_word: str, new_word: str) -> 
     return replaced_string
 
 
+def collect_labels(
+    title: str, abstract: str, description: str, keywords: Dict[str, str]
+) -> list[str]:
+    """Return every category that the text of a publication implies.
+
+    A phrase may imply more than one label: "human study", for instance, means
+    both a human study and a research methods paper.
+    """
+    found: list[str] = []
+    for keyword, labels in keywords.items():
+        if not (
+            string_found(keyword, title)
+            or string_found(keyword, abstract)
+            or string_found(keyword, description)
+        ):
+            continue
+        if isinstance(labels, str):
+            found.append(labels)
+        else:
+            found.extend(labels)
+    return found
+
+
 def create_categories(
     publication: Dict[str, str], is_presentation: bool = False
 ) -> None:
@@ -303,24 +347,36 @@ def create_categories(
     # look to see if each of the specified keywords exists
     # inside of either the title or the abstract; if it
     # does exist, then add it to the list of found keywords
-    for current_keyword in keywords.keys():
-        if (
-            string_found(current_keyword, publication_title)
-            or string_found(current_keyword, publication_abstract)
-            or string_found(current_keyword, publication_description)
-        ):
-            found_keyword = True
-            found_keyword_list.append(keywords[current_keyword])
+    found_keyword_list = collect_labels(
+        publication_title,
+        publication_abstract,
+        publication_description,
+        keywords,
+    )
+    found_keyword = bool(found_keyword_list)
     # at least one keyword was found, so create a new key value
     # pair entry inside of the publication provided as the input
     if found_keyword:
         # remove any of the duplicates inside of the list of keywords
         found_keyword_set = set(found_keyword_list)
         found_keyword_list = list(found_keyword_set)
-        # sort the list alphabetically
-        found_keyword_list.sort()
+        # choose which categories to keep: the technique categories come
+        # first so that they are not dropped by the size limit below
+        found_keyword_list.sort(
+            key=lambda label: (label not in TECHNIQUE_CATEGORIES, label)
+        )
+        # top up the list with the general-purpose labels so that every
+        # publication carries exactly MAX_KEYWORD_SIZE tags
+        for fallback in FALLBACK_CATEGORIES:
+            if len(found_keyword_list) >= MAX_KEYWORD_SIZE:
+                break
+            if fallback not in found_keyword_list:
+                found_keyword_list.append(fallback)
         # do not allow more than four entries for keywords
         delete_elements_beyond_max_size(found_keyword_list, MAX_KEYWORD_SIZE)
+        # store the chosen categories in alphabetical order so that the
+        # tags always appear in dictionary order on the page
+        found_keyword_list.sort()
         publication["categories"] = f"[{', '.join(found_keyword_list)}]"
 
 

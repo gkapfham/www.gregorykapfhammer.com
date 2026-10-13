@@ -74,7 +74,9 @@ def render() -> None:
 def quarto() -> None:
     """Perform the step that publishes to Quarto-Pub or Netlify based on host."""
     # call the quarto render command
-    quarto_publish_command = f"quarto publish {host} --no-render --no-prompt --no-browser"
+    quarto_publish_command = (
+        f"quarto publish {host} --no-render --no-prompt --no-browser"
+    )
     quarto_publish_command_parts = quarto_publish_command.split()
     subprocess.run(
         quarto_publish_command_parts,

@@ -67,12 +67,39 @@ file="https://traffic.libsyn.com/secure/forcedn/seradio/666-eran-yahav-tabnine-c
 caption="Listen to Software Engineering Radio Episode with Eran Yahav" >}}
 ```
 
-```
 - You will know what link to provide since I will give that to you in the
 prompt for writing this blog post.
 - Make sure to include `{{< include /_back-blog.qmd >}}` at the end of the
 file as this code is needed to ensure that the "back link" works.
-```
+- After you write the post, you must verify it with the tool that lives in
+  `_tools/verify-seradio-post.py`; `README.md` documents the tool and every
+  option that it supports. The tool checks that every quotation appears
+  verbatim in the transcript, that the front matter and the required sections
+  are present, and that the prose fits in 80 columns. Run the command below
+  with the slug of the new post and the number of the episode:
+
+  ```bash
+  uv run _tools/verify-seradio-post.py \
+      --post blog/<slug>/index.qmd --episode <number> --check-links
+  ```
+
+- The tool prints a table that pairs each quotation with the speaker and the
+  timestamp of the transcript turn that contains it. That table is the
+  evidence that the "Support your work" rule requires. A non-zero exit code
+  means that at least one check failed, so fix the post and run the tool
+  again.
+- Use the tool in `_tools/fetch-seradio-transcript.py` to download the
+  transcript of an episode when the prompt does not provide one, and to learn
+  the details of an episode before you write the post. The tool reports the
+  episode number, the title, the number of speaker turns, and the URL of the
+  MP3 file together with the Quarto audio shortcode that the **Listen**
+  section needs. It caches the transcript outside of the repository, and the
+  `--stdout` option prints the transcript on its own so that you can search
+  it while writing:
+
+  ```bash
+  uv run _tools/fetch-seradio-transcript.py --url <episode-page-url>
+  ```
 
 ## Blog Posts About Research Papers
 
@@ -164,8 +191,12 @@ These are the high-level rules about modifying the files in this repository:
   should provide the exact extracts from the transcript that you used to create
   the answers from the guest that are in the blog post. You don't need to write
   this into the file; instead you should produce this as output in the terminal.
+  For a Software Engineering Radio post, the `_tools/verify-seradio-post.py`
+  tool prints this evidence for you.
 - **Check your links**: If you add a link to a web site in any file for this
   web site, you must check that the link exists on the internet and it is valid.
+  For a Software Engineering Radio post, the `--check-links` option of
+  `_tools/verify-seradio-post.py` automates this check.
 
 As a writing agent, you must also follow these behavior guidelines, especially
 when it comes to notifying the podcast host about your work and status:
@@ -175,6 +206,107 @@ when it comes to notifying the podcast host about your work and status:
 - The user wants a `notify-send` notification whenever I ask a question.
 - Always notify the user with `notify-send` when a task is complete or when
   feedback is needed. I have standing permission to use the notification tool.
+
+### Terminal-Browser Workflow
+
+`terminal-browser` provides a live browser connection that is especially useful
+for inspecting the rendered Quarto site. It supplies both an accessibility tree
+and screenshots, so it complements source inspection and DOM measurements.
+
+#### Browser ownership and startup
+
+- First run `terminal-browser ls --all`, not only `terminal-browser ls`.
+- The plain command can hide browsers opened in another terminal. The `--all`
+  form reports their browser keys, tabs, URLs, and CDP targets.
+- If this agent is running inside Zellij and no browser is listed, do not assume
+  that `terminal-browser open` will work. It can fail because Zellij is not a
+  recognized Ghostty pane.
+- In that situation, ask the user to run the following in a standalone Ghostty
+  terminal:
+
+  ```bash
+  terminal-browser open http://localhost:5559/slides/weektwo/
+  ```
+
+- Starting the browser first is helpful and, from a Zellij session, is normally
+  necessary for the agent to access it. Once it is running, the agent can use
+  `terminal-browser ls --all` and connect to it by browser key.
+- If the agent itself is running from a recognized Ghostty pane, it may start
+  the browser with `terminal-browser open <url>` or open a tab with
+  `terminal-browser new-tab <url> --browser <key>`.
+- Record whether the browser existed before the verification. Never shut down a
+  browser that the user started. The agent may close only a browser or tab that
+  it started, and only when doing so will not affect another task.
+
+#### Connecting and inspecting a page
+
+After finding a browser key, use the browser-specific action interface:
+
+```bash
+terminal-browser action --browser <key> -- snapshot
+terminal-browser action --browser <key> -- screenshot /tmp/weektwo.png
+terminal-browser action --browser <key> -- eval 'document.title'
+```
+
+- `snapshot` returns the live accessibility tree, including headings, bullets,
+  code, output, links, and interactive references such as `@e14`.
+- Use those references with commands such as
+  `terminal-browser action --browser <key> -- click @e14`.
+- Use `screenshot` to inspect the actual rendered pixels. The screenshot may
+  use a high device-pixel-ratio, so also query `innerWidth` and `innerHeight`.
+- Use `eval` for computed browser information, not guesses based only on the
+  source file. For example:
+
+  ```javascript
+  JSON.stringify({
+    url: location.href,
+    viewport: [innerWidth, innerHeight],
+    slide: document.querySelector("section.present")?.id
+  })
+  ```
+
+- If the target browser has no pane, use its browser key or CDP target from
+  `terminal-browser ls --all`; `no pane` does not mean that it is inaccessible.
+- Use `terminal-browser new-tab <url> --browser <key>` when a separate target
+  URL is needed. Do not change the user's active tab unnecessarily.
+
+#### Measuring page quality
+
+Use a browser evaluation to identify wasted wrapping and overflow:
+
+```javascript
+const slide = document.querySelector("section.present");
+const measurements = [...slide.querySelectorAll("li, p, h1, h2")].map((el) => {
+  const range = document.createRange();
+  range.selectNodeContents(el);
+  const rects = [...range.getClientRects()];
+  return {
+    text: el.innerText,
+    lines: rects.length,
+    width: el.getBoundingClientRect().width,
+    height: el.getBoundingClientRect().height
+  };
+});
+JSON.stringify(measurements);
+```
+
+- A second line containing only one or two words is a content-editing problem,
+  not a font-size problem.
+- Rewrite the sentence into one useful line, or deliberately make both lines
+  useful. Do not use `white-space: nowrap` to hide a poor sentence.
+- Temporarily reveal fragments only in a disposable inspection copy when the
+  hidden state would prevent measurement. Remove that copy afterward.
+- Test code slides and takeaway boxes with all relevant output visible. Check
+  both `scrollWidth > clientWidth` and `scrollHeight > clientHeight`.
+
+#### Shutdown rules
+
+- Do not run `terminal-browser shutdown` merely because verification is done;
+  it may terminate the user's browser session.
+- Leave a user-owned browser running and report that it remains available.
+- If the agent created an isolated browser and the user explicitly permits
+  cleanup, close its tab or stop its browser after deleting temporary
+  screenshots and inspection artifacts.
 
 ## Additional Rules for Version Control
 

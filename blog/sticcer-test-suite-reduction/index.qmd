@@ -11,9 +11,9 @@ description: <em>How can we quickly test database applications?</em>
 
 Are you tired of the time-consuming processes associated with testing database
 schemas? Our latest research published in [@Alsharif2020] [{{< iconify fa6-solid
-book-open >}}](/research/papers/alsharif2020/index.qmd) introduces STICCER, a 
+book-open >}}](/research/papers/alsharif2020/index.qmd) introduces STICCER, a
 technique designed to enhance the way you approach database test suite
-reduction. 
+reduction.
 
 ## Insights
 
@@ -22,7 +22,7 @@ Here are some of the key insights from this paper:
 - **Automated Efficiency**: STICCER intelligently identifies and merges similar
 test cases, significantly reducing the size of your test suite without
 compromising coverage.
-   
+
 - **Enhanced Speed**: Our experiments with 34 real-world relational database
 schemas revealed that STICCER can make test suites up to 5 times faster than the
 original, and 2.5 times faster compared to traditional reduction methods.
@@ -53,7 +53,8 @@ replicate this paper's empirical results by using the
 If you have ideas on how to refine this test suite reduction method for database
 applications, please [contact](/contact/) me! Furthermore, if you wish to stay
 informed about new developments and blog posts related to STICCER and other
-similar topics, please consider [subscribing](/support/) to my mailing list.
+similar topics, please consider subscribing to the
+[RSS feed](/blog/index.xml) for my blog.
 
 :::
 

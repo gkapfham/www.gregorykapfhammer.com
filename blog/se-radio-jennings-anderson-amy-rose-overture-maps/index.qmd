@@ -105,7 +105,9 @@ Podcasts](https://podcasts.apple.com/us/podcast/software-engineering-radio-the-p
 [YouTube](https://www.youtube.com/playlist?list=PLHJB2bhmgB7esz0BxMCt1jJwsoaqWtFff),
 or you can listen to it with this handy podcast player.
 
-{{< audio file="https://traffic.libsyn.com/secure/seradio/694-anderson-rose-overture-maps.mp3"
-  caption="Listen to Software Engineering Radio Episode with Jennings Anderson and Amy Rose">}}
+{{< podcast
+src="https://traffic.libsyn.com/secure/seradio/694-anderson-rose-overture-maps.mp3"
+episode="694"
+title="Jennings Anderson and Amy Rose on Overture Maps" >}}
 
 {{< include /_back-blog.qmd >}}

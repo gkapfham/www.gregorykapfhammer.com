@@ -42,16 +42,15 @@ jobs:
       - name: Setup Virtual Environment
         run: |
           uv sync
-      # Render and Publish the Site;
-      # Note that this uses Quarto to
-      # directly publish the site, which
-      # means that you do not use Netlify
-      # build minutes. This is great! Yet,
-      # it also means that you do not get
-      # a Netlify preview build for PRs.
+      # Render the Site;
+      # Note that the render and the deploy
+      # both happen inside of this workflow,
+      # so there are no host build minutes
+      # to spend. Yet, it also means that you
+      # do not get a preview deployment for
+      # each pull request.
       - name: Render and Publish
         env:
-          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           PYDEVD_DISABLE_FILE_VALIDATION: 1
         run: |
           python --version
@@ -61,7 +60,6 @@ jobs:
           uv run python scripts/publish-site.py --stage all
           uv run python scripts/publish-site.py --stage render --render-file index.qmd
           uv run python scripts/publish-site.py --stage post-render
-          # uv run python scripts/publish-site.py --stage netlify
       # Optimize Font Awesome CSS
       # This runs AFTER render because quarto copies Font Awesome CSS to _site during render
       # Scans .qmd files for icon usage and creates minimal CSS

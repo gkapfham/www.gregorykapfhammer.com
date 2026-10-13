@@ -57,7 +57,8 @@ perspective on the engineering of software. Let me know what you think!
 Do you have any questions about this interview? Or, do you have a response to
 Jonathan's ideas? If you do, then I hope that you will [contact](/contact/) me
 to share some of your thoughts. Or, do you want to be updated when I publish new
-interviews? If you do, then please [subscribe](/support/) to my mailing list.
+blog posts? If you do, then please subscribe to the
+[RSS feed](/blog/index.xml) for my blog.
 
 :::
 

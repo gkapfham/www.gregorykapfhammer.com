@@ -63,6 +63,10 @@ href="https://github.com/mccurdyc/mrstudyr">mrstudyr</a>: Retrospectively study
 effectiveness of mutation testing techniques</li>
 
 <li class="software"><a target="_blank" rel="noopener"
+        href="https://github.com/LLM-Mutation/multiplex">multiplex</a>: Modular
+        LLM-based framework for mutation analysis</li>
+
+<li class="software"><a target="_blank" rel="noopener"
 href="https://github.com/PseudoTested/pseudosweep">pseudosweep</a>:
 Find pseudo-tested statements and methods in Java programs</li>
 
@@ -304,7 +308,7 @@ Presentation slides a QSIC 2014 talk</li>
 #### Research Connection
 
 Did you know that I use LaTeX, JavaScript, Markdown, and other programming
-languages to create many of  [research
+languages to create many of [research
 presentations](/research/presentations/index.qmd)? By studying the source code
 for presentations like [@Kapfhammer2021] [{{< iconify fa6-solid book-open
 >}}](/research/presentations/kapfhammer2021/index.qmd) and
@@ -406,6 +410,10 @@ href="https://github.com/GatorEducator/execexam">execexam</a>: Run
 executable examinations to assess programming skills</li>
 
 <li class="software"><a target="_blank" rel="noopener"
+    href="https://github.com/formtuist/formtuist">formtuist</a>:
+    Programmatically create, complete, and circulate flexible forms</li>
+
+<li class="software"><a target="_blank" rel="noopener"
 href="https://github.com/GatorEducator/gatorgrade">gatorgrade</a>: Python
 front-end for the GatorGrader assessment tool</li>
 
@@ -479,6 +487,18 @@ Developer Development</a>: Team-based introduction to building software systems
 <li class="software"><a target="_blank" rel="noopener"
 href="https://www.os-sketch.com/">
 Operating Systems</a>: Build and understand operating system components
+</li>
+
+<li class="software"><a target="_blank" rel="noopener"
+href="https://proofgrammers.com/">Proofgrammers</a>: Explore how mathematical proof connects to Python programming
+</li>
+
+<li class="software"><a target="_blank" rel="noopener"
+href="https://prosegrammers.com/">Prosegrammers</a>: Learn Python-based techniques for document engineering
+</li>
+
+<li class="software"><a target="_blank" rel="noopener"
+href="https://securitysynapse.org/">Security Synapse</a>: Connect theory to the practice of computer security
 </li>
 
 </ul>
@@ -801,6 +821,6 @@ execution and management</li>
 
 Although I no longer maintain any of these software tools, I'm glad to make them
 available as a history of prior work and as a source of inspiration and ideas
-for software engineers. 
+for software engineers.
 
 :::

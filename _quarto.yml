@@ -17,7 +17,12 @@ website:
   announcement:
     icon: megaphone
     dismissable: true
-    content: 'I recently hosted an episode of <a href = "https://se-radio.net/">Software Engineering Radio</a> called <a href="https://se-radio.net/2025/11/se-radio-694-jennings-anderson-and-amy-rose-on-overture-maps/">\"Jennings Anderson and Amy Rose on Overture Maps\"</a>!'
+    content: >-
+      I recently hosted an episode of
+      <a href="https://se-radio.net/">Software Engineering Radio</a> called
+      <a
+      href="https://se-radio.net/2026/07/se-radio-727-jeroen-janssens-and-thijs-nieuwdorp-on-using-polars/">"Jeroen
+      Janssens and Thijs Nieuwdorp on Using Polars"</a>!
     type: primary
   page-navigation: true
   favicon: "icons/fxemoji-rocket.svg"
@@ -36,8 +41,8 @@ website:
             href: "teaching/index.qmd"
           - text: "Algorithm Analysis"
             href: "https://www.algorithmology.org/"
-          - text: "Document Engineering"
-            href: "https://prosegrammers.com/"
+          - text: "Computer Security"
+            href: "https://securitysynapse.org/"
       - text: "Research"
         menu:
           - text: "Overview"
@@ -73,6 +78,14 @@ website:
             url: research/papers/index.xml
           - text: Presentations
             url: research/presentations/index.xml
+      - text: "{{< fa circle-half-stroke >}}"
+        menu:
+          - text: Light
+            href: "#light"
+          - text: Dark
+            href: "#dark"
+          - text: System
+            href: "#system"
   page-footer:
     left: "{{< fa copyright >}} GMK"
     center: '<a href="#" aria-label="Go to the top of the page">Top {{< fa circle-up >}}</a>'
@@ -101,6 +114,8 @@ format:
     include-after-body:
       - file: _include/js/instant-page.js
       - file: _include/js/back-to-top.js
+      - file: _include/js/theme-picker.js
+      - file: _include/js/podcast-player.js
     # always display the page in full layout;
     # this seems to minimize the amount of
     # "jumping" that occurs when page loads
@@ -137,7 +152,13 @@ format:
     code-fold: show
     code-tools: false
     code-summary: "Code"
-    highlight-style: gruvbox
+    # use the custom code highlighting themes so that
+    # the syntax colors match the colors in this site;
+    # a light and a dark variant are provided so that
+    # the correct one is chosen for each color scheme
+    highlight-style:
+      light: code-theme-light.theme
+      dark: code-theme-dark.theme
     code-block-bg: false
     code-block-border-left: "#e65100"
     email-obfuscation: javascript

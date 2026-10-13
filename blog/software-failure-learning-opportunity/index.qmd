@@ -110,8 +110,8 @@ program? Yes and yes. But, was it worth it? Yes, absolutely!
 Do you have experiences with software failure? Have you seen the benefits of a
 program no longer meeting your needs? If you have, then I invite you to
 [contact](/contact/) with your thoughts. Do you want to be updated when I
-publish new blog posts? If you do, then please [subscribe](/support/) to my
-mailing list.
+publish new blog posts? If you do, then please subscribe to the
+[RSS feed](/blog/index.xml) for my blog.
 
 :::
 

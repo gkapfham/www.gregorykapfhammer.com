@@ -61,8 +61,9 @@ Podcasts](https://podcasts.apple.com/us/podcast/software-engineering-radio-the-p
 [YouTube](https://www.youtube.com/playlist?list=PLHJB2bhmgB7esz0BxMCt1jJwsoaqWtFff),
 or you can listen to it with this handy podcast player.
 
-{{< audio
-file="https://traffic.libsyn.com/secure/forcedn/seradio/609_hyrum_wright_software_engineering_at_google.mp3"
-caption="Listen to Software Engineering Radio Episode 609" >}}
+{{< podcast
+src="https://traffic.libsyn.com/secure/forcedn/seradio/609_hyrum_wright_software_engineering_at_google.mp3"
+episode="609"
+title="Hyrum Wright on Software Engineering at Google" >}}
 
 {{< include /_back-blog.qmd >}}

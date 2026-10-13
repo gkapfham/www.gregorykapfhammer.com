@@ -1,0 +1,127 @@
+---
+author: Gregory M. Kapfhammer
+title: >-
+  Insights from my Software Engineering Radio interview
+  with Jeroen Janssens and Thijs Nieuwdorp
+date: '2026-07-02'
+date-format: YYYY
+categories: [post, developer productivity, software engineering radio]
+description: >-
+  <em>What makes Polars a fast and expressive data
+  frame library?</em>
+---
+
+## Introduction
+
+In a recent episode of the [Software Engineering
+Radio](https://www.se-radio.net/) podcast, I interviewed [Jeroen
+Janssens](https://jeroenjanssens.com/), the Head of Developer Relations at
+Posit, and [Thijs Nieuwdorp](https://thijsnieuwdorp.com/), a Developer
+Relations Engineer at [Polars](https://pola.rs/). Our conversation focused on
+Polars, a data frame library whose core is implemented in Rust and which offers
+bindings for Python, R, and Node.js. Jeroen and Thijs also wrote [Python
+Polars: The Definitive Guide](https://polarsguide.com/), the book that anchored
+our discussion of expressions, joins, concatenation, and performance. This
+episode was a joy to record --- I hope you appreciate it!
+
+## Insights
+
+I'm thankful that both Jeroen and Thijs took the time for this interview!
+Before you listen to the full episode, please check out some of its insights:
+
+**What makes Polars fast and why do developers keep using it?**
+
+Jeroen explains the origin story of Polars and what attracts developers to it:
+
+> "Now, about five years ago, Ritchie was trying to join two tables for some
+> client work that he had to do, and he just was not satisfied with how slow
+> Pandas were for that task. So, Ritchie being Ritchie, he tried to implement
+> this himself using Rust. ... And now fast forward five years, we have this
+> incredibly fast library with an expressive API for working with data. ...
+> Now within the community, we often say that you come for the speed, but you
+> stay for the API when it comes to Polars."
+
+**What does it mean that Polars can process data that is "out of core"?**
+
+Thijs describes the streaming engine built into Polars:
+
+> "So “out of core” indicates a set of algorithms that is designed to process
+> data that are too large to fit into a computer's main memory all at once. And
+> what the streaming engine does is it chops the data up in parts and process
+> it as far as it can go, generally reducing peak memory usage. And of course,
+> depending on the circumstances like the dataset and the query, oftentimes you
+> can process datasets that are larger than RAM."
+
+**What is an expression, and why is it the foundation of the Polars API?**
+
+Jeroen explains why expressions deserve so much of your attention:
+
+> "Yes, expressions are small things, but they are vital to Polars itself. ...
+> And I think it's safe to say that when you understand expressions, you've
+> mastered over 80% of the API that Polars offers and it's a big API. So, think
+> of expressions as small operations that you can stack together to create a
+> full query and chaining them, meaning adding a method to an existing object,
+> right? Method chaining as Python programmers are very fond of as opposed to
+> when you're working in R which is more functional."
+
+He also offers the precise definition that he and Thijs settled on for the
+book:
+
+> "An expression is a tree of operations that describe how to construct one or
+> more series."
+
+**How does the query optimizer make a Polars pipeline faster?**
+
+Jeroen describes why a lazy query can beat the equivalent eager code:
+
+> "Now the query optimizer then looks at that blueprint to find the fastest
+> path to your result. It uses several tricks. One is called predicate push
+> down, and it moves your filters as close to the data source as possible. It
+> also uses a projection push down. So, the engine only reads the specific
+> columns you actually need for your analysis. ... Now lazy mode is a bit
+> smarter because it waits until the very end to run everything."
+
+He explains that the switch to that lazy mode is a small change:
+
+> "... you have to make sure that you start off in lazy mode by either using a
+> scan function instead of a read function, right? If you were to, for example,
+> use `read_csv`, you read the entire CSV file into memory, when you do
+> `scan_csv`, it will start off in lazy mode and again, only read the parts
+> that are actually necessary."
+
+**How much faster is Polars when a real production pipeline is migrated?**
+
+Thijs tells the story of porting a utilities pipeline from Pandas to Polars:
+
+> "I took one part of the pipeline's, relatively straightforward, it is like 30
+> seconds of runtime, and it was just, okay, grab data frame out of the Cloud,
+> added it to the existing data and then applied some business rules. So, in
+> pandas that took about 30 seconds and then I transferred that to Polars, and
+> we got it down to 1.2 seconds ... what originally would've cost about 150,000
+> for the entire calculation. We brought that down to 3.5 K euros, which is
+> well under the budgeted 5K Euro. So, a total reduction in cost of 98%."
+
+Jeroen adds an important lesson for anyone who wants to repeat this migration:
+
+> "... you cannot do this on a line-by-line basis because the two are just so
+> different."
+
+## Listen
+
+In conclusion, if you're interested in learning more about Polars and how it
+can make your data analysis faster, I highly recommend that you listen to
+[Jeroen Janssens and Thijs Nieuwdorp on Using
+Polars](https://se-radio.net/2026/07/se-radio-727-jeroen-janssens-and-thijs-nieuwdorp-on-using-polars/)
+from [Software Engineering Radio](https://se-radio.net/)! You can find it on
+your favorite podcast player, [Apple
+Podcasts](https://podcasts.apple.com/us/podcast/software-engineering-radio-the-podcast-for/id120906714),
+[Spotify](https://open.spotify.com/show/6UO3XQclSuNnGxB39QdAnL),
+[YouTube](https://www.youtube.com/playlist?list=PLHJB2bhmgB7esz0BxMCt1jJwsoaqWtFff),
+or listen to it with this handy podcast player.
+
+{{< podcast
+src="https://traffic.libsyn.com/secure/forcedn/seradio/727-jeroen-janssens-thijs-nieuwdorp-using-polars.mp3"
+episode="727"
+title="Jeroen Janssens and Thijs Nieuwdorp on Using Polars" >}}
+
+{{< include /_back-blog.qmd >}}

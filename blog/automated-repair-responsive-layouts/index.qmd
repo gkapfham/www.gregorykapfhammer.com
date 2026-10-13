@@ -99,8 +99,8 @@ If you build or maintain responsive web pages, I encourage you to read
 LayoutDR works. The tool is available on
 [GitHub](https://github.com/LayoutDR/LayoutDR-tool). If you have questions or
 experiences with responsive layout failures, please [contact](/contact/) me.
-To stay updated on the latest developments in web testing research, you should consider
-[subscribing](/support/) to my mailing list.
+To stay updated on the latest developments in web testing research, you
+should consider subscribing to the [RSS feed](/blog/index.xml) for my blog.
 
 :::
 

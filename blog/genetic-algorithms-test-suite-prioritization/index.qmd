@@ -28,7 +28,7 @@ Using the coverage effectiveness (CE) metric [@Kapfhammer2007] [{{< iconify
 fa6-solid book-open>}}](/research/papers/kapfhammer2007/index.qmd) as a fitness
 function, the prioritization method incorporates both the execution time and
 requirement coverage of each test to evolve a test suite that rapidly covers
-test requirements like the statements or branches in the program under test. 
+test requirements like the statements or branches in the program under test.
 
 ## Findings
 
@@ -58,8 +58,8 @@ As we continue to explore the potential of genetic algorithms in software
 testing, your insights and suggestions are appreciated! If you have ideas or
 experiences related to this topic, please [contact](/contact/) me. Or, if you
 want to stay informed about new developments and blog posts related to software
-testing and other topics, please consider [subscribing](/support/) to my mailing
-list.
+testing and other topics, please consider subscribing to the
+[RSS feed](/blog/index.xml) for my blog.
 
 :::
 

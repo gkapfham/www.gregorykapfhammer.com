@@ -15,7 +15,7 @@ format:
 listing:
   - id: featured-papers
     contents:
-      - "research/papers/**"
+      - "research/papers/**/*.qmd"
       - "!research/papers/index.qmd"
     sort:
       - "date desc"
@@ -29,7 +29,7 @@ listing:
     page-size: 5
   - id: featured-presentations
     contents:
-      - "research/presentations/**"
+      - "research/presentations/**/*.qmd"
       - "!research/presentations/index.qmd"
     sort:
       - "date desc"
@@ -120,7 +120,7 @@ Computer and Information Science](https://www.cis.allegheny.edu/) at
 [Allegheny College](http://www.allegheny.edu), I am an associate editor for
 the [Journal of Software: Evolution and
 Process](https://onlinelibrary.wiley.com/journal/20477481), an academic editor
-for the [PeerJ Computer Science](https://peerj.com/computer-science/) journal,
+for the [PeerJ Computer Science](https://peerj.com/journals/computer-science/) journal,
 a program committee member for conferences like the [International Conference
 on Software Testing, Verification and
 Validation](https://cs.gmu.edu/icst/index.html) and the [International
@@ -136,7 +136,7 @@ software engineering as a co-host of [Software Engineering
 Radio](https://se-radio.net/). You can learn more about me and my work by
 reading my [biography](biography/index.qmd), downloading my [curriculum
 vitae](https://github.com/gkapfham/curriculum-vitae/releases/download/v1.6.0/curriculum_vitae_kapfhammer.pdf),
-and [subscribing](support/index.qmd) to my mailing list.
+and [staying in touch](contact/index.qmd) with me.
 
 ## Research Expertise
 
@@ -168,7 +168,7 @@ effectively rerunning test suites
 
 ::: {.callout-tip appearance="minimal"}
 
-{{< fa rocket >}} <em>Read</em> all of my  [research papers](research/papers/index.qmd)
+{{< fa rocket >}} <em>Read</em> all of my [research papers](research/papers/index.qmd)
 
 :::
 
@@ -245,12 +245,11 @@ introduction to building software systems
 <ul>
 
 <li><p><a target="_blank" rel="noopener"
-href="https://github.com/GatorEducator/cellveyor">Cellveyor</a>: Easily convey
-reports from Google Sheets to GitHub</p></li>
+href="">Flakefighters</a>: Pytest plugin for detecting and classifying flaky tests</p></li>
 
 <li><p><a target="_blank" rel="noopener"
-href="https://github.com/AstuteSource/chasten">Chasten</a>: Configurable
-linting tool that uses XPath expressions</p></li>
+    href="https://github.com/formtuist/formtuist">Formtuist</a>:
+    Programmatically create, complete, and circulate flexible forms</p></li>
 
 <li><p><a target="_blank" rel="noopener"
 href="https://github.com/GatorEducator/gatorgrade">GatorGrade</a>: Python
@@ -265,7 +264,6 @@ href="https://github.com/schemaanalyst-team/schemaanalyst">SchemaAnalyst</a>:
 Data generation and mutation analysis for database schemas</p></li>
 
 </ul>
-
 
 ::: {.callout-tip appearance="minimal"}
 

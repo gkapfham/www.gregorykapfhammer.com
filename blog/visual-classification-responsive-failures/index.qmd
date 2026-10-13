@@ -92,7 +92,8 @@ streamline your testing process. Since the tool is available on
 [GitHub](https://github.com/verve-tool/verve), you can also try it! If you
 have questions or experiences with responsive layout testing, please
 [contact](/contact/) me. To stay updated on the latest developments in web
-testing research, please consider [subscribing](/support/) to my mailing list.
+testing research, please consider subscribing to the
+[RSS feed](/blog/index.xml) for my blog.
 
 :::
 

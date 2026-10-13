@@ -1,11 +1,16 @@
 <meta name="theme-color" content="#e95420" />
 
-<!-- Preconnect to Google Fonts for faster font loading -->
+<!-- Preconnect to the font hosts for faster font loading -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 
-<!-- Load Google Fonts with display=swap for better performance -->
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<!-- Load Google Fonts with display=swap for better performance.
+     The variable IBM Plex Mono is declared in styles.css, so this link
+     only loads IBM Plex Sans. Code falls back to system monospace fonts
+     if the variable font is unavailable, which avoids a second download
+     of IBM Plex Mono from Google Fonts. -->
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
 
 <!-- Back to Top Button -->
 <button id="back-to-top" class="back-to-top" aria-label="Back to top" title="Back to top">
