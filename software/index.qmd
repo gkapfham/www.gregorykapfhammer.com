@@ -409,9 +409,9 @@ container and infrastructure for GatorGrader</li>
 href="https://github.com/GatorEducator/execexam">execexam</a>: Run
 executable examinations to assess programming skills</li>
 
-<li><p><a target="_blank" rel="noopener"
-    href="https://github.com/formtuist/formtuist">Formtuist</a>:
-    Programmatically create, complete, and circulate flexible forms</p></li>
+<li class="software"><a target="_blank" rel="noopener"
+    href="https://github.com/formtuist/formtuist">formtuist</a>:
+    Programmatically create, complete, and circulate flexible forms</li>
 
 <li class="software"><a target="_blank" rel="noopener"
 href="https://github.com/GatorEducator/gatorgrade">gatorgrade</a>: Python
