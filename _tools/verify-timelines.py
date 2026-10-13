@@ -166,6 +166,21 @@ class Figure:
         return len(self.members)
 
 
+def yaml_scalar(raw: str) -> str:
+    """Reduce a front-matter scalar to the plain text that it represents.
+
+    A generated page quotes a title that holds an apostrophe with single
+    quotes and escapes that apostrophe by doubling it, so the doubling has to
+    be undone before the title is used as a label. An unquoted scalar is
+    returned unchanged.
+    """
+    text = re.sub(r"\s+", " ", raw).strip()
+    # slice rather than compare a length: a lone quote also collapses to ""
+    if text[:1] == "'" and text[-1:] == "'":
+        text = text[1:-1].replace("''", "'")
+    return text
+
+
 def load_entries(directory: pathlib.Path) -> list[Entry]:
     """Read the front matter of every entry in a directory."""
     entries = []
@@ -189,7 +204,7 @@ def load_entries(directory: pathlib.Path) -> list[Entry]:
                 slug=child.name,
                 identifier=identifier.group(1).strip(),
                 year=int(date.group(1)),
-                title=re.sub(r"\s+", " ", title.group(1)).strip().strip("'")
+                title=yaml_scalar(title.group(1))
                 if title
                 else identifier.group(1).strip(),
                 categories=names,
