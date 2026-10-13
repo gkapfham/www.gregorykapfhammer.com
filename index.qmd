@@ -245,12 +245,11 @@ introduction to building software systems
 <ul>
 
 <li><p><a target="_blank" rel="noopener"
-href="https://github.com/GatorEducator/cellveyor">Cellveyor</a>: Easily convey
-reports from Google Sheets to GitHub</p></li>
+href="">Flakefighters</a>: Pytest plugin for detecting and classifying flaky tests</p></li>
 
 <li><p><a target="_blank" rel="noopener"
-href="https://github.com/AstuteSource/chasten">Chasten</a>: Configurable
-linting tool that uses XPath expressions</p></li>
+    href="https://github.com/formtuist/formtuist">Formtuist</a>:
+    Programmatically create, complete, and circulate flexible forms</p></li>
 
 <li><p><a target="_blank" rel="noopener"
 href="https://github.com/GatorEducator/gatorgrade">GatorGrade</a>: Python
