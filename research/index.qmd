@@ -1450,7 +1450,8 @@ recent large-scale studies of flaky tests [@Parry2026] [{{< iconify
 fa6-solid book-open >}}](/research/papers/parry2026/index.qmd), which analyze
 millions of mutant-test pairs collected from over half a million test suite
 executions across 28 Python projects.
-Because these empirical studies ultimately serve people, my research places a
+Because these empirical studies ultimately serve people (e.g., software
+engineers), my research places a
 deliberate emphasis on studies that involve humans, examining how testers
 understand SQL test cases [@Alsharif2019] [{{< iconify fa6-solid
 book-open >}}](/research/papers/alsharif2019/index.qmd),
