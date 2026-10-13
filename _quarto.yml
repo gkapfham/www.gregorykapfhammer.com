@@ -152,7 +152,13 @@ format:
     code-fold: show
     code-tools: false
     code-summary: "Code"
-    highlight-style: gruvbox
+    # use the custom code highlighting themes so that
+    # the syntax colors match the colors in this site;
+    # a light and a dark variant are provided so that
+    # the correct one is chosen for each color scheme
+    highlight-style:
+      light: code-theme-light.theme
+      dark: code-theme-dark.theme
     code-block-bg: false
     code-block-border-left: "#e65100"
     email-obfuscation: javascript
