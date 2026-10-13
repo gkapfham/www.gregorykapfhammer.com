@@ -112,6 +112,36 @@ python -m http.server 8000
 
 Then open `http://localhost:8000` in your browser.
 
+### Custom Code Highlighting
+
+The syntax highlighting colors do not use a built-in Quarto theme. Instead,
+two custom Pandoc theme files at the root of the project define them:
+
+- `code-theme-light.theme` - the theme for the light color scheme
+- `code-theme-dark.theme` - the theme for the dark color scheme
+
+The `highlight-style` option in `_quarto.yml` selects both files, so Quarto
+applies the correct one for the active color scheme. The themes reuse the
+site palette: deep orange for keywords and imports, the inline-code blue for
+builtins and variables, and grey for text, operators, and comments. They add
+three accents that harmonize with the orange: teal for strings, purple for
+types, and amber for numbers.
+
+Each file follows the Pandoc theme schema and defines every entry in
+`text-styles`. Because Quarto watches these files, editing one rebuilds the
+pages in a running preview.
+
+### Code Font Weight
+
+Code uses the variable IBM Plex Mono, which has a continuous 100-700 weight
+axis. `styles.css` declares the `@font-face` rules and sets the code weight
+to 450, a value between Regular (400) and Medium (500) that reads a little
+heavier than the surrounding IBM Plex Sans text. The `@font-face` rules are
+inlined in `styles.css` rather than loaded from a second stylesheet so that
+they do not add a render-blocking request. The browser fetches only the
+font subsets that a page actually uses, with `font-display: swap`, and code
+falls back to system monospace fonts if the variable font is unavailable.
+
 ## Software Engineering Radio Blog Posts
 
 Two tools in `_tools/` support the posts about episodes of the Software
