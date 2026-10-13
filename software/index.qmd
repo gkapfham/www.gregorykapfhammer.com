@@ -495,9 +495,11 @@ href="https://proofgrammers.com/">Proofgrammers</a>: Explore how mathematical pr
 
 <li class="software"><a target="_blank" rel="noopener"
 href="https://prosegrammers.com/">Prosegrammers</a>: Learn Python-based techniques for document engineering
+</li>
 
 <li class="software"><a target="_blank" rel="noopener"
 href="https://securitysynapse.org/">Security Synapse</a>: Connect theory to the practice of computer security
+</li>
 
 </ul>
 
