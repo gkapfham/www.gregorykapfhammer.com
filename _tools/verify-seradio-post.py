@@ -10,7 +10,7 @@ publishes on the episode page. It enforces the rules in AGENTS.md:
   * the front matter has the required keys and categories
   * the Introduction, Insights, and Listen sections all exist
   * Insights contains between three and five question headings
-  * the audio shortcode and the back-blog include are present
+  * the podcast shortcode and the back-blog include are present
   * no emoji characters are used, since the site uses Nerd Font icons
 
 For each verified quotation the report shows the speaker and the timestamp
@@ -296,8 +296,8 @@ def check_structure(front: str, body: str) -> list[str]:
             f"expected {MIN_QUESTIONS}-{MAX_QUESTIONS} question "
             f"headings in Insights, found {len(questions)}"
         )
-    if "{{< audio" not in body:
-        problems.append("missing audio shortcode")
+    if "{{< podcast" not in body:
+        problems.append("missing podcast shortcode")
     if "{{< include /_back-blog.qmd >}}" not in body:
         problems.append("missing back-blog include")
     emoji = sorted(set(EMOJI_RE.findall(body)))

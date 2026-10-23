@@ -5,7 +5,7 @@ generated transcript that Software Engineering Radio publishes, saves it to
 a cache outside of the repository, and reports the details that a blog post
 needs: the episode number and title, the number of speaker turns in the
 transcript, and the URL of the episode's MP3 file together with a ready to
-paste Quarto audio shortcode.
+paste Quarto podcast shortcode.
 
 The tool is useful before a blog post exists. Fetch a transcript as soon as
 an episode is published, read or search it, and then hand the cached file to
@@ -230,10 +230,24 @@ def summarize(transcript: str) -> tuple[int, int, int]:
     return turns, words, len(transcript)
 
 
-def audio_shortcode(mp3: str, episode: str) -> str:
-    """Return the Quarto shortcode that embeds the episode audio."""
-    caption = f"Listen to Software Engineering Radio Episode {episode}"
-    return f'{{{{< audio\nfile="{mp3}"\ncaption="{caption}" >}}}}'
+def bare_title(title: str) -> str:
+    """Drop the "SE Radio <episode>: " prefix from a page title.
+
+    The podcast shortcode already renders the episode number in its kicker,
+    so repeating it inside the title would show the number twice.
+    """
+    head, separator, tail = title.partition(": ")
+    if separator and head.lower().startswith("se radio"):
+        return tail.strip()
+    return title
+
+
+def podcast_shortcode(mp3: str, episode: str, title: str) -> str:
+    """Return the Quarto shortcode that embeds the episode player."""
+    return (
+        f'{{{{< podcast\nsrc="{mp3}"\nepisode="{episode}"\n'
+        f'title="{bare_title(title)}" >}}}}'
+    )
 
 
 def show_summary(fields: Sequence[tuple[str, str]]) -> None:
@@ -384,8 +398,8 @@ def main(argv: Sequence[str] | None = None) -> int:
 
     if mp3:
         console.print()
-        console.print("audio shortcode:", style=DEFAULT_CONSOLE_STYLE)
-        for line in audio_shortcode(mp3, str(episode)).splitlines():
+        console.print("podcast shortcode:", style=DEFAULT_CONSOLE_STYLE)
+        for line in podcast_shortcode(mp3, str(episode), title).splitlines():
             # soft_wrap keeps the shortcode on one line when it is copied
             console.print(Text(f"    {line}"), soft_wrap=True)
 
