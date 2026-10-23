@@ -57,15 +57,28 @@ Software Engineering Radio podcast:
     these links, which include, for instance, Apple Podcasts and Spotify.
     Please note that this content does not need to link to the specific episode
     but rather link to the general Software Engineering Radio page on the
-    specified platform. Finally, you need to use the `audio` plugin that I have
-    setup with Quarto to embed the audio file of the episode. Here is a
-    complete example of what that would look like:
+    specified platform. Finally, you need to embed the episode player with
+    the `podcast` shortcode that I have set up with Quarto. It takes the MP3
+    file, the episode number, and the episode title, and it renders the
+    player with the correct kicker line. Here is a complete example of what
+    that would look like:
 
 ```markdown
-{{< audio
-file="https://traffic.libsyn.com/secure/forcedn/seradio/666-eran-yahav-tabnine-coding-assistant.mp3"
-caption="Listen to Software Engineering Radio Episode with Eran Yahav" >}}
+{{< podcast
+src="https://traffic.libsyn.com/secure/forcedn/seradio/666-eran-yahav-tabnine-coding-assistant.mp3"
+episode="666"
+title="Eran Yahav on the Tabnine AI Coding Assistant" >}}
 ```
+
+    The shortcode accepts these arguments:
+
+    - `src` (required): the URL of the MP3 file
+    - `title` (required): the episode title, without the `SE Radio <number>:`
+      prefix, because the kicker already shows the episode number
+    - `episode` (optional): the episode number, used to build the kicker
+    - `show` (optional): defaults to Software Engineering Radio
+    - `label` (optional): replaces the whole kicker line
+    - `download` (optional): defaults to `src`
 
 - You will know what link to provide since I will give that to you in the
 prompt for writing this blog post.
@@ -92,7 +105,7 @@ file as this code is needed to ensure that the "back link" works.
   transcript of an episode when the prompt does not provide one, and to learn
   the details of an episode before you write the post. The tool reports the
   episode number, the title, the number of speaker turns, and the URL of the
-  MP3 file together with the Quarto audio shortcode that the **Listen**
+  MP3 file together with the Quarto podcast shortcode that the **Listen**
   section needs. It caches the transcript outside of the repository, and the
   `--stdout` option prints the transcript on its own so that you can search
   it while writing:
