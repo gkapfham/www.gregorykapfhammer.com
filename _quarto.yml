@@ -90,13 +90,13 @@ website:
     left: "{{< fa copyright >}} GMK"
     center: '<a href="#" aria-label="Go to the top of the page">Top {{< fa circle-up >}}</a>'
     right:
-      - icon: github
+      - text: '<i class="bi bi-github" aria-hidden="true"></i><span class="visually-hidden">GitHub</span>'
         href: https://github.com/gkapfham
-      - icon: mastodon
+      - text: '<i class="bi bi-mastodon" aria-hidden="true"></i><span class="visually-hidden">Mastodon</span>'
         href: https://fosstodon.org/@gkapfham
-      - icon: linkedin
+      - text: '<i class="bi bi-linkedin" aria-hidden="true"></i><span class="visually-hidden">LinkedIn</span>'
         href: http://www.linkedin.com/in/GregKapfhammer
-      - icon: google
+      - text: '<i class="bi bi-google" aria-hidden="true"></i><span class="visually-hidden">Google Scholar</span>'
         href: http://scholar.google.com/citations?user=g0eDPjYAAAAJ
   twitter-card:
     creator: "@GregKapfhammer"

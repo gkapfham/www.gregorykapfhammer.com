@@ -6,11 +6,9 @@ jupyter: python3
 ---
 
 ```{python}
-from rich.console import Console
-console = Console()
-console.print(
-    ":rocket: By the grace and provision of God I'm enthusiastic about teaching, research, mentoring, and podcasting!"
-)
+callings = ["teaching", "research", "mentoring", "podcasting"]
+print("By the grace and provision of God I'm enthusiastic about "
+      + ", ".join(callings[:-1]) + ", and " + callings[-1] + "!")
 ```
 
 As an outworking of my Christian faith, I strive to ensure that each of my

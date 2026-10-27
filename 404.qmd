@@ -7,11 +7,8 @@ jupyter: python3
 ---
 
 ```{python}
-from rich.console import Console
-console = Console()
-console.print(
-":man_facepalming: Good grief, this page is not available! Try another link?"
-)
+page = "this page"
+print("Good grief, " + page + " is not available! Try another link?")
 ```
 
 The page that you were looking for is not available on the Web site of [Gregory

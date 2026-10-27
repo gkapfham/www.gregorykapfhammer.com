@@ -11,6 +11,43 @@
    @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap");
 */
 
+/* IBM Plex Sans Fallback {{{
+
+   "mainfont: IBM Plex Sans" makes Quarto emit a font stack with no fallback
+   family at all, so during the font-display: swap period the browser falls
+   back to its default font (a serif on most systems). The serif face is about
+   13% narrower than IBM Plex Sans, so every line of text re-wraps as soon as
+   the webfont arrives, and those re-wraps are the largest source of
+   cumulative layout shift on this site.
+
+   This rule declares a metric-compatible fallback: it reuses a locally
+   installed Arial-metric face and widens it by the measured difference
+   between that face and IBM Plex Sans, so the swap does not change the
+   number of lines that the paragraph occupies. The measured widths of a
+   reference string at 22px are 1332.7px for IBM Plex Sans and 1320.8px for
+   the Arial-metric fallbacks, so the scale factor is 1332.7 / 1320.8. */
+@font-face {
+  font-family: "IBM Plex Sans Fallback";
+  font-style: normal;
+  font-weight: 100 700;
+  src:
+    local("Arial"),
+    local("Helvetica Neue"),
+    local("Helvetica"),
+    local("Segoe UI"),
+    local("Liberation Sans"),
+    local("FreeSans");
+  size-adjust: 100.9%;
+}
+
+/* Apply the fallback to the Bootstrap font variables, which Quarto sets to
+   the value of the "mainfont" option. */
+:root,
+body {
+  --bs-body-font-family:
+    "IBM Plex Sans", "IBM Plex Sans Fallback", sans-serif;
+}
+
 /* }}} */
 
 /* IBM Plex Mono Variable {{{ */
@@ -364,6 +401,20 @@ code.sourceCode {
   font-weight: 450;
 }
 
+/* Notebook output from a plain print() statement is rendered as
+   <pre><code>, and the inline-code rule in the light and dark themes
+   (code:not(.sourceCode)) would otherwise give that output a border,
+   an inline-code font size, and a background. Output of a code cell
+   should look like the surrounding text instead. */
+.cell-output pre>code {
+  border: none;
+  border-radius: 0;
+  padding: 0 !important;
+  background-color: transparent !important;
+  font-size: inherit;
+  color: inherit;
+}
+
 details>summary {
   color: #343a40;
   margin-top: -0.5em;
@@ -467,6 +518,28 @@ div.callout-note.callout {
   background-color: var(--bs-alert-bg);
   border: var(--bs-alert-border);
   border-radius: 0rem;
+}
+
+/* Reserve the space for the announcement bar
+
+   The announcement bar is part of the page from the start, but Quarto marks
+   it with the "hidden" class and only reveals it after DOMContentLoaded,
+   once it has checked localStorage for an earlier dismissal. The page header
+   is fixed, so revealing the bar moves the whole document down, and that
+   movement is the single largest source of cumulative layout shift on narrow
+   screens. Keeping the bar laid out (but invisible) from the first paint
+   keeps the geometry stable, and revealing it later then changes only its
+   visibility. */
+body #quarto-announcement.hidden {
+  display: flex !important;
+  visibility: hidden;
+}
+
+/* Visitors who already dismissed the bar must not see a reserved empty strip.
+   The small script in _include/html/header-include.html adds this class to
+   the root element before the first paint when a dismissal is stored. */
+.announcement-dismissed #quarto-announcement.hidden {
+  display: none !important;
 }
 
 /* }}} */
@@ -733,6 +806,17 @@ div.quarto-post .thumbnail {
   font-size: 1em;
   opacity: 1;
   font-weight: 500;
+}
+
+/* Hide the description that Quarto renders in the title block
+
+   Quarto shows a page's "description" twice: as the meta description that
+   search engines and social cards use, and as a visible line under the page
+   title. Only the meta tag is wanted, so the visible rendering is hidden
+   here. The meta description itself is unaffected, which is why pages keep
+   their descriptions in the front matter. */
+#title-block-header .description {
+  display: none;
 }
 
 #title-block-header.quarto-title-block.default .description .abstract-title,

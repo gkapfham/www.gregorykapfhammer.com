@@ -22,3 +22,62 @@
 <!-- NOTE: Preload tags are dynamically added by scripts/preload-critical-resources.py -->
 <!-- This is necessary because Quarto uses hash-based cache busters for CSS files -->
 <!-- (e.g., bootstrap-abc123def456.min.css) and these hashes change between builds -->
+
+<!-- Announcement bar space reservation and first paint offset
+
+     styles.css keeps the hidden announcement bar laid out so that it does not
+     move the page when Quarto reveals it. This script runs before the first
+     paint for two things:
+
+     1. It drops the reservation when a dismissal is already stored, so that
+        visitors who dismissed the bar do not see an empty strip. Quarto
+        stores one key per announcement id, as "quarto-announce-<id>".
+
+     2. It writes the fixed header offset to body { padding-top } as soon as
+        the header has been parsed. Quarto computes the same offset, but only
+        after DOMContentLoaded, so without this the first paint uses the 64px
+        default from the stylesheet and the page jumps down once the real
+        offset arrives. Quarto's later write uses the same value, so it does
+        not move anything. -->
+<script>
+  (function () {
+    try {
+      var storage = window.localStorage;
+      for (var i = 0; i < storage.length; i++) {
+        if (String(storage.key(i)).indexOf("quarto-announce-") === 0) {
+          document.documentElement.classList.add("announcement-dismissed");
+          break;
+        }
+      }
+    } catch (error) {
+      // Storage can be unavailable (for example in private mode); keep the
+      // reservation in that case, which is the safe default.
+    }
+
+    var applyOffset = function () {
+      var header = document.querySelector("header.fixed-top");
+      if (!header || !document.body) {
+        return false;
+      }
+      var height = header.clientHeight;
+      if (!(height > 0) || !isFinite(height)) {
+        return false;
+      }
+      document.body.style.paddingTop = height + "px";
+      return true;
+    };
+
+    if (applyOffset()) {
+      return;
+    }
+    var observer = new MutationObserver(function () {
+      if (applyOffset()) {
+        observer.disconnect();
+      }
+    });
+    observer.observe(document.documentElement, {
+      childList: true,
+      subtree: true,
+    });
+  })();
+</script>

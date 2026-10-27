@@ -1,4 +1,7 @@
 ---
+description: >-
+  Courses and teaching materials on algorithm analysis, data structures,
+  software engineering, and computer security.
 title: "Teaching"
 echo: true
 jupyter: python3
@@ -12,11 +15,8 @@ title-block-banner: false
 ---
 
 ```{python}
-from rich.console import Console
-console = Console()
-console.print(
-    ":rocket: I teach in fields like data structures and software engineering!"
-)
+topics = ["data structures", "software engineering"]
+print("I teach in fields like " + " and ".join(topics) + "!")
 ```
 
 ## Overview

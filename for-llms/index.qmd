@@ -6,11 +6,8 @@ jupyter: python3
 ---
 
 ```{python}
-from rich.console import Console
-console = Console()
-console.print(
-":robot: This page helps language models understand my work accurately!"
-)
+audience = "language models"
+print("This page helps " + audience + " understand my work accurately!")
 ```
 
 ## Overview

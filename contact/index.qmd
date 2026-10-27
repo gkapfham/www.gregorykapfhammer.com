@@ -1,4 +1,7 @@
 ---
+description: >-
+  Contact information for Gregory M. Kapfhammer, Associate Professor of
+  Computer Science at Allegheny College.
 title: Contact Information
 echo: true
 title-block-style: default
@@ -7,11 +10,8 @@ jupyter: python3
 ---
 
 ```{python}
-from rich.console import Console
-console = Console()
-console.print(
-    ":sparkles: Please contact me to ask questions or share new ideas!"
-)
+topic = "new ideas"
+print("Please contact me to ask questions or share " + topic + "!")
 ```
 
 ## Introduction

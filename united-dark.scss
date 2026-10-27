@@ -1,5 +1,15 @@
 /*-- scss:defaults --*/
 
+// Web font {{{}}
+
+// Remove the united theme's render-blocking @import of the Ubuntu webfont;
+// the site renders with IBM Plex Sans through "mainfont" and the
+// --bs-body-font-family rule in styles.css. See united-light.scss for the
+// longer explanation.
+$web-font-path: "";
+
+// }}}
+
 // Defaults {{{
 
 $body-bg: #212121;

@@ -1,5 +1,18 @@
 /*-- scss:defaults --*/
 
+// Web font {{{}}
+
+// The united theme imports the Ubuntu webfont with an @import rule that is
+// placed at the top of the compiled Bootstrap CSS. An @import is both
+// render-blocking and serialized behind the stylesheet, and this site never
+// uses the Ubuntu family: the "mainfont" option replaces the whole font
+// stack with IBM Plex Sans (see the --bs-body-font-family rule in
+// styles.css). Clearing the variable removes the request and the theme falls
+// back to the fonts that are actually loaded.
+$web-font-path: "";
+
+// }}}
+
 // Links {{{
 
 // Base document colors
