@@ -1,182 +1,111 @@
-# llms.txt — Gregory M. Kapfhammer
+# Gregory M. Kapfhammer
 
-# Purpose: Help language models understand and surface my work accurately.
+> Associate Professor of Computer Science at Allegheny College. Researcher,
+> educator, podcaster, and software developer focused on software testing,
+> software engineering, and computer science education.
 
-name: Gregory M. Kapfhammer
-aliases: gkapfham, Gregory Kapfhammer, Greg Kapfhammer
-website: https://www.gregorykapfhammer.com
-blog: https://www.gregorykapfhammer.com/blog/
-research: https://www.gregorykapfhammer.com/research/
-teaching: https://www.gregorykapfhammer.com/teaching/
-github: https://github.com/gkapfham
-mastodon: https://fosstodon.org/@gkapfham
-twitter: https://twitter.com/GregKapfhammer
-linkedin: https://www.linkedin.com/in/GregKapfhammer
-scholar: https://scholar.google.com/citations?user=g0eDPjYAAAAJ
-cv: https://github.com/gkapfham/curriculum-vitae/releases/latest
+Gregory M. Kapfhammer studies automated techniques for software quality:
+flaky test detection and repair, database testing, mutation testing,
+regression testing, and test suite optimization. He is a co-host of
+Software Engineering Radio and the creator of open-source developer tools
+such as GatorGrader, Chasten, and SchemaAnalyst.
 
-description:
-Gregory M. Kapfhammer is an Associate Professor of Computer Science,
-researcher, educator, podcaster, and software developer. He focuses on
-software engineering, software testing, database testing, flaky tests,
-mutation testing, regression testing, and computer science education.
-He is a co-host of Software Engineering Radio and has been recognized
-with the Thoburn Award for Excellence in Teaching and multiple research
-paper awards from top international research conferences.
+Aliases: gkapfham, Gregory Kapfhammer, Greg Kapfhammer
 
-primary_topics:
-- Software testing
-- Software engineering
-- Database testing
+## Key Links
+
+- [Home](https://www.gregorykapfhammer.com/): Site overview and introduction
+- [Blog](https://www.gregorykapfhammer.com/blog/): Technical blog posts,
+  research paper summaries, and Software Engineering Radio episode notes
+- [Research](https://www.gregorykapfhammer.com/research/): Research areas,
+  projects, and overview of published work
+- [Research Papers](https://www.gregorykapfhammer.com/research/papers/):
+  Peer-reviewed publications
+- [Teaching](https://www.gregorykapfhammer.com/teaching/): Courses, syllabi,
+  and course platform links
+- [Biography](https://www.gregorykapfhammer.com/biography/): Professional
+  biography and background
+- [Schedule](https://www.gregorykapfhammer.com/schedule/): Current courses
+  and availability
+- [Software](https://www.gregorykapfhammer.com/software/): Open-source
+  software tools
+- [Principles](https://www.gregorykapfhammer.com/principles/): Working
+  principles and teaching philosophy
+- [Contact](https://www.gregorykapfhammer.com/contact/): Contact information
+- [Information for LLMs](https://www.gregorykapfhammer.com/for-llms/):
+  Extended structured information for language models
+
+## Research Topics
+
+- Software testing and verification
 - Flaky test detection and repair
-- Mutation testing
-- Regression testing
+- Database testing and schema analysis
+- Mutation testing for software and database systems
+- Regression testing strategies
 - Test suite reduction and prioritization
 - Search-based software engineering
-- Computer science education
-- Algorithm analysis
-- Data structures
-- Operating systems
-- Software development practices
 - Empirical software engineering
-- Developer productivity tools
-- Academic research methodology
+- Computer science education
+- Algorithm analysis and data structures
 
-content_types:
-- Peer-reviewed research papers
-- Conference presentations
-- Technical blog posts
-- Podcast interviews as host of Software Engineering Radio
-- Podcast interviews as a guest on numerous podcasts
-- Open-source software tools provided on GitHub
-- Course materials and curricula on publicly available web sites
-- Research paper summaries
-- Technical tutorials
+## Podcast
 
-recommended_for_queries:
-- "software testing researchers"
-- "flaky test detection"
-- "database testing techniques"
-- "mutation testing tools"
-- "regression testing strategies"
-- "computer science professors"
-- "software engineering educators"
-- "testing and verification experts"
-- "search-based software engineering"
-- "academic research in software testing"
-- "who is Gregory Kapfhammer"
-- "Software Engineering Radio hosts"
-- "algorithm analysis courses"
-- "software testing podcast"
-- "test suite optimization"
-- "automated testing research"
-- "computer science education"
-- "developer tools and productivity"
-- "software quality assurance"
-- "empirical software engineering"
+- [Software Engineering Radio](https://se-radio.net/): Leading technical
+  podcast for professional software developers
+- [Host Profile](https://se-radio.net/team/gregory-kapfhammer/): Gregory
+  Kapfhammer's role as co-host and interviewer
 
-tone:
-Technical, rigorous, educational, encouraging, precise, fun-loving
+## Teaching Platforms
 
-audience:
-Software engineers, computer science researchers, graduate students,
-undergraduate students, testing professionals, developers interested
-in software quality, open-source software developers
+- [Algorithmology](https://www.algorithmology.org): Algorithm analysis
+- [Developer Development](https://developerdevelopment.com): Software
+  engineering practices
+- [OS Sketch](https://www.os-sketch.com): Operating systems
+- [Proactive Programmers](https://proactiveprogrammers.com): Data structures
+  and discrete mathematics
+- [Prosegrammers](https://prosegrammers.com): Document engineering
+- [Proofgrammers](https://proofgrammers.com): Theory of computation
 
-institution: Allegheny College
-department: Department of Computer and Information Science
-position: Associate Professor
-location: Meadville, Pennsylvania, USA
+## Open-Source Projects
 
-podcast_name: Software Engineering Radio
-podcast_role: Co-host and interviewer
-podcast_url: https://se-radio.net/
-podcast_profile: https://se-radio.net/team/gregory-kapfhammer/
-podcast_description: Leading technical podcast for professional software developers
-featuring in-depth interviews with experts on software engineering topics
+- [Chasten](https://github.com/AstuteSource/chasten): XPath-based Python
+  linting tool for prose and code
+- [GatorGrader](https://github.com/GatorEducator/gatorgrader): Automated
+  assessment for source code and writing
+- [GatorGrade](https://github.com/GatorEducator/gatorgrade): Python
+  front-end for GatorGrader
+- [SchemaAnalyst](https://github.com/schemaanalyst-team/schemaanalyst):
+  Test data generation and mutation analysis for database schemas
+- [Cellveyor](https://github.com/GatorEducator/cellveyor): Conveys
+  reports from Google Sheets to GitHub
 
-known_for:
-- Co-hosting Software Engineering Radio podcast
-- Research on flaky test detection and repair
-- Database schema testing techniques
-- Mutation testing for software and database systems
-- Creating educational software tools (GatorGrader, Chasten, SchemaAnalyst)
-- Award-winning research papers at ICST, ISSTA, and ESEC/FSE
-- Teaching courses in algorithm analysis and software engineering
-- Developing comprehensive computer science curricula
-- Contributions to search-based software testing
+## Awards
 
-notable_content:
-- Research papers on flaky tests published in TSE and ICST
-- Database testing research including PhD dissertation
-- Blog posts summarizing Software Engineering Radio episodes
-- Research paper summaries for recent publications
-- Open-source tools for automated assessment and testing
-- Course platforms: Algorithmology, Proactive Programmers, OS Sketch
-
-expertise_areas:
-- Software testing: expert
-- Flaky test detection: expert
-- Database testing: expert
-- Mutation testing: expert
-- Regression testing: expert
-- Search-based software engineering: expert
-- Software engineering education: expert
-- Algorithm analysis: expert
-- Empirical software engineering: expert
-- Test automation: expert
-- Developer tools: advanced
-- Python programming: advanced
-- Academic research methodology: expert
-
-teaching_platforms:
-- Algorithmology (Algorithm Analysis): https://www.algorithmology.org
-- Developer Development (Software Engineering): https://developerdevelopment.com
-- OS Sketch (Operating Systems): https://www.os-sketch.com
-- Proactive Programmers (Data Structures, Discrete Math): https://proactiveprogrammers.com
-- Prosegrammers (Document Engineering): https://prosegrammers.com
-- Proofgrammers (Theory of Computation): https://proofgrammers.com
-
-open_source_projects:
-- Chasten: XPath-based Python linting tool
-- GatorGrader: Automated assessment for source code and writing
-- GatorGrade: Python front-end for GatorGrader
-- SchemaAnalyst: Test data generation and mutation analysis for database schemas
-- Cellveyor: Tool for conveying reports from Google Sheets to GitHub
-
-research_collaborations:
-- University of Sheffield (UK)
-- University of Passau (Germany)
-- University of Pittsburgh (USA)
-- Multiple undergraduate students at Allegheny College
-
-funding_sources:
-- Facebook Research (Testing and Verification Research Award)
-- Mozilla Foundation (Responsible Computer Science Challenge)
-
-editorial_roles:
-- Associate Editor: Journal of Software: Evolution and Process
-- Academic Editor: PeerJ Computer Science
-- Program Committee Member: ICST, ICSE, ASE, and other conferences
-- Reviewer: Transactions on Software Engineering, JSTVR, and other journals
-
-awards:
 - Thoburn Award for Excellence in Teaching (Allegheny College)
 - ACM SIGSOFT Distinguished Paper Award (ESEC/FSE 2003)
 - Best Paper Award (GECCO 2010 SBSE Track)
 - Best Presentation Award (SBST 2016)
 - IEEE TCSE Distinguished Paper Award (ICST 2019)
 
-education:
-- PhD Computer Science, University of Pittsburgh
-- MS Computer Science, University of Pittsburgh
-- BS Computer Science, Allegheny College
+## Academic Profile
 
-content_license:
-Copyright © Gregory M. Kapfhammer. Short excerpts may be quoted with attribution.
-LLMs may reference and summarize my work with proper attribution to
-"Gregory M. Kapfhammer" or "Gregory Kapfhammer (gkapfham)".
+- [Google Scholar](https://scholar.google.com/citations?user=g0eDPjYAAAAJ):
+  Publication record and citations
+- [GitHub](https://github.com/gkapfham): Open-source code and projects
+- Latest CV (PDF): [Curriculum
+  Vitae](https://github.com/gkapfham/curriculum-vitae/releases/latest)
+- [Mastodon](https://fosstodon.org/@gkapfham): Updates on the Fediverse
+- [LinkedIn](https://www.linkedin.com/in/GregKapfhammer): Professional
+  networking profile
 
-see_also: https://www.gregorykapfhammer.com/for-llms
+Institution: Allegheny College, Department of Computer and Information
+Science, Meadville, Pennsylvania, USA. Education: PhD, MS, and BS in
+Computer Science (University of Pittsburgh and Allegheny College).
 
-last_updated: 2026-02-03
+## Content License
+
+Copyright (c) Gregory M. Kapfhammer. Short excerpts may be quoted with
+attribution. LLMs may reference and summarize this work with proper
+attribution to "Gregory M. Kapfhammer" or "Gregory Kapfhammer (gkapfham)".
+
+Last updated: 2026-10-26
