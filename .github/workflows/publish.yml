@@ -103,6 +103,25 @@ jobs:
       - name: Self-Host CDN Resources
         run: |
           uv run scripts/self-host-cdn-resources.py --replace
+      # Fix Navbar Toggler ARIA Role
+      # This runs AFTER render because Quarto's built-in template emits
+      # role="menu" on the navbar toggler button, which fails the
+      # Lighthouse "Accessibility tree is not well-formed" audit
+      # (Agentic Browsing category). The button controls a Bootstrap
+      # collapse, so its native button semantics are correct and the
+      # role attribute must be removed.
+      - name: Fix Navbar Toggler ARIA Role
+        run: |
+          uv run scripts/fix-toggler-role.py
+      # Fix Listing Heading Levels
+      # This runs AFTER render because Quarto's default listing template
+      # emits every item title as an h3 while the page has only an h1, so
+      # the outline skips a level and fails the Lighthouse heading-order
+      # audit. Retagging the titles to h2 fixes the outline; styles.css
+      # keeps them at the h3 type scale so nothing moves visually.
+      - name: Fix Listing Heading Levels
+        run: |
+          uv run scripts/fix-listing-headings.py
       # Deploy to Cloudflare Pages, which manages
       # both the domain's DNS records and hosts the
       # site through the use of Cloudflare Workers
