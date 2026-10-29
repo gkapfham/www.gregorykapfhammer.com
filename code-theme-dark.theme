@@ -3,7 +3,7 @@
         "Custom syntax highlighting theme for www.gregorykapfhammer.com",
         "Dark variant, designed for the site dark background #212121.",
         "Palette derives from the site theme (united-dark.scss / styles.css).",
-        "Existing colors: deep orange #ef6c00 / #e65100 / #ff8a3d, blue",
+        "Existing colors: deep orange #ef6c00 (dark-surface text), #c05500 (brand fills), blue",
         "#64b5f6, greys #bdbdbd, #9e9e9e, #212121, #333333.",
         "New accents (3): teal #4db6ac, purple #ce93d8, amber #ffca28.",
         "Schema: https://pandoc.org/MANUAL.html#syntax-highlighting"
@@ -210,8 +210,8 @@
             "underline": true
         },
         "Alert": {
-            "text-color": "#212121",
-            "background-color": "#ff8a3d",
+            "text-color": "#ffffff",
+            "background-color": "#c05500",
             "bold": true,
             "italic": false,
             "underline": false
