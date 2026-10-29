@@ -321,6 +321,41 @@ JSON.stringify(measurements);
   cleanup, close its tab or stop its browser after deleting temporary
   screenshots and inspection artifacts.
 
+## Long-Running Build Steps
+
+Long-running commands such as `uv run scripts/build-local.py` (the full
+Quarto render plus CSS optimization passes, roughly 3-5 minutes) should
+NOT be run as a blocking `bash` tool call. A blocked call makes the chat
+feel frozen: no output appears until the command finishes, and the user
+cannot tell whether work is happening.
+
+Instead, launch the build with the `interactive_shell` tool in
+`dispatch` mode:
+
+```python
+interactive_shell(
+    command="uv run scripts/build-local.py",
+    mode="dispatch",
+    name="site-build",
+    reason="Rebuild site with styling changes",
+)
+```
+
+This returns immediately and runs the build in a supervised background
+session. The benefits:
+
+- The user can watch the live build output in the overlay and intervene
+  or give feedback while it runs.
+- The agent is notified automatically when the build completes and can
+  continue with verification (e.g., Lighthouse audits) right away.
+- The chat stays responsive: the agent sends a short status message and
+  keeps working on anything that does not depend on the build.
+
+After the completion notification arrives, verify the build (serve
+`_site` and run the relevant audits) before reporting success. If the
+build fails, read the session output with
+`interactive_shell({ sessionId: "site-build" })` to diagnose.
+
 ## Additional Rules for Version Control
 
 - Do not commit code.
