@@ -160,7 +160,7 @@ format:
       light: code-theme-light.theme
       dark: code-theme-dark.theme
     code-block-bg: false
-    code-block-border-left: "#e65100"
+    code-block-border-left: "#c05500"
     email-obfuscation: javascript
     # note: needs to be false so as to
     # ensure that the back to top button
