@@ -104,6 +104,51 @@ body {
 
 /* }}} */
 
+/* Brand Palette {{{ */
+
+/*
+ * Every orange on the site comes from this block.
+ *
+ * --gk-orange is the single brand orange: the navbar fill, buttons, dots,
+ * chips, borders, focus rings, selection, scrollbars and the podcast player
+ * all use it. It is the darkest deep-orange step that still clears WCAG AA
+ * both as text on the white surface (4.62:1) and as a fill underneath pure
+ * white navbar text (4.62:1), so one tone can serve as both ink and fill.
+ *
+ * Text is the one place where a second step is unavoidable. The dark
+ * surface is #212121, and #c05500 on #212121 measures only 3.48:1. Clearing
+ * 4.5:1 on white requires a luminance at or below 0.183 while clearing
+ * 4.5:1 on #212121 requires a luminance at or above 0.243, so no single
+ * orange can do both. Dark-mode link text therefore uses the next lighter
+ * step of the same deep-orange ramp, --gk-orange-text-dark (#ef6c00), at
+ * 5.23:1 on #212121. Non-text marks keep the brand tone: at 3.48:1 on
+ * #212121 they still clear the 3:1 minimum for graphics and UI components.
+ *
+ * Hover never changes the text color in either theme. A lighter orange on
+ * the dark surface looks washed out next to the deeper tones used
+ * everywhere else, and a deeper orange cannot clear 4.5:1 on #212121. Link
+ * text therefore keeps its own tone on hover in both themes and the
+ * underline (drawn in currentColor) is the whole hover cue: #c05500 on
+ * white and #ef6c00 on #212121. --gk-orange-hover is reserved for filled
+ * surfaces (the navbar bar, the selected menu entry, the active pager),
+ * where it is used identically in both themes.
+ */
+:root {
+  --gk-orange: #c05500;
+  --gk-orange-hover: #a34700;
+  --gk-orange-text-dark: #ef6c00;
+  /* Inline code is blue in this design. The United theme's #007bff is only
+     3.98:1 on white and 4.05:1 on #212121, so each surface gets a blue that
+     clears 4.5:1: #0056b3 (7.04:1) and #79b8ff (7.75:1). */
+  --bs-code-color: #0056b3;
+}
+
+body.quarto-dark {
+  --bs-code-color: #79b8ff;
+}
+
+/* }}} */
+
 /* Back to Top Button {{{ */
 
 .back-to-top {
@@ -112,7 +157,7 @@ body {
   right: 2rem;
   width: 2.25rem;
   height: 2.25rem;
-  background-color: #e65100;
+  background-color: var(--gk-orange);
   color: #ffffff;
   border: none;
   border-radius: 50%;
@@ -128,7 +173,7 @@ body {
 }
 
 .back-to-top:hover {
-  background-color: #d84300;
+  background-color: var(--gk-orange-hover);
   transform: translateY(-2px);
 }
 
@@ -173,12 +218,12 @@ body {
 /* Custom Selection Colors {{{ */
 
 ::selection {
-  background-color: #e65100;
+  background-color: var(--gk-orange);
   color: #ffffff;
 }
 
 ::-moz-selection {
-  background-color: #e65100;
+  background-color: var(--gk-orange);
   color: #ffffff;
 }
 
@@ -201,7 +246,7 @@ html {
 /* Enhanced Focus Indicators {{{ */
 
 :focus-visible {
-  outline: 2px solid #e65100;
+  outline: 2px solid var(--gk-orange);
   outline-offset: 2px;
   border-radius: 2px;
 }
@@ -214,17 +259,25 @@ button:focus,
   outline: none;
 }
 
-/* Multi-line friendly focus for links using background */
+/* Multi-line friendly focus for links using background. The label keeps the
+   deep accent family: #a34700 on the light tint (4.76:1) and white on the
+   dark tint (10.97:1), never the washed-out lighter orange. */
 a:focus-visible {
-  background-color: rgba(230, 81, 0, 0.25);
+  background-color: rgba(192, 85, 0, 0.18);
+  color: var(--gk-orange-hover);
   outline: none;
+}
+
+body.quarto-dark a:focus-visible {
+  background-color: rgba(239, 108, 0, 0.26);
+  color: #ffffff;
 }
 
 /* Keep outline for buttons and nav elements */
 button:focus-visible,
 .nav-link:focus-visible,
 .navbar a:focus-visible {
-  outline: 2px solid #e65100;
+  outline: 2px solid var(--gk-orange);
   outline-offset: 2px;
   border-radius: 2px;
 }
@@ -301,7 +354,7 @@ h4,
 }
 
 a {
-  color: #e65100;
+  color: var(--gk-orange);
   text-decoration: none;
   -webkit-text-decoration: none;
   -moz-text-decoration: none;
@@ -309,13 +362,21 @@ a {
   -o-text-decoration: none;
 }
 
+/* The announcement bar sits on a light peach (#fbddd2) background,
+   where the standard link orange only reaches 3.61:1. Use a darker
+   burnt orange there (5.86:1) so the links pass WCAG AA. */
+#quarto-announcement a {
+  color: #93370d !important;
+}
+
 p a:hover {
-  color: #e65100 !important;
+  color: var(--gk-orange) !important;
   transition:
     text-decoration-color 300ms,
     text-underline-offset 300ms;
-  text-decoration: underline 0.1em rgba(0, 0, 0, 1);
-  text-decoration-color: #e65100;
+  text-decoration-line: underline;
+  text-decoration-thickness: 0.1em;
+  text-decoration-color: currentColor;
   text-underline-offset: 0.3em;
 }
 
@@ -324,7 +385,7 @@ p a:hover {
 }
 
 .body a:hover {
-  color: #e65100 !important;
+  color: var(--gk-orange) !important;
 }
 
 /* Ensure links in lists and software section have hover underline */
@@ -332,12 +393,13 @@ li a:hover,
 ul a:hover,
 dl a:hover,
 .software a:hover {
-  color: #e65100 !important;
+  color: var(--gk-orange) !important;
   transition:
     text-decoration-color 300ms,
     text-underline-offset 300ms;
-  text-decoration: underline 0.1em;
-  text-decoration-color: #e65100;
+  text-decoration-line: underline;
+  text-decoration-thickness: 0.1em;
+  text-decoration-color: currentColor;
   text-underline-offset: 0.3em;
 }
 
@@ -378,7 +440,7 @@ pre {
 pre.sourceCode {
   border-left: 3px;
   border-left-style: solid;
-  border-left-color: #e65100;
+  border-left-color: var(--gk-orange);
   padding: 0.5em;
   margin-left: 0.75em;
   border-right: 1px solid #dee2e6;
@@ -444,7 +506,7 @@ h4>a {
 }
 
 div.callout-tip.callout {
-  border-left-color: #e65100;
+  border-left-color: var(--gk-orange);
 }
 
 .callout.callout-titled {
@@ -452,7 +514,7 @@ div.callout-tip.callout {
 }
 
 .callout.callout-style-simple {
-  padding: 0.0em 0.75em 0.0em 0.75em;
+  padding: 0.0em 0.75em 0.15em 0.75em;
   margin-right: 0.5em;
   width: fit-content;
   border-left: 5px solid;
@@ -546,6 +608,39 @@ body #quarto-announcement.hidden {
 
 /* Navbar {{{ */
 
+/*
+ * The United theme paints the bar with its own $primary (#e95420) and labels
+ * it with rgba(255, 255, 255, 0.8), which measures 2.84:1 and fails WCAG AA.
+ * Repaint the bar with the single brand orange and use pure white labels:
+ * #ffffff on #c05500 is 4.62:1, so the navigation stays legible while the
+ * bar matches every other orange on the site. The same variables feed the
+ * navbar brand, the dropdown toggles, and the collapsed-menu icon.
+ */
+.navbar {
+  --bs-navbar-color: #ffffff;
+  --bs-navbar-hover-color: #ffffff;
+  --bs-navbar-active-color: #ffffff;
+  --bs-navbar-brand-color: #ffffff;
+  --bs-navbar-brand-hover-color: #ffffff;
+  --bs-navbar-disabled-color: #ffffff;
+  --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23ffffff' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  background-color: var(--gk-orange) !important;
+  color: #ffffff;
+}
+
+/* A tint of black behind a label is a stronger hover cue than another shade
+   of white, and it cannot push the label below 4.5:1 because the label
+   stays pure white on a darker orange. The same 20% shade is used in both
+   themes, so the top-level hover is pixel-identical in light and dark mode
+   (#ffffff on #9a4400, 6.58:1). */
+.navbar .nav-link:hover,
+.navbar .nav-link:focus-visible,
+.navbar .dropdown-toggle:hover,
+.navbar .dropdown-toggle:focus-visible {
+  background-color: rgba(0, 0, 0, 0.2);
+  color: #ffffff !important;
+}
+
 #quarto-content>* {
   padding-top: 12px;
 }
@@ -572,6 +667,13 @@ body #quarto-announcement.hidden {
   font-size: 1rem;
   color: inherit;
   font-weight: 500 !important;
+}
+
+.navbar .nav-link,
+.navbar .navbar-brand,
+.navbar .dropdown-toggle,
+.navbar .menu-text {
+  color: #ffffff !important;
 }
 
 .nav-footer {
@@ -603,8 +705,23 @@ body #quarto-announcement.hidden {
   font-weight: 400 !important;
 }
 
-.navbar .dropdown-item:hover {
-  color: #ef6c00 !important;
+/* Navbar menu entries get the same shaded-surface hover as the top-level
+   labels: a translucent tint of the accent that leaves the label color
+   alone. Only the surface changes, exactly as it does on the bar itself.
+   The light tint is 18% accent over white (#f4e0d1, body text 12.6:1) and
+   the dark tint is 26% accent over #212121 (#573418, white 11:1), so both
+   highlights are clearly visible without touching the text color. */
+.navbar .dropdown-item:hover,
+.navbar .dropdown-item:focus-visible {
+  background-color: rgba(192, 85, 0, 0.18);
+  color: #212121 !important;
+  text-decoration: none;
+}
+
+body.quarto-dark .navbar .dropdown-item:hover,
+body.quarto-dark .navbar .dropdown-item:focus-visible {
+  background-color: rgba(239, 108, 0, 0.26);
+  color: #ffffff !important;
 }
 
 /* }}} */
@@ -631,8 +748,8 @@ body #quarto-announcement.hidden {
 
 .sidebar nav[role="doc-toc"] ul>li>a.active,
 .sidebar nav[role="doc-toc"] ul>li>ul>li>a.active {
-  border-left: 1px solid #e95420;
-  color: #e65100 !important;
+  border-left: 1px solid var(--gk-orange);
+  color: var(--gk-orange) !important;
 }
 
 #quarto-margin-sidebar .toc-actions .bi:before {
@@ -669,14 +786,14 @@ sidebar .quarto-alternate-notebooks ul li a,
 }
 
 .toc-actions a:hover {
-  color: #e65100 !important;
+  color: var(--gk-orange) !important;
 }
 
 .nav-link {
   display: block;
   font-size: 0.75rem;
   padding: 0.5rem 1rem;
-  color: #ef6c00;
+  color: var(--gk-orange);
   text-decoration: none;
   -moz-text-decoration: none;
   -ms-text-decoration: none;
@@ -685,7 +802,7 @@ sidebar .quarto-alternate-notebooks ul li a,
 }
 
 .nav-link a:hover {
-  color: #ef6c00 !important;
+  color: var(--gk-orange) !important;
   transition: none !important;
 }
 
@@ -709,7 +826,7 @@ sidebar .quarto-alternate-notebooks ul li a,
 }
 
 .nav-footer a:hover {
-  color: #ef6c00;
+  color: var(--gk-orange);
 }
 
 .nav-footer a.external:after {
@@ -853,7 +970,9 @@ div.quarto-post .thumbnail {
 }
 
 .quarto-title .quarto-categories .quarto-category:hover {
-  color: #e65100 !important;
+  border-color: var(--gk-orange);
+  background-color: var(--gk-orange);
+  color: #ffffff !important;
   text-decoration: none;
 }
 
@@ -873,7 +992,9 @@ div.quarto-post .listing-categories .listing-category {
 }
 
 div.quarto-post .listing-categories .listing-category:hover {
-  color: #e65100 !important;
+  border-color: var(--gk-orange);
+  background-color: var(--gk-orange);
+  color: #ffffff !important;
   text-decoration: none;
 }
 
@@ -899,7 +1020,9 @@ div.quarto-grid-item .listing-categories .listing-category {
 }
 
 div.quarto-grid-item .listing-categories .listing-category:hover {
-  color: #e65100 !important;
+  border-color: var(--gk-orange);
+  background-color: var(--gk-orange);
+  color: #ffffff !important;
   text-decoration: none;
 }
 
@@ -919,8 +1042,40 @@ div.quarto-grid-item .listing-categories .listing-category:hover {
   grid-template-columns: repeat(1, 1fr);
 }
 
+/* Pagination {{{ */
+
+/*
+ * The listing pager inherits $primary from the United theme. In light mode
+ * that produced white text on #e95420 (3.65:1), and in dark mode it
+ * produced #ef6c00 text on the same fill (1.18:1). Paint the current page
+ * with the brand orange instead: white on #c05500 is 4.62:1 in both themes.
+ * The ellipsis that stands in for skipped pages used the border gray
+ * (#dee2e6) as its text color, which is 1.3:1 on white, so it gets the
+ * muted gray that clears AA instead.
+ */
+.page-item.active .page-link {
+  background-color: var(--gk-orange);
+  border-color: var(--gk-orange);
+  color: #ffffff !important;
+}
+
 .page-item.active .page-link:hover {
-  color: #fff !important;
+  background-color: var(--gk-orange-hover);
+  border-color: var(--gk-orange-hover);
+  color: #ffffff !important;
+}
+
+.page-link.disabled,
+.disabled>.page-link {
+  background-color: transparent !important;
+  border-color: #dee2e6;
+  color: #767676 !important;
+}
+
+body.quarto-dark .page-link.disabled,
+body.quarto-dark .disabled>.page-link {
+  border-color: #495057;
+  color: #9e9e9e !important;
 }
 
 thead,
@@ -937,11 +1092,48 @@ th {
 
 /* Listing Search and Filter {{{ */
 
+/*
+ * Listing item titles are retagged from h3 to h2 by
+ * scripts/fix-listing-headings.py so that the page outline reads
+ * h1 -> h2 instead of skipping to h3, which is what Lighthouse's
+ * heading-order audit reports. Bootstrap's h2 is much larger than its h3,
+ * and h2 also picks up the site's own h2 margins, so the type scale of the
+ * h3 is reproduced here exactly; the rendered size is unchanged at every
+ * width.
+ */
 div.quarto-post .body h3.listing-title,
+div.quarto-post .body h2.listing-title,
 div.quarto-post .body .listing-title.h3 {
   margin-top: 0px;
   margin-bottom: 5px;
   border-bottom: none;
+}
+
+div.quarto-post .body h2.listing-title {
+  font-size: calc(1.27rem + 0.24vw);
+  line-height: 1.2;
+  /* the theme's h2 carries a 1px bottom border and 0.5rem of bottom
+     padding; the h3 this replaces had neither, so both are cleared to keep
+     the height and the position of everything below it unchanged */
+  padding-bottom: 0;
+  border-bottom: none;
+  /* the h2 block sets a larger bottom margin, and a half pixel per item
+     would still shift every later row down the page */
+  margin-bottom: 5px !important;
+}
+
+/* The heading rules above give h3>a and h4>a a weight of 600. The listing
+   titles are h2 now, so carry that weight over; otherwise the plain anchor
+   rule in the theme resets the label to 400 and the titles stop looking
+   bold. */
+div.quarto-post .body h2.listing-title>a {
+  font-weight: 600 !important;
+}
+
+@media (min-width: 1200px) {
+  div.quarto-post .body h2.listing-title {
+    font-size: 1.45rem;
+  }
 }
 
 /* }}} */
@@ -998,7 +1190,7 @@ input.search.form-control {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: thick !important;
-    scrollbar-color: #ef6c00 rgba(255, 255, 255, 0.2) !important;
+    scrollbar-color: var(--gk-orange) rgba(255, 255, 255, 0.2) !important;
   }
 
   .table th,
@@ -1145,22 +1337,24 @@ input.search.form-control {
 }
 
 .listing-title a:hover {
-  color: #e65100 !important;
+  color: var(--gk-orange) !important;
   transition:
     text-decoration-color 300ms,
     text-underline-offset 300ms;
-  text-decoration: underline 0.1em rgba(0, 0, 0, 1);
-  text-decoration-color: #e65100;
+  text-decoration-line: underline;
+  text-decoration-thickness: 0.1em;
+  text-decoration-color: currentColor;
   text-underline-offset: 0.3em;
 }
 
 .listing-venue a:hover {
-  color: #e65100 !important;
+  color: var(--gk-orange) !important;
   transition:
     text-decoration-color 300ms,
     text-underline-offset 300ms;
-  text-decoration: underline 0.1em rgba(0, 0, 0, 1);
-  text-decoration-color: #e65100;
+  text-decoration-line: underline;
+  text-decoration-thickness: 0.1em;
+  text-decoration-color: currentColor;
   text-underline-offset: 0.3em;
 }
 
@@ -1428,12 +1622,13 @@ input.search.form-control {
 
 /* Date */
 .toot-date a:hover {
-  color: #e65100 !important;
+  color: var(--gk-orange) !important;
   transition:
     text-decoration-color 300ms,
     text-underline-offset 300ms;
-  text-decoration: underline 0.1em rgba(0, 0, 0, 1);
-  text-decoration-color: #e65100;
+  text-decoration-line: underline;
+  text-decoration-thickness: 0.1em;
+  text-decoration-color: currentColor;
   text-underline-offset: 0.3em;
 }
 
@@ -1497,12 +1692,12 @@ input.search.form-control {
 
 .pub-timeline .pt-count {
   font-weight: 600;
-  color: #e65100;
+  color: var(--gk-orange);
 }
 
 .pub-timeline .pt-category {
   font-weight: 600;
-  color: #e65100;
+  color: var(--gk-orange);
 }
 
 /* the timeline icon sits to the left of the caption link */
@@ -1517,7 +1712,7 @@ input.search.form-control {
 
 .pub-timeline figcaption a:hover,
 .pub-timeline figcaption a:focus-visible {
-  color: #e65100;
+  color: var(--gk-orange);
   text-decoration: underline;
 }
 
@@ -1590,7 +1785,7 @@ input.search.form-control {
   width: 0.5rem;
   height: 0.5rem;
   border-radius: 50%;
-  background-color: #e65100;
+  background-color: var(--gk-orange);
   opacity: 0.85;
   transition: transform 0.15s ease, opacity 0.15s ease;
 }
@@ -1609,7 +1804,7 @@ input.search.form-control {
    fade washes out. */
 .pt-dot.pt-related {
   background-color: transparent;
-  border: 2px solid #e65100;
+  border: 2px solid var(--gk-orange);
   box-sizing: border-box;
   opacity: 0.7;
 }
@@ -1628,18 +1823,22 @@ input.search.form-control {
 
 /* dark mode */
 
+/* The dots keep the single brand orange in dark mode. At 3.48:1 against
+   #212121 they still clear the 3:1 minimum that WCAG 1.4.11 sets for
+   graphics and UI components, and keeping the mark identical in both
+   themes is the point of the shared palette. */
 body.quarto-dark .pt-dot {
-  background-color: #ef6c00;
+  background-color: var(--gk-orange);
 }
 
 body.quarto-dark .pt-dot.pt-related {
   background-color: transparent;
-  border-color: #ef6c00;
+  border-color: var(--gk-orange);
 }
 
 body.quarto-dark .pub-timeline figcaption a:hover,
 body.quarto-dark .pub-timeline figcaption a:focus-visible {
-  color: #ef6c00;
+  color: var(--gk-orange-text-dark);
 }
 
 @media (max-width: 640px) {
@@ -1660,7 +1859,7 @@ body.quarto-dark .pub-timeline figcaption a:focus-visible {
     overflow-y: hidden;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: thin;
-    scrollbar-color: #e65100 rgba(127, 127, 127, 0.18);
+    scrollbar-color: var(--gk-orange) rgba(127, 127, 127, 0.18);
     background-image: linear-gradient(to left, rgba(255, 255, 255, 0.95),
         rgba(255, 255, 255, 0));
     background-repeat: no-repeat;
@@ -1677,19 +1876,19 @@ body.quarto-dark .pub-timeline figcaption a:focus-visible {
   }
 
   body.quarto-dark .pt-rail {
-    scrollbar-color: #ef6c00 rgba(189, 189, 189, 0.18);
+    scrollbar-color: var(--gk-orange) rgba(189, 189, 189, 0.18);
     background-image: linear-gradient(to left, rgba(33, 33, 33, 0.95),
         rgba(33, 33, 33, 0));
   }
 
   .pt-rail:hover,
   .pt-rail:focus-within {
-    scrollbar-color: #ef6c00 rgba(127, 127, 127, 0.28);
+    scrollbar-color: var(--gk-orange) rgba(127, 127, 127, 0.28);
   }
 
   body.quarto-dark .pt-rail:hover,
   body.quarto-dark .pt-rail:focus-within {
-    scrollbar-color: #ef6c00 rgba(189, 189, 189, 0.28);
+    scrollbar-color: var(--gk-orange) rgba(189, 189, 189, 0.28);
   }
 
   .pt-rail::-webkit-scrollbar {
@@ -1702,12 +1901,12 @@ body.quarto-dark .pub-timeline figcaption a:focus-visible {
   }
 
   .pt-rail::-webkit-scrollbar-thumb {
-    background-color: #e65100;
+    background-color: var(--gk-orange);
     border-radius: 0.25rem;
   }
 
   .pt-rail::-webkit-scrollbar-thumb:hover {
-    background-color: #ef6c00;
+    background-color: var(--gk-orange-hover);
   }
 
   .pt-track {
@@ -1738,26 +1937,36 @@ body.quarto-dark .pub-timeline figcaption a:focus-visible {
 
 /*
  * Mark the selected mode with a filled pill, built on Bootstrap's own
- * .dropdown-item.active state. The fill uses the navbar orange so that the
+ * .dropdown-item.active state. The fill uses the brand orange so that the
  * menu matches the site instead of Bootstrap's default #e95420.
  */
 .navbar .dropdown-item.active {
-  background-color: #e65100;
-  color: #fff;
+  background-color: var(--gk-orange);
+  color: #ffffff;
 }
 
 /*
  * Hovering the selected entry needs explicit handling. Two rules in this file
  * colour hovered list links orange with !important: .navbar
- * .dropdown-item:hover (#ef6c00, specificity 0,3,0) and the li/ul a:hover
- * group (#e65100, 0,1,2, which also adds a 0.1em underline). On an orange
- * fill either one renders the label invisible. Keep the text white, drop the
- * underline, and darken the fill so the hover is still perceptible. This
- * selector's specificity of 0,4,0 outranks both of them.
+ * .dropdown-item:hover (var(--gk-orange), specificity 0,3,0) and the
+ * li/ul a:hover group (var(--gk-orange), 0,1,2, which also adds a 0.1em
+ * underline). On an orange fill either one renders the label invisible.
+ * Keep the text white, drop the underline, and darken the fill so the hover
+ * is still perceptible. This selector's specificity of 0,4,0 outranks both
+ * of them.
  */
 .navbar .dropdown-item.active:hover {
-  background-color: #c34500;
-  color: #fff !important;
+  background-color: var(--gk-orange-hover);
+  color: #ffffff !important;
+  text-decoration: none;
+}
+
+/* The selected theme entry keeps its solid fill in dark mode too; without
+   this the tinted menu hover above (higher specificity) would replace it. */
+body.quarto-dark .navbar .dropdown-item.active:hover,
+body.quarto-dark .navbar .dropdown-item.active:focus-visible {
+  background-color: var(--gk-orange-hover);
+  color: #ffffff !important;
   text-decoration: none;
 }
 
@@ -1777,7 +1986,7 @@ figure:has(> audio) {
   padding: 0.5rem 0.75rem 0.65rem;
   width: fit-content;
   max-width: 100%;
-  border-left: 5px solid #e65100;
+  border-left: 5px solid var(--gk-orange);
   border-right: 1px solid #dee2e6;
   border-bottom: 1px solid #dee2e6;
   border-top: 1px solid #dee2e6;
@@ -1824,7 +2033,7 @@ figure:has(> audio) figcaption {
 /* dark mode */
 
 body.quarto-dark figure:has(> audio) {
-  border-left-color: #ef6c00;
+  border-left-color: var(--gk-orange);
   border-right-color: #495057;
   border-bottom-color: #495057;
   border-top-color: #495057;
@@ -1856,8 +2065,8 @@ body.quarto-dark figure:has(> audio) figcaption {
  * orange left edge, thin grey borders, and a 0.25rem radius.
  */
 .pp {
-  --pp-accent: #e65100;
-  --pp-accent-hover: #c34500;
+  --pp-accent: var(--gk-orange);
+  --pp-accent-hover: var(--gk-orange-hover);
   --pp-track: #dee2e6;
   --pp-muted: #5a6268;
   --pp-border: #dee2e6;
@@ -2038,8 +2247,8 @@ body.quarto-dark figure:has(> audio) figcaption {
 }
 
 .pp-tool:hover {
-  background-color: rgba(230, 81, 0, 0.1);
-  color: var(--pp-accent);
+  background-color: rgba(192, 85, 0, 0.18);
+  color: var(--gk-orange);
 }
 
 .pp-tool svg {
@@ -2058,15 +2267,18 @@ body.quarto-dark figure:has(> audio) figcaption {
 /* dark mode */
 
 body.quarto-dark .pp {
-  --pp-accent: #ef6c00;
-  --pp-accent-hover: #ff8a3d;
+  --pp-accent: var(--gk-orange);
+  --pp-accent-hover: var(--gk-orange-hover);
   --pp-track: #495057;
   --pp-muted: #9e9e9e;
   --pp-border: #495057;
 }
 
+/* The play button is a #c05500 disc in both themes, so the arrow must be
+   white in both themes (4.62:1); the dark-theme rule that used to darken it
+   applied to the lighter orange that is no longer used. */
 body.quarto-dark .pp-play {
-  color: #212529;
+  color: #ffffff;
 }
 
 body.quarto-dark .pp-range::-webkit-slider-thumb,
@@ -2075,7 +2287,8 @@ body.quarto-dark .pp-range::-moz-range-thumb {
 }
 
 body.quarto-dark .pp-tool:hover {
-  background-color: rgba(239, 108, 0, 0.18);
+  background-color: rgba(239, 108, 0, 0.26);
+  color: #ffffff;
 }
 
 /*
@@ -2126,6 +2339,212 @@ body.quarto-dark .pp-tool:hover {
   .pp-tools {
     margin-left: auto;
   }
+}
+
+/* }}} */
+
+/* Hover Surfaces {{{ */
+
+/*
+ * One hover language for the whole site, modelled on the navbar: hover
+ * changes only the surface, never the label color. The surface gains a
+ * translucent tint of the accent instead of switching to a neutral
+ * Bootstrap grey, and the same tint ratios are used everywhere so the
+ * interaction reads identically in both themes.
+ *
+ * Light: 18% accent over white = #f4e0d1 (body text 12.62:1). Dark: 26%
+ * accent over #212121 = #573418 (white text 10.97:1). Labels keep the
+ * color they already have, and accent-colored controls (pager numbers)
+ * switch to the deep fill with a white label. Nothing lightens on hover:
+ * a lighter orange on the dark surface looks washed out next to the rest
+ * of the palette.
+ */
+
+/* Sidebar table of contents. The theme's compiled CSS ships a
+   `.sidebar nav[role="doc-toc"] ... a:hover { color: ... !important }` rule,
+   so the hover color has to be set here too. Non-active entries keep their
+   body color on the tinted row (12.62:1 light, 10.97:1 dark) and the active
+   entry keeps its accent color without a second highlight, because the
+   accent tone cannot hold 4.5:1 on a lifted dark surface. */
+#TOC ul li a.nav-link {
+  border-radius: 0.2rem;
+  transition: background-color 150ms ease;
+}
+
+/* The gutter rule beside the entries comes from the theme as a fixed
+   #e9ecef left border. That pale grey is a neutral hairline on white but a
+   bright line on #212121, so the dark theme uses the same border grey as
+   the rest of its chrome. Both themes keep the orange rule for the entry
+   that is currently active. The ID selector is needed because it is what
+   beat the theme's own `.sidebar ... a.active` rule in the first place. */
+body.quarto-dark #TOC ul li a.nav-link {
+  border-left-color: #495057;
+}
+
+body.quarto-dark #TOC ul li a.nav-link.active {
+  border-left-color: var(--gk-orange);
+}
+
+#TOC ul li a.nav-link:not(.active):hover,
+#TOC ul li a.nav-link:not(.active):focus-visible {
+  background-color: rgba(192, 85, 0, 0.18);
+  color: #212121 !important;
+  text-decoration: none;
+}
+
+#TOC ul li a.nav-link.active:hover,
+#TOC ul li a.nav-link.active:focus-visible {
+  background-color: transparent;
+  color: var(--gk-orange) !important;
+}
+
+body.quarto-dark #TOC ul li a.nav-link:not(.active):hover,
+body.quarto-dark #TOC ul li a.nav-link:not(.active):focus-visible {
+  background-color: rgba(239, 108, 0, 0.26);
+  color: #ffffff !important;
+}
+
+body.quarto-dark #TOC ul li a.nav-link.active:hover,
+body.quarto-dark #TOC ul li a.nav-link.active:focus-visible {
+  color: var(--gk-orange-text-dark) !important;
+}
+
+/* Listing category links in the margin sidebar. The row keeps the padding
+   so the tinted hover band has space around the label, but the band now
+   starts at the column edge instead of hanging 8px into the gutter. */
+#quarto-margin-sidebar .quarto-listing-category .category {
+  padding: 0.1rem 0.35rem;
+  margin-left: 0;
+  border-radius: 0.2rem;
+}
+
+#quarto-margin-sidebar .quarto-listing-category .category:hover {
+  background-color: rgba(192, 85, 0, 0.18);
+}
+
+/* Listing pager. Hovering a number fills it like the current-page pill, so
+   the pager uses the same deep fill and white label as the navbar and the
+   category chips instead of a lightened orange label on a band. */
+.page-link:hover,
+.page-link:focus {
+  background-color: var(--gk-orange);
+  border-color: var(--gk-orange);
+  color: #ffffff !important;
+}
+
+body.quarto-dark #quarto-margin-sidebar .quarto-listing-category .category:hover {
+  background-color: rgba(239, 108, 0, 0.26);
+}
+
+body.quarto-dark .page-link {
+  border-color: #495057;
+}
+
+body.quarto-dark .page-link:hover,
+body.quarto-dark .page-link:focus {
+  background-color: var(--gk-orange);
+  border-color: var(--gk-orange);
+  color: #ffffff !important;
+}
+
+/* }}} */
+
+/* Dark Mode Accent Overrides {{{ */
+
+/* The light theme uses #c05500 for links on white. On the #212121 dark
+   background that burnt-orange tone falls below 4.5:1 (3.48:1), so the
+   dark theme moves to the next lighter step of the same ramp,
+   #ef6c00, which measures 5.23:1 on #212121 and passes WCAG AA. The
+   dark theme body text is white (#ffffff) so that the orange links
+   remain distinguishable from surrounding prose (3.08:1 against white,
+   above the 3:1 minimum). Fills, dots and borders keep var(--gk-orange). */
+
+body.quarto-dark {
+  color: #ffffff;
+}
+
+body.quarto-dark a {
+  color: var(--gk-orange-text-dark);
+}
+
+/* Listing chrome is not a link destination: the title, the date, the
+   author and the italic venue line inherit the body color in light mode,
+   and they must inherit it in dark mode too. Without this reset the
+   generic anchor color above paints the venue orange, which is the
+   mismatch that made dark mode look different from light mode. */
+body.quarto-dark div.quarto-post a,
+body.quarto-dark div.quarto-grid-item a,
+body.quarto-dark .quarto-listing-default a {
+  color: inherit;
+}
+
+/* Dropdown entries sit on the menu surface and inherit its color until
+   they are hovered, in both themes. */
+body.quarto-dark .navbar .dropdown-item {
+  color: #ffffff;
+}
+
+/* Headings inside an anchored target borrow the accent color; keep them on
+   the dark-surface text orange instead of the brand fill tone. */
+body.quarto-dark .anchored:target .anchorjs-link,
+body.quarto-dark .anchored.active .anchorjs-link,
+body.quarto-dark .anchored.highlighted .anchorjs-link,
+body.quarto-dark .anchored.current .anchorjs-link,
+body.quarto-dark .anchored:target,
+body.quarto-dark .anchored.active,
+body.quarto-dark .anchored.highlighted,
+body.quarto-dark .anchored.current {
+  color: var(--gk-orange-text-dark);
+}
+
+body.quarto-dark p a:hover,
+body.quarto-dark .body a:hover,
+body.quarto-dark .software a:hover,
+body.quarto-dark .toc-actions a:hover,
+body.quarto-dark .nav-link a:hover,
+body.quarto-dark .nav-footer a:hover,
+body.quarto-dark .anchorjs-link:hover,
+body.quarto-dark .listing-title a:hover,
+body.quarto-dark .listing-venue a:hover,
+body.quarto-dark .toot-date a:hover {
+  color: var(--gk-orange-text-dark) !important;
+}
+
+body.quarto-dark .sidebar nav[role="doc-toc"] ul>li>a.active,
+body.quarto-dark .sidebar nav[role="doc-toc"] ul>li>ul>li>a.active,
+body.quarto-dark .pub-timeline .pt-count,
+body.quarto-dark .pub-timeline .pt-category {
+  color: var(--gk-orange-text-dark) !important;
+}
+
+/* Hovered category chips are filled with the brand orange, so their label
+   has to be white (4.62:1) rather than the dark-surface orange. */
+body.quarto-dark .quarto-title .quarto-categories .quarto-category:hover,
+body.quarto-dark div.quarto-post .listing-categories .listing-category:hover,
+body.quarto-dark div.quarto-grid-item .listing-categories .listing-category:hover {
+  border-color: var(--gk-orange);
+  background-color: var(--gk-orange);
+  color: #ffffff !important;
+  text-decoration: none;
+}
+
+/* The announcement bar keeps its light peach (#fbddd2) background in
+   dark mode, so its links need a dark burnt-orange that passes 4.5:1
+   against the peach (5.86:1), not the light-mode-on-dark orange. */
+body.quarto-dark #quarto-announcement a {
+  color: #93370d !important;
+}
+
+/* Footer paragraph text: #757575 on #212121 is only 2.87:1, so the
+   dark theme uses the same #bdbdbd body text used elsewhere. The footer
+   links stay gray instead of inheriting the orange anchor color. */
+body.quarto-dark .nav-footer,
+body.quarto-dark .nav-footer p {
+  color: #bdbdbd !important;
+}
+
+body.quarto-dark .nav-footer a {
+  color: #9e9e9e !important;
 }
 
 /* }}} */
