@@ -16,16 +16,30 @@ $web-font-path: "";
 // Links {{{
 
 // Base document colors
-$link-color: #e65100;
-$code-color: #007bff;
+// The single brand orange. It clears WCAG AA on the white
+// background (4.62:1) AND clears the 3:1 link-vs-body-text contrast
+// required to identify links without underlines (3.48:1 vs #212121).
+// The same tone fills the navbar, dots, buttons and borders, so this
+// variable is the one place to change the site's accent color. The
+// dark theme needs a lighter step for text; see united-dark.scss.
+$gk-orange: #c05500;
+// Bootstrap derives the navbar background, the primary buttons, the pager,
+// the form focus ring and the announcement bar tint from $primary. Pointing
+// $primary at the brand orange makes every one of those surfaces the same
+// orange instead of United's #e95420.
+$primary: $gk-orange;
+$callout-color-caution: $gk-orange;
+$link-color: $gk-orange;
+$body-color: #212121;
+$code-color: #0056b3;
 
 // }}}
 
 // Colors {{{
 
 // Define the color of the navbar
-.navbar-light {
-  background-color: #e65100 !important;
+.navbar {
+  background-color: $gk-orange !important;
 }
 
 // }}}
@@ -56,7 +70,7 @@ p code:not(.sourceCode) {
 
 .page-link.disabled,
 .disabled>.page-link {
-  color: var(--bs-pagination-disabled-border-color) !important;
+  color: #767676 !important;
   pointer-events: none;
   background-color: #fff !important;
   border-color: var(--bs-pagination-disabled-border-color);
@@ -80,7 +94,7 @@ ul.pagination li.active a {
 }
 
 .anchorjs-link:hover {
-  color: #ef6c00 !important;
+  color: $gk-orange !important;
   opacity: 1;
   text-decoration: none;
   -webkit-font-smoothing: antialiased;
@@ -90,7 +104,7 @@ ul.pagination li.active a {
 .anchored.active .anchorjs-link,
 .anchored.highlighted .anchorjs-link,
 .anchored.current .anchorjs-link {
-  color: #ef6c00 !important;
+  color: $gk-orange !important;
   opacity: 1;
   text-decoration: none;
   -webkit-font-smoothing: antialiased;
@@ -100,7 +114,7 @@ ul.pagination li.active a {
 .anchored.active,
 .anchored.highlighted,
 .anchored.current {
-  color: #ef6c00;
+  color: $gk-orange;
   opacity: 1;
   text-decoration: none;
   -webkit-font-smoothing: antialiased;
@@ -119,11 +133,11 @@ ul.pagination li.active a {
   height: 1em;
   margin-top: 0.25em;
   vertical-align: top;
-  background-color: #ef6c00 !important;
+  background-color: $gk-orange !important;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  border: 1px solid #ef6c00 !important;
+  border: 1px solid $gk-orange !important;
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
