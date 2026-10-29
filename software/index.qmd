@@ -1,28 +1,20 @@
 ---
+description: >-
+  Open source software projects for software testing, mutation analysis, test
+  prioritization, and data visualization.
 title: Software
 toc-depth: 4
 page-layout: full
 ---
 
 ```{python}
-#| echo: false
 import re
+from pathlib import Path
 
-def count_software() -> int:
-    file_path = "../software/index.qmd"
-    with open(file_path, "r") as file:
-        html_content = file.read()
-    pattern = r'<li\s+class="software"\s*>'
-    return len(re.findall(pattern, html_content))
-```
-
-```{python}
-from rich.console import Console
-console = Console()
-count = count_software()
-console.print(
-      f":rocket: Here are {count} software projects to which I have contributed!"
-)
+pattern = r'<li\s+class="software"\s*>'
+html = Path("../software/index.qmd").read_text()
+print("Here are " + str(len(re.findall(pattern, html)))
+      + " software projects to which I have contributed!")
 ```
 
 ## Research

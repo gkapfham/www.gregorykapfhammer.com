@@ -5,11 +5,8 @@ jupyter: python3
 ---
 
 ```{python}
-from rich.console import Console
-console = Console()
-console.print(
-    ":speech_balloon: Software engineers shared their advice with my students!"
-)
+audience = "my students"
+print("Software engineers shared their advice with " + audience + "!")
 ```
 
 ## Introduction

@@ -1,4 +1,7 @@
 ---
+description: >-
+  Professional service as an editor, program committee member, and reviewer
+  for software engineering conferences and journals.
 title: "Service"
 toc: false
 page-layout: full
@@ -30,11 +33,8 @@ listing:
 ---
 
 ```{python}
-from rich.console import Console
-console = Console()
-console.print(
-    ":rocket: I'm thankful for the opportunity to serve numerous organizations!"
-)
+venues = "numerous organizations"
+print("I'm thankful for the opportunity to serve " + venues + "!")
 ```
 
 ## Details

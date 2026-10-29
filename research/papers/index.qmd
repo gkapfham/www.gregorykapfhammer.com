@@ -1,4 +1,7 @@
 ---
+description: >-
+  Peer-reviewed research papers on software testing, flaky tests, mutation
+  testing, and search-based software engineering.
 title: "Papers"
 toc: true
 page-layout: full
@@ -23,23 +26,11 @@ execute:
 ---
 
 ```{python}
-#| echo: false
 from pathlib import Path
 
-def count_research_papers():
-  paper_dir = Path(".")
-  subdirs = [pdir for pdir in paper_dir.iterdir() if pdir.is_dir()]
-  paper_count = len(subdirs)
-  return paper_count
-```
-
-```{python}
-from rich.console import Console
-console = Console()
-paper_count = count_research_papers()
-console.print(
-    f":rocket: It was super-fun to collaboratively create these {paper_count} papers!"
-)
+papers = sorted(Path(".").glob("*/index.qmd"))
+print("It was super-fun to collaboratively create these "
+      + str(len(papers)) + " papers!")
 ```
 
 <!-- The timeline caption draws its icon as raw HTML inside a raw block, and

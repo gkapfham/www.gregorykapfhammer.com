@@ -19,6 +19,7 @@ bibliography parsing, file optimization, asset copying, and deployment.
   - [minify-files.py](#minify-filespy)
   - [copy-files.py](#copy-filespy)
   - [publish-site.py](#publish-sitepy)
+  - [audit-performance.py](#audit-performancepy)
 - [Build Pipeline](#build-pipeline)
 - [Common Patterns](#common-patterns)
 
@@ -666,6 +667,68 @@ uv run scripts/publish-site.py --stages render --render-file index.qmd
 
 **When it runs**: Manually when you want to orchestrate multiple build steps in
 a single command.
+
+______________________________________________________________________
+
+### audit-performance.py
+
+**Purpose**: Measure the performance of the locally built site with Lighthouse,
+so that a release can be judged before anything is deployed. This is a
+development tool: the publish workflow does not call it and it has no effect on
+the deployed site.
+
+**Location**: `scripts/audit-performance.py`
+
+**Why it is needed**: `quarto preview` is a development server. It serves the
+unminified sources, skips every post-render optimization (CSS purging,
+JavaScript deferral, resource preloading), and injects its own preview client.
+A Lighthouse run against the preview server therefore measures a build that is
+never deployed and reports scores that are far below the real ones. This script
+measures the build that `publish-site.py` produces.
+
+**Usage**:
+
+```bash
+# Build with build-local.py, then measure the home page on desktop and mobile
+uv run python scripts/audit-performance.py
+
+# Compare the local build with the site that is currently deployed
+uv run python scripts/audit-performance.py \
+    --baseline https://www.gregorykapfhammer.com
+
+# Reuse the existing _site/ directory instead of rebuilding
+uv run python scripts/audit-performance.py --skip-build
+
+# Several pages, three runs each, mobile only
+uv run python scripts/audit-performance.py --runs 3 --device mobile \
+    --pages / /blog/ /research/papers/
+```
+
+**Arguments**:
+
+- `--skip-build` - Reuse the existing `_site/` directory
+- `--baseline URL` - Also measure this deployed URL and show the difference
+- `--pages PATH [PATH ...]` - Page paths to measure (default: `/`)
+- `--device {mobile,desktop,both}` - Device preset (default: `both`)
+- `--runs N` - Lighthouse runs per page and device (default: 2)
+- `--port N` - Port for the local static server (default: 8901)
+
+**What it does**:
+
+1. Builds the site with `build-local.py` (render plus the same optimizations,
+   in the same order, as the GitHub Actions workflow)
+1. Serves `_site/` from a local HTTP server that gzips text responses, the way
+   the CDN serves them in production
+1. Runs Lighthouse for each page and device and reports the mean and range of
+   every category together with FCP, LCP, TBT, and CLS
+1. With `--baseline`, runs the same audits against the deployed site and adds
+   the difference to the table
+
+**Reading the numbers**: Lighthouse measures a cold-cache, network-throttled,
+first visit. Repeated runs of the same page vary by several points, so use
+`--runs` and read the reported range. Real visitors, who come back with a warm
+cache, see better numbers than the report shows. The reports are written to
+`_audit/` in JSON form for inspection.
 
 ______________________________________________________________________
 

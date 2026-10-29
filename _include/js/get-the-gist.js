@@ -2,7 +2,11 @@
   // import the rough notation module
   import { annotate, annotationGroup } from 'https://unpkg.com/rough-notation?module';
   // define a highlight that will be a multiple-line underline that appears for all annotated text
-  const config = { type: 'underline', multiline: true, iterations: 1, strokeWidth: 3, animationDuration: 200, color: '#EF6C00', padding: 2 };
+  // the underline is a graphic mark, so it uses the brand orange in both
+  // themes, read from the stylesheet so there is a single source of truth
+  const brandOrange = getComputedStyle(document.documentElement)
+    .getPropertyValue('--gk-orange').trim() || '#c05500';
+  const config = { type: 'underline', multiline: true, iterations: 1, strokeWidth: 3, animationDuration: 200, color: brandOrange, padding: 2 };
   // extract all of the elements that are designated as special
   // and thus subject to receiving the rough notation underline
   const nl = document.querySelectorAll('.gist');

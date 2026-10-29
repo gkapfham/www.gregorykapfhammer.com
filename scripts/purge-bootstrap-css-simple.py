@@ -17,10 +17,12 @@ SITE_LIBS = BASE_DIR / "_site/site_libs/bootstrap"
 
 
 def purge_css_file(css_file_path, dry_run=True):
-    """Purge unused CSS from a Bootstrap CSS file using PurgeCSS defaults.
+    """Purge unused CSS from a Bootstrap CSS file with PurgeCSS.
 
-    This uses PurgeCSS's default behavior with NO safelist, letting it
-    automatically detect all used classes from HTML and JS files.
+    PurgeCSS detects the classes used by the rendered HTML and by the site's
+    JavaScript. Selectors that Bootstrap and Popper only create at run time
+    are protected by the repository's purgecss.config.js safelist; without
+    that safelist the dropdown menus lose their positioning rules.
 
     Args:
         css_file_path: Path to the CSS file to purge
@@ -40,7 +42,7 @@ def purge_css_file(css_file_path, dry_run=True):
     try:
         console.print(f"\n:scissors: Purging {css_file.name}...")
         console.print(
-            "   Using PurgeCSS defaults (no safelist, auto-detect from HTML+JS)..."
+            "   Using PurgeCSS with the repository safelist config..."
         )
 
         # Create temp directory for output
@@ -49,8 +51,10 @@ def purge_css_file(css_file_path, dry_run=True):
         # Run PurgeCSS with MINIMAL config:
         # - Scan all HTML files
         # - Scan all JS files (important for dynamic classes!)
-        # - No safelist (let PurgeCSS auto-detect everything)
         # - Keep CSS variables, keyframes, fonts
+        # - Keep the selectors that Bootstrap adds at run time (see the
+        #   repository's purgecss.config.js: the dropdown menu needs
+        #   [data-bs-popper] to stay anchored to its toggle)
         cmd = [
             "npx",
             "purgecss",
@@ -65,6 +69,18 @@ def purge_css_file(css_file_path, dry_run=True):
             "--keyframes",  # Keep animations
             "--font-face",  # Keep font declarations
         ]
+
+        # The config file is required, not optional: without it PurgeCSS drops
+        # the runtime-only [data-bs-popper] rules and every dropdown menu in
+        # the built site renders in the wrong place.
+        config_file = BASE_DIR / "purgecss.config.js"
+        if not config_file.exists():
+            console.print(
+                f":cross_mark: Missing {config_file.name}; "
+                "it protects the runtime-only dropdown rules"
+            )
+            return (False, original_size, 0)
+        cmd += ["--config", str(config_file)]
 
         result = subprocess.run(
             cmd,
@@ -128,7 +144,7 @@ def purge_css_file(css_file_path, dry_run=True):
 def main():  # noqa: PLR0915
     """Main function to purge Bootstrap CSS files."""
     parser = argparse.ArgumentParser(
-        description="Purge unused Bootstrap CSS using PurgeCSS defaults"
+        description="Purge unused Bootstrap CSS with PurgeCSS"
     )
     parser.add_argument(
         "--replace",
@@ -193,7 +209,10 @@ def main():  # noqa: PLR0915
     console.print(
         "\n:light_bulb: Strategy: Let PurgeCSS auto-detect classes from HTML and JS"
     )
-    console.print(":light_bulb: No safelist - PurgeCSS will scan all content files")
+    console.print(
+        ":light_bulb: purgecss.config.js safelists the selectors that "
+        "Bootstrap writes at run time"
+    )
 
     # Process each CSS file
     total_original = 0

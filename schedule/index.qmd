@@ -1,15 +1,14 @@
 ---
+description: >-
+  Current schedule and availability for meetings, talks, and collaborations.
 title: Schedule
 echo: true
 jupyter: python3
 ---
 
 ```{python}
-from rich.console import Console
-console = Console()
-console.print(
-    ":calendar: My schedule is often full - but I look forward to our meeting!"
-)
+status = "often full"
+print("My schedule is " + status + " - but I look forward to our meeting!")
 ```
 
 ## Overview

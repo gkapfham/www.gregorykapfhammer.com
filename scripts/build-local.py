@@ -179,6 +179,38 @@ def self_host_cdn_resources() -> bool:
     )
 
 
+def fix_toggler_role() -> bool:
+    """Remove the inappropriate role=menu from the navbar toggler."""
+    console.print(
+        "\n[bold yellow]══════════════════════════════════════════[/bold yellow]"
+    )
+    console.print("[bold yellow]STEP 8: Fix Navbar Toggler ARIA Role[/bold yellow]")
+    console.print(
+        "[bold yellow]══════════════════════════════════════════[/bold yellow]"
+    )
+
+    return run_command(
+        ["uv", "run", "python", "scripts/fix-toggler-role.py"],
+        "Remove role=menu from the navbar toggler button",
+    )
+
+
+def fix_listing_headings() -> bool:
+    """Retag listing item titles from h3 to h2 for a valid heading order."""
+    console.print(
+        "\n[bold yellow]══════════════════════════════════════════[/bold yellow]"
+    )
+    console.print("[bold yellow]STEP 9: Fix Listing Heading Levels[/bold yellow]")
+    console.print(
+        "[bold yellow]══════════════════════════════════════════[/bold yellow]"
+    )
+
+    return run_command(
+        ["uv", "run", "python", "scripts/fix-listing-headings.py"],
+        "Retag listing titles h3 -> h2 (heading-order audit)",
+    )
+
+
 def main():
     """Build the site locally with all optimizations."""
     parser = argparse.ArgumentParser(
@@ -229,6 +261,14 @@ def main():
 
     # step 7: self-host CDN resources
     if not self_host_cdn_resources():
+        all_success = False
+
+    # step 8: fix navbar toggler ARIA role
+    if not fix_toggler_role():
+        all_success = False
+
+    # step 9: fix listing heading levels
+    if not fix_listing_headings():
         all_success = False
 
     # final summary

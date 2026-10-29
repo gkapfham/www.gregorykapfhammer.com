@@ -1,5 +1,12 @@
 ---
 title: "Gregory M. Kapfhammer"
+# The description is used for the meta description that search engines and
+# social cards display, and Quarto also renders it as the subtitle of the
+# page, which is the convention that the other pages of this site follow.
+description: >-
+  Associate Professor of Computer Science at Allegheny College whose research
+  and teaching focus on software testing, including flaky tests and mutation
+  testing.
 echo: true
 jupyter: python3
 section-divs: true
@@ -26,7 +33,7 @@ listing:
     filter-ui: false
     fields: [author, date, title, description]
     max-items: 5
-    page-size: 5
+    page-size: 200
   - id: featured-presentations
     contents:
       - "research/presentations/**/*.qmd"
@@ -40,7 +47,7 @@ listing:
     filter-ui: false
     fields: [author, date, title, description]
     max-items: 5
-    page-size: 5
+    page-size: 200
   - id: featured-posts
     contents:
       - "blog/**/*.qmd"
@@ -55,7 +62,7 @@ listing:
     filter-ui: false
     fields: [author, title, date, description, reading-time]
     max-items: 5
-    page-size: 5
+    page-size: 200
   - id: featured-service
     contents:
       - "service/**/*.qmd"
@@ -77,7 +84,7 @@ listing:
       year-range: "Year(s)"
     field-links: []
     max-items: 5
-    page-size: 5
+    page-size: 200
   - id: featured-media
     contents:
       - media.yml
@@ -96,17 +103,14 @@ listing:
       description: "Role"
     field-links: []
     max-items: 5
-    page-size: 5
+    page-size: 200
 # execute:
 #   freeze: auto
 ---
 
 ```{python}
-from rich.console import Console
-console = Console()
-console.print(
-    ":rocket: Hi! I'm a researcher, teacher, podcaster, and software developer!"
-)
+roles = ["researcher", "teacher", "podcaster", "software developer"]
+print("Hi! I'm a " + ", ".join(roles[:-1]) + ", and " + roles[-1] + "!")
 ```
 
 Innovating in technical areas such as software engineering and software testing,

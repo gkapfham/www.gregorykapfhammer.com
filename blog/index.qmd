@@ -1,4 +1,7 @@
 ---
+description: >-
+  Posts about software engineering research, software testing, developer
+  tools, and episodes of Software Engineering Radio.
 title: "Blog"
 toc: true
 page-layout: full
@@ -23,21 +26,9 @@ execute:
 ---
 
 ```{python}
-#| echo: false
 from pathlib import Path
 
-def count_blog_posts():
-  blog_dir = Path(".")
-  subdirs = [bdir for bdir in blog_dir.iterdir() if bdir.is_dir()]
-  post_count = len(subdirs)
-  return post_count
-```
-
-```{python}
-from rich.console import Console
-console = Console()
-post_count = count_blog_posts()
-console.print(
-    f":rocket: Enjoy reading these {post_count} blog posts! What else should I write about?"
-)
+posts = sorted(Path(".").glob("*/index.qmd"))
+question = "What else should I write about?"
+print("Enjoy reading these " + str(len(posts)) + " blog posts! " + question)
 ```

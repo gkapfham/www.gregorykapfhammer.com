@@ -5,11 +5,8 @@ jupyter: python3
 ---
 
 ```{python}
-from rich.console import Console
-console = Console()
-console.print(
-    ":handshake: Hi, let's collaborate on software engineering projects!"
-)
+projects = ["software", "engineering"]
+print("Hi, let's collaborate on " + " ".join(projects) + " projects!")
 ```
 
 ## Introduction

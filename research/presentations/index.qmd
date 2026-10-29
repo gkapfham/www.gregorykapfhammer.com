@@ -1,4 +1,7 @@
 ---
+description: >-
+  Conference talks, workshop presentations, and invited talks on software
+  testing and software engineering.
 title: "Presentations"
 toc: true
 page-layout: full
@@ -23,23 +26,11 @@ execute:
 ---
 
 ```{python}
-#| echo: false
 from pathlib import Path
 
-def count_research_presentations():
-  presentation_dir = Path(".")
-  subdirs = [pdir for pdir in presentation_dir.iterdir() if pdir.is_dir()]
-  paper_count = len(subdirs)
-  return paper_count
-```
-
-```{python}
-from rich.console import Console
-console = Console()
-presentation_count = count_research_presentations()
-console.print(
-    f":rocket: It was super-fun to collaboratively create these {presentation_count} presentations!"
-)
+talks = sorted(Path(".").glob("*/index.qmd"))
+print("It was super-fun to collaboratively create these "
+      + str(len(talks)) + " presentations!")
 ```
 
 <!-- The timeline caption draws its icon as raw HTML inside a raw block, and

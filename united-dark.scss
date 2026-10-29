@@ -1,11 +1,30 @@
 /*-- scss:defaults --*/
 
+// Web font {{{}}
+
+// Remove the united theme's render-blocking @import of the Ubuntu webfont;
+// the site renders with IBM Plex Sans through "mainfont" and the
+// --bs-body-font-family rule in styles.css. See united-light.scss for the
+// longer explanation.
+$web-font-path: "";
+
+// }}}
+
 // Defaults {{{
 
 $body-bg: #212121;
-$body-color: #bdbdbd;
-$link-color: #ef6c00;
-$code-color: #007bff;
+$body-color: #ffffff;
+// Text links need the lighter step of the brand ramp: #c05500 measures
+// 3.48:1 on #212121, while #ef6c00 measures 5.23:1 and clears WCAG AA.
+// Fills, dots and borders keep #c05500 (see styles.css).
+$gk-orange: #c05500;
+$gk-orange-text-dark: #ef6c00;
+// Fill surfaces (navbar, buttons, pager, announcement tint) use the brand
+// orange in both themes; only text uses the lighter dark-surface step.
+$primary: $gk-orange;
+$callout-color-caution: $gk-orange;
+$link-color: $gk-orange-text-dark;
+$code-color: #79b8ff;
 
 // }}}
 
@@ -37,7 +56,7 @@ $code-color: #007bff;
 // Details {{{
 
 details>summary {
-  color: #bdbdbd !important;
+  color: #ffffff !important;
 }
 
 // }}}
@@ -50,7 +69,7 @@ tfoot,
 tr,
 td,
 th {
-  color: #bdbdbd !important;
+  color: #ffffff !important;
   border-style: none !important;
   border-width: 0;
 }
@@ -81,7 +100,7 @@ th {
 }
 
 .input-group> :not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
-  color: #bdbdbd !important;
+  color: #ffffff !important;
 }
 
 #quarto-search input {
@@ -95,7 +114,7 @@ th {
   background-color: #fdfeff !important;
   border: 1px solid #ced4da;
   border-radius: 0.25rem;
-  color: #bdbdbd;
+  color: #ffffff;
   display: flex;
   line-height: 1em;
   margin: 0;
@@ -142,7 +161,7 @@ pre {
   margin-bottom: 1rem;
   overflow: auto;
   font-size: 0.875em;
-  color: #bdbdbd !important;
+  color: #ffffff !important;
   background-color: #272727;
   padding: 0.5rem;
   border: 1px solid #dee2e6;
@@ -153,12 +172,12 @@ pre {
 
 // Navbar {{{
 
-.navbar-dark {
-  background-color: #e65100 !important;
+.navbar {
+  background-color: $gk-orange !important;
 }
 
-.navbar-dark .dropdown-text {
-  color: #333333;
+.navbar .dropdown-text {
+  color: #ffffff;
   text-align: inherit;
   text-decoration: none;
 }
@@ -169,10 +188,10 @@ pre {
 
 .page-link.disabled,
 .disabled>.page-link {
-  color: var(--bs-pagination-disabled-color);
+  color: #9e9e9e !important;
   pointer-events: none;
   background-color: #212121 !important;
-  border-color: var(--bs-pagination-disabled-border-color);
+  border-color: #495057;
 }
 
 // }}}
@@ -188,7 +207,7 @@ pre {
 // Post / Paper / Presentation Categories {{{
 
 div.quarto-post .listing-categories .listing-category {
-  color: #bdbdbd !important;
+  color: #ffffff !important;
   padding: 0.25em 0.75em;
   font-size: 0.55em;
   font-weight: 500;
@@ -206,14 +225,14 @@ div.quarto-post .listing-categories .listing-category {
 // Links with Anchors {{{
 
 .anchorjs-link {
-  color: #bdbdbd;
+  color: #ffffff;
   opacity: 0.5;
   text-decoration: none;
   -webkit-font-smoothing: antialiased;
 }
 
 .anchorjs-link:hover {
-  color: #ef6c00 !important;
+  color: $gk-orange-text-dark !important;
   opacity: 1;
   text-decoration: none;
   -webkit-font-smoothing: antialiased;
@@ -223,7 +242,7 @@ div.quarto-post .listing-categories .listing-category {
 .anchored.active .anchorjs-link,
 .anchored.highlighted .anchorjs-link,
 .anchored.current .anchorjs-link {
-  color: #ef6c00 !important;
+  color: $gk-orange-text-dark !important;
   opacity: 1;
   text-decoration: none;
   -webkit-font-smoothing: antialiased;
@@ -233,7 +252,7 @@ div.quarto-post .listing-categories .listing-category {
 .anchored.active,
 .anchored.highlighted,
 .anchored.current {
-  color: #ef6c00;
+  color: $gk-orange-text-dark;
   opacity: 1;
   text-decoration: none;
   -webkit-font-smoothing: antialiased;
@@ -261,11 +280,11 @@ div.quarto-post .listing-categories .listing-category {
   height: 1em;
   margin-top: 0.25em;
   vertical-align: top;
-  background-color: #ef6c00 !important;
+  background-color: $gk-orange !important;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  border: 1px solid #ef6c00 !important;
+  border: 1px solid $gk-orange !important;
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
