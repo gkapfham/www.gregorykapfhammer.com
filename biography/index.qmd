@@ -191,11 +191,15 @@ Validation](https://conf.researchr.org/series/icst). As an organizer, I have
 served as a general chair, a program chair, a doctoral symposium chair, a
 panelist, and a session chair, most often for venues that focus on software
 testing and search-based software engineering, including the [International
-Workshop on Mutation
-Analysis](https://mutation-workshop.github.io/) and the [International
-Symposium on Search-Based Software
-Engineering](https://conf.researchr.org/series/ssbse). I am grateful to the
-organizers and editors who invite me to contribute in these ways.
+Workshop on Mutation Analysis](https://mutation-workshop.github.io/) and the
+[International Symposium on Search-Based Software
+Engineering](https://conf.researchr.org/series/ssbse). The quality of my
+service to the research community has resulted in me receiving the
+distinguished reviewer award at both the [35th ACM SIGSOFT International
+Symposium on Software Testing and
+Analysis (ISSTA 2026)](https://conf.researchr.org/home/issta-2026) and the [41st IEEE/ACM
+International Conference on Automated Software
+Engineering(ASE 2026)](https://conf.researchr.org/home/ase-2026).
 
 ### Research Service
 
