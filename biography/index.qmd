@@ -77,7 +77,7 @@ short-term visitor in the <a href="http://www.cs.virginia.edu">Department of
   href="http://www.uni-ulm.de/en">University of Ulm</a>, and the <a
   href="https://www.sheffield.ac.uk/dcs">Department of Computer Science</a> at
 the <a href="http://www.sheffield.ac.uk/">University of Sheffield</a>. In a
-prior position, I was a research associate at Cigital, a software company
+prior position, I was a research associate at Cigital, a company
 acquired by <a href="https://www.synopsys.com/">Synopsys</a>. My professional work is
 partially funded by <a href =
   "https://research.fb.com/blog/2019/10/announcing-the-winners-of-the-2019-testing-and-verification-research-awards/">Facebook
@@ -160,10 +160,45 @@ won the distinguished paper award from the <a href =
 
 ## Expertise
 
+### Service Overview
+
+My service to the software engineering community takes four forms: editing,
+reviewing, program committee work, and organizing. As an editor, I work with
+authors as an associate editor for the [Journal of Software: Evolution and
+Process](https://onlinelibrary.wiley.com/journal/20477481) and as an academic
+editor for [PeerJ Computer
+Science](https://peerj.com/computer-science/). As a reviewer, I evaluate
+manuscripts for journals that include [Transactions on Software
+Engineering](https://www.computer.org/csdl/journal/ts), the [Journal of Systems
+and Software](https://www.sciencedirect.com/journal/journal-of-systems-and-software),
+and [Information and Software
+Technology](https://www.sciencedirect.com/journal/information-and-software-technology),
+and I review research proposals for the [U.S. National Science
+Foundation](https://nsf.gov/).
+
+As a program committee member, I help shape the technical program of
+conferences such as the [International Conference on Software
+Engineering](https://conf.researchr.org/series/icse), the [ACM International
+Conference on the Foundations of Software
+Engineering](https://conf.researchr.org/series/fse), the [International
+Conference on Automated Software
+Engineering](https://conf.researchr.org/series/ase), the [International
+Symposium on Software Testing and
+Analysis](https://conf.researchr.org/series/issta), and the [International
+Conference on Software Testing, Verification and
+Validation](https://conf.researchr.org/series/icst). As an organizer, I have
+served as a general chair, a program chair, a doctoral symposium chair, a
+panelist, and a session chair, most often for venues that focus on software
+testing and search-based software engineering, including the [International
+Workshop on Mutation
+Analysis](https://mutation-workshop.github.io/) and the [International
+Symposium on Search-Based Software
+Engineering](https://conf.researchr.org/series/ssbse). I am grateful to the
+organizers and editors who invite me to contribute in these ways.
+
 ### Research Service
 
-I leveraged my scientific and engineering expertise to serve the following
-recent venues:
+I served the following recent venues in these roles:
 
 :::{#featured-service-biography}
 :::
@@ -183,6 +218,34 @@ which I use my technical expertise to [serve](/service/index.qmd) the software
 engineering community.
 
 :::
+
+### Media Overview
+
+I interview the world's leading experts on software engineering as a co-host of
+[Software Engineering Radio](https://www.se-radio.net/), whose episodes cover
+everything from maintaining the Linux kernel to designing vector databases.
+Recent guests on my episodes include [Hyrum Wright on software engineering at
+Google](https://se-radio.net/2024/03/se-radio-609-hyrum-wright-on-software-engineering-at-google/),
+[Goran Petrovic on mutation testing at
+Google](https://se-radio.net/2024/09/se-radio-632-goran-petrovic-on-mutation-testing-at-google/),
+[Dave Airlie on Linux kernel
+maintenance](https://se-radio.net/2026/06/se-radio-723-dave-airlie-on-linux-kernel-maintenance/),
+and [Samuel Colvin on the Pydantic
+ecosystem](https://se-radio.net/2025/07/se-radio-676-samuel-colvin-on-the-pydantic-ecosystem/).
+Other hosts invite me to be the guest, so I have appeared on the [Stack Overflow
+Podcast](https://stackoverflow.blog/podcast),
+[Hanselminutes](https://hanselminutes.com/874/dr-gregory-kapfhammer-wants-to-stop-flaky-tests),
+[Talk Python](https://talkpython.fm/), and [Code with
+Jason](https://www.codewithjason.com/podcast/18115292-277-gregory-kapfhammer/) to
+explain how flaky tests waste developer time and how teams can detect them.
+Others also write about this work: the [Overture Maps
+Foundation](https://overturemaps.org/blog/2025/overture-maps-explained-on-software-engineering-radio/)
+wrote that an episode that I hosted "is one of the best, most complete overviews
+of Overture's progress and goals to date," and [Engineering
+Enablement](https://newsletter.getdx.com/p/flaky-tests) summarized the paper
+[@Parry2022b] [{{< iconify fa6-solid book-open
+>}}](/research/papers/parry2022b/index.qmd) that my co-authors and I published on
+the developer experience of flaky tests.
 
 ### Media Engagements
 
