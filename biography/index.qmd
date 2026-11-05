@@ -199,7 +199,7 @@ distinguished reviewer award at both the [35th ACM SIGSOFT International
 Symposium on Software Testing and
 Analysis (ISSTA 2026)](https://conf.researchr.org/home/issta-2026) and the [41st IEEE/ACM
 International Conference on Automated Software
-Engineering(ASE 2026)](https://conf.researchr.org/home/ase-2026).
+Engineering (ASE 2026)](https://conf.researchr.org/home/ase-2026).
 
 ### Research Service
 
