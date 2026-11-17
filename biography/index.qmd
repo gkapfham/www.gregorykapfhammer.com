@@ -227,9 +227,10 @@ engineering community.
 ### Media Overview
 
 I interview the world's leading experts on software engineering as a co-host of
-[Software Engineering Radio](https://www.se-radio.net/), whose episodes cover
-everything from maintaining the Linux kernel to designing vector databases.
-Recent guests on my episodes include [Hyrum Wright on software engineering at
+[Software Engineering Radio](https://www.se-radio.net/), enabling me to publish
+episodes covering everything from maintaining the Linux kernel to designing
+vector databases. Recent guests on my episodes include [Hyrum Wright on
+software engineering at
 Google](https://se-radio.net/2024/03/se-radio-609-hyrum-wright-on-software-engineering-at-google/),
 [Goran Petrovic on mutation testing at
 Google](https://se-radio.net/2024/09/se-radio-632-goran-petrovic-on-mutation-testing-at-google/),
@@ -237,19 +238,20 @@ Google](https://se-radio.net/2024/09/se-radio-632-goran-petrovic-on-mutation-tes
 maintenance](https://se-radio.net/2026/06/se-radio-723-dave-airlie-on-linux-kernel-maintenance/),
 and [Samuel Colvin on the Pydantic
 ecosystem](https://se-radio.net/2025/07/se-radio-676-samuel-colvin-on-the-pydantic-ecosystem/).
-Other hosts invite me to be the guest, so I have appeared on the [Stack Overflow
-Podcast](https://stackoverflow.blog/podcast),
+Other hosts invite me to be the guest, so I have appeared on the [Stack
+Overflow Podcast](https://stackoverflow.blog/podcast),
 [Hanselminutes](https://hanselminutes.com/874/dr-gregory-kapfhammer-wants-to-stop-flaky-tests),
 [Talk Python](https://talkpython.fm/), and [Code with
-Jason](https://www.codewithjason.com/podcast/18115292-277-gregory-kapfhammer/) to
-explain how flaky tests waste developer time and how teams can detect them.
+Jason](https://www.codewithjason.com/podcast/18115292-277-gregory-kapfhammer/)
+to explain how flaky tests waste developer time and how teams can detect them.
 Others also write about this work: the [Overture Maps
 Foundation](https://overturemaps.org/blog/2025/overture-maps-explained-on-software-engineering-radio/)
-wrote that an episode that I hosted "is one of the best, most complete overviews
-of Overture's progress and goals to date," and [Engineering
+wrote that an episode that I hosted "is one of the best, most complete
+overviews of Overture's progress and goals to date," and [Engineering
 Enablement](https://newsletter.getdx.com/p/flaky-tests) summarized the paper
 [@Parry2022b] [{{< iconify fa6-solid book-open
->}}](/research/papers/parry2022b/index.qmd) that my co-authors and I published on
+>}}](/research/papers/parry2022b/index.qmd) that my co-authors and I published
+>on
 the developer experience of flaky tests.
 
 ### Media Engagements
