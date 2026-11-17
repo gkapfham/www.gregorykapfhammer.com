@@ -189,8 +189,8 @@ Analysis](https://conf.researchr.org/series/issta), and the [International
 Conference on Software Testing, Verification and
 Validation](https://conf.researchr.org/series/icst). As an organizer, I have
 served as a general chair, a program chair, a doctoral symposium chair, a
-panelist, and a session chair, most often for venues that focus on software
-testing and search-based software engineering, including the [International
+panelist, and a session chair, most often for venues that focus on topics like software
+testing and software engineering, including the [International
 Workshop on Mutation Analysis](https://mutation-workshop.github.io/) and the
 [International Symposium on Search-Based Software
 Engineering](https://conf.researchr.org/series/ssbse). The quality of my
@@ -244,7 +244,7 @@ Overflow Podcast](https://stackoverflow.blog/podcast),
 [Talk Python](https://talkpython.fm/), and [Code with
 Jason](https://www.codewithjason.com/podcast/18115292-277-gregory-kapfhammer/)
 to explain how flaky tests waste developer time and how teams can detect them.
-Others also write about this work: the [Overture Maps
+Others also write about my engagement with the media: the [Overture Maps
 Foundation](https://overturemaps.org/blog/2025/overture-maps-explained-on-software-engineering-radio/)
 wrote that an episode that I hosted "is one of the best, most complete
 overviews of Overture's progress and goals to date," and [Engineering
