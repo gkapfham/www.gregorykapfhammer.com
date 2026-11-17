@@ -164,11 +164,11 @@ won the distinguished paper award from the <a href =
 ### Service Overview
 
 My service to the software engineering community takes four forms: editing,
-reviewing, program committee work, and organizing. As an editor, I work with
+reviewing, program committee work, and organizing. As an editor, I currently work with
 authors as an associate editor for the [Journal of Software: Evolution and
-Process](https://onlinelibrary.wiley.com/journal/20477481) and as an academic
+Process](https://onlinelibrary.wiley.com/journal/20477481) and previously served as an academic
 editor for [PeerJ Computer
-Science](https://peerj.com/computer-science/). As a reviewer, I evaluate
+Science](https://peerj.com/computer-science/). As a reviewer, I also evaluate
 manuscripts for journals that include [Transactions on Software
 Engineering](https://www.computer.org/csdl/journal/ts), the [Journal of Systems
 and Software](https://www.sciencedirect.com/journal/journal-of-systems-and-software),
