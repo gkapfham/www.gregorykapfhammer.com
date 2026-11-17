@@ -250,8 +250,7 @@ wrote that an episode that I hosted "is one of the best, most complete
 overviews of Overture's progress and goals to date," and [Engineering
 Enablement](https://newsletter.getdx.com/p/flaky-tests) summarized the paper
 [@Parry2022b] [{{< iconify fa6-solid book-open
->}}](/research/papers/parry2022b/index.qmd) that my co-authors and I published
->on
+>}}](/research/papers/parry2022b/index.qmd) that my co-authors and I published on
 the developer experience of flaky tests.
 
 ### Media Engagements
